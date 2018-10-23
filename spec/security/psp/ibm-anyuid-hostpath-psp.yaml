@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  annotations:
+    kubernetes.io/description: "This policy allows pods to run with 
+      any UID and GID and any volume, including the host path.  
+      WARNING:  This policy allows hostPath volumes.  
+      Use with caution." 
+  name: ibm-anyuid-hostpath-psp
+spec:
+  allowPrivilegeEscalation: true
+  fsGroup:
+    rule: RunAsAny
+  requiredDropCapabilities: 
+  - MKNOD
+  allowedCapabilities:
+  - SETPCAP
+  - AUDIT_WRITE
+  - CHOWN
+  - NET_RAW
+  - DAC_OVERRIDE
+  - FOWNER
+  - FSETID
+  - KILL
+  - SETUID
+  - SETGID
+  - NET_BIND_SERVICE
+  - SYS_CHROOT
+  - SETFCAP 
+  runAsUser:
+    rule: RunAsAny
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    rule: RunAsAny
+  volumes:
+  - '*'
