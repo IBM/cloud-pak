@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  annotations:
+    kubernetes.io/description: "This policy grants access to all privileged 
+      host features and allows a pod to run with any 
+      UID and GID and any volume.
+      WARNING:  This policy is the least restrictive and 
+      should only used for cluster administration.
+      Use with caution."
+    seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
+  name: ibm-privileged-psp
+spec:
+  allowPrivilegeEscalation: true
+  allowedCapabilities:
+  - '*'
+  allowedUnsafeSysctls:
+  - '*'
+  fsGroup:
+    rule: RunAsAny
+  hostIPC: true
+  hostNetwork: true
+  hostPID: true
+  hostPorts:
+  - max: 65535
+    min: 0
+  privileged: true
+  runAsUser:
+    rule: RunAsAny
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    rule: RunAsAny
+  volumes:
+  - '*'
