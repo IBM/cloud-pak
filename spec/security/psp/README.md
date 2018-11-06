@@ -14,7 +14,7 @@ The following pod security policies are available on IBM Cloud:
 - [`ibm-anyuid-hostpath-psp`](ibm-anyuid-hostpath-psp.yaml)
 
   This policy allows running pods as any user with any fsgroups / supplemental group ids and all volumes.   Select default docker capabilities, privilege escalation, and safe sysctls are allowed. No unsafe systctls or host access are allowed.
-- [`ibm-anyuid-hostaccess-psp`](ibm-anyuid-hostaccess.yaml)
+- [`ibm-anyuid-hostaccess-psp`](ibm-anyuid-hostaccess-psp.yaml)
 
   This policy adds full host access to `ibm-anyuid-hostpath`, allowing running pods as any user with any fsgroups / supplemental group ids and all volumes.  Select default docker capabilities, privilege escalation, host access (hostIPC, hostPID, hostNetwork, hostPorts), and safe sysctls are allowed. No unsafe systctls are allowed.
 
