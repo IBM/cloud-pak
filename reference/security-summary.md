@@ -12,6 +12,10 @@ the chart's documentation for instructions.
 
 | Chart                               | Pod security policy       |
 |-------------------------------------|---------------------------|
+| ibm-ace-dashboard-dev               | ibm-anyuid-psp            |
+| ibm-ace-server-dev                  | ibm-anyuid-psp            |
+| ibm-ace-dashboard-prod              | ibm-anyuid-psp            |
+| ibm-ace-server-prod                 | ibm-anyuid-psp            |
 | ibm-ace-dev                         | ibm-anyuid-psp            |
 | ibm-ace-prod                        | ibm-anyuid-psp            |
 | ibm-apiconnect-ent                  | ibm-privileged-psp        |
@@ -106,6 +110,7 @@ the chart's documentation for instructions.
 | ibm-watson-speech-prod              | ibm-privileged-psp        |
 | ibm-websphere-liberty               | ibm-anyuid-psp            |
 | ibm-websphere-liberty-rhel          | ibm-anyuid-psp            |
+| ibm-websphere-traditional           | ibm-restricted-psp        |
 | ibm-webterminal-dev                 | ibm-privileged-psp        |
 | ibm-wex-prod                        | ibm-anyuid-psp            |
 | ibm-ws-dyn-agent-dev                | ibm-anyuid-psp            |
