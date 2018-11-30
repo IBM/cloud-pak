@@ -16,14 +16,14 @@ the chart's documentation for instructions.
 |:----------|:---------------|
 | ibm-ace-dashboard-dev | ibm-anyuid-psp |
 | ibm-ace-dashboard-prod | ibm-anyuid-psp |
-| ibm-ace-dev | ibm-anyuid-psp |
 | ibm-ace-prod | ibm-anyuid-psp |
 | ibm-ace-server-dev | ibm-anyuid-psp |
 | ibm-ace-server-prod | ibm-anyuid-psp |
 | ibm-apiconnect-ent | ibm-privileged-psp |
 | ibm-apiconnect-pro | ibm-privileged-psp |
 | ibm-aspera-cli | ibm-anyuid-psp |
-| ibm-blockchain-platform-remote-peer | ibm-anyuid-hostpath-psp |
+| ibm-blockchain-platform-dev | ibm-privileged-psp |
+| ibm-blockchain-platform-prod | ibm-privileged-psp |
 | ibm-calico-bgp-peer | ibm-privileged-psp |
 | ibm-cam | ibm-anyuid-hostpath-psp |
 | ibm-cem | ibm-anyuid-psp |
@@ -113,7 +113,6 @@ the chart's documentation for instructions.
 | ibm-websphere-liberty | ibm-anyuid-psp |
 | ibm-websphere-liberty-rhel | ibm-anyuid-psp |
 | ibm-websphere-traditional | ibm-restricted-psp |
-| ibm-webterminal-dev | ibm-privileged-psp |
 | ibm-wex-prod | ibm-anyuid-psp |
 | ibm-ws-dyn-agent-dev | ibm-anyuid-psp |
 | ibm-ws-dyn-agent-prod | ibm-anyuid-psp |
