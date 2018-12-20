@@ -16,18 +16,20 @@ the chart's documentation for instructions.
 |:----------|:---------------|
 | ibm-ace-dashboard-dev | ibm-anyuid-psp |
 | ibm-ace-dashboard-prod | ibm-anyuid-psp |
-| ibm-ace-prod | ibm-anyuid-psp |
 | ibm-ace-server-dev | ibm-anyuid-psp |
 | ibm-ace-server-prod | ibm-anyuid-psp |
+| ibm-alm-prod | ibm-anyuid-psp |
 | ibm-apiconnect-ent | ibm-privileged-psp |
 | ibm-apiconnect-pro | ibm-privileged-psp |
 | ibm-aspera-cli | ibm-anyuid-psp |
+| ibm-aspera-hsts-prod | ibm-anyuid-hostaccess-psp |
 | ibm-blockchain-platform-dev | ibm-privileged-psp |
 | ibm-blockchain-platform-prod | ibm-privileged-psp |
 | ibm-calico-bgp-peer | ibm-privileged-psp |
 | ibm-cam | ibm-anyuid-hostpath-psp |
 | ibm-cem | ibm-anyuid-psp |
 | ibm-cloud-appmgmt-prod | ibm-privileged-psp |
+| ibm-cloud-cost-asset-mgmt-prod | ibm-anyuid-psp |
 | ibm-cloud-mgmt-platform-prod | ibm-privileged-psp |
 | ibm-csi-nfs | ibm-privileged-psp |
 | ibm-datapower-dev | ibm-anyuid-psp |
@@ -62,6 +64,7 @@ the chart's documentation for instructions.
 | ibm-lsfce-dev | ibm-privileged-psp |
 | ibm-mariadb-dev | ibm-anyuid-psp |
 | ibm-messagesight-dev | ibm-anyuid-hostaccess-psp |
+| ibm-messagesight-prod | ibm-anyuid-hostaccess-psp |
 | ibm-mfpf-analytics-prod | ibm-anyuid-psp |
 | ibm-mfpf-appcenter-prod | ibm-anyuid-psp |
 | ibm-mfpf-server-prod | ibm-anyuid-psp |
@@ -69,6 +72,7 @@ the chart's documentation for instructions.
 | ibm-minio-objectstore | ibm-anyuid-psp |
 | ibm-mongodb-dev | ibm-anyuid-psp |
 | ibm-mqadvanced-server-dev | ibm-anyuid-psp |
+| ibm-mqadvanced-server-integration-prod | ibm-anyuid-psp |
 | ibm-mqadvanced-server-prod | ibm-anyuid-psp |
 | ibm-mqadvanced-server-rhel-prod | ibm-anyuid-psp |
 | ibm-netcool-asm-prod | ibm-anyuid-psp |
@@ -86,6 +90,8 @@ the chart's documentation for instructions.
 | ibm-nodejs-sample | ibm-anyuid-psp |
 | ibm-odm-dev | ibm-anyuid-psp |
 | ibm-odm-prod | ibm-anyuid-psp |
+| ibm-oms-ent-prod | ibm-anyuid-psp |
+| ibm-oms-pro-prod | ibm-anyuid-psp |
 | ibm-open-liberty | ibm-anyuid-psp |
 | ibm-postgres-dev | ibm-anyuid-psp |
 | ibm-powerai-enterprise-prod | ibm-privileged-psp |
@@ -108,6 +114,7 @@ the chart's documentation for instructions.
 | ibm-voice-gateway-prod | ibm-anyuid-hostaccess-psp |
 | ibm-was-vm-quickstarter-dev | ibm-anyuid-psp |
 | ibm-was-vm-quickstarter-prod | ibm-anyuid-psp |
+| ibm-watson-assistant-prod | ibm-privileged-psp |
 | ibm-watson-compare-comply-prod | ibm-anyuid-psp |
 | ibm-watson-speech-prod | ibm-privileged-psp |
 | ibm-websphere-liberty | ibm-anyuid-psp |
