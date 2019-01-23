@@ -93,7 +93,7 @@ Your helm chart must include a new subdirectory `ibm_cloud_pak` which contains a
 
 IBM Cloud Private clusters are typically in an air-gapped environment with no access to the public internet.  When installing charts that point to a public image registry like Docker Hub, the chart pods will fail to pull the images.  To help alleviate this, IBM Cloud Private provides a local image registry as well as a local chart repository as well as tooling for building and installing binary packages in an air-gapped environment.
 
-IBM Cloud Private provides tooling to [build offline binary packages](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/cli_catalog_commands.html#create-archive).  The tool reads a YAML manifest file in the helm chart and creates the binary package from the specified contents.  Cloud Paks must provide a such a manifest.yaml file for users to easily create offline binary packages in a consistent manner across products.  The manifest format can be found here: [IBM Cloud Pak manifest format](../reference/manifest-format.md)
+IBM Cloud Private provides tooling to [build offline binary packages](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/cli_catalog_commands.html#create-archive).  The tool reads a YAML manifest file in the helm chart and creates the binary package from the specified contents.  Cloud Paks must provide a such a manifest.yaml file for users to easily create offline binary packages in a consistent manner across products.  The manifest format can be found here: [IBM Cloud Pak manifest format](../spec/packaging/ibm_cloud_pak/manifest-yaml.md)
 
 IBM Cloud Private also supports [importing binary packages that contain all the components (charts and images) required to deploy a product](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/cli_catalog_commands.html#load-archive).  The contents of the binary package are then stored in the local image registry / local chart repository and the charts can then be deployed without access to the public internet.
 
@@ -103,6 +103,9 @@ Cloud Paks must provide a valid manifest.yaml file and test that the ICP tooling
 
 The qualification YAML file is simply a statement of the details of the Cloud Pak such as when the Cloud Pak was certified, what level of certification was achieved and how long that certification is valid. Start with the following, and update the `issueDate` and `name` fields for the `podSecurityPolicy` and ICP `installerRole`.
 
+The qualification format can be found here: [IBM Cloud Pak qualification format](../spec/packaging/ibm_cloud_pak/qualification-yaml.md)
+
+Example:
 ```
 qualification:
   levelName: "ibm-cloud-pak"
