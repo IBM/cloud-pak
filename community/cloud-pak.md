@@ -2,7 +2,7 @@
 
 ## What is an IBM Cloud Pak?
 
-IBM Cloud Paks provide enterprise software container images that are pre-packaged in production-ready configurations that can be quickly and easily deployed to IBM’s container platforms, with support for resiliency, scalability, and integration with core platform services, like monitoring or identity management.  Read the white paper that introduces [IBM Cloud Paks](http://ibm.biz/IBMCloudPaks-Whitepaper) and read why enterprises need [more than just Helm charts](https://www.ibm.com/cloud/private/why-containers).
+IBM Cloud Paks provide enterprise software container images that are pre-packaged in production-ready configurations that can be quickly and easily deployed to IBM’s container platforms, with support for resiliency, scalability, and integration with core platform services, like monitoring or identity management.  Read the white paper that introduces [IBM Cloud Paks](http://ibm.biz/IBMCloudPaks-Whitepaper) and read why enterprises need [more than just containers](https://www.ibm.com/cloud/private/why-containers).
 
 ## What is the IBM community charts repository?
 
@@ -22,8 +22,8 @@ In addition to the [minimum guidelines to be added to the community](https://git
 | --- | --- |
 | ***Security***| This section of the table contains security related requirements.|
 | [**Image vulnerabilities**](#image-vulnerabilities) | All images used in the product need to be scanned by the IBM Cloud Private Vulnerability Advisor and vulnerable packages fixed.  You also need to have a process in place to address image vulnerabilities as they arise. |
-| [**Document and follow principle of runtime least privilege**](#runtime-least-privilege) | Workloads must run with the least privilege required and clearly publish the required privileges in the chart README. |
-| [**Clearly document required ICP user install privileges**](#document-install-privileges) | If special IBM Cloud Private user privileges such as `cluster administrator` or `team administrator` are required to install the Helm chart, clearly document them in the chart README. |
+| [**Document and follow principle of runtime least privilege**](#document-and-follow-principle-of-least-privilege) | Workloads must run with the least privilege required and clearly publish the required privileges in the chart README. |
+| [**Clearly document required ICP user install privileges**](#clearly-document-required-icp-user-install-privileges) | If special IBM Cloud Private user privileges such as `cluster administrator` or `team administrator` are required to install the Helm chart, clearly document them in the chart README. |
 | [**Secure sensitive data**](#secure-sensitive-data) | Sensitive data required to deploy the chart must be properly secured. |
 | ***Integration***| This section of the table contains integration related requirements.|
 | [**Follow IBM community guidelines**](https://github.com/IBM/charts/blob/master/GUIDELINES.md) | Follow all of the required guidelines for contributing any helm chart to the IBM community repo (the optional guidelines are also optional for IBM Cloud Pak unless otherwise specified in this Cloud Pak guidance.) |
@@ -47,7 +47,7 @@ In addition to the [minimum guidelines to be added to the community](https://git
 
 All images used in the product need to be scanned by the IBM Cloud Private Vulnerability Advisor and vulnerable packages must be fixed.  In addition, you must have a process in place to address new image vulnerabilities over time.  The documentation for Vulnerability Advisor can be found in the [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/vuln_advisor.html).
 
-## Document and follow principle of least privilege
+## Document and follow principle of runtime least privilege
 
 Workloads must run with the least container privileges required.  Workloads must also clearly publish the required privileges in the chart README.  As of version 3.1.1, ICP supports pod security policies for pod isolation.  You chart must declare the pod security policy with the least privileges required to support the workload.  More information can be found in the Knowledge Center for [pod isolation](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/user_management/iso_pod_overview.html).  A set of [pre-defined pod security policies](https://github.com/IBM/cloud-pak/tree/master/spec/security/psp) for Cloud Paks are created in ICP by default.  Even if the workload uses a pod security policy per-defined by ICP, the README must still clearly indicate which privileges are required.
 
