@@ -1,12 +1,14 @@
 # IBM Cloud Pak PodSecurityPolicy Definitions
 The IBM Cloud Pak specification defines several pre-defined Kubernetes PodSecurityPolicy definitions.  These policies are pre-loaded on IBM Cloud platforms and are referenced by IBM Cloud Paks to describe their pod security requirements.
 
-## Pod Security Policy Reference
-The following pod security policies are available on IBM Cloud:
+When the PodSecurityPolicy definitions are not pre-loaded, use the instructions in this document to install and update them into your Kubernetes cluster.
+
+## PodSecurityPolicy Reference
+The following PodSecurityPolicies are available on IBM Cloud:
 
 - [`ibm-restricted-psp`](ibm-restricted-psp.yaml)
 
-  This policy is the most restrictive.
+  This policy is the most restrictive, forcing pods to declare their requirements, avoiding platform or cluster-specific configuration differences.
 - [`ibm-anyuid-psp`](ibm-anyuid-psp.yaml)
 
   This policy allows running pods as any user with any fsgroups / supplemental group ids and volumes (excludes hostPath).   Select default docker capabilities and privilege escalation are allowed.  No sysctls or host access are allowed.
@@ -36,4 +38,6 @@ To apply the IBM Cloud Pak PodSecurityContext resources to your cluster:
 6.  Apply the specification yaml files to your cluster:  `kubectl apply -f .`
 
 ## More information
-For additional information about Kubernetes pod security policies, see:  https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+For additional information about Kubernetes PodSecurityPolicy, see:  https://kubernetes.io/docs/concepts/policy/pod-security-policy/
+
+For additional information about using PodSecurityPolicy with IBM Cloud Private, see the [Pod Isolation topic in the IBM Cloud Private Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.2/user_management/iso_pod.html)
