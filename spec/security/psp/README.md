@@ -29,8 +29,8 @@ To apply the IBM Cloud Pak PodSecurityContext resources to your cluster:
 1.  Install the [Kubernetes command line interface (kubectl)](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 2.  Install any other command-line utilities your Kubernetes distribution requires.
 3.  Login to your cluster as a cluster administrator.  This step varies by Kubernetes distribution:
-  1.  For IBM Cloud Private, use [`cloudctl login`](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.2/manage_cluster/cli_commands.html#login)
-  2.  For IBM Cloud Kubernetes Service, use the [`ibmcloud`](https://cloud.ibm.com/docs/containers/cs_cli_install.html) CLI.
+    1.  For IBM Cloud Private, use [`cloudctl login`](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.2/manage_cluster/cli_commands.html#login)
+    2.  For IBM Cloud Kubernetes Service, use the [`ibmcloud`](https://cloud.ibm.com/docs/containers/cs_cli_install.html) CLI.
 4.  Clone the IBM Cloud Pak git repository: `git clone https://github.com/IBM/cloud-pak`
 5.  `cd cloud-pak/spec/security/psp`
 6.  Apply the specification yaml files to your cluster:  `kubectl apply -f .`
