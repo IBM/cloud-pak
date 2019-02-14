@@ -5,6 +5,7 @@ When the PodSecurityPolicy definitions are not pre-loaded, use the instructions 
 
 - [PodSecurityPolicy Reference](#podsecuritypolicy-reference)
 - [Applying IBM Cloud Pak PodSecurityPolicy resources to your cluster](#applying-ibm-cloud-pak-podsecuritypolicy-resources-to-your-cluster)
+- [Applying a PodSecurityPolicy to your namespace](#applying-a-podsecuritypolicy-to-your-namespace)
 - [Validating which PodSecurityPolicies are bound to a namespace](#validating-which-podsecuritypolicies-are-bound-to-a-namespace)
 - [More information](#more-information)
 
