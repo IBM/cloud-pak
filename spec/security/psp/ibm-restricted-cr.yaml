@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+  name: ibm-restricted-clusterrole
+rules:
+- apiGroups:
+  - extensions
+  resourceNames:
+  - ibm-restricted-psp
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
