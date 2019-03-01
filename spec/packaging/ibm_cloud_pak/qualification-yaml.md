@@ -5,20 +5,20 @@ The qualification.yaml file includes the following sections:
 * [catalog](#catalog-section)
 
 ## Qualification Section
-The qualification section describes attributes related to the IBM Cloud Pak status.
+The qualification section describes attributes related to the IBM&reg; Cloud Pak status.
 
 Key name:  `qualification`
 
 **Fully Qualified Attribute Name**|**Type**|**Description/Specification**
 -----|-----|-----
-qualification.levelName|String|Value must be: `ibm-cloud-pak`
-qualification.levelDescription|String|Value must be: `IBM Cloud Pak`
+qualification.levelName|String|One of two pre-defined levels: `ibm-cloud-pak`, `certified-ibm-cloud-pak`, `ibm-solution-pak`, `certified-ibm-solution-pak`
+qualification.levelDescription|String|One of following pre-defined level descriptions: `IBM Cloud Pak`, `Certified IBM Cloud Pak`, `IBM Solution Pak`, `Certified IBM Solution Pak`
 qualification.issueDate|String|The date in the format `M/YYYY` which the Cloud Pak was issued.
-qualification.duration|String|The amount of time that the Cloud Pak qualification is valid from date of issue.  Must be no longer than 6 months.  Format is in months:  `nM`
-qualification.terms|String|Value must be: `Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images`
+qualification.duration|String|The amount of time that the   Cloud Pak or Solution pak qualification is valid.  Format is in months:  `nM`
+qualification.terms|String|The terms description.
 
 ## Prereqs Section
-The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak.
+The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak or Solution Pak.
 
 This section is organized using indented blocks of topics.
 
@@ -33,8 +33,8 @@ Key name: `security`
 
 #### `security.kubernetes` Prerequisite Section
 * `kubernetes`- Describes any Kubernetes requirements.
-  * `podSecurityPolicy` - Block: Describes any Pod Security Policy requirements.
-    * `name` - String: one of the following pre-defined pod security policy names:
+  * `podSecurityPolicy` - Block: Describes any PodSecurityPolicy requirements.
+    * `name` - String: one of the following pre-defined PodSecurityPolicy names:
       * `ibm-restricted-psp`
       * `ibm-anyuid-psp`
       * `ibm-anyuid-hostpath-psp`
@@ -49,8 +49,18 @@ Key name: `security`
       * `Administrator` - The Administrator role of a team that includes the target namespace.
       * `Operator` - The Operator role of a team that includes the target namespace.
 
+#### `security.openshift` Prerequisite Section
+* `openshift`- Describes any Red Hat&reg; OpenShift&reg; requirements.
+  * `securityContextConstraints` - Block: Describes any SecurityContextConstraints requirements.
+    * `name` - String: one of the following pre-defined SecurityContextConstraints names:
+      * `ibm-restricted-scc`
+      * `ibm-anyuid-scc`
+      * `ibm-anyuid-hostpath-scc`
+      * `ibm-anyuid-hostaccess-scc`
+      * `ibm-privileged-scc`
+
 ## Catalog Section
-The catalog section describes how this IBM Cloud Pak should be displayed in a catalog.
+The catalog section describes how this IBM Cloud Pak or IBM Solution Pak should be displayed in a catalog.
 
 For reference, the [IBM Global Catalog](https://console.test.cloud.ibm.com/docs/developing/get-coding/index-rscatalog.html) may be a template for future additions to this section.
 
@@ -65,12 +75,12 @@ catalog.visible|boolean|If true (the default) if not present, this IBM Cloud Pak
 
 # Examples
 
-## Cloud Pak Example:
+## L1 Cloud Pak Example:
 ```
 qualification:
   levelName: "ibm-cloud-pak"
   levelDescription: "IBM Cloud Pak"
-  issueDate: "01/2019"
+  issueDate: "09/2018"
   duration: "6M"
   terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
 prereqs:
@@ -78,7 +88,75 @@ prereqs:
     kubernetes:
       podSecurityPolicy:
         name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
     ibmCloudPrivate:
       installerRole:
         name: "Operator"
+```
+
+## L2 Certified IBM Cloud Pak Example:
+```
+qualification:
+  levelName: "certified-ibm-cloud-pak"
+  levelDescription: "Certified IBM Cloud Pak"
+  issueDate: "09/2018"
+  duration: "6M"
+  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
+prereqs:
+  security:
+    kubernetes:
+      podSecurityPolicy:
+        name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
+    ibmCloudPrivate:
+      installerRole:
+        name: "ClusterAdministrator"
+```
+
+## Certified IBM Solution Pak Example
+```
+qualification:
+  levelName: "certified-ibm-solution-pak"
+  levelDescription: "Certified IBM Solution Pak"
+  issueDate: "09/2018"
+  duration: "6M"
+  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
+prereqs:
+  security:
+    kubernetes:
+      podSecurityPolicy:
+        name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
+    ibmCloudPrivate:
+      installerRole:
+        name: "ClusterAdministrator"
+```
+
+## L2 IBM Certified Cloud Pak Example (which is part of a Solution Pak):
+```
+qualification:
+  levelName: "certified-ibm-cloud-pak"
+  levelDescription: "Certified IBM Cloud Pak"
+  issueDate: "09/2018"
+  duration: "6M"
+  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
+prereqs:
+  security:
+    kubernetes:
+      podSecurityPolicy:
+        name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
+    ibmCloudPrivate:
+      installerRole:
+        name: "Operator"
+catalog:
+  visible: false
 ```
