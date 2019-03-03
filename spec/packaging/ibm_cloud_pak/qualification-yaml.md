@@ -2,23 +2,22 @@
 The qualification.yaml file includes the following sections:  
 * [qualification](#qualification-section)
 * [prereq](#prereqs-section)
-* [catalog](#catalog-section)
 
 ## Qualification Section
-The qualification section describes attributes related to the IBM Cloud Pak status.
+The qualification section describes attributes related to the IBM&reg; Cloud Pak status.
 
 Key name:  `qualification`
 
 **Fully Qualified Attribute Name**|**Type**|**Description/Specification**
 -----|-----|-----
-qualification.levelName|String|Value must be: `ibm-cloud-pak`
-qualification.levelDescription|String|Value must be: `IBM Cloud Pak`
+qualification.levelName|String|One of two pre-defined levels (more may be added later): `ibm-cloud-pak`, `certified-ibm-cloud-pak`
+qualification.levelDescription|String|One of following pre-defined level descriptions: `IBM Cloud Pak`, `Certified IBM Cloud Pak`
 qualification.issueDate|String|The date in the format `M/YYYY` which the Cloud Pak was issued.
-qualification.duration|String|The amount of time that the Cloud Pak qualification is valid from date of issue.  Must be no longer than 6 months.  Format is in months:  `nM`
-qualification.terms|String|Value must be: `Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images`
+qualification.duration|String|The amount of time that the Cloud Pak qualification is valid.  Format is in months:  `nM`
+qualification.terms|String|The terms description.
 
 ## Prereqs Section
-The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak.
+The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak or Solution Pak.
 
 This section is organized using indented blocks of topics.
 
@@ -32,9 +31,10 @@ This section is organized using indented blocks of products or components.
 Key name: `security`
 
 #### `security.kubernetes` Prerequisite Section
+This section describes any pre-requisites for Kubernetes.  
 * `kubernetes`- Describes any Kubernetes requirements.
-  * `podSecurityPolicy` - Block: Describes any Pod Security Policy requirements.
-    * `name` - String: one of the following pre-defined pod security policy names:
+  * `podSecurityPolicy` - Block: Describes any PodSecurityPolicy requirements (not applicable for Red Hat OpenShift).
+    * `name` - String: one of the following pre-defined PodSecurityPolicy names:
       * `ibm-restricted-psp`
       * `ibm-anyuid-psp`
       * `ibm-anyuid-hostpath-psp`
@@ -42,6 +42,7 @@ Key name: `security`
       * `ibm-privileged-psp`
 
 #### `security.ibmCloudPrivate` Prerequisite Section
+This section describes any pre-requisites when running on the IBM&reg; Cloud Private.  This section can be omitted if the Cloud Pak does not support IBM Cloud Private.
 * `ibmCloudPrivate` - Describes any IBM Cloud Private product requirements.
   * `installerRole` - Block:  Describes the [IBM Cloud Private Role](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.1/user_management/assign_role.html) name required to install the IBM Cloud Pak.
     * `name` - String: one of the IBM Cloud Private roles:
@@ -49,28 +50,33 @@ Key name: `security`
       * `Administrator` - The Administrator role of a team that includes the target namespace.
       * `Operator` - The Operator role of a team that includes the target namespace.
 
-## Catalog Section
-The catalog section describes how this IBM Cloud Pak should be displayed in a catalog.
-
-For reference, the [IBM Global Catalog](https://console.test.cloud.ibm.com/docs/developing/get-coding/index-rscatalog.html) may be a template for future additions to this section.
-
-This section is organized using indented blocks of topics.
-
-Key name: `catalog`
-
-**Fully Qualified Attribute Name**|**Type**|**Description/Specification**
------|-----|-----
-catalog.visible|boolean|If true (the default) if not present, this IBM Cloud Pak is displayed in the catalog.
+#### `security.openshift` Prerequisite Section
+This section describes any pre-requisites when running on the Red Hat&reg; OpenShift&reg; Kubernetes distribution.  This section can be omitted if the Cloud Pak does not support OpenShift.
+* `openshift`- Describes any Red Hat&reg; OpenShift&reg; requirements.
+  * `securityContextConstraints` - Block: Describes any SecurityContextConstraints requirements.
+    * `name` - String: one of the following pre-defined SecurityContextConstraints names:
+      * `ibm-restricted-scc`
+      * `ibm-anyuid-scc`
+      * `ibm-anyuid-hostpath-scc`
+      * `ibm-anyuid-hostaccess-scc`
+      * `ibm-privileged-scc`
+      * `restricted`
+      * `nonroot`
+      * `anyuid`
+      * `hostmount-anyuid`
+      * `hostnetwork`
+      * `hostaccess`
+      * `privileged`
 
 
 # Examples
 
-## Cloud Pak Example:
+## L1 Cloud Pak Example:
 ```
 qualification:
   levelName: "ibm-cloud-pak"
   levelDescription: "IBM Cloud Pak"
-  issueDate: "01/2019"
+  issueDate: "09/2018"
   duration: "6M"
   terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
 prereqs:
@@ -78,7 +84,31 @@ prereqs:
     kubernetes:
       podSecurityPolicy:
         name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
     ibmCloudPrivate:
       installerRole:
         name: "Operator"
+```
+
+## L2 Certified IBM Cloud Pak Example:
+```
+qualification:
+  levelName: "certified-ibm-cloud-pak"
+  levelDescription: "Certified IBM Cloud Pak"
+  issueDate: "09/2018"
+  duration: "6M"
+  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
+prereqs:
+  security:
+    kubernetes:
+      podSecurityPolicy:
+        name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
+    ibmCloudPrivate:
+      installerRole:
+        name: "ClusterAdministrator"
 ```

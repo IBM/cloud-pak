@@ -32,7 +32,6 @@ fi
 # Check each SA against each PSP
 kubectl get psp -o name | sed "s/^.\{29\}//" | while read PSPNAME;do
   PSP=ibm-restricted-psp
-  #echo $PSPNAME
   USERSFILE=$(mktemp)
   trap "rm -f $USERSFILE" EXIT
 
@@ -40,14 +39,12 @@ kubectl get psp -o name | sed "s/^.\{29\}//" | while read PSPNAME;do
   kubectl -n $NAMESPACE --quiet=true auth can-i use podsecuritypolicy/$PSPNAME --as system:serviceaccount:$NAMESPACE:bogussa091209470982
   if [ $? -eq 0 ]; then
     echo -n "*" > $USERSFILE
-    #echo "   Default set"
   fi
 
   # Check each service account to see if it's authorized.
   kubectl -n $NAMESPACE get serviceaccounts -o name |  sed "s/^.\{15\}//" | while read SA;do
     kubectl -n $NAMESPACE --quiet=true auth can-i use podsecuritypolicy/$PSPNAME --as system:serviceaccount:$NAMESPACE:$SA
     if [ $? -eq 0 ]; then
-        #echo "   -$SA"
         if [ -s "$USERSFILE" ]; then
           echo -n ", " >> $USERSFILE
         fi
