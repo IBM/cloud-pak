@@ -2,7 +2,6 @@
 The qualification.yaml file includes the following sections:  
 * [qualification](#qualification-section)
 * [prereq](#prereqs-section)
-* [catalog](#catalog-section)
 
 ## Qualification Section
 The qualification section describes attributes related to the IBM&reg; Cloud Pak status.
@@ -11,10 +10,10 @@ Key name:  `qualification`
 
 **Fully Qualified Attribute Name**|**Type**|**Description/Specification**
 -----|-----|-----
-qualification.levelName|String|One of two pre-defined levels: `ibm-cloud-pak`, `certified-ibm-cloud-pak`, `ibm-solution-pak`, `certified-ibm-solution-pak`
-qualification.levelDescription|String|One of following pre-defined level descriptions: `IBM Cloud Pak`, `Certified IBM Cloud Pak`, `IBM Solution Pak`, `Certified IBM Solution Pak`
+qualification.levelName|String|One of two pre-defined levels (more may be added later): `ibm-cloud-pak`, `certified-ibm-cloud-pak`
+qualification.levelDescription|String|One of following pre-defined level descriptions: `IBM Cloud Pak`, `Certified IBM Cloud Pak`
 qualification.issueDate|String|The date in the format `M/YYYY` which the Cloud Pak was issued.
-qualification.duration|String|The amount of time that the   Cloud Pak or Solution pak qualification is valid.  Format is in months:  `nM`
+qualification.duration|String|The amount of time that the Cloud Pak qualification is valid.  Format is in months:  `nM`
 qualification.terms|String|The terms description.
 
 ## Prereqs Section
@@ -59,19 +58,6 @@ Key name: `security`
       * `ibm-anyuid-hostaccess-scc`
       * `ibm-privileged-scc`
 
-## Catalog Section
-The catalog section describes how this IBM Cloud Pak or IBM Solution Pak should be displayed in a catalog.
-
-For reference, the [IBM Global Catalog](https://console.test.cloud.ibm.com/docs/developing/get-coding/index-rscatalog.html) may be a template for future additions to this section.
-
-This section is organized using indented blocks of topics.
-
-Key name: `catalog`
-
-**Fully Qualified Attribute Name**|**Type**|**Description/Specification**
------|-----|-----
-catalog.visible|boolean|If true (the default) if not present, this IBM Cloud Pak is displayed in the catalog.
-
 
 # Examples
 
@@ -115,48 +101,4 @@ prereqs:
     ibmCloudPrivate:
       installerRole:
         name: "ClusterAdministrator"
-```
-
-## Certified IBM Solution Pak Example
-```
-qualification:
-  levelName: "certified-ibm-solution-pak"
-  levelDescription: "Certified IBM Solution Pak"
-  issueDate: "09/2018"
-  duration: "6M"
-  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
-prereqs:
-  security:
-    kubernetes:
-      podSecurityPolicy:
-        name: "ibm-restricted-psp"
-    openshift:
-      securityContextConstraints:
-        name: "ibm-restricted-scc"
-    ibmCloudPrivate:
-      installerRole:
-        name: "ClusterAdministrator"
-```
-
-## L2 IBM Certified Cloud Pak Example (which is part of a Solution Pak):
-```
-qualification:
-  levelName: "certified-ibm-cloud-pak"
-  levelDescription: "Certified IBM Cloud Pak"
-  issueDate: "09/2018"
-  duration: "6M"
-  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
-prereqs:
-  security:
-    kubernetes:
-      podSecurityPolicy:
-        name: "ibm-restricted-psp"
-    openshift:
-      securityContextConstraints:
-        name: "ibm-restricted-scc"
-    ibmCloudPrivate:
-      installerRole:
-        name: "Operator"
-catalog:
-  visible: false
 ```
