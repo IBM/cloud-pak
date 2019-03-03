@@ -42,9 +42,9 @@ The following 5 SecurityContextConstraints are available on IBM Cloud Private on
   - forbiddenSysctls: defaults to null, allowing all safe sysctls
   - allowedUnsafeSysctls: defaults to disable all unsafe sysctls
   
-  This constraint differs than the `restricted` SCC in the following ways:
+  This constraint differs from the `restricted` SCC in the following ways:
   - Any User ID can be specified.
-  - Group ID ranges are limited to the ranges allowed by PSPs and are not determined by the namespace (project).
+  - Group ID ranges are limited to the ranges allowed by SCCs and are not determined by the namespace (project).
   - All capabilities are dropped.
 
 
