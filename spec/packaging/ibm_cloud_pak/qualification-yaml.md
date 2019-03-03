@@ -31,8 +31,9 @@ This section is organized using indented blocks of products or components.
 Key name: `security`
 
 #### `security.kubernetes` Prerequisite Section
+This section describes any pre-requisites for Kubernetes.  
 * `kubernetes`- Describes any Kubernetes requirements.
-  * `podSecurityPolicy` - Block: Describes any PodSecurityPolicy requirements.
+  * `podSecurityPolicy` - Block: Describes any PodSecurityPolicy requirements (not applicable for Red Hat OpenShift).
     * `name` - String: one of the following pre-defined PodSecurityPolicy names:
       * `ibm-restricted-psp`
       * `ibm-anyuid-psp`
@@ -41,6 +42,7 @@ Key name: `security`
       * `ibm-privileged-psp`
 
 #### `security.ibmCloudPrivate` Prerequisite Section
+This section describes any pre-requisites when running on the IBM&reg; Cloud Private.  This section can be omitted if the Cloud Pak does not support IBM Cloud Private.
 * `ibmCloudPrivate` - Describes any IBM Cloud Private product requirements.
   * `installerRole` - Block:  Describes the [IBM Cloud Private Role](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.1/user_management/assign_role.html) name required to install the IBM Cloud Pak.
     * `name` - String: one of the IBM Cloud Private roles:
@@ -49,6 +51,7 @@ Key name: `security`
       * `Operator` - The Operator role of a team that includes the target namespace.
 
 #### `security.openshift` Prerequisite Section
+This section describes any pre-requisites when running on the Red Hat&reg; OpenShift&reg; Kubernetes distribution.  This section can be omitted if the Cloud Pak does not support OpenShift.
 * `openshift`- Describes any Red Hat&reg; OpenShift&reg; requirements.
   * `securityContextConstraints` - Block: Describes any SecurityContextConstraints requirements.
     * `name` - String: one of the following pre-defined SecurityContextConstraints names:
@@ -57,6 +60,13 @@ Key name: `security`
       * `ibm-anyuid-hostpath-scc`
       * `ibm-anyuid-hostaccess-scc`
       * `ibm-privileged-scc`
+      * `restricted`
+      * `nonroot`
+      * `anyuid`
+      * `hostmount-anyuid`
+      * `hostnetwork`
+      * `hostaccess`
+      * `privileged`
 
 
 # Examples
