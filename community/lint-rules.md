@@ -1,3 +1,5 @@
+# Lint rules for IBM Cloud Paks
+
 | Rule | Severity | Description |
 | --- | --- | --- |
 | ChartDependenciesExist | Error | For dependencies to function properly, the subcharts must be provided in the charts/ directory, be present in the requirements.yaml, and have a valid version. To resolve this message, ensure that all of these things are true for the chart's subcharts. |
