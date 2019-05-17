@@ -10,7 +10,7 @@ The IBM community charts repository is both a Helm repository and a repository f
 
 ## How do I make my contributed Helm chart an official IBM Cloud Pak?
 
-The process is very similar to contributing your Helm chart to the IBM community charts repository with some additional requirements to follow and a few new files to include in your chart.  You can find out more about both in the IBM Cloud Private [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/app_center/cloud_paks_over.html).
+The process is very similar to contributing your Helm chart to the IBM community charts repository with some additional requirements to follow and a few new files to include in your chart.  You can find out more about both in the IBM Cloud Private [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/app_center/cloud_paks_over.html).
 
 ## IBM Cloud Pak requirements
 
@@ -45,7 +45,7 @@ In addition to the [minimum guidelines to be added to the community](https://git
 
 ## Image vulnerabilities
 
-All images used in the product need to be scanned by the IBM Cloud Private Vulnerability Advisor and vulnerable packages must be fixed.  In addition, you must have a process in place to address new image vulnerabilities over time.  The documentation for Vulnerability Advisor can be found in the [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/vuln_advisor.html).
+All images used in the product need to be scanned by the IBM Cloud Private Vulnerability Advisor and vulnerable packages must be fixed.  In addition, you must have a process in place to address new image vulnerabilities over time.  The documentation for Vulnerability Advisor can be found in the [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/manage_cluster/vuln_advisor.html).
 
 ## Document and follow principle of runtime least privilege
 
@@ -83,7 +83,7 @@ The rules and descriptions for the content linter can be found here:
 
 ## values-metadata.yaml
 
-IBM Cloud Private supports defining metadata for fields containing immutable or hidden fields, rendering booleans as check boxes, specifying allowed values, etc. to provide a rich deployment experience in the IBM Cloud Private GUI. This metadata is defined within a chart by using a file named `values-metadata.yaml`.  You must provide metadata in values-metadata.yaml for each parameter in values.yaml.  Detailed information of the format and syntax can be found in the IBM Cloud Private [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/app_center/values_metadata.html) For an example of how to use this file, refer to the [sample chart in this repository](https://github.com/IBM/charts/blob/master/community/sample-chart/values-metadata.yaml) or the many [IBM-provided charts in the repository](https://github.com/IBM/charts/tree/master/stable)
+IBM Cloud Private supports defining metadata for fields containing immutable or hidden fields, rendering booleans as check boxes, specifying allowed values, etc. to provide a rich deployment experience in the IBM Cloud Private GUI. This metadata is defined within a chart by using a file named `values-metadata.yaml`.  You must provide metadata in values-metadata.yaml for each parameter in values.yaml.  Detailed information of the format and syntax can be found in the IBM Cloud Private [Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/app_center/values_metadata.html) For an example of how to use this file, refer to the [sample chart in this repository](https://github.com/IBM/charts/blob/master/community/sample-chart/values-metadata.yaml) or the many [IBM-provided charts in the repository](https://github.com/IBM/charts/tree/master/stable)
 
 ## `ibm_cloud_pak` directory
 
@@ -93,9 +93,9 @@ Your helm chart must include a new subdirectory `ibm_cloud_pak` which contains a
 
 IBM Cloud Private clusters are typically in an air-gapped environment with no access to the public internet.  When installing charts that point to a public image registry like Docker Hub, the chart pods will fail to pull the images.  To help alleviate this, IBM Cloud Private provides a local image registry as well as a local chart repository as well as tooling for building and installing binary packages in an air-gapped environment.
 
-IBM Cloud Private provides tooling to [build offline binary packages](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/cli_catalog_commands.html#create-archive).  The tool reads a YAML manifest file in the helm chart and creates the binary package from the specified contents.  Cloud Paks must provide a such a manifest.yaml file for users to easily create offline binary packages in a consistent manner across products.  The manifest format can be found here: [IBM Cloud Pak manifest format](../spec/packaging/ibm_cloud_pak/manifest-yaml.md)
+IBM Cloud Private provides tooling to [build offline binary packages](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/manage_cluster/cli_catalog_commands.html#create-archive).  The tool reads a YAML manifest file in the helm chart and creates the binary package from the specified contents.  Cloud Paks must provide a such a manifest.yaml file for users to easily create offline binary packages in a consistent manner across products.  The manifest format can be found here: [IBM Cloud Pak manifest format](../spec/packaging/ibm_cloud_pak/manifest-yaml.md)
 
-IBM Cloud Private also supports [importing binary packages that contain all the components (charts and images) required to deploy a product](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.1/manage_cluster/cli_catalog_commands.html#load-archive).  The contents of the binary package are then stored in the local image registry / local chart repository and the charts can then be deployed without access to the public internet.
+IBM Cloud Private also supports [importing binary packages that contain all the components (charts and images) required to deploy a product](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/manage_cluster/cli_catalog_commands.html#load-archive).  The contents of the binary package are then stored in the local image registry / local chart repository and the charts can then be deployed without access to the public internet.
 
 Cloud Paks must provide a valid manifest.yaml file and test that the ICP tooling can build the binary offline package, that the package can be installed in ICP and that the product can be deployed from that installed package.
 
