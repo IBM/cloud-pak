@@ -30,7 +30,7 @@ qualification.duration|String|The amount of time that the Cloud Pak qualificatio
 qualification.terms|String|The terms description.
 
 ## Prereqs Section
-The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak or Solution Pak.
+The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak.
 
 This section is organized using indented blocks of topics that correspond to a resolver.  Each resolver uses the context of the installing process to determine a boolean outcome.  
 
