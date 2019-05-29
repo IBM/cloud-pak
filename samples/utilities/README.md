@@ -1,6 +1,11 @@
 # IBM Cloud Pak Utilities
 The following utilities are included as samples for working with an IBM Cloud Pak.
 
+- [IBM Cloud Pak Utilities](#ibm-cloud-pak-utilities)
+  - [getPSPs.sh](#getpspssh)
+  - [getSCCs.sh (Red Hat OpenShift only)](#getsccssh-red-hat-openshift-only)
+  - [checkPrereqs.sh](#checkprereqssh)
+
 ## getPSPs.sh
 The getPSPs.sh bash script displays all of the PodSecurityPolicy resources that are 
 mapped to each of the ServiceAccount users in the specified namespace.
@@ -42,4 +47,36 @@ In the following example, all users are bound to the `ibm-restricted-scc` resour
 Checking SCC configuration for namespace: cert-manager
 icp-scc (*sys:sa:ns)
 ibm-restricted-scc (*sys:auth)
+```
+
+## checkPrereqs.sh
+The checkPrereqs.sh script is a sample utility that can be used to determine if the target cluster has specific prerequistes installed.  Cloud Paks can use this script as part of a pre-installation verification step to verify that the target cluster satisfies the minimum requirements of the cloud pak.  
+
+To use the utility:
+1.  Install `kubectl`, `jq` and `curl` command line utilities.
+2.  Login to the `kubectl` command-line as a cluster administrator (use `cloudctl` for IBM Cloud Private)
+3.  To view the status of all known IBM Cloud Private management services:
+    1.  `./checkPrereqs.sh check --allicpservices`
+4.  To view the status of specific IBM Cloud Private management services:
+    1.  `./checkPrereqs.sh check --icpservices cert-manager,image-manager`
+5.  To view a list of all  IBM Cloud Private management services that this utility checks for:
+    1.  `./checkPrereqs.sh list --allicpservices`
+
+Example outputs with exit code:
+```
+$ ./checkPrereqs.sh check --icpservices auth-idp,image-manager
+IBM Cloud Private management services:
+auth-idp: INSTALLED
+image-manager: INSTALLED
+$ echo $?
+0
+```
+
+```
+$ ./checkPrereqs.sh check --icpservices auth-idp,istio
+IBM Cloud Private management services:
+auth-idp: INSTALLED
+istio: NOT_INSTALLED
+$ echo $?
+1
 ```
