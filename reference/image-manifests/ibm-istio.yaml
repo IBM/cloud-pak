@@ -1,13 +1,31 @@
 description: Helm chart for all istio components
 images:
+  - image: ibmcom/busybox
+  - image: ibmcom/busybox-amd64
+  - image: ibmcom/busybox-ppc64le
   - image: ibmcom/cert-manager
   - image: ibmcom/cert-manager-amd64
   - image: ibmcom/cert-manager-ppc64le
   - image: ibmcom/cert-manager-s390x
+  - image: ibmcom/coredns
+  - image: ibmcom/coredns-amd64
+  - image: ibmcom/coredns-ppc64le
+  - image: ibmcom/grafana
+  - image: ibmcom/grafana-amd64
+  - image: ibmcom/grafana-ppc64le
+  - image: ibmcom/icp-cert-manager-controller
+  - image: ibmcom/icp-cert-manager-controller-amd64
+  - image: ibmcom/icp-cert-manager-controller-ppc64le
   - image: ibmcom/istio-citadel
   - image: ibmcom/istio-citadel-amd64
   - image: ibmcom/istio-citadel-ppc64le
   - image: ibmcom/istio-citadel-s390x
+  - image: ibmcom/istio-cni
+  - image: ibmcom/istio-cni-amd64
+  - image: ibmcom/istio-cni-ppc64le
+  - image: ibmcom/istio-coredns-plugin
+  - image: ibmcom/istio-coredns-plugin-amd64
+  - image: ibmcom/istio-coredns-plugin-ppc64le
   - image: ibmcom/istio-galley
   - image: ibmcom/istio-galley-amd64
   - image: ibmcom/istio-galley-ppc64le
@@ -20,6 +38,9 @@ images:
   - image: ibmcom/istio-mixer-amd64
   - image: ibmcom/istio-mixer-ppc64le
   - image: ibmcom/istio-mixer-s390x
+  - image: ibmcom/istio-node-agent-k8s
+  - image: ibmcom/istio-node-agent-k8s-amd64
+  - image: ibmcom/istio-node-agent-k8s-ppc64le
   - image: ibmcom/istio-pilot
   - image: ibmcom/istio-pilot-amd64
   - image: ibmcom/istio-pilot-ppc64le
@@ -60,3 +81,6 @@ images:
   - image: ibmcom/prom-statsd-exporter-amd64
   - image: ibmcom/prom-statsd-exporter-ppc64le
   - image: ibmcom/prom-statsd-exporter-s390x
+  - image: ibmcom/zipkin
+  - image: ibmcom/zipkin-amd64
+  - image: ibmcom/zipkin-ppc64le
