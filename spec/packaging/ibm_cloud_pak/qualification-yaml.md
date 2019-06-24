@@ -1,36 +1,37 @@
 # Qualification YAML Specification
 **Table of Contents**
-- [Qualification YAML Specification](#qualification-yaml-specification)
-  - [Qualification Section](#qualification-section)
-  - [Prereqs Section](#prereqs-section)
-    - [`security` Prerequisite Section](#security-prerequisite-section)
-      - [`security.kubernetes` Prerequisite Section](#securitykubernetes-prerequisite-section)
-      - [`security.ibmCloudPrivate` Prerequisite Section](#securityibmcloudprivate-prerequisite-section)
-      - [`security.openshift` Prerequisite Section](#securityopenshift-prerequisite-section)
-    - [`k8sDistros` Prerequisite Section](#k8sdistros-prerequisite-section)
-      - [`k8sDistros.<distro-resolver>` Prerequisite Sections](#k8sdistrosdistro-resolver-prerequisite-sections)
-    - [`ibmCloudPrivateServices` Prerequisite Section](#ibmcloudprivateservices-prerequisite-section)
-      - [`ibmCloudPrivateServices.<service-resolver>` Prerequisite Sections](#ibmcloudprivateservicesservice-resolver-prerequisite-sections)
-    - [Prereq enforcement rules](#prereq-enforcement-rules)
-- [Examples](#examples)
-  - [L1 Cloud Pak Example:](#l1-cloud-pak-example)
-  - [L2 Certified IBM Cloud Pak Example:](#l2-certified-ibm-cloud-pak-example)
+- [Qualification YAML Specification](#Qualification-YAML-Specification)
+  - [Qualification Section](#Qualification-Section)
+  - [Prereqs Section](#Prereqs-Section)
+    - [`security` Prerequisite Section](#security-Prerequisite-Section)
+      - [`security.kubernetes` Prerequisite Section](#securitykubernetes-Prerequisite-Section)
+      - [`security.ibmCloudPrivate` Prerequisite Section](#securityibmCloudPrivate-Prerequisite-Section)
+      - [`security.openshift` Prerequisite Section](#securityopenshift-Prerequisite-Section)
+    - [`k8sDistros` Prerequisite Section](#k8sDistros-Prerequisite-Section)
+      - [`k8sDistros.<distro-resolver>` Prerequisite Sections](#k8sDistrosdistro-resolver-Prerequisite-Sections)
+    - [`ibmCloudPrivateServices` Prerequisite Section](#ibmCloudPrivateServices-Prerequisite-Section)
+      - [`ibmCloudPrivateServices.<service-resolver>` Prerequisite Sections](#ibmCloudPrivateServicesservice-resolver-Prerequisite-Sections)
+    - [Prereq enforcement rules](#Prereq-enforcement-rules)
+  - [Catalog Section](#Catalog-Section)
+- [Examples](#Examples)
+  - [IBM certified container Example, supporting ICP, OpenShift and IKS Kubernetes distros](#IBM-certified-container-Example-supporting-ICP-OpenShift-and-IKS-Kubernetes-distros)
+  - [IBM certified container Example, supporting any kubernetes distro:](#IBM-certified-container-Example-supporting-any-kubernetes-distro)
 
 ## Qualification Section
-The qualification section describes attributes related to the IBM&reg; Cloud Pak status.
+The qualification section describes attributes related to the IBM&reg; Cloud Pak or IBM certified container status.
 
 Key name:  `qualification`
 
 **Fully Qualified Attribute Name**|**Type**|**Description/Specification**
 -----|-----|-----
-qualification.levelName|String|One of two pre-defined levels (more may be added later): `ibm-cloud-pak`, `certified-ibm-cloud-pak`
-qualification.levelDescription|String|One of following pre-defined level descriptions: `IBM Cloud Pak`, `Certified IBM Cloud Pak`
-qualification.issueDate|String|The date in the format `M/YYYY` which the Cloud Pak was issued.
-qualification.duration|String|The amount of time that the Cloud Pak qualification is valid.  Format is in months:  `nM`
+qualification.levelName|String|One of two pre-defined levels:`certified-ibm-cloud-pak`, `certified-ibm-solution-pak`
+qualification.levelDescription|String|One of following pre-defined level descriptions: `IBM certified container`, `IBM Cloud Pak`
+qualification.issueDate|String|The date in the format `M/YYYY` which the IBM Cloud Pak or IBM certified container was issued.
+qualification.duration|String|The amount of time that the IBM Cloud Pak or IBM certified container qualification is valid.  Format is in months:  `nM`
 qualification.terms|String|The terms description.
 
 ## Prereqs Section
-The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak.
+The prerequisites section describes any components, features, configurations that are required in order to install the IBM Cloud Pak or Solution Pak.
 
 This section is organized using indented blocks of topics that correspond to a resolver.  Each resolver uses the context of the installing process to determine a boolean outcome.  
 
@@ -40,7 +41,7 @@ Valid topic keys include:
 * `security` - Describes any security pre-requisites.  All keys in this block are security resolvers.
 * `k8sDistros` - Describes any Kubernetes distribution  pre-requisites.  All keys in this block are Kubernetes distribution resolvers.
 * `ibmCloudPrivateServices` - Describes any IBM Cloud Private management service prerequisites.  All keys in this block are IBM Cloud Private service resolvers.
-* 
+
 ### `security` Prerequisite Section
 This section is organized using indented blocks of products or components.
 Key name: `security`
@@ -61,7 +62,7 @@ This section describes any pre-requisites for Kubernetes.  Enforcement of this r
 #### `security.ibmCloudPrivate` Prerequisite Section
 This section describes any pre-requisites when running on the IBM&reg; Cloud Private.  This section can be omitted if the Cloud Pak does not support IBM Cloud Private.
 * `ibmCloudPrivate` - Describes any IBM Cloud Private product requirements.
-  * `installerRole` - Block:  Describes the [IBM Cloud Private Role](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.1/user_management/assign_role.html) name required to install the IBM Cloud Pak.
+  * `installerRole` - Block:  Describes the [IBM Cloud Private Role](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.1/user_management/assign_role.html) name required to install the IBM Cloud Pak or IBM certified container.
 
     *Disposition:* `uses`
     * `name` - String: one of the IBM Cloud Private roles:
@@ -119,7 +120,7 @@ Key name: `ibmCloudPrivateServices`
 *Disposition:* `requires`
 
 #### `ibmCloudPrivateServices.<service-resolver>` Prerequisite Sections
-Each IBM Cloud Private Management Service resolver key is a well known service named defined in ICP.  The value specified here is typically the **primary** service of a feature that a Cloud Pak utilizes directly.
+Each IBM Cloud Private Management Service resolver key is a well known service named defined in ICP.  The value specified here is typically the **primary** service of a feature that an IBM Cloud Pak or IBM certified container utilizes directly.
 
 For a detailed list of services available in IBM Cloud Private see the [IBM Cloud Private Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.2/getting_started/components.html)
 
@@ -157,18 +158,32 @@ Where the enforcement policy is one of:
 - `uses` - The installation SHOULD BE prohibited until the prerequisite is met, or a compatible alternative is available.
 
 
+## Catalog Section
+The catalog section describes how this IBM Cloud Pak or IBM certified container should be displayed in a catalog.
+
+For reference, the [IBM Global Catalog](https://console.test.cloud.ibm.com/docs/developing/get-coding/index-rscatalog.html) may be a template for future additions to this section.
+
+This section is organized using indented blocks of topics.
+
+Key name: `catalog`
+
+**Fully Qualified Attribute Name**|**Type**|**Description/Specification**
+-----|-----|-----
+catalog.visible|boolean|If `false` this IBM Cloud Pak or IBM certified container is not displayed in the catalog.  The default is `true`
+
+
 # Examples
 
-## L1 Cloud Pak Example:
+## IBM certified container Example, supporting ICP, OpenShift and IKS Kubernetes distros
 ```yaml
 qualification:
-  levelName: "ibm-cloud-pak"
-  levelDescription: "IBM Cloud Pak"
+  levelName: "certified-ibm-cloud-pak"
+  levelDescription: "IBM certified container"
   issueDate: "09/2018"
   duration: "12M"
   terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
 
-# Defines any constraints that this cloud pak may require.
+# Defines any constraints that this cerified container may require.
 prereqs:
   security:                           # Security Resolver
     kubernetes:                       # Generic Kubernetes Security Resolver
@@ -190,11 +205,11 @@ prereqs:
       semver: ">=1.11.3"
 ```
 
-## L2 Certified IBM Cloud Pak Example:
+##  IBM certified container Example, supporting any kubernetes distro:
 ```yaml
 qualification:
   levelName: "certified-ibm-cloud-pak"
-  levelDescription: "Certified IBM Cloud Pak"
+  levelDescription: "IBM certified container"
   issueDate: "03/2019"
   duration: "12M"
   terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
@@ -210,11 +225,11 @@ prereqs:
       installerRole:
         name: "ClusterAdministrator"
 
-k8sDistros:
+  k8sDistros:
     kubernetes:
       semver: ">=1.9"
-```
 
 ibmCloudPrivateServices:
   cert-manager: {}
   auth-idp: {}
+```
