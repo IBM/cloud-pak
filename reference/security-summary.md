@@ -16,11 +16,15 @@ the chart's documentation for instructions.
 |:----------|:---------------|
 | ibm-ace-dashboard-dev | ibm-anyuid-psp |
 | ibm-ace-dashboard-prod | ibm-anyuid-psp |
+| ibm-ace-dashboard-rhel-prod | ibm-anyuid-psp |
 | ibm-ace-server-dev | ibm-anyuid-psp |
 | ibm-ace-server-prod | ibm-anyuid-psp |
+| ibm-ace-server-rhel-prod | ibm-anyuid-psp |
+| ibm-aiopenscale-prod | ibm-restricted-psp |
 | ibm-alm-prod | ibm-anyuid-psp |
 | ibm-apiconnect-ent | ibm-privileged-psp |
 | ibm-apiconnect-pro | ibm-privileged-psp |
+| ibm-app-navigator | ibm-restricted-psp |
 | ibm-aspera-cli | ibm-anyuid-psp |
 | ibm-aspera-hsts-prod | ibm-anyuid-hostaccess-psp |
 | ibm-blockchain-platform-dev | ibm-privileged-psp |
@@ -41,7 +45,12 @@ the chart's documentation for instructions.
 | ibm-db2oltp-dae | ibm-privileged-psp |
 | ibm-db2oltp-dev | ibm-privileged-psp |
 | ibm-dba-content-prod | ibm-privileged-psp |
+| ibm-dba-contentsearch | ibm-restricted-psp |
+| ibm-dba-contentservices | ibm-restricted-psp |
+| ibm-dba-cscmis | ibm-restricted-psp |
+| ibm-dba-extshare-prod | ibm-restricted-psp |
 | ibm-dba-multicloud-prod | ibm-privileged-psp |
+| ibm-dba-navigator | ibm-restricted-psp |
 | ibm-dsm-dev | ibm-privileged-psp |
 | ibm-dsm-prod-x86-64 | ibm-privileged-psp |
 | ibm-dsx-dev | ibm-privileged-psp |
@@ -50,18 +59,18 @@ the chart's documentation for instructions.
 | ibm-eventstreams-dev | ibm-restricted-psp |
 | ibm-eventstreams-foundation-prod | ibm-restricted-psp |
 | ibm-eventstreams-prod | ibm-restricted-psp |
+| ibm-eventstreams-rhel-prod |  |
 | ibm-f5bigip-controller | ibm-anyuid-psp |
 | ibm-galera-mariadb-dev | ibm-anyuid-hostpath-psp |
 | ibm-glusterfs | ibm-privileged-psp |
 | ibm-hazelcast-dev | ibm-anyuid-psp |
-| ibm-icplogging | ibm-privileged-psp |
-| ibm-icplogging-kibana | ibm-privileged-psp |
-| ibm-icpmonitoring | ibm-anyuid-hostaccess-psp |
+| ibm-ilmt | ibm-privileged-psp |
 | ibm-integration-bus-dev | ibm-anyuid-psp |
 | ibm-integration-bus-prod | ibm-anyuid-psp |
 | ibm-istio | ibm-privileged-psp |
 | ibm-istio-remote | ibm-privileged-psp |
 | ibm-jenkins-dev | ibm-privileged-psp |
+| ibm-kerify-dev | ibm-anyuid-psp |
 | ibm-lsfce-dev | ibm-privileged-psp |
 | ibm-mariadb-dev | ibm-anyuid-psp |
 | ibm-maximo-po-prod | ibm-restricted-psp |
@@ -73,6 +82,7 @@ the chart's documentation for instructions.
 | ibm-microclimate | ibm-anyuid-hostpath-psp |
 | ibm-minio-objectstore | ibm-anyuid-psp |
 | ibm-mobilefoundation-dev | ibm-restricted-psp |
+| ibm-mobilefoundation-prod | ibm-restricted-psp |
 | ibm-mongodb-dev | ibm-anyuid-psp |
 | ibm-mqadvanced-server-dev | ibm-anyuid-psp |
 | ibm-mqadvanced-server-integration-prod | ibm-anyuid-psp |
@@ -91,6 +101,7 @@ the chart's documentation for instructions.
 | ibm-netcool-prod | ibm-privileged-psp |
 | ibm-nginx-dev | ibm-anyuid-psp |
 | ibm-nodejs-sample | ibm-anyuid-psp |
+| ibm-object-storage-plugin | ibm-privileged-psp |
 | ibm-odm-dev | ibm-anyuid-psp |
 | ibm-odm-prod | ibm-anyuid-psp |
 | ibm-oms-ent-prod | ibm-anyuid-psp |
@@ -102,14 +113,17 @@ the chart's documentation for instructions.
 | ibm-powerai-vision-prod | ibm-anyuid-hostpath-psp |
 | ibm-powervc-k8s-volume-driver | ibm-anyuid-hostpath-psp |
 | ibm-rabbitmq-dev | ibm-anyuid-psp |
+| ibm-reactive-platform-console-prod | ibm-anyuid-psp |
 | ibm-reactive-platform-lagom-sample | ibm-anyuid-psp |
 | ibm-redis-ha-dev | ibm-anyuid-psp |
 | ibm-rook-rbd-cluster | ibm-privileged-psp |
 | ibm-sam | ibm-anyuid-psp |
 | ibm-skydive-dev | ibm-privileged-psp |
+| ibm-spectrum-computing-prod | ibm-privileged-psp |
 | ibm-spectrum-conductor | ibm-privileged-psp |
 | ibm-spectrum-symphony-dev | ibm-privileged-psp |
 | ibm-spectrum-symphony-prod | ibm-privileged-psp |
+| ibm-storage-enabler-for-containers | ibm-anyuid-hostpath-psp |
 | ibm-swift-sample | ibm-anyuid-psp |
 | ibm-transadv-dev | ibm-anyuid-psp |
 | ibm-ucd-prod | ibm-anyuid-psp |
