@@ -32,7 +32,6 @@ the chart's documentation for instructions.
 | ibm-calico-bgp-peer | ibm-privileged-psp |
 | ibm-cam | ibm-anyuid-hostpath-psp |
 | ibm-cem | ibm-anyuid-psp |
-| ibm-cip-prod | ibm-restricted-psp |
 | ibm-cloud-appmgmt-prod | ibm-privileged-psp |
 | ibm-cloud-cost-asset-mgmt-prod | ibm-anyuid-psp |
 | ibm-cloud-mgmt-platform-prod | ibm-anyuid-psp |
@@ -69,7 +68,6 @@ the chart's documentation for instructions.
 | ibm-integration-bus-prod | ibm-anyuid-psp |
 | ibm-istio | ibm-privileged-psp |
 | ibm-istio-remote | ibm-privileged-psp |
-| ibm-jenkins-dev | ibm-privileged-psp |
 | ibm-kerify-dev | ibm-anyuid-psp |
 | ibm-lsfce-dev | ibm-privileged-psp |
 | ibm-mariadb-dev | ibm-anyuid-psp |
@@ -91,7 +89,6 @@ the chart's documentation for instructions.
 | ibm-netcool-asm-prod | ibm-restricted-psp |
 | ibm-netcool-piagent-prometheus-dev | ibm-anyuid-psp |
 | ibm-netcool-piagent-prometheus-prod | ibm-anyuid-psp |
-| ibm-netcool-probe-dev | ibm-privileged-psp |
 | ibm-netcool-probe | ibm-privileged-psp |
 | ibm-netcool-probe-messagebus-kafka-prod | ibm-restricted-psp |
 | ibm-netcool-probe-messagebus-webhook-prod | ibm-privileged-psp |
@@ -107,20 +104,18 @@ the chart's documentation for instructions.
 | ibm-oms-ent-prod | ibm-anyuid-psp |
 | ibm-oms-pro-prod | ibm-anyuid-psp |
 | ibm-open-liberty | ibm-anyuid-psp |
+| ibm-open-liberty-spring | ibm-restricted-psp |
 | ibm-postgres-dev | ibm-anyuid-psp |
 | ibm-powerai-enterprise-prod | ibm-privileged-psp |
 | ibm-powerai | ibm-privileged-psp |
 | ibm-powerai-vision-prod | ibm-anyuid-hostpath-psp |
 | ibm-powervc-k8s-volume-driver | ibm-anyuid-hostpath-psp |
-| ibm-rabbitmq-dev | ibm-anyuid-psp |
 | ibm-reactive-platform-console-prod | ibm-anyuid-psp |
 | ibm-reactive-platform-lagom-sample | ibm-anyuid-psp |
-| ibm-redis-ha-dev | ibm-anyuid-psp |
 | ibm-rook-rbd-cluster | ibm-privileged-psp |
 | ibm-sam | ibm-anyuid-psp |
 | ibm-skydive-dev | ibm-privileged-psp |
 | ibm-spectrum-computing-prod | ibm-privileged-psp |
-| ibm-spectrum-conductor | ibm-privileged-psp |
 | ibm-spectrum-symphony-dev | ibm-privileged-psp |
 | ibm-spectrum-symphony-prod | ibm-privileged-psp |
 | ibm-storage-enabler-for-containers | ibm-anyuid-hostpath-psp |
