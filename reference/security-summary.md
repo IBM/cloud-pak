@@ -95,7 +95,7 @@ the chart's documentation for instructions.
 | ibm-netcool-probe-snmp-prod | ibm-anyuid-psp |
 | ibm-netcool-probe-syslogd-prod | ibm-anyuid-psp |
 | ibm-netcool-probe-tivolieif-prod | ibm-anyuid-psp |
-| ibm-netcool-prod | ibm-privileged-psp |
+| ibm-netcool-prod | ibm-restricted-psp |
 | ibm-nginx-dev | ibm-anyuid-psp |
 | ibm-nodejs-sample | ibm-anyuid-psp |
 | ibm-object-storage-plugin | ibm-privileged-psp |
