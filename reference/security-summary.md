@@ -95,7 +95,7 @@ the chart's documentation for instructions.
 | ibm-netcool-probe-snmp-prod | ibm-anyuid-psp |
 | ibm-netcool-probe-syslogd-prod | ibm-anyuid-psp |
 | ibm-netcool-probe-tivolieif-prod | ibm-anyuid-psp |
-| ibm-netcool-prod | ibm-privileged-psp |
+| ibm-netcool-prod | ibm-restricted-psp |
 | ibm-nginx-dev | ibm-anyuid-psp |
 | ibm-nodejs-sample | ibm-anyuid-psp |
 | ibm-object-storage-plugin | ibm-privileged-psp |
@@ -107,34 +107,5 @@ the chart's documentation for instructions.
 | ibm-open-liberty-spring | ibm-restricted-psp |
 | ibm-postgres-dev | ibm-anyuid-psp |
 | ibm-powerai-enterprise-prod | ibm-privileged-psp |
-| ibm-powerai | ibm-privileged-psp |
-| ibm-powerai-vision-prod | ibm-anyuid-hostpath-psp |
-| ibm-powervc-k8s-volume-driver | ibm-anyuid-hostpath-psp |
-| ibm-reactive-platform-console-prod | ibm-anyuid-psp |
-| ibm-reactive-platform-lagom-sample | ibm-anyuid-psp |
-| ibm-rook-rbd-cluster | ibm-privileged-psp |
-| ibm-sam | ibm-anyuid-psp |
-| ibm-skydive-dev | ibm-privileged-psp |
-| ibm-spectrum-computing-prod | ibm-privileged-psp |
-| ibm-spectrum-symphony-dev | ibm-privileged-psp |
-| ibm-spectrum-symphony-prod | ibm-privileged-psp |
-| ibm-storage-enabler-for-containers | ibm-anyuid-hostpath-psp |
-| ibm-swift-sample | ibm-anyuid-psp |
-| ibm-transadv-dev | ibm-anyuid-psp |
-| ibm-ucd-prod | ibm-anyuid-psp |
-| ibm-voice-gateway-dev | ibm-anyuid-hostaccess-psp |
-| ibm-voice-gateway-prod | ibm-anyuid-hostaccess-psp |
-| ibm-was-vm-quickstarter-dev | ibm-anyuid-psp |
-| ibm-was-vm-quickstarter-prod | ibm-anyuid-psp |
-| ibm-watson-assistant-prod | ibm-privileged-psp |
-| ibm-watson-compare-comply-prod | ibm-anyuid-psp |
-| ibm-watson-discovery-prod | ibm-anyuid-hostaccess-psp |
-| ibm-watson-speech-prod | ibm-privileged-psp |
-| ibm-websphere-liberty | ibm-anyuid-psp |
-| ibm-websphere-liberty-rhel | ibm-anyuid-psp |
-| ibm-websphere-traditional | ibm-restricted-psp |
-| ibm-wex-prod | ibm-anyuid-psp |
-| ibm-workload-automation-prod | ibm-restricted-psp |
-| ibm-ws-dyn-agent-dev | ibm-anyuid-psp |
-| ibm-ws-dyn-agent-prod | ibm-anyuid-psp |
+| ibm-powerai |  |
 Copyright 2018, IBM Corporation 
