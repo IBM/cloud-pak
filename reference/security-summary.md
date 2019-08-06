@@ -64,8 +64,6 @@ the chart's documentation for instructions.
 | ibm-glusterfs | ibm-privileged-psp |
 | ibm-hazelcast-dev | ibm-anyuid-psp |
 | ibm-ilmt | ibm-privileged-psp |
-| ibm-integration-bus-dev | ibm-anyuid-psp |
-| ibm-integration-bus-prod | ibm-anyuid-psp |
 | ibm-istio | ibm-privileged-psp |
 | ibm-istio-remote | ibm-privileged-psp |
 | ibm-kerify-dev | ibm-anyuid-psp |
@@ -107,7 +105,6 @@ the chart's documentation for instructions.
 | ibm-open-liberty-spring | ibm-restricted-psp |
 | ibm-postgres-dev | ibm-anyuid-psp |
 | ibm-powerai-enterprise-prod | ibm-privileged-psp |
-| ibm-powerai | ibm-privileged-psp |
 | ibm-powerai-vision-prod | ibm-anyuid-hostpath-psp |
 | ibm-powervc-k8s-volume-driver | ibm-anyuid-hostpath-psp |
 | ibm-reactive-platform-console-prod | ibm-anyuid-psp |
