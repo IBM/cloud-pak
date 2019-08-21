@@ -77,6 +77,14 @@ Use the [`kubectl auth can-i`](https://kubernetes.io/docs/reference/access-authn
 
 See the utility script [getPSP.sh](../../../samples/utilities/README.md) for an example on how to see all PodSecurityPolicies that are bound to a namespace.
 
+## Change Logs
+List of changed made for the PSPs based on version
+### Version 1.1.0
+- The apiGroup changed from extentions/v1beta1 --> policy/v1beta1
+- The custom resource definitions file changed the apiGroups from extentions -> v1beta1
+- Added in the runAsGoup field to the PSPs, as is supported since version 1.14 of Kube.
+
+
 ## More information
 For additional information about Kubernetes PodSecurityPolicy, see:  https://kubernetes.io/docs/concepts/policy/pod-security-policy/
 

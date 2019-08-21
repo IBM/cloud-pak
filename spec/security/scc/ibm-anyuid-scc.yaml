@@ -1,10 +1,13 @@
+# This SCC allows any user ID, and is meant to be a template
+# Pass the --validate=false flag when applying
+
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
   annotations:
     kubernetes.io/description: "This policy allows pods to run with 
       any UID and GID, but preventing access to the host."
-    cloudpak.ibm.com/version: "1.0.0"
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-anyuid-scc
 allowHostDirVolumePlugin: false
 allowHostIPC: false
@@ -30,7 +33,7 @@ allowedCapabilities:
 allowedFlexVolumes: []
 allowedUnsafeSysctls: []
 defaultAddCapabilities: []
-defaultPrivilegeEscalation: true
+defaultAllowPrivilegeEscalation: true
 forbiddenSysctls:
   - "*"
 fsGroup:
@@ -40,10 +43,17 @@ requiredDropCapabilities:
 - MKNOD
 runAsUser:
   type: RunAsAny
+# This can be customized for your host machine
 seLinuxContext:
   type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
 supplementalGroups:
   type: RunAsAny
+# This can be customized for your host machine
 volumes:
 - configMap
 - downwardAPI
@@ -51,5 +61,5 @@ volumes:
 - persistentVolumeClaim
 - projected
 - secret
-users: []
-priority: 0
+# If you want a priority on your SCC -- set for a value more than 0
+# priority: 

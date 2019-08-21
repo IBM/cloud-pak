@@ -1,3 +1,6 @@
+# This SCC is allows hostpath access, and is meant to be a template
+# Pass the --validate=false flag when applying
+
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
@@ -6,7 +9,7 @@ metadata:
       any UID and GID and any volume, including the host path.  
       WARNING:  This policy allows hostPath volumes.  
       Use with caution."
-    cloudpak.ibm.com/version: "1.0.0"
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-anyuid-hostpath-scc
 allowHostDirVolumePlugin: true
 allowHostIPC: false
@@ -32,9 +35,8 @@ allowedCapabilities:
 allowedFlexVolumes: []
 allowedUnsafeSysctls: []
 defaultAddCapabilities: []
-defaultPrivilegeEscalation: true
-forbiddenSysctls:
-  - "*"
+defaultAllowPrivilegeEscalation: true
+forbiddenSysctls: []
 fsGroup:
   type: RunAsAny
 readOnlyRootFilesystem: false
@@ -42,12 +44,18 @@ requiredDropCapabilities:
 - MKNOD
 runAsUser:
   type: RunAsAny
+# This can be customized for your host machine
 seLinuxContext:
   type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
 supplementalGroups:
   type: RunAsAny
+# This can be customized to your host machine
 volumes:
 - '*'
-users: []
-priority: 0
-
+# If you want a priority on your SCC -- set for a value more than 0
+# priority: 
