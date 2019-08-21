@@ -84,6 +84,11 @@ List of changed made for the PSPs based on version
 - The custom resource definitions file changed the apiGroups from extentions -> v1beta1
 - Added in the runAsGoup field to the PSPs, as is supported since version 1.14 of Kube.
 
+#### Upgrading PSPs
+To upgrade the ClusterRole objects run the following:
+`$ kubectl apply -f psp/.` from the `spec/security` directory.  This will apply all the ClusterRole definitions,  alternatively you can apply each individually.  
+
+To upgrade the PSPs run: `$ kubectl replace --force -f` on the individual psp.yaml files.  **NOTE:**  This will cause a service outage while the resources are being created. Since there is an apiVersion change for the resources in this release, the PSPs need to be deleted and then recreated.
 
 ## More information
 For additional information about Kubernetes PodSecurityPolicy, see:  https://kubernetes.io/docs/concepts/policy/pod-security-policy/
