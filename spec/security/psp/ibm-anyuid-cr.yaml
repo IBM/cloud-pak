@@ -2,6 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   annotations:
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-anyuid-clusterrole
 rules:
 - apiGroups:
