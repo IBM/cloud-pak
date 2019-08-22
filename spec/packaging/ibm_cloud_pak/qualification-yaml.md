@@ -16,6 +16,7 @@
 - [Examples](#Examples)
   - [IBM certified container Example, supporting ICP, OpenShift and IKS Kubernetes distros](#IBM-certified-container-Example-supporting-ICP-OpenShift-and-IKS-Kubernetes-distros)
   - [IBM certified container Example, supporting any kubernetes distro:](#IBM-certified-container-Example-supporting-any-kubernetes-distro)
+  - [IBM Cloud Pak Example](#IBM-Cloud-Pak-Example)
 
 ## Qualification Section
 The qualification section describes attributes related to the IBM&reg; Cloud Pak or IBM certified container status.
@@ -183,7 +184,7 @@ qualification:
   duration: "12M"
   terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
 
-# Defines any constraints that this cerified container may require.
+# Defines any constraints that this certified container may require.
 prereqs:
   security:                           # Security Resolver
     kubernetes:                       # Generic Kubernetes Security Resolver
@@ -232,4 +233,32 @@ prereqs:
 ibmCloudPrivateServices:
   cert-manager: {}
   auth-idp: {}
+```
+
+## IBM Cloud Pak Example
+```yaml
+qualification:
+  levelName: "certified-ibm-solution-pak"
+  levelDescription: "IBM Cloud Pak"
+  issueDate: "03/2019"
+  duration: "12M"
+  terms: "Valid from date of issue. Security vulnerability management and enhancements are delivered on the latest version of the chart and images"
+prereqs:
+  security:
+    kubernetes:
+      podSecurityPolicy:
+        name: "ibm-restricted-psp"
+    openshift:
+      securityContextConstraints:
+        name: "ibm-restricted-scc"
+    ibmCloudPrivate:
+      installerRole:
+        name: "ClusterAdministrator"
+  k8sDistros:                         # Kubernetes Distributions resolver
+    ibmCloud:
+      semver: ">=1.11.3"
+    ibmCloudPrivate:
+      semver: ">=1.11.3"
+    openshift:
+      semver: ">=1.11.3"
 ```

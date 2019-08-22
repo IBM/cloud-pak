@@ -83,9 +83,16 @@ To apply the IBM Cloud Pak SecurityContextConstraints resources to your cluster:
 2.  Login to your cluster as a cluster administrator:  `oc login`
 3.  Clone the IBM Cloud Pak git repository: `git clone https://github.com/IBM/cloud-pak`
 4.  `cd cloud-pak/spec/security/scc`
-5.  Apply the specification yaml files to your cluster:  `oc apply -f .`
+5.  Apply the specification yaml files to your cluster:  `oc apply -f --validate=false .`
 
-Note:  SecurityContextConstraints also store user and group bindings within them.  By using the `apply` command, you can later update the SCCs without accidentally removing the group and user bindings.
+## Updating SCCs 
+The following fields are updatable:
+* seLinuxOptions
+* volumes
+* priority
+* UID and GUID ranges
+
+Note:  SecurityContextConstraints also store user and group bindings within them.  By using the `apply` command, you can later update the SCCs without accidentally removing the group and user bindings, if the user and group bindings are not explicitly  specified in the SCC yaml.
 
 ## Change Logs
 ### Version 1.1.0

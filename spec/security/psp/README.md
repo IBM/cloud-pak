@@ -8,6 +8,7 @@ When the PodSecurityPolicy definitions are not pre-loaded, use the instructions 
 - [Applying a PodSecurityPolicy to your namespace](#applying-a-podsecuritypolicy-to-your-namespace)
 - [Validating which PodSecurityPolicies are bound to a namespace](#validating-which-podsecuritypolicies-are-bound-to-a-namespace)
 - [More information](#more-information)
+- [Change Logs](#change-logs)
 
 ## PodSecurityPolicy Reference
 The following PodSecurityPolicies are available on IBM Cloud.  Each PodSecurityPolicy file includes an associated ClusterRole:
@@ -36,7 +37,7 @@ IBM Cloud Private and IBM Cloud Kubernetes Service pre-install the IBM Cloud Pak
 #### Pre-requisites:
 -  The PodSecurityPolicy and ClusterRole resources have been applied to the cluster.
 -  The [Kubernetes command line interface (kubectl)](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed and configured.
--  A user with cluster administrator permissions is logged-in to the `kubectl` CLI. 
+-  A user with cluster administrator permissions is logged-in to the `kubectl` CLI.
    -  For IBM Cloud Private, use [`cloudctl login`](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.2/manage_cluster/cli_commands.html#login)
    -  For IBM Cloud Kubernetes Service, use the [`ibmcloud`](https://cloud.ibm.com/docs/containers/cs_cli_install.html) CLI.
 
@@ -44,16 +45,16 @@ IBM Cloud Private and IBM Cloud Kubernetes Service pre-install the IBM Cloud Pak
 1.  Clone the IBM Cloud Pak git repository: `git clone https://github.com/IBM/cloud-pak`
 2.  Apply the specification yaml files to your cluster:  `kubectl apply -f cloud-pak/spec/security/psp`
 
-#### Result:  
+#### Result:
 PodSecurityPolicies and ClusterRoles are created or updated in your cluster.
 
 ## Applying a PodSecurityPolicy to your namespace
-This procedure describes how to create a RoleBinding to bind all ServiceAccounts in a namespace to a pre-defined PodSecurityPolicy.  
+This procedure describes how to create a RoleBinding to bind all ServiceAccounts in a namespace to a pre-defined PodSecurityPolicy.
 
 #### Pre-requisites:
 -  The PodSecurityPolicy and ClusterRole resources have been applied to the cluster.
 -  The [Kubernetes command line interface (kubectl)](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed and configured.
--  A user with cluster administrator permissions is logged-in to the `kubectl` CLI. 
+-  A user with cluster administrator permissions is logged-in to the `kubectl` CLI.
    -  For IBM Cloud Private, use [`cloudctl login`](https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.2/manage_cluster/cli_commands.html#login)
    -  For IBM Cloud Kubernetes Service, use the [`ibmcloud`](https://cloud.ibm.com/docs/containers/cs_cli_install.html) CLI.
 
@@ -73,7 +74,7 @@ Example:
 `kubectl -n appsales create rolebinding ibm-anyuid-clusterrole-rolebinding --clusterrole=ibm-anyuid-clusterrole --group=system:serviceaccounts:appsales`
 
 ## Validating which PodSecurityPolicies are bound to a namespace
-Use the [`kubectl auth can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access) command to determine if a user or ServiceAccount has authority to use a PodSecurityPolicy.  
+Use the [`kubectl auth can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access) command to determine if a user or ServiceAccount has authority to use a PodSecurityPolicy.
 
 See the utility script [getPSP.sh](../../../samples/utilities/README.md) for an example on how to see all PodSecurityPolicies that are bound to a namespace.
 
@@ -84,9 +85,6 @@ List of changed made for the PSPs based on version
 - The custom resource definitions file changed the apiGroups from extentions -> v1beta1
 - Added in the runAsGoup field to the PSPs, as is supported since version 1.14 of Kube.
 
-#### Upgrading PSPs
-To upgrade the ClusterRole and PodSecurityPolicy objects run the following:
-`$ kubectl apply -f psp/.` from the `spec/security` directory.  This will apply all the ClusterRole and PodSecurityPolicy definitions,  alternatively you can apply each individually.  
 
 ## More information
 For additional information about Kubernetes PodSecurityPolicy, see:  https://kubernetes.io/docs/concepts/policy/pod-security-policy/
