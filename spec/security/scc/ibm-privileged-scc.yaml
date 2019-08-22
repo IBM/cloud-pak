@@ -1,3 +1,6 @@
+# This SCC is the least restrictive, and is meant to be a template
+# Pass the --validate=false flag when applying
+
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
@@ -6,9 +9,9 @@ metadata:
       host features and allows a pod to run with any 
       UID and GID and any volume.
       WARNING:  This policy is the least restrictive and 
-      should only used for cluster administration.
+      should only be used for cluster administration.
       Use with caution."
-    cloudpak.ibm.com/version: "1.0.0"
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-privileged-scc
 allowHostDirVolumePlugin: true
 allowHostIPC: true
@@ -23,7 +26,7 @@ allowedFlexVolumes: []
 allowedUnsafeSysctls: 
 - '*'
 defaultAddCapabilities: []
-defaultPrivilegeEscalation: true
+defaultAllowPrivilegeEscalation: true
 forbiddenSysctls: []
 fsGroup:
   type: RunAsAny
@@ -33,12 +36,17 @@ runAsUser:
   type: RunAsAny
 seccompProfiles:
 - '*'
+# This can be customized for your host machine
 seLinuxContext:
   type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
 supplementalGroups:
   type: RunAsAny
 volumes:
 - '*'
-users: []
-priority: 0
-
+# If you want a priority on your SCC -- set for a value more than 0
+# priority: 

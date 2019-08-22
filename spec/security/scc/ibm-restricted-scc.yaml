@@ -1,10 +1,15 @@
+# This SCC is the most restrictive, and is meant to be a template
+# Pass the --validate=false flag when applying
+# The ID ranges provided in this template match the PSPs and can be changed
+
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
   annotations:
     kubernetes.io/description: "This policy is the most restrictive, 
-      requiring pods to run with a non-root UID, and preventing pods from accessing the host." 
-    cloudpak.ibm.com/version: "1.0.0"
+      requiring pods to run with a non-root UID, and preventing pods from accessing the host.
+      The UID and GID will be bound by ranges specified at the Namespace level." 
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-restricted-scc
 allowHostDirVolumePlugin: false
 allowHostIPC: false
@@ -13,11 +18,11 @@ allowHostPID: false
 allowHostPorts: false
 allowPrivilegedContainer: false
 allowPrivilegeEscalation: false
-allowedCapabilities: []
-allowedFlexVolumes: []
-allowedUnsafeSysctls: []
-defaultAddCapabilities: []
-defaultPrivilegeEscalation: false
+allowedCapabilities: null
+allowedFlexVolumes: null
+allowedUnsafeSysctls: null
+defaultAddCapabilities: null
+defaultAllowPrivilegeEscalation: false
 forbiddenSysctls:
   - "*"
 fsGroup:
@@ -32,13 +37,20 @@ runAsUser:
   type: MustRunAsNonRoot
 seccompProfiles:
 - docker/default
+# This can be customized for seLinuxOptions specific to your host machine
 seLinuxContext:
   type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
 supplementalGroups:
   type: MustRunAs
   ranges:
   - max: 65535
     min: 1
+# This can be customized to host specifics
 volumes:
 - configMap
 - downwardAPI
@@ -46,4 +58,5 @@ volumes:
 - persistentVolumeClaim
 - projected
 - secret
-priority: 0
+# If you want a priority on your SCC -- set for a value more than 0
+# priority: 

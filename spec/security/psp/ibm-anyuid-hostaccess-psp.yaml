@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
   annotations:
@@ -6,6 +6,7 @@ metadata:
       UID and GID, any volume and full access to the host.
       WARNING:  This policy allows full access to the host and network.  
       Use with caution."
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-anyuid-hostaccess-psp
 spec:
   allowPrivilegeEscalation: true
@@ -28,6 +29,8 @@ spec:
   - SYS_CHROOT 
   - SETFCAP 
   runAsUser:
+    rule: RunAsAny
+  runAsGroup:
     rule: RunAsAny
   seLinux:
     rule: RunAsAny

@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
   annotations:
@@ -9,6 +9,7 @@ metadata:
       should only used for cluster administration.
       Use with caution."
     seccomp.security.alpha.kubernetes.io/allowedProfileNames: '*'
+    cloudpak.ibm.com/version: "1.1.0"
   name: ibm-privileged-psp
 spec:
   allowPrivilegeEscalation: true
@@ -26,6 +27,8 @@ spec:
     min: 0
   privileged: true
   runAsUser:
+    rule: RunAsAny
+  runAsGroup:
     rule: RunAsAny
   seLinux:
     rule: RunAsAny
