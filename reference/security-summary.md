@@ -125,7 +125,7 @@ the chart's documentation for instructions.
 | ibm-was-vm-quickstarter-prod | ibm-anyuid-psp |
 | ibm-watson-assistant-prod | ibm-privileged-psp |
 | ibm-watson-compare-comply-prod | ibm-anyuid-psp |
-| ibm-watson-discovery-prod | ibm-anyuid-hostaccess-psp |
+| ibm-watson-discovery-prod | ibm-restricted-psp |
 | ibm-watson-speech-prod | ibm-privileged-psp |
 | ibm-websphere-liberty | ibm-anyuid-psp |
 | ibm-websphere-liberty-rhel | ibm-anyuid-psp |
