@@ -1,0 +1,31 @@
+source: ibm-apiconnect-icp4i-prod/ibm_cloud_pak/manifest.yaml
+description: IBM Cloud Pak for Integration - API Connect
+images:
+  - image: busybox
+  - image: cp/icp4i/apic/analytics-client
+  - image: cp/icp4i/apic/analytics-cronjobs
+  - image: cp/icp4i/apic/analytics-ingestion
+  - image: cp/icp4i/apic/analytics-mq-kafka
+  - image: cp/icp4i/apic/analytics-mq-zookeeper
+  - image: cp/icp4i/apic/analytics-operator
+  - image: cp/icp4i/apic/analytics-proxy
+  - image: cp/icp4i/apic/analytics-storage
+  - image: cp/icp4i/apic/apiconnect-operator
+  - image: cp/icp4i/apic/apim
+  - image: cp/icp4i/apic/cassandra
+  - image: cp/icp4i/apic/cassandra-health-check
+  - image: cp/icp4i/apic/cassandra-operator
+  - image: cp/icp4i/apic/client-downloads-server
+  - image: cp/icp4i/apic/datapower-api-gateway
+  - image: cp/icp4i/apic/juhu
+  - image: cp/icp4i/apic/k8s-datapower-monitor
+  - image: cp/icp4i/apic/k8s-init
+  - image: cp/icp4i/apic/ldap
+  - image: cp/icp4i/apic/lur
+  - image: cp/icp4i/apic/openresty
+  - image: cp/icp4i/apic/portal-admin
+  - image: cp/icp4i/apic/portal-db
+  - image: cp/icp4i/apic/portal-dbproxy
+  - image: cp/icp4i/apic/portal-exec-job
+  - image: cp/icp4i/apic/portal-web
+  - image: cp/icp4i/apic/ui
