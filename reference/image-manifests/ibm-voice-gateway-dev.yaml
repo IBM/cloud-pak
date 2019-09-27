@@ -1,6 +1,9 @@
 source: ibm-voice-gateway-dev/ibm_cloud_pak/manifest.yaml
-description: IBM Voice Gateway Helm chart (Developer Trial).
+description: Watson Voice Gateway Helm chart (Developer Trial).
 images:
   - image: alpine
+  - image: ibmcom/opencontent-common-utils
+  - image: ibmcom/voice-gateway-codec-g729
   - image: ibmcom/voice-gateway-mr
+  - image: ibmcom/voice-gateway-sms
   - image: ibmcom/voice-gateway-so
