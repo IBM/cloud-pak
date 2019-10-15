@@ -16,10 +16,8 @@ the chart's documentation for instructions.
 |:----------|:---------------|
 | ibm-ace-dashboard-dev | ibm-anyuid-psp |
 | ibm-ace-dashboard-prod | ibm-anyuid-psp |
-| ibm-ace-dashboard-rhel-prod | ibm-anyuid-psp |
 | ibm-ace-server-dev | ibm-anyuid-psp |
 | ibm-ace-server-prod | ibm-anyuid-psp |
-| ibm-ace-server-rhel-prod | ibm-anyuid-psp |
 | ibm-aiopenscale-prod | ibm-restricted-psp |
 | ibm-alm-prod | ibm-anyuid-psp |
 | ibm-apiconnect-ent | ibm-privileged-psp |
@@ -83,7 +81,6 @@ the chart's documentation for instructions.
 | ibm-mqadvanced-server-dev | ibm-anyuid-psp |
 | ibm-mqadvanced-server-integration-prod | ibm-anyuid-psp |
 | ibm-mqadvanced-server-prod | ibm-anyuid-psp |
-| ibm-mqadvanced-server-rhel-prod | ibm-anyuid-psp |
 | ibm-netcool-asm-prod | ibm-restricted-psp |
 | ibm-netcool-piagent-prometheus-dev | ibm-anyuid-psp |
 | ibm-netcool-piagent-prometheus-prod | ibm-anyuid-psp |
