@@ -83,7 +83,7 @@ To apply the IBM Cloud Pak SecurityContextConstraints resources to your cluster:
 2.  Login to your cluster as a cluster administrator:  `oc login`
 3.  Clone the IBM Cloud Pak git repository: `git clone https://github.com/IBM/cloud-pak`
 4.  `cd cloud-pak/spec/security/scc`
-5.  Apply the specification yaml files to your cluster:  `oc apply -f --validate=false .`
+5.  Apply the specification yaml files to your cluster:  `oc apply -f . --validate=false`
 
 ## Updating SCCs 
 The following fields are updatable:
