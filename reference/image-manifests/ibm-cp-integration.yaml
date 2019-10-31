@@ -12,6 +12,8 @@ images:
   - image: cp/icp4i/ace/ibm-ace-mqclient-server-prod
   - image: cp/icp4i/ace/ibm-ace-mq-server-prod
   - image: cp/icp4i/ace/ibm-ace-server-prod
+  - image: cp/icp4i/ace/icp4i-od-agent
+  - image: cp/icp4i/ace/icp4i-od-collector
   - image: cp/icp4i/apic/analytics-client
   - image: cp/icp4i/apic/analytics-cronjobs
   - image: cp/icp4i/apic/analytics-ingestion
@@ -30,6 +32,8 @@ images:
   - image: cp/icp4i/apic/cassandra-operator
   - image: cp/icp4i/apic/client-downloads-server
   - image: cp/icp4i/apic/datapower-api-gateway
+  - image: cp/icp4i/apic/icp4i-od-agent
+  - image: cp/icp4i/apic/icp4i-od-collector
   - image: cp/icp4i/apic/juhu
   - image: cp/icp4i/apic/k8s-datapower-monitor
   - image: cp/icp4i/apic/k8s-init
@@ -129,6 +133,20 @@ images:
   - image: cp/icp4i/kdi-job
   - image: cp/icp4i/mq/ibm-mqadvanced-server-integration
   - image: cp/icp4i/mq/ibm-mq-oidc-registration
+  - image: cp/icp4i/mq/icp4i-od-agent
+  - image: cp/icp4i/mq/icp4i-od-collector
+  - image: cp/icp4i/od/icp4i-od-config-db
+  - image: cp/icp4i/od/icp4i-od-housekeeping
+  - image: cp/icp4i/od/icp4i-od-install-assist
+  - image: cp/icp4i/od/icp4i-od-legacy-ui
+  - image: cp/icp4i/od/icp4i-od-oidc-configurator
+  - image: cp/icp4i/od/icp4i-od-registration-endpoint
+  - image: cp/icp4i/od/icp4i-od-registration-processor
+  - image: cp/icp4i/od/icp4i-od-reports
+  - image: cp/icp4i/od/icp4i-od-store
+  - image: cp/icp4i/od/icp4i-od-store-retention
+  - image: cp/icp4i/od/icp4i-od-ui-manager
+  - image: cp/icp4i/od/icp4i-od-ui-proxy
   - image: cp/icp4i/portal-common-api
   - image: cp/icp4i/wdp-redis
   - image: cp/icp-foundation/alertmanager
