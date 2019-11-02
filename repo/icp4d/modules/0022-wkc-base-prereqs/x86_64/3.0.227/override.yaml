@@ -1,0 +1,26 @@
+global:
+  ibmProduct: zen
+     
+# rabbitmq
+wdp-rabbitmq:
+  serviceAccount:
+    create: false
+    name: cpd-viewer-sa
+  rbac:
+    create: false
+  securityContext: 
+    fsGroup: ""
+    runAsUser: ""
+
+## Redis: single node non-HA, set replicas=1, redis.config.min-slaves-to-write=0, sentinel.quorum=1
+redis-ha:  
+  rbac:
+    create: false
+  securityContext:
+    runAsUser: ""
+    fsGroup: ""
+    runAsNonRoot: "" 
+
+elasticsearch:  
+  fsGroup: ""
+  

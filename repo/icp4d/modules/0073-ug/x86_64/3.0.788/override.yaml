@@ -1,0 +1,121 @@
+release:
+  image:
+    finley:
+      runAsUser: ""
+      fsGroup: ""
+      serviceAccountName: ""
+
+    igcUIReact:
+      runAsUser: ""
+      fsGroup: ""
+
+    audittrail:
+      runAsUser: ""
+      fsGroup: ""
+      serviceAccountName: ""
+
+    omag:
+      runAsUser: ""
+      fsGroup: ""
+
+    odfFastAnalyzer:
+      runAsUser: ""
+      fsGroup: ""
+
+    iaAnalysis:
+      runAsUser: ""
+      fsGroup: ""
+      serviceAccountName: ""
+
+    iaRest:
+      runAsUser: ""
+      fsGroup: ""
+      serviceAccountName: ""
+
+    iaServices:
+      runAsUser: ""
+      fsGroup: ""
+      serviceAccountName: ""
+      
+    kafka:
+      runAsUser: ""
+      fsGroup: ""
+
+###############################################################################
+## Shop4info Images
+###############################################################################
+s4i:
+  shop4infoRest:
+    runAsUser: ""
+    fsGroup: ""
+    serviceAccountName: ""
+
+  s4iEventConsumer:
+    runAsUser: ""
+    fsGroup: ""
+
+  s4iScheduler:
+    runAsUser: ""
+    fsGroup: ""
+
+  s4iRegistry:
+    runAsUser: ""
+    fsGroup: ""
+
+  shop4infoMapper:
+    runAsUser: ""
+    fsGroup: ""
+
+  s4iSchemaInit:
+    runAsUser: ""
+    fsGroup: ""
+
+  gremlinConsole:
+    runAsUser: ""
+    fsGroup: ""
+    
+  serviceAccountName: ""
+
+###############################################################################
+## Governance Images
+###############################################################################
+gov:
+  catalogSearchService:
+    runAsUser: ""
+    fsGroup: ""
+
+  appConfigService:
+    runAsUser: ""
+    fsGroup: ""
+
+  userPrefService:
+    runAsUser: ""
+    fsGroup: ""
+
+  enterpriseSearchUI:
+    runAsUser: ""
+    fsGroup: ""
+
+  catalogSearchIndex:
+    runAsUser: ""
+    fsGroup: ""
+
+  qualityUI:
+    runAsUser: ""
+    fsGroup: ""
+
+  adminUI:
+    runAsUser: ""
+    fsGroup: ""
+
+  govUI:
+    runAsUser: ""
+    fsGroup: ""
+
+  insightsService:
+    runAsUser: ""
+    fsGroup: ""
+    
+  serviceAccountName: ""
+
+serviceAccountName: ""
