@@ -1,0 +1,17 @@
+type: module
+category: helm-chart
+name: iira
+version: 2.1.0.2
+description: This installs IIRA
+registry-reference: iira-base
+images:
+- name: ibm-iira-mongodb-prod
+  tag: v2.1.0.2
+- name: ibm-iira-orchestrator-prod
+  tag: v2.1.0.2
+- name: ibm-iira-webapp-prod
+  tag: v2.1.0.2
+- name: ibm-iira-ml-prod
+  tag: v2.1.0.2
+chart: iira.tgz
+releaseName: iira

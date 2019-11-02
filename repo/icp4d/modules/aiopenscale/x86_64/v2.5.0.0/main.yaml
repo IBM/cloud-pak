@@ -1,0 +1,67 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Watson OpenScale
+version: 2.5.0.0
+# The description is mandatory
+description: "An open and scalable platform for machine learning"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: openscale-registry
+# Image list
+images:
+- name: aios-bias-service
+  tag: 1.0.1202
+- name: aios-bkpi-combined-services
+  tag: 0.0.28
+- name: drift
+  tag: 0.0.511
+- name: aios-common-api
+  tag: 1.0.64
+- name: aios-configuration-service
+  tag: 1.0.601
+- name: aios-datamart-service-api
+  tag: 2.0.88
+- name: aios-dashboard
+  tag: 1.6.11
+- name: explainability
+  tag: 1.0.972
+- name: aios-fast-path
+  tag: 0.2.298
+- name: aios-feedback-service
+  tag: 0.0.342
+- name: aios-payload-logging-service
+  tag: 1.0.530
+- name: aios-payload-logging-service-api
+  tag: 1.0.322
+- name: model-operation-service-scheduling
+  tag: 0.0.201
+- name: aios-ml-gateway-discovery
+  tag: 0.0.628
+- name: aios-ml-gateway-service
+  tag: 0.0.628
+- name: aios-orch-notifications-service
+  tag: 0.0.110
+- name: model-risk-management
+  tag: 1.0.189
+- name: aios-etcd
+  tag: 3.3.3-ubi8-r4
+- name: aios-redis
+  tag: 5.5.0-ubi8-r4
+- name: aios-nginx-local
+  tag: 1.15.5-ubi8-r5
+- name: aios-kubectl
+  tag: 1.0.9
+- name: aios-kafka
+  tag: 0.0.9
+- name: aios-zoo-keeper
+  tag: 0.0.7
+chart: ibm-aiopenscale-prod-2.5.0.tgz
+# For download to verify the chart file is correct, optional
+md5: 0e53202caf3546486b31684439da66df
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 60
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: aiopenscale
