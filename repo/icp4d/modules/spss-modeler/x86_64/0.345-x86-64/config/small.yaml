@@ -1,0 +1,4 @@
+commands:
+- scale --replicas=1 deployment spss-modeler-flow-api
+- scale --replicas=1 deployment spss-modeler-flow-session-cache
+- scale --replicas=1 deployment spss-modeler-flow-ui
