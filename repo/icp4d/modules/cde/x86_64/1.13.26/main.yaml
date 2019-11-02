@@ -1,0 +1,16 @@
+# This file is in fileserver
+type: module
+name: cde module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference: cde
+images:
+  - name: daas-server
+    tag: 0.13.2019080901-wslv2
+  - name: daas-sb-proxy
+    tag: 0.1.2019080801
+  - name: cde-redis
+    tag: 1.0.6
+chart: ibm-cde-prod-1.13.26.tgz	
+# For download to verify the chart file is correct, optional
+#md5:
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: cde
