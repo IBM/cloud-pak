@@ -1,0 +1,4 @@
+commands:
+- scale --replicas=1 deployment streaming-pipelines-api
+- scale --replicas=1 deployment streaming-pipelines-ui
+- scale --replicas=1 deployment streaming-pipelines-python-validator

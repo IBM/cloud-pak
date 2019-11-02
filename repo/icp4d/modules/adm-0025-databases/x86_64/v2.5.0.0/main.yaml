@@ -1,0 +1,32 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+# The description is optional
+description: Yes, this is the account
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/0025-rolebinding.yaml
+- adm/0025-sa.yaml
+- adm/cdcp/0025-cdcp-sa.yaml
+- adm/cdcp/0025-cdcp-cr.yaml
+- adm/cdcp/compose-sa.yaml
+- adm/cdcp/compose-role.yaml
+- adm/cdcp/compose-rolebinding.yaml
+- adm/cdcp/0025-cdcp-core-role.yaml
+- adm/cdcp/0025-cdcp-core-rb.yaml
+
+add-scc-to-user:
+- scc: cpd-user-scc
+  sa: cpd-databases-sa
+- scc: cpd-user-scc
+  sa: cpd-cdcp-sa
+- scc: anyuid
+  sa: compose
+
+add-cluster-role-to-user:
+- clusterrole: system:controller:persistent-volume-binder
+  sa: cpd-databases-sa
+- clusterrole: 0025-cdcp-cr
+  sa: cpd-cdcp-sa
