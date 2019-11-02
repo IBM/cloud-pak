@@ -1,0 +1,130 @@
+- name: lite
+  version: v2.5.0.0
+  type: assembly
+- name: common-core-services
+  version: 2.5.0
+- name: wkc-adm
+  version: 3.0.42
+- name: 0071-wkc-prereqs
+  version: 3.0.42
+  images:
+    - name: wdp-db2
+      version: 11.5.0.0a
+- name: 0075-wkc-lite
+  version: 3.0.239
+  images:
+    - name: dataconn-engine-opdiscovery
+      version: 1.0.258
+    - name: dataconn-engine-service
+      version: 3.0.1502
+    - name: dataconn-engine-spark-cluster
+      version: 3.0.1502
+    - name: wdp-activities
+      version: 1.0.729
+    - name: wkc-gov-ui
+      version: 2.0.594
+    - name: wkc-glossary-service
+      version: 2.0.401
+    - name: wdp-search
+      version: 1.0.360
+    - name: wdp-profiling
+      version: 1.0.585
+    - name: wdp-profiling-messaging
+      version: 1.0.180
+    - name: wdp-profiling-ui
+      version: 1.0.274
+    - name: wkc-init-container
+      version: 1.0.39
+    - name: wkc-workflow-service
+      version: 2.0.203
+    - name: metadata-discovery
+      version: 1.0.777
+    - name: wdp-policy-service
+      version: 3.0.76
+    - name: wdp-lineage
+      version: 0.0.641
+- name: 0072-iis
+  version: 3.0.642
+  images:
+    - name: cassandra-ubi
+      version: 3.11.3
+    - name: is-services-image
+      version: b468-develop-b1254
+    - name: is-en-compute-image
+      version: b468-develop-b1254
+    - name: is-db2xmeta-image
+      version: b468-develop-b1254
+    - name: is-engine-image
+      version: b468-develop-b1254
+    - name: kafka-ubi
+      version: 2.11-2.1.1
+    - name: solr-ubi
+      version: 8.1.0
+    - name: wkc-init-container
+      version: 1.0.39
+    - name: wkc-ugconfig
+      version: 3.0.6
+    - name: zookeeper-ubi
+      version: 3.4.12
+- name: 0073-ug
+  version: 3.0.788
+  images:
+    - name: audit-trail-service
+      version: b122_2bc7856f940e
+    - name: finley
+      version: finley_59eec20
+    - name: gov-admin-ui
+      version: b461_d296767c0764
+    - name: gov-app-config-service
+      version: b353_28e9fda8b763
+    - name: gov-catalog-search-index
+      version: b165_d58844393bf4
+    - name: gov-catalog-search-service
+      version: b827_c9b04697fb60
+    - name: gov-enterprise-search-ui
+      version: b889_9e6c65a348cc
+    - name: gov-insights-service
+      version: b388
+    - name: gov-quality-ui
+      version: b4568_795b2d9d04be
+    - name: gov-ui-commons
+      version: b231_e9bfade5b6cd
+    - name: gov-user-prefs-service
+      version: b208_36e1991936d5
+    - name: gremlin-console-ubi
+      version: 0.4.0
+    - name: ia-analysis
+      version: b611_09ff7135c76c
+    - name: ia-services
+      version: b611_09ff7135c76c
+    - name: ia-rest-endpoint
+      version: b611_09ff7135c76c
+    - name: igc-ui-react
+      version: b6824_029b66362586
+    - name: kafka-ubi
+      version: 2.11-2.1.1
+    - name: odf-fast-analyzer-kube
+      version: j213-98b67ab8c8de
+    - name: omag
+      version: b1112_92885904251a
+    - name: shop4info-rest
+      version: b1234_c639201fc3b8
+    - name: shop4info-scheduler
+      version: b1234_c639201fc3b8
+    - name: shop4info-type-registry-service
+      version: b1234_c639201fc3b8
+    - name: shop4info-event-consumer
+      version: b1234_c639201fc3b8
+    - name: shop4info-schema-init
+      version: b1234_c639201fc3b8
+    - name: shop4info-mappers-service
+      version: b1234_c639201fc3b8
+    - name: wkc-init-container
+      version: 1.0.39
+- name: data-refinery
+  version: 1.0.50
+  images:
+    - name: wdp-dataprep
+      version: 1.0.608-x86_64
+    - name: shaper-server
+      version: 0.0.383-x86_64
