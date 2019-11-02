@@ -1,0 +1,29 @@
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: osg
+# The description is mandatory
+description: "IBM Open Source Governane addon module"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: osg
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+  - name: osg-db
+    tag:  "1.0"
+  - name: osg-ui
+    tag:  "1.0"
+  - name: osg-api
+    tag:  "1.0"
+  - name: osg-flaskapi
+    tag:  "1.0"
+chart: ibm-osg-prod-1.0.0-126.tgz
+# For download to verify the chart file is correct, optional
+md5: aa81dc88db54b3894aa9ce481ffa41d8
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# # The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: osg
