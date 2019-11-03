@@ -1,0 +1,9 @@
+commands:
+- scale --replicas=3 deployment portal-main
+- scale --replicas=3 deployment portal-common-api
+- scale --replicas=3 deployment ngp-projects-api
+- scale --replicas=3 deployment portal-notifications
+- scale --replicas=3 deployment portal-job-manager
+- scale --replicas=3 deployment asset-files-api
+- scale --replicas=3 deployment dap-dashboards-api
+- scale --replicas=3 deployment portal-dashboards

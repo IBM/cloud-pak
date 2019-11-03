@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: 0025-cdcp-core-rolebinding
+roleRef:
+  kind: Role
+  name: 0025-cdcp-core
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: cpd-databases-sa
