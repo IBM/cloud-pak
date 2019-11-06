@@ -1,0 +1,46 @@
+type: module
+category: helm-chart
+name: 0075-wkc-lite
+version: 3.0.261
+description: this is the wkc-lite to install
+registry-reference: wkc-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+scale:
+- small.yaml
+- medium.yaml
+images:
+- name: dataconn-engine-opdiscovery
+  tag: 1.0.269
+- name: dataconn-engine-service
+  tag: 3.0.1507
+- name: dataconn-engine-spark-cluster
+  tag: 3.0.1507
+- name: wdp-activities
+  tag: 1.0.734
+- name: wkc-gov-ui
+  tag: 2.0.601
+- name: wkc-glossary-service
+  tag: 2.0.414
+- name: wdp-search
+  tag: 1.0.365
+- name: wdp-profiling
+  tag: 1.0.590
+- name: wdp-profiling-messaging
+  tag: 1.0.186
+- name: wdp-profiling-ui
+  tag: 1.0.278
+- name: wkc-init-container
+  tag: 1.0.44
+- name: wkc-workflow-service
+  tag: 2.0.210
+- name: metadata-discovery
+  tag: 1.0.792
+- name: wdp-policy-service
+  tag: 3.0.80
+- name: wdp-lineage
+  tag: 0.0.647
+chart: 0075-wkc-lite-3.0.261.tgz
+md5: 228f7673040dad3221843b410124a389
+timeout: 90
+releaseName: 0075-wkc-lite

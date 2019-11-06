@@ -1,0 +1,178 @@
+# type will be either "assembly" or "module", mandatory
+type: assembly
+# mandatory - once this file uploaded, we will not delete any more,
+# but if this version too old, the download/deploy will tell this product is not valid any more, and show the latest version
+# We can also add dev, candidate etc here and telling the user what is the state
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: icp4d everything
+# Version is mandatory
+version: v2.5.0.0
+# Description is optional
+description: this is our product
+# architecture is optional
+# if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
+# sub product have to be homogenius architecture
+architecture: x86_64
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct
+overrideValues:
+  install: install-override.yaml
+  upgrade: upgrade-override.yaml
+# Optional vpc and memory, we check what it specified, and it ignore the value in sub-assembly
+# The future will scan the helm chart and sum up the requirements
+# The permission required to check this info may need cluster-admin, so may NOT applicable
+# bricks is mandatory, it could contains another "product"
+# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
+# although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
+# We will have linter to check to make sure the rules
+#
+# Version is hardcoded for now, we will address the version compatabilities after Oct GA
+#
+bricks:
+  - name: 0010-infra
+    version: v2.5.0.0
+    type: module
+  - name: 0015-setup
+    version: v2.5.0.0
+    type: module
+  - name: 0020-core
+    version: v2.5.0.0
+    type: module
+  - name: mongodb
+    version: v2.5.0.0
+    type: module
+  - name: db2eventstore
+    version: v2.5.0.0
+    type: module
+  - name: db2wh
+    version: v2.5.0.0
+    type: module  
+  - name: aiopenscale
+    version: v2.5.0.0
+    type: module
+  - name: ca
+    version: 1.3.9
+    type: module
+  - name: cde
+    version: 1.13.27
+    type: module
+  - name: 0022-wkc-base-prereqs
+    version: 3.0.250
+    type: module
+  - name: volume-setup
+    version: 2.0.22
+    type: module
+  - name: 0027-wkc-base
+    version: 3.0.250
+    type: module
+  - name: dap-base
+    version: 2.1.0.467
+    type: module
+  - name: environments
+    version: 2.1.197
+    type: module
+  - name: runtime-base
+    version: 2.0.125
+    type: module
+  - name: ibm-job-scheduler-prod
+    version: 2.1.0
+    type: module
+  - name: asset-browser
+    version: 1.0.72
+    type: module
+  - name: 0025-databases
+    version: v2.5.0.0
+    type: module
+  - name: data-refinery
+    version: 1.0.72
+    type: module
+  - name: db2oltp
+    version: v2.5.0.0
+    type: module
+  - name: db2z
+    version: v3.1.0
+    type: module
+  - name: dods
+    version: 2.1.0
+    type: module
+  - name: 0072-iis
+    version: 3.0.667
+    type: module
+  - name: 0074-ds
+    version: 3.0.134
+    type: module
+  - name: dv
+    version: v1.3.0.0
+    type: module
+  - name: hadoop-addon
+    version: 2.0.11
+    type: module
+  - name: iira
+    version: 2.5.0.0
+    type: module
+  - name: osg
+    version: 1.0.0.0
+    type: module
+  - name: postgresql
+    version: v2.5.0.0
+    type: module
+  - name: ibm-ws-rstudio
+    version: v2.1.0.0-135
+    type: module
+  - name: runtime-addon-gpupy36
+    version: 2.1.198-264
+    type: module
+  - name: runtime-addon-r36
+    version: 2.1.198-264
+    type: module
+  - name: ibm-spark-prod
+    version: 1.0.1-10
+    type: module
+  - name: spss-modeler
+    version: 0.357-x86-64
+    type: module
+  - name: streams
+    version: 5.2.0.0
+    type: module
+  - name: streams-flows
+    version: 1.0.0
+    type: module
+  - name: 0072-iis
+    version: 3.0.667
+    type: module
+  - name: 0073-ug
+    version: 3.0.806
+    type: module
+  - name: 0071-wkc-prereqs
+    version: 3.0.48
+    type: module
+  - name: 0075-wkc-lite
+    version: 3.0.261
+    type: module
+  - name: amg
+    version: 1.0.24
+    type: module
+  - name: knol
+    version: 3.0.147
+    type: module
+  - name: wml
+    version: 2.1.0.0-95
+    type: module
+  - name: wml-ui
+    version: 2.1.0.1693
+    type: module
+  - name: notebooks
+    version: 2.1.199
+    type: module
+  - name: runtime-addon-py36
+    version: 2.1.198-264
+    type: module
+  - name: ws-ml
+    version: 2.1.0.2471
+    type: module
+  - name: ibm-0100-model-viewer-prod
+    version: 1.0.30
+    type: module

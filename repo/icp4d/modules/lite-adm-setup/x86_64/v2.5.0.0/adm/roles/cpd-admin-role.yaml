@@ -1,0 +1,61 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: cpd-admin-role
+rules:
+- apiGroups:
+  - ""
+  - batch
+  - extensions
+  - apps
+  - policy
+  - rbac.authorization.k8s.io
+  - autoscaling
+  - route.openshift.io
+  resources:
+  - pods
+  - pods/log
+  - poddisruptionbudgets
+  - secrets
+  - jobs
+  - configmaps
+  - deployments
+  - statefulsets
+  - replicasets
+  - services
+  - persistentvolumeclaims
+  - cronjobs
+  - pods/exec
+  - pods/portforward
+  - serviceaccounts
+  - namespaces
+  - roles
+  - rolebindings
+  - horizontalpodautoscalers
+  - routes/custom-host
+  - ingresses
+  - endpoints
+  - cronjobs
+  - networkpolicies
+  - events
+  - jobs/status
+  - pods/status
+  - resourcequotas
+  - resourcequotas/status
+  verbs:
+  - create
+  - get
+  - delete
+  - watch
+  - update
+  - edit
+  - exec
+  - list
+  - patch
+  - deletecollection
+- apiGroups:
+  - cpd.ibm.com
+  resources:
+  - '*'
+  verbs:
+  - '*'
