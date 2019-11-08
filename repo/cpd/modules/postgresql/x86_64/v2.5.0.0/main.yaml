@@ -1,0 +1,30 @@
+chart: zen-databases-catalog.tar.gz
+images:
+  - name: etcd-telemetry-3.2.7
+    tag: v3.2.7-253-x86_64
+  - name: etcd-portalmgmt-3.2.7
+    tag: v3.2.7-253-x86_64
+  - name: etcd-mgmt-3.2.7
+    tag: v3.2.7-253-x86_64
+  - name: etcd-db-3.2.7
+    tag: v3.2.7-253-x86_64
+  - name: etcd-portal-3.2.7
+    tag: v3.2.7-253-x86_64
+  - name: postgresql-telemetry-10.7
+    tag: v10.7-253-x86_64
+  - name: postgresql-portalmgmt-10.7
+    tag: v10.7-253-x86_64
+  - name: postgresql-portal-10.7
+    tag: v10.7-253-x86_64
+  - name: postgresql-db-10.7
+    tag: v10.7-253-x86_64
+  - name: postgresql-mgmt-10.7
+    tag: v10.7-253-x86_64
+  - name: zen-databases-catalog-postgresql
+    tag: v2.5.0.0-253-x86_64
+installOverride: install-override.yaml
+name: postgresql module
+registry-reference: databases-registry
+releaseName: postgresql-catalog-10.7
+timeout: 90
+type: module

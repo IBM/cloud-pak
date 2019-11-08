@@ -1,0 +1,22 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+# The description is optional
+description: Yes, this is the account
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/db2eventstore-scc.yaml
+- adm/db2eventstore-sa.yaml
+- adm/db2eventstore-rolebinding.yaml
+- adm/db2eventstore-role.yaml
+- adm/db2eventstore-clusterRole.yaml
+
+add-scc-to-user:
+- scc: db2eventstore-scc
+  sa: db2eventstore
+
+add-cluster-role-to-user:
+- clusterrole: db2eventstore-clusterRole
+  sa: db2eventstore

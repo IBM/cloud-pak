@@ -1,0 +1,25 @@
+arch: amd64
+dbType: db2wh
+global:
+    arch: amd64
+    databases: true
+    dbType: db2wh
+    docker_registry_prefix: null
+    editor:
+        sa: cpd-editor-sa
+    ibmProduct: zen
+    image:
+        tag: v2.5.0.0-318
+    persistence:
+        enabled: true
+        useDynamicProvisioning: true
+    use_external_prefix: true
+    viewer:
+        sa: cpd-viewer-sa
+image:
+    tag: v2.5.0.0-318
+namespace: null
+nginxRepo:
+    resolver: kubernetes.default
+zenProxy:
+    serviceType: ClusterIP

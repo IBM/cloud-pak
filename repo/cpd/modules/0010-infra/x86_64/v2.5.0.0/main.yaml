@@ -1,0 +1,24 @@
+# This file is in fileserver
+type: module
+name: infra module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference: base-registry
+images:
+  - name: zen-meta-couchdb
+    tag: v2.5.0.0-192
+  - name: privatecloud-usermgmt
+    tag: v2.5.0.0-192
+  - name: privatecloud-redis-repo
+    tag: v2.5.0.0-192
+  - name: zen-metastoredb
+    tag: v2.5.0.0-192
+  - name: influxdb
+    tag: v2.5.0.0-192
+chart: 0010-infra-2.5.0.tgz
+# For download to verify the chart file is correct, optional
+#md5: 
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: 0010-infra
+installOverride: install-override.yaml
+
