@@ -17,17 +17,19 @@ description: Decision Optimization addon for Cloud Pak for Data
 # sub product have to be homogerious architucture
 architecture: x86_64
 # Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
-#installOverride: overwrite.yaml
-
+installOverride: overwrite.yaml
 # bricks is mandatory, it could contains another "product"
 # When all the modules are obtained, it has to check if there is duplicate of names, if so, error out, 
 # although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
-# We will have linter to check to make sure the rules
-# We depend also on WSL and WML, but this is not explicit here (no final versions at release time).
-# The documentation will make clear that we need both installed prior to installation of this assembly.
 bricks:
   - name: lite
     version: v2.5.0.0
+    type: assembly
+  - name: wsl
+    version: 2.1.0
+    type: assembly
+  - name: wml
+    version: 2.1.0.0
     type: assembly
   - name: dods
     version: 2.1.0

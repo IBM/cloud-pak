@@ -10,7 +10,6 @@ license: http://icp4d.ibm.com
 name: Common Core
 # Version is mandatory
 version: 2.5.0
-# version: v0.0.74
 # Descriptioin is optional
 description: Watson Studio Addon for Cloud Pak for Data
 # architecture is optional
@@ -31,19 +30,19 @@ installOverride: override.yaml
 # Version is hardcoded for now, we will address the version compatiblities after Oct GA
 bricks:
   - name: 0022-wkc-base-prereqs
-    version: 3.0.250
+    version: 3.0.257
     type: module
   - name: volume-setup
     version: 2.0.22
     type: module
   - name: 0027-wkc-base
-    version: 3.0.250
+    version: 3.0.257
     type: module
   - name: dap-base
-    version: 2.1.0.467
+    version: 2.1.0.469
     type: module
   - name: environments
-    version: 2.1.197
+    version: 2.1.201
     type: module
   - name: runtime-base
     version: 2.0.125
@@ -54,3 +53,5 @@ bricks:
   - name: asset-browser
     version: 1.0.72
     type: module
+
+# currentVersion: v0.0.79
