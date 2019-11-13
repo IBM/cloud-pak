@@ -4,15 +4,15 @@ name: infra module # The name here just for information purpose, not for "produc
 registry-reference: base-registry
 images:
   - name: zen-meta-couchdb
-    tag: v2.5.0.0-192
+    tag: v2.5.0.0-210
   - name: privatecloud-usermgmt
-    tag: v2.5.0.0-192
+    tag: v2.5.0.0-210
   - name: privatecloud-redis-repo
-    tag: v2.5.0.0-192
+    tag: v2.5.0.0-210
   - name: zen-metastoredb
-    tag: v2.5.0.0-192
+    tag: v2.5.0.0-210
   - name: influxdb
-    tag: v2.5.0.0-192
+    tag: v2.5.0.0-210
 chart: 0010-infra-2.5.0.tgz
 # For download to verify the chart file is correct, optional
 #md5: 

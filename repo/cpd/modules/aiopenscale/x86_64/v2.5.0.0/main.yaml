@@ -13,39 +13,39 @@ registry-reference: openscale-registry
 # Image list
 images:
 - name: aios-bias-service
-  tag: 1.0.1204
+  tag: 1.0.1215
 - name: aios-bkpi-combined-services
-  tag: 0.0.30
+  tag: 0.0.34
 - name: drift
-  tag: 0.0.521
+  tag: 0.0.541
 - name: aios-common-api
-  tag: 1.0.65
+  tag: 1.0.67
 - name: aios-configuration-service
-  tag: 1.0.607
+  tag: 1.0.616
 - name: aios-datamart-service-api
-  tag: 2.0.88
+  tag: 2.0.95
 - name: aios-dashboard
-  tag: 1.6.18
+  tag: 2.0.4
 - name: explainability
-  tag: 1.0.981
+  tag: 1.0.992
 - name: aios-fast-path
-  tag: 0.2.306
+  tag: 0.2.314
 - name: aios-feedback-service
-  tag: 0.0.343
+  tag: 0.0.349
 - name: aios-payload-logging-service
-  tag: 1.0.540
+  tag: 1.0.547
 - name: aios-payload-logging-service-api
-  tag: 1.0.327
+  tag: 1.0.345
 - name: model-operation-service-scheduling
-  tag: 0.0.202
+  tag: 0.0.203
 - name: aios-ml-gateway-discovery
-  tag: 0.0.636
+  tag: 0.0.646
 - name: aios-ml-gateway-service
-  tag: 0.0.636
+  tag: 0.0.646
 - name: aios-orch-notifications-service
-  tag: 0.0.110
+  tag: 0.0.111
 - name: model-risk-management
-  tag: 1.0.210
+  tag: 1.0.242
 - name: aios-etcd
   tag: 3.3.3-ubi8-r4
 - name: aios-redis
@@ -53,14 +53,14 @@ images:
 - name: aios-nginx-local
   tag: 1.15.5-ubi8-r5
 - name: aios-kubectl
-  tag: 1.0.9
+  tag: 1.0.10
 - name: aios-kafka
   tag: 0.0.9
 - name: aios-zoo-keeper
   tag: 0.0.7
 chart: ibm-aiopenscale-prod-2.5.0.tgz
 # For download to verify the chart file is correct, optional
-md5: ea9558ea90f95feaaf08500f3d7a8772
+md5: 25e7a7abecbed14aa1fb1c15be95f4f4
 # in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
 timeout: 60
 # The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
