@@ -1,0 +1,39 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: db2z
+# The description is mandatory
+description: "Db2 for z/OS Connector"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: db2z-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+#installOverride: myinstall.yaml
+#upgradeOverride: myupgrade.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+  - name: ibm-db2z-addon
+    tag: 3.1.0
+  - name: ibm-db2z-svp
+    tag: 3.1.0
+  - name: ibm-db2z-ui
+    tag: 3.1.0
+  - name: ibm-db2z-uc
+    tag: 3.1.0
+chart: ibm-db2z-3.1.0.tgz
+# For download to verify the chart file is correct, optional
+#md5: c3bc1546450deceafbc8bd31e178d722
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: ibm-db2z
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+#scale:
+#- small.yaml
+#- medium.yaml
+#- large.yaml

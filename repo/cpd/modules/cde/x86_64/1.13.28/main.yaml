@@ -1,0 +1,12 @@
+type: module
+name: cde module
+registry-reference: cde
+images:
+  - name: daas-server
+    tag: 0.13.201908090100-wslv2
+  - name: daas-sb-proxy
+    tag: 0.1.201908080100
+  - name: cde-redis
+    tag: 1.0.7
+chart: ibm-cde-prod-1.13.28.tgz
+releaseName: cde
