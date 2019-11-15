@@ -18,7 +18,7 @@ the chart's documentation for instructions.
 | ibm-ace-dashboard-prod | ibm-anyuid-psp |
 | ibm-ace-server-dev | ibm-anyuid-psp |
 | ibm-ace-server-prod | ibm-anyuid-psp |
-| ibm-aiopenscale-prod | ibm-restricted-psp |
+| ibm-aiopenscale-prod |  |
 | ibm-alm-prod | ibm-anyuid-psp |
 | ibm-apiconnect-ent | ibm-privileged-psp |
 | ibm-apiconnect-pro | ibm-privileged-psp |
