@@ -1,20 +1,20 @@
 # This file is in fileserver
 type: module
 name: mongodb module # The name here just for information purpose, not for "product" reference, it should rely on file name
-registry-reference: databases-registry
+registry-reference: base-registry
 images:
   - name: zen-databases-catalog-mongodb
-    tag: v2.5.0.0-146-x86_64
+    tag: v2.5.0.0-160-x86_64
   - name: opsmanager
-    tag: v2.5.0.0-146-x86_64
+    tag: v2.5.0.0-160-x86_64
   - name: apimgmt
-    tag: v2.5.0.0-146-x86_64
+    tag: v2.5.0.0-160-x86_64
   - name: configops
-    tag: v2.5.0.0-146-x86_64
+    tag: v2.5.0.0-160-x86_64
   - name: mongodb-enterprise-database
-    tag: v2.5.0.0-146-x86_64
+    tag: v2.5.0.0-160-x86_64
   - name: mongodb-enterprise-operator
-    tag: v2.5.0.0-146-x86_64
+    tag: v2.5.0.0-160-x86_64
   
 chart: zen-databases-catalog.tar.gz
 # For download to verify the chart file is correct, optional
