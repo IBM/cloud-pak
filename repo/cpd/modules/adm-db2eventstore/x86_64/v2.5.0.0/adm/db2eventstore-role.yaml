@@ -17,7 +17,7 @@ rules:
   
 - apiGroups: [""]
   resources: ["secrets"]
-  verbs: ["create", "delete"]
+  verbs: ["get", "create", "delete", "patch"]
 
 - apiGroups: ["batch", "extensions"]
   resources: ["jobs", "deployments"]
