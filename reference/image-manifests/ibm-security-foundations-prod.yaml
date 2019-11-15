@@ -1,0 +1,31 @@
+source: ibm-security-foundations-prod/ibm_cloud_pak/manifest.yaml
+description: IBM Cloud Pak for Security - Shared Operators & Infrastructural Services
+images:
+  - image: cp/cp4s/foundations/busybox
+  - image: cp/cp4s/foundations/elasticsearch
+  - image: cp/cp4s/foundations/init
+  - image: cp/cp4s/foundations/isc-ambassador
+  - image: cp/cp4s/foundations/isc-kube-arango-operator
+  - image: cp/cp4s/foundations/isc-middleware-operator
+  - image: cp/cp4s/foundations/isc-minio
+  - image: cp/cp4s/foundations/isc-ow-alarmprovider
+  - image: cp/cp4s/foundations/isc-ow-apigateway
+  - image: cp/cp4s/foundations/isc-ow-cloudantprovider
+  - image: cp/cp4s/foundations/isc-ow-controller
+  - image: cp/cp4s/foundations/isc-ow-invoker
+  - image: cp/cp4s/foundations/isc-ow-kafka
+  - image: cp/cp4s/foundations/isc-ow-kafkaprovider
+  - image: cp/cp4s/foundations/isc-ow-kube-invoker-agent
+  - image: cp/cp4s/foundations/isc-ow-nginx
+  - image: cp/cp4s/foundations/isc-ow-utils
+  - image: cp/cp4s/foundations/isc-ow-zookeeper
+  - image: cp/cp4s/foundations/isc-sequence-operator
+  - image: cp/cp4s/foundations/kibana
+  - image: cp/cp4s/foundations/opencontent-etcd-3
+  - image: cp/cp4s/foundations/opencontent-minio-client
+  - image: cp/cp4s/foundations/redis
+  - image: ibmcom/couchdb2
+  - image: ibmcom/couchdb3
+  - image: quay.io/ibmcp4s/isc-ow-action-nodejs-v10
+  - image: quay.io/ibmcp4s/isc-ow-action-nodejs-v6
+  - image: quay.io/ibmcp4s/isc-ow-action-python-v3.6
