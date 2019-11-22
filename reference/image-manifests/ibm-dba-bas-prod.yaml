@@ -1,0 +1,12 @@
+source: ibm-dba-bas-prod/ibm_cloud_pak/manifest.yaml
+description: IBM Business Automation Studio
+images:
+  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/bastudio
+  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/dba-etcd
+  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/jms
+  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/solution-server
+  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/solution-server-helmjob-db
+  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-dbcompatibility-initcontainer
+  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-keytool-initcontainer
+  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-keytool-jobcontainer
+  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-umsregistration-initjob

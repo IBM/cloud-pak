@@ -1,0 +1,16 @@
+source: ibm-blockchain-platform-prod/ibm_cloud_pak/manifest.yaml
+description: IBM Blockchain Platform for IBM Cloud Private
+images:
+  - image: amd64/fluentd
+  - image: s390x/fluentd
+  - image: us.icr.io/ibp2/deployer-to-go
+  - image: us.icr.io/ibp2/hlfabric-ca
+  - image: us.icr.io/ibp2/hlfabric-configtxlator
+  - image: us.icr.io/ibp2/hlfabric-couchdb
+  - image: us.icr.io/ibp2/hlfabric-dind
+  - image: us.icr.io/ibp2/hlfabric-grpcweb
+  - image: us.icr.io/ibp2/hlfabric-init
+  - image: us.icr.io/ibp2/hlfabric-orderer
+  - image: us.icr.io/ibp2/hlfabric-peer
+  - image: us.icr.io/ibp2/ibp-operator
+  - image: us.icr.io/op-tools/op-tools

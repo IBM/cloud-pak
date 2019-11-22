@@ -1,0 +1,23 @@
+source: ibm-watson-ks-prod/ibm_cloud_pak/manifest.yaml
+description: A Helm chart for IBM Watson Knowledge Studio
+images:
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-bats
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-icp-cert-gen-1
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio-client
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-mongodb-3
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-mongodb-config-copy
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-mongodb-install
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-postgres-stolon
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/release-master/opencontent-common-utils
+  - image: us.icr.io/icp-common-components/wcn-addon
+  - image: us.icr.io/knowledge_studio/dispatcher
+  - image: us.icr.io/knowledge_studio/frontend-icp
+  - image: us.icr.io/knowledge_studio/sbsep
+  - image: us.icr.io/knowledge_studio/wks-ibmjdk8-rhubi8
+  - image: us.icr.io/knowledge_studio/wkstoolbox
+  - image: us.icr.io/mnlp/jobq
+  - image: us.icr.io/mnlp/sireg
+  - image: us.icr.io/mnlp/sire-train-facade
+  - image: us.icr.io/mnlp/sire-train-runtime
+  - image: us.icr.io/watson-nlu/model_management_api
