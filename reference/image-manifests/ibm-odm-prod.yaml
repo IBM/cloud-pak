@@ -1,4 +1,4 @@
-source: ibm-odm-prod/ibm_cloud_pak/manifest.yaml
+source: ibm-odm-prod-bundle/case/ibm-odm-prod/case.yaml
 description: IBM Operational Decision Manager
 images:
   - image: hyc-odm-docker.artifactory.swg-devops.com/dbserver
@@ -6,3 +6,7 @@ images:
   - image: hyc-odm-docker.artifactory.swg-devops.com/odm-decisionrunner
   - image: hyc-odm-docker.artifactory.swg-devops.com/odm-decisionserverconsole
   - image: hyc-odm-docker.artifactory.swg-devops.com/odm-decisionserverruntime
+  - image: ibmcom/curl
+  - image: ibmcom/curl-amd64
+  - image: ibmcom/curl-ppc64le
+  - image: ibmcom/curl-s390x
