@@ -1,0 +1,10 @@
+source: ibm-block-csi-driver-bundle/case/ibm-block-csi-driver/case.yaml
+description: "A CASE for an operator which deploys ibm block csi driver"
+images:
+  - image: ibmcom/ibm-block-csi-driver-controller
+  - image: ibmcom/ibm-block-csi-driver-node
+  - image: ibmcom/ibm-block-csi-operator
+  - image: quay.io/k8scsi/csi-attacher
+  - image: quay.io/k8scsi/csi-node-driver-registrar
+  - image: quay.io/k8scsi/csi-provisioner
+  - image: quay.io/k8scsi/livenessprobe
