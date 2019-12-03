@@ -9,6 +9,7 @@ images:
   - image: cp/icp4i/ace/ibm-ace-dashboard-prod
   - image: cp/icp4i/ace/ibm-ace-designer-flows-prod
   - image: cp/icp4i/ace/ibm-ace-icp-configurator-prod
+  - image: cp/icp4i/ace/ibm-ace-lcp-prod
   - image: cp/icp4i/ace/ibm-ace-mqclient-server-prod
   - image: cp/icp4i/ace/ibm-ace-mq-server-prod
   - image: cp/icp4i/ace/ibm-ace-server-prod
@@ -72,63 +73,94 @@ images:
   - image: cp/icp4i/dc-main
   - image: cp/icp4i/es/eventstreams-access-controller-icp-linux
   - image: cp/icp4i/es/eventstreams-access-controller-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-access-controller-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-avro-icp-linux
   - image: cp/icp4i/es/eventstreams-avro-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-avro-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-certs-icp-linux
   - image: cp/icp4i/es/eventstreams-certs-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-certs-icp-linux-s390x
+  - image: cp/icp4i/es/eventstreams-clientauth-proxy-icp-linux
+  - image: cp/icp4i/es/eventstreams-clientauth-proxy-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-clientauth-proxy-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-codegen-icp-linux
   - image: cp/icp4i/es/eventstreams-codegen-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-codegen-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-collector-icp-linux
   - image: cp/icp4i/es/eventstreams-collector-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-collector-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-database-icp-linux
   - image: cp/icp4i/es/eventstreams-database-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-database-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-elastic-search-icp-linux
   - image: cp/icp4i/es/eventstreams-elastic-search-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-elastic-search-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-healthcheck-icp-linux
   - image: cp/icp4i/es/eventstreams-healthcheck-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-healthcheck-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-index-manager-icp-linux
   - image: cp/icp4i/es/eventstreams-index-manager-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-index-manager-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-init-icp-linux
   - image: cp/icp4i/es/eventstreams-init-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-init-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-kafka-icp-linux
   - image: cp/icp4i/es/eventstreams-kafka-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-kafka-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-kafka-metrics-proxy-icp-linux
   - image: cp/icp4i/es/eventstreams-kafka-metrics-proxy-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-kafka-metrics-proxy-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-kafka-metrics-reporter-icp-linux
   - image: cp/icp4i/es/eventstreams-kafka-metrics-reporter-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-kafka-metrics-reporter-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-kafka-proxy-icp-linux
   - image: cp/icp4i/es/eventstreams-kafka-proxy-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-kafka-proxy-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-kubectl-icp-linux
   - image: cp/icp4i/es/eventstreams-kubectl-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-kubectl-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-oauth-registration-icp-linux
   - image: cp/icp4i/es/eventstreams-oauth-registration-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-oauth-registration-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-proxy-icp-linux
   - image: cp/icp4i/es/eventstreams-proxy-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-proxy-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-registry-icp-linux
   - image: cp/icp4i/es/eventstreams-registry-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-registry-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-replicator-icp-linux
   - image: cp/icp4i/es/eventstreams-replicator-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-replicator-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-rest-icp-linux
   - image: cp/icp4i/es/eventstreams-rest-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-rest-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-rest-producer-icp-linux
   - image: cp/icp4i/es/eventstreams-rest-producer-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-rest-producer-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-rest-proxy-icp-linux
   - image: cp/icp4i/es/eventstreams-rest-proxy-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-rest-proxy-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-role-mappings-icp-linux
   - image: cp/icp4i/es/eventstreams-role-mappings-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-role-mappings-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-telemetry-icp-linux
   - image: cp/icp4i/es/eventstreams-telemetry-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-telemetry-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-ui-icp-linux
   - image: cp/icp4i/es/eventstreams-ui-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-ui-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-vanilla-icp-linux
   - image: cp/icp4i/es/eventstreams-vanilla-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-vanilla-icp-linux-s390x
   - image: cp/icp4i/es/eventstreams-zookeeper-icp-linux
   - image: cp/icp4i/es/eventstreams-zookeeper-icp-linux-amd64
+  - image: cp/icp4i/es/eventstreams-zookeeper-icp-linux-s390x
   - image: cp/icp4i/icip-asset-sync
   - image: cp/icp4i/icip-configurator
   - image: cp/icp4i/icip-navigator
   - image: cp/icp4i/icip-portal-catalog
   - image: cp/icp4i/icip-services
+  - image: cp/icp4i/icp4i-asset-repo-ui
   - image: cp/icp4i/kdi-dnsmasq
   - image: cp/icp4i/kdi-job
   - image: cp/icp4i/mq/ibm-mqadvanced-server-integration
@@ -159,6 +191,7 @@ images:
   - image: cp/icp-foundation/cluster-api-provider-iks
   - image: cp/icp-foundation/cluster-api-provider-ocp
   - image: cp/icp-foundation/collectd-exporter
+  - image: cp/icp-foundation/common-web-ui
   - image: cp/icp-foundation/compliance-annotator
   - image: cp/icp-foundation/configmap-reload
   - image: cp/icp-foundation/config-parser
@@ -187,6 +220,12 @@ images:
   - image: cp/icp-foundation/iam-policy-controller
   - image: cp/icp-foundation/iam-policy-decision
   - image: cp/icp-foundation/ibmcloud-image-enforcement
+  - image: cp/icp-foundation/ibm-licensing
+  - image: cp/icp-foundation/ibm-mongodb
+  - image: cp/icp-foundation/ibm-mongodb-exporter
+  - image: cp/icp-foundation/ibm-mongodb-install
+  - image: cp/icp-foundation/ibm-mt-acct-enforcer
+  - image: cp/icp-foundation/ibmservices-operator
   - image: cp/icp-foundation/icp-audit-service
   - image: cp/icp-foundation/icp-audit-service-nr
   - image: cp/icp-foundation/icp-catalog-ui
@@ -195,8 +234,11 @@ images:
   - image: cp/icp-foundation/icp-cert-manager-controller
   - image: cp/icp-foundation/icp-cert-manager-webhook
   - image: cp/icp-foundation/icp-cert-policy-controller
+  - image: cp/icp-foundation/icp-configmap-watcher
   - image: cp/icp-foundation/icp-elasticsearch
+  - image: cp/icp-foundation/icp-elasticsearch-oss
   - image: cp/icp-foundation/icp-filebeat
+  - image: cp/icp-foundation/icp-filebeat-oss
   - image: cp/icp-foundation/icp-findings-adapter
   - image: cp/icp-foundation/icp-helm-api
   - image: cp/icp-foundation/icp-helm-repo
@@ -207,8 +249,11 @@ images:
   - image: cp/icp-foundation/icp-inception
   - image: cp/icp-foundation/icp-initcontainer
   - image: cp/icp-foundation/icp-kibana
+  - image: cp/icp-foundation/icp-kibana-oss
   - image: cp/icp-foundation/icp-logstash
+  - image: cp/icp-foundation/icp-logstash-oss
   - image: cp/icp-foundation/icp-management-ingress
+  - image: cp/icp-foundation/icp-memcached
   - image: cp/icp-foundation/icp-mongodb
   - image: cp/icp-foundation/icp-mongodb-exporter
   - image: cp/icp-foundation/icp-mongodb-install
@@ -281,6 +326,7 @@ images:
   - image: cp/icp-foundation/process-ma-hf
   - image: cp/icp-foundation/prometheus
   - image: cp/icp-foundation/prometheus-config-reloader
+  - image: cp/icp-foundation/prometheus-controller
   - image: cp/icp-foundation/prometheus-operator
   - image: cp/icp-foundation/prometheus-operator-controller
   - image: cp/icp-foundation/py-generic-indexer
@@ -295,6 +341,7 @@ images:
   - image: cp/icp-foundation/security-advisor-onboarding
   - image: cp/icp-foundation/statsd
   - image: cp/icp-foundation/subscription
+  - image: cp/icp-foundation/system-healthcheck-service
   - image: cp/icp-foundation/tiller
   - image: cp/icp-foundation/usncrawler
   - image: cp/icp-foundation/va-mcm-controller
