@@ -1,0 +1,11 @@
+source: 0020-zen-base/ibm_cloud_pak/manifest.yaml
+description: zen-core microservices for metering, watching, providing an api server and user interface to the core platform
+images:
+  - image: cp/cpd/icp4d-api
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/zen-admin
+  - image: cp/cpd/zen-content
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-watchdog

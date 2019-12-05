@@ -1,0 +1,8 @@
+source: 0010-infra/ibm_cloud_pak/manifest.yaml
+description: 0010-infra lays down base modules like databases, jobs, secrets.
+images:
+  - image: cp/cpd/influxdb_alpine
+  - image: cp/cpd/privatecloud-redis-repo
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-meta-couchdb
+  - image: cp/cpd/zen-metastore-db
