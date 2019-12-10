@@ -1,0 +1,19 @@
+source: ibm-apm-ema-prod/ibm_cloud_pak/manifest.yaml
+description: A Helm Chart for IBM Equipment Maintenance Assistant
+images:
+  - image: cp/alpine
+  - image: cp/busybox
+  - image: cp/ibm-apm-ema-prod/ema-admin-console
+  - image: cp/ibm-apm-ema-prod/ema-api
+  - image: cp/ibm-apm-ema-prod/ema-auth
+  - image: cp/ibm-apm-ema-prod/ema-crawler
+  - image: cp/ibm-apm-ema-prod/ema-diagnosis
+  - image: cp/ibm-apm-ema-prod/ema-diagnosis-dataloader
+  - image: cp/ibm-apm-ema-prod/ema-landing-page
+  - image: cp/ibm-apm-ema-prod/ema-maximo-integration
+  - image: cp/ibm-apm-ema-prod/ema-monitor
+  - image: cp/ibm-apm-ema-prod/ema-multi-tenant
+  - image: cp/ibm-apm-ema-prod/ema-sample-app
+  - image: cp/ibm-apm-ema-prod/ema-service-provider
+  - image: cp/ibm-apm-ema-prod/ema-studio
+  - image: cp/opencontent-common-utils
