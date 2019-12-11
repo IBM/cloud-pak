@@ -1,4 +1,4 @@
-# @@ibmSecuritySolutions@@ UNRESOLVED #
+# @@ibm-security-solutions@@ #
 source: ibm-cp-security-bundle/case/ibm-cp-security/case.yaml
 description: IBM Cloud Pak for Security
 images:
@@ -25,6 +25,41 @@ images:
   - image: cp/cp4s/foundations/opencontent-etcd-3
   - image: cp/cp4s/foundations/opencontent-minio-client
   - image: cp/cp4s/foundations/redis
+  - image: cp/cp4s/solutions/arangodb-enterprise
+  - image: cp/cp4s/solutions/arangodb-exporter
+  - image: cp/cp4s/solutions/isc-aitk-orchestrator
+  - image: cp/cp4s/solutions/isc-aitk-webui
+  - image: cp/cp4s/solutions/isc-authsvc
+  - image: cp/cp4s/solutions/isc-car
+  - image: cp/cp4s/solutions/isc-cases-activemq
+  - image: cp/cp4s/solutions/isc-cases-activemq-logging-sidecar
+  - image: cp/cp4s/solutions/isc-cases-application
+  - image: cp/cp4s/solutions/isc-cases-database-init
+  - image: cp/cp4s/solutions/isc-cases-database-upgrade
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-activemq
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-activemq-logging-sidecar
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-application
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-database-init
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-database-upgrade
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-logging-sidecar
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-operator
+  - image: cp/cp4s/solutions/isc-cases/isc-cases-scripting
+  - image: cp/cp4s/solutions/isc-cases-logging-sidecar
+  - image: cp/cp4s/solutions/isc-cases-operator
+  - image: cp/cp4s/solutions/isc-cases-scripting
+  - image: cp/cp4s/solutions/isc-common-auth
+  - image: cp/cp4s/solutions/isc-common-configstore
+  - image: cp/cp4s/solutions/isc-common-console
+  - image: cp/cp4s/solutions/isc-common-shell
+  - image: cp/cp4s/solutions/isc-common-xfeplus-profileservice-ocp
+  - image: cp/cp4s/solutions/isc-common-xfeplus-search-service
+  - image: cp/cp4s/solutions/isc-csaadapter
+  - image: cp/cp4s/solutions/isc-entitlements
+  - image: cp/cp4s/solutions/isc-init
+  - image: cp/cp4s/solutions/isc-investigate-backend
+  - image: cp/cp4s/solutions/isc-investigate-webui
+  - image: cp/cp4s/solutions/isc-settings-datasources
+  - image: cp/cp4s/solutions/isc-uds-deploy
   - image: cp/icp-foundation/alertmanager
   - image: cp/icp-foundation/audit-policy-controller
   - image: cp/icp-foundation/channel
