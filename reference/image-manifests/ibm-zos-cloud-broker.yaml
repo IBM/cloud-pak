@@ -1,0 +1,7 @@
+source: ibm-zos-cloud-broker/ibm_cloud_pak/manifest.yaml
+description: Provision and manage z/OS Middleware
+images:
+  - image: alpine
+  - image: sys-zoscb-docker-local.artifactory.swg-devops.com/zoscb/zos-broker
+  - image: sys-zoscb-docker-local.artifactory.swg-devops.com/zoscb/zos-broker-couchdb
+  - image: sys-zoscb-docker-local.artifactory.swg-devops.com/zoscb/zos-broker-instance-dashboard

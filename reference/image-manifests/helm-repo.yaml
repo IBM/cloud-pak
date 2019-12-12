@@ -1,0 +1,11 @@
+source: helm-repo/ibm_cloud_pak/manifest.yaml
+description: Internal Helm repository for ICP
+images:
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-audit-service
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-helm-repo
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/icp-audit-service
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/icp-helm-repo
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-s390x/icp-audit-service
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-s390x/icp-helm-repo
+  - image: icp-audit-service
+  - image: icp-helm-repo

@@ -1,0 +1,15 @@
+source: helm-api/ibm_cloud_pak/manifest.yaml
+description: Used to deploy the helm api into K8s cluster
+images:
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-audit-service
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/icp-audit-service
+  - image: hyc-cloud-private-edge-docker-local.artifactory.swg-devops.com/ibmcom-s390x/icp-audit-service
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-helm-api
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-helm-rudder
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/icp-helm-api
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/icp-helm-rudder
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/icp-helm-api
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/icp-helm-rudder
+  - image: icp-audit-service
+  - image: icp-helm-api
+  - image: icp-helm-rudder

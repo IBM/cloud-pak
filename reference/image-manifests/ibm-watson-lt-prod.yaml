@@ -1,0 +1,14 @@
+source: ibm-watson-lt-prod/ibm_cloud_pak/manifest.yaml
+description: IBM Watson Language Translator for CloudPak For Data
+images:
+  - image: us.icr.io/icp-common-components/opencontent-common-utils
+  - image: us.icr.io/icp-common-components/opencontent-icp-cert-gen-1
+  - image: us.icr.io/icp-common-components/opencontent-minio
+  - image: us.icr.io/icp-common-components/opencontent-minio-client
+  - image: us.icr.io/icp-common-components/opencontent-postgres-stolon
+  - image: us.icr.io/icp-common-components/watson-gateway
+  - image: us.icr.io/watson-mnlp/document-translation
+  - image: us.icr.io/watson-mnlp/language-id
+  - image: us.icr.io/watson-mnlp/lt-restapi
+  - image: us.icr.io/watson-mnlp/sentence-segmenter
+  - image: us.icr.io/watson-mnlp/serve-runtime
