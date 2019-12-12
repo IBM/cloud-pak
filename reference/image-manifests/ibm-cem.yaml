@@ -1,6 +1,8 @@
 source: ibm-cem/ibm_cloud_pak/manifest.yaml
 description: A cloud based event management solution
 images:
+  - image: ibmcom/cassandra
+  - image: ibmcom/couchdb
   - image: ibmcom/hdm-brokers
   - image: ibmcom/hdm-cassandra
   - image: ibmcom/hdm-cem-python-sidecar
@@ -21,4 +23,7 @@ images:
   - image: ibmcom/hdm-redis-ha
   - image: ibmcom/hdm-scheduling-ui
   - image: ibmcom/hdm-zookeeper
+  - image: ibmcom/kafka
+  - image: ibmcom/kafkarest
   - image: ibmcom/opencontent-redis-3
+  - image: ibmcom/zookeeper
