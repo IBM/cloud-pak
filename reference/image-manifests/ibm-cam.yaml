@@ -1,4 +1,4 @@
-source: ibm-cam/ibm_cloud_pak/manifest.yaml
+source: ibm-cam-bundle/case/ibm-cam/case.yaml
 description: IBM Cloud Automation Manager
 images:
   - image: cp/cam-ui-instances
@@ -15,6 +15,7 @@ images:
   - image: cp/icam-mongo
   - image: cp/icam-orchestration
   - image: cp/icam-portal-ui
+  - image: cp/icam-provider-ansible
   - image: cp/icam-provider-bpm
   - image: cp/icam-provider-broker
   - image: cp/icam-provider-helm
