@@ -4,12 +4,16 @@ images:
   - image: cp/app-mgmt/agentbootstrap
   - image: cp/app-mgmt/agentmgmt
   - image: cp/app-mgmt/agentoperator
+  - image: cp/app-mgmt/akoraui
   - image: cp/app-mgmt/alarmeventsrc
   - image: cp/app-mgmt/amuirest
   - image: cp/app-mgmt/applicationmgmt
   - image: cp/app-mgmt/applicationmgmt_kafka_consumer_container
   - image: cp/app-mgmt/applicationmgmt_mcmforwarder_container
   - image: cp/app-mgmt/appmgmt
+  - image: cp/app-mgmt/appmgmt_authserver
+  - image: cp/app-mgmt/archiving-service
+  - image: cp/app-mgmt/baselineconfiguration
   - image: cp/app-mgmt/cassandra
   - image: cp/app-mgmt/config
   - image: cp/app-mgmt/couchdb
@@ -27,6 +31,7 @@ images:
   - image: cp/app-mgmt/hdm-normalizer
   - image: cp/app-mgmt/hdm-notificationprocessor
   - image: cp/app-mgmt/hdm-scheduling-ui
+  - image: cp/app-mgmt/inference-service
   - image: cp/app-mgmt/itopsui
   - image: cp/app-mgmt/k8-monitor
   - image: cp/app-mgmt/k8sdc-operator
@@ -52,7 +57,9 @@ images:
   - image: cp/app-mgmt/opentt-collector
   - image: cp/app-mgmt/opentt-dependency
   - image: cp/app-mgmt/opentt-query
+  - image: cp/app-mgmt/policy-registry-service
   - image: cp/app-mgmt/reloader
+  - image: cp/app-mgmt/spark
   - image: cp/app-mgmt/synthetic
   - image: cp/app-mgmt/synthetic-playback-javascript
   - image: cp/app-mgmt/synthetic-playback-selenium
@@ -60,6 +67,7 @@ images:
   - image: cp/app-mgmt/temaconfig
   - image: cp/app-mgmt/temasda
   - image: cp/app-mgmt/threshold
+  - image: cp/app-mgmt/training-service
   - image: cp/app-mgmt/ubi-base
   - image: cp/app-mgmt/zookeeper
   - image: cp/icam-bpd-cds
@@ -72,6 +80,7 @@ images:
   - image: cp/icam-mongo
   - image: cp/icam-orchestration
   - image: cp/icam-portal-ui
+  - image: cp/icam-provider-ansible
   - image: cp/icam-provider-bpm
   - image: cp/icam-provider-broker
   - image: cp/icam-provider-helm
@@ -88,10 +97,13 @@ images:
   - image: cp/icp-foundation/cis-controller
   - image: cp/icp-foundation/cis-crawler
   - image: cp/icp-foundation/cluster-api-provider-aks
+  - image: cp/icp-foundation/cluster-api-provider-eks
   - image: cp/icp-foundation/cluster-api-provider-gke
   - image: cp/icp-foundation/cluster-api-provider-iks
   - image: cp/icp-foundation/cluster-api-provider-ocp
+  - image: cp/icp-foundation/cluster-api-provider-sdk
   - image: cp/icp-foundation/collectd-exporter
+  - image: cp/icp-foundation/common-web-ui
   - image: cp/icp-foundation/compliance-annotator
   - image: cp/icp-foundation/configmap-reload
   - image: cp/icp-foundation/config-parser
@@ -120,6 +132,12 @@ images:
   - image: cp/icp-foundation/iam-policy-controller
   - image: cp/icp-foundation/iam-policy-decision
   - image: cp/icp-foundation/ibmcloud-image-enforcement
+  - image: cp/icp-foundation/ibm-licensing
+  - image: cp/icp-foundation/ibm-mongodb
+  - image: cp/icp-foundation/ibm-mongodb-exporter
+  - image: cp/icp-foundation/ibm-mongodb-install
+  - image: cp/icp-foundation/ibm-mt-acct-enforcer
+  - image: cp/icp-foundation/ibmservices-operator
   - image: cp/icp-foundation/icp-audit-service
   - image: cp/icp-foundation/icp-audit-service-nr
   - image: cp/icp-foundation/icp-catalog-ui
@@ -128,8 +146,11 @@ images:
   - image: cp/icp-foundation/icp-cert-manager-controller
   - image: cp/icp-foundation/icp-cert-manager-webhook
   - image: cp/icp-foundation/icp-cert-policy-controller
+  - image: cp/icp-foundation/icp-configmap-watcher
   - image: cp/icp-foundation/icp-elasticsearch
+  - image: cp/icp-foundation/icp-elasticsearch-oss
   - image: cp/icp-foundation/icp-filebeat
+  - image: cp/icp-foundation/icp-filebeat-oss
   - image: cp/icp-foundation/icp-findings-adapter
   - image: cp/icp-foundation/icp-helm-api
   - image: cp/icp-foundation/icp-helm-repo
@@ -140,8 +161,11 @@ images:
   - image: cp/icp-foundation/icp-inception
   - image: cp/icp-foundation/icp-initcontainer
   - image: cp/icp-foundation/icp-kibana
+  - image: cp/icp-foundation/icp-kibana-oss
   - image: cp/icp-foundation/icp-logstash
+  - image: cp/icp-foundation/icp-logstash-oss
   - image: cp/icp-foundation/icp-management-ingress
+  - image: cp/icp-foundation/icp-memcached
   - image: cp/icp-foundation/icp-mongodb
   - image: cp/icp-foundation/icp-mongodb-exporter
   - image: cp/icp-foundation/icp-mongodb-install
@@ -162,11 +186,16 @@ images:
   - image: cp/icp-foundation/klusterlet-component-operator
   - image: cp/icp-foundation/kms-api
   - image: cp/icp-foundation/kms-crypto
+  - image: cp/icp-foundation/kms-gemaltov6
   - image: cp/icp-foundation/kms-lifecycle
   - image: cp/icp-foundation/kms-onboarding
+  - image: cp/icp-foundation/kms-oss
+  - image: cp/icp-foundation/kms-oss-watcher
   - image: cp/icp-foundation/kms-pep
   - image: cp/icp-foundation/kms-persistence
   - image: cp/icp-foundation/kmsplugin
+  - image: cp/icp-foundation/kms-softhsm
+  - image: cp/icp-foundation/kms-thalesv12
   - image: cp/icp-foundation/kubectl
   - image: cp/icp-foundation/kube-state-metrics
   - image: cp/icp-foundation/legato
@@ -189,10 +218,12 @@ images:
   - image: cp/icp-foundation/mcm-application-ui
   - image: cp/icp-foundation/mcm-compliance
   - image: cp/icp-foundation/mcm-controller
+  - image: cp/icp-foundation/mcm-inception
   - image: cp/icp-foundation/mcm-klusterlet
   - image: cp/icp-foundation/mcm-kui-proxy
   - image: cp/icp-foundation/mcm-mt-acct-enforcer
   - image: cp/icp-foundation/mcm-operator
+  - image: cp/icp-foundation/mcm-rcm-api
   - image: cp/icp-foundation/mcm-service-registry
   - image: cp/icp-foundation/mcm-topology
   - image: cp/icp-foundation/mcm-topology-api
@@ -214,6 +245,7 @@ images:
   - image: cp/icp-foundation/process-ma-hf
   - image: cp/icp-foundation/prometheus
   - image: cp/icp-foundation/prometheus-config-reloader
+  - image: cp/icp-foundation/prometheus-controller
   - image: cp/icp-foundation/prometheus-operator
   - image: cp/icp-foundation/prometheus-operator-controller
   - image: cp/icp-foundation/py-generic-indexer
@@ -224,13 +256,18 @@ images:
   - image: cp/icp-foundation/search-api
   - image: cp/icp-foundation/search-collector
   - image: cp/icp-foundation/searchguard-init
+  - image: cp/icp-foundation/secret-encryption-policy-controller
   - image: cp/icp-foundation/secure-config-annotator
   - image: cp/icp-foundation/security-advisor-onboarding
   - image: cp/icp-foundation/statsd
+  - image: cp/icp-foundation/stsadapter
   - image: cp/icp-foundation/subscription
+  - image: cp/icp-foundation/system-healthcheck-service
   - image: cp/icp-foundation/tiller
   - image: cp/icp-foundation/usncrawler
+  - image: cp/icp-foundation/va-crawler
   - image: cp/icp-foundation/va-mcm-controller
+  - image: cp/icp-foundation/va-reg-crawler
   - image: cp/icp-foundation/velero
   - image: cp/icp-foundation/vulnerability-annotator
   - image: cp/icp-foundation/weave-collector
