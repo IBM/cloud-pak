@@ -17,6 +17,7 @@ description: Watson Machine Learning add on module
 # if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
 # sub product have to be homogerious architucture
 architecture: x86_64
+installOverride: override.yaml
 # Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
 # To be discussed after Oct - consult with the install team to make sure this is implemented
 # overrideValues:
