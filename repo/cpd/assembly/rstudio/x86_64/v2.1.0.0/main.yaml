@@ -26,6 +26,7 @@ architecture: x86_64
 # although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
 # We will have linter to check to make sure the rules
 #
+installOverride: overwrite.yaml
 # Version is hardcoded for now, we will address the version compatiblities after Oct GA
 bricks:
   - name: lite
