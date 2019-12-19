@@ -1,10 +1,17 @@
-source: ibm-cp-automation-bundle/case/ibm-cp-automation/case.yaml
-description: Delivers application modernization and cloud-native application development for multicloud deployments.
+source: ibm-cp4a-case-bundle/case/ibm-cp-automation/case.yaml
+description: "A CASE for an operator which deploys cp4a"
 images:
   - image: cp/cp4a/aae/dba-etcd
   - image: cp/cp4a/aae/dba-keytool-initcontainer
   - image: cp/cp4a/aae/solution-server
   - image: cp/cp4a/aae/solution-server-helmjob-db
+  - image: cp/cp4a/adw/adw-designer
+  - image: cp/cp4a/adw/adw-init
+  - image: cp/cp4a/adw/adw-management
+  - image: cp/cp4a/adw/adw-runtime
+  - image: cp/cp4a/adw/adw-setup
+  - image: cp/cp4a/adw/mongo
+  - image: cp/cp4a/adw/verdaccio
   - image: cp/cp4a/baca/backend
   - image: cp/cp4a/baca/extraction
   - image: cp/cp4a/baca/mongo
@@ -14,6 +21,7 @@ images:
   - image: cp/cp4a/baca/redis
   - image: cp/cp4a/baca/spfrontend
   - image: cp/cp4a/bai/bai-admin
+  - image: cp/cp4a/bai/bai-adw
   - image: cp/cp4a/bai/bai-bawadv
   - image: cp/cp4a/bai/bai-bpmn
   - image: cp/cp4a/bai/bai-content
@@ -37,9 +45,28 @@ images:
   - image: cp/cp4a/bas/jms
   - image: cp/cp4a/bas/solution-server
   - image: cp/cp4a/bas/solution-server-helmjob-db
+  - image: cp/cp4a/fncm/cmis
   - image: cp/cp4a/fncm/cpe
   - image: cp/cp4a/fncm/crs
   - image: cp/cp4a/fncm/css
+  - image: cp/cp4a/fncm/extshare
+  - image: cp/cp4a/fncm/graphql
+  - image: cp/cp4a/fncm/taskmgr
+  - image: cp/cp4a/iaws/baw-jms-server
+  - image: cp/cp4a/iaws/dba-dbcompatibility-initcontainer
+  - image: cp/cp4a/iaws/dba-keytool-initcontainer
+  - image: cp/cp4a/iaws/dba-keytool-jobcontainer
+  - image: cp/cp4a/iaws/dba-umsregistration-initjob
+  - image: cp/cp4a/iaws/iaws-ibm-workplace
+  - image: cp/cp4a/iaws/iaws-ps
+  - image: cp/cp4a/iaws/iaws-ps-content-integration
+  - image: cp/cp4a/iaws/iaws-psdb-handling
+  - image: cp/cp4a/iaws/pfs
+  - image: cp/cp4a/iaws/pfs-bpd-database-init-prod
+  - image: cp/cp4a/iaws/pfs-elasticsearch-prod
+  - image: cp/cp4a/iaws/pfs-init-prod
+  - image: cp/cp4a/iaws/pfs-nginx-prod
+  - image: cp/cp4a/icp4a-operator
   - image: cp/cp4a/odm/dbserver
   - image: cp/cp4a/odm/odm-decisioncenter
   - image: cp/cp4a/odm/odm-decisionrunner
