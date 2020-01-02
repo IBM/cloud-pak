@@ -1,9 +1,0 @@
-source: ibm-dba-aae-prod/ibm_cloud_pak/manifest.yaml
-description: IBM Business Automation Application Engine
-images:
-  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/dba-etcd
-  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/solution-server
-  - image: ecm-containerization-docker-local.artifactory.swg-devops.com/bas/solution-server-helmjob-db
-  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-dbcompatibility-initcontainer
-  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-keytool-initcontainer
-  - image: hyc-dba-base-image-docker-local.artifactory.swg-devops.com/base-images/dba-umsregistration-initjob
