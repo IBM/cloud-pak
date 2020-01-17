@@ -1,0 +1,23 @@
+source: ibm-watson-nlu-prod/ibm_cloud_pak/manifest.yaml
+description: IBM Natural Language Understanding in private cloud
+images:
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-common-utils
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-etcd-3
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-icp-cert-gen-1
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio-client
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-postgres-stolon
+  - image: us.icr.io/icp-common-components/watson-gateway
+  - image: us.icr.io/mnlp/serve-runtime
+  - image: us.icr.io/model-mesh/model-mesh
+  - image: us.icr.io/model-mesh/model-mesh-dashboard
+  - image: us.icr.io/nlu_text_processing/api-ubi
+  - image: us.icr.io/nlu_text_processing/dvt-ubi
+  - image: us.icr.io/watson-nlu/common-service
+  - image: us.icr.io/watson-nlu/common-service-models-uploader
+  - image: us.icr.io/watson-nlu/keywords
+  - image: us.icr.io/watson-nlu/model-management-api
+  - image: us.icr.io/watson-nlu/nlu-dvt
+  - image: us.icr.io/watson-nlu/nlu-models-server
+  - image: us.icr.io/watson-nlu/nlu-server
+  - image: us.icr.io/watson-nlu/orchestrator

@@ -1,0 +1,12 @@
+source: metering/ibm_cloud_pak/manifest.yaml
+description: A Helm chart for deploying the metering service of IBM Cloud Private
+images:
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/metering-data-manager
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/metering-mcmui
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/metering-ui
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/metering-data-manager
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/metering-mcmui
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/metering-ui
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/metering-data-manager
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/metering-mcmui
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/metering-ui

@@ -1,0 +1,7 @@
+source: ibm-mcm-kui/ibm_cloud_pak/manifest.yaml
+description: A helm chart for deploying the IBM Visual Web Terminal
+images:
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/mcm-kui-proxy
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/mcm-kui-proxy
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/mcm-kui-proxy
+  - image: mcm-kui-proxy

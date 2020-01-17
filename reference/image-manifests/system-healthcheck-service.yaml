@@ -1,0 +1,10 @@
+source: system-healthcheck-service/ibm_cloud_pak/manifest.yaml
+description: System Healthcheck Service
+images:
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-memcached
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/icp-memcached-amd64
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-amd64/system-healthcheck-service
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/icp-memcached
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/system-healthcheck-service
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/icp-memcached
+  - image: hyc-cloud-private-stable-docker-local.artifactory.swg-devops.com/ibmcom-s390x/system-healthcheck-service

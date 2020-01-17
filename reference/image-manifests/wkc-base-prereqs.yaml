@@ -1,0 +1,9 @@
+source: wkc-base-prereqs/ibm_cloud_pak/manifest.yaml
+description: The prereqs base install for UG&I
+images:
+  - image: hyc-cp4d-team-wkc-docker-local.artifactory.swg-devops.com/couchdb3
+  - image: hyc-cp4d-team-wkc-docker-local.artifactory.swg-devops.com/elasticsearch
+  - image: hyc-cp4d-team-wkc-docker-local.artifactory.swg-devops.com/haproxy
+  - image: hyc-cp4d-team-wkc-docker-local.artifactory.swg-devops.com/rabbitmq
+  - image: hyc-cp4d-team-wkc-docker-local.artifactory.swg-devops.com/redis
+  - image: hyc-cp4d-team-wkc-docker-local.artifactory.swg-devops.com/wkc-init-container

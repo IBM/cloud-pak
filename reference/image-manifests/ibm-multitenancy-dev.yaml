@@ -1,0 +1,7 @@
+source: ibm-multitenancy-dev/ibm_cloud_pak/manifest.yaml
+description: Components for managing a multitenant Kubernetes cluster.
+images:
+  - image: hyc-cloud-private-daily-docker-local.artifactory.swg-devops.com/ibmcom-amd64/ibm-mt-acct-enforcer
+  - image: hyc-cloud-private-daily-docker-local.artifactory.swg-devops.com/ibmcom-ppc64le/ibm-mt-acct-enforcer
+  - image: hyc-cloud-private-daily-docker-local.artifactory.swg-devops.com/ibmcom-s390x/ibm-mt-acct-enforcer
+  - image: ibm-mt-acct-enforcer

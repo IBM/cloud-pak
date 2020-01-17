@@ -1,0 +1,26 @@
+source: ibm-aiopenscale-prod/ibm_cloud_pak/manifest.yaml
+description: An open and scalable platform for machine learning 
+images:
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-bias-service
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-bkpi-combined-services
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-common-api
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-configuration-service
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-dashboard
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-datamart-service-api
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-etcd
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-fast-path
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-feedback-service
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-kafka
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-kubectl
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-ml-gateway-discovery
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-ml-gateway-service
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-nginx-local
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-orch-notifications-service
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-payload-logging-service
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-payload-logging-service-api
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-redis
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/aios-zoo-keeper
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/drift
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/explainability
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/model-operation-service-scheduling
+  - image: wcp-aiopenscale-docker-local.artifactory.swg-devops.com/model-risk-management
