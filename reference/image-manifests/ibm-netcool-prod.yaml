@@ -1,5 +1,5 @@
-source: ibm-netcool-prod/ibm_cloud_pak/manifest.yaml
-description: "IBM® Netcool® Operations Insight on Kubernetes"
+source: ibm-netcool-prod-bundle/case/ibm-netcool-prod/case.yaml
+description: A Helm chart for IBM® Netcool® Operations Insight on Kubernetes
 images:
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/akora/node-server
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/couchdb
@@ -37,4 +37,5 @@ images:
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/ibmcom/netcool-qp-proxy-ee
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/ibmcom/netcool-webgui-asm-ee
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/ibmcom/netcool-xml-gateway-ee
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/noi/common-dash-auth-im-repo
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/noi/ui-content
