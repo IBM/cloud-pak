@@ -1,0 +1,1 @@
+patch deployment cognos-analytics-cognos-analytics-addon --patch '{"spec": {"template": {"spec": {"containers": [{"name": "cognos-analytics-addon","image": "{{.DockerRegistryPrefix}}/zen-addon-cognos-analytics:1.4.8.1"}]}}}}'
