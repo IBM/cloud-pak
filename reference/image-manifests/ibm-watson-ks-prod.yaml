@@ -2,6 +2,7 @@ source: ibm-watson-ks-prod/ibm_cloud_pak/manifest.yaml
 description: A Helm chart for IBM Watson Knowledge Studio
 images:
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-bats
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-common-utils
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-etcd-3
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-icp-cert-gen-1
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio
@@ -26,4 +27,12 @@ images:
   - image: us.icr.io/mnlp/sire-train-facade
   - image: us.icr.io/mnlp/sire-train-runtime
   - image: us.icr.io/model-mesh/model-mesh
+  - image: us.icr.io/watson-mnlp/jobq
+  - image: us.icr.io/watson-mnlp/sireg
+  - image: us.icr.io/watson-mnlp/sire-train-facade
+  - image: us.icr.io/watson-mnlp/sire-train-runtime
   - image: us.icr.io/watson-nlu/model-management-api
+  - image: wks-docker-local.artifactory.swg-devops.com/wks-nosql-3
+  - image: wks-docker-local.artifactory.swg-devops.com/wks-nosql-bats
+  - image: wks-docker-local.artifactory.swg-devops.com/wks-nosql-config-copy
+  - image: wks-docker-local.artifactory.swg-devops.com/wks-nosql-install

@@ -1,6 +1,7 @@
 source: ibm-watson-speech-prod/ibm_cloud_pak/manifest.yaml
 description: "IBM Watson Speech to Text and Text to Speech"
 images:
+  - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-common-utils
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-icp-cert-gen-1
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio-client
@@ -45,9 +46,45 @@ images:
   - image: registry.ng.bluemix.net/speech_services/zh-cn-broadbandmodel
   - image: registry.ng.bluemix.net/speech_services/zh-cn-narrowbandmodel
   - image: us.icr.io/icp-common-components/watson-gateway
+  - image: us.icr.io/redsonja_hyboria/speech_services/ar-ar-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/chuck
   - image: us.icr.io/redsonja_hyboria/speech_services/chuck-haproxy
+  - image: us.icr.io/redsonja_hyboria/speech_services/de-de-birgitv3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/de-de-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/de-de-dieterv3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/de-de-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-gb-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-gb-katev3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-gb-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-us-allisonv3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-us-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-us-lisav3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-us-michaelv3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-us-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/en-us-shortform-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/es-es-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/es-es-enriquev3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/es-es-laurav3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/es-es-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/es-la-sofiav3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/es-us-sofiav3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/fr-fr-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/fr-fr-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/fr-fr-reneev3voice
   - image: us.icr.io/redsonja_hyboria/speech_services/gdpr-data-deletion
+  - image: us.icr.io/redsonja_hyboria/speech_services/generic-models
+  - image: us.icr.io/redsonja_hyboria/speech_services/it-it-francescav3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/ja-jp-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/ja-jp-emiv3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/ja-jp-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/ko-kr-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/ko-kr-narrowbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/pt-br-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/pt-br-isabelav3voice
+  - image: us.icr.io/redsonja_hyboria/speech_services/pt-br-narrowbandmodel
   - image: us.icr.io/redsonja_hyboria/speech_services/speech-utils-rhubi8
   - image: us.icr.io/redsonja_hyboria/speech_services/stt-async
   - image: us.icr.io/redsonja_hyboria/speech_services/stt-customization
   - image: us.icr.io/redsonja_hyboria/speech_services/tts-customization
+  - image: us.icr.io/redsonja_hyboria/speech_services/zh-cn-broadbandmodel
+  - image: us.icr.io/redsonja_hyboria/speech_services/zh-cn-narrowbandmodel
