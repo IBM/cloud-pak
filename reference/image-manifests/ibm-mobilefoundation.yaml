@@ -1,8 +1,13 @@
 source: ibm-mobilefoundation-bundle/case/ibm-mobilefoundation/case.yaml
 description: "IBM MobileFirst Foundation V8.0. Deploys Server, Push, Analytics and AppCenter."
 images:
+  - image: cp/mf-operator
   - image: cp/mfpf-analytics
+  - image: cp/mfpf-analytics-recvr
   - image: cp/mfpf-appcenter
   - image: cp/mfpf-dbinit
+  - image: cp/mfpf-liveupdate
   - image: cp/mfpf-push
   - image: cp/mfpf-server
+  - image: ibmcom/busybox
+  - image: ibmcom/opencontent-common-utils
