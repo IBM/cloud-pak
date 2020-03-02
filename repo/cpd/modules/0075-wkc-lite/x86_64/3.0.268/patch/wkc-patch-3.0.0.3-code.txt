@@ -1,0 +1,63 @@
+1. Update OMAG environment settings
+
+- spec:
+    containers:
+    - env:
+        - name: PORT
+          value: "8080"
+        - name: XMETA_DB_DRIVER
+          value: com.ibm.db2.jcc.DB2Driver
+        - name: XMETA_DB_URL
+          value: jdbc:db2://is-xmetadocker:50000/xmeta
+        - name: XMETA_DB_USER
+          value: xmeta
+        - name: XMETA_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: iis-usr-secrets
+              key: xmeta_password
+
+2. Configure wkc-glossary-service
+- spec:
+    containers:
+    - env:
+        - name: XMETA_DB2_HOST
+          value: $(IS_XMETADOCKER_SERVICE_HOST)
+        - name: XMETA_DB2_PORT
+          value: "50000"
+        - name: XMETA_DB2_DATABASE_NAME
+          value: XMETA
+        - name: XMETA_DB2_CONNECTION_POOL_SIZE
+          value: "10"
+        - name: XMETA_DB2_USER
+          value: xmeta
+        - name: XMETA_DB2_SSL
+          value: "false"
+        - name: XMETA_DB2_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: xmeta_password
+              name: iis-usr-secrets
+              optional: true
+
+
+3. Configure Xmx settings for the IIS service
+  jvm.options: |-
+    # 64 bits JVM memory settings
+    -Xms1280m
+    -Xmx8192m
+    # Unix JVM settings
+    -Djava.awt.headless=true
+    # Windows JVM settings
+    #-Djava.awt.headless=false
+    # SUNOS JVM settings
+    #-XX:MaxPermSize=768M
+    # IBM JVM settings (all OS except SOLARIS and HPUX)
+    -Xdisableexplicitgc
+    # Force the JVM locale to language selected at installation time
+    -Duser.language=en
+    -Duser.country=US
+    # XMeta custom EMF registry
+    -Dorg.eclipse.emf.ecore.EPackage.Registry.INSTANCE=com.ibm.xmeta.emf.util.PackageRegistry
+    # EMF custom archive schemes required within Liberty
+    -Dorg.eclipse.emf.common.util.URI.archiveSchemes=wsjar wszip jar zip
