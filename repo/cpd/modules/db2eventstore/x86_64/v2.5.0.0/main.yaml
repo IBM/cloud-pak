@@ -4,19 +4,19 @@ name: db2eventstore module # The name here just for information purpose, not for
 registry-reference: base-registry
 images:
   - name: zen-databases-catalog-db2eventstore
-    tag: v2.5.0.0-822-x86_64
+    tag: v2.5.0.0-4-x86_64
   - name: eventstore-ci-ui-console
-    tag: v2.0.0.1-822-x86_64
+    tag: v2.0.0.3-4-x86_64
   - name: eventstore-ci-backend
-    tag: v2.0.0.1-822-x86_64
+    tag: v2.0.0.3-4-x86_64
   - name: eventstore-ci-engine
-    tag: v2.0.0.1-822-x86_64
+    tag: v2.0.0.3-4-x86_64
   - name: eventstore-ci-zookeeper
-    tag: v2.0.0.1-822-x86_64
+    tag: v2.0.0.3-4-x86_64
   - name: eventstore-ci-tools
-    tag: v2.0.0.1-822-x86_64
+    tag: v2.0.0.3-4-x86_64
   - name: eventstore-ci-storage
-    tag: v2.0.0.1-822-x86_64
+    tag: v2.0.0.3-4-x86_64
   
 chart: zen-databases-catalog.tar.gz
 # For download to verify the chart file is correct, optional
@@ -24,5 +24,5 @@ chart: zen-databases-catalog.tar.gz
 # in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
 timeout: 90
 # The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
-releaseName: db2eventstore-catalog-2.0.0.1
+releaseName: db2eventstore-catalog-2.0.0.3
 installOverride: install-override.yaml
