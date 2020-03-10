@@ -1,0 +1,6 @@
+source: ibm-cert-manager/ibm_cloud_pak/manifest.yaml
+description: Service for issuing and managing certificates on IBM Cloud Private.
+images:
+  - image: icp-cert-manager-acmesolver
+  - image: icp-cert-manager-controller
+  - image: icp-cert-policy-controller

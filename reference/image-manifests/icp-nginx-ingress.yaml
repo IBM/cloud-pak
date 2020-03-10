@@ -1,0 +1,6 @@
+source: icp-nginx-ingress/ibm_cloud_pak/manifest.yaml
+description: Ingress Controller for IBM Cloud Private
+images:
+  - image: ibmcom/default-http-backend
+  - image: ibmcom/icp-initcontainer
+  - image: ibmcom/nginx-ingress-controller
