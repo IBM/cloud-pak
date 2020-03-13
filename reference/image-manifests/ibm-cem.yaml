@@ -1,6 +1,25 @@
 source: ibm-cem/ibm_cloud_pak/manifest.yaml
 description: A cloud based event management solution
 images:
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/cassandra
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/couchdb
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-brokers
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-cem-users
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-channelservices
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-datalayer
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-event-analytics-ui
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-eventpreprocessor
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-icp-rba-as
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-icp-rba-rbs
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-incidentprocessor
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-integration-controller
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-normalizer
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-notificationprocessor
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/hdm-scheduling-ui
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/kafka
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/kafkarest
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/opencontent-redis-5
+  - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/zookeeper
   - image: ibmcom/cassandra
   - image: ibmcom/couchdb
   - image: ibmcom/hdm-brokers
