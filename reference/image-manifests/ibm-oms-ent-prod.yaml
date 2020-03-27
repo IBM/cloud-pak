@@ -1,6 +1,9 @@
 source: ibm-oms-ent-prod/ibm_cloud_pak/manifest.yaml
 description: Chart for deploying IBM Order Management System Enterprise Edition
 images:
+  - image: cp/ibm-oms-enterprise/om-agent
+  - image: cp/ibm-oms-enterprise/om-app
+  - image: cp/ibm-oms-enterprise/om-base
   - image: wce-oms-onprem-docker-local.artifactory.swg-devops.com/om/om-agent
   - image: wce-oms-onprem-docker-local.artifactory.swg-devops.com/om/om-app
   - image: wce-oms-onprem-docker-local.artifactory.swg-devops.com/om/om-base

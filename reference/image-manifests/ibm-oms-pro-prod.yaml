@@ -1,6 +1,9 @@
 source: ibm-oms-pro-prod/ibm_cloud_pak/manifest.yaml
 description: Chart for deploying IBM Order Management System Professional Edition
 images:
+  - image: cp/ibm-oms-professional/om-agent
+  - image: cp/ibm-oms-professional/om-app
+  - image: cp/ibm-oms-professional/om-base
   - image: wce-oms-onprem-docker-local.artifactory.swg-devops.com/om/om-agent
   - image: wce-oms-onprem-docker-local.artifactory.swg-devops.com/om/om-app
   - image: wce-oms-onprem-docker-local.artifactory.swg-devops.com/om/om-base
