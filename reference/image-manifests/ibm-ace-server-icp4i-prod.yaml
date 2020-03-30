@@ -2,6 +2,7 @@ source: ibm-ace-server-icp4i-prod/ibm_cloud_pak/manifest.yaml
 description: This helm chart is used by the IBM App Connect Dashboard to deploy servers
 images:
   - image: alpine
+  - image: cp/icp4i/ace/ibm-acecc-configurator-prod
   - image: cp/icp4i/ace/ibm-ace-designer-flows-prod
   - image: cp/icp4i/ace/ibm-ace-icp-configurator-prod
   - image: cp/icp4i/ace/ibm-ace-lcp-prod
