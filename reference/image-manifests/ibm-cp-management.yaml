@@ -13,11 +13,13 @@ images:
   - image: cp/app-mgmt/appmgmt
   - image: cp/app-mgmt/appmgmt_authserver
   - image: cp/app-mgmt/archiving-service
+  - image: cp/app-mgmt/auto_configurator
   - image: cp/app-mgmt/baselineconfiguration
   - image: cp/app-mgmt/cassandra
   - image: cp/app-mgmt/config
   - image: cp/app-mgmt/couchdb
   - image: cp/app-mgmt/event-evaluator
+  - image: cp/app-mgmt/geolocation_service_api
   - image: cp/app-mgmt/hdm-brokers
   - image: cp/app-mgmt/hdm-cem-users
   - image: cp/app-mgmt/hdm-channelservices
@@ -56,11 +58,14 @@ images:
   - image: cp/app-mgmt/opentt-analyzer
   - image: cp/app-mgmt/opentt-collector
   - image: cp/app-mgmt/opentt-dependency
+  - image: cp/app-mgmt/opentt-ingester
   - image: cp/app-mgmt/opentt-query
   - image: cp/app-mgmt/policy-registry-service
   - image: cp/app-mgmt/reloader
   - image: cp/app-mgmt/spark
   - image: cp/app-mgmt/synthetic
+  - image: cp/app-mgmt/synthetic-agent
+  - image: cp/app-mgmt/synthetic-playback-http
   - image: cp/app-mgmt/synthetic-playback-javascript
   - image: cp/app-mgmt/synthetic-playback-selenium
   - image: cp/app-mgmt/temacomm
@@ -110,6 +115,11 @@ images:
   - image: cp/icp-foundation/consul
   - image: cp/icp-foundation/coredns
   - image: cp/icp-foundation/cos-indexer
+  - image: cp/icp-foundation/cp4mcm-application-ui
+  - image: cp/icp-foundation/cp4mcm-grc-ui
+  - image: cp/icp-foundation/cp4mcm-grc-ui-api
+  - image: cp/icp-foundation/cp4mcm-ui
+  - image: cp/icp-foundation/cp4mcm-ui-api
   - image: cp/icp-foundation/curl
   - image: cp/icp-foundation/dashboard-controller
   - image: cp/icp-foundation/default-http-backend
