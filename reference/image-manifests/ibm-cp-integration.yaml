@@ -1,3 +1,4 @@
+#@@ibm_common_services@@
 source: ibm-cp-integration-bundle/case/ibm-cp-integration/case.yaml
 description: A simplified solution to integration challenges, allowing the enterprise to modernize its processes while positioning itself for future innovation.
 images:
@@ -6,14 +7,29 @@ images:
   - image: apic-dev-docker-local.artifactory.swg-devops.com/k8s-datapower-monitor
   - image: busybox
   - image: cp/ibm-mqadvanced-server
+  - image: cp/icp4i/ace/busybox
+  - image: cp/icp4i/ace/ibm-acecc-configurator-dev
+  - image: cp/icp4i/ace/ibm-acecc-configurator-prod
+  - image: cp/icp4i/ace/ibm-acecc-infra-prod
   - image: cp/icp4i/ace/ibm-ace-content-server-prod
   - image: cp/icp4i/ace/ibm-ace-dashboard-prod
+  - image: cp/icp4i/ace/ibm-ace-designer-flows-dev
   - image: cp/icp4i/ace/ibm-ace-designer-flows-prod
   - image: cp/icp4i/ace/ibm-ace-icp-configurator-prod
+  - image: cp/icp4i/ace/ibm-ace-lcp-dev
   - image: cp/icp4i/ace/ibm-ace-lcp-prod
   - image: cp/icp4i/ace/ibm-ace-mqclient-server-prod
   - image: cp/icp4i/ace/ibm-ace-mq-server-prod
+  - image: cp/icp4i/ace/ibm-ace-server-dev
   - image: cp/icp4i/ace/ibm-ace-server-prod
+  - image: cp/icp4i/ace/ibm-app-connect-connector-auth-service-prod
+  - image: cp/icp4i/ace/ibm-app-connect-flowdoc-authoring-prod
+  - image: cp/icp4i/ace/ibm-app-connect-flow-test-manager-prod
+  - image: cp/icp4i/ace/ibm-app-connect-proxy-dev
+  - image: cp/icp4i/ace/ibm-app-connect-proxy-prod
+  - image: cp/icp4i/ace/ibm-app-connect-runtime-prod
+  - image: cp/icp4i/ace/ibm-app-connect-ui-prod
+  - image: cp/icp4i/ace/ibm-couchdb2
   - image: cp/icp4i/ace/icp4i-od-agent
   - image: cp/icp4i/ace/icp4i-od-collector
   - image: cp/icp4i/apic/analytics-client
@@ -53,6 +69,7 @@ images:
   - image: cp/icp4i/aspera/aspera-hsts-election
   - image: cp/icp4i/aspera/aspera-hsts-firstboot
   - image: cp/icp4i/aspera/aspera-hsts-http-proxy
+  - image: cp/icp4i/aspera/aspera-hsts-lifecycle
   - image: cp/icp4i/aspera/aspera-hsts-loadbalancer
   - image: cp/icp4i/aspera/aspera-hsts-noded-swarm-member
   - image: cp/icp4i/aspera/aspera-hsts-probe
@@ -70,6 +87,7 @@ images:
   - image: cp/icp4i/cdi-dashboard
   - image: cp/icp4i/cdi-db
   - image: cp/icp4i/cdi-glum
+  - image: cp/icp4i/couchdb
   - image: cp/icp4i/datapower/datapower
   - image: cp/icp4i/dc-main
   - image: cp/icp4i/es/eventstreams-access-controller-icp-linux
