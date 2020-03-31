@@ -2,6 +2,8 @@ source: ibm-ace-dashboard-dev/ibm_cloud_pak/manifest.yaml
 description: IBM App Connect Enterprise dashboard
 images:
   - image: alpine
+  - image: ibmcom/acecc-configurator
+  - image: ibmcom/acecc-infra
   - image: ibmcom/ace-content-server
   - image: ibmcom/ace-dashboard
   - image: ibmcom/ace-icp-configurator
