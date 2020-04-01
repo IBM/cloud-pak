@@ -1,9 +1,13 @@
 source: ibm-db2wh-prod/ibm_cloud_pak/manifest.yaml
-description: IBM Db2 Warehouse - Enterprise Edition 3.9.1
+description: IBM Db2 Warehouse 11.5.2.0
 images:
   - image: db2u
   - image: db2u.auxiliary.auth
+  - image: db2u.db2client.workload
   - image: db2u.instdb
   - image: db2u.tools
   - image: etcd
   - image: unified-console
+  - image: unified-console-influxdb
+  - image: unified-console-utils-api
+  - image: unified-console-zdtproxy
