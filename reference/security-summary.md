@@ -33,6 +33,7 @@ the chart's documentation for instructions.
 | ibm-cloud-appmgmt-prod | ibm-privileged-psp |
 | ibm-cloud-cost-asset-mgmt-prod | ibm-anyuid-psp |
 | ibm-cloud-mgmt-platform-prod | ibm-anyuid-psp |
+| ibm-cpq-prod | ibm-anyuid-psp |
 | ibm-csi-nfs | ibm-privileged-psp |
 | ibm-datapower-dev | ibm-anyuid-psp |
 | ibm-datapower-nonprod | ibm-anyuid-psp |
