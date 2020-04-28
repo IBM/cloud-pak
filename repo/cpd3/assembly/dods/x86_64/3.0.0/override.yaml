@@ -1,0 +1,10 @@
+# Override for the installation and upgrade
+# It mainly replicates WSL assembly overwrite.yaml, as if we install WSL through DODS dependency, 
+# WSL assembly overwrite.yaml is not taken into account
+# The override also sets the architecture in global.architecture, so that our deployments pick the right 
+# images.
+global:
+  ibmProduct: zen
+  replicaCount: 1
+  ha: false
+  architecture: amd64

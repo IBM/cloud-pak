@@ -1,0 +1,30 @@
+# This file is in fileserver
+type: module
+# The module can be either "template" or "helm-chart"
+category: helm-chart
+name: ibm-wsl-environments-prod # The name here just for information purpose, not for "product" reference, it should rely on file name
+description: "Module for environments-ui and environments-api"
+# Registry information, this will map to a name in the server-info.yaml
+registry-reference: base-registry
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct - consult with the install team to make sure this is implemented
+installOverride: install-override.yaml
+upgradeOverride: install-override.yaml
+helmUpgradeForce: true
+# Provide a list of the image tag here
+# If the image tag found in the helm chart but not in the list, cpd will fail
+images:
+  - name: environments
+    tag: 3.0.81-x86_64
+  - name: environments-init-job
+    tag: 3.0.81-x86_64-1185
+chart: ibm-wsl-environments-prod-3.0.81.tgz
+# For download to verify the chart file is correct, optional
+md5: 6dce40fa4bda5fa81af4a348c5b56b0b
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: ibm-environments-prod
+scale:
+- small.yaml
+- medium.yaml

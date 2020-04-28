@@ -1,0 +1,34 @@
+type: assembly
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+name: IBM Watson OpenScale
+# Version is mandatory
+version: 3.0.0
+# Descriptioin is optional
+description: "An open and scalable platform for machine learning"
+# architecture is optional
+# if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
+# sub product have to be homogerious architucture
+architecture: x86_64
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct
+#overrideValues:
+#  install: installOverride.yaml
+#  upgrade: upgrade-override.yaml
+# Optional vpc and memory, we check what it specified, and it ignore the value in sub-assembly
+# The future will scan the helm chart and sum up the requirements
+# The permission required to check this info may need cluster-admin, so may NOT applicable
+# bricks is mandatory, it could contains another "product"
+# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
+# although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
+# We will have linter to check to make sure the rules
+#
+# Version is hardcoded for now, we will address the version compatiblities after Oct GA
+bricks:
+  - name: lite
+    version: 3.0.0
+    type: assembly
+  - name: aiopenscale
+    version: 3.0.0
+    type: module

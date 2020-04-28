@@ -1,0 +1,49 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    kubernetes.io/description: 'This security context is used for pods that run kakfa.  It provides the ability to run as a specified user as well as chmod/chown files on the persistent volume.'
+  name: fci-kafka
+allowHostDirVolumePlugin: false
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegedContainer: false
+allowPrivilegeEscalation: true
+allowedCapabilities:
+- FOWNER
+- CHOWN
+allowedFlexVolumes: null
+allowedUnsafeSysctls: null
+defaultAddCapabilities: []
+defaultAllowPrivilegeEscalation: true
+forbiddenSysctls:
+  - "*"
+fsGroup:
+  type: RunAsAny
+readOnlyRootFilesystem: false
+requiredDropCapabilities: []
+runAsUser:
+  type: RunAsAny
+seccompProfiles:
+- docker/default
+# This can be customized for seLinuxOptions specific to your host machine
+seLinuxContext:
+  type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
+supplementalGroups:
+  type: RunAsAny
+# This can be customized to host specifics
+volumes:
+- configMap
+- downwardAPI
+- emptyDir
+- persistentVolumeClaim
+- projected
+- secret
+priority: 0

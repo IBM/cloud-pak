@@ -1,0 +1,5 @@
+patch deployment bigsql-ibm-bigsql-dev-ldap  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "ldap","image": "{{ .DockerRegistryPrefix }}/db2u.auxiliary.auth:11.5.2.0-625-x86_64"}]}}}}'
+patch deployment bigsql-ibm-bigsql-dev-metastore-db  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "metastore-db","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-6_0_1_0:1856"}]}}}}'
+patch deployment bigsql-ibm-bigsql-dev-engine --patch '{"spec": {"template": {"spec": {"initContainers": [{"name": "bigsql-volume-init","image": "{{ .DockerRegistryPrefix }}/bigsql-init-volume-6_0_1_0:1856"}],"containers": [{"name": "bigsql-engine","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-6_0_1_0:1856"}]}}}}'
+scale statefulset worker --replicas 1
+patch statefulset worker --patch '{"spec": {"template": {"spec": {"initContainers": [{"name": "bigsql-volume-init","image": "{{ .DockerRegistryPrefix }}/bigsql-init-volume-6_0_1_0:1856"}],"containers": [{"name": "bigsql-worker","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-6_0_1_0:1856"}]}}}}'

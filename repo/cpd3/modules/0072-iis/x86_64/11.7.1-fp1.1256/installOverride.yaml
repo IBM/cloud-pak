@@ -1,0 +1,48 @@
+shared-services:
+  serviceAccountName: ""
+  cassandra:
+    runAsUser: ""
+    fsGroup: ""
+  kafka:
+    runAsUser: ""
+    fsGroup: ""
+  zookeeper:
+    runAsUser: ""
+    fsGroup: ""
+    
+serviceAccountName: ""
+
+release:
+  image:
+    iis:
+      compute:
+        runAsUser: "10032"
+        fsGroup: ""
+        serviceAccountName: wkc-iis-sa
+      engine:
+        runAsUser: "10032"
+        fsGroup: ""
+        serviceAccountName: wkc-iis-sa
+      services:
+        runAsUser: "10032"
+        fsGroup: ""
+        supplementalGroups: "1000321000"
+        serviceAccountName: wkc-iis-sa
+      xmetarepo:
+        runAsUser: "1000"
+        fsGroup: ""
+        container:
+          runAsUser: ""
+          fsGroup: ""
+    wkcugconfig:
+      runAsUser: ""
+      fsGroup: ""
+    Solr:
+      runAsUser: ""
+      fsGroup: ""
+      
+xmetarepo:
+  serviceAccountName: wdp-db2-sa
+
+secretGeneration:
+  serviceAccountName: cpd-editor-sa

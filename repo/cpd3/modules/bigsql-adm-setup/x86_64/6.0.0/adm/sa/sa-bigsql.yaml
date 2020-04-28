@@ -1,0 +1,11 @@
+
+# The ServiceAccount for the IBM Db2 Big SQL Add-On
+# https://docs.openshift.com/container-platform/3.11/rest_api/api/v1.ServiceAccount.html
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app: db2-bigsql
+  name: bigsql
+

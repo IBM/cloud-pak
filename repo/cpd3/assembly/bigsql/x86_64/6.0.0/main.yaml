@@ -1,0 +1,33 @@
+type: assembly
+lifeCycle: live
+
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM Db2 Big SQL addon
+
+# Version is mandatory
+version: 6.0.0
+
+# Description is optional
+description: IBM Db2 Big SQL addon assembly
+
+architecture: x86_64
+
+# Do NOT use for now - Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct - consult with the install team to make sure this is implemented
+#overrideValues:
+#  install: install-override.yaml
+#  upgrade: upgrade-override.yaml
+
+bricks:
+  - name: lite
+    version: 3.0.0
+    type: assembly
+  - name: bigsql-adm-setup
+    version: 6.0.0
+    type: module
+  - name: bigsql
+    version: 6.0.0
+    type: module

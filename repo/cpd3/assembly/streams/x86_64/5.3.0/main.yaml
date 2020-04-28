@@ -1,0 +1,30 @@
+# begin_generated_IBM_copyright_prolog                             
+#                                                                  
+# This is an automatically generated copyright prolog.             
+# After initializing,  DO NOT MODIFY OR MOVE                       
+# **************************************************************** 
+# Licensed Materials - Property of IBM                             
+# 5724-Y95                                                         
+# (C) Copyright IBM Corp.  2019, 2020    All Rights Reserved.      
+# US Government Users Restricted Rights - Use, duplication or      
+# disclosure restricted by GSA ADP Schedule Contract with          
+# IBM Corp.                                                        
+#                                                                  
+# end_generated_IBM_copyright_prolog                               
+type: assembly
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM Streams addon
+# Description is optional
+description: IBM Streams addon assembly
+architecture: x86_64
+bricks:
+  - name: lite
+    version: 3.0.0
+    type: assembly
+  - name: streams
+    version: 5.3.0
+    type: module
+    

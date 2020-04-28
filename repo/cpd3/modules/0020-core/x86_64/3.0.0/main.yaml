@@ -1,0 +1,27 @@
+type: module
+name: core module
+registry-reference: base-registry
+images:
+  - name: zen-admin 
+    tag: v3.0.0.0-x86_64-247
+  - name: zen-content 
+    tag: v3.0.0.0-x86_64-247
+  - name: zen-core 
+    tag: v3.0.0.0-x86_64-247
+  - name: zen-core-api 
+    tag: v3.0.0.0-x86_64-247
+  - name: icpd-requisite 
+    tag: v3.0.0.0-x86_64-247
+  - name: zen-watchdog 
+    tag: v3.0.0.0-x86_64-247
+  - name: zen-data-sorcerer 
+    tag: v3.0.0.0-x86_64-247
+  - name: zen-audit
+    tag: v3.0.0.0-x86_64-247
+chart: 0020-zen-base-3.0.0.tgz
+#md5: 
+timeout: 20
+releaseName: 0020-core
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
