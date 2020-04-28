@@ -1,0 +1,26 @@
+# type is mandatory here
+type: module
+
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: IBM Db2 Big SQL admin setup module
+
+# The description is optional
+description: The module to set up Big SQL 
+
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/sa/sa-bigsql.yaml
+- adm/sa/sa-bigsql-ldap.yaml
+- adm/scc/scc-bigsql.yaml
+- adm/scc/scc-bigsql-ldap.yaml
+
+# Optional, only when you have scc defined
+add-scc-to-user:
+- scc: bigsql
+  sa: bigsql
+- scc: bigsql-ldap
+  sa: bigsql-ldap

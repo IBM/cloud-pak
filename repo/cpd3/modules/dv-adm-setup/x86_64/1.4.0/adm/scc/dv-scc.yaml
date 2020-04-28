@@ -1,0 +1,33 @@
+kind: SecurityContextConstraints
+apiVersion: security.openshift.io/v1
+metadata:
+  name: dv-scc
+  annotations:
+    kubernetes.io/description: SCC for DV Addon
+allowHostDirVolumePlugin: false
+allowHostIPC: true
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegeEscalation: true
+allowPrivilegedContainer: false
+allowedCapabilities:
+  - IPC_OWNER
+fsGroup:
+  type: RunAsAny
+priority: 1
+runAsUser:
+  type: MustRunAsRange
+  uidRangeMax: 1000361000
+  uidRangeMin: 1000320900
+seLinuxContext:
+  type: MustRunAs
+supplementalGroups:
+  type: RunAsAny
+volumes:
+  - configMap
+  - downwardAPI
+  - emptyDir
+  - persistentVolumeClaim
+  - projected
+  - secret

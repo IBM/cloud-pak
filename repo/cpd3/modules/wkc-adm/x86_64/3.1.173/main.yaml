@@ -1,0 +1,17 @@
+type: module
+category: adm-setup
+name: WKC special SCC and service account
+description: WKC admin module
+helmUpgradeForce: true
+files:
+- rhos/scc/wkc-privileged-scc.yaml
+- rhos/sa/wdp-db2-sa.yaml
+- rhos/scc/wkc-iis-scc.yaml
+- rhos/sa/wkc-iis-sa.yaml
+- rhos/roles/wkc-iis-role.yaml
+- rhos/rb/wkc-iis-rb.yaml
+add-scc-to-user:
+- scc: wkc-privileged-scc
+  sa: wdp-db2-sa
+- scc: wkc-iis-scc
+  sa: wkc-iis-sa

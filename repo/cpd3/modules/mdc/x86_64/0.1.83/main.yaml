@@ -1,0 +1,31 @@
+type: module
+category: helm-chart
+name: mdc
+version: 0.1.83
+description: This is the mdc module
+registry-reference: base-registry
+images:
+  - name: mdc-addon-install
+    tag: 0.1.83
+  - name: mdc-spark-driver
+    tag: 0.1.141
+  - name: mdc-couchdb3
+    tag: 0.1.11
+  - name: mdc-core
+    tag: 0.1.432
+  - name: mdc-aspera-server
+    tag: 0.1.432
+  - name: mdc-elasticsearch
+    tag: 0.1.8
+  - name: mdc-cassandra
+    tag: 0.1.9
+chart: ibm-mdc-addon-prod-0.1.83.tgz
+
+timeout: 60
+releaseName: mdc
+scale:
+  - large.yaml
+  - medium.yaml
+  - small.yaml
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
