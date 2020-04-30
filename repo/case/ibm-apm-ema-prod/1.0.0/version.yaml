@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: "1.0"
+  catalogs:
+    rhocp: {}
+    watson: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Equipment Maintenance Assistant
+  displayDescription: IBM Maximo Equipment Maintenance Assistant
+  displayName: IBM Maximo Equipment Maintenance Assistant
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ema.svg?sanitize=true
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEma:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: LICENSE-ema
+        name: licenseEma
+      ref: LICENSE-ema
+  name: ibm-apm-ema-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2020-04-30T11:48:53.70057182+0000
+digest: sha256:db3cf26c03b3596dc4df4f247c69d24aa874c157373f8dbe7467658a15012b8e
