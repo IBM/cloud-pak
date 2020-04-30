@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 1.2.0
+  catalogs:
+    cloudpak: {}
+    runtime: {}
+    tools: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: Accelerate innovation with a next-generation hybrid multicloud platform.
+  displayDescription: ""
+  displayName: Cloud Pak for Multicloud Management
+  icons:
+  - mediaType: image/svg
+    url: https://globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/icp4multicloud-management.svg
+  licenses:
+    cp4m:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Multicloud Management License Agreement
+        displayName: Cloud Pak for Multicloud Management License Agreement
+      ref: IISEE-LICENSE-en
+  name: ibm-cp-management
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.1.5
+  webPage: https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.2.0/mcm/getting_started/introduction.html
+created: 2020-03-25T05:39:30.12928284-0700
+digest: sha256:5658762896caf1f5a9c60a6c6db6eeae660be1eb80f859fae42560f1ad6f0c87
