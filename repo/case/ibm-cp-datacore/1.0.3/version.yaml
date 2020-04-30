@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 2.5.0.0
+  catalogs:
+    ai: {}
+    cloudpak: {}
+  classifications:
+    commercial: {}
+  description: Cloud Pak for Data System is an all-in-one cloud-native Data and AI
+    platform in a box, providing a preconfigured, governed, and secure environment
+    to collect, organize and analyze data.
+  displayDescription: ""
+  displayName: IBM Cloud Pak for Data
+  icons:
+  - mediaType: image/svg
+    url: https://cache.globalcatalog.cloud.ibm.com/api/v1/6c42b79a-7867-43f7-9cfd-2395f69bd147-global/artifacts/cache/3a3395e2fdc0ab4f542f54029c51f5e6-public/icon.svg
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4data:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License
+        displayName: Cloud Pak for Data License
+      ref: license-en
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?la_formnum=&li_formnum=L-DNAA-BFX675
+  name: ibm-cp-datacore
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.3
+  webPage: https://docs-icpdata.mybluemix.net/home
+created: 2020-03-25T05:39:30.12928284-0700
+digest: sha256:8c185dde4ec40ef29c3e9bbb710a618ee81a0d2afa0cb00d8b7490cf728e07b1

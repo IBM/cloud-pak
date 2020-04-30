@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 1.1.0.1
+  catalogs:
+    cloudpak: {}
+    middleware: {}
+    operators: {}
+    security: {}
+  certifications:
+    ibmccp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Security
+  displayDescription: IBM Cloud Pak for Security
+  displayName: Cloud Pak for Security
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/IBM-Security-icon.png
+  licenses:
+    licenses:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenses
+      ref: LICENSE-en
+  name: ibm-cp-security
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.1
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+  version: 1.0.2
+  webPage: https://www.ibm.com
+created: 2020-03-25T05:39:30.13328284-0700
