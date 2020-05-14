@@ -1,0 +1,76 @@
+apiVersion: v1
+case:
+  appVersion: 11.0.0.8
+  catalogs: null
+  certifications:
+    ibmccscp: {}
+  description: IBM App Connect Designer
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/ot4i/ace-docker/master/app_connect_light_256x256.png
+  licenses:
+    REDIST:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: REDIST
+        name: REDIST
+      ref: REDIST
+    copyright-attributes:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: copyright-attributes
+        name: copyright-attributes
+      ref: copyright-attributes
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: non_ibm_license
+        name: nonIbmLicense
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: notices
+        name: notices
+      ref: notices
+  name: ibm-app-connect-designer-icp4i-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.1
+  supports:
+    architectures:
+      amd64: {}
+    catalogs:
+      ace: {}
+      broker: {}
+      bus: {}
+      iib: {}
+      integration: {}
+      message: {}
+      mqsi: {}
+      websphere: {}
+      wmb: {}
+    classifications:
+      commercial: {}
+      limited: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com
+created: 2020-05-14T22:58:12.86300718+0000
+digest: sha256:0ab3326d201ccb5f6ac4a6d8c0f5fd0a506af9f9049195909764ae2e90d3b8e4
