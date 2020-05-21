@@ -1,5 +1,5 @@
 source: ibm-cp-datacore-bundle/case/ibm-cp-datacore/case.yaml
-description: An all-in-one cloud-native Data and AI platform in a box, providing a preconfigured, governed, and secure environment to collect, organize and analyze data.
+description: "An all-in-one cloud-native Data and AI platform in a box, providing a preconfigured, governed, and secure environment to collect, organize and analyze data."
 images:
   - image: cp/cpd/aios-bias-service
   - image: cp/cpd/aios-bkpi-combined-services
@@ -41,6 +41,7 @@ images:
   - image: cp/cpd/dataconn-engine-spark-cluster
   - image: cp/cpd/db2u
   - image: cp/cpd/db2u.auxiliary.auth
+  - image: cp/cpd/db2u.db2client.workload
   - image: cp/cpd/db2u.instdb
   - image: cp/cpd/db2u.tools
   - image: cp/cpd/dc-main
@@ -238,7 +239,7 @@ images:
   - image: cp/cpd/zen-databases-catalog-postgresql
   - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-meta-couchdb
-  - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-metastore-db
+  - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
   - image: cp/cpd/zookeeper-ubi
