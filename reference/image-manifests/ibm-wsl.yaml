@@ -1,22 +1,53 @@
 source: ibm-wsl-bundle/case/ibm-wsl/case.yaml
-description: A CASE for helm charts related to Watson Studio Local
+description: "A CASE for helm charts related to Watson Studio Local"
 images:
   - image: /asset-files-api
+  - image: asset-files-api
   - image: /cp4d-ws-secrets-job
+  - image: cp4d-ws-secrets-job
   - image: /dap-dashboards-api
+  - image: dap-dashboards-api
   - image: dsx-requisite
   - image: haproxy
   - image: /jobs-api
+  - image: jobs-api
   - image: /jobs-ui
+  - image: jobs-ui
   - image: /job-trigger
+  - image: job-trigger
+  - image: library/dsx-requisite
+  - image: library/haproxy
+  - image: library/model_viewer
+  - image: library/privatecloud-dsx-hi-proxy
+  - image: library/privatecloud-spawner-api-k8s
+  - image: library/privatecloud-utils-api
+  - image: library/shaper-preinstall
+  - image: library/shaper-server
+  - image: library/spark-hb-control-plane
+  - image: library/spark-hb-db-spec
+  - image: library/spark-hb-helm-repo
+  - image: library/spark-hb-jkg
+  - image: library/spark-hb-nginx
+  - image: library/spark-hb-python
+  - image: library/spark-hb-truststore-util
+  - image: library/wdp-dataprep
+  - image: library/wdp-shaper
+  - image: library/wslocal-x86-runtime-rstudio
   - image: model_viewer
   - image: /ngp-projects-api
+  - image: ngp-projects-api
   - image: /portal-common-api
+  - image: portal-common-api
   - image: /portal-dashboards
+  - image: portal-dashboards
   - image: /portal-job-manager
+  - image: portal-job-manager
   - image: /portal-main
+  - image: portal-main
   - image: /portal-ml-dl
+  - image: portal-ml-dl
   - image: /portal-notifications
+  - image: portal-notifications
   - image: privatecloud-dsx-hi-proxy
   - image: privatecloud-spawner-api-k8s
   - image: privatecloud-utils-api
@@ -32,4 +63,5 @@ images:
   - image: wdp-dataprep
   - image: wdp-shaper
   - image: /wml-main
+  - image: wml-main
   - image: wslocal-x86-runtime-rstudio
