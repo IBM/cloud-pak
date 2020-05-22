@@ -1,0 +1,58 @@
+apiVersion: v1
+case:
+  appVersion: 4.2.0.1
+  catalogs:
+    automation: {}
+    ibmCamPak: {}
+    icpclusterresource: {}
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: IBM Cloud Automation Manager
+  displayDescription: IBM Cloud Automation Manager
+  displayName: IBM Cloud Automation Manager
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM-CAMHub-Open/starterlibrary/master/images/IBM_CAM_h.png
+  licenses:
+    licenseLaEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LA-en
+        name: licenseLaEn
+      ref: LICENSE-LA-en
+    licenseLiEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LI-en
+        name: licenseLiEn
+      ref: LICENSE-LI-en
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: nonIbmLicense
+      ref: NON_IBM_LICENSE
+  name: ibm-cam
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp3: {}
+      rhocp4: {}
+  version: 1.1.1
+  webPage: https://www.ibm.com
+created: 2020-05-22T22:11:46.87817093+0000
+digest: sha256:0d93759317f0c4e90cce10b895b506e94e6338c1cecfc757ce077614080b72a2
