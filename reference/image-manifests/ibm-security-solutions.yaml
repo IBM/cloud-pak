@@ -1,12 +1,19 @@
 source: ibm-security-solutions-bundle/case/ibm-security-solutions/case.yaml
 description: "IBM Cloud Pak For Security Shared Platform Services"
 images:
+  - image: cp/cp4s/solutions/arangodb-community
   - image: cp/cp4s/solutions/arangodb-enterprise
   - image: cp/cp4s/solutions/arangodb-exporter
+  - image: cp/cp4s/solutions/cp4s-car-connector-config
+  - image: cp/cp4s/solutions/cp4s-car-frontend-ui
   - image: cp/cp4s/solutions/isc-aitk-orchestrator
   - image: cp/cp4s/solutions/isc-aitk-webui
   - image: cp/cp4s/solutions/isc-authsvc
   - image: cp/cp4s/solutions/isc-car
+  - image: cp/cp4s/solutions/isc-car-connector-atp
+  - image: cp/cp4s/solutions/isc-car-connector-aws
+  - image: cp/cp4s/solutions/isc-car-connector-azure
+  - image: cp/cp4s/solutions/isc-car-connector-tenable
   - image: cp/cp4s/solutions/isc-cases-activemq
   - image: cp/cp4s/solutions/isc-cases-activemq-logging-sidecar
   - image: cp/cp4s/solutions/isc-cases-application
@@ -22,6 +29,7 @@ images:
   - image: cp/cp4s/solutions/isc-cases/isc-cases-scripting
   - image: cp/cp4s/solutions/isc-cases-logging-sidecar
   - image: cp/cp4s/solutions/isc-cases-operator
+  - image: cp/cp4s/solutions/isc-cases-resutil
   - image: cp/cp4s/solutions/isc-cases-scripting
   - image: cp/cp4s/solutions/isc-common-auth
   - image: cp/cp4s/solutions/isc-common-configstore
@@ -35,7 +43,9 @@ images:
   - image: cp/cp4s/solutions/isc-common-xfeplus-threat-intelligence-app
   - image: cp/cp4s/solutions/isc-common-xfeplus-xfe-proxy
   - image: cp/cp4s/solutions/isc-csaadapter
+  - image: cp/cp4s/solutions/isc-de-feature-analysis
   - image: cp/cp4s/solutions/isc-entitlements
+  - image: cp/cp4s/solutions/isc-entitlements-operator
   - image: cp/cp4s/solutions/isc-init
   - image: cp/cp4s/solutions/isc-investigate-backend
   - image: cp/cp4s/solutions/isc-investigate-webui
@@ -47,5 +57,6 @@ images:
   - image: cp/cp4s/solutions/isc-tis-rfi
   - image: cp/cp4s/solutions/isc-tis-score-controller
   - image: cp/cp4s/solutions/isc-tis-user-registration
+  - image: cp/cp4s/solutions/isc-uds2file
   - image: cp/cp4s/solutions/isc-uds-deploy
   - image: cp/cp4s/solutions/pulse-dashboard
