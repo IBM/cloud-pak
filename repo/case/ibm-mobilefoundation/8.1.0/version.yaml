@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: 8.1.0
+  catalogs:
+    container: {}
+    network: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    limited: {}
+    opensource: {}
+  description: Deploys Mobile Foundation components.
+  displayDescription: IBM Mobile Foundation Product is available for the customers
+    to install on IBM Cloud
+  displayName: IBM Mobile Foundation
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: https://mobilefirstplatform.ibmcloud.com/assets/foundation.svg
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Mobile Foundation V8 license
+        displayName: IBM Mobile Foundation V8 license
+      ref: license
+  name: ibm-mobilefoundation
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 8.1.0
+  webPage: https://www.ibm.com
+created: 2020-06-11T16:46:43.31891036+0000
+digest: sha256:0bf350293b3e6806225d568738d37daa3475b3d7d6c6e0e34a4ed3437b0f96d8
