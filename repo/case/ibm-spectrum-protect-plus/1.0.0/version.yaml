@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 10.1.6
+  catalogs:
+    operations: {}
+    rhocp: {}
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Spectrum Protect Plus Kubernetes Backup Support
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: https://www.ibm.com/cloud-computing/scalable-icon.svg
+  licenses:
+    licenses:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenses
+      ref: LICENSE-en
+    linonibm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: non_ibm_license
+        name: linonibm
+      ref: non_ibm_license
+  name: ibm-spectrum-protect-plus
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2020-06-12T20:59:42.42923134+0000
+digest: sha256:d7c833d196dee1a10b0f242fa38c50fb96e2c861ea0551289198306c6b322897
