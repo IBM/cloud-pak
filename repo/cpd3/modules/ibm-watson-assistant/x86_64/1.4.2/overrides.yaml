@@ -1,0 +1,8 @@
+
+global:
+  # On uninstall do not preserve the datastores
+  keep: false
+
+  image:
+    # global.image.pullSecret - Name of the (manually created) imagePullSecret used to pull docker images.
+    pullSecret: "docker-pull-{{ .Release.Namespace }}-cp-icr-io-wa-registry-registry"

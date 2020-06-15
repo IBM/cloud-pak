@@ -1,0 +1,10 @@
+commands:
+- scale --replicas=1 deployment dods-ibm-dods-prod-dd-scenario-api
+- set resources deployment dods-ibm-dods-prod-dd-scenario-api --requests=cpu=0,memory=0 --limits=cpu=0,memory=0
+- set resources deployment dods-ibm-dods-prod-dd-scenario-api --requests=cpu=200m,memory=512Mi --limits=cpu=500m,memory=512Mi
+- scale --replicas=1 deployment dods-ibm-dods-prod-dd-scenario-ui
+- set resources deployment dods-ibm-dods-prod-dd-scenario-ui --requests=cpu=0,memory=0 --limits=cpu=0,memory=0
+- set resources deployment dods-ibm-dods-prod-dd-scenario-ui --requests=cpu=200m,memory=512Mi --limits=cpu=200m,memory=512Mi
+- scale --replicas=1 deployment dods-ibm-dods-prod-dd-cognitive
+- set resources deployment dods-ibm-dods-prod-dd-cognitive --requests=cpu=0,memory=0 --limits=cpu=0,memory=0
+- set resources deployment dods-ibm-dods-prod-dd-cognitive --requests=cpu=200m,memory=512Mi --limits=cpu=500m,memory=1024Mi

@@ -1,0 +1,214 @@
+- name: lite
+  version: 3.0.1
+- name: common-core-services
+  version: 3.0.1
+- name: wkc-adm
+  version: 3.2.15
+- name: 0071-wkc-prereqs
+  version: 3.2.15
+  images:
+  - name: wdp-db2
+    version: 11.5.0.0c
+  - name: wkc-init-container
+    version: 1.0.85
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.85
+- name: 0075-wkc-lite
+  version: 3.2.28
+  images:
+  - name: dataconn-engine-opdiscovery
+    version: 2.0.43
+    gitLog: https://github.ibm.com/dataconnect/wdp-opdiscovery/commits/2.0.43
+  - name: dataconn-engine-service
+    version: 4.0.65
+    gitLog: https://github.ibm.com/dataconnect/dataconn-engine/commits/4.0.65
+  - name: dataconn-engine-spark-cluster
+    version: 4.0.65
+    gitLog: https://github.ibm.com/dataconnect/dataconn-engine/commits/4.0.65
+  - name: wdp-activities
+    version: 2.0.26
+    gitLog: https://github.ibm.com/dataconnect/wdp-activities/commits/2.0.26
+  - name: wkc-gov-ui
+    version: 3.1.435
+    gitLog: https://github.ibm.com/wdp-gov/wkc-gov-ui/commits/3.1.435
+  - name: wkc-glossary-service
+    version: 3.2.6
+    gitLog: https://github.ibm.com/wdp-gov/glossary-service/commits/3.2.6
+  - name: wdp-search
+    version: 1.0.430
+  - name: wdp-profiling
+    version: 3.1.713
+    gitLog: https://github.ibm.com/dataconnect/wdp-profiling/commits/3.1.713
+  - name: wdp-profiling-messaging
+    version: 3.0.247
+  - name: wdp-profiling-ui
+    version: 3.0.353
+  - name: wkc-init-container
+    version: 1.0.85
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.85
+  - name: wkc-workflow-service
+    version: 3.1.92
+  - name: metadata-discovery
+    version: 1.0.902
+    gitLog: https://github.ibm.com/wdp-gov/discovery/commits/1.0.902
+  - name: wdp-policy-service
+    version: 3.1.152
+    gitLog: https://github.ibm.com/dataconnect/wdp-policy-service/commits/3.1.152
+  - name: wdp-lineage
+    version: 3.2.4
+    gitLog: https://github.ibm.com/wdp-gov/wdp-lineage/commits/3.2.4
+- name: 0072-iis
+  version: 11.7.1-fp1.1310
+  gitLog: https://github.ibm.com/InformationServer/ugi-helm/tree/484a7fda144ade76a9e0d0b3734823f2b517e7e6
+  images:
+  - name: cassandra-x86_64
+    version: 3.11.3_b677_84c7349b7011
+  - name: is-services-image
+    version: b1277-CP4D-3_0_1-b365
+  - name: is-en-compute-image
+    version: b1277-CP4D-3_0_1-b365
+  - name: is-db2xmeta-image
+    version: b1277-CP4D-3_0_1-b365
+  - name: is-engine-image
+    version: b1277-CP4D-3_0_1-b365
+  - name: kafka-x86_64
+    version: 2.11-2.1.1_b677_84c7349b7011
+  - name: solr-x86_64
+    version: 8.4.1_b677_84c7349b7011
+  - name: wkc-init-container
+    version: 1.0.85
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.85
+  - name: wkc-ugconfig
+    version: 3.0.54
+  - name: zookeeper-x86_64
+    version: 3.4.12_b677_84c7349b7011
+- name: 0073-ug
+  version: 11.7.1-fp1.2180
+  gitLog: https://github.ibm.com/InformationServer/ugi-helm/tree/eacdbe3d5f4f813a757eb56746858acb41e8c542
+  images:
+  - name: audit-trail-service
+    version: b268_c5dba83bf8fb
+  - name: finley
+    version: finley_637ef6b
+  - name: gov-admin-ui
+    version: b1224_43fc05a36b42
+    gitLog: https://github.ibm.com/InformationServer/gov-admin-ui/commits/43fc05a36b42
+  - name: gov-app-config-service
+    version: b431_53bc01b17209
+    gitLog: https://github.ibm.com/InformationServer/gov-app-config-service/commits/53bc01b17209
+  - name: gov-catalog-search-index
+    version: b236_fbebf18c62d4
+  - name: gov-catalog-search-service
+    version: b952_ee1da8b028a6
+    gitLog: https://github.ibm.com/InformationServer/gov-catalog-search-service/commits/ee1da8b028a6
+  - name: gov-enterprise-search-ui
+    version: b1169_8c1270fbaaf2
+    gitLog: https://github.ibm.com/InformationServer/gov-enterprise-search-ui/commits/8c1270fbaaf2
+  - name: gov-insights-service
+    version: b782_c3f7a0943d49
+    gitLog: https://github.ibm.com/InformationServer/gov-insights-service/commits/c3f7a0943d49
+  - name: gov-quality-ui
+    version: b7056_2f6e748fcb5f
+    gitLog: https://github.ibm.com/InformationServer/gov-quality-ui/commits/2f6e748fcb5f
+  - name: gov-ui-commons
+    version: b326_660e8afb8e52
+    gitLog: https://github.ibm.com/InformationServer/gov-ui-commons/commits/660e8afb8e52
+  - name: gov-user-prefs-service
+    version: b299_c0b3323a20de
+    gitLog: https://github.ibm.com/InformationServer/gov-user-prefs-service/commits/c0b3323a20de
+  - name: gremlin-console-x86_64
+    version: 0.4.1_b677_84c7349b7011
+  - name: ia-analysis
+    version: b1109_2b006522b0b0
+    gitLog: https://github.ibm.com/InformationServer/IALightweight/commits/2b006522b0b0
+  - name: igc-ui-react
+    version: b7956_b91f097a13aa
+    gitLog: https://github.ibm.com/InformationServer/igc-ui-react/commits/b91f097a13aa
+  - name: kafka-x86_64
+    version: 2.11-2.1.1_b677_84c7349b7011
+  - name: odf-fast-analyzer-kube
+    version: b58_025558332886
+    gitLog: https://github.ibm.com/InformationServer/odf-fastanalyzer/commits/025558332886
+  - name: omag
+    version: b1728_e95292f58836
+    gitLog: https://github.ibm.com/InformationServer/omrs-igc/commits/e95292f58836
+  - name: shop4info-rest
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: shop4info-scheduler
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: shop4info-type-registry-service
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: shop4info-event-consumer
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: shop4info-schema-init
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: shop4info-mappers-service
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: shop4info-mappers-wkc
+    version: b51_ef57962d4be0
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/ef57962d4be0
+  - name: wkc-init-container
+    version: 1.0.85
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.85
+- name: amg
+  version: 3.2.3
+  images:
+  - name: metadata-api-server-x86_64
+    version: 1.1.121
+  - name: metadata-engine-x86_64
+    version: 1.1.6542
+  - name: wkc-init-container
+    version: 1.0.85
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.85
+- name: knol
+  version: 3.2.269
+  images:
+  - name: knol
+    version: 3.2.269
+- iis_content:
+  - ASBPacks - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - CEF - b5011_928ec779f727 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - CMS - 11.7.1.1-20200324 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - ConnectivitySparkWrapper - 11.7.1.1-20200227.095329-2 - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - Connectors - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - DB2 - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DFD - dev_b05121808_5e1e031-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local/
+  - DQEC - 11.7.1.1_d1abaa89a39f - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - DSCompinst - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - DSEngine - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - DSPlugins - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - DSWLM - 11.7.vnext-20200526 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - DataStage - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - EPMC - dev_b3_20190424-0520 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - FastTrack - 11.7.1.1-20200324 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - IA - b3273_632d95ef14be - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IADBCONFIG - 11.7.1-nootka-cpd301-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - IAOps - b429_b2db3e0ca19e1a61f6187959e6ab31e033a08171 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IGC - dev_b672_de6bdc635e8e - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IGD - b15_9676e6b34198 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IMAM - 11.7.1.1-20200525 - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - ISALite - iis_11.7.1.1_D6_0d535d3387b3 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local/
+  - ISF - iis_11.7.1.1_18_ebf940f9c68661c2c95c81cc4fc04a15a227bddc-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - ISF-SDK - iis_11.7.1.1_1_7319b2c7adab6a61571398c7936b196af8eb0d1a-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - ISModels - 11.7.1.1-20200414 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases
+  - ISTools - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots
+  - JVM - dev_9-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - LWAS - dev_9-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - PXComponents - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - PXEngine - 11.7.vnext-20200512 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - PatchBuilder - 11.7.0.0-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - QualityStage - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - ThirdParty - dev_34_7319b2c7adab6a61571398c7936b196af8eb0d1a-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - UGDeploy - 1171FP1-20200505.034624-46 - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - Utils - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - WAS - dev_12-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - WISD - iis-11711_B3_912ddbb5eb73 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local/
+  - XMLPACK - 11.7.1.1-20200219.083409-2 - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - XMeta - 11.7.1.1-20200324 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - atlas-core - 11.7.1.1-20200421 - http://iis-repo.svl.ibm.com:8080/archiva/repository/releases/
+  - iig-kg-provider - b331_358f5a31d765 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local/

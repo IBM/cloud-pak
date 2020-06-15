@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: watson-aiops-strimzi-role
+rules:
+- apiGroups:
+  - ""
+  - kafka.strimzi.io
+  resources:
+  - kafkatopics
+  - kafkausers
+  - kafkas
+  verbs:
+  - apply
+  - create
+  - get
+  - delete
+  - watch
+  - update
+  - edit
+  - exec
+  - list
+  - patch
+  - deletecollection

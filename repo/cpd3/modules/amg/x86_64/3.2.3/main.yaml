@@ -1,0 +1,14 @@
+type: module
+category: helm-chart
+name: amg
+description: Automated Metadata Generation module for Watson Knowledge Catalog
+registry-reference: base-registry
+images:
+- name: metadata-api-server-x86_64
+  tag: 1.1.121
+- name: metadata-engine-x86_64
+  tag: 1.1.6542
+- name: wkc-init-container
+  tag: 1.0.85
+chart: ibm-metadata-api-3.2.3.tgz
+releaseName: amg

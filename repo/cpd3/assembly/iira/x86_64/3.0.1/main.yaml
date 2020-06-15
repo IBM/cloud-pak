@@ -1,0 +1,28 @@
+type: assembly
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM IIRA addon
+# Version is mandatory
+version: 3.0.1
+# Description is optional
+description: IBM IIRA addon assembly
+architecture: x86_64
+# Do NOT use for now - Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct - consult with the install team to make sure this is implemented
+#overrideValues:
+#  install: install-override.yaml
+#  upgrade: upgrade-override.yaml
+installOverride: override.yaml
+upgradeOverride: override.yaml
+bricks:
+  - name: lite
+    version: 3.0.1
+    type: assembly
+  - name: wkc
+    version: 3.2.72 
+    type: assembly
+  - name: iira
+    version: 3.0.1
+    type: module

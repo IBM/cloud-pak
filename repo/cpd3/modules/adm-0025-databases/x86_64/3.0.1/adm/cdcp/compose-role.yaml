@@ -1,0 +1,75 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: compose
+rules:
+- apiGroups:
+  - policy
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
+- apiGroups:
+  - ""
+  resources:
+  - endpoints
+  - pods
+  verbs:
+  - get
+- apiGroups:
+  - apps
+  resources:
+  - statefulsets
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - patch
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - create
+  - get
+  - update
+- apiGroups:
+  - crd.compose.com
+  - dev.crd.compose.com
+  resources:
+  - recipes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - crd.compose.com
+  - dev.crd.compose.com
+  resources:
+  - buckets
+  verbs:
+  - patch
+- apiGroups:
+  - crd.compose.com
+  - dev.crd.compose.com
+  resources:
+  - backups
+  verbs:
+  - delete
+  - list
+  - patch
+- apiGroups:
+  - crd.compose.com
+  - dev.crd.compose.com
+  resources:
+  - formations
+  verbs:
+  - get

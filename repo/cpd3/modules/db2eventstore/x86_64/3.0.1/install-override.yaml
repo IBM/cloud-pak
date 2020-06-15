@@ -1,0 +1,26 @@
+# this file gets filled up at build time.
+dbType: "db2eventstore"
+arch: "amd64"
+image:
+  tag: cpd-3.0.1-es-v2.0.0.5-44
+global:
+  dbType: "db2eventstore"
+  arch: "amd64"
+  image:
+    tag: cpd-3.0.1-es-v2.0.0.5-44
+  docker_registry_prefix: #docker_registry_prefix#
+  use_external_prefix: true
+  persistence:
+    enabled: true
+    useDynamicProvisioning: true
+  ibmProduct: zen
+  databases: true
+  viewer:
+    sa: cpd-viewer-sa
+  editor:
+    sa: cpd-editor-sa
+zenProxy:
+  serviceType: ClusterIP
+namespace: #namespace#
+nginxRepo:
+  resolver: "kubernetes.default"

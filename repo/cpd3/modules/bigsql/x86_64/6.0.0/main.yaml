@@ -6,17 +6,15 @@ description: IBM Db2 Big SQL
 registry-reference: base-registry
 images:
 - name: bigsql-engine-6_0_1_0
-  tag: 1856
+  tag: 1935
 - name: bigsql-init-volume-6_0_1_0
-  tag: 1856
+  tag: 1935
 - name: db2u.auxiliary.auth
-  tag: 11.5.2.0-625-x86_64
-- name: opencontent-common-utils
-  tag: 1.1.4
+  tag: 11.5.3.0-902-x86_64
 scale:
 - small.yaml
 - medium.yaml
 chart: ibm-bigsql-dev-1.0.0.tgz
-md5: 7d333d3774f297ad2d41a43b24e404e2
+md5: 370b07cb577d7121b7a0c7cdc2cb2c35
 timeout: 60
 releaseName: bigsql
