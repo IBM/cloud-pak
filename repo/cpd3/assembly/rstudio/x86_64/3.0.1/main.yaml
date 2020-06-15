@@ -1,0 +1,19 @@
+type: assembly
+lifeCycle: live
+license: http://icp4d.ibm.com
+name: rstudio
+version: 3.0.1
+description: Watson Studio Local RStudio for Cloud Pak for Data
+architecture: x86_64
+installOverride: override.yaml
+upgradeOverride: override.yaml
+bricks:
+  - name: lite
+    version: 3.0.1
+    type: assembly
+  - name: common-core-services
+    version: 3.0.1
+    type: assembly
+  - name: ibm-ws-rstudio
+    version: 3.0.253
+    type: module

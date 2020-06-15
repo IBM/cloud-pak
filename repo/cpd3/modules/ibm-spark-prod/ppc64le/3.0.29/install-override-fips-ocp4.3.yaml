@@ -1,0 +1,32 @@
+nginxRepo:
+  resolver: "dns-default.openshift-dns"
+global:
+  architecture: ppc64le
+spark:
+  image:
+    tag: "3.0.29-ppc64le"
+    tag23: "2.3.4-v15-ppc64le"
+    tag24: "2.4.4-v15-ppc64le"
+helmRepo:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+dataplaneReg:
+  requests:
+    cpu: 150m
+    memory: 128Mi
+  limits:
+    cpu: 150m
+    memory: 128Mi
+microService:
+  requests:
+    cpu100: "500m"
+    memory128: "512Mi"
+  limits:
+    cpu100: "500m"
+    memory128: "512Mi"
+icp4d:
+  isFipsEnabled: "true"

@@ -1,0 +1,37 @@
+type: module
+category: helm-chart
+name: fccs module
+description: "fccs is the first module to install"
+registry-reference: base-registry
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml
+helmUpgradeForce: true
+chart: ibm-fci-conduct-surveillance-prod-6.5.2.tgz
+md5: 3bfec6bc012733c96299aafe7dd2f1b1
+timeout: 75
+releaseName: fccs
+images:
+  - name: fccs-base-liberty
+    tag: 6.5.2
+  - name: fccs-complaints-liberty
+    tag: 6.5.2
+  - name: fccs-ecomm-liberty
+    tag: 6.5.2
+  - name: fccs-voice-liberty
+    tag: 6.5.2
+  - name: fci-common-scripts
+    tag: 6.5.2
+  - name: fci-hdp-client
+    tag: 6.5.2
+  - name: fci-rms-data-store
+    tag: 6.5.2
+  - name: fci-rms-designstudio
+    tag: 6.5.2
+  - name: sifs-data-store-client
+    tag: 6.5.2
+  - name: sifs-filebeat
+    tag: 6.5.2
+  - name: sifs-logstash
+    tag: 6.5.2
+  - name: sifs-nginx-ssl-proxy
+    tag: 6.5.2

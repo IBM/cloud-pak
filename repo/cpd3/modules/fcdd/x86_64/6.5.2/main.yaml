@@ -1,0 +1,13 @@
+type: module
+category: helm-chart
+name: fcdd module
+description: "fcdd is the first module to install"
+registry-reference: base-registry
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml
+helmUpgradeForce: true
+chart: ibm-fci-entity-research-prod-6.5.2.tgz
+md5: ac3380908860eddea7027453a9128840
+timeout: 75
+releaseName: fcdd
+images:

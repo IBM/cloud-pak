@@ -1,0 +1,63 @@
+type: module
+category: helm-chart
+name: 0073-ug module
+description: this is the 0073-ug module to install
+registry-reference: base-registry
+installOverride: installOverride.yaml
+upgradeOverride: upgradeOverride.yaml
+helmUpgradeForce: false
+images:
+- name: audit-trail-service
+  tag: b268_c5dba83bf8fb
+- name: finley
+  tag: finley_637ef6b
+- name: gov-admin-ui
+  tag: b1224_43fc05a36b42
+- name: gov-app-config-service
+  tag: b431_53bc01b17209
+- name: gov-catalog-search-index
+  tag: b236_fbebf18c62d4
+- name: gov-catalog-search-service
+  tag: b952_ee1da8b028a6
+- name: gov-enterprise-search-ui
+  tag: b1169_8c1270fbaaf2
+- name: gov-insights-service
+  tag: b782_c3f7a0943d49
+- name: gov-quality-ui
+  tag: b7056_2f6e748fcb5f
+- name: gov-ui-commons
+  tag: b326_660e8afb8e52
+- name: gov-user-prefs-service
+  tag: b299_c0b3323a20de
+- name: gremlin-console-x86_64
+  tag: 0.4.1_b677_84c7349b7011
+- name: ia-analysis
+  tag: b1109_2b006522b0b0
+- name: igc-ui-react
+  tag: b7956_b91f097a13aa
+- name: kafka-x86_64
+  tag: 2.11-2.1.1_b677_84c7349b7011
+- name: odf-fast-analyzer-kube
+  tag: b58_025558332886
+- name: omag
+  tag: b1728_e95292f58836
+- name: shop4info-rest
+  tag: b51_ef57962d4be0
+- name: shop4info-scheduler
+  tag: b51_ef57962d4be0
+- name: shop4info-type-registry-service
+  tag: b51_ef57962d4be0
+- name: shop4info-event-consumer
+  tag: b51_ef57962d4be0
+- name: shop4info-schema-init
+  tag: b51_ef57962d4be0
+- name: shop4info-mappers-service
+  tag: b51_ef57962d4be0
+- name: shop4info-mappers-wkc
+  tag: b51_ef57962d4be0
+- name: wkc-init-container
+  tag: 1.0.85
+chart: ug-3.2.2180.tgz
+md5: fd882548829ddf6a5fa664ae047df731
+timeout: 90
+releaseName: 0073-ug
