@@ -4,7 +4,7 @@ global:
   architecture: ppc64le
 spark:
   image:
-    tag: "3.0.29-ppc64le"
+    tag: "3.0.30-ppc64le"
     tag23: "2.3.4-v15-ppc64le"
     tag24: "2.4.4-v15-ppc64le"
 helmRepo:
@@ -28,5 +28,3 @@ microService:
   limits:
     cpu100: "500m"
     memory128: "512Mi"
-icp4d:
-  isFipsEnabled: "true"

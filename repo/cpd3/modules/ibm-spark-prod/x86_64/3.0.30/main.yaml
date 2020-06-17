@@ -18,24 +18,24 @@ upgradeOverride: upgrade-override.yaml
 # So make sure
 images:
   - name: spark-hb-control-plane
-    tag: 3.0.29-ppc64le
+    tag: 3.0.30-x86_64
   - name: spark-hb-helm-repo
-    tag: 3.0.29-ppc64le
+    tag: 3.0.30-x86_64
   - name: spark-hb-db-spec
-    tag: 3.0.29-ppc64le
+    tag: 3.0.30-x86_64
   - name: spark-hb-truststore-util
-    tag: 3.0.29-ppc64le
+    tag: 3.0.30-x86_64
   - name: spark-hb-nginx
-    tag: 3.0.29-ppc64le
+    tag: 3.0.30-x86_64
   - name: spark-hb-python
-    tag: 3.0.29-ppc64le
+    tag: 3.0.30-x86_64
   - name: spark-hb-jkg
-    tag: 2.4.4-v15-ppc64le
+    tag: 2.4.4-v15-x86_64
   - name: spark-hb-jkg
-    tag: 2.3.4-v15-ppc64le
+    tag: 2.3.4-v15-x86_64
 chart: ibm-spark-prod-3.0.1.tgz
 # For download to verify the chart file is correct, optional
-md5: 83bae70cbd36a1a2af9f27ba4693aecb
+md5: ae04444bb8355433c95d0e2740d2ed5a
 # in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
 timeout: 120
 # The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
