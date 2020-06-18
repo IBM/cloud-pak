@@ -1,0 +1,69 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: IBM Watson Discovery -- Internal Externals
+# The description is mandatory
+description: "this is the third module to install"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: watson-discovery-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-values-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: mantle
+# Set to true will trigger the helm upgrade with force option. Optional. Missing means false
+helmUpgradeForce: false
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+# scale:
+# - small.yaml
+chart: ibm-watson-discovery-mantle-prod-1.4.118.tgz
+images:
+# generated during cpd-build
+- name: coordinator
+  tag: rhubi-PR-1358-1
+- name: databroker-s3
+  tag: rhubi-PR-1358-1
+- name: jobmonitor
+  tag: rhubi-PR-1358-1
+- name: lifecycle-manager-service
+  tag: rhubi-PR-1358-1
+- name: model-mesh
+  tag: master-20200601-301
+- name: opencontent-etcd-3
+  tag: 1.1.4
+- name: opencontent-icp-cert-gen-1
+  tag: 1.1.4
+- name: opencontent-postgres-stolon
+  tag: 2.0.1
+- name: pod-coordinator
+  tag: rhubi-PR-1358-1
+- name: ratelimiter
+  tag: rhubi-master-147
+- name: trainer-v2-service
+  tag: rhubi-master-495
+- name: watson-nlp-models
+  tag: 0.1.2-75-c5cfd12
+- name: wd-elastic
+  tag: 12.0.4-1017
+- name: wd-hdp
+  tag: 12.0.4-1019
+- name: rhubi-statsd-exporter
+  tag: 1.5.1
+- name: logging-server
+  tag: 0.0.11
+- name: wd-nginx
+  tag: 12.0.4-1008
+- name: wks-glimpse-ene-builder
+  tag: release-1-0-12-20200522-0127-1
+- name: wks-ene-expand
+  tag: release-1-0-12-20200522-0127-1
