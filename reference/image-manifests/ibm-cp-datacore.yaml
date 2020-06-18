@@ -4,6 +4,7 @@ images:
   - image: cp/cpd/aios-bias-service
   - image: cp/cpd/aios-bkpi-combined-services
   - image: cp/cpd/aios-common-api
+  - image: cp/cpd/aios-common-api-nlp
   - image: cp/cpd/aios-configuration-service
   - image: cp/cpd/aios-dashboard
   - image: cp/cpd/aios-datamart-service-api
@@ -12,6 +13,7 @@ images:
   - image: cp/cpd/aios-feedback-service
   - image: cp/cpd/aios-kafka
   - image: cp/cpd/aios-kubectl
+  - image: cp/cpd/aios-migration-tool
   - image: cp/cpd/aios-ml-gateway-discovery
   - image: cp/cpd/aios-ml-gateway-service
   - image: cp/cpd/aios-nginx-local
@@ -20,25 +22,44 @@ images:
   - image: cp/cpd/aios-payload-logging-service-api
   - image: cp/cpd/aios-redis
   - image: cp/cpd/aios-zoo-keeper
+  - image: cp/cpd/apimgmt
   - image: cp/cpd/asset-files-api
+  - image: cp/cpd/asset-files-api-ppc64le
   - image: cp/cpd/audit-trail-service
+  - image: cp/cpd/bigsql-engine-6_0_1_0
+  - image: cp/cpd/bigsql-init-volume-6_0_1_0
   - image: cp/cpd/cassandra-ubi
+  - image: cp/cpd/cassandra-x86_64
   - image: cp/cpd/catalog_master
   - image: cp/cpd/cdcp-operator
+  - image: cp/cpd/cde-backend-cp4d
   - image: cp/cpd/cde-redis
+  - image: cp/cpd/cde-redis-cp4d
+  - image: cp/cpd/cde-sb-proxy-cp4d
+  - image: cp/cpd/configops
+  - image: cp/cpd/container-stunnel
+  - image: cp/cpd/container-stunnel-init
   - image: cp/cpd/couchdb3
   - image: cp/cpd/cp4d-installer
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-ws-secrets-job
+  - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator-init
   - image: cp/cpd/daas-sb-proxy
   - image: cp/cpd/daas-server
   - image: cp/cpd/dap-dashboards-api
+  - image: cp/cpd/dap-dashboards-api-ppc64le
   - image: cp/cpd/dataconn-engine-opdiscovery
   - image: cp/cpd/dataconn-engine-service
   - image: cp/cpd/dataconn-engine-spark-cluster
+  - image: cp/cpd/datagate-api
+  - image: cp/cpd/datagate-apply
+  - image: cp/cpd/datagate-catalog
+  - image: cp/cpd/datagate-init
+  - image: cp/cpd/datagate-server
+  - image: cp/cpd/datagate-ui
   - image: cp/cpd/db2u
   - image: cp/cpd/db2u.auxiliary.auth
   - image: cp/cpd/db2u.db2client.workload
@@ -46,6 +67,7 @@ images:
   - image: cp/cpd/db2u.tools
   - image: cp/cpd/dc-main
   - image: cp/cpd/drift
+  - image: cp/cpd/ds-ent-entitlement-image
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/dv-addon
   - image: cp/cpd/dv-api
@@ -53,6 +75,7 @@ images:
   - image: cp/cpd/dv-engine
   - image: cp/cpd/dv-init-volume
   - image: cp/cpd/dv-mariadb
+  - image: cp/cpd/dv-metastore
   - image: cp/cpd/dv-service-provider
   - image: cp/cpd/dv-unifiedconsole
   - image: cp/cpd/elasticsearch
@@ -63,8 +86,11 @@ images:
   - image: cp/cpd/etcd-mgmt-3.2.7
   - image: cp/cpd/etcd-portal-3.2.7
   - image: cp/cpd/etcd-portalmgmt-3.2.7
+  - image: cp/cpd/etcd-ppc
   - image: cp/cpd/etcd-telemetry-3.2.7
   - image: cp/cpd/etcd-ubi
+  - image: cp/cpd/event-logger-api
+  - image: cp/cpd/event-logger-api-ppc64le
   - image: cp/cpd/eventstore-ci-backend
   - image: cp/cpd/eventstore-ci-engine
   - image: cp/cpd/eventstore-ci-perf
@@ -104,25 +130,51 @@ images:
   - image: cp/cpd/igc-ui-react
   - image: cp/cpd/influxdb
   - image: cp/cpd/influxdb_alpine
+  - image: cp/cpd/instascan-ap-analysis-service
+  - image: cp/cpd/instascan-api-server
+  - image: cp/cpd/instascan-ap-service
+  - image: cp/cpd/instascan-ap-tika
+  - image: cp/cpd/instascan-doc-preview-service
+  - image: cp/cpd/instascan-ds-manager
+  - image: cp/cpd/instascan-nginx
+  - image: cp/cpd/instascan-openjdk
+  - image: cp/cpd/instascan-postgres
+  - image: cp/cpd/instascan-vault
   - image: cp/cpd/is-db2xmeta-image
   - image: cp/cpd/is-en-compute-image
   - image: cp/cpd/is-engine-image
   - image: cp/cpd/is-services-image
   - image: cp/cpd/jobs-api
+  - image: cp/cpd/jobs-api-ppc64le
   - image: cp/cpd/jobs-ui
+  - image: cp/cpd/jobs-ui-ppc64le
   - image: cp/cpd/job-trigger
+  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jupyter-notebooks-converter
   - image: cp/cpd/kafka-ubi
+  - image: cp/cpd/kafka-x86_64
   - image: cp/cpd/knol
+  - image: cp/cpd/kubectlclient-ppc-ubi
   - image: cp/cpd/kubectlclient-ubi
+  - image: cp/cpd/mdc-addon-install
+  - image: cp/cpd/mdc-aspera-server
+  - image: cp/cpd/mdc-cassandra
+  - image: cp/cpd/mdc-core
+  - image: cp/cpd/mdc-couchdb3
+  - image: cp/cpd/mdc-elasticsearch
+  - image: cp/cpd/mdc-spark-driver
   - image: cp/cpd/metadata-api-server-x86_64
   - image: cp/cpd/metadata-discovery
   - image: cp/cpd/metadata-engine-x86_64
   - image: cp/cpd/mlrepositoryservicehydra
+  - image: cp/cpd/mlrepositoryservicehydra-ppc64le-ubi
   - image: cp/cpd/model-operation-service-scheduling
   - image: cp/cpd/model-risk-management
   - image: cp/cpd/model_viewer
+  - image: cp/cpd/mongodb-enterprise-database
+  - image: cp/cpd/mongodb-enterprise-operator
   - image: cp/cpd/ngp-projects-api
+  - image: cp/cpd/ngp-projects-api-ppc64le
   - image: cp/cpd/nlq-search
   - image: cp/cpd/nlq-search-extractor
   - image: cp/cpd/norootsquash
@@ -130,23 +182,32 @@ images:
   - image: cp/cpd/odf-fast-analyzer-kube
   - image: cp/cpd/omag
   - image: cp/cpd/opencontent-common-utils
+  - image: cp/cpd/opsmanager
   - image: cp/cpd/osg-api
   - image: cp/cpd/osg-db
   - image: cp/cpd/osg-flaskapi
   - image: cp/cpd/osg-ui
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
+  - image: cp/cpd/portal-common-api-ppc64le
   - image: cp/cpd/portal-dashboards
+  - image: cp/cpd/portal-dashboards-ppc64le
   - image: cp/cpd/portal-job-manager
+  - image: cp/cpd/portal-job-manager-ppc64le
   - image: cp/cpd/portal-main
+  - image: cp/cpd/portal-main-ppc64le
   - image: cp/cpd/portal-ml-dl
+  - image: cp/cpd/portal-ml-dl-ppc64le
   - image: cp/cpd/portal-notifications
+  - image: cp/cpd/portal-notifications-ppc64le
   - image: cp/cpd/postgresql-db-10.7
   - image: cp/cpd/postgresql-mgmt-10.7
   - image: cp/cpd/postgresql-portal-10.7
   - image: cp/cpd/postgresql-portalmgmt-10.7
   - image: cp/cpd/postgresql-telemetry-10.7
   - image: cp/cpd/post-install-repo-cams-assettype
+  - image: cp/cpd/post-install-repo-cams-assettype-ppc
+  - image: cp/cpd/pre-upgrade-repo-cams-assets
   - image: cp/cpd/privatecloud-dsx-hi-proxy
   - image: cp/cpd/privatecloud-redis-repo
   - image: cp/cpd/privatecloud-spawner-api-k8s
@@ -158,10 +219,12 @@ images:
   - image: cp/cpd/shaper-server
   - image: cp/cpd/shop4info-event-consumer
   - image: cp/cpd/shop4info-mappers-service
+  - image: cp/cpd/shop4info-mappers-wkc
   - image: cp/cpd/shop4info-rest
   - image: cp/cpd/shop4info-scheduler
   - image: cp/cpd/shop4info-schema-init
   - image: cp/cpd/shop4info-type-registry-service
+  - image: cp/cpd/smart-platform-search
   - image: cp/cpd/solr-ubi
   - image: cp/cpd/solr-x86_64
   - image: cp/cpd/spark-hb-control-plane
@@ -183,11 +246,15 @@ images:
   - image: cp/cpd/streams-management-el7
   - image: cp/cpd/streams-notebook-template
   - image: cp/cpd/streams-operations-el7
+  - image: cp/cpd/streams-rest-el7
   - image: cp/cpd/streams-security-el7
   - image: cp/cpd/streams-service-provider
   - image: cp/cpd/streams-spss-install-el7
   - image: cp/cpd/streams-sws-el7
   - image: cp/cpd/unified-console
+  - image: cp/cpd/unified-console-influxdb
+  - image: cp/cpd/unified-console-utils-api
+  - image: cp/cpd/unified-console-zdtproxy
   - image: cp/cpd/wdp-activities
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
@@ -206,29 +273,56 @@ images:
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wkc-ugconfig
   - image: cp/cpd/wkc-workflow-service
+  - image: cp/cpd/wml-app-runtimes-rshiny
+  - image: cp/cpd/wml-app-runtimes-rshiny-ppc64le
   - image: cp/cpd/wml-autoai-kb
+  - image: cp/cpd/wml-autoai-kb-ppc64le
   - image: cp/cpd/wml-batch-runtimes-spss18.1
+  - image: cp/cpd/wml-batch-runtimes-spss18.1-ppc64le-ubi
   - image: cp/cpd/wml-main
+  - image: cp/cpd/wml-main-ppc64le
   - image: cp/cpd/wml-os-envoy
+  - image: cp/cpd/wml-os-envoy-ppc64le-ubi
   - image: cp/cpd/wml-os-runtime-agent
+  - image: cp/cpd/wml-os-runtime-agent-ppcle64-ubi
   - image: cp/cpd/wml-os-runtime-manager
+  - image: cp/cpd/wml-os-runtime-manager-ppc64le-ubi
   - image: cp/cpd/wml-os-runtimes-do12.9
+  - image: cp/cpd/wml-os-runtimes-do12.9-ppc64le
   - image: cp/cpd/wml-os-runtimes-hybrid
+  - image: cp/cpd/wml-os-runtimes-hybrid-ppc64le-ubi
   - image: cp/cpd/wml-os-runtimes-mllib2.2
   - image: cp/cpd/wml-os-runtimes-mllib2.3
+  - image: cp/cpd/wml-os-runtimes-mllib2.3-ppc64le-ubi
+  - image: cp/cpd/wml-os-runtimes-mllib2.4
+  - image: cp/cpd/wml-os-runtimes-mllib2.4-ppc64le-ubi
   - image: cp/cpd/wml-os-runtimes-spss18.1
+  - image: cp/cpd/wml-os-runtimes-spss18.1-ppc64le-ubi
   - image: cp/cpd/wml-preinstall-secret
+  - image: cp/cpd/wml-preinstall-secret-ppc
   - image: cp/cpd/wmlproxyservice-ubi
   - image: cp/cpd/wml-python-client
   - image: cp/cpd/wmltrainingservicehydra
+  - image: cp/cpd/wmltrainingservicehydra-ppc64le-ubi
+  - image: cp/cpd/wml-ubi-ppc-ac201903-py368-g2-rt
+  - image: cp/cpd/wml-ubi-ppc-ac201903-py368-g3-rt
+  - image: cp/cpd/wml-ubi-ppc-mc3-py368-g1-rt
   - image: cp/cpd/wml-ubi-x86-ac201903-py368-g1-rt
   - image: cp/cpd/wml-ubi-x86-ac201903-py368-g2-rt
+  - image: cp/cpd/wml-ubi-x86-ac201903-py368-g3-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py368-g1-rt
+  - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
+  - image: cp/cpd/wslocal-ppc-runtime-ppcr36
+  - image: cp/cpd/wslocal-runtime-rstudio
+  - image: cp/cpd/wslocal-runtime-shiny
   - image: cp/cpd/wslocal-x86-runtime-cudapy36
+  - image: cp/cpd/wslocal-x86-runtime-py36ce162
+  - image: cp/cpd/wslocal-x86-runtime-py36ce162cuda
   - image: cp/cpd/wslocal-x86-runtime-python36
   - image: cp/cpd/wslocal-x86-runtime-r36
   - image: cp/cpd/wslocal-x86-runtime-rstudio
   - image: cp/cpd/zen-admin
+  - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-content
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
@@ -236,6 +330,7 @@ images:
   - image: cp/cpd/zen-databases
   - image: cp/cpd/zen-databases-catalog-db2eventstore
   - image: cp/cpd/zen-databases-catalog-db2wh
+  - image: cp/cpd/zen-databases-catalog-mongodb
   - image: cp/cpd/zen-databases-catalog-postgresql
   - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-meta-couchdb
@@ -243,3 +338,4 @@ images:
   - image: cp/cpd/zen-metastore-db
   - image: cp/cpd/zen-watchdog
   - image: cp/cpd/zookeeper-ubi
+  - image: cp/cpd/zookeeper-x86_64
