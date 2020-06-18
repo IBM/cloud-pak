@@ -1,0 +1,99 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: watson-language-pak-2
+# The description is mandatory
+description: "this is the optional module for installation for language-pak-2"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: lt-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-values-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+- name: lt_en-us_bn-bd_general
+  tag: 1.1.2
+- name: lt_en-us_gu-in_general
+  tag: 1.1.2
+- name: lt_en-us_hi-in_general
+  tag: 1.1.2
+- name: lt_en-us_id-id_general
+  tag: 1.1.2
+- name: lt_en-us_ja-jp_general
+  tag: 1.1.2
+- name: lt_en-us_ko-kr_general
+  tag: 1.1.2
+- name: lt_en-us_ml-in_general
+  tag: 1.1.2
+- name: lt_en-us_ms-my_general
+  tag: 1.1.2
+- name: lt_en-us_mt-mt_general
+  tag: 1.1.2
+- name: lt_en-us_ne-np_general
+  tag: 1.1.2
+- name: lt_en-us_si-lk_general
+  tag: 1.1.2
+- name: lt_en-us_ta-in_general
+  tag: 1.1.2
+- name: lt_en-us_te-in_general
+  tag: 1.1.2
+- name: lt_en-us_th-th_general
+  tag: 1.1.2
+- name: lt_en-us_ur-pk_general
+  tag: 1.1.2
+- name: lt_en-us_vi-vn_general
+  tag: 1.1.2
+- name: lt_bn-bd_en-us_general
+  tag: 1.1.2
+- name: lt_gu-in_en-us_general
+  tag: 1.1.2
+- name: lt_hi-in_en-us_general
+  tag: 1.1.2
+- name: lt_id-id_en-us_general
+  tag: 1.1.2
+- name: lt_ja-jp_en-us_general
+  tag: 1.1.2
+- name: lt_ko-kr_en-us_general
+  tag: 1.1.2
+- name: lt_ml-in_en-us_general
+  tag: 1.1.2
+- name: lt_ms-my_en-us_general
+  tag: 1.1.2
+- name: lt_mt-mt_en-us_general
+  tag: 1.1.2
+- name: lt_ne-np_en-us_general
+  tag: 1.1.2
+- name: lt_si-lk_en-us_general
+  tag: 1.1.2
+- name: lt_ta-in_en-us_general
+  tag: 1.1.2
+- name: lt_te-in_en-us_general
+  tag: 1.1.2
+- name: lt_th-th_en-us_general
+  tag: 1.1.2
+- name: lt_ur-pk_en-us_general
+  tag: 1.1.2
+- name: lt_vi-vn_en-us_general
+  tag: 1.1.2  
+  
+chart: ibm-watson-lt-language-pak-2-1.1.2.tgz
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: ibm-watson-lt-language-pak-2
+# Set to true will trigger the helm upgrade with force option. Optional. Missing means false
+helmUpgradeForce: false
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+# scale:
+# - small.yaml
+
