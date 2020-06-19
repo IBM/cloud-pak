@@ -1,6 +1,12 @@
-source: ibm-voice-gateway-prod/ibm_cloud_pak/manifest.yaml
-description: Watson Voice Gateway Helm chart (Production).
+source: ibm-voice-gateway-prod-bundle/case/ibm-voice-gateway-prod/case.yaml
+description: "IBM Voice Gateway (Production)."
 images:
+  - image: cp/opencontent-common-utils
+  - image: cp/voice-gateway-codec-g729
+  - image: cp/voice-gateway-dvt
+  - image: cp/voice-gateway-mr
+  - image: cp/voice-gateway-sms
+  - image: cp/voice-gateway-so
   - image: ibmcom/opencontent-common-utils
   - image: ibmcom/voice-gateway-codec-g729
   - image: ibmcom/voice-gateway-mr
