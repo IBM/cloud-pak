@@ -1,7 +1,14 @@
 source: ibm-fci-conduct-surveillance-prod/ibm_cloud_pak/manifest.yaml
-description: IBM Financial Crimes Insight for Conduct Surveillance
+description: "IBM Financial Crimes Insight for Conduct Surveillance"
 images:
+  - image: cp/cpd/fccs-base-liberty
+  - image: cp/cpd/fccs-complaints-liberty
+  - image: cp/cpd/fccs-ecomm-liberty
+  - image: cp/cpd/fccs-voice-liberty
   - image: cp/cpd/fci-common-scripts
+  - image: cp/cpd/fci-hdp-client
+  - image: cp/cpd/fci-rms-data-store
+  - image: cp/cpd/fci-rms-designstudio
   - image: cp/cpd/sifs-data-store-client
   - image: cp/cpd/sifs-filebeat
   - image: cp/cpd/sifs-liberty

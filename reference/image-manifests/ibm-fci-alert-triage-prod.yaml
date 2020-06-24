@@ -1,9 +1,11 @@
 source: ibm-fci-alert-triage-prod/ibm_cloud_pak/manifest.yaml
-description: A Helm chart for FCAI
+description: "A Helm chart for FCAI"
 images:
   - image: cp/cpd/fcai-shiny
   - image: cp/cpd/fcai-tls-analytics
   - image: cp/cpd/fcai-tls-ui
+  - image: cp/cpd/fcai-tm-triage-ui
   - image: cp/cpd/fci-alert-review
   - image: cp/cpd/fci-alert-review-db
   - image: cp/cpd/fci-common-scripts
+  - image: ibmcom/opencontent-common-utils

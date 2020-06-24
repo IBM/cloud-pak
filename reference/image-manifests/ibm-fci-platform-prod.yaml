@@ -1,5 +1,5 @@
 source: ibm-fci-platform-prod/ibm_cloud_pak/manifest.yaml
-description: IBM Financial Crimes Insight
+description: "IBM Financial Crimes Insight"
 images:
   - image: cp/cpd/fci-cdn-proxy
   - image: cp/cpd/fci-cedm-data-store-client
@@ -18,6 +18,7 @@ images:
   - image: cp/cpd/fci-graph-gremlin-server
   - image: cp/cpd/fci-graph-writer
   - image: cp/cpd/fci-graph-writer-init-pv
+  - image: cp/cpd/fci-hdp-client
   - image: cp/cpd/fci-investigative-ui
   - image: cp/cpd/fci-investigative-ui-config
   - image: cp/cpd/fci-investigative-ui-config-service
@@ -30,6 +31,7 @@ images:
   - image: cp/cpd/fci-memoryds
   - image: cp/cpd/fci-messaging
   - image: cp/cpd/fci-mongodb
+  - image: cp/cpd/fci-narrative-service
   - image: cp/cpd/fci-nginx-ssl-proxy
   - image: cp/cpd/fci-rms-data-store
   - image: cp/cpd/fci-rms-designstudio
@@ -39,7 +41,10 @@ images:
   - image: cp/cpd/fci-security-audit-app
   - image: cp/cpd/fci-security-audit-data-store
   - image: cp/cpd/fci-security-auth
+  - image: cp/cpd/fci-shell-detection
   - image: cp/cpd/fci-solution
   - image: cp/cpd/fci-wca
   - image: cp/cpd/fci-zookeeper
+  - image: cp/cpd/kyc-data-source-framework
   - image: cp/cpd/rms-streams-voice
+  - image: ibmcom/opencontent-common-utils

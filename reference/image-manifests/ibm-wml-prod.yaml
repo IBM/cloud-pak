@@ -1,6 +1,29 @@
 source: ibm-wml-prod/ibm_cloud_pak/manifest.yaml
-description: IBM Watson Machine Learning (WML) v2.1.0.0
+description: "IBM Watson Machine Learning (WML) v3.0.1"
 images:
+  - image: cp/cpd/etcd-ubi
+  - image: cp/cpd/kubectlclient-ubi
+  - image: cp/cpd/mlrepositoryservicehydra
+  - image: cp/cpd/post-install-repo-cams-assettype
+  - image: cp/cpd/pre-upgrade-repo-cams-assets
+  - image: cp/cpd/wml-app-runtimes-rshiny
+  - image: cp/cpd/wml-autoai-kb
+  - image: cp/cpd/wml-batch-runtimes-spss18.1
+  - image: cp/cpd/wml-os-envoy
+  - image: cp/cpd/wml-os-runtime-agent
+  - image: cp/cpd/wml-os-runtime-manager
+  - image: cp/cpd/wml-os-runtimes-do12.9
+  - image: cp/cpd/wml-os-runtimes-hybrid
+  - image: cp/cpd/wml-os-runtimes-mllib2.2
+  - image: cp/cpd/wml-os-runtimes-mllib2.3
+  - image: cp/cpd/wml-os-runtimes-mllib2.4
+  - image: cp/cpd/wml-os-runtimes-spss18.1
+  - image: cp/cpd/wml-preinstall-secret
+  - image: cp/cpd/wmltrainingservicehydra
+  - image: cp/cpd/wml-ubi-x86-ac201903-py368-g1-rt
+  - image: cp/cpd/wml-ubi-x86-ac201903-py368-g2-rt
+  - image: cp/cpd/wml-ubi-x86-ac201903-py368-g3-rt
+  - image: cp/cpd/wml-ubi-x86-mc3-py368-g1-rt
   - image: etcd-ubi
   - image: kubectlclient-ubi
   - image: mlrepositoryservicehydra
