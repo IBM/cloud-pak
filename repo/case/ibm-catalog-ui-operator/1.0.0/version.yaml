@@ -1,0 +1,45 @@
+apiVersion: v1
+case:
+  appVersion: 3.5.0
+  catalogs:
+    framework: {}
+    icpclusterresource: {}
+    mcm: {}
+    rhocp: {}
+    ui: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Catalog UI microservice into K8s cluster
+  displayDescription: ""
+  displayName: IBM Catalog UI Operator Case Bundle
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-catalog-ui-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2020-06-25T17:51:25.55969689+0000
+digest: sha256:ebaffc90d2f92947e4d64f739185dacef38491067e954a3a3fbcfa12c7b91374
