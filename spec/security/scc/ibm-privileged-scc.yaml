@@ -5,13 +5,14 @@ apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
   annotations:
-    kubernetes.io/description: "This policy grants access to all privileged 
+    kubernetes.io/description: "[DEPRECATED] This policy grants access to all privileged 
       host features and allows a pod to run with any 
       UID and GID and any volume.
       WARNING:  This policy is the least restrictive and 
       should only be used for cluster administration.
       Use with caution."
-    cloudpak.ibm.com/version: "1.1.0"
+    cloudpak.ibm.com/version: "1.2.0"
+    cloudpak.ibm.com/deprecated: true
   name: ibm-privileged-scc
 allowHostDirVolumePlugin: true
 allowHostIPC: true

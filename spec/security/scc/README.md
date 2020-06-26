@@ -1,4 +1,7 @@
 # IBM Cloud Pak SecurityContextConstraints Definitions
+
+### IBM Cloud Pak SecurityContextConstraints Status: deprecated 
+
 The IBM Cloud Pak specification defines several pre-defined Red Hat&reg; OpenShift&reg; SecurityContextConstraints (SCC) definitions.  These definitions are referenced by IBM Cloud Paks to describe their pod security requirements for Red Hat OpenShift environments and include both the Red Hat OpenShift pre-defined SCC's and additional SCC's (prefixed by `ibm-`) for compatiblity with the [IBM Cloud Pak PodSecurityPolicy definitions](../psp/README.md).
 
 
@@ -113,8 +116,18 @@ For additional information about Red Hat OpenShift security context constraints,
 - [RHOS v3.9 Doc: Sysctls](https://docs.openshift.com/container-platform/3.9/admin_guide/sysctls.html)
 - [RHOS v3.9 Doc: Seccomp](https://docs.openshift.com/container-platform/3.9/admin_guide/seccomp.html)
 
+## Deprecation Notice
 
+The following SecurityContextConstraints are deprecated
 
+- ibm-restricted-scc
+- ibm-anyuid-scc
+- ibm-anyuid-hostpath-scc
+- ibm-anyuid-hostaccess-scc
+- ibm-privileged-scc
 
+### Mitigation Plan
 
+[Red Hat OpenShift 4.4 SCC Documentation](https://docs.openshift.com/container-platform/4.4/authentication/managing-security-context-constraints.html)
 
+Customers should migrate to use the custom SCC provided by the workload (the existence of a custom SCC is required in the certification assesment) in place of the current `ibm-*-scc` being used.  In scenarios where a customer does not want to migrate to use the custom SCC provided by the workload, then the customer must switch to use a predefined Red Hat OpenShift SCC.  OpenShift instructions for managing SCCs can be found in the [Red Hat OpenShift 4.4 SCC Documentation](https://docs.openshift.com/container-platform/4.4/authentication/managing-security-context-constraints.html)
