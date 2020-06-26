@@ -1,0 +1,6 @@
+source: ibm-helm-repo-operator-bundle/case/ibm-helm-repo-operator/case.yaml
+description: "Internal Helm repository for ICP"
+images:
+  - image: quay.io/opencloudio/ibm-helm-repo-operator
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-helm-repo
