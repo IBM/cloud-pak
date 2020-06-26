@@ -1,0 +1,12 @@
+source: ibm-cs-logging-bundle/case/ibm-cs-logging/case.yaml
+description: "Used to deploy Common Services Logging operator in a k8s cluster"
+images:
+  - image: quay.io/opencloudio/curl
+  - image: quay.io/opencloudio/ibm-elastic-stack-operator
+  - image: quay.io/opencloudio/icp-elasticsearch-oss
+  - image: quay.io/opencloudio/icp-filebeat-oss
+  - image: quay.io/opencloudio/icp-initcontainer
+  - image: quay.io/opencloudio/icp-kibana-oss
+  - image: quay.io/opencloudio/icp-logstash-oss
+  - image: quay.io/opencloudio/indices-cleaner
+  - image: quay.io/opencloudio/logging-pki-init
