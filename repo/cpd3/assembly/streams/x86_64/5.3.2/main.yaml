@@ -11,8 +11,20 @@
 # IBM Corp.                                                        
 #                                                                  
 # end_generated_IBM_copyright_prolog                               
-# This key name "versionList" is hardcoded
-# Note that the last entry is assumed the latest, means if user does not specify the version, it will be the last entry
-versions:
-  - 5.3.1
-  - 5.3.2
+type: assembly
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM Streams addon
+# Description is optional
+description: IBM Streams addon assembly
+architecture: x86_64
+bricks:
+  - name: lite
+    version: 3.0.1
+    type: assembly
+  - name: streams
+    version: 5.3.2
+    type: module
+    

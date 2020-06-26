@@ -1,0 +1,3 @@
+scale statefulset worker --replicas 1
+patch deployment bigsql-ibm-bigsql-dev-engine --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bigsql-engine","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-6_0_1_0:1947"}]}}}}'
+patch statefulset worker --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bigsql-worker","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-6_0_1_0:1947"}]}}}}'
