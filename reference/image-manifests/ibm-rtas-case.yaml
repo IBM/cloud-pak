@@ -1,0 +1,18 @@
+source: ibm-rtas-case-bundle/case/ibm-rtas-case/case.yaml
+description: "IBM Rational Test Automation Server"
+images:
+  - image: bitnami/kafka
+  - image: bitnami/postgresql
+  - image: bitnami/zookeeper
+  - image: cp/ibm-rpta
+  - image: cp/ibm-rtas-datasets:8b7986d
+  - image: cp/ibm-rtas-execution:8b7986d
+  - image: cp/ibm-rtas-frontend:8b7986d
+  - image: cp/ibm-rtas-gateway:8b7986d
+  - image: cp/ibm-rtas-keycloak-theme:8b7986d
+  - image: cp/ibm-rtas-results:8b7986d
+  - image: cp/ibm-rtas-rm:8b7986d
+  - image: cp/ibm-rtas-tam:8b7986d
+  - image: cp/ibm-rtvs
+  - image: cp/ibm-rtw
+  - image: jboss/keycloak

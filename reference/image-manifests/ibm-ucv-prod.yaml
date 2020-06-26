@@ -1,0 +1,20 @@
+source: ibm-ucv-prod-bundle/case/ibm-ucv-prod/case.yaml
+description: "IBM UrbanCode Velocity"
+images:
+  - image: argoproj/argoexec
+  - image: argoproj/workflow-controller
+  - image: bitnami/nginx
+  - image: bitnami/rabbitmq
+  - image: cp/ibm-ucv-application-api
+  - image: cp/ibm-ucv-continuous-release-consumer
+  - image: cp/ibm-ucv-continuous-release-poller
+  - image: cp/ibm-ucv-continuous-release-ui
+  - image: cp/ibm-ucv-multi-app-pipeline-api
+  - image: cp/ibm-ucv-rcl-web-client
+  - image: cp/ibm-ucv-release-events-api
+  - image: cp/ibm-ucv-release-events-ui
+  - image: cp/ibm-ucv-reporting-consumer
+  - image: cp/ibm-ucv-reporting-ui
+  - image: cp/ibm-ucv-security-api
+  - image: ibmcom/opencontent-common-utils
+  - image: library/alpine
