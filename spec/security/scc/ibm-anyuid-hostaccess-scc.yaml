@@ -5,11 +5,12 @@ apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
   annotations:
-    kubernetes.io/description: "This policy allows pods to run with any
+    kubernetes.io/description: "[DEPRECATED] This policy allows pods to run with any
       UID and GID, any volume and full access to the host.
       WARNING:  This policy allows full access to the host and network.  
       Use with caution."
-    cloudpak.ibm.com/version: "1.1.0"
+    cloudpak.ibm.com/version: "1.2.0"
+    cloudpak.ibm.com/deprecated: true
   name: ibm-anyuid-hostaccess-scc
 allowHostDirVolumePlugin: true
 allowHostIPC: true
