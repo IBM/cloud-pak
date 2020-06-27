@@ -1,62 +1,14 @@
-source: ibm-apiconnect-bundle/case/ibm-apiconnect/case.yaml
-description: ""
+source: ibm-mq-bundle/case/ibm-mq/case.yaml
+description: "A CASE for IBM MQ"
 images:
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-client
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-cronjobs
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-ingestion
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-kafka
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-zookeeper
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-mtls
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-storage
-  - image: cp/apic/ibm-apiconnect-apiconnect-configurator
-  - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
-  - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
-  - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
-  - image: cp/apic/ibm-apiconnect-management-analytics-proxy
-  - image: cp/apic/ibm-apiconnect-management-apim
-  - image: cp/apic/ibm-apiconnect-management-client-downloads-server
-  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
-  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbouncer
-  - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-ha
-  - image: cp/apic/ibm-apiconnect-management-hub
-  - image: cp/apic/ibm-apiconnect-management-juhu
-  - image: cp/apic/ibm-apiconnect-management-k8s-init
-  - image: cp/apic/ibm-apiconnect-management-ldap
-  - image: cp/apic/ibm-apiconnect-management-lur
-  - image: cp/apic/ibm-apiconnect-management-nats-operator
-  - image: cp/apic/ibm-apiconnect-management-nats-server
-  - image: cp/apic/ibm-apiconnect-management-nats-streaming-operator
-  - image: cp/apic/ibm-apiconnect-management-nats-streaming-server
-  - image: cp/apic/ibm-apiconnect-management-pgo-apiserver
-  - image: cp/apic/ibm-apiconnect-management-pgo-backrest
-  - image: cp/apic/ibm-apiconnect-management-pgo-backrest-repo
-  - image: cp/apic/ibm-apiconnect-management-pgo-backrest-restore
-  - image: cp/apic/ibm-apiconnect-management-pgo-client
-  - image: cp/apic/ibm-apiconnect-management-pgo-event
-  - image: cp/apic/ibm-apiconnect-management-pgo-rmdata
-  - image: cp/apic/ibm-apiconnect-management-pgo-scheduler
-  - image: cp/apic/ibm-apiconnect-management-portal-proxy
-  - image: cp/apic/ibm-apiconnect-management-postgres-operator
-  - image: cp/apic/ibm-apiconnect-management-task-manager
-  - image: cp/apic/ibm-apiconnect-management-turnstile
-  - image: cp/apic/ibm-apiconnect-management-ui
-  - image: cp/apic/ibm-apiconnect-management-v10-upgrade
-  - image: cp/apic/ibm-apiconnect-management-ws-tunnel
-  - image: cp/apic/ibm-apiconnect-portal-k8s-init
-  - image: cp/apic/ibm-apiconnect-portal-openresty
-  - image: cp/apic/ibm-apiconnect-portal-portal-admin
-  - image: cp/apic/ibm-apiconnect-portal-portal-db
-  - image: cp/apic/ibm-apiconnect-portal-portal-dbproxy
-  - image: cp/apic/ibm-apiconnect-portal-portal-web
-  - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
-  - image: cp/datapower/datapower
-  - image: ibmcom/datapower-monitor
-  - image: ibmcom/datapower-operator
-  - image: ibmcom/datapower-operator-bundle
-  - image: ibmcom/datapower-operator-catalog
-  - image: ibmcom/ibm-apiconnect-catalog
-  - image: ibmcom/ibm-apiconnect-operator
-  - image: ibmcom/ibm-apiconnect-operator-bundle
+  - image: cp/ibm-mqadvanced-server
+  - image: cp/ibm-mqadvanced-server-integration
+  - image: cp/icp4i/od/icp4i-od-agent
+  - image: cp/icp4i/od/icp4i-od-collector
+  - image: ibmcom/ibm-mq-operator
+  - image: ibmcom/ibm-mq-operator-bundle
+  - image: ibmcom/ibm-mq-operator-catalog
+  - image: ibmcom/mq
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-policy-controller
   - image: quay.io/opencloudio/collectd-exporter
