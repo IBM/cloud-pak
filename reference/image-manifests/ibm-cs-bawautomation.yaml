@@ -1,0 +1,35 @@
+source: ibm-baw-case-bundle/case/ibm-cs-bawautomation/case.yaml
+description: "A CASE for an operator which deploys baw operator"
+images:
+  - image: cp/cp4a/bai/bai-admin
+  - image: cp/cp4a/bai/bai-bpmn
+  - image: cp/cp4a/bai/bai-content
+  - image: cp/cp4a/bai/bai-elasticsearch
+  - image: cp/cp4a/bai/bai-flink
+  - image: cp/cp4a/bai/bai-flink-zookeeper
+  - image: cp/cp4a/bai/bai-icm
+  - image: cp/cp4a/bai/bai-ingestion
+  - image: cp/cp4a/bai/bai-init
+  - image: cp/cp4a/bai/bai-kibana
+  - image: cp/cp4a/bai/bai-monitoring-app
+  - image: cp/cp4a/bai/bai-setup
+  - image: cp/cp4a/ban/navigator-sso
+  - image: cp/cp4a/baw/dba-dbcompatibility-initcontainer
+  - image: cp/cp4a/baw/dba-etcd
+  - image: cp/cp4a/baw/dba-keytool-initcontainer
+  - image: cp/cp4a/baw/dba-keytool-jobcontainer
+  - image: cp/cp4a/baw/dba-umsregistration-initjob
+  - image: cp/cp4a/baw/iaws-ps-content-integration
+  - image: cp/cp4a/baw/jms
+  - image: cp/cp4a/baw/pfs-bpd-database-init-prod
+  - image: cp/cp4a/baw/pfs-elasticsearch-prod
+  - image: cp/cp4a/baw/pfs-init-prod
+  - image: cp/cp4a/baw/pfs-nginx-prod
+  - image: cp/cp4a/baw/pfs-prod
+  - image: cp/cp4a/baw/workflow-server
+  - image: cp/cp4a/baw/workflow-server-case-initialization
+  - image: cp/cp4a/baw/workflow-server-dbhandling
+  - image: cp/cp4a/fncm/cmis
+  - image: cp/cp4a/fncm/cpe
+  - image: cp/cp4a/icp4a-operator
+  - image: cp/cp4a/ums/ums
