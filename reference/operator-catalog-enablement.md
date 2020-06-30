@@ -51,24 +51,24 @@ For additional support related to Cloud Paks and Container Software please refer
 1. Log into your OCP UI instance
 2. Select the Developer view
 
-![Helm Chart Select Developer View](./images/helm_chart_select_developer_view.png)
+![Helm Chart Select Developer View](images/helm_chart_select_developer_view.png)
 
 3. Go to the add section of the Developer view and select From Catalog
 
-![Add Helm Chart Catalog View](./images/add_helm_chart_from_catalog.png)
+![Add Helm Chart Catalog View](images/add_helm_chart_from_catalog.png)
 
 4. Select the project/namespace for helm releasee to be installed
 
-![Select Istall Namespace](./images/select_install_namespace.png)
+![Select Istall Namespace](images/select_install_namespace.png)
 
 5. Select Type of 'Helm Charts' and enter search criteria of 'operator '
 
-![Select Helm Charts Search Operator](./images/select_helm_charts_search_operator.png)
+![Select Helm Charts Search Operator](images/select_helm_charts_search_operator.png)
 
 6. Click the 'Ibm Operator Catalog' tile
 7. Click the Install Helm Chart button
 8. Enter true to accept license
 
-![Accept License True](./images/accept_license_true.png)
+![Accept License True](images/accept_license_true.png)
 
 9. Click Install
