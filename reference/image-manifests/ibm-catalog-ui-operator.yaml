@@ -1,0 +1,6 @@
+source: ibm-catalog-ui-operator-bundle/case/ibm-catalog-ui-operator/case.yaml
+description: "Used to deploy Catalog UI microservice into K8s cluster"
+images:
+  - image: quay.io/opencloudio/ibm-catalog-ui-operator
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-catalog-ui

@@ -1,0 +1,10 @@
+images:
+- spark-hb-jkg:2.4.6-v1-x86_64
+- spark-hb-control-plane:3.0.30.2-x86_64
+patchFile: patchCommands.txt
+resourcesChanged:
+- Kind: CronJob
+  Name: spark-hb-preload-jkg-image
+- Kind: Deployment
+  Name: spark-hb-control-plane
+description: "Fix Decision Optimization security issue in jackson-databind library (CVE-2017-7525, CVE-2017-17485, CVE-2018-5968)"

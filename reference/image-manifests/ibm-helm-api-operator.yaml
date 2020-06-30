@@ -1,0 +1,8 @@
+source: ibm-helm-api-operator-bundle/case/ibm-helm-api-operator/case.yaml
+description: "Used to deploy the helm api into K8s cluster"
+images:
+  - image: quay.io/opencloudio/ibm-helm-api-operator
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-helm-api
+  - image: quay.io/opencloudio/icp-helm-rudder
+  - image: quay.io/opencloudio/tiller

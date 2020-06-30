@@ -5,6 +5,18 @@ images:
   - image: cp/cp4a/aae/dba-keytool-initcontainer
   - image: cp/cp4a/aae/solution-server
   - image: cp/cp4a/aae/solution-server-helmjob-db
+  - image: cp/cp4a/ads/ads-download
+  - image: cp/cp4a/ads/ads-front
+  - image: cp/cp4a/ads/ads-gitservice
+  - image: cp/cp4a/ads/ads-parsing
+  - image: cp/cp4a/ads/ads-restapi
+  - image: cp/cp4a/ads/ads-rrintegration
+  - image: cp/cp4a/ads/ads-run
+  - image: cp/cp4a/ads/ads-runtime
+  - image: cp/cp4a/ads/dba-keytool-initcontainer
+  - image: cp/cp4a/ads/dba-keytool-jobcontainer
+  - image: cp/cp4a/ads/dba-umsregistration-initjob
+  - image: cp/cp4a/ads/mongo
   - image: cp/cp4a/adw/adw-designer
   - image: cp/cp4a/adw/adw-init
   - image: cp/cp4a/adw/adw-management
@@ -32,8 +44,11 @@ images:
   - image: cp/cp4a/bai/bai-ingestion
   - image: cp/cp4a/bai/bai-init
   - image: cp/cp4a/bai/bai-kibana
+  - image: cp/cp4a/bai/bai-monitoring-app
   - image: cp/cp4a/bai/bai-odm
   - image: cp/cp4a/bai/bai-setup
+  - image: cp/cp4a/bai/dba-keytool-initcontainer
+  - image: cp/cp4a/bai/dba-umsregistration-initjob
   - image: cp/cp4a/ban/navigator
   - image: cp/cp4a/ban/navigator-sso
   - image: cp/cp4a/bas/bastudio
@@ -45,6 +60,23 @@ images:
   - image: cp/cp4a/bas/jms
   - image: cp/cp4a/bas/solution-server
   - image: cp/cp4a/bas/solution-server-helmjob-db
+  - image: cp/cp4a/baw/dba-dbcompatibility-initcontainer
+  - image: cp/cp4a/baw/dba-etcd
+  - image: cp/cp4a/baw/dba-keytool-initcontainer
+  - image: cp/cp4a/baw/dba-keytool-jobcontainer
+  - image: cp/cp4a/baw/dba-umsregistration-initjob
+  - image: cp/cp4a/baw/iaws-ibm-workplace
+  - image: cp/cp4a/baw/iaws-ps-content-integration
+  - image: cp/cp4a/baw/jms
+  - image: cp/cp4a/baw/pfs-bpd-database-init-prod
+  - image: cp/cp4a/baw/pfs-elasticsearch-prod
+  - image: cp/cp4a/baw/pfs-init-prod
+  - image: cp/cp4a/baw/pfs-nginx-prod
+  - image: cp/cp4a/baw/pfs-prod
+  - image: cp/cp4a/baw/toolkit-installer
+  - image: cp/cp4a/baw/workflow-server
+  - image: cp/cp4a/baw/workflow-server-case-initialization
+  - image: cp/cp4a/baw/workflow-server-dbhandling
   - image: cp/cp4a/fncm/cmis
   - image: cp/cp4a/fncm/cpe
   - image: cp/cp4a/fncm/crs
@@ -70,6 +102,7 @@ images:
   - image: cp/cp4a/iaws/pfs-init-prod
   - image: cp/cp4a/iaws/pfs-nginx-prod
   - image: cp/cp4a/icp4a-operator
+  - image: cp/cp4a/ier/ier
   - image: cp/cp4a/odm/dbserver
   - image: cp/cp4a/odm/odm-decisioncenter
   - image: cp/cp4a/odm/odm-decisionrunner

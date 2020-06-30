@@ -1,0 +1,2 @@
+patch deployment dods-ibm-dods-prod-dd-scenario-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dd-scenario-api-container","image": "{{.DockerRegistryPrefix}}/dd-scenario-api:3.0.28-amd64"}]}}}}'
+patch deployment dods-ibm-dods-prod-dd-cognitive --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dd-cognitive-container","image": "{{.DockerRegistryPrefix}}/dd-cognitive:3.0.8-amd64"}]}}}}'

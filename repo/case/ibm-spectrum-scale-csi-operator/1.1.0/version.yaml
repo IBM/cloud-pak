@@ -1,0 +1,31 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    container: {}
+    deploy: {}
+    storage: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    limited: {}
+    opensource: {}
+  description: Represents a deployment of the IBM CSI Spectrum Scale driver.
+  displayDescription: Represents a deployment of the IBM CSI Spectrum Scale driver.
+  displayName: IBM CSI Spectrum Scale Driver CASE
+  icons:
+  - base64: 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
+    mediaType: image/png
+  name: ibm-spectrum-scale-csi-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.1.0
+  webPage: https://github.com/IBM/ibm-spectrum-scale-csi
+created: 2020-06-25T13:45:52.41618894+0000
+digest: sha256:92d68972b93272e54bb5ccea14dc1006a21e81ea3b6759e4c207081294dd86a4

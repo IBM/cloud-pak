@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 1.1.2
+  catalogs:
+    ai: {}
+    openshift: {}
+    rhocp: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: A CASE for IBM Watson Knowledge Studio
+  displayDescription: Make Watson smarter—use unstructured data to teach Watson the
+    language of your business. The Watson Knowledge Studio add-on uses AI to identify
+    entities, relationships, and other linguistic elements that are are unique to
+    your industry. Put Watson’s new knowledge to work when you deploy these add-ons
+    - Watson Discovery and Watson Natural Language Understanding
+  displayName: IBM Watson Knowledge Studio for IBM Cloud Pak for Data
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/icp-logo-box.svg
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  name: ibm-watson-ks-prod-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp3: {}
+  version: 1.1.2
+  webPage: https://www.ibm.com
+created: 2020-06-20T15:44:30.10844547+0000
+digest: sha256:14d2dc806f64e423f9d4462589188081513e00826be71356cc57233a4ff21e46

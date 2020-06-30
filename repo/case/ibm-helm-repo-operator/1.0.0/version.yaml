@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 3.5.0
+  catalogs:
+    icpclusterresource: {}
+    operations: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Internal Helm repository for ICP
+  displayDescription: ""
+  displayName: IBM Helm Repo Operator CASE Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-helm-repo-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2020-06-26T18:13:09.20118380+0000
+digest: sha256:85a13ffb63963f87fd466eaf5c0df581723061da229832612977045f9daa04f6

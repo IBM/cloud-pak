@@ -1,0 +1,11 @@
+source: ibm-cloud-databases-redis-bundle/case/ibm-cloud-databases-redis/case.yaml
+description: "IBM Operator for Redis"
+images:
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-telemetry-5.0.5
+  - image: ibmcom/ibm-cloud-databases-redis-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle

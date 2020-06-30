@@ -5,7 +5,81 @@ images:
   - image: apic-dev-docker-local.artifactory.swg-devops.com/apiconnect/datapower-api-gateway
   - image: apic-dev-docker-local.artifactory.swg-devops.com/k8s-datapower-monitor
   - image: busybox
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-client
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-cronjobs
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-ingestion
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-kafka
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-zookeeper
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-mtls
+  - image: cp/apic/ibm-apiconnect-analytics-analytics-storage
+  - image: cp/apic/ibm-apiconnect-apiconnect-configurator
+  - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
+  - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
+  - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
+  - image: cp/apic/ibm-apiconnect-management-analytics-proxy
+  - image: cp/apic/ibm-apiconnect-management-apim
+  - image: cp/apic/ibm-apiconnect-management-client-downloads-server
+  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
+  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbouncer
+  - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-ha
+  - image: cp/apic/ibm-apiconnect-management-hub
+  - image: cp/apic/ibm-apiconnect-management-juhu
+  - image: cp/apic/ibm-apiconnect-management-k8s-init
+  - image: cp/apic/ibm-apiconnect-management-ldap
+  - image: cp/apic/ibm-apiconnect-management-lur
+  - image: cp/apic/ibm-apiconnect-management-nats-operator
+  - image: cp/apic/ibm-apiconnect-management-nats-server
+  - image: cp/apic/ibm-apiconnect-management-nats-streaming-operator
+  - image: cp/apic/ibm-apiconnect-management-nats-streaming-server
+  - image: cp/apic/ibm-apiconnect-management-pgo-apiserver
+  - image: cp/apic/ibm-apiconnect-management-pgo-backrest
+  - image: cp/apic/ibm-apiconnect-management-pgo-backrest-repo
+  - image: cp/apic/ibm-apiconnect-management-pgo-backrest-restore
+  - image: cp/apic/ibm-apiconnect-management-pgo-client
+  - image: cp/apic/ibm-apiconnect-management-pgo-event
+  - image: cp/apic/ibm-apiconnect-management-pgo-rmdata
+  - image: cp/apic/ibm-apiconnect-management-pgo-scheduler
+  - image: cp/apic/ibm-apiconnect-management-portal-proxy
+  - image: cp/apic/ibm-apiconnect-management-postgres-operator
+  - image: cp/apic/ibm-apiconnect-management-task-manager
+  - image: cp/apic/ibm-apiconnect-management-turnstile
+  - image: cp/apic/ibm-apiconnect-management-ui
+  - image: cp/apic/ibm-apiconnect-management-v10-upgrade
+  - image: cp/apic/ibm-apiconnect-management-ws-tunnel
+  - image: cp/apic/ibm-apiconnect-portal-k8s-init
+  - image: cp/apic/ibm-apiconnect-portal-openresty
+  - image: cp/apic/ibm-apiconnect-portal-portal-admin
+  - image: cp/apic/ibm-apiconnect-portal-portal-db
+  - image: cp/apic/ibm-apiconnect-portal-portal-dbproxy
+  - image: cp/apic/ibm-apiconnect-portal-portal-web
+  - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
+  - image: cp/appc/acecc-connector-auth-service-prod
+  - image: cp/appc/acecc-content-server-prod
+  - image: cp/appc/acecc-dashboard-prod
+  - image: cp/appc/acecc-designerflows-prod
+  - image: cp/appc/acecc-designer-runtime-prod
+  - image: cp/appc/acecc-designer-ui-prod
+  - image: cp/appc/acecc-flowdoc-authoring-prod
+  - image: cp/appc/acecc-flow-test-manager-prod
+  - image: cp/appc/acecc-lcp-prod
+  - image: cp/appc/acecc-mapping-assist-prod
+  - image: cp/appc/acecc-proxy-prod
+  - image: cp/appc/ace-server-prod
+  - image: cp/appc/icp4i-od-agent-prod
+  - image: cp/appc/icp4i-od-collector-prod
+  - image: cp/datapower/datapower
+  - image: cp/ibm-eventstreams-admin
+  - image: cp/ibm-eventstreams-admin-ui
+  - image: cp/ibm-eventstreams-jmxtrans
+  - image: cp/ibm-eventstreams-kafka
+  - image: cp/ibm-eventstreams-metrics-collector
+  - image: cp/ibm-eventstreams-rest-producer
+  - image: cp/ibm-eventstreams-schema-proxy
+  - image: cp/ibm-eventstreams-schema-registry
+  - image: cp/ibm-eventstreams-schema-registry-avro
+  - image: cp/ibm-eventstreams-session-store
   - image: cp/ibm-mqadvanced-server
+  - image: cp/ibm-mqadvanced-server-integration
   - image: cp/icp4i/ace/busybox
   - image: cp/icp4i/ace/ibm-acecc-configurator-dev
   - image: cp/icp4i/ace/ibm-acecc-configurator-prod
@@ -65,8 +139,11 @@ images:
   - image: cp/icp4i/apic/portal-web
   - image: cp/icp4i/apic/ui
   - image: cp/icp4i/aspera/aspera-hsts-aej
+  - image: cp/icp4i/aspera/aspera-hsts-ascp-server
   - image: cp/icp4i/aspera/aspera-hsts-asperanode
+  - image: cp/icp4i/aspera/aspera-hsts-configurator
   - image: cp/icp4i/aspera/aspera-hsts-election
+  - image: cp/icp4i/aspera/aspera-hsts-engine
   - image: cp/icp4i/aspera/aspera-hsts-firstboot
   - image: cp/icp4i/aspera/aspera-hsts-http-proxy
   - image: cp/icp4i/aspera/aspera-hsts-lifecycle
@@ -76,6 +153,7 @@ images:
   - image: cp/icp4i/aspera/aspera-hsts-prometheus-endpoint
   - image: cp/icp4i/aspera/aspera-hsts-receiver-swarm-member
   - image: cp/icp4i/aspera/aspera-hsts-redis
+  - image: cp/icp4i/aspera/aspera-hsts-scheduler
   - image: cp/icp4i/aspera/aspera-hsts-stats
   - image: cp/icp4i/aspera/aspera-hsts-swarm
   - image: cp/icp4i/aspera/aspera-hsts-tcp-proxy
@@ -88,6 +166,7 @@ images:
   - image: cp/icp4i/cdi-db
   - image: cp/icp4i/cdi-glum
   - image: cp/icp4i/couchdb
+  - image: cp/icp4i/cp4i-asset-repo-api
   - image: cp/icp4i/datapower/datapower
   - image: cp/icp4i/dc-main
   - image: cp/icp4i/es/eventstreams-access-controller-icp-linux
@@ -186,6 +265,8 @@ images:
   - image: cp/icp4i/mq/ibm-mq-oidc-registration
   - image: cp/icp4i/mq/icp4i-od-agent
   - image: cp/icp4i/mq/icp4i-od-collector
+  - image: cp/icp4i/od/icp4i-od-agent
+  - image: cp/icp4i/od/icp4i-od-collector
   - image: cp/icp4i/od/icp4i-od-config-db
   - image: cp/icp4i/od/icp4i-od-housekeeping
   - image: cp/icp4i/od/icp4i-od-install-assist
@@ -367,3 +448,134 @@ images:
   - image: cp/icp-foundation/velero
   - image: cp/icp-foundation/vulnerability-annotator
   - image: cp/icp-foundation/weave-collector
+  - image: ibmcom/acecc-content-server
+  - image: ibmcom/acecc-dashboard
+  - image: ibmcom/acecc-designerflows
+  - image: ibmcom/acecc-lcp
+  - image: ibmcom/ace-server
+  - image: ibmcom/appconnect-operator
+  - image: ibmcom/appconnect-operator-bundle
+  - image: ibmcom/appconnect-operator-catalog
+  - image: ibmcom/appconnect-operator-init
+  - image: ibmcom/aspera-hsts-bundle
+  - image: ibmcom/aspera-hsts-catalog
+  - image: ibmcom/aspera-hsts-operator
+  - image: ibmcom/aspera-hsts-utils
+  - image: ibmcom/couchdb2
+  - image: ibmcom/couchdb3
+  - image: ibmcom/couchdb-operator
+  - image: ibmcom/couchdb-operator-catalog
+  - image: ibmcom/couchdb-operator-mgmt
+  - image: ibmcom/datapower-monitor
+  - image: ibmcom/datapower-operator
+  - image: ibmcom/datapower-operator-bundle
+  - image: ibmcom/datapower-operator-catalog
+  - image: ibmcom/ibm-apiconnect-catalog
+  - image: ibmcom/ibm-apiconnect-operator
+  - image: ibmcom/ibm-apiconnect-operator-bundle
+  - image: ibmcom/ibm-cp-integration-bundle
+  - image: ibmcom/ibm-cp-integration-catalog
+  - image: ibmcom/ibm-cp-integration-operator
+  - image: ibmcom/ibm-eventstreams-catalog
+  - image: ibmcom/ibm-eventstreams-operator
+  - image: ibmcom/ibm-eventstreams-operator-bundle
+  - image: ibmcom/ibm-eventstreams-operator-init
+  - image: ibmcom/ibm-integration-asset-repository-bundle
+  - image: ibmcom/ibm-integration-asset-repository-catalog
+  - image: ibmcom/ibm-integration-asset-repository-operator
+  - image: ibmcom/ibm-integration-asset-repository-webhook-init
+  - image: ibmcom/ibm-integration-operations-dashboard-bundle
+  - image: ibmcom/ibm-integration-operations-dashboard-catalog
+  - image: ibmcom/ibm-integration-operations-dashboard-operator
+  - image: ibmcom/ibm-integration-platform-navigator-bundle
+  - image: ibmcom/ibm-integration-platform-navigator-catalog
+  - image: ibmcom/ibm-integration-platform-navigator-operator
+  - image: ibmcom/ibm-integration-platform-navigator-webhook-init
+  - image: ibmcom/ibm-mq-operator
+  - image: ibmcom/ibm-mq-operator-bundle
+  - image: ibmcom/ibm-mq-operator-catalog
+  - image: ibmcom/icp4i-od-agent
+  - image: ibmcom/icp4i-od-collector
+  - image: ibmcom/mq
+  - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/collectd-exporter
+  - image: quay.io/opencloudio/common-service-operator
+  - image: quay.io/opencloudio/common-web-ui
+  - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/curl
+  - image: quay.io/opencloudio/dashboard-controller
+  - image: quay.io/opencloudio/default-http-backend
+  - image: quay.io/opencloudio/fluentd
+  - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/iam-policy-administration
+  - image: quay.io/opencloudio/iam-policy-controller
+  - image: quay.io/opencloudio/iam-policy-decision
+  - image: quay.io/opencloudio/ibm-auditlogging-operator
+  - image: quay.io/opencloudio/ibm-catalog-ui-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-common-service-catalog
+  - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-elastic-stack-operator
+  - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-helm-api-operator
+  - image: quay.io/opencloudio/ibm-helm-repo-operator
+  - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-licensing
+  - image: quay.io/opencloudio/ibm-licensing-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/ibm-mongodb
+  - image: quay.io/opencloudio/ibm-mongodb-exporter
+  - image: quay.io/opencloudio/ibm-mongodb-install
+  - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-catalog-ui
+  - image: quay.io/opencloudio/icp-cert-manager-acmesolver
+  - image: quay.io/opencloudio/icp-cert-manager-cainjector
+  - image: quay.io/opencloudio/icp-cert-manager-controller
+  - image: quay.io/opencloudio/icp-cert-manager-webhook
+  - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icp-elasticsearch-oss
+  - image: quay.io/opencloudio/icp-filebeat-oss
+  - image: quay.io/opencloudio/icp-helm-api
+  - image: quay.io/opencloudio/icp-helm-repo
+  - image: quay.io/opencloudio/icp-helm-rudder
+  - image: quay.io/opencloudio/icp-iam-onboarding
+  - image: quay.io/opencloudio/icp-identity-manager
+  - image: quay.io/opencloudio/icp-identity-provider
+  - image: quay.io/opencloudio/icp-initcontainer
+  - image: quay.io/opencloudio/icp-kibana-oss
+  - image: quay.io/opencloudio/icp-logstash-oss
+  - image: quay.io/opencloudio/icp-management-ingress
+  - image: quay.io/opencloudio/icp-memcached
+  - image: quay.io/opencloudio/icp-oidcclient-watcher
+  - image: quay.io/opencloudio/icp-platform-api
+  - image: quay.io/opencloudio/icp-platform-auth
+  - image: quay.io/opencloudio/icp-platform-header
+  - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/indices-cleaner
+  - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/logging-pki-init
+  - image: quay.io/opencloudio/metering-data-manager
+  - image: quay.io/opencloudio/metering-mcmui
+  - image: quay.io/opencloudio/metering-report
+  - image: quay.io/opencloudio/metering-ui
+  - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/nginx-ingress-controller
+  - image: quay.io/opencloudio/node-exporter
+  - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/prometheus
+  - image: quay.io/opencloudio/prometheus-config-reloader
+  - image: quay.io/opencloudio/prometheus-controller
+  - image: quay.io/opencloudio/prometheus-operator
+  - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/tiller

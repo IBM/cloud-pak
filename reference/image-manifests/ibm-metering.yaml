@@ -1,0 +1,8 @@
+source: ibm-metering-case-bundle/case/ibm-metering/case.yaml
+description: "The IBM metering service captures detailed usage metrics for your applications and cluster. The metric data is used for IBM Product licensing compliance and can be viewed in the metering user interface or downloaded in a report for use in internal charge-back for cluster workloads."
+images:
+  - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/metering-data-manager
+  - image: quay.io/opencloudio/metering-mcmui
+  - image: quay.io/opencloudio/metering-report
+  - image: quay.io/opencloudio/metering-ui

@@ -1,0 +1,6 @@
+source: ibm-cs-healthcheck-case-bundle/case/ibm-cs-healthcheck/case.yaml
+description: "ibm-healthcheck-operator CASE"
+images:
+  - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/icp-memcached
+  - image: quay.io/opencloudio/system-healthcheck-service
