@@ -1,0 +1,13 @@
+images:
+  - cde-sb-proxy-cp4d:11.1.2020061606-ppc64le
+  - cde-backend-cp4d:11.1.2020061503-ppc64le
+  - cde-redis-cp4d:1.0.8-ppc64le
+patchFile: patchCommands.txt
+resourcesChanged:
+  - Kind: Deployment
+    Name: cognos-ibm-cde-prod-proxy
+  - Kind: Deployment
+    Name: cognos-ibm-cde-prod-redis
+description: FixPack VA Scans
+
+

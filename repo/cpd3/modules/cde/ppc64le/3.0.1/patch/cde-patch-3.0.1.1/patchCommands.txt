@@ -1,0 +1,8 @@
+scale deployment cognos-ibm-cde-prod-redis --replicas 0
+scale deployment cognos-ibm-cde-prod-proxy --replicas 0
+patch deployment cognos-ibm-cde-prod-redis --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "daas-sb-proxy", "image":"{{ .DockerRegistryPrefix }}/cde-redis-cp4d:1.0.8-ppc64le"} ] } } } }'
+patch deployment cognos-ibm-cde-prod-proxy --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "daas-sb-proxy", "initContainers":"{{ .DockerRegistryPrefix }}/cde-redis-cp4d:1.0.8-ppc64le"} ] } } } }'
+patch deployment cognos-ibm-cde-prod-proxy --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "daas-sb-proxy", "image":"{{ .DockerRegistryPrefix }}/cde-sb-proxy-cp4d:11.1.2020061606-ppc64le"} ] } } } }'
+patch deployment cognos-ibm-cde-prod-proxy --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "daas-server", "image":"{{ .DockerRegistryPrefix }}/cde-backend-cp4d:11.1.2020061503-ppc64le"} ] } } } }'
+scale deployment cognos-ibm-cde-prod-proxy --replicas 2
+scale deployment cognos-ibm-cde-prod-redis --replicas 1
