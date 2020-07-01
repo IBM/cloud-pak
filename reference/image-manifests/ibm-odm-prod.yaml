@@ -1,6 +1,11 @@
 source: ibm-odm-prod-bundle/case/ibm-odm-prod/case.yaml
 description: "IBM Operational Decision Manager"
 images:
+  - image: cp/cp4a/odm/dbserver
+  - image: cp/cp4a/odm/odm-decisioncenter
+  - image: cp/cp4a/odm/odm-decisionrunner
+  - image: cp/cp4a/odm/odm-decisionserverconsole
+  - image: cp/cp4a/odm/odm-decisionserverruntime
   - image: hyc-odm-docker.artifactory.swg-devops.com/dbserver
   - image: hyc-odm-docker.artifactory.swg-devops.com/odm-decisioncenter
   - image: hyc-odm-docker.artifactory.swg-devops.com/odm-decisionrunner
