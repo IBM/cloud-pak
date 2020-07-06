@@ -1,0 +1,1 @@
+patch deployment utils-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "utils-api-container","image": "{{.DockerRegistryPrefix}}/privatecloud-utils-api:v3.13.1627-x86_64"}]}}}}'
