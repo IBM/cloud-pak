@@ -1,0 +1,11 @@
+# v1.3.0.0-302 patch yaml file
+images:
+# more can be added in the images list
+- dv-mariadb:v1.3.0.0-302
+- dv-caching:v1.3.0.0-302
+- dv-api:v1.3.0.0-302
+- dv-unifiedconsole:v1.3.0.0-302
+- dv-engine:v1.3.0.0-302
+#patchFile name can be changed to a more meaningful one if necessariy
+patchFile: patchCommands.txt
+description: To patch DV v1.3.0.0 with a few Docker images from build 302
