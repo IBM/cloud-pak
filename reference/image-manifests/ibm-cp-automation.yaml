@@ -38,6 +38,7 @@ images:
   - image: cp/cp4a/bai/bai-bpmn
   - image: cp/cp4a/bai/bai-content
   - image: cp/cp4a/bai/bai-elasticsearch
+  - image: cp/cp4a/bai/bai-event-forwarder
   - image: cp/cp4a/bai/bai-flink
   - image: cp/cp4a/bai/bai-flink-zookeeper
   - image: cp/cp4a/bai/bai-icm
@@ -111,3 +112,17 @@ images:
   - image: cp/cp4a/ums/dba-keytool-initcontainer
   - image: cp/cp4a/ums/dba-keytool-jobcontainer
   - image: cp/cp4a/ums/ums
+  - image: cp/ibm-eventstreams-admin
+  - image: cp/ibm-eventstreams-admin-ui
+  - image: cp/ibm-eventstreams-jmxtrans
+  - image: cp/ibm-eventstreams-kafka
+  - image: cp/ibm-eventstreams-metrics-collector
+  - image: cp/ibm-eventstreams-rest-producer
+  - image: cp/ibm-eventstreams-schema-proxy
+  - image: cp/ibm-eventstreams-schema-registry
+  - image: cp/ibm-eventstreams-schema-registry-avro
+  - image: cp/ibm-eventstreams-session-store
+  - image: ibmcom/ibm-eventstreams-catalog
+  - image: ibmcom/ibm-eventstreams-operator
+  - image: ibmcom/ibm-eventstreams-operator-bundle
+  - image: ibmcom/ibm-eventstreams-operator-init
