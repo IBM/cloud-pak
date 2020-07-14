@@ -61,6 +61,7 @@ the chart's documentation for instructions.
 | ibm-f5bigip-controller | ibm-anyuid-psp |
 | ibm-galera-mariadb-dev | ibm-anyuid-hostpath-psp |
 | ibm-glusterfs | ibm-privileged-psp |
+| ibm-guardium-insights-prod | ibm-restricted-psp |
 | ibm-hazelcast-dev | ibm-anyuid-psp |
 | ibm-ilmt | ibm-privileged-psp |
 | ibm-istio | ibm-privileged-psp |
