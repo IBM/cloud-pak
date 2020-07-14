@@ -1,0 +1,11 @@
+# v1.4.1.0-33.serviceinstance patch yaml file
+images:
+# more can be added in the images list
+- dv-metastore:v1.4.1.0-33
+- dv-caching:v1.4.1.0-33
+- dv-api:v1.4.1.0-33
+- dv-unifiedconsole:v1.4.1.0-33
+- dv-engine:v1.4.1.0-33
+#patchFile name can be changed to a more meaningful one if necessariy
+patchFile: patchCommands.txt
+description: To patch DV v1.4.1.0 with a few Docker images from build 33
