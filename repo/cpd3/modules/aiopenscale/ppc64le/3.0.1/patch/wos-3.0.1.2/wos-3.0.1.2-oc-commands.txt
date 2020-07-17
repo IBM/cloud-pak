@@ -1,0 +1,6 @@
+set env deployment/aiopenscale-ibm-aios-common-api BM_APP_VERSION=1.1.12.1
+patch deployment aiopenscale-ibm-aios-common-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-common-api","image": "{{.DockerRegistryPrefix}}/aios-common-api:1.1.12.1-ppc64le"}, {"name": "aios-common-api-nlp","image": "{{.DockerRegistryPrefix}}/aios-common-api-nlp:1.1.12.1-ppc64le"}]}}}}'
+set env deployment/aiopenscale-ibm-aios-notification BM_APP_VERSION=0.0.128.2
+patch deployment aiopenscale-ibm-aios-notification --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-notification","image": "{{.DockerRegistryPrefix}}/aios-orch-notifications-service:0.0.128.2-ppc64le"}]}}}}'
+set env deployment/aiopenscale-ibm-aios-dashboard BM_APP_VERSION=3.0.1.20
+patch deployment aiopenscale-ibm-aios-dashboard --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-dashboard","image": "{{.DockerRegistryPrefix}}/aios-dashboard:3.0.1.20-ppc64le"}]}}}}'
