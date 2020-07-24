@@ -1,0 +1,1 @@
+patch deployment ibm-db2z-ibm-unified-console --patch '{"spec": {"template": {"spec": {"containers": [{"name": "uc","image": "{{.DockerRegistryPrefix}}/ibm-db2z-uc:3.0.1-ucpatch01"}]}}}}'
