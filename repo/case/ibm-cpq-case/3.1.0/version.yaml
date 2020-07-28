@@ -1,0 +1,45 @@
+apiVersion: v1
+case:
+  appVersion: 10.0.0.10
+  catalogs:
+    cpq: {}
+    framework: {}
+    fulfillment: {}
+    ifs: {}
+    om: {}
+    order: {}
+    rhocp: {}
+    sterling: {}
+    yantra: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Chart for deploying IBM Cost Price Quote Software
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-oms-logo.png
+  licenses:
+    licenses:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenses
+      ref: LICENSE-en
+  name: ibm-cpq-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+  version: 3.1.0
+  webPage: https://www.ibm.com
+created: 2020-07-28T16:42:24.67248251+0000
+digest: sha256:43d7eff9c2c031b60f869f674eacc5ea4fa347a8ee331167e8c50128afbbf50c
