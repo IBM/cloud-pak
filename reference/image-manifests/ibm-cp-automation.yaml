@@ -1,8 +1,10 @@
 source: ibm-cp4a-case-bundle/case/ibm-cp-automation/case.yaml
 description: "A CASE for an operator which deploys cp4a"
 images:
+  - image: cp/cp4a/aae/dba-dbcompatibility-initcontainer
   - image: cp/cp4a/aae/dba-etcd
   - image: cp/cp4a/aae/dba-keytool-initcontainer
+  - image: cp/cp4a/aae/dba-umsregistration-initjob
   - image: cp/cp4a/aae/solution-server
   - image: cp/cp4a/aae/solution-server-helmjob-db
   - image: cp/cp4a/ads/ads-download
