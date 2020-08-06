@@ -1,0 +1,17 @@
+images:
+- fci-cedm-integration:6.5.2-PATCH1
+- fci-security-auth:6.5.2-PATCH1
+- fci-solution:6.5.2-PATCH1
+- fci-messaging:6.5.2-PATCH1
+patchFile: patchCommands.txt
+resourcesChanged:
+- kind: Deployment
+  name: fci-cedm-integration
+- kind: Deployment
+  name: fci-security-auth-nodejs
+- kind: Deployment
+  name: fci-case-manager-fci-solution
+- kind: Statefulset
+  name: fci-case-manager-fci-messaging
+description: "APAR patch 1 for FCI 6.5.2"
+
