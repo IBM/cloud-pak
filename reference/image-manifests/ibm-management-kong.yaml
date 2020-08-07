@@ -1,0 +1,8 @@
+source: ibm-kong-operator-case-bundle/case/ibm-management-kong/case.yaml
+description: "A CASE for an operator which deploy Kong"
+images:
+  - image: cp/cp4mcm/busybox
+  - image: cp/cp4mcm/ibm-kong-operator
+  - image: cp/cp4mcm/kong
+  - image: cp/cp4mcm/kong-ingress-controller
+  - image: cp/cp4mcm/kubectl
