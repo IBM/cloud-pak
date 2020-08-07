@@ -1,0 +1,9 @@
+source: ibm-sre-bastion-operator-case-bundle/case/ibm-management-sre-bastion/case.yaml
+description: "This case is used to install ibm-management-sre-bastion into k8s cluster."
+images:
+  - image: cp/cp4mcm/bastion
+  - image: cp/cp4mcm/ibm-sre-bastion-operator
+  - image: cp/cp4mcm/postgresql
+  - image: cp/cp4mcm/sre-ui
+  - image: cp/cp4mcm/teleport
+  - image: cp/cp4mcm/vault
