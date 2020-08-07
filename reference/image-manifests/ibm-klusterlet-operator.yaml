@@ -1,0 +1,14 @@
+source: ibm-klusterlet-operator-case-bundle/case/ibm-klusterlet-operator/case.yaml
+description: "Case containing operators for CP4MCM Klusterlet"
+images:
+  - image: quay.io/opencloudio/coredns
+  - image: quay.io/opencloudio/ham-resource-discoverer
+  - image: quay.io/opencloudio/icp-cert-manager-controller
+  - image: quay.io/opencloudio/icp-multicluster-endpoint-operator
+  - image: quay.io/opencloudio/klusterlet-component-operator
+  - image: quay.io/opencloudio/mcm-compliance
+  - image: quay.io/opencloudio/mcm-klusterlet
+  - image: quay.io/opencloudio/mcm-operator
+  - image: quay.io/opencloudio/mcm-service-registry
+  - image: quay.io/opencloudio/search-collector
+  - image: quay.io/opencloudio/tiller

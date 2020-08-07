@@ -1,0 +1,24 @@
+source: ibm-sre-chatops-operator-bundle/case/ibm-management-sre-chatops/case.yaml
+description: "The IBM SRE ChatOps provides an iFTTT platform"
+images:
+  - image: cp/cp4mcm/ibmcom/ibm-mongodb-install
+  - image: cp/cp4mcm/ibmcom/ibm-mongodb-ubi7
+  - image: cp/cp4mcm/quay.io/coreos/etcd
+  - image: cp/cp4mcm/quay.io/coreos/etcd-operator
+  - image: cp/cp4mcm/st2actionrunner-ubi8
+  - image: cp/cp4mcm/st2api-ubi8
+  - image: cp/cp4mcm/st2auth-ubi8
+  - image: cp/cp4mcm/st2chatops-ubi8
+  - image: cp/cp4mcm/st2garbagecollector-ubi8
+  - image: cp/cp4mcm/st2notifier-ubi8
+  - image: cp/cp4mcm/st2pack
+  - image: cp/cp4mcm/st2resultstracker-ubi8
+  - image: cp/cp4mcm/st2rulesengine-ubi8
+  - image: cp/cp4mcm/st2scheduler-ubi8
+  - image: cp/cp4mcm/st2sensorcontainer-ubi8
+  - image: cp/cp4mcm/st2stream-ubi8
+  - image: cp/cp4mcm/st2timersengine-ubi8
+  - image: cp/cp4mcm/st2web-ubi8
+  - image: cp/cp4mcm/st2workflowengine-ubi8
+  - image: cp/cp4mcm/stackstorm/rabbitmq-ubi
+  - image: cp/cp4mcm/ubi8/ubi-minimal
