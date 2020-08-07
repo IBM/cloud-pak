@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    automation: {}
+  classifications:
+    commercial: {}
+  description: Case containing operators for CP4MCM Klusterlet
+  displayDescription: ""
+  displayName: IBM Management Klusterlet Operator case
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4mcm-20-license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Multicloud Management v2.0
+        displayName: cp4mcm-20-license
+      ref: LICENSE
+      url: https://ibm.biz/cp4mcm-20-license
+  name: ibm-klusterlet-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      amazon: {}
+      ibm: {}
+      redhat: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2020-08-07T18:30:52.41755071+0000
+digest: sha256:43cc87b2db8f715b36edd8ce36582a8b707e9857bb481f04d7725bf6a343c134
