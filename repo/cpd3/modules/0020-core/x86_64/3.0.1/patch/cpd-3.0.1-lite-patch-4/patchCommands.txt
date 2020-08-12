@@ -1,0 +1,3 @@
+patch deployment zen-core-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-api-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:v3.0.1-patch-x86_64-3"}]}}}}'
+patch deployment zen-watcher --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-watcher-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:v3.0.1-patch-x86_64-3"}],"initContainers":[{"name": "zen-placeholder-init","image": "{{.DockerRegistryPrefix}}/zen-core-api:v3.0.1-patch-x86_64-3"}]}}}}'
+patch deployment zen-core --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-container","image": "{{.DockerRegistryPrefix}}/zen-core:v3.0.1-patch-x86_64-2"}]}}}}'
