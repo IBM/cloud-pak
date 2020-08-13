@@ -1,0 +1,18 @@
+type: assembly
+lifeCycle: live
+name: fci
+licenseArchiveName: fci-6.5.3.zip
+description: fci assembly
+architecture: x86_64
+installOverride: assembly_install.yaml
+upgradeOverride: assembly_upgrade.yaml
+bricks:
+  - name: lite
+    version: 3.0.1
+    type: assembly
+  - name: fci
+    version: 6.5.3
+    type: module
+  - name: fci-adm-setup
+    version: 6.5.3
+    type: module
