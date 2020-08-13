@@ -1,0 +1,17 @@
+images:
+- spark-hb-truststore-util:3.0.30.1-x86_64
+- spark-hb-nginx:3.0.30.1-x86_64
+- spark-hb-control-plane:3.0.30.3-x86_64
+patchFile: patchCommands.txt
+resourcesChanged:
+- Kind: ConfigMap
+  Name: spark-hb-deployment-properties
+- Kind: ConfigMap
+  Name: spark-hb-nginx-configmap
+- Kind: ConfigMap
+  Name: hummingbird-route
+- Kind: Deployment
+  Name: spark-hb-nginx
+- Kind: Deployment
+  Name: spark-hb-control-plane
+description: "Support for Platform token support for Jobs API apart from instance token only and Change in Algo for adding a flag to get executor event logs so that we do not wait for all the executor pods to come up"
