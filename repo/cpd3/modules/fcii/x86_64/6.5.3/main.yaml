@@ -1,0 +1,19 @@
+type: module
+category: helm-chart
+name: fcii module
+description: "fcii is the first module to install"
+registry-reference: base-registry
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml
+helmUpgradeForce: true
+chart: ibm-fci-claims-fraud-prod-6.5.3.tgz
+md5: 571d2ce5505bd7e2459292992d46922c
+timeout: 75
+releaseName: fcii
+images:
+  - name: fci-common-scripts
+    tag: 6.5.3
+  - name: fcii-data-store-client
+    tag: 6.5.3
+  - name: fcii-ui
+    tag: 6.5.3
