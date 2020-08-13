@@ -1,0 +1,191 @@
+apiVersion: v1
+data:
+  nginx.conf: "location @jkghandler {\n    set $original_uri $uri;\n    set $orig_loc
+    $upstream_http_location;\n    set $orig_auth $upstream_http_authorization;              \n
+    \     if ($uri ~* \"(.*)/jkg/(.*)\"){\n        set $new_uri $2;\n      } \n    proxy_http_version
+    1.1;  \n    proxy_set_header Authorization $orig_auth;                     \n
+    \   proxy_set_header Upgrade $http_upgrade;\n    proxy_set_header Connection \"Upgrade\";\n
+    \   proxy_read_timeout 86400;\n    proxy_pass $orig_loc$new_uri;\n    add_header
+    Cache-Control \"no-cache, no-store, must-revalidate\";\n    add_header Pragma
+    \"no-cache\";\n    add_header X-XSS-Protection \"1; mode=block\";\n    add_header
+    X-Content-Type-Options \"nosniff\";\n    }\n\nlocation = /internal {\n    internal;\n
+    \   proxy_pass              https://spark-hb-control-plane:9443/access/v1/apikey/authorize;\n
+    \   proxy_pass_request_body off;\n    proxy_set_header        Content-Length \"\";\n
+    \   proxy_set_header X-Original-Request $request;\n   }\nlocation = /internal1
+    {\n    internal;\n    proxy_pass              https://spark-hb-control-plane:9443/v1/authorizeUser;\n
+    \   proxy_pass_request_body off;\n    proxy_set_header        Content-Length \"\";\n
+    \   proxy_set_header X-Original-Request $request;\n   }\n   location @sparkuihandler
+    {\n    set $original_uri $uri;\n    set $sparkui \"sparkui\";\n    set $orig_loc
+    $upstream_http_location;\n    set $orig_auth $upstream_http_authorization;              \n
+    \   proxy_ignore_headers    Set-Cookie;\n    proxy_set_header Cookie \"\";\n    proxy_set_header
+    Authorization $orig_auth;                     \n    proxy_pass $orig_loc$sparkui/$3$is_args$args;\n
+    \              proxy_set_header X-Real-IP $remote_addr;\n               proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n               proxy_set_header Accept-Encoding
+    \"\";\n               sub_filter 'href=\"/$kernel_id/sparkui/\"' 'href=\"/v2/spark/ae/$1/sparkui/$kernel_id/\"';\n
+    \              sub_filter '</a><a href=\"/$kernel_id/sparkui/\">Back to Master</a></p>'
+    '</a><a href=\"/v2/spark/ae/$1/sparkui/$kernel_id/\">Back to Master</a></p>';\n
+    \              sub_filter \"/$kernel_id/sparkui/proxy/app\" \"/v2/spark/ae/$1/sparkui/$kernel_id/proxy/app\";\n
+    \              sub_filter '\"/$kernel_id/sparkui/static/' '\"/v2/spark/ae/$1/sparkui/$kernel_id/static/';\n
+    \              sub_filter \"/$kernel_id/sparkui/proxy/worker\" \"/v2/spark/ae/$1/sparkui/$kernel_id/proxy/worker\";\n
+    \              sub_filter_once off;\n    }\n    location @sparkuistatichandler
+    {\n      set $original_uri $uri;\n      set $sparkui \"sparkui\";\n      set $orig_loc
+    $upstream_http_location;\n      set $orig_auth $upstream_http_authorization;              \n
+    \     proxy_ignore_headers    Set-Cookie;\n      proxy_set_header Cookie \"\";\n
+    \     proxy_set_header Authorization $orig_auth;                     \n      proxy_pass
+    $orig_loc$sparkui/static/$3$is_args$args;\n               proxy_set_header X-Real-IP
+    $remote_addr;\n               proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n
+    \              proxy_set_header Accept-Encoding \"\";\n               sub_filter
+    'href=\"/$kernel_id/sparkui/\"' 'href=\"/v2/spark/ae/$1/sparkui/$kernel_id/\"';\n
+    \              sub_filter '</a><a href=\"/$kernel_id/sparkui/\">Back to Master</a></p>'
+    '</a><a href=\"/v2/spark/ae/$1/sparkui/$kernel_id/\">Back to Master</a></p>';\n
+    \              sub_filter \"/$kernel_id/sparkui/proxy/app\" \"/v2/spark/ae/$1/sparkui/$kernel_id/proxy/app\";\n
+    \              sub_filter '\"/$kernel_id/sparkui/static/' '\"/v2/spark/ae/$1/sparkui/$kernel_id/static/';\n
+    \              sub_filter \"/$kernel_id/sparkui/proxy/worker\" \"/v2/spark/ae/$1/sparkui/$kernel_id/proxy/worker\";\n
+    \              sub_filter_once off;\n    }              \n    location @historyuihandler
+    {\n    set $original_uri $uri;\n    set $historyui \"historyui\";\n    set $orig_loc
+    $upstream_http_location;\n    set $orig_auth $upstream_http_authorization;              \n
+    \   proxy_set_header Authorization $orig_auth;                     \n    proxy_pass
+    $orig_loc$historyui/$3;\n               proxy_set_header X-Real-IP $remote_addr;\n
+    \              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n
+    \              proxy_set_header Accept-Encoding \"\";\n               sub_filter
+    \"$kernel_id/historyui\" \"ae/$1/historyui/$kernel_id\";\n               sub_filter_once
+    off;\n    }\n    location @instancehistoryuihandler {\n   set $original_uri $uri;\n
+    \  set $historyui \"historyui\";\n   set $orig_loc $upstream_http_location;\n
+    \  set $orig_auth $upstream_http_authorization;\n   proxy_set_header Authorization
+    $orig_auth;\n   proxy_pass $orig_loc$historyui/$2$is_args$args;\n   proxy_redirect
+    ~^(http://[^:]+):\\d+/[a-zA-Z0-9]+/historyui(/.+)$ /v2/spark/ae/$instance_id/historyui$2;\n
+    \             proxy_set_header X-Real-IP $remote_addr;\n              proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n              proxy_set_header Accept-Encoding
+    \"\";\n              sub_filter_types *;\n              sub_filter \"$instance_id/historyui\"
+    \"v2/spark/ae/$instance_id/historyui\";\n              sub_filter_once off;\n
+    \  }\n   location @instancejobhistoryuihandler {\n   set $original_uri $uri;\n
+    \  set $historyui \"historyui\";\n   set $orig_loc $upstream_http_location;\n
+    \  set $orig_auth $upstream_http_authorization;\n   proxy_set_header Authorization
+    $orig_auth;\n   #return 404 $orig_loc;\n   proxy_pass $orig_loc/$3$is_args$args;\n\n
+    \             proxy_set_header X-Real-IP $remote_addr;\n              proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n              proxy_set_header Accept-Encoding
+    \"\";\n              sub_filter_types  application/javascript;\n              #sub_filter_types
+    *;\n              sub_filter \"$instance_id/historyui\" \"v2/spark/ae/$instance_id/historyui\";\n
+    \             sub_filter_once off;\n   }\n   location ~ /ae/spark/v2(.*)$ {\n
+    \     rewrite /ae/spark/v2(.*) /v2/spark/ae$1 last;\n   }\n   location ~ /v2/spark/ae(.*)$
+    {\n      proxy_intercept_errors on;\n      tcp_nodelay             on;                                                                                                                                                                                                                                                     \n
+    \     client_body_timeout     2m;                                                                                                                           \n
+    \     proxy_connect_timeout   600;           \n      proxy_send_timeout      600;
+    \          \n      proxy_read_timeout      600;\n      send_timeout            600;\n
+    \     location ~ /v2/spark/ae/(.*)/historyui/(\\w+-\\w+-\\w+-\\w+-\\w+)/(.*) {\n
+    \          access_by_lua_file /nginx_data/checkjwt.lua;\n           #auth_request
+    \    /internal;\n           #auth_request_set $auth_status $upstream_status;\n
+    \          set $instance_id $1;\n           set $kernel_id $2;\n           proxy_set_header
+    content-type \"application/json\";\n           set $serv  https://spark-hb-control-plane:9443/jobService/v2/$1/historyui/$2;\n
+    \          proxy_pass  $serv;\n           error_page 301 302 303 = @instancejobhistoryuihandler;\n
+    \    }\n     location ~ /v2/spark/ae/(.*)/historyui/(.*) {\n           access_by_lua_file
+    /nginx_data/checkjwt.lua;\n           #auth_request     /internal;\n           #auth_request_set
+    $auth_status $upstream_status;\n           set $instance_id $1;\n           proxy_set_header
+    content-type \"application/json\";\n           set $serv https://spark-hb-control-plane:9443/instance_manager/v1/instance/history/$1;\n
+    \          proxy_pass  $serv;\n           sub_filter_once off;\n           error_page
+    301 302 303 = @instancehistoryuihandler;\n     }\n             \n      location
+    ~ /v2/spark/ae/(.*)/sparkui/(.*)$ {\n\n          location ~ /v2/spark/ae/(.*)/sparkui/(.*){\n\n
+    \            location ~ /v2/spark/ae/(.*)/sparkui/(\\w+-\\w+-\\w+-\\w+-\\w+)/static/(.*)
+    {\n              # we are not authenticating the Static resources\n              set
+    $kernel_id $2;\n              proxy_set_header content-type \"application/json\";\n
+    \             set $serv  https://spark-hb-control-plane:9443/ae/v1/$1/$2;\n              proxy_pass
+    \ $serv;\n              error_page 301 302 303 = @sparkuistatichandler;\n\n             }\n
+    \            location ~ /v2/spark/ae/(.*)/sparkui/(\\w+-\\w+-\\w+-\\w+-\\w+)/(.*)
+    {\n               #auth_request     /internal;\n               #auth_request_set
+    $auth_status $upstream_status;\n               set $kernel_id $2;\n               proxy_set_header
+    content-type \"application/json\";\n               set $serv  https://spark-hb-control-plane:9443/ae/v1/$1/$2;\n
+    \              proxy_pass  $serv;\n               error_page 301 302 303 = @sparkuihandler;\n
+    \              }\n              }\n             }\n   location ~ /v2/spark/ae/(.*)/sparkuia/(.*)$
+    {\n\n          location ~ /v2/spark/ae/(.*)/sparkuia/(.*){\n\n             location
+    ~ /v2/spark/ae/(.*)/sparkuia/(\\w+-\\w+-\\w+-\\w+-\\w+)/static/(.*) {\n               set
+    $kernel_id $2;\n               proxy_set_header content-type \"application/json\";\n
+    \              set $serv  https://spark-hb-control-plane:9443/ae/v1/$1/$2;\n               proxy_pass
+    \ $serv; \n               error_page 301 302 303 = @sparkuiastatichandler;\n             }
+    \n\n             location ~ /v2/spark/ae/(.*)/sparkuia/(\\w+-\\w+-\\w+-\\w+-\\w+)/(.*)
+    {\n               #auth_request     /internal;\n               #auth_request_set
+    $auth_status $upstream_status;\n               set $kernel_id $2;\n               proxy_set_header
+    content-type \"application/json\";\n               set $serv  https://spark-hb-control-plane:9443/ae/v1/$1/$2;\n
+    \              proxy_pass  $serv;\n               error_page 301 302 303 = @sparkuiahandler;\n
+    \              \n               }\n              }\n }\n    \n      location ~
+    /v2/spark/ae/(.*)/jkg/(.*)$ {\n          #auth_request     /internal;\n          #auth_request_set
+    $auth_status $upstream_status;\n          location ~ /v2/spark/ae/(.*)/jkg/(.*)(interrupt|restart){\n
+    \             proxy_method GET;\n              proxy_set_header X-Real-IP $remote_addr;\n
+    \             proxy_set_header content-type \"application/json\";\n              proxy_set_header
+    Host $host;\n              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n
+    \             proxy_set_header X-NginX-Proxy true;\n              set $serv  https://spark-hb-control-plane:9443/ae/v1/$1/jkg/$2;\n
+    \             proxy_pass  $serv;\n              add_header Cache-Control \"no-cache,
+    no-store, must-revalidate\";\n              add_header Pragma \"no-cache\";\n
+    \             add_header X-XSS-Protection \"1; mode=block\";\n              add_header
+    X-Content-Type-Options \"nosniff\";\n              error_page 301 302 303 = @jkghandler;\n
+    \         }\n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header
+    content-type \"application/json\";\n      proxy_set_header Host $host;\n      proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-NginX-Proxy
+    true;\n      set $serv  https://spark-hb-control-plane:9443/ae/v1/$1/jkg/$2;\n
+    \     proxy_pass  $serv;\n      add_header Cache-Control \"no-cache, no-store,
+    must-revalidate\";\n      add_header Pragma \"no-cache\";\n      add_header X-XSS-Protection
+    \"1; mode=block\";\n      add_header X-Content-Type-Options \"nosniff\";\n      error_page
+    301 302 303 = @jkghandler;\n   }\n   \n   \n   location ~ /v2/spark/ae/(\\w+)/jobs(.*)$
+    {\n              #auth_request     /internal;\n              #auth_request_set
+    $auth_status $upstream_status; \n              proxy_set_header X-Real-IP $remote_addr;\n
+    \             proxy_set_header content-type \"application/json\";\n              proxy_set_header
+    Host $host;\n              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n
+    \             proxy_set_header X-NginX-Proxy true;\n              set $serv  https://spark-hb-control-plane:9443/jobService/v1/$1/jobs$2;\n
+    \             proxy_pass  $serv;\n          }\n  location ~ /v2/spark/ae/(\\w+)/v2/jobs(.*)$
+    {\n      auth_request     /internal;\n      auth_request_set $auth_status $upstream_status;
+    \n      proxy_set_header X-Real-IP $remote_addr;\n      proxy_set_header content-type
+    \"application/json\";\n      proxy_set_header Host $host;\n      proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header X-NginX-Proxy
+    true;\n      set $serv  https://spark-hb-control-plane:9443/jobService/v2/$1/jobs$2;\n
+    \     proxy_pass  $serv;\n      add_header Cache-Control \"no-cache, no-store,
+    must-revalidate\";\n      add_header Pragma \"no-cache\";\n      add_header X-XSS-Protection
+    \"1; mode=block\";\n      add_header X-Content-Type-Options \"nosniff\";\n   }\n\nlocation
+    ~ /v2/spark/ae/dryrun(.*)$ {\n    #auth_request     /internal;\n    #auth_request_set
+    $auth_status $upstream_status;\n    proxy_set_header Host $http_host;\n    proxy_set_header
+    X-Forwarded-Host $http_host;\n    proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n    proxy_set_header content-type
+    \"application/json\";\n    proxy_set_header X-NginX-Proxy true;\n    proxy_pass
+    https://spark-hb-control-plane:9443/instance_manager/v1/instance$1;\n    add_header
+    Cache-Control \"no-cache, no-store, must-revalidate\";\n    add_header Pragma
+    \"no-cache\";\n    add_header X-XSS-Protection \"1; mode=block\";\n    add_header
+    X-Content-Type-Options \"nosniff\";\n}\n   \nlocation ~ /v2/spark/ae(.*)$ {\n
+    \   #auth_request     /internal;\n    #auth_request_set $auth_status $upstream_status;\n
+    \   proxy_set_header Host $http_host;\n    proxy_set_header X-Forwarded-Host $http_host;\n
+    \   proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header X-Forwarded-For
+    $proxy_add_x_forwarded_for;\n    proxy_set_header content-type \"application/json\";\n
+    \   proxy_set_header X-NginX-Proxy true;\n    proxy_pass https://spark-hb-control-plane:9443/instance_manager/v1/instance$1;\n
+    \   add_header Cache-Control \"no-cache, no-store, must-revalidate\";\n    add_header
+    Pragma \"no-cache\";\n    add_header X-XSS-Protection \"1; mode=block\";\n    add_header
+    X-Content-Type-Options \"nosniff\";\n}\n\nlocation ~ /v2/spark/ae(.*)$ {\n   location
+    ~ /v2/spark/ae/v1/(.*)$ {\n    auth_request     /internal1;\n    auth_request_set
+    $auth_status $upstream_status;\n    proxy_set_header Host $http_host;\n    proxy_set_header
+    X-Forwarded-Host $http_host;\n    proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n    proxy_set_header content-type
+    \"application/json\";\n    proxy_set_header X-NginX-Proxy true;\n    #access_by_lua_file
+    /nginx_data/checkjwt.lua;\n    proxy_pass https://spark-hb-control-plane:9443/v1/$1;\n
+    \   add_header Cache-Control \"no-cache, no-store, must-revalidate\";\n    add_header
+    Pragma \"no-cache\";\n    add_header X-XSS-Protection \"1; mode=block\";\n    add_header
+    X-Content-Type-Options \"nosniff\";\n\n}\nlocation ~ /v2/spark/ae(.*)$ {\n    #access_by_lua_file
+    /nginx_data/checkjwt.lua;\n    #auth_request     /internal;\n    #auth_request_set
+    $auth_status $upstream_status;\n    proxy_set_header Host $http_host;\n    proxy_set_header
+    X-Forwarded-Host $http_host;\n    proxy_set_header X-Real-IP $remote_addr;\n    proxy_set_header
+    X-Forwarded-For $proxy_add_x_forwarded_for;\n    proxy_set_header content-type
+    \"application/json\";\n    proxy_set_header X-NginX-Proxy true;\n    proxy_set_header
+    verify-jwt true; \n    proxy_pass https://spark-hb-control-plane:9443/instance_manager/v1/instance$1;\n
+    \   add_header Cache-Control \"no-cache, no-store, must-revalidate\";\n    add_header
+    Pragma \"no-cache\";\n    add_header X-XSS-Protection \"1; mode=block\";\n    add_header
+    X-Content-Type-Options \"nosniff\";\n}\n}\n}\n"
+kind: ConfigMap
+metadata:
+  labels:
+    app: spark-hb-register-route-configmap
+    app.kubernetes.io/instance: ibm-spark-prod
+    app.kubernetes.io/managed-by: helm
+    app.kubernetes.io/name: ibm-spark-prod
+    chart: ibm-spark-prod
+    helm.sh/chart: ibm-spark-prod
+    heritage: Tiller
+    icpdata_addon: "true"
+    icpdata_addon_version: 3.0.30
+    release: ibm-spark-prod
+  name: hummingbird-route
+  namespace: OC_PROJECT_NAMESPACE

@@ -1,0 +1,2 @@
+patch deployment aiopenscale-ibm-aios-ml-gateway-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-ml-gateway-service","image": "{{.DockerRegistryPrefix}}/aios-ml-gateway-service:3.0.1.846"}]}}}}'
+patch deployment aiopenscale-ibm-aios-explainability --patch '{"spec": {"template": {"spec": {"containers": [{"name": "explainability-service","image": "{{.DockerRegistryPrefix}}/explainability:1.0.1161.13"}]}}}}'
