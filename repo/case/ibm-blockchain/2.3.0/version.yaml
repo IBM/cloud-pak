@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 2.5.0
+  catalogs:
+    blockchain: {}
+  classifications:
+    commercial: {}
+  description: A case for IBM Blockchain Platform
+  displayDescription: ""
+  displayName: IBM Blockchain Platform CASE
+  icons: []
+  licenses:
+    license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Blockchain Platform 2.5.0 License
+        displayName: IBM Blockchain Platform 2.5.0 License
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Blockchain Platform 2.5.0 non IBM licenses
+        displayName: IBM Blockchain Platform 2.5.0 non IBM licenses
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Blockchain Platform 2.5.0 other notices & info
+        displayName: IBM Blockchain Platform 2.5.0 other notices & info
+      ref: notices
+  name: ibm-blockchain
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+  version: 2.3.0
+  webPage: https://www.ibm.com/blockchain
+created: 2020-08-14T20:14:37.40840731+0000
+digest: sha256:b0e6bb6e213fcbd2d722e339eb93059b0685cee5854abb319f2363e4e6a97347
