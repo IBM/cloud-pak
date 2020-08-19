@@ -1,0 +1,54 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    kubernetes.io/description: 'This policy provides pods with FOWNER capabilties primarily to chmod files and the ability to run as any user.  It also has a role binding applied to allow it to make queries to the kubernetes api server to allow containers to wait for services to become available before they start.'
+  name: fci-kube-api-fowner
+allowHostDirVolumePlugin: false
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegedContainer: false
+allowPrivilegeEscalation: false
+allowedCapabilities:
+- FOWNER
+allowedFlexVolumes: null
+allowedUnsafeSysctls: null
+defaultAddCapabilities: []
+defaultAllowPrivilegeEscalation: false
+forbiddenSysctls:
+  - "*"
+fsGroup:
+  type: MustRunAs
+  ranges:
+  - max: 65535
+    min: 1
+readOnlyRootFilesystem: false
+requiredDropCapabilities:
+- ALL
+runAsUser:
+  type: RunAsAny
+seccompProfiles:
+- docker/default
+# This can be customized for seLinuxOptions specific to your host machine
+seLinuxContext:
+  type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
+supplementalGroups:
+  type: MustRunAs
+  ranges:
+  - max: 65535
+# This can be customized to host specifics
+volumes:
+- configMap
+- downwardAPI
+- emptyDir
+- persistentVolumeClaim
+- projected
+- secret
+priority: 0
