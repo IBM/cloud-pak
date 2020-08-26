@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-discovery-sa
+  labels:
+    app.kubernetes.io/name: "admin"
+    helm.sh/chart: "admin"
+    app.kubernetes.io/managed-by: "Tiller"
+    app.kubernetes.io/instance: "admin"
+    release: "admin"
+    app.kubernetes.io/component: "admin-sa"
+automountServiceAccountToken: true
