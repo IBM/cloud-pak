@@ -1,0 +1,86 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: watson-ks
+# The description is mandatory
+description: IBM Watson Knowledge Studio for Cloud Pak for Data
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: wks-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-values-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+chart: ibm-watson-ks-prod-1.1.3.tgz
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: wks
+# Set to true will trigger the helm upgrade with force option. Optional. Missing means false
+helmUpgradeForce: false
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+scale:
+- small.yaml
+- medium.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+  - name: frontend-icp
+    tag: release-3-60-0-20200818-0252-1
+  - name: sbsep
+    tag: release-3-60-0-20200818-0252-1
+  - name: dispatcher
+    tag: release-3-60-0-20200818-0252-1
+  - name: aql-web-tooling
+    tag: wlp-release-v1.1.11-1.1.11-202008182140
+  - name: aql-web-tooling-proxy
+    tag: ubi-0.1.5-202007290229
+  - name: wkstoolbox
+    tag: ubi-master-20200731-0737-9
+  - name: wks-ibmjdk8-rhubi8
+    tag: master-20200730-1826-113
+  - name: opencontent-common-utils
+    tag: 1.1.8
+  - name: opencontent-icp-cert-gen-1
+    tag: 1.1.7
+  - name: opencontent-mongodb-config-copy
+    tag: 1.1.5
+  - name: opencontent-mongodb-install
+    tag: 1.1.4
+  - name: opencontent-mongodb-3
+    tag: 1.1.6
+  - name: opencontent-bats
+    tag: 1.1.4
+  - name: watson-gateway
+    tag: 3.6.11
+  - name: jobq
+    tag: master-88b15c6d-142
+  - name: sire-train-facade
+    tag: master-980fd4d0-163
+  - name: sire-train-runtime
+    tag: wdc-20181119-bf53efe6-82-ubi7-master-cbceeb6d-161
+  - name: sireg
+    tag: wdc-20181119-411d7ae9-81-ubi7-master-6b9b0afd-135-with-templates
+  - name: opencontent-postgres-stolon
+    tag: 2.0.2
+  - name: opencontent-minio
+    tag: 1.1.4
+  - name: opencontent-minio-client
+    tag: 1.0.4
+  - name: opencontent-etcd-3
+    tag: 1.1.5
+  - name: wks-glimpse-ene-builder
+    tag: release-3-60-0-20200818-0252-1
+  - name: model-mesh
+    tag: master-20200806-313
+  - name: wks-ene-expand
+    tag: release-3-60-0-20200818-0252-1
+  - name: model-management-api
+    tag: 1.0.1211-g194f5035.20-07-22-105041.icp-main
