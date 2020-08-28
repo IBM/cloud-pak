@@ -1,0 +1,25 @@
+type: module
+category: "adm-setup"
+description: RBAC Authorization for MongoDB
+files:
+- adm/mongodb-clusterrole.yaml
+- adm/mongodb-enterprise-appdb-sa.yaml
+- adm/mongodb-enterprise-database-pods-sa.yaml
+- adm/mongodb-role-appdb-binding.yaml
+- adm/mongodb-role-appdb.yaml
+- adm/mongodb-role.yaml
+- adm/mongodb-rolebinding-appdb.yaml
+- adm/mongodb-rolebinding.yaml
+- adm/mongodb-sa.yaml
+- adm/mongodb-enterprise-ops-manager-sa.yaml
+
+add-scc-to-user:
+- scc: restricted 
+  sa: mongodb-sa
+
+add-cluster-role-to-user:
+- clusterrole: mongodb-clusterrole
+  sa: mongodb-sa
+
+
+  
