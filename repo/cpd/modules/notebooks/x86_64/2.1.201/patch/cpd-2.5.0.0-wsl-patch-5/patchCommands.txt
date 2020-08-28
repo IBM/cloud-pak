@@ -1,0 +1,4 @@
+patch deployment ax-cdsx-jupyter-notebooks-converter-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix}}/jupyter-notebooks-converter:2.1.210"}]}}}}'
+patch deployment ax-cdsx-notebooks-job-manager-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix}}/notebooks:2.1.210"}]}}}}'
+patch deployment ax-wdp-notebooks-api-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix}}/notebooks:2.1.210"}]}}}}'
+patch deployment ax-ws-notebooks-ui-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix}}/notebooks:2.1.210"}]}}}}'
