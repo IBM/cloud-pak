@@ -1,6 +1,52 @@
 source: ibm-netcool-prod-bundle/case/ibm-netcool-prod/case.yaml
 description: "A Helm chart for IBM® Netcool® Operations Insight on Kubernetes"
 images:
+  - image: cp/noi/aggregation-collater-java-service
+  - image: cp/noi/aggregation-dedup-service
+  - image: cp/noi/aggregation-normalizer-service
+  - image: cp/noi/alert-details-service
+  - image: cp/noi/archiving-service
+  - image: cp/noi/asm-normalizer-service
+  - image: cp/noi/cassandra
+  - image: cp/noi/couchdb
+  - image: cp/noi/datalayer-cem-service
+  - image: cp/noi/ea-asm-mime
+  - image: cp/noi/ea-events-tooling
+  - image: cp/noi/ea-mime-classification-service
+  - image: cp/noi/ea-noigateway-ee
+  - image: cp/noi/eventsquery-service
+  - image: cp/noi/grafana
+  - image: cp/noi/inference-service
+  - image: cp/noi/ingestion-service
+  - image: cp/noi/kafka
+  - image: cp/noi/kafkarest
+  - image: cp/noi/logstash
+  - image: cp/noi/nasm-elasticsearch
+  - image: cp/noi/nasm-nginx
+  - image: cp/noi/nasm-ubi-base-layer
+  - image: cp/noi/netcool-configuration-share-ee
+  - image: cp/noi/netcool-db2ese-ee
+  - image: cp/noi/netcool-db2rtcl-ee
+  - image: cp/noi/netcool-impactgui-ee
+  - image: cp/noi/netcool-ldap-proxy-ee
+  - image: cp/noi/netcool-nciserver-ee
+  - image: cp/noi/netcool-nco-g-objserv-bi-ee
+  - image: cp/noi/netcool-nco-objserv-ee
+  - image: cp/noi/netcool-openldap-ee
+  - image: cp/noi/netcool-qp-proxy-ee
+  - image: cp/noi/netcool-webgui-asm-ee
+  - image: cp/noi/node-server
+  - image: cp/noi/noiactions-service
+  - image: cp/noi/noi-alert-action-service
+  - image: cp/noi/noi-alert-trigger-service
+  - image: cp/noi/opencontent-redis-5
+  - image: cp/noi/policy-registry-service
+  - image: cp/noi/servicemonitor
+  - image: cp/noi/spark
+  - image: cp/noi/training-service
+  - image: cp/noi/ui-api
+  - image: cp/noi/ui-content
+  - image: cp/noi/zookeeper
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/akora/node-server
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/couchdb
   - image: hyc-hdm-staging-docker-virtual.artifactory.swg-devops.com/ea/aggregation-collater-java-service
