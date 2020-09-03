@@ -1,0 +1,26 @@
+add-cluster-role-to-user:
+  - clusterrole: system:controller:persistent-volume-binder
+    sa: cpd-databases-sa
+  - clusterrole: 0025-cdcp-cr
+    sa: cpd-cdcp-sa
+add-scc-to-user:
+  - sa: cpd-databases-sa
+    scc: cpd-user-scc
+  - sa: cpd-cdcp-sa
+    scc: cpd-user-scc
+  - sa: compose
+    scc: anyuid
+category: adm-setup
+chart: 0025-databases-3.0.2.tgz
+description: Yes, this is the account
+files:
+  - adm/0025-rolebinding.yaml
+  - adm/0025-sa.yaml
+  - adm/cdcp/0025-cdcp-sa.yaml
+  - adm/cdcp/0025-cdcp-cr.yaml
+  - adm/cdcp/compose-sa.yaml
+  - adm/cdcp/compose-role.yaml
+  - adm/cdcp/compose-rolebinding.yaml
+  - adm/cdcp/0025-cdcp-core-role.yaml
+  - adm/cdcp/0025-cdcp-core-rb.yaml
+type: module
