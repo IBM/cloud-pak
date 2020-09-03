@@ -1,0 +1,16 @@
+global:
+    databases: true
+    docker_registry_prefix: null
+    ibmProduct: zen
+    image:
+        tag: 3.0.2-363-x86_64
+    persistence:
+        enabled: true
+        storageClassName: null
+        useDynamicProvisioning: true
+    use_external_prefix: true
+namespace: null
+nginxRepo:
+    resolver: kubernetes.default
+zenProxy:
+    serviceType: ClusterIP

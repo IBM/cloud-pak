@@ -1,0 +1,35 @@
+# This file is in fileserver
+type: module
+name: mongodb module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference: base-registry
+images:
+- name: zen-databases-catalog-mongodb
+  tag: 3.0.2-969-x86_64
+- name: apimgmt
+  tag: 3.0.2-969-x86_64
+- name: configops
+  tag: 3.0.2-969-x86_64
+- name: mongodb-enterprise-database
+  tag: 3.0.2-969-x86_64
+- name: mongodb-enterprise-operator
+  tag: 3.0.2-969-x86_64
+- name: ops-manager
+  tag: 3.0.2-969-x86_64
+- name: init-ops-manager
+  tag: 3.0.2-969-x86_64
+- name: appdb
+  tag: 3.0.2-969-x86_64
+- name: init-appdb
+  tag: 3.0.2-969-x86_64
+chart: zen-databases-catalog-3.0.2.tgz
+# For download to verify the chart file is correct, optional
+# md5: 
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: mongodb-catalog-4.2.6
+installOverride: install-override.yaml
+upgradeOverride: install-override.yaml
+helmUpgradeForce: true
+serviceInstanceType:
+- mongodb

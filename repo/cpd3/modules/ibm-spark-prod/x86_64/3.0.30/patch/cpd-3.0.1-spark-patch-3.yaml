@@ -1,0 +1,20 @@
+images:
+  - spark-hb-jkg:2.4.6.v1.1-amd64
+  - spark-hb-truststore-util:3.0.30.4-amd64
+  - spark-hb-nginx:3.0.30.4-amd64
+  - spark-hb-control-plane:3.0.30.4-amd64
+patchFile: patchCommands.txt
+resourcesChanged:
+  - Kind: CronJob
+    Name: spark-hb-preload-jkg-image
+  - Kind: ConfigMap
+    Name: spark-hb-deployment-properties
+  - Kind: ConfigMap
+    Name: spark-hb-nginx-configmap
+  - Kind: ConfigMap
+    Name: hummingbird-route
+  - Kind: Deployment
+    Name: spark-hb-nginx
+  - Kind: Deployment
+    Name: spark-hb-control-plane
+description: "cumulative patch for cpd-3.0.1-spark-patch-1 and cpd-3.0.1-spark-patch-2 which supports CPD version 3.11, 4.3, and 4.5"

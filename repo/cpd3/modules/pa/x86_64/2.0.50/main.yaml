@@ -1,0 +1,89 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Planning Analytics
+version: 2.0.50
+# The description is mandatory
+description: "This module is for the Planning Analytics Add-on install"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: base-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+installOverride: icp4d-override.yaml
+# upgradeOverride: myupgrade.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure
+images:
+- name: pa-cp4d-addon
+  tag: 2.0.50-910
+- name: pa-cp4d-service-provider
+  tag: 2.0.49-26
+- name: pa-bss
+  tag: 1.0.1153.1-ubi7
+- name: pa-bss-init
+  tag: 1.0.226.1-ubi7
+- name: pa-cdn3p
+  tag: 1.0.226.1-ubi7
+- name: pa-couchdb
+  tag: 103.1-ubi7
+- name: pa-gateway
+  tag: 1.0.1006.1-ubi7
+- name: pa-glass
+  tag: 1.0.573.1-ubi7
+- name: pa-mongo
+  tag: 1.0.85.1-ubi7
+- name: pa-monitor
+  tag: 2.0.49.1907.1-ubi7
+- name: pa-mysql-cluster
+  tag: 1.0.89.1-ubi7
+- name: pa-neo-idviz
+  tag: 9.0.384.1-ubi7
+- name: pa-neo-provision
+  tag: 1.0.218.1-ubi7
+- name: pa-k8s-config
+  tag: 1.0.32.1-ubi7
+- name: pa-content-service
+  tag: 1.0.44.1-ubi7
+- name: pa-paw-ui-api
+  tag: 1.0.55.1-ubi7
+- name: pa-prism-app
+  tag: 1.0.5197.1-ubi7
+- name: pa-prism-platform
+  tag: 1.0.1601.1.1-ubi7
+- name: pa-prism-proxy
+  tag: 1.0.8722.1-ubi7
+- name: pa-redis
+  tag: 1.0.115.1-ubi7
+- name: pa-share-app
+  tag: 1.0.363.1-ubi7
+- name: pa-share-platform
+  tag: 1.0.257.1-ubi7
+- name: pa-share-proxy
+  tag: 1.0.363.1-ubi7
+- name: pa-social
+  tag: 1.0.330.1-ubi7
+- name: pa-tm1proxy
+  tag: 1.0.251.1-ubi7
+- name: pa-user-admin
+  tag: 1.0.352.1-ubi7
+- name: pa-wa-proxy
+  tag: 1.0.563.1-ubi7
+- name: pa-welcome
+  tag: 1.0.683.1-ubi7
+- name: pa-tm1-cp4d
+  tag: b601.1CP4D
+chart: ibm-planning-analytics-cpd-addon-2.0.50.tgz
+# For download to verify the chart file is correct, optional
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: planning-analytics
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+scale:
+  - small.yaml
+  - medium.yaml
+  - large.yaml
