@@ -1,0 +1,27 @@
+patch sts solr --patch '{"spec": {"template": {"spec": {"containers": [{"name": "solr","image": "{{.DockerRegistryPrefix}}/solr-x86_64:8.4.1_b752_eaf0bff527f0"}], "initContainers": [{"name": "ug-config","image": "{{.DockerRegistryPrefix}}/wkc-ugconfig:3.0.54"},{"name": "zk-wait","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.92"}]}}}}'
+patch sts zookeeper --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zookeeper","image": "{{.DockerRegistryPrefix}}/zookeeper-x86_64:3.4.14_b752_eaf0bff527f0"}]}}}}'
+patch sts kafka --patch '{"spec": {"template": {"spec": {"containers": [{"name": "kafka","image": "{{.DockerRegistryPrefix}}/kafka-x86_64:2.11-2.1.1_b752_eaf0bff527f0"}]}}}}'
+patch sts cassandra --patch '{"spec": {"template": {"spec": {"containers": [{"name": "cassandra","image": "{{.DockerRegistryPrefix}}/cassandra-x86_64:3.11.3_b752_eaf0bff527f0"}]}}}}'
+patch deployment iis-xmetarepo --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-xmetadocker-container","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b81-CP4D-3_0_1-b28"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b81-CP4D-3_0_1-b28"}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","image": "{{.DockerRegistryPrefix}}/is-services-image:b81-CP4D-3_0_1-b28"}]}}}}'
+delete pod -l app=iis-services
+wait --for=condition=ready --timeout=90m pod -l app=iis-services
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","image": "{{.DockerRegistryPrefix}}/is-engine-image:b81-CP4D-3_0_1-b28"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-engine-image:b81-CP4D-3_0_1-b28"}]}}}}'
+patch sts is-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b81-CP4D-3_0_1-b28"}]}}}}'
+delete pod -l app=iis-en-cond
+delete pod -l app=iis-en-comp
+delete pod -l app=dc-main
+delete pod -l app=finley-ml
+delete pod -l app=information-analyzer
+delete pod -l app=odf-fast-analyzer
+delete pod -l app=audit-trail-service
+delete pod -l app=gov-insights-service
+delete pod -l app=gov-app-config-service
+delete pod -l app=gov-catalog-search-service
+delete pod -l app=gov-user-prefs-service
+delete pod -l app=omag
+delete pod -l app=shop4info-event-consumer
+delete pod -l app=shop4info-mappers-service
+delete pod -l app=shop4info-rest
+delete pod -l app=shop4info-scheduler
+delete pod -l app=shop4info-type-registry-service
