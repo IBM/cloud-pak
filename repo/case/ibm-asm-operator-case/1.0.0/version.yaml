@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    devops: {}
+    hybrid: {}
+    ibm: {}
+    insight: {}
+    management: {}
+  classifications:
+    commercial: {}
+  description: IBM® Netcool® Agile Service Manager
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: image/svg+xml
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/asm_icon_color_big.svg
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Agile Service Manager LICENSE
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Agile Service Manager non_ibm_license
+        displayName: non_ibm_license
+        name: nonIbmLicense
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Agile Service Manager notices
+        displayName: notices
+        name: notices
+      ref: notices
+  name: ibm-asm-operator-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2020-09-03T22:41:00.04042758+0000
+digest: sha256:b4dfb0953bf30f0f35a28de032e76066bd7f45a629214efc62f685679626d047
