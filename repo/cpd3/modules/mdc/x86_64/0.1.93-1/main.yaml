@@ -1,25 +1,25 @@
 type: module
 category: helm-chart
 name: mdc
-version: 0.1.93
+version: 0.1.93-1
 description: This is the mdc module
 registry-reference: base-registry
 images:
   - name: mdc-addon-install
-    tag: 0.1.93
+    tag: 0.1.93-1
   - name: mdc-spark-driver
-    tag: 0.1.141
+    tag: 0.1.141-1
   - name: mdc-couchdb3
-    tag: 0.1.11
+    tag: 0.1.11-1
   - name: mdc-core
-    tag: 0.1.432
+    tag: 0.1.432-1
   - name: mdc-aspera-server
-    tag: 0.1.432
+    tag: 0.1.432-1
   - name: mdc-elasticsearch
-    tag: 0.1.8
+    tag: 0.1.8-1
   - name: mdc-cassandra
-    tag: 0.1.9
-chart: ibm-mdc-addon-prod-0.1.93.tgz
+    tag: 0.1.9-1
+chart: ibm-mdc-addon-prod-0.1.93-1.tgz
 
 timeout: 60
 releaseName: mdc
