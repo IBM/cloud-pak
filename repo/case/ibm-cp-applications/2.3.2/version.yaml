@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: 4.2.1
+  catalogs:
+    cloudpak: {}
+    runtime: {}
+    tools: {}
+  certifications:
+    ibmccp: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: Move from monolithic to microservices with DevOps methodologies and modernization toolkits
+  displayDescription: ""
+  displayName: Cloud Pak for Applications
+  icons:
+  - mediaType: image/svg
+    url: https://www.ibm.com/support/knowledgecenter/SSCSJL/images/icp4applications.svg
+  licenses:
+    ipla:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Applications V4 License
+        displayName: IBM Cloud Pak for Applications V4 License
+      ref: LA_en
+      url: https://www-03.ibm.com/software/sla/sladb.nsf/displayLIs/FA10E8763C4C8B07852585810074CD99?OpenDocument
+  name: ibm-cp-applications
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 2.3.2
+  webPage: https://www.ibm.com/cloud/cloud-pak-for-applications
+created: 2020-09-04T18:20:39.17059445+0000
+digest: sha256:e42e599b3841854cc8248f8e68f21ec39a70ac8b5614beeee41ba56048e3acf2
