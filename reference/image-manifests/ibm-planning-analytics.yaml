@@ -1,6 +1,12 @@
 source: ibm-planning-analytics-bundle/case/ibm-planning-analytics/case.yaml
 description: "IBM Cloud Pak for Data Planning Analytics"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
   - image: cp/cpd/pa-bss
   - image: cp/cpd/pa-bss-init
   - image: cp/cpd/pa-cdn3p
@@ -30,3 +36,14 @@ images:
   - image: cp/cpd/pa-user-admin
   - image: cp/cpd/pa-wa-proxy
   - image: cp/cpd/pa-welcome
+  - image: cp/cpd/privatecloud-redis-repo
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-admin
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-content
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-meta-couchdb
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
