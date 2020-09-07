@@ -1,0 +1,59 @@
+apiVersion: v1
+case:
+  appVersion: 2.7.0.0-BUILDNUMBER
+  catalogs:
+    devops: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: A cloud based event management solution
+  displayDescription: ""
+  displayName: IBM Cloud Event Management
+  icons:
+  - mediaType: image/svg+xml
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/cem-service-icon.svg?sanitize=true
+  licenses:
+    licenseLa:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Cloud Event Management LICENSE-LA
+        displayName: LICENSE-LA
+        name: licenseLa
+      ref: LICENSE-LA
+    licenseLi:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Cloud Event Management LICENSE-LI
+        displayName: LICENSE-LI
+        name: licenseLi
+      ref: LICENSE-LI
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Cloud Event Management LICENSE-non-IBM
+        displayName: LICENSE-non-IBM
+        name: licenseNonIbm
+      ref: LICENSE-non-IBM
+    licenseNotices:
+      mediaType: text/plain; charset=utf-16le
+      metadata:
+        displayDescription: IBM Cloud Event Management LICENSE-notices
+        displayName: LICENSE-notices
+        name: licenseNotices
+      ref: LICENSE-notices
+  name: ibm-cem-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com/support/knowledgecenter/SSURRN/com.ibm.cem.doc/index.html
+created: 2020-09-07T14:32:35.03994136+0000
