@@ -138,7 +138,7 @@ global:
   commonScripts:
     image:
       repository: fci-common-scripts
-      tag: 6.5.3
+      tag: 6.5.3.1
       pullPolicy: IfNotPresent
 
   nginxSslProxy:
@@ -588,7 +588,7 @@ cognos:
 crypto-utils:
   image:
     repository: fci-crypto-utils
-    tag: 6.5.3
+    tag: 6.5.3.1
     pullPolicy: "IfNotPresent"
 
   resources: {}
