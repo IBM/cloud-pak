@@ -1,0 +1,36 @@
+source: ibm-ftm-dp-case-bundle/case/ibm-ftm-dp/case.yaml
+description: "The case bundle for FTM DP"
+images:
+  - image: cp/ftm/base/ftm-artifacts-base
+  - image: cp/ftm/base/ftm-db2-base
+  - image: cp/ftm/base/ftm-j2ee-oac
+  - image: cp/ftm/base/ftm-mq-ace-base
+  - image: cp/ftm/dp/ftm-artifacts-dp
+  - image: cp/ftm/dp/ftm-db2-dp
+  - image: cp/ftm/dp/ftm-j2ee-approvals-engine
+  - image: cp/ftm/dp/ftm-j2ee-business-rules-engine
+  - image: cp/ftm/dp/ftm-j2ee-control-center-ui
+  - image: cp/ftm/dp/ftm-j2ee-distribution-engine
+  - image: cp/ftm/dp/ftm-j2ee-gateway-engine
+  - image: cp/ftm/dp/ftm-j2ee-risk-engine
+  - image: cp/ftm/dp/ftm-j2ee-rtp-engine
+  - image: cp/ftm/dp/ftm-j2ee-services-engine
+  - image: cp/ftm/dp/ftm-j2ee-settlement-engine
+  - image: cp/ftm/dp/ftm-j2ee-webservices-engine
+  - image: cp/ftm/dp/ftm-j2se-brm
+  - image: cp/ftm/dp/ftm-j2se-brs
+  - image: cp/ftm/dp/ftm-j2se-gateway
+  - image: cp/ftm/dp/ftm-j2se-its
+  - image: cp/ftm/dp/ftm-mq-ace-dp
+  - image: cp/ftm/ip/ftm-artifacts-ip
+  - image: cp/ftm/ip/ftm-db2-ip
+  - image: cp/ftm/ip/ftm-mq-ace-ip
+  - image: ibmcom/ibm-ftm-base-bundle
+  - image: ibmcom/ibm-ftm-base-catalog
+  - image: ibmcom/ibm-ftm-base-operator
+  - image: ibmcom/ibm-ftm-dp-bundle
+  - image: ibmcom/ibm-ftm-dp-catalog
+  - image: ibmcom/ibm-ftm-dp-operator
+  - image: ibmcom/ibm-ftm-ip-bundle
+  - image: ibmcom/ibm-ftm-ip-catalog
+  - image: ibmcom/ibm-ftm-ip-operator
