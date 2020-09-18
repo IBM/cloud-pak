@@ -1,0 +1,36 @@
+apiVersion: v1
+case:
+  appVersion: 3.7.1
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: The IBM metering service captures detailed usage metrics for your applications and cluster. The metric data is used for IBM Product licensing compliance and can be viewed in the metering user interface or downloaded in a report for use in internal charge-back for cluster workloads.
+  displayDescription: ""
+  displayName: IBM Metering Service
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  name: ibm-metering
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.1.0
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2020-09-18T18:56:25.26526828+0000
+digest: sha256:ac113ac7fdbbd35e84b298fa867e334da0881cbd9259e6a1976233a9258f273a
