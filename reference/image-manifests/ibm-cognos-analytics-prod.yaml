@@ -1,9 +1,10 @@
-source: ibm-cognos-analytics-prod/ibm_cloud_pak/manifest.yaml
-description: Helm chart for Cognos Analytics
+source: ibm-cognos-analytics-prod-bundle/case/ibm-cognos-analytics-prod/case.yaml
+description: "Helm chart for Cognos Analytics"
 images:
   - image: cp/cpd/artifacts
   - image: cp/cpd/biapp-no-rsvp
   - image: cp/cpd/ca-base
+  - image: cp/cpd/ca-java-base
   - image: cp/cpd/cgs
   - image: cp/cpd/cm
   - image: cp/cpd/cs
