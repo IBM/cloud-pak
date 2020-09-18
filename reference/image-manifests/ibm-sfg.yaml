@@ -1,0 +1,7 @@
+source: ibm-sfg-case-bundle/case/ibm-sfg/case.yaml
+description: "A CASE to deploy IBM Sterling File Gateway helm charts on a container platform"
+images:
+  - image: cp/ibm-sfg/sfg
+  - image: cp/ibm-sfg/sfg-ps
+  - image: cp/ibm-sfg/sfg-purge
+  - image: ibmcom/opencontent-common-utils
