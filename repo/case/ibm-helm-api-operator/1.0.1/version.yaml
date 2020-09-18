@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 3.6.4
+  catalogs:
+    icpclusterresource: {}
+    operations: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy the helm api into K8s cluster
+  displayDescription: ""
+  displayName: IBM Helm API Operator CASE Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-helm-api-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com
+created: 2020-09-18T16:22:05.95567244+0000
+digest: sha256:e9277e46826a3d0104e32d405a706d5c52c1e63cceae89179e8b07c4ce9fd352
