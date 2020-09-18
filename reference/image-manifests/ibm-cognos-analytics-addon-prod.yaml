@@ -1,5 +1,22 @@
 source: ibm-cognos-analytics-addon-prod-bundle/case/ibm-cognos-analytics-addon-prod/case.yaml
 description: "Content chart for Cognos Analytics addon"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/ibm-cognos-addon-sp
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-redis-repo
+  - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/zen-addon-cognos-analytics
+  - image: cp/cpd/zen-admin
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-content
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-meta-couchdb
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
