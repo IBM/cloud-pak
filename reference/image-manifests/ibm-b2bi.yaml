@@ -1,0 +1,7 @@
+source: ibm-b2bi-case-bundle/case/ibm-b2bi/case.yaml
+description: "A CASE to deploy IBM Sterling B2B Integrator helm charts on a container platform"
+images:
+  - image: cp/ibm-b2bi/b2bi
+  - image: cp/ibm-b2bi/b2bi-ps
+  - image: cp/ibm-b2bi/b2bi-purge
+  - image: ibmcom/opencontent-common-utils
