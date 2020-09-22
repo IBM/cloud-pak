@@ -1,6 +1,23 @@
 source: ibm-watson-lt-prod-case-bundle/case/ibm-watson-lt-prod-case/case.yaml
 description: "IBM Watson Language Translator for CloudPak For Data"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-redis-repo
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-admin
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-content
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-meta-couchdb
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
   - image: cp/watson-lt/document-translation
   - image: cp/watson-lt/language-id
   - image: cp/watson-lt/lt_ar-ar_en-us_general
