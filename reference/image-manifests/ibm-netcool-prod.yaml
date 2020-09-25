@@ -8,9 +8,11 @@ images:
   - image: cp/noi/archiving-service
   - image: cp/noi/asm-normalizer-service
   - image: cp/noi/cassandra
+  - image: cp/noi/common-elastic-curator
   - image: cp/noi/couchdb
   - image: cp/noi/datalayer-cem-service
   - image: cp/noi/ea-asm-mime
+  - image: cp/noi/ea-dr-coordinator-service
   - image: cp/noi/ea-events-tooling
   - image: cp/noi/ea-mime-classification-service
   - image: cp/noi/ea-noigateway-ee
@@ -29,6 +31,7 @@ images:
   - image: cp/noi/hdm-integration-controller
   - image: cp/noi/hdm-normalizer
   - image: cp/noi/hdm-notificationprocessor
+  - image: cp/noi/hdm-rca
   - image: cp/noi/hdm-scheduling-ui
   - image: cp/noi/inference-service
   - image: cp/noi/ingestion-service
@@ -36,6 +39,7 @@ images:
   - image: cp/noi/kafkarest
   - image: cp/noi/logstash
   - image: cp/noi/nasm-alm-observer
+  - image: cp/noi/nasm-ansibleawx-observer
   - image: cp/noi/nasm-app-disco-discovery
   - image: cp/noi/nasm-app-disco-init
   - image: cp/noi/nasm-app-disco-log-collector
@@ -111,6 +115,7 @@ images:
   - image: cp/noi/noiactions-service
   - image: cp/noi/noi-alert-action-service
   - image: cp/noi/noi-alert-trigger-service
+  - image: cp/noi/noi-backuprestore-service
   - image: cp/noi/opencontent-redis-5
   - image: cp/noi/policy-registry-service
   - image: cp/noi/servicemonitor
@@ -119,3 +124,8 @@ images:
   - image: cp/noi/ui-api
   - image: cp/noi/ui-content
   - image: cp/noi/zookeeper
+  - image: ibmcom/asm-operator
+  - image: ibmcom/cem-operator
+  - image: ibmcom/noi-operator
+  - image: ibmcom/noi-operator-bundle
+  - image: ibmcom/noi-operator-catalog
