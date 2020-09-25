@@ -1,0 +1,50 @@
+apiVersion: v1
+case:
+  appVersion: 2.0.0
+  catalogs:
+    ai: {}
+    aiops: {}
+    rhocp: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Watson AIOps
+  displayDescription: Watson AIOps combines structured and unstructured data from applications and infrastructure components of your IT landscape. It applies AI to that data to discover anomalies and correlate them to discover impact across components and to localize faults This is used to  guide IT operations teams to understand the nature and impact of issues as they emerge and to guide inform short term remedies and permanent resolutions.
+  displayName: Watson AIOps
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://www.ibm.com/products/watson-aiops
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: non_ibm_license
+        name: non_ibm_license
+      ref: watson_aiops.non_ibm_license.txt
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: notices
+        name: notices
+      ref: watson_aiops.notices.txt
+  name: ibm-watson-aiops-prod-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.0.2
+  webPage: https://www.ibm.com
+created: 2020-09-25T21:27:50.88692627+0000
+digest: sha256:8332023759acf23413304d199cd862b0cc37082a7e38214be739d1fe7b747ac9
