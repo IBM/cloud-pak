@@ -1,0 +1,36 @@
+global:
+  license: true
+  product:
+    schName: 'aio'
+  existingServiceAccount: cpd-editor-sa
+  serviceAccount:
+    create: false
+    name: cpd-editor-sa
+  privilegedServiceAccount:
+    create: false
+    name: cpd-editor-sa
+
+elasticsearch:
+  persistence:
+    enabled: false
+  rbac:
+    serviceAccountName: watson-aiops-sa
+    create: false
+  serviceAccount:
+    name: watson-aiops-sa
+  secretGeneration:
+    serviceAccountName: watson-aiops-sa
+
+minio:
+  serviceAccount:
+    create: false
+    name: watson-aiops-sa
+
+postgres:
+  serviceAccount:
+    name: watson-aiops-sa
+
+modeltrain:
+  dlaasTrainer:
+    secretGen:
+      serviceAccountName: cpd-editor-sa

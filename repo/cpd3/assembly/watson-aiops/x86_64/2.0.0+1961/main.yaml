@@ -1,0 +1,29 @@
+type: assembly
+lifeCycle: live
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM Watson AIOps
+# Version is mandatory
+version: 2.0.0+1961
+# License archive name to be downloaded from fileserver and extracted. Default extension is .zip. Optional
+licenseArchiveName: AIOps_200.zip
+# Description is optional
+description: IBM Watson AIOps assembly
+architecture: x86_64
+blockUpgrade: true
+bricks:
+- name: lite
+  version: 3.0.1
+  type: assembly
+- name: watson-aiops-adm-setup
+  version: 2.0.0+1961
+  type: module
+- name: watson-aiops
+  allowMultiple: true
+  allowTetheredNamespace: true
+  version: 2.0.0+1961
+  type: module
+- name: watson-aiops-post-install-setup
+  allowMultiple: true
+  allowTetheredNamespace: true
+  version: 2.0.0+1961
+  type: module

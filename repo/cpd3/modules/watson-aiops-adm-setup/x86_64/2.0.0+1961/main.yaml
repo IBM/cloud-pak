@@ -1,0 +1,13 @@
+type: module
+category: adm-setup
+name: WatsonAIOps admin module
+description: WatsonAIOps admin module
+files:
+- rhos/rb/watson-aiops-rb.yaml
+- rhos/rb/watson-aiops-strimzi-rb.yaml
+- rhos/roles/watson-aiops-strimzi-role.yaml
+- rhos/sa/watson-aiops-sa.yaml
+- rhos/scc/watson-aiops-scc.yaml
+add-scc-to-user:
+- scc: restricted
+  sa: watson-aiops-sa
