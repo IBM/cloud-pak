@@ -1,0 +1,12 @@
+type: module
+category: helm-chart
+name: ibm-watson-aiops-post-install-setup
+version: 2.0.0+1961
+description: watson-aiops post install module
+registry-reference: base-registry
+images:
+- name: opencontent-icp-cert-gen-1
+  tag: "1.1.3"
+chart: ibm-watson-aiops-post-install-setup-prod-2.0.0+1961.tgz
+timeout: 60
+releaseName: ibm-aiops-post-install-setup

@@ -1,0 +1,84 @@
+type: module
+category: helm-chart
+name: watson-aiops
+version: 2.0.0+1961
+description: watson-aiops module
+registry-reference: base-registry
+serviceInstanceType:
+- aiops
+chart: ibm-watson-aiops-prod-2.0.0+1961.tgz
+timeout: 60
+releaseName: ibm-aiops
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+images:
+- name: lifecycle-manager-service
+  tag: rhubi-PR-1370-1
+- name: opencontent-common-utils
+  tag: 1.1.5
+- name: opencontent-elasticsearch-7
+  tag: 7.5.2-amd64
+- name: opencontent-elasticsearch-init-container-1
+  tag: 1.0.59-amd64
+- name: opencontent-haproxy-1
+  tag: 1.9.17-2
+- name: opencontent-icp-cert-gen-1
+  tag: 1.1.3
+- name: opencontent-icp-cert-gen-1
+  tag: 1.1.4
+- name: opencontent-minio
+  tag: 1.1.4
+- name: opencontent-minio-client
+  tag: 1.0.4
+- name: opencontent-postgres-stolon
+  tag: 2.0.1
+- name: opencontent-postgres-stolon
+  tag: 2.0.2
+- name: ratelimiter
+  tag: rhubi-master-162
+- name: trainer-v2-service
+  tag: rhubi-PR-448-3
+- name: alert-localization
+  tag: 6695404.20-09-09-142253.main
+- name: chatops-orchestrator
+  tag: aa66b4a.20-09-17-174245.main
+- name: chatops-slack-integrator
+  tag: 558e22a.20-09-13-022911.main
+- name: connection-manager
+  tag: 7402879.20-09-15-130454.main
+- name: core-tests
+  tag: 29615e7.20-09-15-173249.main
+- name: cpd-addon
+  tag: a93b09b.20-09-14-011027.main
+- name: data-preprocessing-mtworkflow
+  tag: 200907
+- name: elasticsearch-curator
+  tag: aa600a6.20-09-12-040031.main
+- name: event-grouping
+  tag: 2645087.20-09-16-141128.main
+- name: event-grouping-mtworkflow
+  tag: 200914
+- name: flink-core
+  tag: e0c1f5b.20-09-15-170508.main
+- name: log-anomaly
+  tag: 91959a0
+- name: log-anomaly-training
+  tag: 200912
+- name: mock-server
+  tag: d85d4b7.20-09-01-151144.main
+- name: model-train-console
+  tag: d069908.20-09-12-040052.main
+- name: persistence-service
+  tag: d57a74d.20-09-13-183846.main
+- name: similar-incidents-service
+  tag: 06a2728.20-09-12-040026.main
+- name: topology
+  tag: 815e111.20-09-12-040708.main
+- name: coordinator
+  tag: rhubi-PR-1370-1
+- name: jobmonitor
+  tag: rhubi-PR-1370-1
+- name: databroker-s3
+  tag: rhubi-PR-1370-1
+- name: pod-coordinator
+  tag: rhubi-PR-1370-1
