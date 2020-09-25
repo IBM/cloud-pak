@@ -70,6 +70,7 @@ images:
   - image: cp/datapower/datapower
   - image: cp/ibm-eventstreams-admin
   - image: cp/ibm-eventstreams-admin-ui
+  - image: cp/ibm-eventstreams-apicurio-registry
   - image: cp/ibm-eventstreams-jmxtrans
   - image: cp/ibm-eventstreams-kafka
   - image: cp/ibm-eventstreams-metrics-collector
@@ -146,6 +147,7 @@ images:
   - image: cp/icp4i/aspera/aspera-hsts-engine
   - image: cp/icp4i/aspera/aspera-hsts-firstboot
   - image: cp/icp4i/aspera/aspera-hsts-http-proxy
+  - image: cp/icp4i/aspera/aspera-hsts-kms
   - image: cp/icp4i/aspera/aspera-hsts-lifecycle
   - image: cp/icp4i/aspera/aspera-hsts-loadbalancer
   - image: cp/icp4i/aspera/aspera-hsts-noded-swarm-member
@@ -266,6 +268,7 @@ images:
   - image: cp/icp4i/mq/icp4i-od-agent
   - image: cp/icp4i/mq/icp4i-od-collector
   - image: cp/icp4i/od/icp4i-od-agent
+  - image: cp/icp4i/od/icp4i-od-api-proxy
   - image: cp/icp4i/od/icp4i-od-collector
   - image: cp/icp4i/od/icp4i-od-config-db
   - image: cp/icp4i/od/icp4i-od-housekeeping
@@ -448,6 +451,11 @@ images:
   - image: cp/icp-foundation/velero
   - image: cp/icp-foundation/vulnerability-annotator
   - image: cp/icp-foundation/weave-collector
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-telemetry-5.0.5
   - image: ibmcom/acecc-content-server
   - image: ibmcom/acecc-dashboard
   - image: ibmcom/acecc-designerflows
@@ -473,6 +481,9 @@ images:
   - image: ibmcom/ibm-apiconnect-catalog
   - image: ibmcom/ibm-apiconnect-operator
   - image: ibmcom/ibm-apiconnect-operator-bundle
+  - image: ibmcom/ibm-cloud-databases-redis-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-cp-integration-bundle
   - image: ibmcom/ibm-cp-integration-catalog
@@ -491,7 +502,9 @@ images:
   - image: ibmcom/ibm-integration-platform-navigator-bundle
   - image: ibmcom/ibm-integration-platform-navigator-catalog
   - image: ibmcom/ibm-integration-platform-navigator-operator
+  - image: ibmcom/ibm-integration-platform-navigator-operator-init
   - image: ibmcom/ibm-integration-platform-navigator-webhook-init
+  - image: ibmcom/ibm-mqadvanced-server-dev
   - image: ibmcom/ibm-mq-operator
   - image: ibmcom/ibm-mq-operator-bundle
   - image: ibmcom/ibm-mq-operator-catalog
