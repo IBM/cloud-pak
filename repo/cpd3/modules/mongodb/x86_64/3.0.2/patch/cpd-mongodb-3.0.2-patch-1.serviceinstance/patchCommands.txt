@@ -1,0 +1,1 @@
+patch deployment mongodb-{{.InstanceID}}-api-management -p '{"spec": {"template": {"spec": {"containers": [{"name": "mongo-status","image":"{{.DockerRegistryPrefix}}/apimgmt:3.0.2-1213-x86_64"}]}}}}'
