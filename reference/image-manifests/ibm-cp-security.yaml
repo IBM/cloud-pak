@@ -8,6 +8,7 @@ images:
   - image: cp/cp4s/foundations/elasticsearch
   - image: cp/cp4s/foundations/init
   - image: cp/cp4s/foundations/isc-ambassador
+  - image: cp/cp4s/foundations/isc-entitlements-operator
   - image: cp/cp4s/foundations/isc-kube-arango-operator
   - image: cp/cp4s/foundations/isc-middleware-operator
   - image: cp/cp4s/foundations/isc-minio
@@ -23,15 +24,24 @@ images:
   - image: cp/cp4s/foundations/isc-ow-utils
   - image: cp/cp4s/foundations/isc-ow-zookeeper
   - image: cp/cp4s/foundations/isc-sequence-operator
+  - image: cp/cp4s/foundations/isc-truststore-operator
   - image: cp/cp4s/foundations/kibana
   - image: cp/cp4s/foundations/opencontent-etcd-3
+  - image: cp/cp4s/foundations/opencontent-icp-cert-gen-1
   - image: cp/cp4s/foundations/opencontent-minio-client
+  - image: cp/cp4s/foundations/opencontent-rabbitmq-3
+  - image: cp/cp4s/foundations/opencontent-rabbitmq-config-copy
   - image: cp/cp4s/foundations/redis
+  - image: cp/cp4s/solutions/apps-manager
   - image: cp/cp4s/solutions/arangodb-community
   - image: cp/cp4s/solutions/arangodb-enterprise
   - image: cp/cp4s/solutions/arangodb-exporter
+  - image: cp/cp4s/solutions/command-interpreter
   - image: cp/cp4s/solutions/cp4s-car-connector-config
   - image: cp/cp4s/solutions/cp4s-car-frontend-ui
+  - image: cp/cp4s/solutions/cp4s-toolbox
+  - image: cp/cp4s/solutions/crunchy-postgres96-ha
+  - image: cp/cp4s/solutions/homer-qproxy
   - image: cp/cp4s/solutions/isc-aitk-orchestrator
   - image: cp/cp4s/solutions/isc-aitk-webui
   - image: cp/cp4s/solutions/isc-authsvc
@@ -39,6 +49,8 @@ images:
   - image: cp/cp4s/solutions/isc-car-connector-atp
   - image: cp/cp4s/solutions/isc-car-connector-aws
   - image: cp/cp4s/solutions/isc-car-connector-azure
+  - image: cp/cp4s/solutions/isc-car-connector-guardium
+  - image: cp/cp4s/solutions/isc-car-connector-iam
   - image: cp/cp4s/solutions/isc-car-connector-tenable
   - image: cp/cp4s/solutions/isc-cases-activemq
   - image: cp/cp4s/solutions/isc-cases-activemq-logging-sidecar
@@ -83,9 +95,30 @@ images:
   - image: cp/cp4s/solutions/isc-tis-rfi
   - image: cp/cp4s/solutions/isc-tis-score-controller
   - image: cp/cp4s/solutions/isc-tis-user-registration
+  - image: cp/cp4s/solutions/isc-udi-endpoint
+  - image: cp/cp4s/solutions/isc-udi-worker
   - image: cp/cp4s/solutions/isc-uds2file
   - image: cp/cp4s/solutions/isc-uds-deploy
+  - image: cp/cp4s/solutions/pgo-apiserver
+  - image: cp/cp4s/solutions/pgo-backrest
+  - image: cp/cp4s/solutions/pgo-backrest-repo
+  - image: cp/cp4s/solutions/pgo-backrest-restore
+  - image: cp/cp4s/solutions/pgo-event
+  - image: cp/cp4s/solutions/pgo-rmdata
+  - image: cp/cp4s/solutions/pgo-scheduler
+  - image: cp/cp4s/solutions/postgres-operator
   - image: cp/cp4s/solutions/pulse-dashboard
+  - image: cp/cp4s/solutions/stix_shifter_modules_aws_cloud_watch_logs
+  - image: cp/cp4s/solutions/stix_shifter_modules_azure_sentinel
+  - image: cp/cp4s/solutions/stix_shifter_modules_bigfix
+  - image: cp/cp4s/solutions/stix_shifter_modules_carbonblack
+  - image: cp/cp4s/solutions/stix_shifter_modules_elastic_ecs
+  - image: cp/cp4s/solutions/stix_shifter_modules_guardium
+  - image: cp/cp4s/solutions/stix_shifter_modules_msatp
+  - image: cp/cp4s/solutions/stix_shifter_modules_qradar
+  - image: cp/cp4s/solutions/stix_shifter_modules_security_advisor
+  - image: cp/cp4s/solutions/stix_shifter_modules_splunk
+  - image: cp/cp4s/solutions/stix_shifter_modules_stix_bundle
   - image: cp/icp-foundation/alertmanager
   - image: cp/icp-foundation/audit-policy-controller
   - image: cp/icp-foundation/channel
@@ -238,8 +271,90 @@ images:
   - image: cp/icp-foundation/velero
   - image: cp/icp-foundation/vulnerability-annotator
   - image: cp/icp-foundation/weave-collector
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-telemetry-5.0.5
   - image: ibmcom/couchdb2
   - image: ibmcom/couchdb3
+  - image: ibmcom/couchdb-operator
+  - image: ibmcom/couchdb-operator-catalog
+  - image: ibmcom/couchdb-operator-mgmt
+  - image: ibmcom/ibm-cloud-databases-redis-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/ibmcp4s/isc-ow-action-nodejs-v10
   - image: quay.io/ibmcp4s/isc-ow-action-nodejs-v6
   - image: quay.io/ibmcp4s/isc-ow-action-python-v3.6
+  - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/collectd-exporter
+  - image: quay.io/opencloudio/common-service-operator
+  - image: quay.io/opencloudio/common-web-ui
+  - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/dashboard-controller
+  - image: quay.io/opencloudio/default-http-backend
+  - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/iam-policy-administration
+  - image: quay.io/opencloudio/iam-policy-controller
+  - image: quay.io/opencloudio/iam-policy-decision
+  - image: quay.io/opencloudio/ibm-catalog-ui-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-common-service-catalog
+  - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
+  - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-helm-api-operator
+  - image: quay.io/opencloudio/ibm-helm-repo-operator
+  - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/ibm-mongodb
+  - image: quay.io/opencloudio/ibm-mongodb-exporter
+  - image: quay.io/opencloudio/ibm-mongodb-install
+  - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-catalog-ui
+  - image: quay.io/opencloudio/icp-cert-manager-acmesolver
+  - image: quay.io/opencloudio/icp-cert-manager-cainjector
+  - image: quay.io/opencloudio/icp-cert-manager-controller
+  - image: quay.io/opencloudio/icp-cert-manager-webhook
+  - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icp-helm-api
+  - image: quay.io/opencloudio/icp-helm-repo
+  - image: quay.io/opencloudio/icp-helm-rudder
+  - image: quay.io/opencloudio/icp-iam-onboarding
+  - image: quay.io/opencloudio/icp-identity-manager
+  - image: quay.io/opencloudio/icp-identity-provider
+  - image: quay.io/opencloudio/icp-initcontainer
+  - image: quay.io/opencloudio/icp-management-ingress
+  - image: quay.io/opencloudio/icp-memcached
+  - image: quay.io/opencloudio/icp-oidcclient-watcher
+  - image: quay.io/opencloudio/icp-platform-api
+  - image: quay.io/opencloudio/icp-platform-auth
+  - image: quay.io/opencloudio/icp-platform-header
+  - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/metering-data-manager
+  - image: quay.io/opencloudio/metering-mcmui
+  - image: quay.io/opencloudio/metering-report
+  - image: quay.io/opencloudio/metering-ui
+  - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/nginx-ingress-controller
+  - image: quay.io/opencloudio/node-exporter
+  - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/prometheus
+  - image: quay.io/opencloudio/prometheus-config-reloader
+  - image: quay.io/opencloudio/prometheus-controller
+  - image: quay.io/opencloudio/prometheus-operator
+  - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/tiller
