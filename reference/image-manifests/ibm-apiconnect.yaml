@@ -8,12 +8,14 @@ images:
   - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-zookeeper
   - image: cp/apic/ibm-apiconnect-analytics-analytics-mtls
   - image: cp/apic/ibm-apiconnect-analytics-analytics-storage
+  - image: cp/apic/ibm-apiconnect-analytics-k8s-init
   - image: cp/apic/ibm-apiconnect-apiconnect-configurator
   - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
   - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
   - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
   - image: cp/apic/ibm-apiconnect-management-apim
+  - image: cp/apic/ibm-apiconnect-management-billing
   - image: cp/apic/ibm-apiconnect-management-client-downloads-server
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbouncer
@@ -50,13 +52,16 @@ images:
   - image: cp/apic/ibm-apiconnect-portal-portal-web
   - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
   - image: cp/datapower/datapower
+  - image: cp/datapower/datapower-prod
   - image: ibmcom/datapower-monitor
   - image: ibmcom/datapower-operator
   - image: ibmcom/datapower-operator-bundle
   - image: ibmcom/datapower-operator-catalog
+  - image: ibmcom/datapower-operator-conversion-webhook
   - image: ibmcom/ibm-apiconnect-catalog
   - image: ibmcom/ibm-apiconnect-operator
   - image: ibmcom/ibm-apiconnect-operator-bundle
+  - image: ibmcom/ibm-apiconnect-operator-init
   - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-policy-controller
