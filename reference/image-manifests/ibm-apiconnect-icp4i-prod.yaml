@@ -2,6 +2,36 @@ source: ibm-apiconnect-icp4i-prod/ibm_cloud_pak/manifest.yaml
 description: "IBM Cloud Pak for Integration - API Connect"
 images:
   - image: busybox
+  - image: cp/apic/analytics-client
+  - image: cp/apic/analytics-cronjobs
+  - image: cp/apic/analytics-ingestion
+  - image: cp/apic/analytics-mq-kafka
+  - image: cp/apic/analytics-mq-zookeeper
+  - image: cp/apic/analytics-mtls
+  - image: cp/apic/analytics-operator
+  - image: cp/apic/analytics-proxy
+  - image: cp/apic/analytics-storage
+  - image: cp/apic/apiconnect-operator
+  - image: cp/apic/apim
+  - image: cp/apic/cassandra
+  - image: cp/apic/cassandra-health-check
+  - image: cp/apic/cassandra-operator
+  - image: cp/apic/client-downloads-server
+  - image: cp/apic/datapower-api-gateway
+  - image: cp/apic/icp4i/icp4i-od-agent
+  - image: cp/apic/icp4i/icp4i-od-collector
+  - image: cp/apic/juhu
+  - image: cp/apic/k8s-datapower-monitor
+  - image: cp/apic/k8s-init
+  - image: cp/apic/ldap
+  - image: cp/apic/lur
+  - image: cp/apic/openresty
+  - image: cp/apic/portal-admin
+  - image: cp/apic/portal-db
+  - image: cp/apic/portal-dbproxy
+  - image: cp/apic/portal-exec-job
+  - image: cp/apic/portal-web
+  - image: cp/apic/ui
   - image: cp/icp4i/apic/analytics-client
   - image: cp/icp4i/apic/analytics-cronjobs
   - image: cp/icp4i/apic/analytics-ingestion
