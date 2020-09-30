@@ -2,7 +2,9 @@ source: ibm-datapower-operator-prod-bundle/case/ibm-datapower-operator-prod/case
 description: "CASE containing the Operator for deploying and managing DataPower Gateways"
 images:
   - image: cp/datapower/datapower
+  - image: cp/datapower/datapower-prod
   - image: ibmcom/datapower-monitor
   - image: ibmcom/datapower-operator
   - image: ibmcom/datapower-operator-bundle
   - image: ibmcom/datapower-operator-catalog
+  - image: ibmcom/datapower-operator-conversion-webhook
