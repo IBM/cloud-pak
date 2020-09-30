@@ -1,0 +1,22 @@
+# This file is in fileserver
+type: module
+name: informix module 
+registry-reference: base-registry
+images:
+- name: informix-cat
+  tag: 3.0.0.1
+- name: informix-eng
+  tag: 14.10.4.6 
+- name: informix-api
+  tag: 3.0.0.1 
+chart: zen-databases-catalog-3.0.0.tgz
+# For download to verify the chart file is correct, optional
+#md5: 
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: informix-catalog-14.10.0
+installOverride: install-override.yaml
+upgradeOverride: install-override.yaml
+serviceInstanceType:
+  - informix

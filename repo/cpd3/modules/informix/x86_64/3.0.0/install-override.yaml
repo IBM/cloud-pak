@@ -1,0 +1,26 @@
+# this file gets filled up at build time.
+dbType: "informix"
+arch: "amd64"
+image:
+  tag: 3.0.0.1
+global:
+  dbType: "informix"
+  arch: "amd64"
+  image:
+    tag: 3.0.0.1
+  docker_registry_prefix: #docker_registry_prefix#
+  use_external_prefix: true
+  persistence:
+    enabled: true
+    useDynamicProvisioning: true
+  ibmProduct: zen
+  databases: true
+  version: 3.0.0
+  viewer:
+    sa: cpd-viewer-sa
+zenProxy:
+  serviceType: ClusterIP
+namespace: #namespace#
+nginxRepo:
+  resolver: "kubernetes.default"
+
