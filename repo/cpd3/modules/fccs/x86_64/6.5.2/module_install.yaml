@@ -7,9 +7,9 @@ global:
   persistence:
     storageClassName: null
     useDynamicProvisioning: true
-    
-  # hostAliases provides a way to manage /etc/hosts in all Kubernetes 
-  # pods that will be installed in the Kubernetes cluster.  
+
+  # hostAliases provides a way to manage /etc/hosts in all Kubernetes
+  # pods that will be installed in the Kubernetes cluster.
   # This is useful in situations where DNS may not work properly,
   # or DNS entries are not used at all.  Most often, this is used
   # to add the Hadoop (HDP) servers into the /etc/hosts of each pod to
@@ -19,14 +19,14 @@ global:
   # In addition if you are using this because of DNS issues
   # you most likely would need to create /etc/hosts entries on the
   # nodes (hosts) that are running Kubernetes (the Kubernetes Master
-  # and Kubernetes Worker nodes) to contain the hostnames and ip 
-  # addresses of the Hadoop servers (nodes). 
+  # and Kubernetes Worker nodes) to contain the hostnames and ip
+  # addresses of the Hadoop servers (nodes).
   #
   # Below are examples with hostnames of hdp1, hdp2, hdp3
   # and the dns of the servers end in .yourcompany.com
-  # If you have 6 HDP servers then follow the pattern below 
+  # If you have 6 HDP servers then follow the pattern below
   # and enter ip and hostnames for 6 servers
-  # 
+  #
   # Also uncomment all the lines below for this to take affect
   #
   # hostAliases:
@@ -39,13 +39,13 @@ global:
   # - ip: "10.187.45.37"
   #   hostnames:
   #   - "hdp3.yourcompany.com"
-    
+
   # Set to true if deploying on IBM Cloud Pak for Data
   deployOnCP4D: true
 
   #For Non Cloud-Pak deployments, set the userid for non-root containers to run
   runAsUser: 1000
-    
+
   #Set the Additional Group ID settings that the containers should run as
   #This depends on the GID of the shared storage like NFS
   fsGroupConfig:
@@ -55,7 +55,7 @@ global:
   commonScripts:
     image:
       repository: fci-common-scripts
-      tag: 6.5.2
+      tag: 6.5.2.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -88,7 +88,7 @@ global:
 
   rmsConfig:
     HDFS_URL: "hdfs://localhost/"
-    
+
 dbConfig:
    FLYWAY_BASELINE_VERSION: '01.01.01.00.006'
    DB_SERVICE: 'db2-datastore-0'
@@ -129,7 +129,7 @@ surveillance_ecomm:
 
   # Whether or not to enable the containers for the EComm offering
   enabled: true
-  
+
   # Indicate swidtag used for EComm installation.
   swidtag:
     file: 'ibm.com_IBM_FCI_for_Conduct_Surveillance_Software_-_Electronic_Communication-6.5.1.swidtag'
@@ -152,7 +152,7 @@ surveillance_voice:
   # Whether or not to enable the containers for the Voice offering
   # The surveillance EComm should be enabled by default for Voice
   enabled: false
-  
+
   # Indicate swidtag used for Voice installation.
   #swidtag:
   #  file: 'ibm.com_IBM_Financial_Crimes_Insight_for_Conduct_Surveillance_Software_Voice-6.5.1.swidtag'
@@ -175,7 +175,7 @@ surveillance_complaints:
 
   # Whether or not to enable the containers for the Complaints offering
   enabled: false
-  
+
   # Indicate swidtag used for Complaints installation.
   swidtag:
     file: 'ibm.com_IBM_Financial_Crimes_Insight_for_Conduct_Surveillance_Software_-_Complaint_Analytics-6.5.1.swidtag'
@@ -276,7 +276,7 @@ surveillanceFilebeat:
     limits:
       cpu: "2"
       memory: "2Gi"
- 
+
 kerberosClient:
   image:
     repository: fci-hdp-client
@@ -353,14 +353,14 @@ complaintsPvcSpec:
     - ReadWriteMany
   storageClassName: null
   size: 20Gi
-  
+
 sharedPvNfsPath: /sifs-shared-instance
 sharedPvcSpec:
   accessModes:
     - ReadWriteMany
   storageClassName: null
   size: 1Gi
-  
+
 logstashPvNfsPath: /sifs-logstash-instance
 logstashPvcSpec:
   accessModes:
@@ -374,7 +374,7 @@ filebeatPvcSpec:
     - ReadWriteMany
   storageClassName: null
   size: 1Gi
-  
+
 livenessProbe:
   initialDelaySeconds: 300
   periodSeconds: 20

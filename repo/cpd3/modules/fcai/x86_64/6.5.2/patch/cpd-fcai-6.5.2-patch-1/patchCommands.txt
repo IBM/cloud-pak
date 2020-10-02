@@ -1,0 +1,1 @@
+patch deployment fcai-ibm-fci-alert-triage-prod-tls-analytics --patch '{"spec": {"template": {"spec": {"containers": [{"name": "tls","image": "{{.DockerRegistryPrefix}}/fcai-tls-analytics:6.5.2-PATCH1"}]}}}}'
