@@ -1,0 +1,80 @@
+type: module
+category: helm-chart
+name: Planning Analytics
+version: 2.0.55
+description: This module is for the Planning Analytics Add-on install
+registry-reference: pa-registry
+installOverride: icp4d-override.yaml
+images:
+- name: pa-cp4d-addon
+  tag: 2.0.55-2.0.551273
+- name: pa-cp4d-service-provider
+  tag: 2.0.55-161
+- name: pa-bss
+  tag: 1.0.1181-ubi7
+- name: pa-bss-init
+  tag: 1.0.234-ubi7
+- name: pa-cdn
+  tag: 1.0.9-ubi7
+- name: pa-couchdb
+  tag: 114-ubi7
+- name: pa-gateway
+  tag: 1.0.1015-ubi7
+- name: pa-glass
+  tag: 1.0.9-ubi7
+- name: pa-mongo
+  tag: 1.0.91-ubi7
+- name: pa-monitor
+  tag: 2.0.55.2025-ubi7
+- name: pa-mysql-cluster
+  tag: 1.0.97-ubi7
+- name: pa-neo-idviz
+  tag: 9.0.425-ubi7
+- name: pa-neo-provision
+  tag: 1.0.239-ubi7
+- name: pa-k8s-config
+  tag: 1.0.40-ubi7
+- name: pa-content-service
+  tag: 1.0.82-ubi7
+- name: pa-paw-ui-api
+  tag: 1.0.74-ubi7
+- name: pa-prism-app
+  tag: 1.0.5245-ubi7
+- name: pa-prism-platform
+  tag: 1.0.1726.3-ubi7
+- name: pa-prism-proxy
+  tag: 1.0.9144-ubi7
+- name: pa-redis
+  tag: 1.0.122-ubi7
+- name: pa-share-app
+  tag: 1.0.388-ubi7
+- name: pa-share-platform
+  tag: 1.0.307-ubi7
+- name: pa-share-proxy
+  tag: 1.0.385-ubi7
+- name: pa-social
+  tag: 1.0.346-ubi7
+- name: pa-tm1proxy
+  tag: 1.0.256-ubi7
+- name: pa-user-admin
+  tag: 1.0.389-ubi7
+- name: pa-wa-proxy
+  tag: 1.0.588-ubi7
+- name: pa-welcome
+  tag: 1.0.704-ubi7
+- name: pa-tm1-cp4d
+  tag: b625CP4D
+- name: pa-cp4d-post-upgrade-job
+  tag: 2.0.55-21
+chart: ibm-planning-analytics-cpd-addon-2.0.55.tgz
+# For download to verify the chart file is correct, optional
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: planning-analytics
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
