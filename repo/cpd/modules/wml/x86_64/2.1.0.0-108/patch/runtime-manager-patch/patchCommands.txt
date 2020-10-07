@@ -1,1 +1,0 @@
-patch statefulset wml-os-manager --patch '{ "spec": { "template": { "spec": { "containers": [{ "env": [{ "name": "DEFAULT_DEPLOY_REPLICA", "value": "2" }], "name": "runtimemanagercontainer" }] } } } }'
