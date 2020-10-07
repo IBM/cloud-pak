@@ -1,0 +1,8 @@
+patch deployment catalog-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "catalog-api","image": "{{.DockerRegistryPrefix}}/catalog_master:2.0.0-20200911161516-13fbe35-ppc64le"}]}}}}'
+set env deployment/portal-catalog PRODUCT_VERSION=v0.2.562.1-ppc64le
+patch deployment portal-catalog --patch '{"spec": {"template": {"spec": {"containers": [{"name": "portal-catalog","image": "{{.DockerRegistryPrefix}}/portal-catalog:v0.2.562.1-ppc64le"}]}}}}'
+set env deployment/dc-main PRODUCT_VERSION=v0.2.233.1-ppc64le
+patch deployment dc-main --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dc-main","image": "{{.DockerRegistryPrefix}}/dc-main:v0.2.233.1-ppc64le"}]}}}}'
+patch deployment wdp-connect-connector --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-connect-connector","image": "{{.DockerRegistryPrefix}}/wdp-connect-connector:2.0.87-ppc64le"}]}}}}'
+patch deployment wdp-connect-connection --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-connect-connection","image": "{{.DockerRegistryPrefix}}/wdp-connect-connection:2.0.87-ppc64le"}]}}}}'
+patch deployment wkc-search --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wkc-search","image": "{{.DockerRegistryPrefix}}/wkc-search_master:1.0.174-ppc64le"}]}}}}'
