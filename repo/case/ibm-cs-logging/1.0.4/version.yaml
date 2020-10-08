@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 3.2.2
+  catalogs:
+    framework: {}
+    icpclusterresource: {}
+    mcm: {}
+    rhocp: {}
+    ui: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Common Services Logging operator in a k8s cluster
+  displayDescription: ""
+  displayName: IBM Logging Operator CASE Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-cs-logging
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.4
+  webPage: https://www.ibm.com
+created: 2020-10-08T19:28:07.67954070+0000
+digest: sha256:8a80dc78178ce8518d3d42af6e0f7c22f93686d59863032886568d06c6cb809d
