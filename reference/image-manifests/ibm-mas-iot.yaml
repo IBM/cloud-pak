@@ -1,5 +1,5 @@
 source: ibm-mas-iot-bundle/case/ibm-mas-iot/case.yaml
-description: "Maximo Application Suite is a suite of applications from IBM. IoT is an application in Maximo Application Suite that does stuff."
+description: "Maximo Application Suite is a suite of applications from IBM. IoT (Internet of Things) is an application in Maximo Application Suite that provides device connectivity for enterprise AI applications"
 images:
   - image: cp/mas/hook-trackdeploy
   - image: cp/mas/iot-operator
@@ -11,6 +11,7 @@ images:
   - image: cp/wiotp/api-dashboard
   - image: cp/wiotp/api-devicemgmt
   - image: cp/wiotp/api-devops
+  - image: cp/wiotp/api-importconnectors
   - image: cp/wiotp/api-mbgadmin
   - image: cp/wiotp/api-org
   - image: cp/wiotp/api-organizations
@@ -28,6 +29,7 @@ images:
   - image: cp/wiotp/cassandra-user-setup
   - image: cp/wiotp/config-store
   - image: cp/wiotp/connectors-store
+  - image: cp/wiotp/data-import-connector
   - image: cp/wiotp/datapower
   - image: cp/wiotp/datapower-config
   - image: cp/wiotp/deprovagent-actions
@@ -45,6 +47,7 @@ images:
   - image: cp/wiotp/entity-connector
   - image: cp/wiotp/entity-manager
   - image: cp/wiotp/graphite
+  - image: cp/wiotp/graphite-exporter
   - image: cp/wiotp/graphite-relay
   - image: cp/wiotp/graphite-tribe
   - image: cp/wiotp/historian-configuration-manager
@@ -97,6 +100,8 @@ images:
   - image: cp/wiotp/org-store
   - image: cp/wiotp/provagent-guardian
   - image: cp/wiotp/s2s-store
+  - image: cp/wiotp/sqlmodel-auth
+  - image: cp/wiotp/sqlmodel-state
   - image: cp/wiotp/state-updater
   - image: cp/wiotp/statsd
   - image: cp/wiotp/ui-dashboard
