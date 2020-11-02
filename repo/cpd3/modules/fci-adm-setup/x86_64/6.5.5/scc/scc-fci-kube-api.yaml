@@ -1,0 +1,54 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    kubernetes.io/description: 'This policy is designed for containers that wait for other containers to start by testing if the required services have endpoints available.  A small subsite of kubernetes API calls are permitted.'
+  name: fci-kube-api
+allowHostDirVolumePlugin: false
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowPrivilegedContainer: false
+allowPrivilegeEscalation: false
+allowedCapabilities: []
+allowedFlexVolumes: null
+allowedUnsafeSysctls: null
+defaultAddCapabilities: []
+defaultAllowPrivilegeEscalation: false
+forbiddenSysctls:
+  - "*"
+fsGroup:
+  type: MustRunAs
+  ranges:
+  - max: 65535
+    min: 1
+readOnlyRootFilesystem: false
+requiredDropCapabilities:
+- ALL
+runAsUser:
+  type: MustRunAsNonRoot
+seccompProfiles:
+- docker/default
+# This can be customized for seLinuxOptions specific to your host machine
+seLinuxContext:
+  type: RunAsAny
+# seLinuxOptions:
+#   level:
+#   user:
+#   role:
+#   type:
+supplementalGroups:
+  type: MustRunAs
+  ranges:
+  - max: 65535
+    min: 1
+# This can be customized to host specifics
+volumes:
+- configMap
+- downwardAPI
+- emptyDir
+- persistentVolumeClaim
+- projected
+- secret
+priority: 0
