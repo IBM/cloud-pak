@@ -1,0 +1,14 @@
+# Description of the patch
+description: Fix for TS004227304 - SELECT is failing with java.lang.ArrayIndexOutOfBoundsException 
+
+# Image versions for the patch
+images:
+  - bigsql-engine-6_0_1_0:1984
+
+# This is for the undo option to backup before the patch
+# resourcesChanged:  
+#   - Type: Deployment
+#     Name: abcde-{{.Values}}
+
+# File containing OC commands to execute as part of patch
+patchFile: patch-oc-commands.txt

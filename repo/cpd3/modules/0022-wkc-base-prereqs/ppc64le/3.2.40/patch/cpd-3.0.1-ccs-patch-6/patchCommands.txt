@@ -1,0 +1,4 @@
+patch deployment redis-ha-haproxy --patch '{"spec": {"template": {"spec": {"containers": [{"name": "haproxy","image": "{{.DockerRegistryPrefix}}/haproxy:2.0.14-30-ppc64le"}]}}}}'
+patch sts wdp-couchdb --patch '{"spec": {"template": {"spec": {"containers": [{"name": "couchdb","image": "{{.DockerRegistryPrefix}}/couchdb3:3.1.12-ppc64le"}], "initContainers": [{"name": "init-copy","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.104-ppc64le"}]}}}}'
+patch sts redis-ha-server --patch '{"spec": {"template": {"spec": {"containers": [{"name": "redis","image": "{{.DockerRegistryPrefix}}/redis:6.0.5-108-ppc64le"}]}}}}'
+patch sts elasticsearch-master --patch '{"spec": {"template": {"spec": {"containers": [{"name": "haproxy","image": "{{.DockerRegistryPrefix}}/haproxy:2.0.14-30-ppc64le"}, {"name": "wdp-elasticsearch","image": "{{.DockerRegistryPrefix}}/elasticsearch:7.8.1-109-ppc64le"}]}}}}'
