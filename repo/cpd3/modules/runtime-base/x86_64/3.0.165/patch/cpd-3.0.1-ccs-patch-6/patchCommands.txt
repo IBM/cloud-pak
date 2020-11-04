@@ -1,0 +1,2 @@
+patch deployment utils-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "utils-api-container","image": "{{.DockerRegistryPrefix}}/privatecloud-utils-api:v3.13.79-x86_64"}]}}}}'
+patch deployment spawner-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "spawner-api-container","image": "{{.DockerRegistryPrefix}}/privatecloud-spawner-api-k8s:v3.13.1095-x86_64"}]}}}}'
