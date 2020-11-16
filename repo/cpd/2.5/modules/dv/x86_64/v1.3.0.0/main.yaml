@@ -1,0 +1,29 @@
+type: module
+category: helm-chart
+name: dv
+version: v1.3.0.0
+description: this is the dv to install
+registry-reference: base-registry
+images:
+- name: dv-addon
+  tag: v1.3.0.0-279
+- name: dv-api
+  tag: v1.3.0.0-279
+- name: dv-caching
+  tag: v1.3.0.0-279
+- name: dv-engine
+  tag: v1.3.0.0-279
+- name: dv-init-volume
+  tag: v1.3.0.0-279
+- name: dv-mariadb
+  tag: v1.3.0.0-279
+- name: dv-service-provider
+  tag: v1.3.0.0-279
+- name: dv-unifiedconsole
+  tag: v1.3.0.0-279
+- name: opencontent-common-utils
+  tag: 1.1.3
+chart: ibm-dv-addon-1.0.0.tgz	
+md5: ab4709d0c4df0e99f8add27b7901fbbc
+timeout: 60
+releaseName: dv

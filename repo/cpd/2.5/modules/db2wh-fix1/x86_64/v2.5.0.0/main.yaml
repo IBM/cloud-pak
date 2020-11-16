@@ -1,0 +1,24 @@
+chart: zen-databases-catalog.tar.gz
+images:
+  - name: zen-databases-catalog-db2wh
+    tag: v2.5.0.0-402-dev-x86_64
+  - name: db2u.auxiliary.auth
+    tag: v11.5.1.0-402-dev-x86_64
+  - name: db2u.instdb
+    tag: v11.5.1.0-402-dev-x86_64
+  - name: db2u.tools
+    tag: v11.5.1.0-402-dev-x86_64
+  - name: db2u
+    tag: v11.5.1.0-402-dev-x86_64
+  - name: db2u.db2client.workload
+    tag: v11.5.1.0-402-dev-x86_64
+  - name: etcd
+    tag: 3.3.10-402-dev-x86_64
+  - name: unified-console
+    tag: icp4d-db2u-402-dev-x86_64
+installOverride: install-override.yaml
+name: db2wh module
+registry-reference: base-registry
+releaseName: db2wh-catalog-11.5.1.0
+timeout: 90
+type: module

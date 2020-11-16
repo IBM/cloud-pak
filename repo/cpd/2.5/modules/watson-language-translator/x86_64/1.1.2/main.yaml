@@ -1,0 +1,58 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: watson-language-translator
+# The description is mandatory
+description: "this is the first module to install"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: lt-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-values-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+- name: lt-restapi  
+  tag: master-5817fb80-291
+- name: document-translation  
+  tag: master-334d5d89-295
+- name: serve-runtime  
+  tag: wdc-20200220-c6610053-20-master-fa87fe03-159
+- name: sentence-segmenter  
+  tag: 1.1.2
+- name: language-id  
+  tag: 1.1.2
+- name: watson-gateway  
+  tag: 3.4.1
+- name: opencontent-postgres-stolon  
+  tag: 2.0.1
+- name: opencontent-minio
+  tag: 1.1.3
+- name: opencontent-minio-client  
+  tag: 1.0.3
+- name: opencontent-icp-cert-gen-1  
+  tag: 1.1.4
+- name: opencontent-common-utils
+  tag: 1.1.7
+  
+chart: ibm-watson-lt-prod-1.1.2.tgz
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: ibm-watson-lt
+# Set to true will trigger the helm upgrade with force option. Optional. Missing means false
+helmUpgradeForce: false
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+scale:
+- small.yaml
+- medium.yaml
+

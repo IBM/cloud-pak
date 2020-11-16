@@ -1,0 +1,31 @@
+images:
+  - biapp-no-rsvp:1.6.8.1
+  - zen-addon-cognos-analytics:1.4.8.1
+patchFile: 1.4.8.1-addon-patch.txt
+description: Fix for missing jdbc driver in the biapp. Once this patch is applied, execute the following commands to patch a running service instance.
+
+
+# =============================================
+# Script to patch any running service instance.
+# 1. copy the following lines in a script (i,e <script-name>.sh)
+# 2. uncomment lines (remove # at the start of each line)
+# 3. apply execute permission (i.e chmod +x <script-name>.sh)
+# 4. execute it by passing the target namespace where Cognos Anaytics add-on is installed. (i.e ./<script-name>.sh <namespace>
+# =============================================
+
+#set -e
+#namespace=$1
+#if [ -z $namespace ]; then
+# echo "Provide the namespace to apply this patch"
+# exit
+#fi
+
+#biapp_deployment=$(oc -n $namespace get deployment | grep -e "^ca.*biapp*" | awk '{ printf $1 }')
+#echo "biapp deployment: $biapp_deployment"
+
+#biapp_image=$(oc get deployment $biapp_deployment -o yaml -n $namespace | grep -e "image.*biapp-no-rsvp:1.6.8" | sed 's/1.6.8/1.6.8.1/g' |  awk '{ printf $2 }')
+#echo "new biapp image tag: $biapp_image"
+
+#oc -n $namespace  patch deployment $biapp_deployment --patch "{\"spec\": {\"template\": {\"spec\": {\"containers\": [{\"name\": \"biapp\", \"image\": \"$biapp_image\"}]}}}}"
+#oc -n $namespace rollout history deployment/$biapp_deployment
+

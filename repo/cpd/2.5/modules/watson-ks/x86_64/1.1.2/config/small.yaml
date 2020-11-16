@@ -1,0 +1,22 @@
+commands:
+- scale --replicas=1 deployment wks-ibm-watson-ks
+- scale --replicas=1 deployment wks-ibm-watson-ks-aql-web-tooling
+- scale --replicas=1 deployment wks-ibm-watson-ks-dispatcher
+- scale --replicas=1 deployment wks-ibm-watson-ks-glimpse-builder
+- scale --replicas=1 deployment wks-ibm-watson-ks-glimpse-query
+- scale --replicas=1 deployment wks-ibm-watson-ks-servicebroker
+- scale --replicas=1 deployment wks-ibm-watson-mma-model-management-api
+- scale --replicas=1 deployment wks-sire-training-facade
+- scale --replicas=1 deployment wks-sire-training-jobq
+- scale --replicas=1 deployment wks-sire-training-sireg-ar
+- scale --replicas=1 deployment wks-sire-training-sireg-de
+- scale --replicas=1 deployment wks-sire-training-sireg-en
+- scale --replicas=1 deployment wks-sire-training-sireg-es
+- scale --replicas=1 deployment wks-sire-training-sireg-fr
+- scale --replicas=1 deployment wks-sire-training-sireg-it
+- scale --replicas=1 deployment wks-sire-training-sireg-ja
+- scale --replicas=1 deployment wks-sire-training-sireg-ko
+- scale --replicas=1 deployment wks-sire-training-sireg-nl
+- scale --replicas=1 deployment wks-sire-training-sireg-pt
+- scale --replicas=1 deployment wks-sire-training-sireg-zh
+- scale --replicas=1 deployment wks-sire-training-sireg-zht

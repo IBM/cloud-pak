@@ -1,0 +1,2 @@
+patch deployment ax-environments-api-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix}}/environments:2.1.210"}]}}}}'
+patch deployment ax-environments-ui-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix}}/environments:2.1.210"}]}}}}'

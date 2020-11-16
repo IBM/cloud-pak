@@ -1,0 +1,49 @@
+
+global:
+  # On uninstall do not preserve the datastores
+  keep: false
+  
+  # The storage class used for datastores
+  storageClassName: "portworx-assistant"
+
+  # Choose between "Development" and "Production"
+  deploymentType: "Production"
+
+  # The name of the secret for pulling images.
+  # The value for "global.image.pullSecret" below does not need to be changed for Development
+  # installations where pods will pull docker images directly from the Entitled Docker Registry.
+  # For Production installations where docker images will be pulled locally to the Openshift
+  # Docker Registry, "global.image.pullSecret" will need to be set to the value obtained by
+  # running oc get secrets | grep default-dockercfg in the namespace where IBM Cloud
+  # Pak for Data is installed.
+  
+  image:
+    pullSecret: "docker-pull-{{ .Release.Namespace }}-cp-icr-io-wa-registry-registry"
+
+  # global.languages.[language] - Specifies whether [language] should be installed or not.
+  languages:
+    english: true
+    german:  false
+    arabic: false
+    spanish: false
+    french: false
+    italian: false
+    japanese: false
+    korean: false
+    portuguese: false
+    czech: false
+    dutch: false
+    chineseTraditional: false
+    chineseSimplified: false
+
+# the storageclass used for postgres backup
+postgres:
+  backup:
+    dataPVC:
+      storageClassName: portworx-assistant
+
+# use "2.5.0.0" for CP4D 2.5.0 (carbon 9) and "3.0.0.0" for CP4D 3.0.0 and 3.0.1 (carbon 10)
+ingress:
+  wcnAddon:
+    addon:
+      platformVersion: "2.5.0.0"

@@ -1,0 +1,24 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: db2eventstore-role
+rules:
+- apiGroups: [""]
+  resources: ["pods", "pods/log", "pods/exec"]
+  verbs: ["get", "list", "patch", "watch", "update", "create"]
+
+- apiGroups: [""]
+  resources: ["configmaps"]
+  verbs: ["get", "update"]
+  
+- apiGroups: [""]
+  resources: ["services"]
+  verbs: ["get", "list"]
+  
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "create", "delete", "patch"]
+
+- apiGroups: ["batch", "extensions", "apps"]
+  resources: ["jobs", "deployments", "deployments/scale", "statefulsets", "statefulsets/scale"]
+  verbs: ["get", "list", "watch", "patch"]

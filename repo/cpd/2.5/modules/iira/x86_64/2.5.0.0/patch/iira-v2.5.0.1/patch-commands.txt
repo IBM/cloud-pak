@@ -1,0 +1,1 @@
+patch deployment iira-ibm-iira-orchestrator-prod --patch '{"spec": {"template": {"spec": {"containers": [{"name": "ibm-iira-orchestrator-prod","image": "{{.DockerRegistryPrefix}}/ibm-iira-orchestrator-prod:v2.5.0.1"}]}}}}'

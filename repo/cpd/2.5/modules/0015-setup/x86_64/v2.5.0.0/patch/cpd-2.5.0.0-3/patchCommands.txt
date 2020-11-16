@@ -1,0 +1,1 @@
+patch deployment ibm-nginx --patch '{"spec": {"template": {"spec": {"containers": [{"name": "ibm-nginx-container","image": "{{.DockerRegistryPrefix}}/icp4data-nginx-repo:v2.5.0.0-maint-x86_64-3"}]}}}}'

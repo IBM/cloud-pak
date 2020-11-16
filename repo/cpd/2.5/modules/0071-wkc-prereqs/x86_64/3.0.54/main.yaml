@@ -1,0 +1,15 @@
+type: module
+category: helm-chart
+name: 0071-wkc-prereqs
+version: 3.0.54
+description: this is the wkc-prereqs to install
+registry-reference: base-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+images:
+- name: wdp-db2
+  tag: 11.5.0.0a
+chart: 0071-wkc-prereqs-3.0.54.tgz
+md5: 786fc4ea14ef5243967db3f55fd01ab9
+timeout: 20
+releaseName: 0071-wkc-prereqs

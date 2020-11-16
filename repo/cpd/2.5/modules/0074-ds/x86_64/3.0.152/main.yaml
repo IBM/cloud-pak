@@ -1,0 +1,34 @@
+type: module
+category: helm-chart
+name: 0074-datastage module
+description: This is the 0074-datastage module to install
+registry-reference: base-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+images:
+- name: cassandra-ubi
+  tag: 3.11.3
+- name: ds-entitlement-image
+  tag: 1.0
+- name: is-services-image
+  tag: b4-cypress-b6
+- name: is-en-compute-image
+  tag: b4-cypress-b6
+- name: is-db2xmeta-image
+  tag: b4-cypress-b6
+- name: is-engine-image
+  tag: b4-cypress-b6
+- name: kafka-ubi
+  tag: 2.11-2.1.1
+- name: solr-ubi
+  tag: 8.1.0
+- name: wkc-init-container
+  tag: 1.0.44
+- name: wkc-ugconfig
+  tag: 3.0.16
+- name: zookeeper-ubi
+  tag: 3.4.12
+chart: 0074-datastage-3.0.152.tgz
+md5: 
+timeout: 45
+releaseName: 0074-datastage
