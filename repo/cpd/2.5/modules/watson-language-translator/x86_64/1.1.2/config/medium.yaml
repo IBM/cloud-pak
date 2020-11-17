@@ -1,0 +1,6 @@
+commands:
+  - scale --replicas=2 deployment ibm-watson-lt-ibm-watson-lt-api
+  - scale --replicas=2 deployment ibm-watson-lt-ibm-watson-lt-documents
+  - scale --replicas=2 deployment ibm-watson-lt-ibm-watson-lt-language-translator-gw-deployment
+  - scale --replicas=2 deployment ibm-watson-lt-ibm-watson-lt-lid
+  - scale --replicas=2 deployment ibm-watson-lt-ibm-watson-lt-segmenter

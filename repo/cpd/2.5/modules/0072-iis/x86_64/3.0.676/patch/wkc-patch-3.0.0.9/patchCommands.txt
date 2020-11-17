@@ -1,0 +1,16 @@
+patch sts solr --patch '{"spec": {"template": {"spec": {"containers": [{"name": "solr","image": "{{.DockerRegistryPrefix}}/solr-x86_64:8.4.1_b752_eaf0bff527f0"}], "initContainers": [{"name": "ug-config","image": "{{.DockerRegistryPrefix}}/wkc-ugconfig:3.0.16-1"},{"name": "zk-wait","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.81"}]}}}}'
+patch sts zookeeper --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zookeeper","image": "{{.DockerRegistryPrefix}}/zookeeper-x86_64:3.4.14_b752_eaf0bff527f0"}]}}}}'
+patch sts kafka --patch '{"spec": {"template": {"spec": {"containers": [{"name": "kafka","image": "{{.DockerRegistryPrefix}}/kafka-x86_64:2.11-2.1.1_b752_eaf0bff527f0"}]}}}}'
+patch sts cassandra --patch '{"spec": {"template": {"spec": {"containers": [{"name": "cassandra","image": "{{.DockerRegistryPrefix}}/cassandra-x86_64:3.11.3_b752_eaf0bff527f0"}]}}}}'
+patch deployment iis-xmetarepo --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-xmetadocker-container","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b80-cypress-b28"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b80-cypress-b28"}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","image": "{{.DockerRegistryPrefix}}/is-services-image:b80-cypress-b28"}], "initContainers": [{"name": "xmeta-wait","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.81"}, {"name": "solr-wait","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.81"}]}}}}'
+patch statefulsets is-en-conductor --patch '{"spec": {"template": {"spec": {"volumes": [{"name": "user-home-mount", "persistentVolumeClaim": {"claimName": "user-home-pvc"}}], "containers": [{"name": "iis-en-conductor","volumeMounts": [{"name": "user-home-mount","mountPath": "/user-home"}]}]}}}}'
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","image": "{{.DockerRegistryPrefix}}/is-engine-image:b80-cypress-b28"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-engine-image:b80-cypress-b28"}, {"name": "wait-services","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.81"}]}}}}'
+patch sts is-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b80-cypress-b28"}]}}}}'
+delete pod -l app=iis-services
+wait --for=condition=ready --timeout=60m pod -l app=iis-services
+wait --for=condition=ready --timeout=30m pod/is-en-conductor-0
+exec is-en-conductor-0 --container iis-en-conductor -- sed -i 's,odf.zookeeper.connect=.*,odf.zookeeper.connect=zookeeper:2181/kafka,g' /opt/IBM/InformationServer/ASBNode/conf/odf.properties
+exec is-en-conductor-0 --container iis-en-conductor -- sed -i 's,odf.zookeeper.connect=.*,odf.zookeeper.connect=zookeeper:2181/kafka,g' /mnt/dedicated_vol/Engine/is-en-conductor-0/ASBNode/conf/odf.properties
+exec is-en-conductor-0 --container iis-en-conductor -- service ODFEngine stop
+exec is-en-conductor-0 --container iis-en-conductor -- service ODFEngine start

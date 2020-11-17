@@ -1,0 +1,25 @@
+type: module
+name: core module
+registry-reference: base-registry
+images:
+  - name: zen-admin
+    tag: v2.5.0.0-210
+  - name: zen-content
+    tag: v2.5.0.0-210
+  - name: zen-core
+    tag: v2.5.0.0-210
+  - name: zen-core-api
+    tag: v2.5.0.0-210
+  - name: icpd-requisite
+    tag: v2.5.0.0-210
+  - name: icp4d-api
+    tag: v2.5.0.0-210
+  - name: zen-watchdog
+    tag: v2.5.0.0-210
+  - name: zen-data-sorcerer
+    tag: v2.5.0.0-210
+chart: 0020-zen-base-2.5.0.tgz
+#md5: 
+timeout: 20
+releaseName: 0020-core
+installOverride: install-override.yaml

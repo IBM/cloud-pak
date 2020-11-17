@@ -1,0 +1,7 @@
+# List of patching commands
+patch deployment dv-caching -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-caching", "image":"{{.DockerRegistryPrefix }}/dv-caching:v1.3.0.0-284"}]}}}}'
+patch statefulset dv -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-mariadb", "image":"{{.DockerRegistryPrefix }}/dv-mariadb:v1.3.0.0-284"}]}}}}'
+patch statefulset dv -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-opensource", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.3.0.0-284"}]}}}}'
+patch statefulset dv -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-server", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.3.0.0-284"}]}}}}'
+patch deployment dv-api -p '{"spec": {"template": {"spec":{"containers": [{"name": "ibm-dv-api", "image":"{{.DockerRegistryPrefix }}/dv-api:v1.3.0.0-284"}]}}}}'
+patch deployment dv-uc -p '{"spec": {"template": {"spec":{"containers": [{"name": "uc", "image":"{{.DockerRegistryPrefix }}/dv-unifiedconsole:v1.3.0.0-284"}]}}}}'

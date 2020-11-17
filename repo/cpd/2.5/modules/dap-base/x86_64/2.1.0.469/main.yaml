@@ -1,0 +1,31 @@
+type: module
+category: helm-chart
+name: common core module
+description: "This is the common core module"
+registry-reference: base-registry
+images:
+- name: portal-main
+  tag: v2.1.0_051119
+- name: portal-common-api
+  tag: v2.1.0_051119
+- name: portal-job-manager
+  tag: v2.1.0_051119
+- name: portal-notifications
+  tag: v2.1.0_051119
+- name: asset-files-api
+  tag: v2.1.0_051119
+- name: ngp-projects-api
+  tag: v2.1.0_051119
+- name: dap-dashboards-api
+  tag: v2.1.0_051119
+- name: portal-dashboards
+  tag: v2.1.0_051119
+- name: cp4d-ws-secrets-job
+  tag: v2.1.0_051119
+chart: ibm-dap-base-prod-2.1.0.tgz
+md5: e181b3916d81807657536caea592c35a
+timeout: 60
+releaseName: ibm-dap-base-prod
+scale:
+- small.yaml
+- medium.yaml

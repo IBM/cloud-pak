@@ -1,0 +1,2 @@
+patch cronjob spark-hb-preload-jkg-image --patch '{ "spec": { "jobTemplate": { "spec": { "template": { "spec": { "containers": [{ "name": "spark-hb-preload-jkg-image2", "image": "{{.DockerRegistryPrefix}}/spark-hb-jkg:2.4.4-v3.1"}] } } } } } }'
+patch deployment spark-hb-control-plane --patch '{ "spec": { "template": { "spec": { "containers": [{ "name": "spark-hb-control-plane", "image": "{{.DockerRegistryPrefix}}/spark-hb-control-plane:1.0.1-14.1-cp4d"}] } } } }'

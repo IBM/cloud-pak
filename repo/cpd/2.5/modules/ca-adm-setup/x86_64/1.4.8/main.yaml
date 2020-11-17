@@ -1,0 +1,18 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: CA Content Store special SCC
+# The description is optional
+description: Resources required to run the Cognos Analytics Content Store Pod
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/scc/ibm-cognos-analytics-prod-scc.yaml
+- adm/sa/ibm-cognos-analytics-cs-sa.yaml
+
+# Optional, only when you have scc defined
+add-scc-to-user:
+- scc: ibm-cognos-analytics-prod-scc
+  sa: ibm-cognos-analytics-cs-sa
