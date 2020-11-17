@@ -1,0 +1,16 @@
+type: module
+category: helm-chart
+name: Watson Studio ML tooling module
+description: "This is the Watson Studio ML tooling module"
+registry-reference : base-registry
+images:
+- name: portal-ml-dl
+  tag: 3.5.5106
+scale:
+- small.yaml
+- medium.yaml
+chart: ibm-ws-ml-prod-3.5.0.tgz
+md5: fb56b03d5c98bd4ca871f4130b288c48
+timeout: 60
+releaseName: ibm-ws-ml-prod
+helmUpgradeForce: true

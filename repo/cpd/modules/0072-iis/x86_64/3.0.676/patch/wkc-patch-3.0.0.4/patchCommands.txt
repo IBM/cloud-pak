@@ -1,1 +1,0 @@
-patch sts solr --patch '{"spec": {"template": {"spec": {"containers": [{"name": "solr","image": "{{.DockerRegistryPrefix}}/solr-x86_64:8.4.1_b653_682cf4c3172c"}]}}}}'

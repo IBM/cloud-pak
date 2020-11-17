@@ -1,1 +1,0 @@
-patch deployment streaming-pipelines-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "streaming-pipelines-api","image": "{{.DockerRegistryPrefix}}/streaming-pipelines-api:2.5.0.0-patch1"}]}}}}'

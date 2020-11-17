@@ -1,0 +1,53 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Watson Knowledge Catalog InstaScan
+# The description is mandatory
+description: "Identify risk hot spots in your data in cloud data sources."
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference : base-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+#installOverride: myinstall.yaml
+#upgradeOverride: myupgrade.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+  - name: instascan-api-server
+    tag:  "1.1.3"
+  - name: instascan-ds-manager
+    tag:  "1.1.3"
+  - name: instascan-nginx
+    tag:  "1.1.3"
+  - name: instascan-postgres
+    tag:  "1.1.3"
+  - name: instascan-vault
+    tag:  "1.1.3"
+  - name: instascan-ap-analysis-service
+    tag:  "1.1.3"
+  - name: instascan-ap-service
+    tag:  "1.1.3"
+  - name: instascan-ap-tika
+    tag:  "1.1.3"
+  - name: instascan-doc-preview-service
+    tag:  "1.1.3"
+  - name: instascan-openjdk
+    tag:  "1.1.3"
+  - name: opencontent-icp-cert-gen-1
+    tag:  "1.1.8"
+chart: ibm-wkc-instascan-prod-1.1.3.tgz
+# For download to verify the chart file is correct, optional
+md5: 3cbc253ec91e867f8b1f010acde3ccec
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: wkc-instascan
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml

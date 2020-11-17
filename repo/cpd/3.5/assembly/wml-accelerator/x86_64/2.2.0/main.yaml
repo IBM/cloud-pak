@@ -1,0 +1,62 @@
+# type will be either "assembly" or "module", mandatory
+type: assembly
+# mandatory - once this file uploaded, we will not delete any more,
+# but if this version too old, the download/deploy will tell this product is not valid any more, and show the latest version
+# We can also add dev, candidate etc here and telling the user what is the state
+lifeCycle: live
+
+# Description is optional
+description: IBM Cloud Private for Data assembly
+
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct
+#installOverride: install-override.yaml
+#upgradeOverride: upgrade-override.yaml
+predefinedOverride:
+- name: portworx
+  installOverride: portworx-install-override.yaml
+  upgradeOverride: portworx-upgrade-override.yaml
+- name: ocs
+  installOverride: ocs-install-override.yaml
+  upgradeOverride: ocs-upgrade-override.yaml
+
+# Optional vpc and memory, we check what it specified, and it ignore the value in sub-assembly
+# The future will scan the helm chart and sum up the requirements
+# The permission required to check this info may need cluster-admin, so may NOT applicable
+# bricks is mandatory, it could contains another "product"
+# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
+# although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
+# We will have linter to check to make sure the rules
+#
+# Version is hardcoded for now, we will address the version compatiblities after Oct GA
+bricks:
+  - name: lite
+    minVersion: 3.5.0
+    type: assembly
+#  - name: scheduler-adm
+#    version: 3.5.0
+#    type: module
+#  - name: scheduler-operator
+#    version: 3.5.0
+#    type: module
+#  - name: scheduler-cr
+#    version: 3.5.0
+#    type: module
+  - name: wmla-adm-setup
+    version: 2.2.0
+    type: module
+  - name: wmla
+    version: 2.2.0
+    type: module
+    allowMultiple: true
+    #allowTetheredNamespace: true
+  - name: wmla-operator
+    version: 2.2.0
+    type: module
+    allowMultiple: true
+    allowTetheredNamespace: true
+  - name: wmla-cr
+    version: 2.2.0
+    type: module
+    allowMultiple: true
+    allowTetheredNamespace: true

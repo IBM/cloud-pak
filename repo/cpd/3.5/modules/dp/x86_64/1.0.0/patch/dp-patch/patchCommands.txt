@@ -1,0 +1,19 @@
+scale deployment dp-core --replicas 0
+patch deployment dp-core --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "ibm-dp-prod", "image":"{{.DockerRegistryPrefix }}/dp-core:1.0.0-179"} ] } } } }'
+scale deployment dp-core --replicas 1
+
+scale deployment dp-db --replicas 0
+patch deployment dp-db --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "dp-db", "image":"{{.DockerRegistryPrefix }}/dp-db:1.0.0-179"} ] } } } }'
+scale deployment dp-db --replicas 1
+
+scale deployment dp-pp --replicas 0
+patch deployment dp-pp --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "pp", "image":"{{.DockerRegistryPrefix }}/dp-pp:1.0.0-179"} ] } } } }'
+scale deployment dp-pp --replicas 1
+
+scale deployment dp-qp --replicas 0
+patch deployment dp-qp --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "ibm-dpqp-prod", "image":"{{.DockerRegistryPrefix }}/dp-qp:1.0.0-179"} ] } } } }'
+scale deployment dp-qp --replicas 1
+
+scale deployment dp-ui --replicas 0
+patch deployment dp-ui --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "ui", "image":"{{.DockerRegistryPrefix }}/dp-ui:1.0.0-179"} ] } } } }'
+scale deployment dp-ui --replicas 1

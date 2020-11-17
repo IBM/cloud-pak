@@ -1,0 +1,16 @@
+type: module
+category: "adm-setup"
+description: RBAC Authorization
+files:
+- adm/dmc-clusterrole.yaml
+- adm/dmc-clusterrolebinding.yaml
+- adm/dmc-rolebinding.yaml
+- adm/dmc-sa.yaml
+
+add-scc-to-user:
+- scc: cpd-user-scc 
+  sa: dmc-sa
+
+add-cluster-role-to-user:
+- clusterrole: dmc-clusterrole
+  sa: dmc-sa

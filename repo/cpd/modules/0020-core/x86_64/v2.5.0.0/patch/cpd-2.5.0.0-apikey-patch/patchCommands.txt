@@ -1,1 +1,0 @@
-patch deployment icp4d-open-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "icp4d-open-api-container","image": "{{.DockerRegistryPrefix}}/icp4d-api:v2.5.0.0-maint-x86_64-5"}]}}}}'

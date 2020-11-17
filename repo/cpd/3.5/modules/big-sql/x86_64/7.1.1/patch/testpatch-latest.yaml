@@ -1,0 +1,15 @@
+# Description of the patch
+description: A test patch to bring Db2 Big SQL to the 312 level.
+
+# Image versions for the patch
+images:
+  - bigsql-addon-7_1_1_0:312
+  - bigsql-service-provider-7_1_1_0:312
+
+# This is for the undo option to backup before the patch
+# resourcesChanged:  
+#   - Type: Deployment
+#     Name: abcde-{{.Values}}
+
+# File containing OC commands to execute as part of patch
+patchFile: patch-oc-commands.txt

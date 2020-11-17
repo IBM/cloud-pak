@@ -1,0 +1,45 @@
+# IBM Db2 Big SQL CP4D Assembly Definition
+# See https://github.ibm.com/PrivateCloud/icpd_courier/blob/master/Samples/assembly-example.yaml
+
+type: assembly
+lifeCycle: live
+
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM Db2 Big SQL addon
+
+# Version is mandatory
+version: 7.1.1
+
+# Description is optional
+description: IBM Db2 Big SQL addon assembly
+
+architecture: x86_64
+
+# Do NOT use for now - Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct - consult with the install team to make sure this is implemented
+#overrideValues:
+#  install: install-override.yaml
+#  upgrade: upgrade-override.yaml
+
+# Predefined overrides with custom storage class names for Big SQL
+predefinedOverride:
+- name: ocs
+  installOverride: bigsql-ocs-install.yaml
+  upgradeOverride: bigsql-ocs-upgrade.yaml
+- name: portworx
+  installOverride: bigsql-portworx-install.yaml
+  upgradeOverride: bigsql-portworx-upgrade.yaml
+
+bricks:
+  - name: lite
+    minVersion: 3.5.0
+    type: assembly
+  - name: big-sql-adm-setup
+    version: 7.1.1
+    type: module
+  - name: big-sql
+    version: 7.1.1
+    type: module

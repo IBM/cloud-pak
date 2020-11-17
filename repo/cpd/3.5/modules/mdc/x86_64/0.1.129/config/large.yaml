@@ -1,0 +1,4 @@
+commands:
+  - scale --replicas=8 deployment mdc-core
+  - set resources statefulset mdc-cassandra --limits=cpu=16000m,memory=32Gi
+  - set resources statefulset mdc-elasticsearch-data --limits=cpu=16000m,memory=32Gi

@@ -1,0 +1,27 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: DV base scc
+# The description is optional
+description: Yes, this is the account
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/rb/dv-bar-rb.yaml
+- adm/rb/dv-rb.yaml
+- adm/roles/dv-bar-role.yaml
+- adm/roles/dv-role.yaml
+- adm/sa/dv-bar-sa.yaml
+- adm/sa/dv-sa.yaml
+- adm/scc/dv-metastore-scc.yaml
+- adm/scc/dv-scc.yaml
+# Optional, only when you have scc defined
+add-scc-to-user:
+- scc: dv-scc
+  sa: dv-sa
+- scc: dv-scc
+  sa: dv-bar-sa
+- scc: dv-metastore-scc
+  sa: dv-sa

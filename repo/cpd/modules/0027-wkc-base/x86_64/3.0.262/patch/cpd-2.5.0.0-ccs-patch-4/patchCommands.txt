@@ -1,7 +1,0 @@
-patch deployment catalog-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "catalog-api","image": "{{.DockerRegistryPrefix}}/catalog_master:2.0.0-20200226171053-73ac74e"}]}}}}'
-patch deployment wdp-connect-connection --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-connect-connection","image": "{{.DockerRegistryPrefix}}/wdp-connect-connection:1.2.6"}]}}}}'
-patch deployment wdp-connect-connector --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-connect-connector","image": "{{.DockerRegistryPrefix}}/wdp-connect-connector:1.2.6"}]}}}}'
-set env deployment/portal-catalog BABEL_DISABLE_CACHE=false
-patch deployment portal-catalog --patch '{"spec": {"template": {"spec": {"containers": [{"name": "portal-catalog","image": "{{.DockerRegistryPrefix}}/portal-catalog:v0.2.75.4"}]}}}}'
-set env deployment/dc-main BABEL_DISABLE_CACHE=false
-patch deployment dc-main --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dc-main","image": "{{.DockerRegistryPrefix}}/dc-main:v0.2.36.3"}]}}}}'

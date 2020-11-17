@@ -1,0 +1,22 @@
+global:
+  flowSession:
+    # How much CPU the flow-session container needs. Must be a whole number, not expressed in millis-of-a-cpu.
+    cpuLimits: 4
+    memLimits: 16Gi
+
+# Values specific to the canvas API deployment.
+flow-api:
+  resources:
+    replicaCount: 1
+    memRequests: 250Mi
+    memLimits: 1Gi
+    cpuRequests: 50m
+    cpuLimits: 1500m
+
+flow-ui:
+  resources:
+    replicaCount: 1
+    memRequests: 350Mi
+    memLimits: 1.5Gi
+    cpuRequests: 100m
+    cpuLimits: 1500m

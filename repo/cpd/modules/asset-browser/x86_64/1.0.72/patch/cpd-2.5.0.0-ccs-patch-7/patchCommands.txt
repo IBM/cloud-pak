@@ -1,1 +1,0 @@
-patch deployment wdp-shaper --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-shaper-container","image": "{{.DockerRegistryPrefix}}/wdp-shaper:1.0.839-x86_64"}]}}}}'

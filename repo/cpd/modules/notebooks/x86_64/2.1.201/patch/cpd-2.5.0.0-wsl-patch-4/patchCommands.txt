@@ -1,2 +1,0 @@
-patch deployment ax-cdsx-notebooks-job-manager-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix }}/notebooks:wsl-2.5.0.0-patch-4"}]}}}}'
-patch deployment ax-ws-notebooks-ui-deploy -p '{"spec": {"template": {"spec":{"containers": [{"name": "runtime", "image":"{{.DockerRegistryPrefix }}/notebooks:wsl-2.5.0.0-patch-4"}]}}}}'

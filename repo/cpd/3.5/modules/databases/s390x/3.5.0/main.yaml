@@ -1,0 +1,14 @@
+chart: 0025-databases-3.5.0.tgz
+helmUpgradeForce: true
+images:
+  - name: zen-databases
+    tag: 3.5.0-683-s390x
+  - name: zen-database-core
+    tag: 3.5.0-683-s390x
+installOverride: install-override.yaml
+name: databases module
+registry-reference : base-registry
+releaseName: 0025-databases
+timeout: 90
+type: module
+upgradeOverride: install-override.yaml

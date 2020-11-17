@@ -1,0 +1,17 @@
+global:
+    cloudpakInstanceId: null
+    databases: true
+    docker_registry_prefix: null
+    ibmProduct: zen
+    image:
+        tag: 3.5.0-683-s390x
+    persistence:
+        enabled: true
+        storageClassName: null
+        useDynamicProvisioning: true
+    use_external_prefix: true
+namespace: null
+nginxRepo:
+    resolver: kubernetes.default
+zenProxy:
+    serviceType: ClusterIP

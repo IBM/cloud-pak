@@ -1,5 +1,0 @@
-patch deployment icp4d-open-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "icp4d-open-api-container","image": "{{.DockerRegistryPrefix}}/icp4d-api:v2.5.0.0-maint-x86_64-5"}]}}}}'
-patch deployment zen-core-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-api-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:v2.5.0.0-maint-x86_64-2"}]}}}}'
-patch deployment ibm-nginx --patch '{"spec": {"template": {"spec": {"containers": [{"name": "ibm-nginx-container","image": "{{.DockerRegistryPrefix}}/icp4data-nginx-repo:v2.5.0.0-maint-x86_64-2"}]}}}}'
-patch deployment zen-core --type json --patch '[{ "op": "add","path": "/spec/template/spec/containers/0/env/-","value": {"name": "NODE_OPTIONS","value": "--max-http-header-size=32768"}}]'
-patch deployment zen-admin --type json --patch '[{ "op": "add","path": "/spec/template/spec/containers/0/env/-","value": {"name": "NODE_OPTIONS","value": "--max-http-header-size=32768"}}]'

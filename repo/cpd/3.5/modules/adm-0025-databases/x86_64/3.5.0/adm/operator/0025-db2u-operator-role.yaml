@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: 0025-db2u-operator
+rules:
+- apiGroups:
+  - db2u.databases.ibm.com
+  resources:
+  - '*'
+  verbs:
+  - '*'
+  

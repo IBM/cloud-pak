@@ -1,0 +1,49 @@
+global:
+  zenServiceInstanceId: 00000001
+  image:
+    tag: v1.2.1.1
+  use_external_prefix: true
+  ibmProduct: zen
+  icp4dVersion: 1.0.0.1
+  icp4dEdition: '  '
+  docker_registry_prefix: #docker_registry_prefix#
+  persistence:
+    enabled: true
+    storageClassName: #storageclass#
+    useDynamicProvisioning: true
+  productName: IBM Cloud Pak for Data
+  globalProductName: IBM Cloud Pak for Data
+  nav:
+    nav_context: icp4data
+    deployment_target: icp4data
+  icpd_cluster_admin: false
+  databases: false
+usermgmt:
+  usermgmt_delegated: false
+  usermgmt_enable_localrepo: false
+  usermgmt_allow_ldap_config_changes: false
+  allow_global_admin_delete: true
+  show_user_approval: false
+  dark_login_theme: true
+  show_access_levels: false
+
+namespace: #namespace#
+zenServiceInstanceId: 00000001
+zenServiceInstanceDisplayName: "sample-0"
+nginxRepo:
+  resolver: "kubernetes.default"
+  need_local_cookies: false
+  need_global_cookies: true
+
+yosemiteCore:
+  routePrefix: system
+
+zenCoreApi:
+  tillerNamespace: #namespace#
+  tillerPort: 44134
+  noTls: true
+
+zenCore:
+  nginxRoute: false
+
+nameOverride: ""

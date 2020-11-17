@@ -1,0 +1,26 @@
+type: module
+name: core module
+registry-reference : base-registry
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+  - name: zen-core
+    tag: 3.5.1-x86_64-352
+  - name: zen-core-api
+    tag: 3.5.1-x86_64-352
+  - name: icpd-requisite
+    tag: 3.5.1-x86_64-352
+  - name: zen-watchdog
+    tag: 3.5.1-x86_64-352
+  - name: zen-data-sorcerer
+    tag: 3.5.1-x86_64-352
+  - name: zen-audit
+    tag: 3.5.1-x86_64-352
+chart: 0020-zen-base-3.5.1.tgz
+#md5:
+timeout: 90
+releaseName: 0020-core
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml

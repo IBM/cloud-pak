@@ -1,0 +1,3 @@
+commands:
+- set resources sts ds-engine-compute --limits=cpu=4,memory=12Gi 
+- scale sts ds-engine-compute --replicas=3

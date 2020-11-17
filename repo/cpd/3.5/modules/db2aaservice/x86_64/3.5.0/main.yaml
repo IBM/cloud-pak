@@ -1,0 +1,24 @@
+chart: zen-databases-catalog-3.5.0.tgz
+helmUpgradeForce: true
+images:
+  - name: zen-databases-catalog-db2aaservice
+    tag: 3.5.0-2175-dev-x86_64
+  - name: db2u.auxiliary.auth
+    tag: 11.5.5.0-2175-x86_64
+  - name: db2u.instdb
+    tag: 11.5.5.0-2175-x86_64
+  - name: db2u.tools
+    tag: 11.5.5.0-2175-x86_64
+  - name: db2u
+    tag: 11.5.5.0-2175-x86_64
+  - name: etcd
+    tag: 3.3.10-2175-x86_64
+installOverride: install-override.yaml
+name: db2aaservice module
+registry-reference : base-registry
+releaseName: db2aaservice-catalog-11.5.5.0
+serviceInstanceType:
+  - db2aaservice
+timeout: 90
+type: module
+upgradeOverride: install-override.yaml

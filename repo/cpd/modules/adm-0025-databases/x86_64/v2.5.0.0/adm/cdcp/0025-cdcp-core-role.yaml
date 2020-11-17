@@ -1,8 +1,0 @@
-kind: Role
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: 0025-cdcp-core
-rules:
-- apiGroups: ["crd.compose.com", "dev.crd.compose.com"]
-  resources: ["formations", "formations/status", "backups", "recipetemplates", "formationlocks", "buckets", "recipes", "serviceendpointacls", "serviceendpointacls/status"]
-  verbs: ["*"]

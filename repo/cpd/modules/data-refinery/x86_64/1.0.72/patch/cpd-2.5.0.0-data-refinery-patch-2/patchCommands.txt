@@ -1,1 +1,0 @@
-patch deployment wdp-dataprep --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-dataprep-container","image": "{{.DockerRegistryPrefix}}/wdp-dataprep:1.0.636-x86_64"}]}}}}'

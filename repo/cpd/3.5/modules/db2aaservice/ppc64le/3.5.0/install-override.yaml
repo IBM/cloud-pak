@@ -1,0 +1,26 @@
+arch: ppc64le
+dbType: db2aaservice
+global:
+    arch: ppc64le
+    cloudpakInstanceId: null
+    databases: true
+    dbType: db2aaservice
+    docker_registry_prefix: null
+    editor:
+        sa: cpd-editor-sa
+    ibmProduct: zen
+    image:
+        tag: 3.5.0-2175-dev
+    persistence:
+        enabled: true
+        useDynamicProvisioning: true
+    use_external_prefix: true
+    viewer:
+        sa: cpd-viewer-sa
+image:
+    tag: 3.5.0-2175-dev
+namespace: null
+nginxRepo:
+    resolver: kubernetes.default
+zenProxy:
+    serviceType: ClusterIP
