@@ -1,0 +1,31 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: wkc-iis-role
+rules:
+- apiGroups:
+  - ""
+  - extensions
+  - apps
+  - batch
+  resources:
+  - pods
+  - deployments
+  - statefulsets
+  - replicasets
+  - jobs
+  - cronjobs
+  - jobs/status
+  - pods/status
+  - pods/exec
+  - statefulsets/scale
+  verbs:
+  - create
+  - get
+  - update
+  - edit
+  - list
+  - patch
+  - watch
+  - delete
+  - exec

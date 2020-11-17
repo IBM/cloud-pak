@@ -1,3 +1,0 @@
-patch statefulset mantle-discovery-es-client --patch '{"spec": {"template": {"spec": {"containers": [{"name": "elastic","image": "{{.DockerRegistryPrefix}}/wd-elastic:12.0.5-2008"}]}}}}'
-patch statefulset mantle-discovery-es-data --patch '{"spec": {"template": {"spec": {"containers": [{"name": "elastic","image": "{{.DockerRegistryPrefix}}/wd-elastic:12.0.5-2008"}]}}}}'
-patch statefulset mantle-discovery-es-master --patch '{"spec": {"template": {"spec": {"containers": [{"name": "elastic","image": "{{.DockerRegistryPrefix}}/wd-elastic:12.0.5-2008"}]}}}}'

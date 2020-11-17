@@ -1,3 +1,0 @@
-patch deployment igc-ui-react --patch '{"spec": {"template": {"spec": {"containers": [{"name": "igc-ui-react","image": "{{.DockerRegistryPrefix}}/igc-ui-react:b7022_969b3eb796e3"}]}}}}'
-patch deployment gremlin-console --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gremlin-console","image": "{{.DockerRegistryPrefix}}/gremlin-console-ubi:0.4.0_b590_709e1d9f00c9"}]}}}}'
-patch deployment omag --patch '{"spec": {"template": {"spec": {"containers": [{"name": "omag","image": "{{.DockerRegistryPrefix}}/omag:b1226_793891149cf8"}]}}}}'

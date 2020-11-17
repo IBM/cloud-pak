@@ -1,0 +1,78 @@
+- name: lite
+  version: 3.5.1
+- name: wkc-adm
+  version: 3.5.603
+- name: 0072-iis
+  version: 13.5.645
+  gitLog: https://github.ibm.com/InformationServer/ugi-helm/tree/81cd8b541abd57c51b093b23f6c6a42b7ee3034e
+  images:
+  - name: cassandra-x86_64
+    version: 3.11.8
+  - name: is-services-image
+    version: b164-CP4D-3_5_0-b71
+  - name: is-en-compute-image
+    version: b164-CP4D-3_5_0-b71
+  - name: is-db2xmeta-image
+    version: b164-CP4D-3_5_0-b71
+  - name: is-engine-image
+    version: b164-CP4D-3_5_0-b71
+  - name: wkc-ugconfig
+    version: 3.5.27
+    gitLog: https://github.ibm.com/dataconnect/wkc-ugconfig/commits/3.5.27
+  - name: wkc-init-container
+    version: 1.0.117
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.117
+  - name: kafka-x86_64
+    version: 2.11-2.1.1
+  - name: solr-x86_64
+    version: 8.4.1
+  - name: wkc-ugconfig
+    version: 3.5.25
+    gitLog: https://github.ibm.com/dataconnect/wkc-ugconfig/commits/3.5.25
+  - name: wkc-init-container
+    version: 1.0.111
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.111
+  - name: zookeeper-x86_64
+    version: 3.4.14
+- iis_content:
+  - ASBPacks - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - CEF - b5142_9f4e39955200 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - CMS - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - ConnectivitySparkWrapper - 11.7.1-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - Connectors - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DB2 - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DFD - dev_b11070121_c9c989c-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local/
+  - DQEC - 11.7.1.1_d1abaa89a39f - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - DSCompinst - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DSEngine - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DSPlugins - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DSWLM - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - DataStage - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - EPMC - dev_b3_20190424-0520 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - FastTrack - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - IA - b204_d1d3af574e30 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IADBCONFIG - 11.7maint-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - IAOps - b429_b2db3e0ca19e1a61f6187959e6ab31e033a08171 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IGC - dev_b789_947a449f2f21 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IGD - b15_9676e6b34198 - https://na.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local
+  - IMAM - 11.7.1vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - ISALite - iis_11.7.1.1_D6_0d535d3387b3 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local/
+  - ISF - dev_104_ac134fc501d5f79e45a1d54ff55145ce64c609b8-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - ISF-SDK - dev_4_7319b2c7adab6a61571398c7936b196af8eb0d1a-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - ISModels - 11.7.1.1-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - ISTools - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots
+  - JVM - dev_11-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - LWAS - dev_10-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - PXComponents - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - PXEngine - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - PatchBuilder - 11.7.0.0-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - QualityStage - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - ThirdParty - dev_43_369b65a8c9691cfddf652c89ae6886b26bf395d4-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - UGDeploy - 11.7vnext-20200701.160113-211 - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - Utils - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - WAS - dev_12-SNAPSHOT - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-snapshots-maven-local
+  - WISD - iis-11711_B3_912ddbb5eb73 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local/
+  - XMLPACK - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - XMeta - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - atlas-core - 11.7vnext-SNAPSHOT - http://iis-repo.svl.ibm.com:8080/archiva/repository/snapshots/
+  - iig-kg-provider - b331_358f5a31d765 - https://hyc-ug-releases-docker-local.artifactory.swg-devops.com/artifactory/hyc-ug-staging-maven-local/

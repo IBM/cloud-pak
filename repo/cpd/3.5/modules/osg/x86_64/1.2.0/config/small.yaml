@@ -1,0 +1,5 @@
+commands:
+  - scale --replicas=1 deployment osg-ui
+  - scale --replicas=1 deployment osg-api
+  - scale --replicas=1 deployment osg-flaskapi
+  - set resources deployment osg-db --limits=cpu=128m,memory=256Mi --requests=cpu=128m,memory=256Mi

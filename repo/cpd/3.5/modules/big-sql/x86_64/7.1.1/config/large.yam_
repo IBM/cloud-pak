@@ -1,0 +1,7 @@
+# Db2 Big SQL large t-shirt sizing specification
+# See https://ibm.ent.box.com/notes/638849624471
+
+commands:
+  - scale sts -l app=db2-bigsql,app.kubernetes.io/component=worker --replicas=3
+  - set resources deployment -l app=db2-bigsql,app.kubernetes.io/component=head --limits cpu=32,memory=192Gi --requests cpu=32,memory=192Gi
+  - set resources deployment -l app=db2-bigsql,app.kubernetes.io/component=worker --limits cpu=32,memory=192Gi --requests cpu=32,memory=192Gi

@@ -1,4 +1,0 @@
-patch sts rabbitmq-ha --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-rabbitmq","image": "{{.DockerRegistryPrefix}}/rabbitmq:3.7.16-88"}]}}}}'
-patch sts wdp-couchdb --patch '{"spec": {"template": {"spec": {"containers": [{"name": "couchdb","image": "{{.DockerRegistryPrefix}}/couchdb3:3.0.46"}]}}}}'
-patch sts redis-ha-server --patch '{"spec": {"template": {"spec": {"containers": [{"name": "redis","image": "{{.DockerRegistryPrefix}}/redis:5.0.5-79"}]}}}}'
-patch deployment redis-ha-haproxy --patch '{"spec": {"template": {"spec": {"containers": [{"name": "haproxy","image": "{{.DockerRegistryPrefix}}/haproxy:1.9-22"}]}}}}'

@@ -1,0 +1,45 @@
+  
+chart: ibm-dmc-addon-1.0.0.tgz
+helmUpgradeForce: true
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+description: "dmc module to install"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference : base-registry
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+- name: ibm-dmc-addon-ui
+  tag: 3.1.3-642-x86_64
+- name: ibm-dmc-addon-api
+  tag: 3.1.3-642-x86_64
+- name: ibm-dmc-admin
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-runsql
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-monitor
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-explain
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-dbapi
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-nginx
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-job-scheduler
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-registry-manager
+  tag: 3.1.3-306-x86_64
+- name: ibm-dmc-opencontent-redis-5
+  tag: 2.0.5-x86_64
+- name: ibm-dmc-opencontent-common-utils
+  tag: 1.1.11-x86_64
+#- name: ibm-dmc-ingress
+#  tag: 0.35.0-x86_64
+name: IBM Db2 Data Management Console
+releaseName: dmc-addon
+timeout: 90

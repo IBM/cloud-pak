@@ -1,0 +1,31 @@
+type: assembly
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: IBM DV addon
+# Version is mandatory
+version: 1.5.0
+# Description is optional
+description: IBM DV addon assembly
+architecture: x86_64
+predefinedOverride:
+- name: portworx
+  installOverride: portworx-install.yaml
+  upgradeOverride: portworx-upgrade.yaml
+- name: ocs
+  installOverride: ocs-install.yaml
+  upgradeOverride: ocs-upgrade.yaml
+bricks:
+  - name: lite
+    minVersion: 3.5.1
+    type: assembly
+  - name: common-core-services
+    minVersion: 3.5.1
+    type: assembly
+  - name: dv-adm-setup
+    version: 1.5.0
+    type: module
+  - name: dv
+    version: 1.5.0
+    type: module

@@ -1,0 +1,12 @@
+add-cluster-role-to-user:
+  - clusterrole: db2u-operator
+    sa: db2u-operator
+category: adm-setup
+chart: db2u-operator-3.5.0.tgz
+description: Yes, this is the account
+files:
+  - adm/cluster_role.yaml
+  - adm/role.yaml
+  - adm/role_binding.yaml
+  - adm/service_account.yaml
+type: module

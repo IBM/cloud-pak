@@ -1,1 +1,0 @@
-patch deployment knol-knol --patch '{"spec": {"template": {"spec": {"containers": [{"name": "knol","image": "{{.DockerRegistryPrefix}}/knol:3.0.164-patch3"}]}}}}'

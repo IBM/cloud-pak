@@ -1,0 +1,39 @@
+type: module
+category: helm-chart
+name: dv
+version: 1.5.0
+description: this is the dv to install
+registry-reference : base-registry
+scale:
+- large.yaml
+- medium.yaml
+- small.yaml
+- extra-small.yaml
+serviceInstanceType:
+- dv
+images:
+- name: dv-addon
+  tag: v1.5.0.0-217
+- name: dv-api
+  tag: v1.5.0.0-217
+- name: dv-caching
+  tag: v1.5.0.0-217
+- name: dv-engine
+  tag: v1.5.0.0-217
+- name: dv-init-volume
+  tag: v1.5.0.0-217
+- name: dv-metastore
+  tag: v1.5.0.0-217
+- name: dv-service-provider
+  tag: v1.5.0.0-217
+- name: dv-unifiedconsole
+  tag: v1.5.0.0-217
+- name: opencontent-common-utils
+  tag: 1.1.11
+- name: dv-extension-translations
+  tag: v1.5.0.0-217
+chart: ibm-dv-addon-1.5.0.tgz	
+md5: 37d715a248d5d86c4ae19d0c57ca985f
+timeout: 60
+releaseName: dv
+helmUpgradeForce: true

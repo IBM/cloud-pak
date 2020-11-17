@@ -1,0 +1,116 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: cpd-admin-role
+rules:
+- apiGroups:
+  - ""
+  - batch
+  - extensions
+  - apps
+  - policy
+  - rbac.authorization.k8s.io
+  - autoscaling
+  - route.openshift.io
+  - authorization.openshift.io
+  - networking.k8s.io
+  - metrics.k8s.io
+  resources:
+  - pods
+  - pods/log
+  - poddisruptionbudgets
+  - secrets
+  - jobs
+  - configmaps
+  - deployments
+  - statefulsets
+  - replicasets
+  - services
+  - persistentvolumeclaims
+  - cronjobs
+  - pods/exec
+  - pods/portforward
+  - serviceaccounts
+  - namespaces
+  - roles
+  - rolebindings
+  - horizontalpodautoscalers
+  - routes
+  - routes/custom-host
+  - ingresses
+  - endpoints
+  - cronjob
+  - networkpolicies
+  - events
+  - jobs/status
+  - pods/status
+  - resourcequotas
+  - resourcequotas/status
+  verbs:
+  - apply
+  - create
+  - get
+  - delete
+  - watch
+  - update
+  - edit
+  - exec
+  - list
+  - patch
+  - deletecollection
+- apiGroups:
+  - cpd.ibm.com
+  resources:
+  - cpdinstalls
+  - cpdinstalls/spec
+  - cpdinstalls/status
+  verbs:
+  - apply
+  - create
+  - delete
+  - edit
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - build.openshift.io
+  resources:
+  - buildconfigs
+  - buildconfigs/instantiate
+  - buildconfigs/instantiatebinary
+  - buildconfigs/webhooks
+  - buildlogs
+  - builds
+  - builds/clone
+  - builds/details
+  - builds/log
+  verbs:
+  - create
+  - delete
+  - list
+  - watch
+  - get
+  - patch
+  - update
+- apiGroups:
+  - image.openshift.io
+  resources:
+  - imagestreams
+  - imagestreams/layers
+  - imagestreams/secrets
+  - imagestreams/status
+  - imagestreamimages
+  - imagestreamimports
+  - imagestreammappings
+  - imagestreamtags
+  verbs:
+  - create
+  - delete
+  - list
+  - watch
+  - get
+  - patch
+  - update
+

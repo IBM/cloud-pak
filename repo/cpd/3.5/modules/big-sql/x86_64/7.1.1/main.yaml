@@ -1,0 +1,34 @@
+# IBM Db2 Big SQL CP4D Module Definition
+# See https://github.ibm.com/PrivateCloud/icpd_courier/blob/master/Samples/module-example.yaml
+
+type: module
+category: helm-chart
+name: big-sql
+version: 7.1.1
+description: IBM Db2 Big SQL
+registry-reference : base-registry
+
+serviceInstanceType:
+- bigsql
+
+images:
+- name: bigsql-engine-7_1_1_0
+  tag: 312
+- name: bigsql-init-volume-7_1_1_0
+  tag: 312
+- name: bigsql-addon-7_1_1_0
+  tag: 312
+- name: bigsql-service-provider-7_1_1_0
+  tag: 312
+
+# scale:
+# - xsmall.yaml
+# - small.yaml
+# - medium.yaml
+# - large.yaml
+
+chart: ibm-bigsql-addon-1.0.0.tgz
+md5: 4cf9d5ae0834dc9229bc824e36a18c73
+
+timeout: 60
+releaseName: big-sql

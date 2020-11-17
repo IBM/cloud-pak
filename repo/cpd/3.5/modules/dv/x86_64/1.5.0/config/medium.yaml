@@ -1,0 +1,10 @@
+toleratedCommands:
+- command: scale --replicas=2 statefulset dv-worker
+- command: set resources statefulset dv-engine --limits=cpu=16,memory=48Gi --requests=cpu=8,memory=32Gi
+  toleratedRegularExpressions:
+    - ^.* was not changed
+    - ^.* ignored
+- command: set resources statefulset dv-worker --limits=cpu=16,memory=48Gi --requests=cpu=8,memory=32Gi
+  toleratedRegularExpressions:
+    - ^.* was not changed
+    - ^.* ignored

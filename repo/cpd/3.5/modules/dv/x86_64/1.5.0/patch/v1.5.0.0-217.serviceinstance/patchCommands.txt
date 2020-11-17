@@ -1,0 +1,20 @@
+# List of patching commands
+#caching
+patch deployment dv-caching -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "init-caching", "image":"{{.DockerRegistryPrefix }}/dv-caching:v1.5.0.0-217"}]}}}}'
+patch deployment dv-caching -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-caching", "image":"{{.DockerRegistryPrefix }}/dv-caching:v1.5.0.0-217"}]}}}}'
+#metastore
+patch statefulset dv-metastore -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-metastore-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-217"}]}}}}'
+patch statefulset dv-metastore -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-metastore", "image":"{{.DockerRegistryPrefix }}/dv-metastore:v1.5.0.0-217"}]}}}}'
+#utils
+patch statefulset dv-utils -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-utils-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-217"}]}}}}'
+patch statefulset dv-utils -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-utils", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.5.0.0-217"}]}}}}'
+#engine
+patch statefulset dv-engine -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-engine-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-217"}]}}}}'
+patch statefulset dv-engine -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-engine", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.5.0.0-217"}]}}}}'
+#worker
+patch statefulset dv-worker -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-worker-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-217"}]}}}}'
+patch statefulset dv-worker -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-worker", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.5.0.0-217"}]}}}}'
+#api
+patch deployment dv-api -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-api", "image":"{{.DockerRegistryPrefix }}/dv-api:v1.5.0.0-217"}]}}}}'
+#console
+patch deployment dv-unified-console -p '{"spec": {"template": {"spec":{"containers": [{"name": "uc", "image":"{{.DockerRegistryPrefix }}/dv-unifiedconsole:v1.5.0.0-217"}]}}}}'

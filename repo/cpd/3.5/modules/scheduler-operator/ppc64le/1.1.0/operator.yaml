@@ -1,0 +1,156 @@
+#___________________________________________________________
+#
+# Copyright IBM Corp. 2020. All rights reserved.
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#___________________________________________________________
+#
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-cpd-scheduling-operator
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: {{.releaseName}}
+    release: "cpd-scheduler"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ibm-cpd-scheduling-operator
+      app.kubernetes.io/name: "ibm-cpd-scheduler"
+      app.kubernetes.io/managed-by: "ansible"
+      app.kubernetes.io/instance: {{.releaseName}}
+      release: "cpd-scheduler"
+  template:
+    metadata:
+      labels:
+        name: ibm-cpd-scheduling-operator
+        app.kubernetes.io/name: "ibm-cpd-scheduler"
+        app.kubernetes.io/managed-by: "ansible"
+        app.kubernetes.io/instance: {{.releaseName}}
+        release: "cpd-scheduler"
+      annotations:
+        productName: "IBM Cloud Pak for Data Scheduling"
+        productVersion: "1.1.0"
+        productID: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        productMetric: "VIRTUAL_PROCESSOR_CORE"
+        productChargedContainers: "All"
+        productCloudpakRatio: "1:1"
+        cloudpakId: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        cloudpakName: "IBM Cloud Pak for Data"
+    spec:
+      serviceAccountName: ibm-cpd-scheduling-operator
+      serviceAccount: ibm-cpd-scheduling-operator
+      hostIPC: false
+      hostNetwork: false
+      hostPID: false
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+                - ppc64le
+
+      containers:
+        - name: ansible
+          command:
+          - /usr/local/bin/ao-logs
+          - /tmp/ansible-operator/runner
+          - stdout
+          image: "{{.registryPrefix}}/ibm-cpd-scheduling-operator-ppc64le:1.0.2-110617"
+          imagePullPolicy: "Always"
+          securityContext:
+            runAsUser: 1001
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            privileged: false
+            readOnlyRootFilesystem: false
+
+          volumeMounts:
+          - mountPath: /tmp/ansible-operator/runner
+            name: runner
+            readOnly: true
+          env:
+          - name: "ANSIBLE_VERBOSITY"
+            value: "3"
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1G
+            requests:
+              cpu: "100m"
+              memory: 256M
+          livenessProbe:
+            exec:
+              command:
+                - ls
+                - /tmp/ansible-operator/runner
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            exec:
+              command:
+                - ls
+                - /tmp/ansible-operator/runner
+            initialDelaySeconds: 5 
+            periodSeconds: 30
+
+        - name: operator
+          image: "{{.registryPrefix}}/ibm-cpd-scheduling-operator-ppc64le:1.0.2-110617"
+          imagePullPolicy: "Always"
+          volumeMounts:
+          - mountPath: /tmp/ansible-operator/runner
+            name: runner
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "ibm-cpd-scheduling-operator"
+          securityContext:
+            runAsUser: 1001
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            privileged: false
+            readOnlyRootFilesystem: false
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1G
+            requests:
+              cpu: "100m"
+              memory: 256M
+          livenessProbe:
+            exec:
+              command:
+                - ls
+                - /tmp/ansible-operator/runner
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            exec:
+              command:
+                - ls
+                - /tmp/ansible-operator/runner
+            initialDelaySeconds: 5
+            periodSeconds: 30
+      volumes:
+        - name: runner
+          emptyDir: {}

@@ -1,0 +1,14 @@
+# v1.5.0.0-217 patch yaml file
+images:
+# more can be added in the images list
+- dv-addon:v1.5.0.0-217
+- dv-service-provider:v1.5.0.0-217
+- dv-metastore:v1.5.0.0-217
+- dv-caching:v1.5.0.0-217
+- dv-api:v1.5.0.0-217
+- dv-unifiedconsole:v1.5.0.0-217
+- dv-engine:v1.5.0.0-217
+- dv-init-volume:v1.5.0.0-217
+#patchFile name can be changed to a more meaningful one if necessariy
+patchFile: patchCommands.txt
+description: To patch DV v1.5.0.0 with a few Docker images from build 217
