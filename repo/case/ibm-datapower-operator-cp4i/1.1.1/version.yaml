@@ -1,0 +1,52 @@
+apiVersion: v1
+case:
+  appVersion: 10.0.1.0
+  catalogs:
+    integration: {}
+    security: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: CASE containing the Operator for deploying and managing DataPower Gateways
+  displayDescription: The IBM DataPower Gateway Operator deploys and manages DataPower clusters.
+  displayName: IBM DataPower Gateway Operator for Production
+  icons:
+  - mediaType: image/png
+    url: https://avatars1.githubusercontent.com/u/8836442?v=4&s=200
+  licenses:
+    apache:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: License for CASE material
+        displayName: apache
+        name: apache
+      ref: LICENSE
+    datapowerVE:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: License for Operator Image
+        displayName: datapowerVE
+        name: datapowerVE
+      ref: datapowerVE
+  name: ibm-datapower-operator-cp4i
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0-beta.7
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      eks: {}
+      icp: {}
+      iks: {}
+      rhocp4: {}
+    managedPlatforms:
+      amazon: {}
+      ibm: {}
+      redhat: {}
+  version: 1.1.1
+  webPage: https://www.ibm.com/products/datapower-gateway
+created: 2020-11-18T00:53:14.83465089+0000
+digest: sha256:a33b035b3b3705de7c5d55d7244b699bced11d0ed0b5a7fd58ca41205b7c4396
