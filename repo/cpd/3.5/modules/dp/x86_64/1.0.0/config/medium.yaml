@@ -1,5 +1,0 @@
-commands:
-  - scale --replicas=2 deployment dp-core
-  - delete hpa dp-pp
-  - autoscale deploy dp-pp --min 1 --max 5 --cpu-percent=50
-  - set resources deployment dp-qp  --limits=cpu=3000m,memory=12G --requests=cpu=1000m,memory=6G

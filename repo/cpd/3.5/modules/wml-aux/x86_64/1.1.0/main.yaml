@@ -1,0 +1,29 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: wml-aux
+version: 1.1.0
+# The description is mandatory
+description: "wml auxillary export-import module"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: sre-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: myinstall.yaml
+# upgradeOverride: myupgrade.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# Define your image here for your jobs
+images:
+  - name: wml-aux
+    tag: v.30-amd64
+chart: ibm-wml-aux-prod-1.1.0.tgz
+# For download to verify the chart file is correct, optional
+md5: 5bce0d2897095ef7948a27ef9a3d9710
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 60
+# A unique release name must be specified.  It must not be the same as the module name.
+releaseName: cpd-wml-aux
+

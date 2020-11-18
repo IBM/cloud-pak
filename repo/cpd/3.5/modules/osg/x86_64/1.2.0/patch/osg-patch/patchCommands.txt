@@ -1,3 +1,0 @@
-scale deployment osg-ui --replicas 0
-patch deployment osg-ui --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "osg-ui", "image":"{{.DockerRegistryPrefix }}/osg-ui:rc1"} ] } } } }'
-scale deployment osg-ui --replicas 3

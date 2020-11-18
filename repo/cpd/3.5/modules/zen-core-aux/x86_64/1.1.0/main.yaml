@@ -1,0 +1,28 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: zen-core-aux
+version: 1.1.0
+# The description is mandatory
+description: "zen-core auxillary (backup-restore) module"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: base-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: myinstall.yaml
+# upgradeOverride: myupgrade.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# Define your image here for your jobs
+images:
+  - name: zen-core-aux
+    tag: 1.1.0-303-x86_64
+chart: zen-core-aux-1.1.0.tgz
+# For download to verify the chart file is correct, optional
+# md5: c3bc1546450deceafbc8bd31e178d722
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 60
+# A unique release name must be specified.  It must not be the same as the module name.
+releaseName: cpd-zen-aux
