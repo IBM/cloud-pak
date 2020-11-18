@@ -1,0 +1,10 @@
+source: ibm-datapower-operator-cp4i-bundle/case/ibm-datapower-operator-cp4i/case.yaml
+description: "CASE containing the Operator for deploying and managing DataPower Gateways"
+images:
+  - image: cp/datapower/datapower-cp4i
+  - image: cp/datapower/datapower-prod
+  - image: ibmcom/datapower-monitor
+  - image: ibmcom/datapower-operator
+  - image: ibmcom/datapower-operator-bundle
+  - image: ibmcom/datapower-operator-catalog
+  - image: ibmcom/datapower-operator-conversion-webhook
