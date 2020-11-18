@@ -1,0 +1,58 @@
+apiVersion: v1
+case:
+  appVersion: 3.5.0
+  catalogs:
+    analytics: {}
+    datascience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Decision Optimization is an add-on to Cloud Pack for Data that provides advanced decision capabilities.
+  displayDescription: ""
+  displayName: IBM Decision Optimization on IBM Cloud Pak for Data
+  icons:
+  - url: https://datascience.ibm.com/graphics/landing/logo.svg
+  licenses:
+    cp4data-ws-premium-la:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data General License
+        displayName: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data General License
+      ref: LICENSE-LA
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?la_formnum=&li_formnum=L-PGRU-BLQUFM&l=en
+    cp4data-ws-premium-li:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data License
+        displayName: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data License
+      ref: LICENSE-LI
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?la_formnum=&li_formnum=L-PGRU-BLQUFM&l=en
+    cp4data-ws-premium-non-ibm:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data non IBM licenses
+        displayName: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data non IBM licenses
+      ref: non_ibm_license
+    cp4data-ws-premium-notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data notices
+        displayName: IBM Watson Studio Premium Extension for IBM Cloud Pak for Data notices
+      ref: LICENSE-notices
+  name: ibm-dods
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 3.5.0+20201106.185552.b81
+  webPage: https://www.ibm.com/support/knowledgecenter/SSQNUZ
+created: 2020-11-18T17:52:35.00095337+0000
+digest: sha256:7989685ae41d07f631cf9e4c6f6b5d19ec2a6bde3bb7383215e483e77ff0bfe2
