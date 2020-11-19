@@ -1,6 +1,7 @@
 source: ibm-ucv-prod-bundle/case/ibm-ucv-prod/case.yaml
 description: "IBM UrbanCode Velocity"
 images:
+  - image: alpine
   - image: argoproj/argoexec
   - image: argoproj/workflow-controller
   - image: bitnami/nginx
