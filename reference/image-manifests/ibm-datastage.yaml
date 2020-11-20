@@ -1,4 +1,22 @@
 source: ibm-datastage-bundle/case/ibm-datastage/case.yaml
-description: "IBM InfoSphere Information Server for DataStage V11.7.1.1"
+description: "IBM InfoSphere Information Server for DataStage V11.7"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/ds-entitlement-image
+  - image: cp/cpd/ds-nginx-proxy
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/is-en-compute-image
+  - image: cp/cpd/is-engine-image
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
+  - image: icp4data-nginx-repo
