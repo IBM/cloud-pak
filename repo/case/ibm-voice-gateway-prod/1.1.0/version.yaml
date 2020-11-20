@@ -1,0 +1,59 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.7
+  catalogs:
+    messagequeue: {}
+    watson: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Voice Gateway (Production).
+  displayDescription: ""
+  displayName: IBM Voice Gateway (Production).
+  icons:
+  - mediaType: image/svg+xml
+    url: https://broker.voiceagent.cloud.ibm.com/images/vgaas_icon_32.svg
+  licenses:
+    licenseLaEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LA_en
+        name: licenseLaEn
+      ref: LICENSE-LA_en
+    licenseLiEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LI_en
+        name: licenseLiEn
+      ref: LICENSE-LI_en
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-non_ibm_license
+        name: nonIbmLicense
+      ref: LICENSE-non_ibm_license
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-notices
+        name: notices
+      ref: LICENSE-notices
+  name: ibm-voice-gateway-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 1.1.0
+  webPage: https://www.ibm.com
+created: 2020-11-20T16:51:45.15371335+0000
+digest: sha256:1f57c693c1fa184b2059c1147d1dc0fac5531aeec2d4c0249331db10fa5f7f43
