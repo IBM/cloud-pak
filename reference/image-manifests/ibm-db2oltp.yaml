@@ -1,0 +1,28 @@
+source: ibm-db2oltp-bundle/case/ibm-db2oltp/case.yaml
+description: "An all-in-one cloud-native Data and AI platform in a box, providing a preconfigured, governed, and secure environment to collect, organize and analyze data with db2oltp capability"
+images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/db2u
+  - image: cp/cpd/db2u.auxiliary.auth
+  - image: cp/cpd/db2u.graph
+  - image: cp/cpd/db2u.instdb
+  - image: cp/cpd/db2u.rest
+  - image: cp/cpd/db2u.tools
+  - image: cp/cpd/etcd
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-database-core
+  - image: cp/cpd/zen-databases
+  - image: cp/cpd/zen-databases-catalog-db2oltp
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
+  - image: ibmcom/db2u-operator
+  - image: icp4data-nginx-repo
