@@ -1,16 +1,25 @@
 source: ibm-dods-bundle/case/ibm-dods/case.yaml
 description: "IBM Decision Optimization is an add-on to Cloud Pack for Data that provides advanced decision capabilities."
 images:
+  - image: cp/cpd/aios-kubectl
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/asset-files-api-ppc64le
+  - image: cp/cpd/catalog_master
+  - image: cp/cpd/couchdb3
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-ws-secrets-job
   - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/dap-base-job
+  - image: cp/cpd/dap-base-job-ppc64le
   - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dap-dashboards-api-ppc64le
+  - image: cp/cpd/dataview-api-service
+  - image: cp/cpd/dataview-secrets-job
+  - image: cp/cpd/dc-main
   - image: cp/cpd/dsx-requisite
+  - image: cp/cpd/elasticsearch
   - image: cp/cpd/environments
   - image: cp/cpd/environments-init-job
   - image: cp/cpd/etcd-ubi
@@ -24,6 +33,8 @@ images:
   - image: cp/cpd/jobs-api-ppc64le
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/jobs-ui-ppc64le
+  - image: cp/cpd/job-trigger
+  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jupyter-notebooks-converter
   - image: cp/cpd/kubectlclient
   - image: cp/cpd/mlrepositoryservicehydra
@@ -31,6 +42,7 @@ images:
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/ngp-projects-api-ppc64le
   - image: cp/cpd/notebooks
+  - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
   - image: cp/cpd/portal-common-api-ppc64le
   - image: cp/cpd/portal-dashboards
@@ -47,18 +59,29 @@ images:
   - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/privatecloud-utils-api
+  - image: cp/cpd/rabbitmq
+  - image: cp/cpd/redis
   - image: cp/cpd/shaper-preinstall
   - image: cp/cpd/shaper-server
+  - image: cp/cpd/spaces
+  - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/spaces-ui-job-ppc64le
   - image: cp/cpd/spark-hb-control-plane
   - image: cp/cpd/spark-hb-db-spec
   - image: cp/cpd/spark-hb-helm-repo
   - image: cp/cpd/spark-hb-jkg
   - image: cp/cpd/spark-hb-nginx
   - image: cp/cpd/spark-hb-python
+  - image: cp/cpd/spark-hb-rsyslog-sidecar
   - image: cp/cpd/spark-hb-truststore-util
   - image: cp/cpd/ubi
+  - image: cp/cpd/wdp-connect-connection
+  - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-dataprep
+  - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-shaper
+  - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-autoai-kb
   - image: cp/cpd/wml-automl-obm-hybrid-pipeline
   - image: cp/cpd/wml-aux
@@ -91,6 +114,12 @@ images:
   - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
+  - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-py36cuda
+  - image: cp/cpd/wslocal-runtime-py36main
+  - image: cp/cpd/wslocal-runtime-py37cuda
+  - image: cp/cpd/wslocal-runtime-py37main
+  - image: cp/cpd/wslocal-runtime-r36
   - image: cp/cpd/wslocal-runtime-rstudio
   - image: cp/cpd/wslocal-runtime-shiny
   - image: cp/cpd/wslocal-x86-runtime-py36ce162
