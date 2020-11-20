@@ -1,6 +1,23 @@
-source: ibm-streams-flows/ibm_cloud_pak/manifest.yaml
-description: IBM Streams Flows add-on for Cloud Pak for Data
+source: ibm-streams-flow-bundle/case/ibm-streams-flows/case.yaml
+description: "IBM Streams Flows add-on for Cloud Pak for Data"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/streaming-pipelines-api
+  - image: cp/cpd/streaming-pipelines-python-validator
+  - image: cp/cpd/streaming-pipelines-ui
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
   - image: hyc-cp4d-team-streams-docker-local.artifactory.swg-devops.com/streams_flows/streaming-pipelines-api
   - image: hyc-cp4d-team-streams-docker-local.artifactory.swg-devops.com/streams_flows/streaming-pipelines-python-validator
   - image: hyc-cp4d-team-streams-docker-local.artifactory.swg-devops.com/streams_flows/streaming-pipelines-ui
+  - image: icp4data-nginx-repo

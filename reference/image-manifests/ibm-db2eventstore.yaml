@@ -1,0 +1,26 @@
+source: ibm-db2eventstore-case-bundle/case/ibm-db2eventstore/case.yaml
+description: "DB2 Event Store CASE"
+images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/eventstore-ci-backend
+  - image: cp/cpd/eventstore-ci-engine
+  - image: cp/cpd/eventstore-ci-storage
+  - image: cp/cpd/eventstore-ci-tools
+  - image: cp/cpd/eventstore-ci-ui-console
+  - image: cp/cpd/eventstore-ci-zookeeper
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-database-core
+  - image: cp/cpd/zen-databases
+  - image: cp/cpd/zen-databases-catalog-db2eventstore
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
+  - image: icp4data-nginx-repo
