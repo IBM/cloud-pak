@@ -1,5 +1,5 @@
 source: ibm-cp-datacore-bundle/case/ibm-cp-datacore/case.yaml
-description: "An all-in-one cloud-native Data and AI platform in a box, providing a preconfigured, governed, and secure environment to collect, organize and analyze data."
+description: "A fully-integrated software platform to collect, organize, and analyze data to infuse AI throughout your organization."
 images:
   - image: cp/cpd/aios-bias-service
   - image: cp/cpd/aios-bkpi-combined-services
@@ -27,7 +27,9 @@ images:
   - image: cp/cpd/asset-files-api-ppc64le
   - image: cp/cpd/audit-trail-service
   - image: cp/cpd/bigsql-engine-6_0_1_0
+  - image: cp/cpd/bigsql-engine-7_1_1_0
   - image: cp/cpd/bigsql-init-volume-6_0_1_0
+  - image: cp/cpd/bigsql-init-volume-7_1_1_0
   - image: cp/cpd/cassandra-ubi
   - image: cp/cpd/cassandra-x86_64
   - image: cp/cpd/catalog_master
@@ -44,11 +46,14 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-ws-secrets-job
   - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
+  - image: cp/cpd/cp/cpd/streams-operations-el7
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator-init
   - image: cp/cpd/daas-sb-proxy
   - image: cp/cpd/daas-server
+  - image: cp/cpd/dap-base-job
+  - image: cp/cpd/dap-base-job-ppc64le
   - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dap-dashboards-api-ppc64le
   - image: cp/cpd/dataconn-engine-opdiscovery
@@ -60,10 +65,16 @@ images:
   - image: cp/cpd/datagate-init
   - image: cp/cpd/datagate-server
   - image: cp/cpd/datagate-ui
+  - image: cp/cpd/dataview-api-service
+  - image: cp/cpd/dataview-secrets-job
   - image: cp/cpd/db2u
   - image: cp/cpd/db2u.auxiliary.auth
+  - image: cp/cpd/db2u.bigsql.mariadb
   - image: cp/cpd/db2u.db2client.workload
+  - image: cp/cpd/db2u.graph
+  - image: cp/cpd/db2u.hurricane
   - image: cp/cpd/db2u.instdb
+  - image: cp/cpd/db2u.rest
   - image: cp/cpd/db2u.tools
   - image: cp/cpd/dc-main
   - image: cp/cpd/drift
@@ -116,10 +127,34 @@ images:
   - image: cp/cpd/ia-analysis
   - image: cp/cpd/ia-rest-endpoint
   - image: cp/cpd/ia-services
+  - image: cp/cpd/ibm-cpd-scheduler-agent-amd64
+  - image: cp/cpd/ibm-cpd-scheduler-agent-ppc64
+  - image: cp/cpd/ibm-cpd-scheduler-amd64
+  - image: cp/cpd/ibm-cpd-scheduler-mutate-webhook-amd64
+  - image: cp/cpd/ibm-cpd-scheduler-mutate-webhook-ppc64le
+  - image: cp/cpd/ibm-cpd-scheduler-ppc64le
+  - image: cp/cpd/ibm-cpd-scheduler-webhook-amd64
+  - image: cp/cpd/ibm-cpd-scheduler-webhook-ppc64le
+  - image: cp/cpd/ibm-cpd-scheduling-operator-amd64
+  - image: cp/cpd/ibm-cpd-scheduling-operator-ppc64le
   - image: cp/cpd/ibm-db2z-addon
   - image: cp/cpd/ibm-db2z-svp
   - image: cp/cpd/ibm-db2z-uc
   - image: cp/cpd/ibm-db2z-ui
+  - image: cp/cpd/ibm-dmc-addon-api
+  - image: cp/cpd/ibm-dmc-addon-ui
+  - image: cp/cpd/ibm-dmc-admin
+  - image: cp/cpd/ibm-dmc-dbapi
+  - image: cp/cpd/ibm-dmc-explain
+  - image: cp/cpd/ibm-dmc-ingress
+  - image: cp/cpd/ibm-dmc-job-scheduler
+  - image: cp/cpd/ibm-dmc-monitor
+  - image: cp/cpd/ibm-dmc-nginx
+  - image: cp/cpd/ibm-dmc-opencontent-common-utils
+  - image: cp/cpd/ibm-dmc-opencontent-redis-5
+  - image: cp/cpd/ibm-dmc-registry-manager
+  - image: cp/cpd/ibm-dmc-runsql
+  - image: cp/cpd/ibm-dmc-ucgoapi
   - image: cp/cpd/ibm-iira-ml-prod
   - image: cp/cpd/ibm-iira-mongodb-prod
   - image: cp/cpd/ibm-iira-orchestrator-prod
@@ -154,6 +189,7 @@ images:
   - image: cp/cpd/kafka-ubi
   - image: cp/cpd/kafka-x86_64
   - image: cp/cpd/knol
+  - image: cp/cpd/kubectlclient
   - image: cp/cpd/kubectlclient-ppc-ubi
   - image: cp/cpd/kubectlclient-ubi
   - image: cp/cpd/mdc-addon-install
@@ -182,6 +218,8 @@ images:
   - image: cp/cpd/odf-fast-analyzer-kube
   - image: cp/cpd/omag
   - image: cp/cpd/opencontent-common-utils
+  - image: cp/cpd/opencontent-icp-cert-gen-1
+  - image: cp/cpd/opencontent-postgres-stolon
   - image: cp/cpd/opsmanager
   - image: cp/cpd/osg-api
   - image: cp/cpd/osg-db
@@ -227,12 +265,16 @@ images:
   - image: cp/cpd/smart-platform-search
   - image: cp/cpd/solr-ubi
   - image: cp/cpd/solr-x86_64
+  - image: cp/cpd/spaces
+  - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/spaces-ui-job-ppc64le
   - image: cp/cpd/spark-hb-control-plane
   - image: cp/cpd/spark-hb-db-spec
   - image: cp/cpd/spark-hb-helm-repo
   - image: cp/cpd/spark-hb-jkg
   - image: cp/cpd/spark-hb-nginx
   - image: cp/cpd/spark-hb-python
+  - image: cp/cpd/spark-hb-rsyslog-sidecar
   - image: cp/cpd/spark-hb-truststore-util
   - image: cp/cpd/streaming-pipelines-api
   - image: cp/cpd/streaming-pipelines-python-validator
@@ -241,8 +283,11 @@ images:
   - image: cp/cpd/streams-anaconda-install-el7
   - image: cp/cpd/streams-application-el7
   - image: cp/cpd/streams-application-repository-el7
+  - image: cp/cpd/streams-base-edge-application-el7
+  - image: cp/cpd/streams-base-edge-python-el7
   - image: cp/cpd/streams-build-compile-el7
   - image: cp/cpd/streams-build-el7
+  - image: cp/cpd/streams-build-image-el7
   - image: cp/cpd/streams-management-el7
   - image: cp/cpd/streams-notebook-template
   - image: cp/cpd/streams-operations-el7
@@ -259,6 +304,7 @@ images:
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-dataprep
+  - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-db2
   - image: cp/cpd/wdp-lineage
   - image: cp/cpd/wdp-policy-service
@@ -270,23 +316,56 @@ images:
   - image: cp/cpd/wkc-glossary-service
   - image: cp/cpd/wkc-gov-ui
   - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-metadata-imports-ui
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wkc-ugconfig
   - image: cp/cpd/wkc-workflow-service
+  - image: cp/cpd/wml-accelerator
+  - image: cp/cpd/wml-accelerator-auth
+  - image: cp/cpd/wml-accelerator-conda
+  - image: cp/cpd/wml-accelerator-etcd
+  - image: cp/cpd/wml-accelerator-infoservice
+  - image: cp/cpd/wml-accelerator-keycloak
+  - image: cp/cpd/wml-accelerator-kubectl
+  - image: cp/cpd/wml-accelerator-msd
+  - image: cp/cpd/wml-accelerator-nginx
+  - image: cp/cpd/wml-accelerator-operator
+  - image: cp/cpd/wml-accelerator-prometheus
+  - image: cp/cpd/wml-accelerator-ui
+  - image: cp/cpd/wml-accelerator-worker
   - image: cp/cpd/wml-app-runtimes-rshiny
   - image: cp/cpd/wml-app-runtimes-rshiny-ppc64le
   - image: cp/cpd/wml-autoai-kb
   - image: cp/cpd/wml-autoai-kb-ppc64le
+  - image: cp/cpd/wml-automl-obm-hybrid-pipeline
+  - image: cp/cpd/wml-aux
   - image: cp/cpd/wml-batch-runtimes-spss18.1
   - image: cp/cpd/wml-batch-runtimes-spss18.1-ppc64le-ubi
+  - image: cp/cpd/wml-configurable-http-proxy
+  - image: cp/cpd/wml-cp4d-3.5-upgrade
+  - image: cp/cpd/wml-deployment-agent
+  - image: cp/cpd/wml-deployment-envoy
+  - image: cp/cpd/wml-deployment-manager
+  - image: cp/cpd/wml-deployment-runtime-py37-1
+  - image: cp/cpd/wml-edi-imd
+  - image: cp/cpd/wml-edi-isd
+  - image: cp/cpd/wml-edi-kernel
+  - image: cp/cpd/wml-edi-lbd
+  - image: cp/cpd/wml-enterprise-gateway
+  - image: cp/cpd/wml-federated-learning
+  - image: cp/cpd/wml-grafana
+  - image: cp/cpd/wml-jupyterhub
+  - image: cp/cpd/wml-logstash
   - image: cp/cpd/wml-main
   - image: cp/cpd/wml-main-ppc64le
+  - image: cp/cpd/wml-notebook
   - image: cp/cpd/wml-os-envoy
   - image: cp/cpd/wml-os-envoy-ppc64le-ubi
   - image: cp/cpd/wml-os-runtime-agent
   - image: cp/cpd/wml-os-runtime-agent-ppcle64-ubi
   - image: cp/cpd/wml-os-runtime-manager
   - image: cp/cpd/wml-os-runtime-manager-ppc64le-ubi
+  - image: cp/cpd/wml-os-runtimes-do
   - image: cp/cpd/wml-os-runtimes-do12.9
   - image: cp/cpd/wml-os-runtimes-do12.9-ppc64le
   - image: cp/cpd/wml-os-runtimes-hybrid
@@ -302,6 +381,22 @@ images:
   - image: cp/cpd/wml-preinstall-secret-ppc
   - image: cp/cpd/wmlproxyservice-ubi
   - image: cp/cpd/wml-python-client
+  - image: cp/cpd/wmlrepositoryv4
+  - image: cp/cpd/wml-rt-ac201903-py368-g1
+  - image: cp/cpd/wml-rt-ac201903-py368-g2
+  - image: cp/cpd/wml-rt-ac201903-py368-g3
+  - image: cp/cpd/wml-rt-ac201903-r36-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.0-py3612-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.1-py379-g1
+  - image: cp/cpd/wml-rt-bd-spss18.1
+  - image: cp/cpd/wml-rt-hybrid
+  - image: cp/cpd/wml-rt-init-dep-service-py
+  - image: cp/cpd/wml-rt-mc3-py368-g2
+  - image: cp/cpd/wml-rt-mc3-py379-g1
+  - image: cp/cpd/wml-rt-mllib2.3
+  - image: cp/cpd/wml-rt-mllib2.4
+  - image: cp/cpd/wml-rt-od-spss18.1
+  - image: cp/cpd/wml-rt-rshiny0.1
   - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wmltrainingservicehydra-ppc64le-ubi
   - image: cp/cpd/wml-ubi-ppc-ac201903-py368-g2-rt
@@ -313,6 +408,12 @@ images:
   - image: cp/cpd/wml-ubi-x86-mc3-py368-g1-rt
   - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
+  - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-py36cuda
+  - image: cp/cpd/wslocal-runtime-py36main
+  - image: cp/cpd/wslocal-runtime-py37cuda
+  - image: cp/cpd/wslocal-runtime-py37main
+  - image: cp/cpd/wslocal-runtime-r36
   - image: cp/cpd/wslocal-runtime-rstudio
   - image: cp/cpd/wslocal-runtime-shiny
   - image: cp/cpd/wslocal-x86-runtime-cudapy36
@@ -328,7 +429,9 @@ images:
   - image: cp/cpd/zen-core-api
   - image: cp/cpd/zen-database-core
   - image: cp/cpd/zen-databases
+  - image: cp/cpd/zen-databases-catalog-db2aaservice
   - image: cp/cpd/zen-databases-catalog-db2eventstore
+  - image: cp/cpd/zen-databases-catalog-db2oltp
   - image: cp/cpd/zen-databases-catalog-db2wh
   - image: cp/cpd/zen-databases-catalog-mongodb
   - image: cp/cpd/zen-databases-catalog-postgresql
@@ -339,3 +442,9 @@ images:
   - image: cp/cpd/zen-watchdog
   - image: cp/cpd/zookeeper-ubi
   - image: cp/cpd/zookeeper-x86_64
+  - image: cp/opencontent-common-utils
+  - image: ibmcom/db2u-operator
+  - image: ibmcom/ibm-cp-data-operator
+  - image: ibmcom/ibm-cp-data-operator-bundle
+  - image: ibmcom/ibm-cp-data-operator-catalog
+  - image: icp4data-nginx-repo
