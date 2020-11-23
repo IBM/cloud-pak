@@ -1,0 +1,16 @@
+type: assembly
+lifeCycle: live
+license: http://icp4d.ibm.com
+name: IBM Voice Gateway
+version: 1.0.7
+description: IBM Voice Gateway Addon for Cloud Pak for Data
+architecture: x86_64
+# installOverride: install-override.yaml
+# upgradeOverride: upgrade-override.yaml
+bricks:
+  - name: lite
+    version: 3.0.1
+    type: assembly
+  - name: ibm-voice-gateway-prod
+    version: 1.0.7
+    type: module
