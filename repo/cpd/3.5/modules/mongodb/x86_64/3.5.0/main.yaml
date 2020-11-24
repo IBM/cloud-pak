@@ -4,9 +4,9 @@ name: mongodb module # The name here just for information purpose, not for "prod
 registry-reference : base-registry
 images:
   - name: apimgmt
-    tag: 3.5.0-1443-x86_64
+    tag: 3.5.0-1491-x86_64
   - name: configops
-    tag: 3.5.0-1443-x86_64
+    tag: 3.5.0-1491-x86_64
   - name: mongodb-enterprise-database
     tag: 1.7.1
   - name: mongodb-enterprise-operator
@@ -20,7 +20,7 @@ images:
   - name: init-appdb
     tag: 1.0.2
   - name: zen-databases-catalog-mongodb
-    tag: 3.5.0-1443-x86_64
+    tag: 3.5.0-1491-x86_64
 chart: zen-databases-catalog-3.5.0.tgz
 # For download to verify the chart file is correct, optional
 # md5:
