@@ -68,13 +68,13 @@ images:
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dataview-secrets-job
   - image: cp/cpd/db2u
-  - image: cp/cpd/db2u-operator
   - image: cp/cpd/db2u.auxiliary.auth
   - image: cp/cpd/db2u.bigsql.mariadb
   - image: cp/cpd/db2u.db2client.workload
   - image: cp/cpd/db2u.graph
   - image: cp/cpd/db2u.hurricane
   - image: cp/cpd/db2u.instdb
+  - image: cp/cpd/db2u-operator
   - image: cp/cpd/db2u.rest
   - image: cp/cpd/db2u.tools
   - image: cp/cpd/dc-main
@@ -444,9 +444,20 @@ images:
   - image: cp/cpd/zen-watchdog
   - image: cp/cpd/zookeeper-ubi
   - image: cp/cpd/zookeeper-x86_64
+  - image: cp/db2u
+  - image: cp/db2u.auxiliary.auth
+  - image: cp/db2u.bigsql.mariadb
+  - image: cp/db2u.graph
+  - image: cp/db2u.hurricane
+  - image: cp/db2u.instdb
+  - image: cp/db2u.rest
+  - image: cp/db2u.tools
+  - image: cp/etcd
   - image: cp/opencontent-common-utils
   - image: ibmcom/db2u-operator
   - image: ibmcom/ibm-cp-data-operator
   - image: ibmcom/ibm-cp-data-operator-bundle
   - image: ibmcom/ibm-cp-data-operator-catalog
+  - image: ibmcom/ibm-db2uoperator-bundle
+  - image: ibmcom/ibm-db2uoperator-catalog
   - image: icp4data-nginx-repo
