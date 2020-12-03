@@ -1,0 +1,5 @@
+patch deployment catalog-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "catalog-api","image": "{{.DockerRegistryPrefix}}/catalog_master:2.0.0-20201112213945-0a60b6a-ppc64le"}]}}}}'
+set env deployment/portal-catalog PRODUCT_VERSION=v0.2.725-ppc64le
+patch deployment portal-catalog --patch '{"spec": {"template": {"spec": {"containers": [{"name": "portal-catalog","image": "{{.DockerRegistryPrefix}}/portal-catalog:v0.2.725-ppc64le"}]}}}}'
+set env deployment/dc-main PRODUCT_VERSION=v0.2.282-ppc64le
+patch deployment dc-main --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dc-main","image": "{{.DockerRegistryPrefix}}/dc-main:v0.2.282-ppc64le"}]}}}}'
