@@ -1,0 +1,18 @@
+source: ibm-spp-server-std-case-bundle/case/ibm-spp-server-std/case.yaml
+description: "IBM Spectrum Protect Plus is a modern data protection solution that provides near-instant recovery, replication, retention, and reuse for VMs, databases, and containers in hybrid multicloud environments"
+images:
+  - image: cp/spp-operator
+  - image: cp/spp-operator-bundle
+  - image: cp/spp-operator-catalog
+  - image: cp/sppserver/spp
+  - image: cp/sppserver/spp-awsebs
+  - image: cp/sppserver/spp-awsec2
+  - image: cp/sppserver/spp-kc
+  - image: cp/sppserver/spp-manager
+  - image: cp/sppserver/spp-node
+  - image: cp/sppserver/spp-uinginx
+  - image: cp/sppserver/spp-vadp
+  - image: registry.access.redhat.com/rhscl/mongodb-36-rhel7
+  - image: registry.redhat.io/rhel8/postgresql-96
+  - image: registry.redhat.io/rhscl/nginx-116-rhel7
+  - image: registry.redhat.io/rhscl/redis-5-rhel7
