@@ -18,6 +18,14 @@ images:
   - image: cp/cpd/zen-meta-couchdb
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
+  - image: cp/edb-operator
+  - image: cp/edb-postgresql-12
+  - image: cp/edb-stolon
+  - image: cp/opencontent-icp-cert-gen-1
+  - image: cp/opencontent-minio
+  - image: cp/opencontent-minio-client
+  - image: cp/opencontent-rabbitmq-3
+  - image: cp/opencontent-rabbitmq-config-copy
   - image: cp/watson-speech/ar-ar-broadbandmodel
   - image: cp/watson-speech/chuck
   - image: cp/watson-speech/chuck-haproxy
@@ -26,7 +34,11 @@ images:
   - image: cp/watson-speech/de-de-dieterv3voice
   - image: cp/watson-speech/de-de-erikav3voice
   - image: cp/watson-speech/de-de-narrowbandmodel
+  - image: cp/watson-speech/en-au-broadbandmodel
+  - image: cp/watson-speech/en-au-narrowbandmodel
   - image: cp/watson-speech/en-gb-broadbandmodel
+  - image: cp/watson-speech/en-gb-charlottev3voice
+  - image: cp/watson-speech/en-gb-jamesv3voice
   - image: cp/watson-speech/en-gb-katev3voice
   - image: cp/watson-speech/en-gb-narrowbandmodel
   - image: cp/watson-speech/en-us-allisonv3voice
@@ -43,16 +55,21 @@ images:
   - image: cp/watson-speech/es-es-enriquev3voice
   - image: cp/watson-speech/es-es-laurav3voice
   - image: cp/watson-speech/es-es-narrowbandmodel
+  - image: cp/watson-speech/es-es-narrowbandmodel-nextgen
   - image: cp/watson-speech/es-la-sofiav3voice
   - image: cp/watson-speech/es-us-sofiav3voice
+  - image: cp/watson-speech/fr-ca-broadbandmodel
+  - image: cp/watson-speech/fr-ca-narrowbandmodel
   - image: cp/watson-speech/fr-fr-broadbandmodel
   - image: cp/watson-speech/fr-fr-narrowbandmodel
+  - image: cp/watson-speech/fr-fr-nicolasv3voice
   - image: cp/watson-speech/fr-fr-reneev3voice
   - image: cp/watson-speech/gdpr-data-deletion
   - image: cp/watson-speech/generic-models
   - image: cp/watson-speech/it-it-broadbandmodel
   - image: cp/watson-speech/it-it-francescav3voice
   - image: cp/watson-speech/it-it-narrowbandmodel
+  - image: cp/watson-speech/it-it-narrowbandmodel-nextgen
   - image: cp/watson-speech/ja-jp-broadbandmodel
   - image: cp/watson-speech/ja-jp-emiv3voice
   - image: cp/watson-speech/ja-jp-narrowbandmodel
