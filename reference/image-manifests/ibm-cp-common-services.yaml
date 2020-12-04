@@ -3,7 +3,9 @@ description: "IBM Common Services CASE"
 images:
   - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/collectd-exporter
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
@@ -13,6 +15,7 @@ images:
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
   - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/grafana-ocpthanos-proxy
   - image: quay.io/opencloudio/iam-policy-administration
   - image: quay.io/opencloudio/iam-policy-controller
   - image: quay.io/opencloudio/iam-policy-decision
@@ -31,6 +34,9 @@ images:
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-elastic-stack-operator
   - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-operator
+  - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
   - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
   - image: quay.io/opencloudio/ibm-helm-api-operator
@@ -61,6 +67,9 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
   - image: quay.io/opencloudio/ibm-platform-api-operator
   - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
   - image: quay.io/opencloudio/ibm-postgresql
