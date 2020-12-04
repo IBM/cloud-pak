@@ -1,11 +1,30 @@
 source: ibm-cloud-databases-redis-bundle/case/ibm-cloud-databases-redis/case.yaml
 description: "IBM Operator for Redis"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
+  - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
   - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
   - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
   - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
   - image: cp/redis-telemetry-5.0.5
   - image: ibmcom/ibm-cloud-databases-redis-catalog
   - image: ibmcom/ibm-cloud-databases-redis-operator
   - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: icp4data-nginx-repo

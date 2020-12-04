@@ -1,6 +1,20 @@
 source: ibm-aspera-hsts-operator-bundle/case/ibm-aspera-hsts-operator/case.yaml
 description: "IBM Aspera High Speed Transfer Server Operator"
 images:
+  - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/icp4data-nginx-repo
+  - image: cp/cpd/icpd-requisite
+  - image: cp/cpd/influxdb
+  - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/zen-audit
+  - image: cp/cpd/zen-core
+  - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
+  - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-watchdog
+  - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/icp4i/aspera/aspera-hsts-aej
   - image: cp/icp4i/aspera/aspera-hsts-ascp-server
   - image: cp/icp4i/aspera/aspera-hsts-asperanode
@@ -13,9 +27,13 @@ images:
   - image: cp/icp4i/aspera/aspera-hsts-scheduler
   - image: cp/icp4i/aspera/aspera-hsts-tcp-proxy
   - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
   - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
   - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
   - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
   - image: cp/redis-telemetry-5.0.5
   - image: ibmcom/aspera-hsts-bundle
   - image: ibmcom/aspera-hsts-catalog
@@ -24,3 +42,4 @@ images:
   - image: ibmcom/ibm-cloud-databases-redis-catalog
   - image: ibmcom/ibm-cloud-databases-redis-operator
   - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: icp4data-nginx-repo
