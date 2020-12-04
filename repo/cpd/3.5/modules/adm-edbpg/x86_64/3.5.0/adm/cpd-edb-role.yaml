@@ -1,0 +1,8 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: cpd-edb-role
+rules:
+- apiGroups: ["edbpostgres.com"]
+  resources: ["edbpostgres"]
+  verbs: ["get", "list", "watch", "patch", "delete", "update", "create", "deletecollection"]

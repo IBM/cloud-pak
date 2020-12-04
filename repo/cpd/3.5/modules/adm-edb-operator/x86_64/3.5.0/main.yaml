@@ -1,0 +1,14 @@
+type: module
+category: "adm-setup"
+description: RBAC Authorization for edb operator
+files:
+- adm/edb-operator-role.yaml
+- adm/edb-operator-rolebinding.yaml
+- adm/edb-operator.yaml
+- adm/edb-scc.yaml
+- adm/crds/edbpostgres.com_taskrunners_crd.yaml
+- adm/crds/edbpostgres.com_edbpostgres_crd.yaml
+
+add-scc-to-user:
+- scc: edb-operator-scc
+  sa: edb-operator

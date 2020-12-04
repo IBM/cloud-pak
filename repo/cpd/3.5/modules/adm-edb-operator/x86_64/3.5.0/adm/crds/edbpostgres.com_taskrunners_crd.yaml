@@ -1,0 +1,275 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.3.0
+  creationTimestamp: null
+  name: taskrunners.edbpostgres.com
+spec:
+  group: edbpostgres.com
+  names:
+    kind: TaskRunner
+    listKind: TaskRunnerList
+    plural: taskrunners
+    singular: taskrunner
+  scope: Namespaced
+  subresources:
+    status: { }
+  validation:
+    openAPIV3Schema:
+      description: TaskRunner is the Schema for the taskrunners API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: TaskRunnerSpec defines the desired state of TaskRunner
+          properties:
+            containerImagePullPolicy:
+              description: 'Policy definition to pull the Database Image More info:
+                https://kubernetes.io/docs/concepts/containers/images/ Default value:'
+              type: string
+            customResourceName:
+              description: The name of the Custom Resource that you want to operate
+                on Default value:NA
+              type: string
+            dbActionExecutable:
+              description: 'This is the name of the executable that will be used to
+                execute the action on the Database Default value: "DBTaskRunner"'
+              type: string
+            executionSleep:
+              description: The number of seconds between executions Default value:1
+              type: integer
+            image:
+              description: TaskRunner image:tag Default value:NA
+              type: string
+            jobTTL:
+              description: 'This is the number of seconds a job hangs around for after
+                it completes regardless of success or failure Default value: 60 seconds'
+              format: int32
+              type: integer
+            numberOfExecutions:
+              description: The number of times this task will execute on the given
+                resource Default value:1
+              type: integer
+            secretName:
+              description: 'Start SecretMap that containers the DATABASE_URL to be
+                used to connect to the database for the task. Name of the SecretMap
+                where the operator should looking for the EnvVars keys and/or values
+                only Default value: cluster name'
+              type: string
+            serviceAccount:
+              description: 'This is the service account that the pods, that participate
+                in HA will use Default value: ''edb-operator'
+              type: string
+            taskIsScheduled:
+              description: This tells us if this is a single execution task or will
+                it be run on a schedule Default value:false
+              type: boolean
+            taskRequest:
+              description: The request that is to execute on the selected HA cluster
+                or database pod Default value:NA
+              properties:
+                action:
+                  description: The action that will be executed on the named resource
+                  properties:
+                    actionName:
+                      description: Name of the action that will be executed on the
+                        associated resource
+                      type: string
+                    actionParameters:
+                      additionalProperties:
+                        items:
+                          type: string
+                        type: array
+                      description: Parameters that will be used by the action, parameters
+                        are a map[string]string
+                      type: object
+                  required:
+                    - actionName
+                  type: object
+                resourceName:
+                  description: The resource name that this task will attempt to operate
+                    on
+                  type: string
+                taskRunnerType:
+                  description: Defines if this task should be run at the HA Cluster
+                    level or on the database
+                  type: string
+              required:
+                - action
+                - resourceName
+                - taskRunnerType
+              type: object
+            taskSchedule:
+              description: The schedule this task will run on.  Uses the same notation
+                as cron Default value:N/A
+              type: string
+          required:
+            - customResourceName
+            - secretName
+            - taskRequest
+          type: object
+        status:
+          description: TaskRunnerStatus defines the observed state of TaskRunner
+          properties:
+            cronJobStatus:
+              description: Status of the CronJob
+              properties:
+                active:
+                  description: A list of pointers to currently running jobs.
+                  items:
+                    description: 'ObjectReference contains enough information to let
+                      you inspect or modify the referred object. New uses of this
+                      type are discouraged because of difficulty describing its usage
+                      when embedded in APIs.  1. Ignored fields.  It includes many
+                      fields which are not generally honored.  For instance, ResourceVersion
+                      and FieldPath are both very rarely valid in actual usage.  2.
+                      Invalid usage help.  It is impossible to add specific help for
+                      individual usage.  In most embedded usages, there are particular     restrictions
+                      like, "must refer only to types A and B" or "UID not honored"
+                      or "name must be restricted".     Those cannot be well described
+                      when embedded.  3. Inconsistent validation.  Because the usages
+                      are different, the validation rules are different by usage,
+                      which makes it hard for users to predict what will happen.  4.
+                      The fields are both imprecise and overly precise.  Kind is not
+                      a precise mapping to a URL. This can produce ambiguity     during
+                      interpretation and require a REST mapping.  In most cases, the
+                      dependency is on the group,resource tuple     and the version
+                      of the actual struct is irrelevant.  5. We cannot easily change
+                      it.  Because this type is embedded in many locations, updates
+                      to this type     will affect numerous schemas.  Don''t make
+                      new APIs embed an underspecified API type they do not control.
+                      Instead of using this type, create a locally provided and used
+                      type that is well-focused on your reference. For example, ServiceReferences
+                      for admission registration: https://github.com/kubernetes/api/blob/release-1.17/admissionregistration/v1/types.go#L533
+                      .'
+                    properties:
+                      apiVersion:
+                        description: API version of the referent.
+                        type: string
+                      fieldPath:
+                        description: 'If referring to a piece of an object instead
+                          of an entire object, this string should contain a valid
+                          JSON/Go field access statement, such as desiredState.manifest.containers[2].
+                          For example, if the object reference is to a container within
+                          a pod, this would take on a value like: "spec.containers{name}"
+                          (where "name" refers to the name of the container that triggered
+                          the event) or if no container name is specified "spec.containers[2]"
+                          (container with index 2 in this pod). This syntax is chosen
+                          only to have some well-defined way of referencing a part
+                          of an object. TODO: this design is not final and this field
+                          is subject to change in the future.'
+                        type: string
+                      kind:
+                        description: 'Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+                        type: string
+                      name:
+                        description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                        type: string
+                      namespace:
+                        description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                        type: string
+                      resourceVersion:
+                        description: 'Specific resourceVersion to which this reference
+                          is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency'
+                        type: string
+                      uid:
+                        description: 'UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids'
+                        type: string
+                    type: object
+                  type: array
+                lastScheduleTime:
+                  description: Information when was the last time the job was successfully
+                    scheduled.
+                  format: date-time
+                  type: string
+              type: object
+            jobStatus:
+              description: Status of the CronJob Service created and managed by it
+              properties:
+                active:
+                  description: The number of actively running pods.
+                  format: int32
+                  type: integer
+                completionTime:
+                  description: Represents time when the job was completed. It is not
+                    guaranteed to be set in happens-before order across separate operations.
+                    It is represented in RFC3339 form and is in UTC.
+                  format: date-time
+                  type: string
+                conditions:
+                  description: 'The latest available observations of an object''s
+                    current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/'
+                  items:
+                    description: JobCondition describes current state of a job.
+                    properties:
+                      lastProbeTime:
+                        description: Last time the condition was checked.
+                        format: date-time
+                        type: string
+                      lastTransitionTime:
+                        description: Last time the condition transit from one status
+                          to another.
+                        format: date-time
+                        type: string
+                      message:
+                        description: Human readable message indicating details about
+                          last transition.
+                        type: string
+                      reason:
+                        description: (brief) reason for the condition's last transition.
+                        type: string
+                      status:
+                        description: Status of the condition, one of True, False,
+                          Unknown.
+                        type: string
+                      type:
+                        description: Type of job condition, Complete or Failed.
+                        type: string
+                    required:
+                      - status
+                      - type
+                    type: object
+                  type: array
+                failed:
+                  description: The number of pods which reached phase Failed.
+                  format: int32
+                  type: integer
+                startTime:
+                  description: Represents time when the job was acknowledged by the
+                    job controller. It is not guaranteed to be set in happens-before
+                    order across separate operations. It is represented in RFC3339
+                    form and is in UTC.
+                  format: date-time
+                  type: string
+                succeeded:
+                  description: The number of pods which reached phase Succeeded.
+                  format: int32
+                  type: integer
+              type: object
+          required:
+            - cronJobStatus
+            - jobStatus
+          type: object
+      type: object
+  version: v1alpha1
+  versions:
+    - name: v1alpha1
+      served: true
+      storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: [ ]
+  storedVersions: [ ]
