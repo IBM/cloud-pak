@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: model-train-classic-operator
+  labels:
+    app.kubernetes.io/instance: ibm-modeltrain-classic-operator
+    app.kubernetes.io/managed-by: ibm-modeltrain-classic-operator
+    app.kubernetes.io/name: ibm-modeltrain-classic-operator

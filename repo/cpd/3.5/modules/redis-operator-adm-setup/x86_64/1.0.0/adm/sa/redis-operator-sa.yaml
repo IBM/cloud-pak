@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ibm-cloud-databases-redis-operator-serviceaccount
+  labels:
+    app.kubernetes.io/instance: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/managed-by: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/name: ibm-cloud-databases-redis-operator

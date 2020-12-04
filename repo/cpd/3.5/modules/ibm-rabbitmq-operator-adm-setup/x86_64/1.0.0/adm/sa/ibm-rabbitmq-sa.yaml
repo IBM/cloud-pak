@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ibm-rabbitmq-operator
+  labels:
+    app.kubernetes.io/instance: ibm-rabbitmq-operator # must inject realse label for cpd tracking status
+    app.kubernetes.io/managed-by: ibm-rabbitmq-operator
+    app.kubernetes.io/name: ibm-rabbitmq-operator

@@ -1,0 +1,257 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: modeltrains.modeltrain.ibm.com
+  labels:
+    app.kubernetes.io/instance: ibm-modeltrain-classic-operator
+    app.kubernetes.io/managed-by: ibm-modeltrain-classic-operator
+    app.kubernetes.io/name: ibm-modeltrain-classic-operator
+spec:
+  group: modeltrain.ibm.com
+  names:
+    kind: ModelTrain
+    listKind: ModelTrainList
+    plural: modeltrains
+    singular: modeltrain
+  scope: Namespaced
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: ModelTrain is the Schema for the modeltrains API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: Spec defines the desired state of ModelTrain
+          properties:
+            config:
+              description: Configuration for Model Train microservices
+              properties:
+                certs:
+                  description: Configuration for Model Train certificates
+                  properties:
+                    configmap:
+                      description: 'Name of the configmap containing Model Train certificates. The configmap must include the following keys: server.crt, server.key, lcm-ca.crt, trainer-ca.crt'
+                      type: string
+                    secret:
+                      description: 'Name of the secret containing Model Train certificates. The secret must include the following keys: ca.crt, server.crt, server.key, tls.crt, tls.key'
+                      type: string
+                  type: object
+                imagePullSecret:
+                  description: Name of the ImagePullSecret used to pull Model Train Images from the registry
+                  type: string
+                lcm:
+                  description: Configuration for the LCM microservice
+                  properties:
+                    grpcPort:
+                      description: LCM microservice port number. Defaults to 8443
+                      type: integer
+                    image:
+                      description: LCM microservice image. This builds the full image name from config.registry and the below name and version as {registry}/{name}:{version}
+                      properties:
+                        name:
+                          description: LCM microservice image name, e.g. lifecycle-manager-service
+                          type: string
+                        version:
+                          description: LCM microservice image tag, e.g. rhubi-master-843
+                          type: string
+                      type: object
+                    replicas:
+                      description: Number of LCM replicas to run
+                      type: integer
+                    resources:
+                      description: CPU and memory resources for replicas
+                      properties:
+                        limits:
+                          description: CPU and memory limits
+                          properties:
+                            cpu:
+                              description: CPU limit
+                              type: string
+                            memory:
+                              description: memory limit
+                              type: string
+                          type: object
+                        requests:
+                          description: CPU and memory requests
+                          properties:
+                            cpu:
+                              description: CPU request
+                              type: string
+                            memory:
+                              description: memory request
+                              type: string
+                          type: object
+                      type: object
+                    serviceAccountName:
+                      description: ServiceAccount to use for LCM deployment
+                      type: string
+                  type: object
+                metering:
+                  description: Annotations and Labels for Metering
+                  properties:
+                    annotations:
+                      description: Map of Annotations for Metering
+                      type: object
+                    labels:
+                      description: Map of Labels for Metering
+                      type: object
+                  type: object
+                ratelimiter:
+                  description: Configuration for the Ratelimiter microservice
+                  properties:
+                    enabled:
+                      description: Enable ratelimiter to limit training jobs based on the resourcequota of the cluster, or the following max_learners option
+                      type: boolean
+                    grpcPort:
+                      description: Ratelimiter microservice port number. Defaults to 8443
+                      type: integer
+                    image:
+                      description: Ratelimiter microservice image. This builds the full image name from config.registry and the below name and version as {registry}/{name}:{version}
+                      properties:
+                        name:
+                          description: Ratelimiter microservice image name, e.g. ratelimiter
+                          type: string
+                        version:
+                          description: Ratelimiter microservice image tag, e.g. rhubi-master-173
+                          type: string
+                      type: object
+                    maxLearners:
+                      description: If config.ratelimiter.enabled is true and config.ratelimiter.max_learners > 0, limit the number of training jobs running at a time to max_learners
+                      type: integer
+                    resources:
+                      description: CPU and memory resources for replicas
+                      properties:
+                        limits:
+                          description: CPU and memory limits
+                          properties:
+                            cpu:
+                              description: CPU limit
+                              type: string
+                            memory:
+                              description: memory limit
+                              type: string
+                          type: object
+                        requests:
+                          description: CPU and memory requests
+                          properties:
+                            cpu:
+                              description: CPU request
+                              type: string
+                            memory:
+                              description: memory request
+                              type: string
+                          type: object
+                      type: object
+                    serviceAccountName:
+                      description: ServiceAccount to use for Ratelimiter deployment
+                      type: string
+                  type: object
+                registry:
+                  description: Docker registry used for Model Train images, e.g. us.icr.io/dlaas_cruiser
+                  type: string
+                trainer:
+                  description: Configuration for the Trainer microservice
+                  properties:
+                    grpcPort:
+                      description: Trainer microservice port number. Defaults to 8443
+                      type: integer
+                    image:
+                      description: Trainer microservice image. This builds the full image name from config.registry and the below name and version as {registry}/{name}:{version}
+                      properties:
+                        name:
+                          description: Trainer microservice image name, e.g. trainer-v2-service
+                          type: string
+                        version:
+                          description: Trainer microservice image tag, e.g. rhubi-master-550
+                          type: string
+                      type: object
+                    queue:
+                      description: Configuration for the queue
+                      properties:
+                        gpuLimits:
+                          description: 'GPU types available for training in the following format: ''nvidia-TeslaK80=0,nvidia-TeslaP100=0,nvidia-TeslaV100=0,CPU=1'' where ''1'' means the type is available in the cluster.'
+                          type: string
+                        pollInterval:
+                          description: Queue poll interval in seconds. Defaults to 60
+                          type: integer
+                        sizeLimit:
+                          description: Queue size limit. Defaults to 40
+                          type: integer
+                      type: object
+                    replicas:
+                      description: Number of Trainer replicas to run
+                      type: integer
+                    resources:
+                      description: CPU and memory resources for replicas
+                      properties:
+                        limits:
+                          description: CPU and memory limits
+                          properties:
+                            cpu:
+                              description: CPU limit
+                              type: string
+                            memory:
+                              description: memory limit
+                              type: string
+                          type: object
+                        requests:
+                          description: CPU and memory requests
+                          properties:
+                            cpu:
+                              description: CPU request
+                              type: string
+                            memory:
+                              description: memory request
+                              type: string
+                          type: object
+                      type: object
+                    serviceAccountName:
+                      description: ServiceAccount to use for Trainer deployment
+                      type: string
+                  type: object
+              type: object
+            postgres:
+              description: Configuration for the postgresql instance that Model Train uses
+              properties:
+                authSecret:
+                  description: Name of the secret containing the username and password
+                  type: string
+                authSecretPassword:
+                  description: The key in the secret containing the password
+                  type: string
+                authSecretUsername:
+                  description: The key in the secret containing the username
+                  type: string
+                database:
+                  description: The postgres database to use
+                  type: string
+                hosts:
+                  description: Comma-delimited list of hosts
+                  type: string
+                ports:
+                  description: Comma-delimited list of ports
+                  type: string
+                tlsSecret:
+                  description: Name of the secret containing the TLS certificate
+                  type: string
+                tlsSecretKey:
+                  description: The key in the secret containing the TLS certificate
+                  type: string
+              type: object
+          type: object
+        status:
+          description: Status defines the observed state of ModelTrain
+          type: object
+      type: object
+  versions:
+  - name: v1
+    served: true
+    storage: true

@@ -1,0 +1,24 @@
+type: module
+category: template-yamls
+
+#Images related
+registry-reference: "prod-entitled-registry" #new registry from repo.yaml
+images:
+  - name: "ibm-cloud-databases-redis-operator"
+    tag: "1.2.1-amd64"
+# Timeout to wait for all resources and running
+timeout: 5 #minutes
+
+#Simlar to the helm, inject name as the label to the resources
+releaseName: redis-operator-release
+# Optional
+#overrideValues:
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+scale:
+
+templateModuleFiles:
+- name: redis-operator.yaml
+  case: "" # Optional: Default is for both install and upgrade
+  wait: false # Optional: Default is false

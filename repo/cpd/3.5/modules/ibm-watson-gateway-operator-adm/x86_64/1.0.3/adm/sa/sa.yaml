@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: watson-gateway
+  labels:
+    operator: gateway-operator
+    component: watson-gateway
+    app.kubernetes.io/instance: ibm-watson-gateway-operator
+    app.kubernetes.io/managed-by: Ansible
+    app.kubernetes.io/name: ibm-watson-gateway-operator

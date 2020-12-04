@@ -1,0 +1,17 @@
+---
+# type is mandatory here
+type: module
+category: adm-setup
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: ibm-cloudpakopen-elasticsearch-operator-adm
+# The description is optional
+description: ""
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+  - adm/crds/elasticsearch.cloudpackopen.ibm.com_elasticsearchdetails.yaml
+  - adm/crds/elasticsearch.cloudpackopen.ibm.com_elasticsearches.yaml
+  - adm/roles/role.yaml
+  - adm/roles/leader_election_role.yaml
+  - adm/sa/sa.yaml
+  - adm/rb/leader_election_role_binding.yaml
+  - adm/rb/role_binding.yaml

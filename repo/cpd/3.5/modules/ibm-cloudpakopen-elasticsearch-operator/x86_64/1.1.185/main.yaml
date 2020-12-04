@@ -1,0 +1,36 @@
+# This file is in fileserver
+type: module
+category: template-yamls
+
+# Images related
+registry-reference: prod-entitled-registry
+
+images:
+  - name: opencontent-elasticsearch-operator
+    tag: 1.1.185
+  - name: opencontent-elasticsearch-6.8.13
+    tag: 1.1.185
+  - name: opencontent-elasticsearch-base-plugins-6.8.13
+    tag: 1.1.185
+  - name: opencontent-elasticsearch-7.8.0
+    tag: 1.1.185
+  - name: opencontent-elasticsearch-base-plugins-7.8.0
+    tag: 1.1.185
+  - name: opencontent-elasticsearch-7.8.1
+    tag: 1.1.185
+  - name: opencontent-elasticsearch-base-plugins-7.8.1
+    tag: 1.1.185
+
+# Timeout to wait for all resources up and running
+timeout: 5 #minutes
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: ibm-cpo-elasticsearch-operator
+
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+templateModuleFiles:
+- name: deployment.yaml
+  case: ""  # Optional: Default is for both install and upgrade
+  wait: false # Optional: Default is false

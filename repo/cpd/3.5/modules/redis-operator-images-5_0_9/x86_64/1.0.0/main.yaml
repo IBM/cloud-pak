@@ -1,0 +1,29 @@
+type: module
+category: template-yamls
+
+#Images related
+registry-reference: "prod-entitled-registry" #new registry from repo.yaml
+
+images:
+  - name: redis-db-5.0.9
+    tag: 1.2.1-amd64
+
+  - name: redis-mgmt-5.0.9
+    tag: 1.2.1-amd64
+
+  - name: redis-proxy-5.0.9
+    tag: 1.2.1-amd64
+
+  - name: redis-proxylog-5.0.9
+    tag: 1.2.1-amd64
+
+
+# Timeout to wait for all resources and running
+timeout: 5 #minutes
+
+#Simlar to the helm, inject name as the label to the resources
+releaseName: redis-operator-images
+
+scale:
+
+templateModuleFiles: []

@@ -1,0 +1,13 @@
+# type is mandatory here
+type: module
+category: adm-setup
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: ibm-rabbitmq-operator-adm-setup
+# The description is optional
+description: "Creates crd, roles, role-bindings and service accounts that are needed for rabbitmq operator"
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/crd/ibm-rabbitmq-crd.yaml
+- adm/roles/ibm-rabbitmq-role.yaml
+- adm/rb/ibm-rabbitmq-rb.yaml
+- adm/sa/ibm-rabbitmq-sa.yaml 
