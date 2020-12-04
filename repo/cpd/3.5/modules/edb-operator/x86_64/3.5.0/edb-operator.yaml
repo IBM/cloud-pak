@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edb-operator
+  annotations:
+    productID: "aa273859f93a4a32887147700abb1e6a"
+    productName: "EDB Enterprise Postgres Operator"
+    productMetric: "FREE"
+    cloudpakName: "EDB Enterprise Postgres Operator"
+    cloudpakId: "aa273859f93a4a32887147700abb1e6a"
+    cloudpakInstanceId: {{ .cloudpakInstanceId }}
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }}
+    icpsupport/addOnId: edb
+    icpsupport/app: operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: edb-operator
+  template:
+    metadata:
+      annotations:
+        productID: "aa273859f93a4a32887147700abb1e6a"
+        productName: "EDB Enterprise Postgres Operator"
+        productMetric: "FREE"
+        cloudpakName: "EDB Enterprise Postgres Operator"
+        cloudpakId: "aa273859f93a4a32887147700abb1e6a"
+        cloudpakInstanceId: {{ .cloudpakInstanceId }}
+      labels:
+        name: edb-operator
+        app.kubernetes.io/instance: {{ .releaseName }}
+        icpsupport/addOnId: edb
+        icpsupport/app: operator
+    spec:
+      serviceAccountName: edb-operator
+      containers:
+        - name: edb-operator
+          image: {{.registryPrefix}}/{{.global.image.repository}}:{{.global.image.tag}}
+          command:
+            - edb-operator
+          args:
+            - "--metrics-addr=127.0.0.1:8080"
+            - "--enable-leader-election"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "edb-operator"
+          livenessProbe:
+            httpGet:
+              path: /alive
+              port: 8081
+              scheme: HTTP
+            initialDelaySeconds: 10
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          # readinessProbe:
+          #   httpGet:
+          #     path: /ready
+          #     port: 8081
+          #     scheme: HTTP
+          #   initialDelaySeconds: 10
+          #   timeoutSeconds: 5
+          #   periodSeconds: 10
+          #   successThreshold: 1
+          #   failureThreshold: 3
+          resources:
+            limits:
+              cpu: 500m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi

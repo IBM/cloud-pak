@@ -1,0 +1,34 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+  name: edb-operator-scc
+priority: 10
+allowPrivilegedContainer: false
+allowPrivilegeEscalation: true
+defaultAddCapabilities: []
+requiredDropCapabilities: [MKNOD]
+allowedCapabilities: []
+seccompProfiles:
+volumes:
+  - configMap
+  - downwardAPI
+  - emptyDir
+  - persistentVolumeClaim
+  - projected
+  - secret
+allowedFlexVolumes: []
+allowHostDirVolumePlugin: true
+allowHostNetwork: false
+allowHostPorts: false
+allowHostPID: false
+allowHostIPC: false
+readOnlyRootFilesystem: false
+runAsUser:
+  type: RunAsAny
+seLinuxContext:
+  type: RunAsAny
+fsGroup:
+  type: RunAsAny
+supplementalGroups:
+  type: RunAsAny
