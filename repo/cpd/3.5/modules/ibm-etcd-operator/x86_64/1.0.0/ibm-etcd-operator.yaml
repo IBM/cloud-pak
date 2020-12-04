@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-etcd-operator
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }}
+    app.kubernetes.io/managed-by: ibm-etcd-operator
+    app.kubernetes.io/name: ibm-etcd-operator
+  annotations:
+    "ansible.operator-sdk/verbosity": "4"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ibm-etcd-operator
+      app.kubernetes.io/instance: {{ .releaseName }}
+      app.kubernetes.io/managed-by: ibm-etcd-operator
+      app.kubernetes.io/name: ibm-etcd-operator
+  template:
+    metadata:
+      labels:
+        name: ibm-etcd-operator
+        app.kubernetes.io/instance: {{ .releaseName }}
+        app.kubernetes.io/managed-by: ibm-etcd-operator
+        app.kubernetes.io/name: ibm-etcd-operator
+      annotations:
+        productName: "ibm-etcd"
+        productID: "86798888679886798867988679886798"
+        productVersion: "1.0.0"
+        productMetric: VIRTUAL_PROCESSOR_CORE
+        cloudpakId: "86798888679886798867988679886798"
+        cloudpakName: "Cloud Pak Open"
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 3
+              preference:
+                matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      serviceAccountName: ibm-etcd-operator-serviceaccount
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: etcd-ha-operator
+          image: "{{ .registryPrefix }}/opencontent-etcd-operator:{{.global.image.tag}}"
+          args:
+            - "--enable-leader-election"
+            - "--leader-election-id=ibm-etcd-operator"
+          securityContext:
+            privileged: false
+            readOnlyRootFilesystem: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 300m
+              memory: 256Mi
+          ports:
+          - containerPort: 60000
+            name: metrics
+          imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 6789
+            initialDelaySeconds: 5
+            periodSeconds: 3
+          env:
+          - name: ANSIBLE_DEBUG_LOGS
+            value: "True"
+          - name: WATCH_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: OPERATOR_NAME
+            value: "etcd-ha-operator"
+          # - name: ANSIBLE_GATHERING
+          #   value: explicit
+          volumeMounts:
+            - mountPath: /tmp/ansible-operator/runner
+              name: runner
+      volumes:
+        - name: runner
+          emptyDir: {}

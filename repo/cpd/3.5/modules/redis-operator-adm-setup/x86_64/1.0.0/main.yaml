@@ -1,0 +1,24 @@
+# type is mandatory here
+type: module
+category: adm-setup
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: redis-operator-adm-setup
+# The description is optional
+description: ""
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/crd/redis-operator-backups-crd.yaml
+- adm/crd/redis-operator-buckets-crd.yaml
+- adm/crd/redis-operator-formationlocks-crd.yaml
+- adm/crd/redis-operator-formations-crd.yaml
+- adm/crd/redis-operator-recipes-crd.yaml
+- adm/crd/redis-operator-recipetemplates-crd.yaml
+- adm/crd/redis-operator-redissentinels-crd.yaml
+- adm/crd/redis-operator-releases-crd.yaml
+- adm/roles/redis-operator-role.yaml
+- adm/roles/redis-operator-clusterrole.yaml
+- adm/sa/redis-operator-sa.yaml 
+- adm/rb/redis-operator-rb.yaml
+add-cluster-role-to-user:
+- clusterrole: ibm-cloud-databases-redis-operator-clusterrole
+  sa: ibm-cloud-databases-redis-operator-serviceaccount

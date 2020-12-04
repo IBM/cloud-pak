@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-operator
+  labels:
+    operator: gateway-operator
+    component: watson-gateway
+    app: gateway-operator
+    app.kubernetes.io/instance: "{{ .releaseName }}"
+    app.kubernetes.io/managed-by: Ansible
+    app.kubernetes.io/name: "{{ .releaseName }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: gateway-operator
+  revisionHistoryLimit: 4
+  template:
+    metadata:
+      labels:
+        name: gateway-operator
+        component: watson-gateway
+        app.kubernetes.io/instance: "{{ .releaseName }}"
+        app.kubernetes.io/managed-by: Ansible
+        app.kubernetes.io/name: "{{ .releaseName }}"
+      annotations:
+        productVersion: "3.7.6"
+        productID: "ICP4D-addon-IBMWatsonGateway"
+        productName: "IBM Watson Gateway"
+        cloudpakName: "IBM Cloud Pak for Data"
+        cloudpakId: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        cloudpakInstanceId: "{{ .cloudpakInstanceId }}"
+        productCloudpakRatio: "1:1"
+        productChargedContainers: "All"
+        productMetric: "VIRTUAL_PROCESSOR_CORE"
+    spec:
+      serviceAccountName: watson-gateway
+      hostIPC: false
+      hostNetwork: false
+      hostPID: false
+      securityContext:
+        runAsNonRoot: true
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      containers:
+        - name: operator
+          # Replace this with the built image name
+          image: "{{ .registryPrefix }}/watson-gateway-operator:{{ .global.image.tag }}"
+          imagePullPolicy: Always
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+            privileged: false
+            readOnlyRootFilesystem: false
+            runAsNonRoot: true
+          volumeMounts:
+            - mountPath: /tmp/ansible-operator/runner
+              name: runner
+            - mountPath: /opt/ansible/config
+              name: app-config
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "gateway-operator"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "300Mi"
+            limits:
+              cpu: "500m"
+              memory: "500Mi"
+      volumes:
+        - name: runner
+          emptyDir: {}
+        - name: app-config
+          configMap:
+            name: gateway-app-config

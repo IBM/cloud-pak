@@ -1,0 +1,99 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-cloud-databases-redis-operator
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }}
+    app.kubernetes.io/managed-by: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/name: ibm-cloud-databases-redis-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ibm-cloud-databases-redis-operator
+      app.kubernetes.io/instance: {{ .releaseName }}
+      app.kubernetes.io/managed-by: ibm-cloud-databases-redis-operator
+      app.kubernetes.io/name: ibm-cloud-databases-redis-operator
+  template:
+    metadata:
+      labels:
+        name: ibm-cloud-databases-redis-operator
+        app.kubernetes.io/instance: {{ .releaseName }}
+        app.kubernetes.io/managed-by: ibm-cloud-databases-redis-operator
+        app.kubernetes.io/name: ibm-cloud-databases-redis-operator
+      annotations:
+        productName: "IBM Operator for Redis"
+        productID: "AA85EFEB5C234A44A824BE23FB1896AF"
+        productVersion: "1.1.1"
+        productMetric: FREE
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 3
+            preference:
+              matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+      serviceAccountName: ibm-cloud-databases-redis-operator-serviceaccount
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: ibm-cloud-databases-redis-operator
+{{- if .redis.operator.image.repository }}
+          image: "{{ .redis.operator.image.repository }}/ibm-cloud-databases-redis-operator:{{ .redis.operator.image.tag }}"
+{{- else }}
+          image: "{{ .registryPrefix                  }}/ibm-cloud-databases-redis-operator:{{ .redis.operator.image.tag }}"
+{{- end }}
+{{- if .redis.redis.image.repository }}
+          args: ["--registry {{ .redis.redis.image.repository }} -v 6"]
+{{- else }}
+          args: ["--registry {{ .registryPrefix               }} -v 6"]
+{{- end }}
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+            readOnlyRootFilesystem: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: OPERATOR_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "ibm-cloud-databases-redis-operator"
+            - name: "REGISTRY_SECRET"
+              value: "{{ .redis.redis.image.pullSecret }}"
+            - name: "USE_REDIS_AMD64_IMAGES"
+              value: "true"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 100m
+              memory: 128Mi

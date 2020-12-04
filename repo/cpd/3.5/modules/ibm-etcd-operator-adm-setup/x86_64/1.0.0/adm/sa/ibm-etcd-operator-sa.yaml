@@ -1,0 +1,8 @@
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: ibm-etcd-operator-serviceaccount
+  labels:
+    app.kubernetes.io/instance: ibm-etcd-operator
+    app.kubernetes.io/managed-by: ibm-etcd-operator
+    app.kubernetes.io/name: ibm-etcd-operator

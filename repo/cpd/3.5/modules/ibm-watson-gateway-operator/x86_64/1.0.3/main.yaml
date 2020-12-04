@@ -1,0 +1,30 @@
+# This file is in fileserver
+type: module
+category: template-yamls
+
+# Images related
+registry-reference: prod-entitled-registry
+
+images:
+  - name: watson-gateway
+    tag: 3.7.6
+  - name: watson-gateway-operator
+    tag: v1.0.3
+
+# Timeout to wait for all resources up and running
+timeout: 5 #minutes
+
+installOverride: install-override.yaml
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: ibm-watson-gateway-operator
+
+cloudpakInstanceId: 1
+
+templateModuleFiles:
+  - name: app_config_cm.yaml
+    case: "" # Optional: Default is for both install and upgrade
+    wait: false # Optional: Default is false
+  - name: operator.yaml
+    case: "" # Optional: Default is for both install and upgrade
+    wait: false # Optional: Default is false

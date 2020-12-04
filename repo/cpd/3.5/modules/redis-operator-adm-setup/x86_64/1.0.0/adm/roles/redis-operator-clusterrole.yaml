@@ -1,0 +1,30 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ibm-cloud-databases-redis-operator-clusterrole
+  labels:
+    app.kubernetes.io/instance: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/managed-by: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/name: ibm-cloud-databases-redis-operator
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumes
+  - namespaces
+  verbs:
+  - get
+  - list
+  - watch
+# needed to create formation crds
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - delete
+  - update

@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-minio-operator
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }} # must inject release label for cpd tracking status
+    app.kubernetes.io/managed-by: {{ .releaseName }}
+    app.kubernetes.io/name: {{ .releaseName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ibm-minio-operator
+  template:
+    metadata:
+      labels:
+        name: ibm-minio-operator
+        app.kubernetes.io/instance: {{ .releaseName }}
+        app.kubernetes.io/managed-by: {{ .releaseName }}
+        app.kubernetes.io/name: {{ .releaseName }}
+      annotations:
+        productName: "ibm-minio"
+        productID: "a31364782937181904728189382dcaef"
+        productMetric: VIRTUAL_PROCESSOR_CORE
+        cloudpakId: "86798888679886798867988679886798"
+        cloudpakName: "Cloud Pak Open"
+        cloudpakVersion: "2.0"
+    spec:
+      serviceAccountName: ibm-minio-operator
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 3
+              preference:
+                matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: ibm-minio-operator
+          # Replace this with the built image name
+          image: "{{ .registryPrefix }}/opencontent-minio-operator:{{.global.image.tag}}"
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+            readOnlyRootFilesystem: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "ibm-minio-operator"
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200Mi
+            limits:
+              cpu: 100m
+              memory: 200Mi

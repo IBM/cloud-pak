@@ -1,0 +1,111 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: ibm-cloud-databases-redis-operator-role
+  labels:
+    app.kubernetes.io/instance: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/managed-by: ibm-cloud-databases-redis-operator
+    app.kubernetes.io/name: ibm-cloud-databases-redis-operator
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - deployments
+  - deployments/scale
+  - events
+  - endpoints
+  - services
+  - configmaps
+  - secrets
+  - pods
+  - pods/exec
+  - persistentvolumeclaims
+  - namespaces
+  verbs:
+  - '*'
+- apiGroups:
+  - ""
+  resources:
+  - persistentvolumes
+  verbs:
+  - get
+  - update
+  - patch
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - statefulsets
+  - replicasets
+  - deployments
+  - deployments/scale
+  verbs:
+  - '*'
+- apiGroups:
+  - extensions
+  resources:
+  - networkpolicies
+  - deployments
+  - deployments/scale
+  verbs:
+  - '*'
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - networkpolicies
+  verbs:
+  - '*'
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  - rolebindings
+  verbs:
+  - get
+  - create
+  - delete
+  - update
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - serviceaccounts
+  verbs:
+  - get
+  - create
+  - delete
+  - update
+  - list
+  - watch
+- apiGroups:
+  - redis.databases.cloud.ibm.com
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - batch
+  resources:
+  - cronjobs
+  verbs:
+  - '*'
+- apiGroups:
+  - policy
+  resources:
+  - poddisruptionbudgets
+  verbs:
+  - get
+  - create
+  - delete
+  - list
+  - watch
+- apiGroups:
+  - apps
+  resourceNames:
+  - ibm-cloud-databases-redis-operator
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update

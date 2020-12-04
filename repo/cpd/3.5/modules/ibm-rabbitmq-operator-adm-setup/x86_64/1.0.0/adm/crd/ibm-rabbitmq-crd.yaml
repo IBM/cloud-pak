@@ -1,0 +1,374 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: ibmrabbitmqs.helm.operator-sdk
+  labels:
+    app.kubernetes.io/instance: ibm-rabbitmq-operator # must inject realse label for cpd tracking status
+    app.kubernetes.io/managed-by: ibm-rabbitmq-operator
+    app.kubernetes.io/name: ibm-rabbitmq-operator
+spec:
+  group: helm.operator-sdk
+  names:
+    kind: IbmRabbitmq
+    listKind: IbmRabbitmqList
+    plural: ibmrabbitmqs
+    singular: ibmrabbitmq
+  scope: Namespaced
+  subresources:
+    status: {}
+  version: v1alpha1
+  validation:
+    openAPIV3Schema:
+      type: object
+      description: The Schema for IbmRabbitmq kind in the ibmrabbitmqs API
+      # validations coverted from ../../helm-charts/ibm-rabbitmq/values-metadata.yaml
+      properties:
+        status:
+          type: object
+          x-kubernetes-preserve-unknown-fields: true
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          type: object
+          description: Spec defines the desired state of IbmRabbitmq
+          properties:
+            arch:
+              type: object
+              description: "Targets a specific OS to use for the worker node."
+              properties:
+                amd64:
+                  type: string
+                  pattern: "3 - Most preferred"
+                  description: "Scheduling priority for using the Intel 64-bit architecture for worker nodes."
+
+            config:
+              type: object
+              description: "copy-rabbitmq-config Docker Image Configuration"
+              properties:
+                image:
+                  type: object
+                  properties:
+                    image:
+                      type: string
+                      description: "Name of Docker image to be pulled for rabbitmq copy config"
+
+            rabbitmq:
+              type: object
+              description: "RabbitMQ Docker Image Configuration"
+              properties:
+                image:
+                  type: object
+                  properties:
+                    image:
+                      type: string
+                      description: "Name of Docker image to be pulled for rabbitmq"
+
+            enableCp4dMeteringLabels:
+              type: boolean
+              description: "Enable or disable CP4D metering labels"
+
+            global:
+              type: object
+              description: "A secret that is used globally in the chart"
+              properties:
+                dockerRegistryPrefix:
+                  type: string
+                  description: "Docker registry prefix to pull all the images from."
+                image:
+                  type: object
+                  properties:
+                    pullSecret:
+                      type: string
+                      description: "Image pull secret to be used globally for all images"
+                    pullPolicy:
+                      description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
+                      type: "string"
+                      pattern: "(IfNotPresent|Always|Never)"
+                storageClassName:
+                  type: string
+                  description: "The storage class used for provisioning the PVC RabbitMQ instance mounts"
+                sch:
+                  type: object
+                  properties:
+                    enabled:
+                      description: "Set to false only is upstream chart provides ibm-sch chart"
+                      type: "boolean"
+                metering:
+                  type: object
+                  properties:
+                    productName:
+                      type: string
+                    productID:
+                      type: string
+                    productVersion:
+                      type: string
+                    productMetric:
+                      type: string
+                    productChargedContainers:
+                      type: string
+                    productCloudpakRatio:
+                      type: string
+                      description: "Cloud Pak for Data Product Cloud Pak Ratio - generated by cpd installer"
+                    cloudpakName:
+                      type: string
+                    cloudpakId:
+                      type: string
+                    cloudpakInstanceId:
+                      type: string
+                    addOnId:
+                      type: string
+                zenServiceInstanceId:
+                  type: string
+                  description: "Cloud Pak for Data Service Instance Id - generated by cpd installer"
+                runtimeEnvId:
+                  type: string
+                  description: "Cloud Pak for Data Runtime Environment Id - generated by cpd installer"
+                environmentType:
+                  type: string
+                  description: "Cloud Pak for Data Environment Type - generated by cpd installer"
+                jobRunId:
+                  type: string
+                  description: "Cloud Pak for Data Job Run Id - generated by cpd installer"
+                projectId:
+                  type: string
+                  description: "Cloud Pak for Data Project Id - generated by cpd installer"
+                spaceId:
+                  type: string
+                  description: "Cloud Pak for Data Space Id - generated by cpd installer"
+                createdBy:
+                  type: string
+                  description: "Cloud Pak for Data Service Created By - generated by cpd installer"
+            securityContext:
+              type: object
+              description: "Security context configuration for all containers and pods"
+              properties:
+                rabbitmq:
+                  type: object
+                  properties:
+                    runAsUser:
+                      description: "Run as user config for the contianers rabbitmq and rabbitmq cofig copy"
+                      type: number
+
+            replicas:
+              description: "Number of rabbitmq statefulset replicas to deploy. Defaults to 3"
+              type: number
+
+            auth:
+              type: object
+              description: "Authentication for RabbitMQ"
+              properties:
+                rabbitmqUsername:
+                  type: string
+                  description: "RabbitMQ admin user name. Defaults to 'admin'."
+                managementUsername:
+                  type: string
+                  description: "RabbitMQ management user name. Defaults to 'management'."
+                authSecretName:
+                  type: string
+                  description: "Secret that has the RabbitMQ password. If not provided, a secret with random password will be generated"
+
+            rabbitmqNodePort:
+              type: string
+              description: "RabbitMQ port number. Defaults to '5671'."
+
+            rabbitmqManagerPort:
+              type: string
+              description: "RabbitMQ manager port number. Defaults to '15671'."
+
+            amqpsNodePort:
+              type: string
+              description: "RabbitMQ AMQPS port number. Defaults to '5671'."
+
+            rabbitmqVhost:
+              type: string
+              description: "RabbitMQ application vhost. Defaults to '/'."
+
+            rabbitmqHipeCompile:
+              type: boolean
+              description: "Enable rabbitmq Hipe Compile. It needs to be enabled when rabbitmq comiple needs to be done at startup"
+
+            extraConfig:
+              type: string
+              description: "Extraconfig to be provided in rabbitmq config file"
+
+            definitions:
+              type: object
+              description: "Rabbitmq broker definitions provided in config file"
+              properties:
+                users:
+                  type: string
+                  description: "Users part to be provided in rabbitmq broker definitions"
+                vhosts:
+                  type: string
+                  description: "Vhosts part to be provided in rabbitmq broker definitions"
+                parameters:
+                  type: string
+                  description: "Parameters part to be provided in rabbitmq broker definitions"
+                permissions:
+                  type: string
+                  description: "Permissions part to be provided in rabbitmq broker definitions"
+                queues:
+                  type: string
+                  description: "Queues part to be provided in rabbitmq broker definitions"
+                exchanges:
+                  type: string
+                  description: "Exchanages part to be provided in rabbitmq broker definitions"
+                bindings:
+                  type: string
+                  description: "Bindings part to be provided in rabbitmq broker definitions"
+                policies:
+                  type: string
+                  description: "Policies part to be provided in rabbitmq broker definitions"
+
+            persistentVolume:
+              type: object
+              description: "Persistent Volumes helps retain the data when pod restarts"
+              properties:
+                enabled:
+                  type: boolean
+                  description: "Select this checkbox to store rabbitmq data on a persistent volume so that the data is preserved if the pod is stopped."
+                useDynamicProvisioning:
+                  type: boolean
+                  description: "Select this checkbox to allow the cluster to automatically provision new storage resource and create PersistentVolume objects."
+                accessModes:
+                  description: "The mode in which persistent volume should be accessed"
+                  type: string
+                  pattern: "(ReadWriteOnce|ReadWriteMany)"
+                storageClassName:
+                  type: string
+                  description: "The name of StorageClass to be used to create persistent volume claim"
+                size:
+                  type: string
+                  description: "Storage Size for persistent volume to be created"
+
+            dataPVC:
+              type: object
+              description: "Configures created Persistent Volume Claims and how they bind to Persistent Volumes"
+              properties:
+                selector:
+                  type: object
+                  properties:
+                    # label - label that the PV should have to be boundable to created PVCs
+                    label:
+                      type: string
+                      description: "If useDynamicProvisioning is disabled, this specifies labels that needs to have the Persistent Volumes to be used. Defaults to null"
+                    # value - value of the label that the PV should have to be boundable to created PVCs
+                    value:
+                      type: string
+                      description: "Specifies value assigned to the label that needs to have the Persistent Volumes to be used. Defaults to null"
+
+            initContainer:
+              type: object
+              description: "CPU and Memory Resources for init container"
+              properties:
+                resources:
+                    type: object
+                    properties:
+                      requests:
+                        type: object
+                        properties:
+                          cpu:
+                            type: string
+                            description: "The minimum required CPU core. Specify integers, fractions (e.g. 0.5), or millicore values(e.g. 100m, where 100m is equivalent to .1 core)."
+                          memory:
+                            type: string
+                            description: "The minimum memory in bytes. Specify integers with one of these suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                      limits:
+                        type: object
+                        properties:
+                          cpu:
+                            type: string
+                            description: "The upper limit of CPU core. Specify integers, fractions (e.g. 0.5), or millicores values(e.g. 100m, where 100m is equivalent to .1 core)."
+                          memory:
+                            type: string
+                            description: "The memory upper limit in bytes. Specify integers with suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+
+            resources:
+              type: object
+              description: "CPU and Memory Resources for Rabbitmq container"
+              properties:
+                requests:
+                  type: object
+                  properties:
+                    cpu:
+                      type: string
+                      description: "The minimum required CPU core. Specify integers, fractions (e.g. 0.5), or millicore values(e.g. 100m, where 100m is equivalent to .1 core)."
+                    memory:
+                      type: string
+                      description: "The minimum memory in bytes. Specify integers with one of these suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                limits:
+                  type: object
+                  properties:
+                    cpu:
+                      type: string
+                      description: "The upper limit of CPU core. Specify integers, fractions (e.g. 0.5), or millicores values(e.g. 100m, where 100m is equivalent to .1 core)."
+                    memory:
+                      type: string
+                      description: "The memory upper limit in bytes. Specify integers with suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+
+            tls:
+              type: object
+              description: "TLS Configuration parameters"
+              properties:
+                enabled:
+                  type: boolean
+                  description: "To enable TLS for client and management connections set this to true, when true, you MUST also specify tls cert,key and CA bundle information"
+                tlsSecretName:
+                  type: string
+                  description: "Secret that has the RabbitMQ TLS certs and keys. If not provided, a secret with TLS certs and keys will be generated"
+
+            livenessProbe:
+              type: object
+              description: "Liveness probe config for RabbitMQ Servers"
+              properties:
+                initialDelaySeconds:
+                  type: number
+                  description: "Number of seconds after the container has started before the probe is initiated."
+                periodSeconds:
+                  type: number
+                  description: "How often (in seconds) to perform the probe."
+                timeoutSeconds:
+                  type: number
+                  description: "Number of seconds after which the probe times out."
+                failureThreshold:
+                  type: number
+                  description: "Number of failures to accept before giving up and marking the pod as Unready."
+
+            readinessProbe:
+              type: object
+              description: "Liveness probe config for RabbitMQ Servers"
+              properties:
+                initialDelaySeconds:
+                  type: number
+                  description: "Number of seconds after the container has started before the probe is initiated."
+                periodSeconds:
+                  type: number
+                  description: "How often (in seconds) to perform the probe."
+                timeoutSeconds:
+                  type: number
+                  description: "Number of seconds after which the probe times out."
+                failureThreshold:
+                  type: number
+                  description: "Number of failures to accept before giving up and restarting the."
+
+            clusterDomain:
+              type: string
+              description: "Specify only if your KubeDNS service names does not end with cluster.local."
+            nameOverride:
+              type: string
+              description: "For sch to override app name."
+
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true

@@ -1,0 +1,14 @@
+---
+# type is mandatory here
+type: module
+category: adm-setup
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: ibm-watson-gateway-operator-adm
+# The description is optional
+description: ""
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+  - adm/crds/crd_com_v1_watsongateway_crd.yaml
+  - adm/roles/role.yaml
+  - adm/sa/sa.yaml
+  - adm/rb/role_binding.yaml

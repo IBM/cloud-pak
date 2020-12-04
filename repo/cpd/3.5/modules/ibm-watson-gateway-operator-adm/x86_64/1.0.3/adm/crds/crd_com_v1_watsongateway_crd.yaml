@@ -1,0 +1,288 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: watsongateways.com.ibm.watson.watson-gateway
+  labels:
+    operator: gateway-operator
+    component: watson-gateway
+    app.kubernetes.io/instance: ibm-watson-gateway-operator
+    app.kubernetes.io/managed-by: Ansible
+    app.kubernetes.io/name: ibm-watson-gateway-operator
+spec:
+  group: com.ibm.watson.watson-gateway
+  names:
+    kind: WatsonGateway
+    listKind: WatsonGateways
+    plural: watsongateways
+    singular: watsongateway
+    shortNames:
+      - wg
+  scope: Namespaced
+  subresources:
+    status: {}
+  additionalPrinterColumns:
+    - JSONPath: .spec.version
+      description: Version of the resource
+      name: Version
+      type: string
+    - JSONPath: .status.conditions[?(@.type=="Ready")].status
+      description: Condition ready
+      name: Ready
+      type: string
+    - JSONPath: .status.conditions[?(@.type=="Ready")].reason
+      description: Condition ready reason
+      name: ReadyReason
+      type: string
+    - JSONPath: .status.conditions[?(@.type=="Updating")].status
+      description: Condition updating
+      name: Updating
+      type: string
+    - JSONPath: .status.conditions[?(@.type=="Updating")].reason
+      description: Condition updating reason
+      name: UpdatingReason
+      type: string
+    - JSONPath: .metadata.creationTimestamp
+      description: Age of the resource
+      name: Age
+      type: date
+  version: v1
+  versions:
+    - name: v1
+      served: true
+      storage: true
+
+  validation:
+    openAPIV3Schema:
+      type: object
+      properties:
+        spec:
+          type: object
+          required:
+            - version
+            - size
+            - cpd
+            - slot
+            - cluster
+            - service
+            - backendService
+          properties:
+            version:
+              type: string
+              description: The operator version to use in order to render the CR
+
+            size:
+              type: string
+              description: The size of Gateway to deploy
+
+            cpd:
+              type: object
+              required:
+                - namespace
+              properties:
+                namespace:
+                  type: string
+                  description: The namespace where Cloud Pak for Data is installed
+
+            slot:
+              type: string
+              description: The name of the Watson service CR
+
+            cluster:
+              type: object
+              required:
+                - type
+              properties:
+                type:
+                  type: string
+                  description: Cluster environment type
+                name:
+                  type: string
+                  description: (public only) cluster environment name used by service team
+                serviceAccount:
+                  type: string
+                  description: The service account to use. if not specified a service account will be created
+                imagePullSecrets:
+                  type: array
+                  items:
+                    type: string
+                storageClassName:
+                  type: string
+                  description: (private only) storage class for all datastores
+                dockerRegistryPrefix:
+                  type: string
+                  description: (private only) Docker registry, including namespace, to get images from
+
+            service:
+              type: object
+              required:
+                - label
+                - displayName
+                - version
+              properties:
+                label:
+                  type: string
+                  description: The service id to be use in tooling, api and other urls
+                displayName:
+                  type: string
+                  description: The name to be displayed in the addons page
+                version:
+                  type: string
+                  description: The addon version to be used when provisioning instances
+                shortDescription:
+                  type: string
+                  description: Short description (up to 140 characters) of the addon. This is what is displayed in the cards within the addons grid
+                longDescription:
+                  type: string
+                  description: Detailed explanation of the addon to be exposed in the Addon details page
+                deployDocs:
+                  type: string
+                productDocs:
+                  type: string
+                apiReferenceDocs:
+                  type: string
+                gettingStartedDocs:
+                  type: string
+                maxInstances:
+                  type: integer
+                  minimum: 1
+                  maximum: 50
+                  description: Max number of service instances that can be provisioned
+                productImages:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  description: The number of images to display in the addon detail page. Use 0 if the addon detail page should not display images
+                instanceId:
+                  type: string
+                  description: The hardcoded instance id that will be used as part of the X-Watson-UserInfo header. Make sure that addon.maxInstances is set to 1
+                resourceGroupId:
+                  type: string
+                  description: The hardcoded resource group id that will be used as part of the X-Watson-UserInfo header and during provisioning calls
+                accountId:
+                  type: string
+                  description: The hardcoded account id that will be used as part of the X-Watson-UserInfo header and in the account managment api
+                planId:
+                  type: string
+                  description: The hardcoded plan id that will be used as part of the X-Watson-UserInfo header
+                showUserManagement:
+                  type: boolean
+                  description: True if there should be a tab in the instance dashboard to add/edit/remove users.
+                showCredentials:
+                  type: boolean
+                  description: True if the generated service credentials should be displayed in the instance dashboard.
+
+            backendService:
+              type: object
+              required:
+                - name
+                - namespace
+                - port
+              properties:
+                name:
+                  type: string
+                namespace:
+                  type: string
+                rewriteTarget:
+                  type: string
+                exposeAPI:
+                  type: boolean
+                authentication:
+                  type: boolean
+                port:
+                  type: integer
+                brokerPath:
+                  type: string
+                nginxDirectives:
+                  type: array
+                  items:
+                    type: string
+
+            additionalServices:
+              type: array
+              items:
+                type: object
+                required:
+                  - name
+                  - namespace
+                  - path
+                  - port
+                  - rewriteTarget
+                  - exposeAPI
+                  - authentication
+                  - nginxDirectives
+                properties:
+                  path:
+                    type: string
+                  name:
+                    type: string
+                  namespace:
+                    type: string
+                  rewriteTarget:
+                    type: string
+                  exposeAPI:
+                    type: boolean
+                  authentication:
+                    type: boolean
+                  port:
+                    type: integer
+                  nginxDirectives:
+                    type: array
+                    items:
+                      type: string
+
+            tooling:
+              type: object
+              properties:
+                name:
+                  type: string
+                enable:
+                  type: boolean
+                namespace:
+                  type: string
+                port:
+                  type: integer
+                rewriteTarget:
+                  type: string
+                cookieRewrite:
+                  type: boolean
+                nginxDirectives:
+                  type: array
+                  items:
+                    type: string
+
+            additionalToolings:
+              type: array
+              items:
+                type: object
+                required:
+                  - name
+                  - namespace
+                  - path
+                  - port
+                  - rewriteTarget
+                  - authentication
+                  - nginxDirectives
+                properties:
+                  authentication:
+                    type: boolean
+                  name:
+                    type: string
+                  port:
+                    type: integer
+                  path:
+                    type: string
+                  rewriteTarget:
+                    type: string
+                  nginxDirectives:
+                    type: array
+                    items:
+                      type: string
+                      description: nginx directive, should end with ';'
+                  namespace:
+                    type: string
+                    description: Namespace where the service is
+
+        # App config overrides are an arbitrary key/value store
+        appConfigOverrides:
+          x-kubernetes-preserve-unknown-fields: true
+          type: object

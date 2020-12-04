@@ -1,0 +1,10 @@
+
+redis:
+  operator:
+    image:
+      repository: "" # Defaults to .registryPrefix if empty
+      tag: 1.2.1-amd64
+  redis:
+    image:
+      repository: "" # Defaults to .registryPrefix if empty
+      pullSecret: "ibm-entitlement-key"  # Pull secret used by statefulsets created by operator to pull redis images.
