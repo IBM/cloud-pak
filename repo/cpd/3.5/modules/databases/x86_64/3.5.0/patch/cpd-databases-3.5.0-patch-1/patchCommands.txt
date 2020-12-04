@@ -1,0 +1,2 @@
+patch deployment zen-database-core -p '{"spec": {"template": {"spec": {"containers": [{"name": "zen-database-core","image":"{{.DockerRegistryPrefix}}/zen-database-core:3.5.0-723-dev-x86_64"}]}}}}'
+patch deployment zen-databases -p '{"spec": {"template": {"spec": {"containers": [{"name": "zen-databases-container","image":"{{.DockerRegistryPrefix}}/zen-databases:3.5.0-723-dev-x86_64"}]}}}}'
