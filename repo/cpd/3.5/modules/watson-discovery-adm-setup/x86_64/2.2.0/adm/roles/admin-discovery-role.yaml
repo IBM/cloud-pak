@@ -1,0 +1,125 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: admin-discovery-role
+  labels:
+    app.kubernetes.io/name: admin
+    app.kubernetes.io/instance: admin
+    release: admin
+    app.kubernetes.io/component: admin-role
+rules:
+- apiGroups:
+  - ""
+  - batch
+  - extensions
+  resources:
+  - configmaps
+  - jobs
+  - jobs/status
+  - pods
+  - pods/exec
+  - pods/log
+  - secrets
+  - serviceaccounts
+  verbs:
+  - get
+  - watch
+  - create
+  - apply
+  - list
+  - update
+  - patch
+  - delete
+# Required for Wire chart
+- apiGroups:
+  - ""
+  resources:
+  - resourcequotas
+  - resourcequotas/status
+  verbs:
+  - get
+  - list
+  - watch
+# Required for Dlaas charts
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  - events
+  - secrets
+  - services
+  verbs:
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+  - update
+  - patch
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  - replicasets
+  - statefulsets
+  verbs:
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+  - patch
+  - update
+- apiGroups:
+  - extensions
+  resources:
+  - replicasets
+  - networkpolicies
+  - deployments
+  verbs:
+  - get
+  - list
+  - create
+  - delete
+  - deletecollection
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - networkpolicies
+  verbs:
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+# Operator
+- apiGroups:
+  - apiextensions.k8s.io
+  - discovery.watson.ibm.com
+  resources:
+  - customresourcedefinitions
+  - watsondiscoveries
+  - watsondiscoveries/status
+  - watsondiscoveryapis
+  - watsondiscoverycnms
+  - watsondiscoverycoreapis
+  - watsondiscoverydfs
+  - watsondiscoveryfoundations
+  - watsondiscoveryhdps
+  - watsondiscoveryingestions
+  - watsondiscoveryorchestrators
+  - watsondiscoveryqueries
+  - watsondiscoverysdus
+  - watsondiscoverystatelessapis
+  - watsondiscoverytoolings
+  - watsondiscoverywires
+  - watsondiscoverywksmls
+  verbs:
+  - get
+  - watch
+  - create
+  - apply
+  - list
+  - update
+  - patch
+  - delete

@@ -1,0 +1,25 @@
+wdRelease:
+  deploymentType: Development
+  enableContentIntelligence: false
+  elasticsearch:
+    clientNode:
+      persistence:
+        size: 1Gi
+    dataNode:
+      persistence:
+        size: 40Gi
+    masterNode:
+      persistence:
+        size: 2Gi
+  etcd:
+    storageSize: 10Gi
+  minio:
+    persistence:
+      size: 100Gi
+  postgres:
+    database:
+      storageRequest: 30Gi
+    useSingleMountPoint: true
+  rabbitmq:
+    persistentVolume:
+      size: 5Gi

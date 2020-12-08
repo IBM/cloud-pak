@@ -1,0 +1,46 @@
+type: assembly
+lifeCycle: live
+license: http://icp4d.ibm.com
+name: watson-discovery
+version: 2.2.0
+description: IBM Watson Discovery for IBM Cloud Pak for Data
+architecture: x86_64
+
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# installOverride: install-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+
+bricks:
+- name: lite
+  minVersion: 3.0.1
+  type: assembly
+- name: ibm-watson-gateway-operator
+  version: 1.0.3
+  type: assembly
+- name: ibm-minio-operator
+  version: 1.0.0
+  type: assembly
+- name: ibm-rabbitmq-operator
+  version: 1.0.0
+  type: assembly
+- name: ibm-etcd-operator
+  version: 1.0.0
+  type: assembly
+- name: edb-operator
+  version: 3.5.0
+  type: assembly
+- name: modeltrain-classic
+  version: 1.0.0
+  type: assembly
+- name: ibm-cloudpakopen-elasticsearch-operator
+  version: 1.1.185
+  type: assembly
+- name: watson-discovery-adm-setup
+  version: 2.2.0
+  type: module
+- name: watson-discovery-operator
+  version: 2.2.0
+  type: module
+- name: watson-discovery-release
+  version: 2.2.0
+  type: module

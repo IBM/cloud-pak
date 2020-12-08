@@ -1,0 +1,4738 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: watsondiscoveries.discovery.watson.ibm.com
+  # not valid for helm tiller version 2.9
+  # annotations:
+  #   "helm.sh/hook": crd-install
+spec:
+  group: discovery.watson.ibm.com
+  names:
+    kind: WatsonDiscovery
+    listKind: WatsonDiscoveryList
+    plural: watsondiscoveries
+    singular: watsondiscovery
+    shortNames:
+      - wd
+      - wds
+  scope: Namespaced
+  additionalPrinterColumns:
+    - description: Version of the resource
+      JSONPath: .spec.version
+      name: Version
+      type: string
+    - description: Condition ready
+      JSONPath: .status.conditions[?(@.type=="Ready")].status
+      name: Ready
+      type: string
+    - description: Condition ready reason
+      JSONPath: .status.conditions[?(@.type=="Ready")].reason
+      name: ReadyReason
+      type: string
+    - description: Condition updating
+      JSONPath: .status.conditions[?(@.type=="Updating")].status
+      name: Updating
+      type: string
+    - description: Condition updating reason
+      JSONPath: .status.conditions[?(@.type=="Updating")].reason
+      name: UpdatingReason
+      type: string
+    - description: Number of deployed components
+      JSONPath: .status.componentStatus.deployed
+      name: Deployed
+      type: string
+    - description: Number of verified components
+      JSONPath: .status.componentStatus.verified
+      name: Verified
+      type: string
+    - description: Quiesce status
+      JSONPath: .status.customResourceQuiesce
+      name: Quiesce
+      type: string
+    - description: Age of the resource
+      JSONPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: WatsonDiscovery is the Schema for the watsondiscoveries API
+      # adding type causes validation error in Kubernetes 1.11 (Openshift 3.11)
+      # removing type causes validation error in later Kubernetes.
+      # We need to switch add/remove when we package this to Helm chart depending on the platform version.
+      type: object
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: Spec defines the desired state of WatsonDiscovery
+          type: object
+          required:
+            - version
+            - shared
+          properties:
+
+            # Start: Watson Discovery deployment configs
+            version:
+              type: string
+              description: The version of Watson Discovery to be deployed.
+
+            # Start: Shared configs across all subsystems
+            #   based on global.yaml (https://github.ibm.com/watson-deploy-configs/discovery-icp/blob/d93037f7c67fa654c27d7ff740e2d184d2e22c02/case.d/stable/ibm-watson-discovery-case-bundle/charts/global.yaml)
+            shared:
+              type: object
+              description: Global configuration shared across sub-systems of Watson Discovery
+              required:
+                - dockerRegistryPrefix
+                - storageClassName
+              properties:
+                deploymentType:
+                  type: string
+                  # TODO: support enum. Enum generates Python enum class which makes auto conversion of deploy_config to Spec difficult
+                  # enum:
+                  #   - Development
+                  #   - Production
+                  description: DeploymentType controls replicas for Watson Discovery resources. Development consumes minimum resource usage. Production supports high availability.
+                dockerRegistryPrefix:
+                  type: string
+                  description: The prefix of docker registry where Watson Discovery containers are located
+                imagePullSecret:
+                  type: string
+                  description: The secret name storing docker registry pull secret.
+                metering:
+                  type: object
+                  description: Metering annotations.
+                  properties:
+                    productName:
+                      type: string
+                      description: The name of this a product.
+                    productId:
+                      type: string
+                      description: The ID of this a product.
+                    productVersion:
+                      type: string
+                      description: The version of a product.
+                    productMetric:
+                      type: string
+                      description: The type of product metrics.
+                    productChargedContainers:
+                      type: string
+                      description: The charged containers of product.
+                    productCloudpakRatio:
+                      type: string
+                      description: The ratio of cloudpak.
+                    cloudpakName:
+                      type: string
+                      description: The name of IBM Cloud Pak
+                    cloudpakId:
+                      type: string
+                      description: The ID of IBM Cloud Pak
+                    cloudpakInstanceId:
+                      type: string
+                      description: The instance ID of IBM Cloud Pak
+                storageClassName:
+                  type: string
+                  description: The storage class name for the persistent volumes used in Watson Discovery
+                serviceAccount:
+                  type: string
+                  description: The service account used in Watson Discovery pods
+                privilegedServiceAccount:
+                  type: string
+                  description: The privileged service account used in the pods performing administration tasks
+                admin:
+                  type: object
+                  properties:
+                    tls:
+                      type: string
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when quiesce all components otherwise false
+                elastic:
+                  type: object
+                  properties:
+                    configmap:
+                      type: string
+                    secret:
+                      type: string
+                initContainer:
+                  type: object
+                  properties:
+                    etcd:
+                      type: object
+                      properties:
+                        etcdTimeoutSeconds:
+                          type: integer
+                    postgres:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                    utils:
+                      type: object
+                      description: Init container configurations for common utility container
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                    watsonNlp:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                contentIntelligence:
+                  type: object
+                  description: The description for content intelligence # TODO: refine the description
+                  properties:
+                    enabled:
+                      type: boolean
+                metricsCollection:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                database:
+                  type: object
+                  properties:
+                    pg:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        initializeWithLiquibase:
+                          type: boolean
+                        initJob:
+                          type: object
+                          properties:
+                            backoffLimit:
+                              type: integer
+                            activeDeadlineSeconds:
+                              type: integer
+                modelTrain:
+                  type: object
+                  properties:
+                    serviceUrl:
+                      type: string
+                mtdata:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                statsd:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    exporterPrometheusPort:
+                      type: number
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+            # End: Global configs
+
+            # Start: etcd configs
+            etcd:
+              type: object
+              description: Configs for etcd
+              properties:
+                antiAffinity:
+                  type: string
+                  description: policy name of anti affinity. select either soft or hard. If not specified, no anti affinity will be set.
+                etcdctlDialTimeout:
+                  type: string
+                  description: Dial timeout duration for etcdctl command
+                etcdElectionTimeout:
+                  type: string
+                  description: ETCD_ELECTION_TIMEOUT environment value
+                etcdHeartbeatInterval:
+                  type: string
+                  description: ETCD_HEARTBEAT_INTERVAL environment value
+                size:
+                  type: integer
+                  description: Number of etcd statefulset replicas
+                storageSize:
+                  type: string
+                  description: Size of persistent volume claim for etcd
+                etcdResources:
+                  type: object
+                  properties:
+                    requests:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                        memory:
+                          type: string
+                    limits:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                        memory:
+                          type: string
+                image:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    tag:
+                      type: string
+                livenessProbe:
+                  type: object
+                  properties:
+                    initialDelaySeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                    failureThreshold:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    successThreshold:
+                      type: integer
+                readinessProbe:
+                  type: object
+                  properties:
+                    initialDelaySeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                    failureThreshold:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    successThreshold:
+                      type: integer
+                dockerRegistryPrefix:
+                  type: string
+                imagePullSecret:
+                  type: string
+                database:
+                  type: object
+                  description: Configs for database instance
+            # End: etcd configs
+
+            # Start: EDB Postgres configs
+            postgres:
+              type: object
+              description: Conigs for EDB Postgres instance
+              properties:
+                dockerRegistryPrefix:
+                  type: string
+                serviceAccount:
+                  type: string
+                  description: Service account used by postgresql instances
+                database:
+                  type: object
+                  description: Configs for database container
+                  properties:
+                    image:
+                      description: 'Database image:tag'
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      description: Database container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    storageRequest:
+                      description: 'Limit of Storage Request which will be available for
+                        the database container Default value: 1Gi'
+                      type: string
+                    storageClass:
+                      description: Storage class used for provisioning PVs.
+                      type: string
+                    archiveStorageClass:
+                      description: 'Storage Class for the Wal Archive directory to use for
+                        request it should be available for the database container'
+                      type: string
+                    walStorageClass:
+                      description: 'Storage Class for the WAL directory to use for request
+                        it should be available for the database container'
+                      type: string
+                enablePodAntiAffinity:
+                  type: boolean
+                  description: 'If true, add requiredDuringSchedulingIgnoredDuringExecution type of
+                    pod anti affinity to postgres pods, including proxy and sentinel.
+                    This should be enabled to prevent deployed pods are co-located in the same node.'
+                highAvailability:
+                  type: object
+                  description: 'Tell the operator to deploy this cluster using high availability.'
+                  properties:
+                    enable:
+                      type: boolean
+                      description: 'Enables HA configuration for this deployment in the operator Default value: false'
+                    image:
+                      description: HA Manager image:tag
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                useSingleMountPoint:
+                  type: boolean
+                  description: 'Flag to determine if we will use the recommend separation
+                    of mount points PGDATA,PGDATA_WAL, PGDATA_WALARCHIVE Default: false'
+            # End: EDB Postgres configs
+
+            # Start: RabbitMQ configs
+            rabbitmq:
+              type: object
+              description: 'Configs for RabbitMQ'
+              properties:
+                imagePullSecret:
+                  type: string
+                images:
+                  type: object
+                  description: "Container images for RabbitMQ chart."
+                  properties:
+                    config:
+                      type: string
+                      description: "Name of Docker image to be pulled for rabbitmq copy config"
+                    rabbitmq:
+                      type: string
+                      description: "Name of Docker image to be pulled for rabbitmq"
+                initContainer:
+                  type: object
+                  description: "CPU and Memory Resources for init container"
+                  properties:
+                    resources:
+                        type: object
+                        properties:
+                          requests:
+                            type: object
+                            properties:
+                              cpu:
+                                type: string
+                                description: "The minimum required CPU core. Specify integers, fractions (e.g. 0.5), or millicore values(e.g. 100m, where 100m is equivalent to .1 core)."
+                              memory:
+                                type: string
+                                description: "The minimum memory in bytes. Specify integers with one of these suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                          limits:
+                            type: object
+                            properties:
+                              cpu:
+                                type: string
+                                description: "The upper limit of CPU core. Specify integers, fractions (e.g. 0.5), or millicores values(e.g. 100m, where 100m is equivalent to .1 core)."
+                              memory:
+                                type: string
+                                description: "The memory upper limit in bytes. Specify integers with suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                persistentVolume:
+                  type: object
+                  description: "Persistent Volumes helps retain the data when pod restarts"
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: "Select this checkbox to store rabbitmq data on a persistent volume so that the data is preserved if the pod is stopped."
+                    size:
+                      type: string
+                      description: "Storage Size for persistent volume to be created"
+
+                replicas:
+                  description: "Number of rabbitmq statefulset replicas to deploy. Defaults to 3"
+                  type: number
+                resources:
+                  type: object
+                  description: "CPU and Memory Resources for Rabbitmq container"
+                  properties:
+                    requests:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                          description: "The minimum required CPU core. Specify integers, fractions (e.g. 0.5), or millicore values(e.g. 100m, where 100m is equivalent to .1 core)."
+                        memory:
+                          type: string
+                          description: "The minimum memory in bytes. Specify integers with one of these suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                    limits:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                          description: "The upper limit of CPU core. Specify integers, fractions (e.g. 0.5), or millicores values(e.g. 100m, where 100m is equivalent to .1 core)."
+                        memory:
+                          type: string
+                          description: "The memory upper limit in bytes. Specify integers with suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                tls:
+                  type: object
+                  description: "TLS Configuration parameters"
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: "To enable TLS for client and management connections set this to true, when true, you MUST also specify tls cert,key and CA bundle information"
+            # End: RabbitMQ configs
+
+            # Start: MinIO configs
+            minio:
+              type: object
+              description: Configs for MinIO
+              properties:
+                dockerRegistryPrefix:
+                  type: string
+                  description: If this is specified, use the specified one rather than shared.dockerRegistryPrefix
+                imagePullSecret:
+                  type: string
+                  description: Image pull secret name to pull minio container images. If not specified, use shared.imagePullSecret
+                buckets:
+                  type: object
+                  # x-kubernetes-preserve-unknown-fields: true
+                  description: "MinIO Bucket list to be created"
+                creds:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      description: "Name of Docker image to be pulled for MinIO creds gen job"
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                minio:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      description: "Name of Docker image to be pulled for MinIO"
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                minioClient:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      description: "Name of Docker image to be pulled for MinIO clinet"
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                persistence:
+                  type: object
+                  description: "Config for MinIO persistence"
+                  properties:
+                    enabled:
+                      type: boolean
+                    size:
+                      type: string
+                    useDynamicProvisioning:
+                      type: boolean
+                resources:
+                  type: object
+                  description: "CPU and Memory Resources for MinIO container"
+                  properties:
+                    requests:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                          description: "The minimum required CPU core. Specify integers, fractions (e.g. 0.5), or millicore values(e.g. 100m, where 100m is equivalent to .1 core)."
+                        memory:
+                          type: string
+                          description: "The minimum memory in bytes. Specify integers with one of these suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                    limits:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                          description: "The upper limit of CPU core. Specify integers, fractions (e.g. 0.5), or millicores values(e.g. 100m, where 100m is equivalent to .1 core)."
+                        memory:
+                          type: string
+                          description: "The memory upper limit in bytes. Specify integers with suffixes: E, P, T, G, M, K, or power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki."
+                tls:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: "Enable TLS for MinIO or not"
+                replicas:
+                  description: "Number of MinIO replicas to deploy. Defaults to 4"
+                  type: number
+                replicasForDev:
+                  description: "Number of MinIO replicas to deploy for dev. Defaults to 4"
+                  type: number
+                replicasForProd:
+                  description: "Number of MinIO replicas to deploy for prod. Defaults to 4"
+                  type: number
+                schema:
+                  type: string
+                  description: "schema of the MinIO endpoint"
+                port:
+                  type: integer
+                  description: "MinIO port"
+            # End: MinIO configs
+
+            # Start: Elasticsearch configs
+            elasticsearch:
+              type: object
+              properties:
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of tooling component otherwise false
+                antiAffinity:
+                  type: string
+                  description: Specify soft or hard. If hard, enforce anti affinity, that means pods are not scheduled if any nodes don't meet the condition.
+                masterNode:
+                  type: object
+                  properties:
+                    replicas:
+                      type: integer
+                    maxHeap:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    persistence:
+                      type: object
+                      properties:
+                        size:
+                          type: string
+                    javaOptions:
+                      type: string
+                clientNode:
+                  type: object
+                  properties:
+                    replicas:
+                      type: integer
+                    maxHeap:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    persistence:
+                      type: object
+                      properties:
+                        size:
+                          type: string
+                    javaOptions:
+                      type: string
+                dataNode:
+                  type: object
+                  properties:
+                    replicas:
+                      type: integer
+                    maxHeap:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    persistence:
+                      type: object
+                      properties:
+                        size:
+                          type: string
+                    javaOptions:
+                      type: string
+                image:
+                  type: object
+                  description: Elasticsearch image
+                  properties:
+                    name:
+                      type: string
+                      description: Image name for elasticsearch container
+                    tag:
+                      type: string
+                      description: Imange tag for elasticsearch container
+                imagePullPolicy:
+                  type: string
+                persistence:
+                  type: object
+                  properties:
+                    storageClassName:
+                      type: string
+                    selector:
+                      type: object
+                      properties:
+                        label:
+                          type: string
+                        value:
+                          type: string
+                httpTimeout:
+                  type: object
+                  properties:
+                    connect:
+                      type: string
+                      description: Elasticsearch backend HTTP connection timeout. Defaults to 1800s
+                    client:
+                      type: string
+                      description: Elasticsearch frontend HTTP client timeout. Defaults to 1800s
+                    server:
+                      type: string
+                      description: Elasticsearch backend HTTP server timeout. Defaults to 1800s
+                proxyTimeout:
+                  type: object
+                  properties:
+                    connect:
+                      type: string
+                      description: Connection timeout of ElasticSearch proxy. Defaults to 1800s
+                    client:
+                      type: string
+                      description: Client timeout of ElasticSearch proxy. Defaults to 1800s
+                    server:
+                      type: string
+                      description: Server timeout of ElasticSearch proxy. Defaults to 1800s
+            # End: Elasticsearch configs
+
+            # Start: Model Train configs
+            modelTrain:
+              type: object
+              properties:
+                database:
+                  type: string
+                trainer:
+                  description: "Configuration for the Trainer microservice"
+                  type: object
+                  properties:
+                    grpcPort:
+                      description: "Trainer microservice port number. Defaults to 8443"
+                      type: integer
+                    image:
+                      description: "Trainer microservice image. This builds the full image name from config.registry and the below name and tag as {registry}/{name}:{tag}"
+                      type: object
+                      properties:
+                        name:
+                          description: "Trainer microservice image name, e.g. trainer-v2-service"
+                          type: string
+                        tag:
+                          description: "Trainer microservice image tag, e.g. rhubi-master-550"
+                          type: string
+                    replicas:
+                      description: "Number of Trainer replicas to run"
+                      type: integer
+                    resources:
+                      description: "CPU and memory resources for replicas"
+                      type: object
+                      properties:
+                        limits:
+                          description: "CPU and memory limits"
+                          type: object
+                          properties:
+                            cpu:
+                              description: "CPU limit"
+                              type: string
+                            memory:
+                              description: "memory limit"
+                              type: string
+                        requests:
+                          description: "CPU and memory requests"
+                          type: object
+                          properties:
+                            cpu:
+                              description: "CPU request"
+                              type: string
+                            memory:
+                              description: "memory request"
+                              type: string
+                lcm:
+                  description: "Configuration for the LCM microservice"
+                  type: object
+                  properties:
+                    grpcPort:
+                      description: "LCM microservice port number. Defaults to 8443"
+                      type: integer
+                    image:
+                      description: "LCM microservice image. This builds the full image name from config.registry and the below name and tag as {registry}/{name}:{tag}"
+                      type: object
+                      properties:
+                        name:
+                          description: "LCM microservice image name, e.g. lifecycle-manager-service"
+                          type: string
+                        tag:
+                          description: "LCM microservice image tag, e.g. rhubi-master-843"
+                          type: string
+                    replicas:
+                      description: "Number of LCM replicas to run"
+                      type: integer
+                    resources:
+                      description: "CPU and memory resources for replicas"
+                      type: object
+                      properties:
+                        limits:
+                          description: "CPU and memory limits"
+                          type: object
+                          properties:
+                            cpu:
+                              description: "CPU limit"
+                              type: string
+                            memory:
+                              description: "memory limit"
+                              type: string
+                        requests:
+                          description: "CPU and memory requests"
+                          type: object
+                          properties:
+                            cpu:
+                              description: "CPU request"
+                              type: string
+                            memory:
+                              description: "memory request"
+                              type: string
+                ratelimiter:
+                  description: "Configuration for the Ratelimiter microservice"
+                  type: object
+                  properties:
+                    grpcPort:
+                      description: "Ratelimiter microservice port number. Defaults to 8443"
+                      type: integer
+                    image:
+                      description: "Ratelimiter microservice image. This builds the full image name from config.registry and the below name and tag as {registry}/{name}:{tag}"
+                      type: object
+                      properties:
+                        name:
+                          description: "Ratelimiter microservice image name, e.g. ratelimiter"
+                          type: string
+                        tag:
+                          description: "Ratelimiter microservice image tag, e.g. rhubi-master-173"
+                          type: string
+                    enabled:
+                      description: "Enable ratelimiter to limit training jobs based on the resourcequota of the cluster, or the following max_learners option"
+                      type: boolean
+                    maxLearners:
+                      description: "If config.ratelimiter.enabled is true and config.ratelimiter.max_learners > 0, limit the number of training jobs running at a time to max_learners"
+                      type: integer
+                    resources:
+                      description: "CPU and memory resources for replicas"
+                      type: object
+                      properties:
+                        limits:
+                          description: "CPU and memory limits"
+                          type: object
+                          properties:
+                            cpu:
+                              description: "CPU limit"
+                              type: string
+                            memory:
+                              description: "memory limit"
+                              type: string
+                        requests:
+                          description: "CPU and memory requests"
+                          type: object
+                          properties:
+                            cpu:
+                              description: "CPU request"
+                              type: string
+                            memory:
+                              description: "memory request"
+                              type: string
+                createDbJob:
+                  type: object
+                  properties:
+                    timeoutSeconds:
+                      type: integer
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+            # End: Model Train configs
+
+            # Start: Watson Gateway configs
+            watsonGateway:
+              type: object
+              properties:
+                additionalToolings:
+                  type: object
+                  properties:
+                    cm:
+                      type: object
+                      properties:
+                        nginx:
+                          type: object
+                          properties:
+                            proxyReadTimeout:
+                              type: string
+                backendService:
+                  type: object
+                  properties:
+                    nginx:
+                      type: object
+                      properties:
+                        proxyReadTimeout:
+                          type: string
+                tooling:
+                  type: object
+                  properties:
+                    nginx:
+                      type: object
+                      properties:
+                        proxyReadTimeout:
+                          type: string
+                version:
+                  type: string
+                size:
+                  type: string
+            # End: Watson Gateway configs
+
+            # Start: Tooling configs
+            tooling:
+              type: object
+              properties:
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of tooling component otherwise false
+                tooling:
+                  type: object
+                  description: Tooling component
+                  properties:
+                    image:
+                      type: object
+                      description: Image for tooling
+                      properties:
+                        name:
+                          type: string
+                          description: Image name for tooling
+                        tag:
+                          type: string
+                          description: Imange tag for tooling
+                    replicas:
+                      type: integer
+                      description: Number of replicas for tooling deployment
+                    resources:
+                      type: object
+                      description: Tooling container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                minerapp:
+                  type: object
+                  description: Minerapp component
+                  properties:
+                    adminapp:
+                      type: object
+                      properties:
+                        wlpMaxHeap:
+                          type: string
+                        wlpTimeout:
+                          type: string
+                        image:
+                          type: object
+                          description: Image for miner adminapp
+                          properties:
+                            name:
+                              type: string
+                              description: Image name for miner adminapp
+                            tag:
+                              type: string
+                              description: Imange tag for miner adminapp
+                        resources:
+                          type: object
+                          description: Miner adminapp container resource requirements
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                    antiAffinity:
+                      type: string
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+                    image:
+                      type: object
+                      description: Image for minerapp
+                      properties:
+                        name:
+                          type: string
+                          description: Image name for minerapp
+                        tag:
+                          type: string
+                          description: Imange tag for minerapp
+                    replicas:
+                      type: integer
+                      description: Number of replicas for minerapp deployment
+                    resources:
+                      type: object
+                      description: Minerapp container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+            # End: Tooling configs
+
+            # Start: Sdu configs
+            sdu:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of sdu component otherwise false
+                image:
+                  type: object
+                  description: Image for sdu
+                  properties:
+                    name:
+                      type: string
+                      description: Image name for sdu
+                    tag:
+                      type: string
+                      description: Image tag for sdu
+                fastpath:
+                  description: Fastpath for sdu
+                  properties:
+                    enabled:
+                      description: Is fastpath Enabled
+                      type: boolean
+                  type: object
+                sparkS3:
+                  type: boolean
+                livenessProbe:
+                  properties:
+                    failureThreshold:
+                      type: integer
+                    initialDelaySeconds:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                  type: object
+                readinessProbe:
+                  properties:
+                    failureThreshold:
+                      type: integer
+                    initialDelaySeconds:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                  type: object
+                ssl:
+                  properties:
+                    enabled:
+                      description: Is ssl enabled
+                      type: boolean
+                  type: object
+                scratchDir:
+                  properties:
+                    enabled:
+                      description: Is scratchDir enabled
+                      type: boolean
+                    path:
+                      type: string
+                    volumeName:
+                      type: string
+                  type: object
+                replicas:
+                  type: integer
+                  description: Number of replicas for sdu deployment
+                dbInit:
+                  properties:
+                    image:
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                      type: object
+                    resources:
+                      type: object
+                      description: Init container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                  type: object
+                resources:
+                  type: object
+                  description: Sdu container resource requirements
+                  properties:
+                    requests:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                        memory:
+                          type: string
+                    limits:
+                      type: object
+                      properties:
+                        cpu:
+                          type: string
+                        memory:
+                          type: string
+
+            # End: SDU configs
+
+            # Start: Query configs
+            query:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of query component otherwise false
+                rapi:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    image:
+                      type: object
+                      description: Image for tooling
+                      properties:
+                        name:
+                          description: Image name for tooling
+                          type: string
+                        tag:
+                          description: Imange tag for tooling
+                          type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      type: integer
+                      description: Number of replicas for rapi deployment
+                    request:
+                      type: object
+                      properties:
+                        trace:
+                          type: boolean
+                    resources:
+                      type: object
+                      description: Rapi container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    socketTimeoutMillis:
+                      type: integer
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+            # End: Query configs
+
+            # Start: DFS configs
+            dfs:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of dfs component otherwise false
+                induction:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      description: Image for DFS Induction
+                      properties:
+                        name:
+                          description: Image name for DFS Induction
+                          type: string
+                        tag:
+                          description: Image tag for DFS Induction
+                          type: string
+                    logLevel:
+                      description: Logging level for DFS Induction
+                      type: string
+                    replicas:
+                      type: integer
+                      description: Number of replicas for dfs_induction deployment
+                    resources:
+                      type: object
+                      description: DFS Induction container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                secretGen:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                common:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    minioTimeoutMil:
+                      type: integer
+                    realmInfo:
+                      type: string
+                    ingestion:
+                      type: object
+                      properties:
+                        batchSize:
+                          type: integer
+                        intervalMil:
+                          type: integer
+                    dataPrep:
+                      type: object
+                      properties:
+                        batchSize:
+                          type: integer
+                        intervalMil:
+                          type: integer
+                    training:
+                      type: object
+                      properties:
+                        minCountIncremental:
+                          type: integer
+                        minCountRetrain:
+                          type: integer
+                        maxModelSizeMib:
+                          type: integer
+                        maxTrainPods:
+                          type: integer
+                        maxTrainPodsForRetrain:
+                          type: integer
+                        minVocabSize:
+                          type: integer
+                    serve:
+                      type: object
+                      properties:
+                        minFetch:
+                          type: integer
+                    cosRegion:
+                      type: string
+                    gdpr:
+                      type: object
+                      properties:
+                        tenantIdOverride:
+                          type: boolean
+                    learner:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            cpu:
+                              type: number
+                              format: float
+                            memoryInMb:
+                              type: number
+                              format: float
+                modelmesh:
+                  type: object
+                  properties:
+                    replicas:
+                      type: integer
+                    dockerRegistryPrefix:
+                      type: string
+                    sideCar:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                memory:
+                                  type: string
+                                cpu:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                memory:
+                                  type: string
+                                cpu:
+                                  type: string
+                    server:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                memory:
+                                  type: string
+                                cpu:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                memory:
+                                  type: string
+                                cpu:
+                                  type: string
+                        serveCountMultiplier:
+                          type: integer
+                        serveKeywordFilterMinCount:
+                          type: integer
+                        loadTimeoutInMil:
+                          type: integer
+                        memoryLimitInMb:
+                          type: integer
+            # End: DFS configs
+
+            # Start: Foundation configs
+            foundation:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of foundation component otherwise false
+                indexer:
+                  properties:
+                    image:
+                      description: Image for WDIndexer
+                      properties:
+                        name:
+                          description: Image name for WDIndexer
+                          type: string
+                        tag:
+                          description: Image tag for WDIndexer
+                          type: string
+                      type: object
+                    javaOptions:
+                      type: string
+                    pagerDuty:
+                      properties:
+                        enabled:
+                          description: Enabled PagerDuty integration, intended for Public Cloud only
+                          type: boolean
+                        url:
+                          description: PagerDuty REST API endpoint
+                          type: string
+                        ingesiton:
+                          properties:
+                            pdHighKey:
+                              description: PagerDuty Service key for High priority alerts
+                              type: string
+                          type: object
+                      type: object
+                    replicas:
+                      description: Number of replicas for WDIndexer deployment
+                      type: integer
+                    resources:
+                      description: WDIndexer container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                  type: object
+                rcm:
+                  properties:
+                    image:
+                      description: Image for RCM
+                      properties:
+                        name:
+                          description: Image name for RCM
+                          type: string
+                        tag:
+                          description: Image tag for RCM
+                          type: string
+                      type: object
+                    javaOptions:
+                      type: string
+                    grpcPort:
+                      type: number
+                    prometheusPort:
+                      type: number
+                    rateLimiting:
+                      type: object
+                      properties:
+                        configsPath:
+                          type: string
+                        enabled:
+                          type: boolean
+                        storageType:
+                          type: string
+                        ssl:
+                          type: object
+                          properties:
+                            enabled:
+                              type: string
+                    replicas:
+                      description: Number of replicas forRCM deployment
+                      type: integer
+                    resources:
+                      description: RCM container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: number
+                        periodSeconds:
+                          type: number
+                        timeoutSeconds:
+                          type: number
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: number
+                        periodSeconds:
+                          type: number
+                        timeoutSeconds:
+                          type: number
+                    ssl:
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                  type: object
+                poBox:
+                  properties:
+                    image:
+                      description: Image for PO Box
+                      properties:
+                        name:
+                          description: Image name for PO Box
+                          type: string
+                        tag:
+                          description: Image tag for PO Box
+                          type: string
+                      type: object
+                    javaOptions:
+                      type: string
+                    pagerDuty:
+                      properties:
+                        enabled:
+                          description: Enabled PagerDuty integration, intended for Public Cloud only
+                          type: boolean
+                        url:
+                          description: PagerDuty REST API endpoint
+                          type: string
+                        ingesiton:
+                          properties:
+                            pdHighKey:
+                              description: PagerDuty Service key for High priority alerts
+                              type: string
+                          type: object
+                      type: object
+                    replicas:
+                      description: Number of replicas for PO Box deployment
+                      type: integer
+                    resources:
+                      description: PO Box container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                  type: object
+            # End: Foundation configs
+
+            # Start: Wire configs
+
+            wire:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of wire component otherwise false
+                domainNameOverrideEnabled:
+                  type: boolean
+                serviceKeyToken:
+                  type: string
+                atLogger:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                configVolume:
+                  type: string
+                haywire:
+                  type: object
+                  properties:
+                    replicas:
+                      type: integer
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    profile:
+                      type: string
+                    v2MultiTenancyEnabled:
+                      type: boolean
+                    icpDeployEnabled:
+                      type: boolean
+                    javaOpts:
+                      type: string
+                    palmPagerDutyMetadata:
+                      type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                dataPrepAgentForProject:
+                  type: object
+                  properties:
+                    elasticDocType:
+                      type: string
+                    dataPrepTrainingJobHeartbeatMillis:
+                      type: integer
+                    dataPrepFeatureVectorWorkers:
+                      type: integer
+                    dataPrepPipeline:
+                      type: string
+                    dataPrepMessageListeners:
+                      type: string
+                    dataPrepBlackList:
+                      type: string
+                    managementApiPort:
+                      type: integer
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    domainNameOverrideEnabled:
+                      type: boolean
+                    rcmGrpcPort:
+                      type: number
+                kubernetesHost:
+                  type: string
+                kubernetesIp:
+                  type: string
+                minio:
+                  type: object
+                  properties:
+                    bucketSuffix:
+                      type: string
+                pagerdutyKeyHigh:
+                  type: string
+                pagerdutyKeyLow:
+                  type: string
+                pagerdutyUrl:
+                  type: string
+                privateKeyPassphraseEnabled:
+                  type: boolean
+                segmentKey:
+                  type: string
+                serviceToken:
+                  type: string
+                rankerCleanerAgent:
+                  type: object
+                  properties:
+                    rankerCleanerPipeline:
+                      type: string
+                    rankerCleanerMessageListeners:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                rankerMaster:
+                  type: object
+                  properties:
+                    dockerTrustAllCertificates:
+                      type: boolean
+                    etcdConfigJob:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        modelMeshServicePort:
+                          type: number
+                        trainCpuRequestMilli:
+                          type: string
+                        trainCpuLimitMilli:
+                          type: string
+                        etcdConfigCaCertPath:
+                          type: string
+                        modleMeshServicePort:
+                          type: number
+                        wirePublicCertName:
+                          type: string
+                        wirePublicCertCnName:
+                          type: string
+                        trainingMemoryMb:
+                          type: string
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    kvStore:
+                      type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    rankerTraining:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        dockerNamespace:
+                          type: string
+                        dockerRegistry:
+                          type: string
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                rankerMonitorAgent:
+                  type: object
+                  properties:
+                    cosRegion:
+                      type: string
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                rankerRest:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    port:
+                      type: number
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    env:
+                      type: string
+                    logLevel:
+                      type: string
+                    llDiscovery:
+                      type: string
+                    kvStore:
+                      type: string
+                    masterServiceName:
+                      type: string
+                    javaOpts:
+                      type: string
+                    playbookUrl:
+                      type: string
+                    isEnabledCos:
+                      type: boolean
+                    restEtcdTimeout:
+                      type: integer
+                rankerCloudSecretName:
+                  type: string
+                readingComprehension:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                            nvidiaGpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                            nvidiaGpu:
+                              type: string
+                    nodeSelector:
+                      type: object
+                      properties:
+                        gpuType:
+                          type: string
+                    priorityClassName:
+                      type: string
+                    port:
+                      type: number
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    env:
+                      type: string
+                    logLevel:
+                      type: string
+                    masterServiceName:
+                      type: string
+                    modelClass:
+                      type: string
+                    modelProviderClass:
+                      type: string
+                    modelFilename:
+                      type: string
+                    tokenizerFilename:
+                      type: string
+                    tokenizerClass:
+                      type: string
+                    maxSeqLength:
+                      type: integer
+                    maxQueryLength:
+                      type: integer
+                    docStride:
+                      type: integer
+                    cosLocalCache:
+                      type: string
+                    normalizationBeta0:
+                      type: number
+                    normalizationBeta1:
+                      type: number
+                secretGen:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                serveRanker:
+                  type: object
+                  properties:
+                    app:
+                      type: string
+                    serveRankerJavaOpts:
+                      type: string
+                    serveRankerYoungMinSpace:
+                      type: number
+                    maxSupportedServerRequestSizeInBytes:
+                      type: number
+                    mmServer:
+                      type: object
+                      properties:
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                memory:
+                                  type: string
+                                cpu:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                memory:
+                                  type: string
+                                cpu:
+                                  type: string
+                    serveRankerReplicas:
+                      type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                test:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    timeout:
+                      type: number
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                tipToken:
+                  type: string
+                trainingAgent:
+                  type: object
+                  properties:
+                    replicas:
+                      type: integer
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    deployTrainingDataDeletionAgent:
+                      type: boolean
+                trainingCrud:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    trainingCrudReplicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    trainingCrudJavaOpts:
+                      type: string
+                    crudMaxMonitorErrors:
+                      type: integer
+                    feedbackMinimumMillisecondsBetweeenTrainingJobs:
+                      type: string
+                    trainingcrudCheckoutMinimumMillisecondsBetweenSingleCollectionTrainingJobs:
+                      type: number
+                    crudTrainingJobOrphanedMillis:
+                      type: number
+                    elasticEnabled:
+                      type: boolean
+                    palmPlaybookUrl:
+                      type: string
+                    port:
+                      type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    database:
+                      type: object
+                      properties:
+                        maxActiveConn:
+                          type: integer
+                        minIdleConn:
+                            type: integer
+                trainingDataDeletionAgent:
+                  type: object
+                  properties:
+                    trainingDataDeletionPipeline:
+                      type: string
+                    trainingDataDeletionMessageListeners:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                trainingRest:
+                  type: object
+                  properties:
+                    crnCname:
+                      type: string
+                    crnCtype:
+                      type: string
+                    crnLocation:
+                      type: string
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    trainingRestReplicas:
+                      type: integer
+                    javaOpts:
+                      type: string
+                    pagerduty:
+                      type: object
+                      properties:
+                        playbookUrl:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                postOffice:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    pagerduty:
+                      type: object
+                      properties:
+                        playbookUrl:
+                          type: string
+                        pagerdutyUrl:
+                          type: string
+                jksJob:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                postgresConfigJob:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+
+
+            # End: Wire Configs
+
+            # Start: ModelMesh configs
+            mm:
+              type: object
+              properties:
+                replicas:
+                  type: integer
+                modelMeshDockerRegistryPrefix:
+                  type: string
+                mmSideCar:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                mmServer:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            memory:
+                              type: string
+                            cpu:
+                              type: string
+                    env:
+                      type: object
+                      properties:
+                        minCount:
+                          type: string
+                        multiplier:
+                          type: string
+                        loadTimeoutInMil:
+                          type: string
+                        memoryLimitInMb:
+                          type: string
+            # End: ModelMesh configs
+
+            # Start: CoreAPI configs
+            coreapi:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                database:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                ingestionApi:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    ingestion:
+                      type: object
+                      properties:
+                        resources:
+                          type: object
+                          properties:
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    metrics:
+                      type: object
+                      properties:
+                        prometheusPort:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    rest:
+                      type: object
+                      properties:
+                        trace:
+                          type: boolean
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+                management:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    metrics:
+                      type: object
+                      properties:
+                        prometheusPort:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      type: integer
+                    resources:
+                      type: object
+                      properties:
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    sentenceClassification:
+                      type: object
+                      properties:
+                        imageVersion:
+                          type: string
+                    tls:
+                      type: object
+                      properties:
+                        nginx:
+                          type: object
+                          properties:
+                            enabled:
+                              type: boolean
+                        wlp:
+                          type: object
+                          properties:
+                            enabled:
+                              type: boolean
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of coreapi component otherwise false
+            # End: CoreAPI configs
+
+            # Start: Ingestion configs
+            ingestion:
+              type: object
+              properties:
+                ckJob:
+                  type: object
+                  properties:
+                    image:
+                      description: CK generation job container image
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      description: CK generation job container resource requirements
+                      type: object
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                converter:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    converterPipelineThreads:
+                      type: integer
+                    csvAutodetectMaxRead:
+                      type: integer
+                    datapipelineProcessorThread:
+                      type: integer
+                    docValueSizeLimit:
+                      type: integer
+                    docValueSizeLimitHtml:
+                      type: integer
+                    forceMaxNumSegment:
+                      type: integer
+                    maxHeapMemory:
+                      type: string
+                    numberOfConverterThreads:
+                      type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    pipelineBooleanProps:
+                      type: string
+                    pipelineNumThreads:
+                      type: string
+                    publisherBulkSize:
+                      type: integer
+                    publisherQueueSize:
+                      type: integer
+                    publisherRetryCount:
+                      type: integer
+                    publisherRetryIntervalMinutes:
+                      type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      description: Number of replicas for converter deployment
+                      type: integer
+                    resources:
+                      description: Converter container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                    sduConverterTimeoutMinutes:
+                      type: integer
+                crawler:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    mount:
+                      description: Volume mount for Local File System crawler
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                        persistentVolumeClaimName:
+                          type: string
+                    numberOfCrawlerInstances:
+                      type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      description: Number of replicas for crawler deployment
+                      type: integer
+                    resources:
+                      description: Crawler container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                create:
+                  type: boolean
+                image:
+                  description: Ingestion container image
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    tag:
+                      type: string
+                inlet:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    converterCriteriaNoProgress:
+                      type: integer
+                    converterDocumentStoreShards:
+                      type: integer
+                    converterPipelineDocuments:
+                      type: integer
+                    maxHeapMemory:
+                      type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      description: Number of replicas for inlet deployment
+                      type: integer
+                    resources:
+                      description: Inlet container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                outlet:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    maxHeapMemory:
+                      type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      description: Number of replicas for outlet deployment
+                      type: integer
+                    resources:
+                      description: Outlet container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of ingestion component otherwise false
+                shared:
+                  type: object
+                  properties:
+                    documentAclCaseInsensitive:
+                      type: boolean
+                    documentStoreRetryInterval:
+                      type: integer
+                    documentStoreRetryMax:
+                      type: integer
+                sourceDocStore:
+                  type: object
+                  properties:
+                    useObjectStorage:
+                      type: boolean
+                webpagecleaner:
+                  type: object
+                  properties:
+                    image:
+                      description: Web page cleaner container image
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    resources:
+                      description: Web page cleaner container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+            # End: Ingestion configs
+
+            # Start: Hdp configs
+            hdp:
+              type: object
+              properties:
+                cleaner:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                create:
+                  type: boolean
+                maxMemoryMB:
+                  type: integer
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of hdp component otherwise false
+                rm:
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      type: integer
+                    resources:
+                      description: Hdp resource requirements
+                      type: object
+                      properties:
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                shared:
+                  type: object
+                  description: shared configuration between dhp components
+                  properties:
+                    image:
+                      description: Docker images for hdp container
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    metricsCollection:
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                    workdirVolume:
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                        mountpath:
+                          type: string
+                        subpaths:
+                          type: object
+                          properties:
+                            yarn:
+                              type: string
+                            logs:
+                              type: string
+                            config:
+                              type: string
+                            temp:
+                              type: string
+                    persistence:
+                      type: object
+                      properties:
+                        useDynamicProvisioning:
+                          type: boolean
+                        storageClassName:
+                          type: string
+                        size:
+                          type: string
+                        selector:
+                          type: object
+                          properties:
+                            label:
+                              type: string
+                            value:
+                              type: string
+                    statsd:
+                      type: object
+                      properties:
+                        port:
+                          type: integer
+                        promPort:
+                          type: integer
+                        config:
+                          type: object
+                          properties:
+                            volume:
+                              type: string
+                            mappingKey:
+                              type: string
+                            metricsPropertiesKey:
+                              type: string
+                            hdpPeriod:
+                              type: integer
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        livenessProbe:
+                          type: object
+                          properties:
+                            failureThreshold:
+                              type: integer
+                            initialDelaySeconds:
+                              type: integer
+                            periodSeconds:
+                              type: integer
+                            timeoutSeconds:
+                              type: integer
+                        readinessProbe:
+                          type: object
+                          properties:
+                            failureThreshold:
+                              type: integer
+                            initialDelaySeconds:
+                              type: integer
+                            periodSeconds:
+                              type: integer
+                            timeoutSeconds:
+                              type: integer
+                        resources:
+                          type: object
+                          properties:
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                    logger:
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        livenessProbe:
+                          type: object
+                          properties:
+                            failureThreshold:
+                              type: integer
+                            initialDelaySeconds:
+                              type: integer
+                            periodSeconds:
+                              type: integer
+                            timeoutSeconds:
+                              type: integer
+                        readinessProbe:
+                          type: object
+                          properties:
+                            failureThreshold:
+                              type: integer
+                            initialDelaySeconds:
+                              type: integer
+                            periodSeconds:
+                              type: integer
+                            timeoutSeconds:
+                              type: integer
+                        resources:
+                          type: object
+                          properties:
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                        aggregation:
+                          type: object
+                          properties:
+                            retainSeconds:
+                              type: integer
+                            retainCheckIntervalSeconds:
+                              type: integer
+                worker:
+                  # use the same image with rm
+                  type: object
+                  properties:
+                    antiAffinity:
+                      type: string
+                    hpa:
+                      type: object
+                      properties:
+                        enabled:
+                          type: boolean
+                        minReplicas:
+                          type: integer
+                        maxReplicas:
+                          type: integer
+                        cpuUtilization:
+                          type: integer
+                        memoryUtilization:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    nm:
+                      type: object
+                      properties:
+                        cpu:
+                          type: integer
+                        memoryMB:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    replicas:
+                      type: integer
+                    resources:
+                      description: Hdp resource requirements
+                      type: object
+                      properties:
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                yMaxMemoryMB:
+                  type: integer
+            # End: Hdp configs
+
+            # Start: Orchestrator
+            orchestrator:
+              type: object
+              properties:
+                antiAffinity:
+                  type: string
+                create:
+                  type: boolean
+                docproc:
+                  type: object
+                  properties:
+                    maxMemory:
+                      type: string
+                    driverMaxMemory:
+                      type: string
+                    pythonAnalyzerMaxMemory:
+                      type: string
+                    workerNum:
+                      type: string
+                image:
+                  description: Docker images for orchestrator container
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    tag:
+                      type: string
+                livenessProbe:
+                  type: object
+                  properties:
+                    failureThreshold:
+                      type: integer
+                    initialDelaySeconds:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                metrics:
+                  type: object
+                  properties:
+                    hdpClient:
+                      type: string
+                    hdpHost:
+                      type: string
+                    hdpPort:
+                      type: integer
+                mlLabeler:
+                  type: object
+                  properties:
+                    enrichmentExecutorMemory:
+                      type: string
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of orchestrator component otherwise false
+                readinessProbe:
+                  type: object
+                  properties:
+                    failureThreshold:
+                      type: integer
+                    initialDelaySeconds:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                replicas:
+                  description: Number of replicas for orchestrator deployment
+                  type: integer
+                resources:
+                  description: Orchestrator container resource requirements
+                  properties:
+                    limits:
+                      properties:
+                        cpu:
+                          type: string
+                        memory:
+                          type: string
+                      type: object
+                    requests:
+                      properties:
+                        cpu:
+                          type: string
+                        memory:
+                          type: string
+                      type: object
+                  type: object
+                skipSampleProject:
+                  type: boolean
+            # End: Orchestrator configs
+
+            # Start: WKSML configs
+            wksml:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of wksml component otherwise false
+                image:
+                  type: object
+                  description: Image for WKSML
+                  properties:
+                    name:
+                      type: string
+                      description: Image name for WKSML
+                    tag:
+                      type: string
+                      description: Imange tag for WKSML
+                replicas:
+                  type: integer
+                  description: Number of replicas for WKSML deployment
+                antiAffinity:
+                  type: string
+                wlpMaxHeap:
+                  type: string
+                wlpTimeout:
+                  type: string
+                sireNumThreads:
+                  type: integer
+                sireCacheSize:
+                  type: integer
+                sireExpireDuration:
+                  type: integer
+                resources:
+                  type: object
+                  description: WKSML container resource requirements
+                  properties:
+                    requests:
+                      type: object
+                    limits:
+                      type: object
+                readinessProbe:
+                  type: object
+                  properties:
+                    initialDelaySeconds:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                    failureThreshold:
+                      type: integer
+                livenessProbe:
+                  type: object
+                  properties:
+                    initialDelaySeconds:
+                      type: integer
+                    periodSeconds:
+                      type: integer
+                    timeoutSeconds:
+                      type: integer
+                    failureThreshold:
+                      type: integer
+            # End: WKSML configs
+
+            # Start: StatelessAPI configs
+            statelessapi:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of statelessapi component otherwise false
+                runtime:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    replicas:
+                      type: integer
+                    antiAffinity:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    grpcTimeoutSec:
+                      type: integer
+                    javaEnrichServerMaxHeap:
+                      type: string
+                    maxGrpcMessageSizeMb:
+                      type: integer
+                    maxLoadingConcurrency:
+                      type: integer
+                    modelLoadingTimeoutMs:
+                      type: integer
+                    defaultModelSizeMb:
+                      type: integer
+                    capacityMb:
+                      type: integer
+                    enrichServerWaitMaxRetries:
+                      type: integer
+                proxy:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    replicas:
+                      type: integer
+                    antiAffinity:
+                      type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+                    grpcTimeoutSec:
+                      type: integer
+                mmesh:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    mmScaleupRpmThreshold:
+                      type: integer
+                    shutdownTimeoutMs:
+                      type: integer
+                credGen:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+            # End: StatelessAPI configs
+
+            # Start: CNM configs
+            cnm:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of cnm component otherwise false
+                apiServer:
+                  type: object
+                  properties:
+                    database:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                    httpClient:
+                      type: object
+                      properties:
+                        maxIdleConnections:
+                          type: integer
+                        keepAliveDurationSec:
+                          type: integer
+                        connectTimeoutSec:
+                          type: integer
+                        readTimeoutSec:
+                          type: integer
+                        writeTimeoutSec:
+                          type: integer
+                    image:
+                      type: object
+                      description: Image for cnm-api
+                      properties:
+                        name:
+                          type: string
+                          description: Image name for cnm-api
+                        tag:
+                          type: string
+                          description: Imange tag for cnm-api
+                    replicas:
+                      type: integer
+                    logLevel:
+                      type: string
+                    ports:
+                      type: object
+                      properties:
+                        server:
+                          type: object
+                          properties:
+                            servicePort:
+                              type: integer
+                            containerPort:
+                              type: integer
+                            protocol:
+                              type: string
+                    resources:
+                      type: object
+                      description: cnm-api container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    s3Client:
+                      type: object
+                      properties:
+                        connectionTimeoutMsec:
+                          type: integer
+                        socketTimeoutMsec:
+                          type: integer
+                db:
+                  type: object
+                  properties:
+                    create:
+                      type: object
+                      properties:
+                        hookWeight:
+                          type: string
+                        activeDeadlineSeconds:
+                          type: integer
+                    init:
+                      type: object
+                      properties:
+                        hookWeight:
+                          type: string
+                        activeDeadlineSeconds:
+                          type: integer
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                keystoreGen:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                minio:
+                  type: object
+                  properties:
+                    bucket:
+                      type: string
+                    bucketDocExport:
+                      type: string
+                test:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    resources:
+                      type: object
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                seer:
+                  type: object
+                  properties:
+                    image:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                    replicas:
+                      type: integer
+                    ports:
+                      type: object
+                      properties:
+                        server:
+                          type: object
+                          properties:
+                            servicePort:
+                              type: integer
+                            containerPort:
+                              type: integer
+                            protocol:
+                              type: string
+                    create:
+                      type: boolean
+                    resources:
+                      type: object
+                      description: seer container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                    livenessProbe:
+                      type: object
+                      properties:
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                        failureThreshold:
+                          type: integer
+                glimpse:
+                  type: object
+                  properties:
+                    create:
+                      type: boolean
+                    streamLogToFile:
+                      type: boolean
+                    appLog:
+                      type: object
+                      properties:
+                        fluentdContainerTpl:
+                          type: string
+                    creds:
+                      type: object
+                      properties:
+                        tls:
+                          type: object
+                          properties:
+                            fieldServerCertificate:
+                              type: string
+                            fieldServerKey:
+                              type: string
+                            fieldCert:
+                              type: string
+                            secret:
+                              type: string
+                        etcd:
+                          type: object
+                          properties:
+                            connSecret:
+                              type: string
+                            fieldConnString:
+                              type: string
+                    builder:
+                        type: object
+                        properties:
+                          documentsReductionFactor:
+                            type: string
+                          replicas:
+                            type: integer
+                          image:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              tag:
+                                type: string
+                          resources:
+                            type: object
+                            description: GlimpseBuilder container resource requirements
+                            properties:
+                              requests:
+                                type: object
+                                properties:
+                                  cpu:
+                                    type: string
+                                  memory:
+                                    type: string
+                              limits:
+                                type: object
+                                properties:
+                                  cpu:
+                                    type: string
+                                  memory:
+                                    type: string
+                          port:
+                            type: integer
+                          imagePullSecrets:
+                            type: string
+                          readinessProbe:
+                            type: object
+                            properties:
+                              initialDelaySeconds:
+                                type: integer
+                              periodSeconds:
+                                type: integer
+                              timeoutSeconds:
+                                type: integer
+                              failureThreshold:
+                                type: integer
+                              successThreshold:
+                                type: integer
+                          livenessProbe:
+                            type: object
+                            properties:
+                              initialDelaySeconds:
+                                type: integer
+                              periodSeconds:
+                                type: integer
+                              timeoutSeconds:
+                                type: integer
+                              failureThreshold:
+                                type: integer
+                              successThreshold:
+                                type: integer
+                          server:
+                            type: object
+                            properties:
+                              workers:
+                                type: integer
+                              threads:
+                                type: integer
+                          grpcClient:
+                            type: object
+                            properties:
+                              mmeshTargetNameOverride:
+                                type: string
+                    query:
+                      type: object
+                      properties:
+                        replicas:
+                          type: integer
+                        image:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                        resources:
+                          type: object
+                          description: GlimpseQuery container resource requirements
+                          properties:
+                            requests:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                            limits:
+                              type: object
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                        imagePullSecrets:
+                          type: string
+                        ports:
+                          type: object
+                          properties:
+                            grpc:
+                              type: integer
+                            thrift:
+                              type: integer
+                        modelmesh:
+                          type: object
+                          properties:
+                            image:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                tag:
+                                  type: string
+                            resources:
+                              type: object
+                              properties:
+                                requests:
+                                  type: object
+                                  properties:
+                                    cpu:
+                                      type: string
+                                    memory:
+                                      type: string
+                                limits:
+                                  type: object
+                                  properties:
+                                    cpu:
+                                      type: string
+                                    memory:
+                                      type: string
+                        glimpse:
+                          type: object
+                          properties:
+                            image:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                tag:
+                                  type: string
+                            resources:
+                              type: object
+                              properties:
+                                requests:
+                                  type: object
+                                  properties:
+                                    cpu:
+                                      type: string
+                                    memory:
+                                      type: string
+                                limits:
+                                  type: object
+                                  properties:
+                                    cpu:
+                                      type: string
+                                    memory:
+                                      type: string
+                            readinessProbe:
+                              type: object
+                              properties:
+                                initialDelaySeconds:
+                                  type: integer
+                                periodSeconds:
+                                  type: integer
+                                timeoutSeconds:
+                                  type: integer
+                                failureThreshold:
+                                  type: integer
+                                successThreshold:
+                                  type: integer
+                            livenessProbe:
+                              type: object
+                              properties:
+                                initialDelaySeconds:
+                                  type: integer
+                                periodSeconds:
+                                  type: integer
+                                timeoutSeconds:
+                                  type: integer
+                                failureThreshold:
+                                  type: integer
+                                successThreshold:
+                                  type: integer
+                            modelLoadingConcurrency:
+                              type: integer
+                            modelLoadingTimeout:
+                              type: integer
+                            defaultModelSize:
+                              type: integer
+                        etcdHealthCheck:
+                          type: object
+                          properties:
+                            create:
+                              type: boolean
+                    s3:
+                      type: object
+                      properties:
+                        authSecret:
+                          type: string
+                        fieldSecretKey:
+                          type: string
+                        fieldAccessKey:
+                          type: string
+                        # if endpoint secret is specified, endpoint env is loaded from the secret.
+                        # otherwise, s3.endpoint is used.
+                        endpointSecret:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            fieldEndpoint:
+                              type: string
+                        endpoint:
+                          type: string
+                        # bucket name is just used for health check. bucket name should be in s3 url passed from upstream.
+                        bucket:
+                          type: string
+                        # if auth secret for iam is specified, use IAM API Key authentication. secret/access key are not used in this case.
+                        iam:
+                          type: object
+                          properties:
+                            authSecret:
+                              type: string
+                            fieldApiKey:
+                              type: string
+            # End: CNM configs
+
+             # Start: API (Shim) configs
+            api:
+              type: object
+              properties:
+                create:
+                  type: boolean
+                quiesce:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                      description: Set true when start quiesce of api component otherwise false
+                antiAffinity:
+                  type: string
+                  description: "Valid values are soft or hard."
+                replicas:
+                  type: integer
+                  description: Number of replicas for API deployment
+                api:
+                  type: object
+                  description: WD API container configs
+                  properties:
+                    image:
+                      type: object
+                      description: Image for API
+                      properties:
+                        name:
+                          type: string
+                          description: Image name for API
+                        tag:
+                          type: string
+                          description: Image tag for API
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    resources:
+                      type: object
+                      description: API container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+                nginx:
+                  type: object
+                  description: WD Nginx container configs
+                  properties:
+                    image:
+                      type: object
+                      description: Image for API
+                      properties:
+                        name:
+                          type: string
+                          description: Image name for API
+                        tag:
+                          type: string
+                          description: Image tag for API
+                    livenessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    proxyConnectTimeout:
+                      type: string
+                    proxySendTimeout:
+                      type: string
+                    proxyReadTimeout:
+                      type: string
+                    readinessProbe:
+                      type: object
+                      properties:
+                        failureThreshold:
+                          type: integer
+                        initialDelaySeconds:
+                          type: integer
+                        periodSeconds:
+                          type: integer
+                        timeoutSeconds:
+                          type: integer
+                    resources:
+                      type: object
+                      description: API container resource requirements
+                      properties:
+                        requests:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                        limits:
+                          type: object
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                    sendTimeout:
+                      type: string
+            # End: API (Shim) configs
+
+            # End: Watson Discovery deployment configs
+
+        # App config overrides are an arbitrary key/value store
+        appConfigOverrides:
+          description: The key-value specified here override app config
+          type: object
+          # x-kubernetes-preserve-unknown-fields: true
+
+        status:
+          description: Status defines the observed state of WatsonDiscovery
+          type: object
+          # x-kubernetes-preserve-unknown-fields: true
+  versions:
+  - name: v1
+    served: true
+    storage: true
