@@ -1,0 +1,80 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: watson-language-pak-1
+# The description is mandatory
+description: "this is the optional module for installation for language-pak-1"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: lt-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-values-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+- name: lt-arar-enus-general
+  tag: 1.2
+- name: lt-dede-enus-general
+  tag: 1.2
+- name: lt-enus-arar-general
+  tag: 1.2
+- name: lt-enus-dede-general
+  tag: 1.2
+- name: lt-enus-eses-general
+  tag: 1.2
+- name: lt-enus-frfr-general
+  tag: 1.2
+- name: lt-enus-heil-general
+  tag: 1.2
+- name: lt-enus-itit-general
+  tag: 1.2
+- name: lt-enus-ptbr-general
+  tag: 1.2
+- name: lt-enus-ruru-general
+  tag: 1.2
+- name: lt-enus-trtr-general
+  tag: 1.2
+- name: lt-enus-zhcn-general
+  tag: 1.2
+- name: lt-enus-zhtw-general
+  tag: 1.2
+- name: lt-eses-enus-general
+  tag: 1.2
+- name: lt-frfr-enus-general
+  tag: 1.2
+- name: lt-heil-enus-general
+  tag: 1.2
+- name: lt-itit-enus-general
+  tag: 1.2
+- name: lt-ptbr-enus-general
+  tag: 1.2
+- name: lt-ruru-enus-general
+  tag: 1.2
+- name: lt-trtr-enus-general
+  tag: 1.2
+- name: lt-zhcn-enus-general
+  tag: 1.2
+- name: lt-zhtw-enus-general
+  tag: 1.2
+  
+chart: ibm-watson-lt-language-pak-1-1.2.1.tgz
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: ibm-watson-lt-language-pak-1
+# Set to true will trigger the helm upgrade with force option. Optional. Missing means false
+helmUpgradeForce: false
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+# scale:
+# - small.yaml
+
+

@@ -1,0 +1,151 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "security-exception"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart 
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: watson-language-pak-3
+# The description is mandatory
+description: "this is the optional module for installation for language-pak-3"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: lt-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-values-override.yaml
+# upgradeOverride: upgrade-values-override.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+- name: lt-bgbg-enus-general
+  tag: 1.2
+- name: lt-bsba-enus-general
+  tag: 1.2
+- name: lt-caes-eses-general
+  tag: 1.2
+- name: lt-cnrme-enus-general
+  tag: 1.2
+- name: lt-cscz-enus-general
+  tag: 1.2
+- name: lt-cygb-enus-general
+  tag: 1.2
+- name: lt-dadk-enus-general
+  tag: 1.2
+- name: lt-dede-frfr-general
+  tag: 1.2
+- name: lt-dede-itit-general
+  tag: 1.2
+- name: lt-elgr-enus-general
+  tag: 1.2
+- name: lt-enus-bgbg-general
+  tag: 1.2
+- name: lt-enus-bsba-general
+  tag: 1.2
+- name: lt-enus-cnrme-general
+  tag: 1.2
+- name: lt-enus-cscz-general
+  tag: 1.2
+- name: lt-enus-cygb-general
+  tag: 1.2
+- name: lt-enus-dadk-general
+  tag: 1.2
+- name: lt-enus-elgr-general
+  tag: 1.2
+- name: lt-enus-etee-general
+  tag: 1.2
+- name: lt-enus-fifi-general
+  tag: 1.2
+- name: lt-enus-frca-general
+  tag: 1.2
+- name: lt-enus-gaie-general
+  tag: 1.2
+- name: lt-enus-hrhr-general
+  tag: 1.2
+- name: lt-enus-huhu-general
+  tag: 1.2
+- name: lt-enus-ltlt-general
+  tag: 1.2
+- name: lt-enus-lvlv-general
+  tag: 1.2
+- name: lt-enus-nbno-general
+  tag: 1.2
+- name: lt-enus-nlnl-general
+  tag: 1.2
+- name: lt-enus-plpl-general
+  tag: 1.2
+- name: lt-enus-roro-general
+  tag: 1.2
+- name: lt-enus-sksk-general
+  tag: 1.2
+- name: lt-enus-slsi-general
+  tag: 1.2
+- name: lt-enus-srrs-general
+  tag: 1.2
+- name: lt-enus-svse-general
+  tag: 1.2
+- name: lt-enus-ukua-general
+  tag: 1.2
+- name: lt-eses-caes-general
+  tag: 1.2
+- name: lt-eses-eues-general
+  tag: 1.2
+- name: lt-eses-frfr-general
+  tag: 1.2
+- name: lt-etee-enus-general
+  tag: 1.2
+- name: lt-eues-eses-general
+  tag: 1.2
+- name: lt-fifi-enus-general
+  tag: 1.2
+- name: lt-frca-enus-general
+  tag: 1.2
+- name: lt-frfr-dede-general
+  tag: 1.2
+- name: lt-frfr-eses-general
+  tag: 1.2
+- name: lt-gaie-enus-general
+  tag: 1.2
+- name: lt-hrhr-enus-general
+  tag: 1.2
+- name: lt-huhu-enus-general
+  tag: 1.2
+- name: lt-itit-dede-general
+  tag: 1.2
+- name: lt-ltlt-enus-general
+  tag: 1.2
+- name: lt-lvlv-enus-general
+  tag: 1.2
+- name: lt-nbno-enus-general
+  tag: 1.2
+- name: lt-nlnl-enus-general
+  tag: 1.2
+- name: lt-plpl-enus-general
+  tag: 1.2
+- name: lt-roro-enus-general
+  tag: 1.2
+- name: lt-sksk-enus-general
+  tag: 1.2
+- name: lt-slsi-enus-general
+  tag: 1.2
+- name: lt-srrs-enus-general
+  tag: 1.2
+- name: lt-svse-enus-general
+  tag: 1.2  
+- name: lt-ukua-enus-general
+  tag: 1.2
+  
+chart: ibm-watson-lt-language-pak-3-1.2.1.tgz
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: ibm-watson-lt-language-pak-3
+# Set to true will trigger the helm upgrade with force option. Optional. Missing means false
+helmUpgradeForce: false
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+# scale:
+# - small.yaml
+
