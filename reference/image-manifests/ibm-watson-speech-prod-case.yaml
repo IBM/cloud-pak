@@ -4,6 +4,10 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/edb-apimgmt
+  - image: cp/cpd/edb-operator
+  - image: cp/cpd/edb-postgresql-12
+  - image: cp/cpd/edb-stolon
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
@@ -24,8 +28,10 @@ images:
   - image: cp/opencontent-icp-cert-gen-1
   - image: cp/opencontent-minio
   - image: cp/opencontent-minio-client
+  - image: cp/opencontent-minio-operator
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
+  - image: cp/opencontent-rabbitmq-operator
   - image: cp/watson-speech/ar-ar-broadbandmodel
   - image: cp/watson-speech/chuck
   - image: cp/watson-speech/chuck-haproxy
@@ -101,6 +107,7 @@ images:
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-postgres-stolon
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-rabbitmq-3
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-rabbitmq-config-copy
+  - image: icp4data-nginx-repo
   - image: us.icr.io/icp-common-components/watson-gateway
   - image: us.icr.io/redsonja_hyboria/speech_services/ar-ar-broadbandmodel
   - image: us.icr.io/redsonja_hyboria/speech_services/chuck
