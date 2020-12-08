@@ -1,0 +1,339 @@
+############ SEE INSTALLATION INSTRUCTIONS ON WHICH VALUES TO SET HERE #####################
+global:
+  dockerRegistryPrefix: "cp.icr.io/cp/watson-lt"
+  storageClassName: ""
+  image:
+    repository: ""
+  affinity: {}
+  
+gateway:
+  addonService:
+    zenNamespace: zen
+  affinity: {}    
+
+## LT Components ###########################################################################
+################## API CONFIG ##############################################################
+api:
+  replicas: 2
+  resources:
+    cpuLimitMillis: 1000
+    memoryLimitMB: 512
+    cpuRequestMillis: 200
+    memoryRequestMB: 256
+  config:
+    # throttle at 500 req/s per api pod
+    request_throttling: 500
+    rootLogLevel: error
+
+################## Document Translator CONFIG ##############################################################
+documents:
+  replicas: 2
+  resources:
+    cpuLimitMillis: 1000
+    memoryLimitMB: 1000
+    cpuRequestMillis: 200
+    memoryRequestMB: 500
+
+################## LID CONFIG ##############################################################
+lid:
+  replicas: 2
+  resources:
+    cpuLimitMillis: 750
+    memoryLimitMB: 2000
+    cpuRequestMillis: 250
+    memoryRequestMB: 2000
+
+  startingHeap: 200m
+  maxHeap: 400m
+
+################## SEGMENTER CONFIG ##############################################################
+segmenter:
+  replicas: 2
+  resources:
+    cpuLimitMillis: 750
+    memoryLimitMB: 2500
+    cpuRequestMillis: 250
+    memoryRequestMB: 2500
+
+  startingHeap: 200m
+  maxHeap: 400m
+
+################## TRANSLATION CONFIG ##############################################################
+
+translation:
+  replicas: 2
+  resources:
+    cpuLimitMillis: 5000
+    memoryLimitMB: 6000
+    cpuRequestMillis: 1000
+    memoryRequestMB: 4500
+
+  startingHeap: 200m
+  maxHeap: 400m
+
+### Databases ###################################################################
+s3:
+  # If changing replicas:
+  # - need to change to an even number
+  # - no less than 4 is recommended
+  replicas: 4
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 250m
+    limits:
+      memory: 750Mi
+      cpu: 500m
+
+  persistence:
+    enabled: true
+    size: 10Gi
+  
+postgres:
+  persistence:
+    size: 10Gi
+
+  resources:
+    limits:
+      cpu: 500m
+      memory: 256Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+###################################################################################################
+################################### TRANSLATION MODEL CONFIGURATION ###############################
+###################################################################################################
+###################################################################################################
+########################################## LANGUAGE PAK 1 #########################################
+###################################################################################################
+translationModels:
+  ar-en:
+    enabled: false
+  de-en:
+    enabled: false
+  en-ar:
+    enabled: false
+  en-de:
+    enabled: false
+  en-es:
+    enabled: false
+  en-fr:
+    enabled: false
+  en-he:
+    enabled: false
+  en-it:
+    enabled: false
+  en-pt:
+    enabled: false
+  en-ru:
+    enabled: false
+  en-tr:
+    enabled: false
+  en-zh:
+    enabled: false
+  en-zh-TW:
+    enabled: false
+  es-en:
+    enabled: false
+  fr-en:
+    enabled: false
+  he-en:
+    enabled: false
+  it-en:
+    enabled: false
+  pt-en:
+    enabled: false
+  ru-en:
+    enabled: false
+  tr-en:
+    enabled: false
+  zh-en:
+    enabled: false
+  zh-TW-en:
+    enabled: false
+###################################################################################################
+########################################## LANGUAGE PAK 2 #########################################
+###################################################################################################
+  en-bn:
+    enabled: false
+  en-gu:
+    enabled: false
+  en-hi:
+    enabled: false
+  en-id:
+    enabled: false
+  en-ja:
+    enabled: false
+  en-ko:
+    enabled: false
+  en-ml:
+    enabled: false
+  en-ms:
+    enabled: false
+  en-mt:
+    enabled: false
+  en-ne:
+    enabled: false
+  en-si:
+    enabled: false
+  en-ta:
+    enabled: false
+  en-te:
+    enabled: false
+  en-th:
+    enabled: false
+  en-ur:
+    enabled: false
+  en-vi:
+    enabled: false
+  bn-en:
+    enabled: false
+  gu-en:
+    enabled: false
+  hi-en:
+    enabled: false
+  id-en:
+    enabled: false
+  ja-en:
+    enabled: false
+  ko-en:
+    enabled: false
+  ml-en:
+    enabled: false
+  ms-en:
+    enabled: false
+  mt-en:
+    enabled: false
+  ne-en:
+    enabled: false
+  si-en:
+    enabled: false
+  ta-en:
+    enabled: false
+  te-en:
+    enabled: false
+  th-en:
+    enabled: false
+  ur-en:
+    enabled: false
+  vi-en:
+    enabled: false
+###################################################################################################
+########################################## LANGUAGE PAK 3 #########################################
+###################################################################################################
+  bg-en:
+    enabled: false
+  bs-en:
+    enabled: false
+  ca-es:
+    enabled: false
+  cnr-en:
+    enabled: false
+  cs-en:
+    enabled: false
+  cy-en:
+    enabled: false
+  da-en:
+    enabled: false
+  de-fr:
+    enabled: false
+  de-it:
+    enabled: false
+  el-en:
+    enabled: false
+  en-bg:
+    enabled: false
+  en-bs:
+    enabled: false
+  en-cnr:
+    enabled: false
+  en-cs:
+    enabled: false
+  en-cy:
+    enabled: false
+  en-da:
+    enabled: false
+  en-el:
+    enabled: false
+  en-et:
+    enabled: false
+  en-fi:
+    enabled: false
+  en-fr-CA:
+    enabled: false
+  en-ga:
+    enabled: false
+  en-hr:
+    enabled: false
+  en-hu:
+    enabled: false
+  en-lt:
+    enabled: false
+  en-lv:
+    enabled: false
+  en-nb:
+    enabled: false
+  en-nl:
+    enabled: false
+  en-pl:
+    enabled: false
+  en-ro:
+    enabled: false
+  en-sk:
+    enabled: false
+  en-sl:
+    enabled: false
+  en-sr:
+    enabled: false
+  en-sv:
+    enabled: false
+  en-uk:
+    enabled: false
+  es-ca:
+    enabled: false
+  es-eu:
+    enabled: false
+  es-fr:
+    enabled: false
+  et-en:
+    enabled: false
+  eu-es:
+    enabled: false
+  fi-en:
+    enabled: false
+  fr-de:
+    enabled: false
+  fr-CA-en:
+    enabled: false
+  fr-es:
+    enabled: false
+  ga-en:
+    enabled: false
+  hr-en:
+    enabled: false
+  hu-en:
+    enabled: false
+  it-de:
+    enabled: false
+  lt-en:
+    enabled: false
+  lv-en:
+    enabled: false
+  nb-en:
+    enabled: false
+  nl-en:
+    enabled: false
+  pl-en:
+    enabled: false
+  ro-en:
+    enabled: false
+  sk-en:
+    enabled: false
+  sl-en:
+    enabled: false
+  sr-en:
+    enabled: false
+  sv-en:
+    enabled: false
+  uk-en:
+    enabled: false
