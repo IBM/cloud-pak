@@ -1,0 +1,481 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: discovery-operator-role
+rules:
+  - apiGroups:
+    - ""
+    - batch
+    - extensions
+    resources:
+    - configmaps
+    - jobs
+    - jobs/status
+    - cronjobs
+    - pods
+    - pods/exec
+    - pods/log
+    - secrets
+    - serviceaccounts
+    verbs:
+    - get
+    - watch
+    - create
+    - apply
+    - list
+    - update
+    - patch
+    - delete
+  # Required for Wire chart
+  - apiGroups:
+    - ""
+    resources:
+    - resourcequotas
+    - resourcequotas/status
+    verbs:
+    - get
+    - list
+    - watch
+  # Required for Dlaas charts
+  - apiGroups:
+    - ""
+    resources:
+    - configmaps
+    - events
+    - secrets
+    - services
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - update
+    - patch
+  - apiGroups:
+    - apps
+    resources:
+    - deployments
+    - replicasets
+    - statefulsets
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+  - apiGroups:
+    - extensions
+    resources:
+    - replicasets
+    - networkpolicies
+    - deployments
+    verbs:
+    - get
+    - list
+    - create
+    - delete
+    - deletecollection
+    - patch
+    - update
+  - apiGroups:
+    - networking.k8s.io
+    resources:
+    - networkpolicies
+    verbs:
+    - create
+    - delete
+    - deletecollection
+    - get
+    - list
+    - patch
+    - update
+  ##
+  ## Base operator rules
+  ##
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+      - pods
+      - pods/exec
+      - pods/log
+      - services
+      - persistentvolumeclaims
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - apps
+    resources:
+      - deployments
+      - daemonsets
+      - replicasets
+      - statefulsets
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - policy
+    resources:
+      - poddisruptionbudgets
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - authorization.k8s.io
+    resources:
+      - subjectaccessreviews
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscovery
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveries
+      - watsondiscoveries/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryTooling
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverytoolings
+      - watsondiscoverytoolings/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryQuery
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveryqueries
+      - watsondiscoveryqueries/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryCoreAPI
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverycoreapis
+      - watsondiscoverycoreapis/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryIngestion
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveryingestions
+      - watsondiscoveryingestions/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryOrchestrator
+  ##
+  - apiGroups:
+    - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveryorchestrators
+      - watsondiscoveryorchestrators/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryWKSML
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverywksmls
+      - watsondiscoverywksmls/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryStatelessAPI
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverystatelessapis
+      - watsondiscoverystatelessapis/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryCNM
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverycnms
+      - watsondiscoverycnms/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryHdp
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveryhdps
+      - watsondiscoveryhdps/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: ElasticsearchDetails
+  ##
+  - apiGroups:
+      - elasticsearch.cloudpackopen.ibm.com
+    resources:
+      - elasticsearchdetails
+      - elasticsearchdetails/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryDFS
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverydfs
+      - watsondiscoverydfs/status
+      - watsondiscoverydfs/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoverySdu
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverysdus
+      - watsondiscoverysdus/status
+      - watsondiscoverysdus/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryWire
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoverywires
+      - watsondiscoverywires/status
+      - watsondiscoverywires/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryApi
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveryapis
+      - watsondiscoveryapis/status
+      - watsondiscoveryapis/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+# +kubebuilder:scaffold:rules
+  #
+  # Rules for etcd.database.coreos.com/v1, Kind: EtcdCluster
+  #
+  - apiGroups:
+      - etcd.database.coreos.com
+    resources:
+      - "*"
+    verbs:
+      - "*"
+  #
+  # Rules EDB postgres operator custom resources
+  #
+  - apiGroups:
+      - edbpostgres.com
+    resources:
+      - "*"
+    verbs:
+      - "*"
+  #
+  # Rules IBM RabbitMQ operator custom resources
+  #
+  - apiGroups:
+      - helm.operator-sdk
+    resources:
+      - ibmrabbitmqs
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  #
+  # Rules Minio operator custom resources
+  #
+  - apiGroups:
+    - helm.operator-sdk
+    resources:
+      - ibmminios
+    verbs:
+      - "*"
+  #
+  # Rules Watson Gateway operator custom resources
+  #
+  - apiGroups:
+      - com.ibm.watson.watson-gateway
+    resources:
+      - watsongateways
+    verbs:
+      - get
+      - watch
+      - create
+      - apply
+      - list
+      - update
+      - patch
+      - delete
+  ##
+  ## Rules for discovery.watson.ibm.com/v1, Kind: WatsonDiscoveryFoundation
+  ##
+  - apiGroups:
+      - discovery.watson.ibm.com
+    resources:
+      - watsondiscoveryfoundations
+      - watsondiscoveryfoundations/status
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  #
+  # Rules Model Train operator custom resources
+  #
+  - apiGroups:
+      - modeltrain.ibm.com
+    resources:
+      - modeltrains
+    verbs:
+      - "*"

@@ -1,0 +1,20 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: admin-discovery-rolebinding
+  labels:
+    app.kubernetes.io/name: admin
+    app.kubernetes.io/instance: admin
+    release: admin
+    app.kubernetes.io/component: admin-rolebinding
+roleRef:
+  kind: Role
+  name: admin-discovery-role
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: admin-discovery-sa
+- kind: ServiceAccount
+  name: cpd-admin-sa   # make cpd-admin-sa included otherwise unable to apply CR in the cpd-install-operator pod
+- kind: ServiceAccount
+  name: cpd-editor-sa   # make cpd-editor-sa included
