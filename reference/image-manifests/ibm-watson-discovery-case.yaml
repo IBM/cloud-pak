@@ -4,6 +4,10 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/edb-apimgmt
+  - image: cp/cpd/edb-operator
+  - image: cp/cpd/edb-postgresql-12
+  - image: cp/cpd/edb-stolon
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
@@ -18,16 +22,36 @@ images:
   - image: cp/cpd/zen-meta-couchdb
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
+  - image: cp/modeltrain/coordinator
+  - image: cp/modeltrain/databroker-s3
+  - image: cp/modeltrain/jobmonitor
+  - image: cp/modeltrain/lifecycle-manager-service
+  - image: cp/modeltrain/model-train-controller
+  - image: cp/modeltrain/ratelimiter
+  - image: cp/modeltrain/trainer-v2-service
+  - image: cp/opencontent-elasticsearch-6.8.13
+  - image: cp/opencontent-elasticsearch-7.8.0
+  - image: cp/opencontent-elasticsearch-7.8.1
+  - image: cp/opencontent-elasticsearch-base-plugins-6.8.13
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
+  - image: cp/opencontent-elasticsearch-operator
+  - image: cp/opencontent-etcd-operator
+  - image: cp/opencontent-minio-operator
+  - image: cp/opencontent-rabbitmq-operator
   - image: cp/watson-discovery/api-post-install-test
   - image: cp/watson-discovery/cnm-api
   - image: cp/watson-discovery/cnm-dbinit
+  - image: cp/watson-discovery/cnm-seer
   - image: cp/watson-discovery/configure-etcd
   - image: cp/watson-discovery/configure-postgres
   - image: cp/watson-discovery/coordinator
   - image: cp/watson-discovery/custom-crawler-sdk
   - image: cp/watson-discovery/databroker-s3
   - image: cp/watson-discovery/disco-ranker-server
+  - image: cp/watson-discovery/discovery-operator
   - image: cp/watson-discovery/discovery-ranker-rest-service
+  - image: cp/watson-discovery/gaama
   - image: cp/watson-discovery/haywire
   - image: cp/watson-discovery/icp-jks-gen
   - image: cp/watson-discovery/icp-util
@@ -39,6 +63,7 @@ images:
   - image: cp/watson-discovery/lifecycle-manager-service
   - image: cp/watson-discovery/logging-server
   - image: cp/watson-discovery/model-mesh
+  - image: cp/watson-discovery/objectstore-toolbox
   - image: cp/watson-discovery/opencontent-etcd-3
   - image: cp/watson-discovery/opencontent-icp-cert-gen-1
   - image: cp/watson-discovery/opencontent-minio
@@ -46,6 +71,7 @@ images:
   - image: cp/watson-discovery/opencontent-postgres-stolon
   - image: cp/watson-discovery/opencontent-rabbitmq-3
   - image: cp/watson-discovery/opencontent-rabbitmq-config-copy
+  - image: cp/watson-discovery/po-box
   - image: cp/watson-discovery/pod-coordinator
   - image: cp/watson-discovery/ranker-monitor-agent
   - image: cp/watson-discovery/ranker-training
@@ -67,7 +93,9 @@ images:
   - image: cp/watson-discovery/wd-adminapp
   - image: cp/watson-discovery/wd-api
   - image: cp/watson-discovery/wd-elastic
+  - image: cp/watson-discovery/wd-elastic-plugins
   - image: cp/watson-discovery/wd-hdp
+  - image: cp/watson-discovery/wd-indexer
   - image: cp/watson-discovery/wd-ingestion
   - image: cp/watson-discovery/wd-ingestion-api
   - image: cp/watson-discovery/wd-management
@@ -76,6 +104,7 @@ images:
   - image: cp/watson-discovery/wd-nginx
   - image: cp/watson-discovery/wd-orchestrator
   - image: cp/watson-discovery/wd-rapi
+  - image: cp/watson-discovery/wd-rcm
   - image: cp/watson-discovery/wd-stateless-api-model-runtime
   - image: cp/watson-discovery/wd-stateless-api-rest-proxy
   - image: cp/watson-discovery/wd-utils
@@ -84,3 +113,6 @@ images:
   - image: cp/watson-discovery/wks-ene-expand
   - image: cp/watson-discovery/wks-glimpse-ene-builder
   - image: cp/watson-discovery/wks-ibmjdk8-rhubi8
+  - image: cp/watson-gateway
+  - image: cp/watson-gateway-operator
+  - image: icp4data-nginx-repo
