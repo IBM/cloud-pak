@@ -88,6 +88,8 @@ images:
   - image: cp/noi/kafka
   - image: cp/noi/kafkarest
   - image: cp/noi/logstash
+  - image: cp/noi/metric-api
+  - image: cp/noi/metric-ingestion
   - image: cp/noi/nasm-alm-observer
   - image: cp/noi/nasm-ansibleawx-observer
   - image: cp/noi/nasm-app-disco-discovery
@@ -95,6 +97,7 @@ images:
   - image: cp/noi/nasm-app-disco-log-collector
   - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-app-disco-primarystorage
+  - image: cp/noi/nasm-app-disco-secondarystorage
   - image: cp/noi/nasm-app-disco-services
   - image: cp/noi/nasm-app-disco-utils
   - image: cp/noi/nasm-appdynamics-observer
@@ -166,6 +169,8 @@ images:
   - image: cp/noi/noi-alert-action-service
   - image: cp/noi/noi-alert-trigger-service
   - image: cp/noi/noi-backuprestore-service
+  - image: cp/noi/noi-metric-action-service
+  - image: cp/noi/noi-metric-trigger-service
   - image: cp/noi/opencontent-redis-5
   - image: cp/noi/policy-registry-service
   - image: cp/noi/servicemonitor
@@ -179,6 +184,7 @@ images:
   - image: ibmcom/ibm-tnc-assurance-catalog
   - image: ibmcom/ibm-tnc-assurance-operator
   - image: ibmcom/ibm-tnc-assurance-operator-bundle
+  - image: ibmcom/nasm-app-disco-controller
   - image: ibmcom/noi-operator
   - image: ibmcom/noi-operator-bundle
   - image: ibmcom/noi-operator-catalog
