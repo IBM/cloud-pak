@@ -1,0 +1,7 @@
+# Service account to be used by Watson Assistant operator pod(s)
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: watson-assistant-operator-sa
+  labels:
+    operator: watson-assistant-operator

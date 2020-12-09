@@ -1,0 +1,78 @@
+type: assembly
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: http://icp4d.ibm.com
+licenseArchiveName: license.zip
+name: IBM Watson Assistant
+# Version is mandatory
+version: 1.5.0
+# Description is optional
+description: "IBM Watson Assistant for IBM Cloud Pak for Data"
+# architecture is optional
+# if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
+# sub product have to be homogerious architucture
+architecture: x86_64
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct
+# Optional vpc and memory, we check what it specified, and it ignore the value in sub-assembly
+# The future will scan the helm chart and sum up the requirements
+# The permission required to check this info may need cluster-admin, so may NOT applicable
+# bricks is mandatory, it could contains another "product"
+# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
+# although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
+# We will have linter to check to make sure the rules
+#
+# TODO: Version is hardcoded for now, we will address the version compatiblities after Oct GA
+bricks:
+  - name: lite
+    minVersion: 3.0.1
+    type: assembly
+
+  - name: watson-assistant-operand-adm
+    version: 1.0.0
+    type: module
+  - name: watson-assistant-operand-ibm-events-operator
+    version: 1.0.0
+    type: module
+    optional: true
+
+  - name: ibm-minio-operator
+    minVersion: 1.0.0
+    type: assembly
+  - name: ibm-minio-operator-images
+    version: 1.0.0
+    type: module
+  - name: ibm-etcd-operator
+    minVersion: 1.0.0
+    type: assembly
+  - name: ibm-etcd-operator-images-3
+    version: 1.0.0
+    type: module
+  - name: ibm-cloudpakopen-elasticsearch-operator
+    minVersion: 1.1.185
+    type: assembly
+  - name: watson-assistant-operator-datastore-elasticsearch-images
+    version: 1.5.0
+    type: module
+  - name: redis-operator
+    minVersion: 1.0.0
+    type: assembly
+  - name: edb-operator
+    minVersion: 3.5.0
+    type: assembly
+  # Event Streams need to be installed manually
+  #- name: ibm-events-operator
+  #  minVersion: 0.20.1
+  #  type: assembly
+
+  - name: ibm-watson-gateway-operator
+    minVersion: 1.0.3
+    type: assembly
+
+  - name: watson-assistant-operator-adm
+    version: 1.5.0
+    type: module
+  - name: watson-assistant-operator
+    version: 1.5.0
+    type: module
+

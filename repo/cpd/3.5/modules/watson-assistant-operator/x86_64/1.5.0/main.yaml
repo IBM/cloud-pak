@@ -1,0 +1,79 @@
+type: module
+category: helm-chart
+name: watson-assistant-operator
+description: "Watson Assistant Operator for installing and managing IBM Watson Assistant for IBM Cloud Pak for Data instances"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: wa-registry-operator
+
+chart: ibm-watson-assistant-operator-prod-1.5.0+201208115052.1.5.0.1.5.0.gc1cc0928.115.tgz
+# For download to verify the chart file is correct, optional
+# md5: # REPLACE
+# Set to 5 hours, we see install time as long as 4 hours for all langs enabled.; optional, default is 20 minutes
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: watson-assistant-operator
+installOverride: overrides.yaml
+
+# Image list
+images:
+- name: assistant-operator
+  tag: 0.0.0-201208115052.1.5.0.1.5.0.gc1cc0928.115
+- name: analytics
+  tag: 1.0.3.202009171543-81-g0406359-wa-icp-1.5.0
+- name: clu-embedding-service
+  tag: 20201207-13-f0727c-wa_icp_1.5.0-icp
+- name: conan-tools
+  tag: 20201118-0229
+- name: dialog
+  tag: 20201124-0428-08ec41fd-wa-icp-1.5.0-2
+- name: dvt-bdd-ubi
+  tag: 20201208-072201-f998d4-CP4D_1.5
+- name: objectstore-py4j-bridge
+  tag: 20201118-113542-2-05f692
+- name: openentities-serving
+  tag: 20201118-112756-2-d9ae13-wa_icp_1.5.0
+- name: servicedesk-integration
+  tag: 20201124-093740-99fb8d4d-ci_wa_icp_1.5.0
+- name: training-master
+  tag: 20201118-112433-2-19ef62
+- name: sireg-model-ubi
+  tag: de-tok-20160801-20201119-132042
+- name: sireg-model-ubi
+  tag: ja-tok-20160902-20201119-132042
+- name: sireg-model-ubi
+  tag: ko-tok-20181109-20201119-132042
+- name: model-mesh
+  tag: main-20201111-5
+- name: model-mesh-tfsa
+  tag: main-20201111-7
+- name: tensorflow-serving
+  tag: 1.15.0-reconfig-poll-ubi-20201112-5
+- name: tensorflow-model-upload
+  tag: 20201115-89-b2e0e5
+- name: clu-controller
+  tag: 20201118-113126-2-a13238
+- name: recommends-rest-x86_64
+  tag: 1.2.15-20201116184700
+- name: improve-recommendations-engine-x86_64
+  tag: 1.2.15-20201116195914
+- name: sireg
+  tag: wdc-20181119-cf4a181a-84-master-ea98066c-165
+- name: skill-search
+  tag: 20201119-030637-dc9f12-wa-icp-1.5.0-4
+- name: clu-training
+  tag: 20201123-142748-15-31e1eb-wa_icp_1.5.0-icp
+- name: spellcheck-server-image
+  tag: wa-icp-1.5.0-20201206-4-3c92c7
+- name: store
+  tag: 20201123-162822-a6cecf
+- name: litelinks-grpc
+  tag: 20201118-141552-fe0a53
+- name: store-sync
+  tag: 20201118-141449-1f7298
+- name: sync-resources
+  tag: wa-icp-1.5.0-20201206-6-b3982e
+- name: system-entities
+  tag: 20201110-085016-f6b002
+- name: clu-serving
+  tag: 20201123-142748-15-31e1eb-wa_icp_1.5.0-icp-92c2215
+- name: ui
+  tag: 20201203-151719-1bacc9290

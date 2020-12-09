@@ -1,0 +1,136 @@
+apiVersion: com.ibm.watson.watson-assistant/v1
+kind: WatsonAssistant
+metadata:
+  name: {{ .releaseName }}
+  annotations:
+    oppy.ibm.com/disable-rollback: "true"
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }} # must inject release label for cpd tracking status
+    app.kubernetes.io/managed-by: "Ansible"
+    app.kubernetes.io/name: "watson-assistant"
+spec:
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }} # must inject release label for cpd tracking status
+  ###############
+  ## Porcelain ##
+  ###############
+  version: "{{ .watsonAssistant.version }}"
+
+  # :size: how big do we want the cluster to be
+  # - options:
+  #   'small', 'medium', 'large'
+  size: "{{ .watsonAssistant.size }}"
+
+  # List of languages enabled for this instance
+  languages:
+{{- range $lang := .watsonAssistant.languages }}
+  - {{ $lang }}
+{{- end }}
+
+  ##############
+  ## Features ##
+  ##############
+
+  features:
+    # options for the analytics features of Watson Assistant
+    analytics:
+      # whether to enable analytics or not
+      enabled: {{ .watsonAssistant.features.analytics.enabled }}
+    # options for the recommends features of Watson Assistant
+    recommends:
+      # whether to enable recommends or not
+      enabled: {{ .watsonAssistant.features.recommends.enabled }}
+    tooling:
+      # whether to enable tooling (UI) or not
+      enabled: {{ .watsonAssistant.features.tooling.enabled }}
+      
+  cpd:
+    namespace: {{ .zenControlPlaneNamespace }}
+
+  #############
+  ## Cluster ##
+  #############
+
+  # TODO: figure out how this ties into cpd linux; change as needed
+  cluster:
+    # :type: Cluster environment type
+    # - options: 'public', 'dedicated', 'premium', 'private'
+    type: "private"
+
+    name: "dev"
+    # :image_pull_secrets: pull secret names
+{{- if not .watsonAssistant.cluster.imagePullSecrets }}
+    imagePullSecrets: []
+{{- else }}
+    imagePullSecrets:
+  {{- range $pullSecret := .watsonAssistant.cluster.imagePullSecrets }}
+    - {{ $pullSecret }}
+  {{- end }}
+{{- end }}
+
+
+    # :storage_class_name: (private only) default storage class for all datastores
+    storageClassName: "{{ .storageclass }}"
+    # :docker_registry_prefix: (private only) Docker registry, including namespace, to get images from
+{{- if .watsonAssistant.cluster.dockerRegistryPrefix }}
+    dockerRegistryPrefix: "{{ .watsonAssistant.cluster.dockerRegistryPrefix }}"
+{{- else if not (or (eq .registryPrefix     "cp.icr.io") (eq .registryPrefix     "cp.icr.io/") (eq .registryPrefix     "cp.icr.io/cp") (eq .registryPrefix     "cp.icr.io/cp/") (eq .registryPrefix     "cp.icr.io/cp/watson-assistant") (eq .registryPrefix     "cp.icr.io/cp/watson-assistant/") (eq .registryPrefix    "stg.icr.io") (eq .registryPrefix    "stg.icr.io/") (eq .registryPrefix    "stg.icr.io/cp") (eq .registryPrefix    "stg.icr.io/cp/") (eq .registryPrefix    "stg.icr.io/cp/watson-assistant") (eq .registryPrefix    "stg.icr.io/cp/watson-assistant/") (eq .registryPrefix "cp.stg.icr.io") (eq .registryPrefix "cp.stg.icr.io/") (eq .registryPrefix "cp.stg.icr.io/cp") (eq .registryPrefix "cp.stg.icr.io/cp/") (eq .registryPrefix "cp.stg.icr.io/cp/watson-assistant") (eq .registryPrefix "cp.stg.icr.io/cp/watson-assistant/")) }}
+    dockerRegistryPrefix: "{{ .registryPrefix }}"
+{{- end }}
+
+  backup:
+    onlineQuiesce: {{  .watsonAssistant.backup.onlineQuiesce }}
+    offlineQuiesce: {{ .watsonAssistant.backup.offlineQuiesce }}
+
+  ##############################
+  ## Datastore Configurations ##
+  ##############################
+
+  etcd:
+    storageClassName: "{{ .watsonAssistant.etcd.storageClassName   }}"
+    storageSize: "{{      .watsonAssistant.etcd.storageSize        }}"
+  kafka:
+    storageClassName: "{{ .watsonAssistant.kafka.storageClassName  }}"
+    storageSize: "{{      .watsonAssistant.kafka.storageSize       }}"
+    zookeeper:
+      storageSize: "{{    .watsonAssistant.kafka.zookeeper.storageSize }}"
+  minio:
+    storageClassName: "{{ .watsonAssistant.minio.storageClassName }}"
+    storageSize: "{{      .watsonAssistant.minio.storageSize      }}"
+  postgres:
+    storageClassName: "{{       .watsonAssistant.postgres.storageClassName       }}"
+    storageSize: "{{            .watsonAssistant.postgres.storageSize            }}"
+    backupStorageClassName: "{{ .watsonAssistant.postgres.backupStorageClassName }}"
+
+  datastores:
+    elasticSearch:
+    - name: analytics
+      type: cloudpakopenElasticSearch
+{{- if or .watsonAssistant.datastores.elasticSearch.analytics.cloudpakopenElasticSearch.storageClassName .watsonAssistant.datastores.elasticSearch.analytics.cloudpakopenElasticSearch.storageSize }}
+      cloudpakopenElasticSearch:
+  {{- if .watsonAssistant.datastores.elasticSearch.analytics.cloudpakopenElasticSearch.storageClassName }}
+        storageClassName: "{{ .watsonAssistant.datastores.elasticSearch.analytics.cloudpakopenElasticSearch.storageClassName }}"
+  {{- end }}
+  {{- if .watsonAssistant.datastores.elasticSearch.analytics.cloudpakopenElasticSearch.storageSize }}
+        storageSize: "{{ .watsonAssistant.datastores.elasticSearch.analytics.cloudpakopenElasticSearch.storageSize }}"
+  {{- end }}
+{{- end }}
+
+    - name: store
+      type: cloudpakopenElasticSearch
+{{- if or .watsonAssistant.datastores.elasticSearch.store.cloudpakopenElasticSearch.storageClassName .watsonAssistant.datastores.elasticSearch.store.cloudpakopenElasticSearch.storageSize }}
+      cloudpakopenElasticSearch:
+  {{- if .watsonAssistant.datastores.elasticSearch.store.cloudpakopenElasticSearch.storageClassName }}
+        storageClassName: "{{ .watsonAssistant.datastores.elasticSearch.store.cloudpakopenElasticSearch.storageClassName }}"
+  {{- end }}
+  {{- if .watsonAssistant.datastores.elasticSearch.store.cloudpakopenElasticSearch.storageSize }}
+        storageSize: "{{ .watsonAssistant.datastores.elasticSearch.store.cloudpakopenElasticSearch.storageSize }}"
+  {{- end }}
+{{- end }}
+appConfigOverrides:
+  analytics:
+    cr:
+      skeleton:
+        crossInstanceQueryScope:
+          enabled: "{{ .watsonAssistant.analytics.crossInstanceQueryScope.enabled }}"
+{{ printf "%s" .watsonAssistant.appConfigOverrides }}

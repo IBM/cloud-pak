@@ -1,0 +1,12 @@
+type: module
+category: "adm-setup"
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Watson Assistant operatand roles
+# The description is optional
+description: Adds cpd-admin permission to create operand requests
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+  - adm/roles/wa-operand-admin-role.yaml
+  - adm/roles/wa-operand-viewer-role.yaml
+  - adm/rb/wa-operand-admin-rb.yaml
+  - adm/rb/wa-operand-viewer-rb.yaml

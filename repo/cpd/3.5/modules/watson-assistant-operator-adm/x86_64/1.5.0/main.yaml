@@ -1,0 +1,26 @@
+type: module
+category: "adm-setup"
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Watson Assistant operator roles
+# The description is optional
+description: Additional roles + role bindings (out-side of what provides cpd lite) that requires Watson Assistant operator
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+  - adm/sa/wa-operator-sa.yaml
+  - adm/roles/wa-admin-role.yaml
+  - adm/roles/wa-viewer-role.yaml
+  - adm/roles/wa-operator-role.yaml
+  - adm/rb/wa-admin-rb.yaml
+  - adm/rb/wa-viewer-rb.yaml
+  - adm/rb/wa-operator-rb.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistant.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantAnalytics.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantClu.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantDialog.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantDVT.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantIntegrations.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantRecomments.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantSkillSearch.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantStore.yaml
+  - adm/crd/crd_com_ibm_watson_watson-assistant_WatsonAssistantUi.yaml
+  - adm/crd/crd_com_ibm_oppy_TemporaryPatch.yaml
