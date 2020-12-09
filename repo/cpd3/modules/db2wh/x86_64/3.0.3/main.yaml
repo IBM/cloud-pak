@@ -1,0 +1,34 @@
+chart: zen-databases-catalog-3.0.3.tgz
+helmUpgradeForce: true
+images:
+  - name: zen-databases-catalog-db2wh
+    tag: 3.0.3-2243-dev-x86_64
+  - name: db2u.auxiliary.auth
+    tag: 11.5.3.0-cn2-2243-x86_64
+  - name: db2u.instdb
+    tag: 11.5.3.0-cn2-2243-x86_64
+  - name: db2u.tools
+    tag: 11.5.3.0-cn2-2243-x86_64
+  - name: db2u
+    tag: 11.5.3.0-cn2-2243-x86_64
+  - name: db2u.db2client.workload
+    tag: 11.5.3.0-cn2-2243-x86_64
+  - name: etcd
+    tag: 3.3.10-2243-x86_64
+  - name: unified-console
+    tag: icp4d-db2u-2243-x86_64
+  - name: unified-console-zdtproxy
+    tag: icp4d-db2u-2243-x86_64
+  - name: unified-console-utils-api
+    tag: icp4d-db2u-2243-x86_64
+  - name: unified-console-influxdb
+    tag: icp4d-db2u-2243-x86_64
+installOverride: install-override.yaml
+name: db2wh module
+registry-reference: base-registry
+releaseName: db2wh-catalog-11.5.3.0-cn2
+serviceInstanceType:
+  - db2wh
+timeout: 90
+type: module
+upgradeOverride: install-override.yaml
