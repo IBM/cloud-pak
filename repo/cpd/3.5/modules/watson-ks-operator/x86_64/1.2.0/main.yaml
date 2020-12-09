@@ -1,0 +1,37 @@
+# type is mandatory here
+type: module
+category: template-yamls
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: watson-ks-operator
+# The description is mandatory
+description: IBM Watson Knowledge Studio for Cloud Pak for Data
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: wks-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+installOverride: installOverride.yaml
+upgradeOverride: upgradeOverride.yaml
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 30
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: wks-operator
+
+templateModuleFiles:
+  - name: operator.yaml
+    case: ""  # Optional: Default is for both install and upgrade
+    wait: true # Optional: Default is false
+
+# The cpd scale files to define here. optional, refer to https://ibm.ent.box.com/notes/528081405807 for details
+# The list is file names only, and expected to located under config/
+# scale:
+# - small.yaml
+# - medium.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure 
+images:
+  - name: wks-operator
+    tag: master-20201209-1619-43

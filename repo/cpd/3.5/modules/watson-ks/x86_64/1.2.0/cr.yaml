@@ -1,0 +1,174 @@
+apiVersion: knowledgestudio.watson.ibm.com/v1alpha1
+kind: KnowledgeStudio
+metadata:
+  name: {{ .releaseName }}
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }}
+    app.kubernetes.io/managed-by: Helm
+spec:
+  global:
+    clusterDomain: {{ .global.clusterDomain }}
+    dockerRegistryPrefix: {{ .registryPrefix }}
+    storageClassName: {{ .storageclass }}
+    highAvailabilityMode: {{ .global.highAvailabilityMode }}
+    quiesceMode: {{ .global.quiesceMode }}
+  replicaCount: {{ .replicaCount }}
+  image:
+    tag: {{ .image.tag }}
+  dvt:
+    image:
+      tag: {{ .dvt.image.tag }}
+  broker:
+    replicas: {{ .broker.replicas }}
+    image:
+      tag: {{ .broker.image.tag }}
+  dispatcher:
+    replicas: {{ .dispatcher.replicas }}
+    image:
+      tag: {{ .dispatcher.image.tag }}
+  initContainer:
+    keystoreGen:
+      image:
+        tag: {{ .initContainer.keystoreGen.image.tag }}
+  creds:
+    image:
+      tag: {{ .creds.image.tag }}
+  mongodb:
+    replicas: {{ .mongodb.replicas }}
+    config:
+      image:
+        tag: {{ .mongodb.config.image.tag }}
+    mongodbInstall:
+      image:
+        tag: {{ .mongodb.mongodbInstall.image.tag }}
+    mongodb:
+      image:
+        tag: {{ .mongodb.mongodb.image.tag }}
+    creds:
+      image:
+        tag: {{ .mongodb.creds.image.tag }}
+    test:
+      image:
+        tag: {{ .mongodb.test.image.tag }}
+    persistentVolume:
+      size: {{ .mongodb.persistentVolume.size }}
+  minio:
+    replicas: {{ .minio.replicas }}
+    minio:
+      image:
+        tag: {{ .minio.minio.image.tag }}
+    minioClient:
+      image:
+        tag: {{ .minio.minioClient.image.tag }}
+    creds:
+      image:
+        tag: {{ .minio.creds.image.tag }}
+    persistence:
+      size: {{ .minio.persistence.size }}
+  postgresql:
+    replicas: {{ .postgresql.replicas }}
+    persistence:
+      size: {{ .postgresql.persistence.size }}
+    stolon:
+      image:
+        tag: {{ .postgresql.stolon.image.tag }}
+    postgres:
+      image:
+        tag: {{ .postgresql.postgres.image.tag }}
+    useSingleMountPoint: {{ .postgresql.useSingleMountPoint }}
+  etcd:
+    replicaCount: {{ .etcd.replicaCount }}
+    image:
+      tag: {{ .etcd.image.tag }}
+    dataPVC:
+      size: {{ .etcd.dataPVC.size }}
+  mma:
+    replicas: {{ .mma.replicas }}
+    modelManagementApi:
+      image:
+        tag: {{ .mma.modelManagementApi.image.tag }}
+    postgres:
+      image:
+        tag: {{ .mma.postgres.image.tag }}
+  sire:
+    jobq:
+      image:
+        tag: {{ .sire.jobq.image.tag }}
+      tenants:
+        train:
+          max_queued_and_active_per_user: {{ .sire.jobq.tenants.train.max_queued_and_active_per_user }}
+          max_active_per_user: {{ .sire.jobq.tenants.train.max_active_per_user }}
+        evaluate:
+          max_queued_and_active_per_user: {{ .sire.jobq.tenants.evaluate.max_queued_and_active_per_user }}
+          max_active_per_user: {{ .sire.jobq.tenants.evaluate.max_active_per_user }}
+    trainFacade:
+      image:
+        tag: {{ .sire.trainFacade.image.tag }}
+    trainJob:
+      image:
+        tag: {{ .sire.trainJob.image.tag }}
+    batchApplyJob:
+      image:
+        tag: {{ .sire.batchApplyJob.image.tag }}
+    sireg:
+      image:
+        tag: {{ .sire.sireg.image.tag }}
+      languages:
+        en:
+          enabled: {{ .sire.sireg.languages.en.enabled }}
+        ar:
+          enabled: {{ .sire.sireg.languages.ar.enabled }}
+        de:
+          enabled: {{ .sire.sireg.languages.de.enabled }}
+        es:
+          enabled: {{ .sire.sireg.languages.es.enabled }}
+        fr:
+          enabled: {{ .sire.sireg.languages.fr.enabled }}
+        it:
+          enabled: {{ .sire.sireg.languages.it.enabled }}
+        ja:
+          enabled: {{ .sire.sireg.languages.ja.enabled }}
+        ko:
+          enabled: {{ .sire.sireg.languages.ko.enabled }}
+        nl:
+          enabled: {{ .sire.sireg.languages.nl.enabled }}
+        pt:
+          enabled: {{ .sire.sireg.languages.pt.enabled }}
+        zh:
+          enabled: {{ .sire.sireg.languages.zh.enabled }}
+        zht:
+          enabled: {{ .sire.sireg.languages.zht.enabled }}
+  glimpse:
+    create: {{ .glimpse.create }}
+    creds:
+      image:
+        tag: {{ .glimpse.creds.image.tag }}
+    builder:
+      replicas: {{ .glimpse.builder.replicas }}
+      image:
+        tag: {{ .glimpse.builder.image.tag }}
+    query:
+      replicas: {{ .glimpse.query.replicas }}
+      modelmesh:
+        image:
+          tag: {{ .glimpse.query.modelmesh.image.tag }}
+      glimpse:
+        image:
+          tag: {{ .glimpse.query.glimpse.image.tag }}
+  awt:
+    create: {{ .awt.create }}
+    replicas: {{ .awt.replicas }}
+    tooling:
+      image:
+        tag: {{ .awt.tooling.image.tag }}
+    proxy:
+      image:
+        tag: {{ .awt.proxy.image.tag }}
+    dbInit:
+      image:
+        tag: {{ .awt.dbInit.image.tag }}
+    persistentVolume:
+      storageClassName: {{ .awt.persistentVolume.storageClassName }}
+      size: {{ .awt.persistentVolume.size }}
+  wcn:
+    version: {{ .wcn.version }}

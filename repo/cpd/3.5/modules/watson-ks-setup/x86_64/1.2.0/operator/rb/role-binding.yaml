@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: ibm-watson-ks-operator
+  labels:
+    app.kubernetes.io/instance: wks-operator
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ibm-watson-ks-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: ibm-watson-ks-operator
+subjects:
+- kind: ServiceAccount
+  name: ibm-watson-ks-operator
+- kind: ServiceAccount
+  name: cpd-admin-sa
+- kind: ServiceAccount
+  name: cpd-editor-sa

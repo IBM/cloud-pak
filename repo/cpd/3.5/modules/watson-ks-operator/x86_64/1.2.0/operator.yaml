@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-watson-ks-operator
+  labels:
+    name: ibm-watson-ks-operator
+    control-plane: ibm-watson-ks-operator
+    app.kubernetes.io/instance: {{ .releaseName }}
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ibm-watson-ks-operator
+    icpdsupport/addOnId: watson-knowledge-studio
+    icpdsupport/app: {{ .releaseName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ibm-watson-ks-operator
+      control-plane: ibm-watson-ks-operator
+      app.kubernetes.io/instance: {{ .releaseName }}
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: ibm-watson-ks-operator
+      icpdsupport/addOnId: watson-knowledge-studio
+      icpdsupport/app: {{ .releaseName }}
+  template:
+    metadata:
+      annotations:
+        cloudpakId: eb9998dcc5d24e3eb5b6fb488f750fe2
+        cloudpakName: IBM Cloud Pak for Data
+        cloudpakVersion: 3.5.0
+        productChargedContainers: All
+        productID: ICP4D-addon-d0aa88f38e644eb0975dafa7cae6f032-knowledge-studio
+        productMetric: VIRTUAL_PROCESSOR_CORE
+        productName: Watson Knowledge Studio
+        productVersion: 1.2.0
+      labels:
+        name: ibm-watson-ks-operator
+        control-plane: ibm-watson-ks-operator
+        app.kubernetes.io/instance: {{ .releaseName }}
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: ibm-watson-ks-operator
+        icpdsupport/addOnId: watson-knowledge-studio
+        icpdsupport/app: {{ .releaseName }}
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+      serviceAccountName: ibm-watson-ks-operator
+      containers:
+      - image: {{ .registryPrefix }}/wks-operator:{{ .image.tag }}
+        name: manager
+        env:
+        - name: WATCH_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        livenessProbe:
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          exec:
+            command:
+              - "true"
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          privileged: false
+          readOnlyRootFilesystem: false
+          runAsNonRoot: true
+      terminationGracePeriodSeconds: 10

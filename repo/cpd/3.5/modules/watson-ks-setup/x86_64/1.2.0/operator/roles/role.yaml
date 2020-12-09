@@ -1,0 +1,115 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: ibm-watson-ks-operator
+  labels:
+    app.kubernetes.io/instance: wks-operator
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: ibm-watson-ks-operator
+rules:
+##
+## Base operator rules
+##
+# We need to get namespaces so the operator can read namespaces to ensure they exist
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - get
+# We need to manage Helm release secrets
+- apiGroups:
+  - ""
+  - batch
+  - extensions
+  - apps
+  - networking.k8s.io
+  - policy
+  - autoscaling
+  - rbac.authorization.k8s.io
+  resources:
+  - configmaps
+  - events
+  - secrets
+  - services
+  - jobs
+  - jobs/status
+  - pods
+  - pods/exec
+  - pods/log
+  - deployments
+  - replicasets
+  - statefulsets
+  - persistentvolumeclaims
+  - networkpolicies
+  - poddisruptionbudgets
+  - horizontalpodautoscalers
+  - roles
+  - serviceaccounts
+  - rolebindings
+  verbs:
+  - apply
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+  - patch
+  - update
+  - watch
+# We need to create events on CRs about things happening during reconciliation
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+
+##
+## Rules for knowledgestudio.watson.ibm.com/v1alpha1, Kind: KnowledgeStudio
+##
+- apiGroups:
+  - knowledgestudio.watson.ibm.com
+  - helm.operator-sdk
+  - etcd.database.coreos.com
+  - com.ibm.watson.watson-gateway
+  - edbpostgres.com
+  resources:
+  - knowledgestudios
+  - knowledgestudios/status
+  - knowledgestudios/finalizers
+  - ibmminios
+  - ibmminios/finalizers
+  - etcdclusters
+  - etcdclusters/finalizers
+  - watsongateways
+  - watsongateways/finalizers
+  - edbpostgres
+  - edbpostgres/finalizers
+  - backups
+  - backups/finalizers
+  - taskrunners
+  - taskrunners/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- verbs:
+  - "*"
+  apiGroups:
+  - "apps"
+  resources:
+  - "deployments"
+- verbs:
+  - "*"
+  apiGroups:
+  - ""
+  resources:
+  - "serviceaccounts"
+  - "services"
+
+# +kubebuilder:scaffold:rules
