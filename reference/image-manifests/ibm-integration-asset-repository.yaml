@@ -14,7 +14,9 @@ images:
   - image: ibmcom/ibm-integration-asset-repository-operator
   - image: ibmcom/ibm-integration-asset-repository-webhook-init
   - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/collectd-exporter
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
@@ -24,34 +26,61 @@ images:
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
   - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/grafana-ocpthanos-proxy
   - image: quay.io/opencloudio/iam-policy-administration
   - image: quay.io/opencloudio/iam-policy-controller
   - image: quay.io/opencloudio/iam-policy-decision
   - image: quay.io/opencloudio/ibm-auditlogging-operator
+  - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
   - image: quay.io/opencloudio/ibm-catalog-ui-operator
   - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
   - image: quay.io/opencloudio/ibm-common-service-catalog
+  - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-commonui-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-elastic-stack-operator
+  - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-operator
+  - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
   - image: quay.io/opencloudio/ibm-helm-api-operator
   - image: quay.io/opencloudio/ibm-helm-repo-operator
   - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-iam-operator-bundle
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
+  - image: quay.io/opencloudio/ibm-license-service-reporter
+  - image: quay.io/opencloudio/ibm-license-service-reporter-ui
   - image: quay.io/opencloudio/ibm-licensing
   - image: quay.io/opencloudio/ibm-licensing-operator
+  - image: quay.io/opencloudio/ibm-licensing-operator-bundle
   - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
   - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/ibm-metering-operator-bundle
   - image: quay.io/opencloudio/ibm-mongodb
   - image: quay.io/opencloudio/ibm-mongodb-exporter
   - image: quay.io/opencloudio/ibm-mongodb-install
   - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-mongodb-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
   - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
+  - image: quay.io/opencloudio/ibm-postgresql
   - image: quay.io/opencloudio/ibm-secretshare-operator
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-catalog-ui
@@ -87,9 +116,11 @@ images:
   - image: quay.io/opencloudio/metering-report
   - image: quay.io/opencloudio/metering-ui
   - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller
   - image: quay.io/opencloudio/node-exporter
   - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
   - image: quay.io/opencloudio/prometheus
   - image: quay.io/opencloudio/prometheus-config-reloader
   - image: quay.io/opencloudio/prometheus-controller
