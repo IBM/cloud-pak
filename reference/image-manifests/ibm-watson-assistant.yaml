@@ -1,9 +1,20 @@
 source: ibm-watson-assistant-prod-bundle/case/ibm-watson-assistant/case.yaml
 description: "Common applications include virtual agents and chat bots."
 images:
+  - image: analytics
+  - image: assistant-operator
+  - image: clu-controller
+  - image: clu-embedding-service
+  - image: clu-serving
+  - image: clu-training
+  - image: conan-tools
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/edb-apimgmt
+  - image: cp/cpd/edb-operator
+  - image: cp/cpd/edb-postgresql-12
+  - image: cp/cpd/edb-stolon
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
@@ -18,6 +29,24 @@ images:
   - image: cp/cpd/zen-meta-couchdb
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
+  - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/opencontent-elasticsearch-6.8.13
+  - image: cp/opencontent-elasticsearch-7.8.0
+  - image: cp/opencontent-elasticsearch-7.8.1
+  - image: cp/opencontent-elasticsearch-base-plugins-6.8.13
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
+  - image: cp/opencontent-elasticsearch-operator
+  - image: cp/opencontent-etcd-operator
+  - image: cp/opencontent-minio-operator
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
   - image: cp/watson-assistant/clu-controller
   - image: cp/watson-assistant/clu_embedding_service
   - image: cp/watson-assistant/clu-serving
@@ -58,3 +87,31 @@ images:
   - image: cp/watson-assistant/training-master
   - image: cp/watson-assistant/ui
   - image: cp/watson-assistant/watson-gateway
+  - image: cp/watson-gateway
+  - image: cp/watson-gateway-operator
+  - image: dialog
+  - image: dvt-bdd-ubi
+  - image: ibmcom/ibm-cloud-databases-redis-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: icp4data-nginx-repo
+  - image: improve-recommendations-engine-x86_64
+  - image: litelinks-grpc
+  - image: model-mesh
+  - image: model-mesh-tfsa
+  - image: objectstore-py4j-bridge
+  - image: openentities-serving
+  - image: recommends-rest-x86_64
+  - image: servicedesk-integration
+  - image: sireg
+  - image: sireg-model-ubi
+  - image: skill-search
+  - image: spellcheck-server-image
+  - image: store
+  - image: store-sync
+  - image: sync-resources
+  - image: system-entities
+  - image: tensorflow-model-upload
+  - image: tensorflow-serving
+  - image: training-master
+  - image: ui
