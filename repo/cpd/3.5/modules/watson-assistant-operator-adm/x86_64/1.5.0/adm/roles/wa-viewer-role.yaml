@@ -1,0 +1,16 @@
+# Role for cpd view user to be able to see/list existing Watson operator CRD's
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: watson-assistant-viewer-role
+  labels:
+    operator: watson-assistant-operator
+rules:
+- apiGroups: # Not part of cpd-viewer-role
+  - com.ibm.watson.watson-assistant
+  resources:
+  - '*'
+  verbs:
+  - get
+  - watch
+  - list

@@ -1,0 +1,22 @@
+type: module
+category: template-yamls
+
+# Images related
+registry-reference: "wa-registry"
+images: []
+
+# Timeout to wait for all resources up and running
+timeout: 5 #minutes
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: watson-assistant-operand-ibm-events-operator
+# Creates and CommonService CR for the ibm-common-service-operator
+
+# # The override values to update the yamls before install and upgrade
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+scale:
+
+templateModuleFiles:
+- name: ibm-events-operator-common-service.yaml

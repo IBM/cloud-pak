@@ -1,0 +1,18 @@
+type: module
+category: template-yamls
+
+# Images Elastic search images for CR based on 6.8 ES version
+registry-reference: "elasticsearch-registry"
+images:
+- name: opencontent-elasticsearch-6.8.13
+  tag: 1.1.185
+- name: opencontent-elasticsearch-base-plugins-6.8.13
+  tag: 1.1.185
+
+# Timeout to wait for all resources up and running
+timeout: 5 #minutes
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: watson-assistant-operator-datastores-elastic-search-images68
+
+templateModuleFiles: []

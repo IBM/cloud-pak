@@ -1,0 +1,100 @@
+# reserved value set by the cpd installer
+zenServiceInstanceId: 1
+
+watsonAssistant:
+  # imagePullSecrets for Assistant
+  cluster:
+    imagePullSecrets: []
+  
+    dockerRegistryPrefix: ""
+  
+  # version of Assistant to deploy
+  version: "1.5.0"
+
+  # how big do we want the cluster to be
+  # - options:
+  #   'small', 'medium', 'large'
+  size: "medium"
+
+  # List of languages enabled for this instance
+  languages:
+  - en
+  #- es
+  #- pt-br
+  #- fr
+  #- it
+  #- ja
+  #- de
+  #- ko
+  #- ar
+  #- nl
+  #- zh-tw
+  #- zh-cn
+  #- cs
+
+  ##############
+  ## Features ##
+  ##############
+  
+  features:
+    # options for the analytics features of Watson Assistant
+    analytics:
+      # whether to enable analytics or not
+      enabled: true
+    # options for the recommends features of Watson Assistant
+    recommends:
+      # whether to enable recommends or not
+      enabled: true
+    tooling:
+      # whether to enable tooling (UI) or not
+      enabled: true
+
+  backup:
+    onlineQuiesce: false
+    offlineQuiesce: false
+
+  ##############################
+  ## Datastore Configurations ##
+  ##############################
+
+  etcd:
+    storageClassName: ""
+    storageSize: "1Gi"
+  kafka:
+    storageClassName: ""
+    storageSize: "1Gi"
+    zookeeper:
+      storageSize: "1Gi"
+  minio:
+    storageClassName: ""
+    storageSize: "20Gi"
+  postgres:
+    storageClassName: ""
+    storageSize: "5Gi"
+    backupStorageClassName: ""
+
+  datastores:
+    elasticSearch:
+      analytics:
+        type: cloudpakopenElasticSearch
+        cloudpakopenElasticSearch:
+          storageClassName: ""
+          storageSize: "" # Default size is 40Gi
+      store:
+        type: cloudpakopenElasticSearch
+        cloudpakopenElasticSearch:
+          storageClassName: ""
+          storageSize: "" # Default size is 10Gi
+
+  analytics:
+    crossInstanceQueryScope:
+      enabled: "false"
+  appConfigOverrides: |-4
+    # Preserve this line and the the |-4 specifier above, also note that contraintuitively all the entries MUST BE INDENTED by 6 initial spaces.
+    # The above is required, becase the cpd-cli have very,very limited templating support.
+    #   We have to use this "specified as multiline string" work-arround/hack to be able to provide arbitrary override data.
+    # Also note that you are not allowed to use " or ' to wrap the values (cpd cpd-cli converts these entries and the installation would break)
+    # Sample content
+    #container_images:
+    #  store:
+    #    tag: 20201028-111825-43892a

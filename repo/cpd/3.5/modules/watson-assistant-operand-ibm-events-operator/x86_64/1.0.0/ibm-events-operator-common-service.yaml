@@ -1,0 +1,12 @@
+apiVersion: operator.ibm.com/v1alpha1
+kind: OperandRequest
+metadata:
+  name: {{ .releaseName }}
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }} # must inject release label for cpd tracking status
+spec:
+  requests:
+  - operands:
+      - name: ibm-events-operator
+    registry: {{ .watsonAssistant.events.registry }}
+    registryNamespace: {{ .watsonAssistant.events.commonServiceNamespace }}

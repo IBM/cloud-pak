@@ -1,0 +1,32 @@
+type: module
+category: cr-yamls
+
+name: watson-assistant
+description: "Creates a Watson Assistant Custom Resource to deploy an IBM Watson Assistant for IBM Cloud Pak for Data instance"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: wa-registry
+
+# Timeout to monitor all CR status, <= 0 means cpd will fail
+timeout: 60 #minutes
+
+# Override file to update the crContent before creation
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+releaseName: watson-assistant
+
+operatorType: ansible
+
+# The list of the CR to be created (rendered by override files before apply)
+crFiles:
+- file: assistant.watson.ibm.com_watsonassistant_cr.yaml
+
+#uninstall:
+  #before: pre-uninstall-job.yaml # Optional: Only executed before delete all resources from the module
+  #after: post-uninstall-job.yaml # Optional: Only executed after all resources from the module deleted
+#  uninstallLabels:
+#    job:
+#      product: ibm-watson-assistant
+#      InstanceId: {{ .instanceId }}
+#    deployment:
+#      InstanceId: {{ .instanceId }}

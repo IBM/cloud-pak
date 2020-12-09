@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: watson-assistant-operand-viewer-role
+  labels:
+    operator: watson-assistant-operator
+rules:
+- apiGroups: # Not part of cpd-viewer-role
+  - operator.ibm.com
+  resources:
+  - operandrequests
+  verbs:
+  - get
+  - watch
+  - list

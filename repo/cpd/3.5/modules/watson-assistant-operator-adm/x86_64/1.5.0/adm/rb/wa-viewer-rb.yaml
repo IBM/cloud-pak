@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: watson-assistant-viewer-rb
+  labels:
+    operator: watson-assistant-operator
+roleRef:
+  kind: Role
+  name: watson-assistant-viewer-role
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+  # We are granting additional permissions to existing CP4D user / service accounts so that they can also see / update Watson Assistant objects
+  - kind: ServiceAccount
+    name: cpd-viewer-sa

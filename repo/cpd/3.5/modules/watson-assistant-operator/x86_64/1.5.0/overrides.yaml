@@ -1,0 +1,26 @@
+global:
+  # To make cp4d installer happy
+  dockerRegistryPrefix: "cp.icr.io/cp/watson-assistant"
+
+image:
+  # image.pullSecret - Name of the (manually created) imagePullSecret used to pull docker images.
+  pullSecret: "docker-pull-{{ .Release.Namespace }}-cp-icr-io-wa-registry-registry"
+
+  # image.repository - repository where to pull images from
+  repository: '{{ (tpl ( .Values.global.dockerRegistryPrefix | toString ) . ) | trimSuffix "/" }}/'
+
+crd:
+  create: false # Created by watson-assistant-operator-adm module
+
+rbac:
+  # rbac.create - specifies whether RBAC (Role and RoleBinding) resources should be created
+  create: false # Created by watson-assistant-operator-adm module
+
+serviceAccount:
+  # serviceAccount.create - specifies whether a ServiceAccount should be created
+  create: false # Created by watson-assistant-operator-adm module
+  # serviceAccount.name - the name of the ServiceAccount to use. If not provided the service account name is generated. Templates like `{{ .Values.global.serviceAccount.name }}` are supported.
+  name: "watson-assistant-operator-sa"
+
+# User accepts the license for the WA in the cpd-cli / clp-linux command during installation
+license: true
