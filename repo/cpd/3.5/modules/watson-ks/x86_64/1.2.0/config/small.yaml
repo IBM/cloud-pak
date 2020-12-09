@@ -1,0 +1,18 @@
+# the first level key shows the CR file name defined in module’s main.yaml
+cr.yaml:
+  global:
+    highAvailabilityMode: false
+  replicaCount: 1
+  broker:
+    replicas: 1
+  dispatcher:
+    replicas: 1
+  mma:
+    replicas: 1
+  glimpse:
+    builder:
+      replicas: 1
+    query:
+      replicas: 1
+  awt:
+    replicas: 1

@@ -1,0 +1,165 @@
+global:
+  clusterDomain: "cluster.local"
+  storageClassName: "nfs-client"
+  highAvailabilityMode: true
+  quiesceMode: false
+replicaCount: 2
+image:
+  tag: release-3-62-0-20201109-1147-4
+dvt:
+  image:
+    tag: ubi-master-20201105-0203-10
+broker:
+  replicas: 2
+  image:
+    tag: release-3-62-0-20201109-1147-4
+dispatcher:
+  replicas: 2
+  image:
+    tag: release-3-62-0-20201109-1147-4
+initContainer:
+  keystoreGen:
+    image:
+      tag: master-20201108-1926-224
+creds:
+  image:
+    tag: "1.1.9"
+mongodb:
+  replicas: 3
+  config:
+    image:
+      tag: "1.3.1"
+  mongodbInstall:
+    image:
+      tag: "1.3.1"
+  mongodb:
+    image:
+      tag: "1.3.1"
+  creds:
+    image:
+      tag: "1.1.9"
+  test:
+    image:
+      tag: "1.3.1"
+  persistentVolume:
+    size: 20Gi
+minio:
+  replicas: 4
+  minio:
+    image:
+      tag: "1.1.5"
+  minioClient:
+    image:
+      tag: "1.0.5"
+  creds:
+    image:
+      tag: "1.1.9"
+  persistence:
+    size: 50Gi
+postgresql:
+  replicas: 3
+  persistence:
+    size: 10Gi
+  stolon:
+    image:
+      tag: "v1-ubi8-amd64"
+  postgres:
+    image:
+      tag: "ubi8-amd64"
+  useSingleMountPoint: true
+sire:
+  jobq:
+    image:
+      tag: "master-7a249570-166"
+    tenants:
+      train:
+        max_queued_and_active_per_user: 10
+        max_active_per_user: 2
+      evaluate:
+        max_queued_and_active_per_user: 10
+        max_active_per_user: 2
+  trainFacade:
+    image:
+      tag: "master-c77087e4-185"
+  trainJob:
+    image:
+      tag: "wdc-20181119-2a6bcd6e-86-master-b035e168-184"
+  batchApplyJob:
+    image:
+      tag: "wdc-20181119-2a6bcd6e-86-master-b035e168-184"
+  sireg:
+    image:
+      tag: "wdc-20181119-cf4a181a-84-master-ea98066c-163-with-templates"
+    languages:
+      en:
+        enabled: true
+      ar:
+        enabled: true
+      de:
+        enabled: true
+      es:
+        enabled: true
+      fr:
+        enabled: true
+      it:
+        enabled: true
+      ja:
+        enabled: true
+      ko:
+        enabled: true
+      nl:
+        enabled: true
+      pt:
+        enabled: true
+      zh:
+        enabled: true
+      zht:
+        enabled: true
+mma:
+  modelManagementApi:
+    image:
+      tag: 1.0.1216-g92289df7.20-11-05-193003.icp-main
+  replicas: 2
+  postgres:
+    image:
+      tag: "1.2.0-20201112-0747-4"
+glimpse:
+  create: true
+  creds:
+    image:
+      tag: "1.1.9"
+  builder:
+    image:
+      tag: release-3-62-0-20201109-1147-4
+    replicas: 2
+  query:
+    replicas: 2
+    modelmesh:
+      image:
+        tag: main-20201119-6
+    glimpse:
+      image:
+        tag: release-3-62-0-20201109-1147-4
+etcd:
+  replicaCount: 5
+  image:
+    tag: 2.1.0
+  dataPVC:
+    size: 10Gi
+awt:
+  create: true
+  replicas: 2
+  tooling:
+    image:
+      tag: "wlp-master-1.1.17-202012041134"
+  proxy:
+    image:
+      tag: "ubi-0.1.5-202011100214"
+  dbInit:
+    image:
+      tag: "1.2.0-20201112-0747-4"
+  persistentVolume:
+    storageClassName: ""
+    size: 20Gi
+wcn:
+  version: "v1.0.1"
