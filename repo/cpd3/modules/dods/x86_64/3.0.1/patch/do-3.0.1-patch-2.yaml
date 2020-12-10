@@ -1,0 +1,7 @@
+images:
+- dd-scenario-api:3.0.30-amd64
+- dd-scenario-ui:3.0.5-amd64
+- dd-cognitive:3.0.8-amd64
+- dd-init:3.0.5-amd64
+patchFile: patchCommands.txt
+description: "Fix patch for cpd 3.0.1. Support for Python 3.7. Please make sure you installed runtime-addon-py37 before patching. Also, this patch depends on CSS cpd-3.0.1-ccs-patch-7-8 patch. Please make sure you installed it as well"
