@@ -4,6 +4,10 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/edb-apimgmt
+  - image: cp/cpd/edb-operator
+  - image: cp/cpd/edb-postgresql-12
+  - image: cp/cpd/edb-stolon
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
@@ -43,13 +47,24 @@ images:
   - image: cp/knowledge-studio/wks-ene-expand
   - image: cp/knowledge-studio/wks-glimpse-ene-builder
   - image: cp/knowledge-studio/wks-ibmjdk8-rhubi8
+  - image: cp/knowledge-studio/wks-nosql-4
+  - image: cp/knowledge-studio/wks-nosql-bats
+  - image: cp/knowledge-studio/wks-nosql-config-copy
+  - image: cp/knowledge-studio/wks-nosql-install
+  - image: cp/knowledge-studio/wks-operator
+  - image: cp/knowledge-studio/wks-pginit
   - image: cp/knowledge-studio/wkstoolbox
+  - image: cp/opencontent-etcd-operator
+  - image: cp/opencontent-minio-operator
+  - image: cp/watson-gateway
+  - image: cp/watson-gateway-operator
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-common-utils
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-etcd-3
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-icp-cert-gen-1
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-minio-client
   - image: hyc-cp-opencontent-docker-local.artifactory.swg-devops.com/opencontent-postgres-stolon
+  - image: icp4data-nginx-repo
   - image: us.icr.io/icp-common-components/watson-gateway
   - image: us.icr.io/knowledge_studio/dispatcher
   - image: us.icr.io/knowledge_studio/frontend-icp
