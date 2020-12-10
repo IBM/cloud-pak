@@ -1,0 +1,23 @@
+images:
+  - spark-hb-jkg:2.4.7.v1.2-ppc64le
+  - spark-hb-truststore-util:3.0.30.6-ppc64le
+  - spark-hb-nginx:3.0.30.6-ppc64le
+  - spark-hb-helm-repo:3.0.30.6-ppc64le
+  - spark-hb-control-plane:3.0.30.6-ppc64le
+patchFile: patchCommands.txt
+resourcesChanged:
+  - Kind: CronJob
+    Name: spark-hb-preload-jkg-image
+  - Kind: ConfigMap
+    Name: spark-hb-deployment-properties
+  - Kind: ConfigMap
+    Name: spark-hb-nginx-configmap
+  - Kind: ConfigMap
+    Name: hummingbird-route
+  - Kind: Deployment
+    Name: spark-hb-nginx
+  - Kind: Deployment
+    Name: spark-hb-helm-repo
+  - Kind: Deployment
+    Name: spark-hb-control-plane
+description: "added support for Python 3.7 and Spark 2.4.7"
