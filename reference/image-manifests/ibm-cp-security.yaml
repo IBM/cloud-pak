@@ -1,5 +1,5 @@
 source: ibm-cp-security-bundle/case/ibm-cp-security/case.yaml
-description: "IBM Cloud Pak for Security"
+description: "Integrate existing security tools to gain deeper insights into threats and risks, orchestrate actions and automate responses"
 images:
   - image: cp/cp4s/foundations/busybox
   - image: cp/cp4s/foundations/couchdb3
@@ -9,6 +9,7 @@ images:
   - image: cp/cp4s/foundations/init
   - image: cp/cp4s/foundations/isc-ambassador
   - image: cp/cp4s/foundations/isc-entitlements-operator
+  - image: cp/cp4s/foundations/isc-helper-operator
   - image: cp/cp4s/foundations/isc-kube-arango-operator
   - image: cp/cp4s/foundations/isc-middleware-operator
   - image: cp/cp4s/foundations/isc-minio
@@ -37,11 +38,20 @@ images:
   - image: cp/cp4s/solutions/arangodb-enterprise
   - image: cp/cp4s/solutions/arangodb-exporter
   - image: cp/cp4s/solutions/command-interpreter
+  - image: cp/cp4s/solutions/cp4s-backup-restore
   - image: cp/cp4s/solutions/cp4s-car-connector-config
   - image: cp/cp4s/solutions/cp4s-car-frontend-ui
   - image: cp/cp4s/solutions/cp4s-toolbox
+  - image: cp/cp4s/solutions/crunchy-postgres10-ha
   - image: cp/cp4s/solutions/crunchy-postgres96-ha
   - image: cp/cp4s/solutions/homer-qproxy
+  - image: cp/cp4s/solutions/ibmjava11
+  - image: cp/cp4s/solutions/idrmdashboard
+  - image: cp/cp4s/solutions/idrmingestion
+  - image: cp/cp4s/solutions/idrmintex
+  - image: cp/cp4s/solutions/idrmnode
+  - image: cp/cp4s/solutions/idrmpostgres
+  - image: cp/cp4s/solutions/idrmrisk
   - image: cp/cp4s/solutions/isc-aitk-orchestrator
   - image: cp/cp4s/solutions/isc-aitk-webui
   - image: cp/cp4s/solutions/isc-authsvc
@@ -49,6 +59,7 @@ images:
   - image: cp/cp4s/solutions/isc-car-connector-atp
   - image: cp/cp4s/solutions/isc-car-connector-aws
   - image: cp/cp4s/solutions/isc-car-connector-azure
+  - image: cp/cp4s/solutions/isc-car-connector-drm
   - image: cp/cp4s/solutions/isc-car-connector-guardium
   - image: cp/cp4s/solutions/isc-car-connector-iam
   - image: cp/cp4s/solutions/isc-car-connector-tenable
@@ -73,6 +84,7 @@ images:
   - image: cp/cp4s/solutions/isc-common-configstore
   - image: cp/cp4s/solutions/isc-common-console
   - image: cp/cp4s/solutions/isc-common-shell
+  - image: cp/cp4s/solutions/isc-common-xfeplus-coordinator
   - image: cp/cp4s/solutions/isc-common-xfeplus-profileservice-ocp
   - image: cp/cp4s/solutions/isc-common-xfeplus-reports
   - image: cp/cp4s/solutions/isc-common-xfeplus-search-service
@@ -88,13 +100,18 @@ images:
   - image: cp/cp4s/solutions/isc-investigate-backend
   - image: cp/cp4s/solutions/isc-investigate-webui
   - image: cp/cp4s/solutions/isc-postgresql-operator
+  - image: cp/cp4s/solutions/isc-run-thl
   - image: cp/cp4s/solutions/isc-settings-datasources
   - image: cp/cp4s/solutions/isc-tis-aia
+  - image: cp/cp4s/solutions/isc-tis-connector-manager
   - image: cp/cp4s/solutions/isc-tis-coordinator
+  - image: cp/cp4s/solutions/isc-tis-cortex
   - image: cp/cp4s/solutions/isc-tis-data-gateway
+  - image: cp/cp4s/solutions/isc-tis-enrich-queue
   - image: cp/cp4s/solutions/isc-tis-rfi
   - image: cp/cp4s/solutions/isc-tis-score-controller
   - image: cp/cp4s/solutions/isc-tis-user-registration
+  - image: cp/cp4s/solutions/isc-udi-analyzer
   - image: cp/cp4s/solutions/isc-udi-endpoint
   - image: cp/cp4s/solutions/isc-udi-worker
   - image: cp/cp4s/solutions/isc-uds2file
@@ -108,6 +125,7 @@ images:
   - image: cp/cp4s/solutions/pgo-scheduler
   - image: cp/cp4s/solutions/postgres-operator
   - image: cp/cp4s/solutions/pulse-dashboard
+  - image: cp/cp4s/solutions/stix_shifter_modules_arcsight
   - image: cp/cp4s/solutions/stix_shifter_modules_aws_cloud_watch_logs
   - image: cp/cp4s/solutions/stix_shifter_modules_azure_sentinel
   - image: cp/cp4s/solutions/stix_shifter_modules_bigfix
@@ -276,11 +294,13 @@ images:
   - image: cp/redis-proxy-5.0.5
   - image: cp/redis-proxylog-5.0.5
   - image: cp/redis-telemetry-5.0.5
+  - image: docker.elastic.co/elasticsearch/elasticsearch-oss
   - image: ibmcom/couchdb2
   - image: ibmcom/couchdb3
   - image: ibmcom/couchdb-operator
   - image: ibmcom/couchdb-operator-catalog
   - image: ibmcom/couchdb-operator-mgmt
+  - image: ibmcom/cp-serviceability
   - image: ibmcom/ibm-cloud-databases-redis-catalog
   - image: ibmcom/ibm-cloud-databases-redis-operator
   - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
@@ -299,27 +319,47 @@ images:
   - image: quay.io/opencloudio/iam-policy-administration
   - image: quay.io/opencloudio/iam-policy-controller
   - image: quay.io/opencloudio/iam-policy-decision
+  - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
   - image: quay.io/opencloudio/ibm-catalog-ui-operator
+  - image: quay.io/opencloudio/ibm-catalog-ui-operator-bundle
   - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
   - image: quay.io/opencloudio/ibm-common-service-catalog
+  - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-commonui-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-dashboard-data-collector
+  - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
   - image: quay.io/opencloudio/ibm-helm-api-operator
+  - image: quay.io/opencloudio/ibm-helm-api-operator-bundle
   - image: quay.io/opencloudio/ibm-helm-repo-operator
+  - image: quay.io/opencloudio/ibm-helm-repo-operator-bundle
   - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-iam-operator-bundle
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
+  - image: quay.io/opencloudio/ibm-licensing-operator-bundle
   - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
   - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/ibm-metering-operator-bundle
   - image: quay.io/opencloudio/ibm-mongodb
   - image: quay.io/opencloudio/ibm-mongodb-exporter
   - image: quay.io/opencloudio/ibm-mongodb-install
   - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-mongodb-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
   - image: quay.io/opencloudio/ibm-secretshare-operator
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-catalog-ui
@@ -349,9 +389,11 @@ images:
   - image: quay.io/opencloudio/metering-report
   - image: quay.io/opencloudio/metering-ui
   - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller
   - image: quay.io/opencloudio/node-exporter
   - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
   - image: quay.io/opencloudio/prometheus
   - image: quay.io/opencloudio/prometheus-config-reloader
   - image: quay.io/opencloudio/prometheus-controller
