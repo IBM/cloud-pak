@@ -119,10 +119,12 @@ images:
   - image: cp/cp4mcm/etcd
   - image: cp/cp4mcm/etcd-operator
   - image: cp/cp4mcm/event-evaluator
+  - image: cp/cp4mcm/evidence-store-manager
   - image: cp/cp4mcm/findings-adapter
   - image: cp/cp4mcm/grafeas
   - image: cp/cp4mcm/ham-application-assembler
   - image: cp/cp4mcm/ham-deployable-operator
+  - image: cp/cp4mcm/ham-placement
   - image: cp/cp4mcm/ham-resource-discoverer
   - image: cp/cp4mcm/hdm-brokers
   - image: cp/cp4mcm/hdm-cem-users
@@ -140,6 +142,7 @@ images:
   - image: cp/cp4mcm/httpd
   - image: cp/cp4mcm/hybrid-grc-policy-propagator
   - image: cp/cp4mcm/ibm-cp4mcm-manage-runtime-operator
+  - image: cp/cp4mcm/ibm-cp4mcm-manage-runtimes
   - image: cp/cp4mcm/ibm-infra-management-install-operator
   - image: cp/cp4mcm/ibm-kong-operator
   - image: cp/cp4mcm/ibm-license-advisor-db
@@ -223,6 +226,10 @@ images:
   - image: cp/cp4mcm/metric_service_db
   - image: cp/cp4mcm/metricsummarycreation
   - image: cp/cp4mcm/metric_summary_policy
+  - image: cp/cp4mcm/metricsvc-api-ingress
+  - image: cp/cp4mcm/metricsvc-api-query
+  - image: cp/cp4mcm/metricsvc-collector-kafka
+  - image: cp/cp4mcm/metricsvc-summary-policy
   - image: cp/cp4mcm/minio
   - image: cp/cp4mcm/minio-mc
   - image: cp/cp4mcm/nasm-elasticsearch
@@ -235,6 +242,7 @@ images:
   - image: cp/cp4mcm/notary-server
   - image: cp/cp4mcm/notary-signer
   - image: cp/cp4mcm/opencontent-redis-3
+  - image: cp/cp4mcm/opencontent-redis-5
   - image: cp/cp4mcm/opentt-analyzer
   - image: cp/cp4mcm/opentt-collector
   - image: cp/cp4mcm/opentt-ingester
@@ -508,6 +516,7 @@ images:
   - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/cp4mcm/cp4mcm-orchestrator-bundle
   - image: quay.io/cp4mcm/cp4mcm-orchestrator-catalog
+  - image: quay.io/cp4mcm/cp4mcm-orchestrator-operator-bundle
   - image: quay.io/cp4mcm/ibm-management-orchestrator
   - image: quay.io/hybridappio/ham-application-assembler
   - image: quay.io/hybridappio/ham-deployable-operator
