@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 2.1.0
+  catalogs:
+    deploy: {}
+    operations: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Infrastructure Management VM Operator
+  displayDescription: IBM Infrastructure Management VM Operator
+  displayName: IBM Infrastructure Management VM Operator
+  icons: []
+  licenses:
+    cp4mcm-20-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Multicloud Management v2.0
+        displayName: cp4mcm-20-license
+      ref: LICENSE
+      url: https://ibm.biz/cp4mcm-20-license
+  name: ibm-management-infra-vm
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 2.2.0
+  webPage: https://www.ibm.com
+created: 2020-12-11T15:26:31.41324980+0000
+digest: sha256:fdacf4859290681550ce523398746e01c5962ca7b3f3ab1e3e0f4cf6e3b1bee4
