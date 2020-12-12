@@ -1,0 +1,5 @@
+patch deployment redis-ha-haproxy --patch '{"spec": {"template": {"spec": {"containers": [{"name": "haproxy","image": "{{.DockerRegistryPrefix}}/haproxy:2.0.14-35"}]}}}}'
+patch sts wdp-couchdb --patch '{"spec": {"template": {"spec": {"containers": [{"name": "couchdb","image": "{{.DockerRegistryPrefix}}/couchdb3:3.1.1-99"}], "initContainers": [{"name": "init-copy","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.117"}]}}}}'
+patch sts redis-ha-server --patch '{"spec": {"template": {"spec": {"containers": [{"name": "redis","image": "{{.DockerRegistryPrefix}}/redis:6.0.8-118"}]}}}}'
+patch sts elasticsearch-master --patch '{"spec": {"template": {"spec": {"containers": [{"name": "haproxy","image": "{{.DockerRegistryPrefix}}/haproxy:2.0.14-35"}, {"name": "wdp-elasticsearch","image": "{{.DockerRegistryPrefix}}/elasticsearch:7.8.1-118"}]}}}}'
+patch sts rabbitmq-ha --patch '"spec": {"template": {"spec": {"containers": [{"name": "wdp-rabbitmq","image": "{{.DockerRegistryPrefix}}/rabbitmq:3.8.5-114"}], "initContainers": [{"name": "copy-rabbitmq-config","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.117"}]}}}'
