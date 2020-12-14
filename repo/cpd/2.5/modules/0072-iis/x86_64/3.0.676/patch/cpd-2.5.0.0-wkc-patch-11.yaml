@@ -1,0 +1,13 @@
+images:
+- is-en-compute-image:b187-cypress-b45
+- is-db2xmeta-image:b187-cypress-b45
+- is-services-image:b187-cypress-b45
+- is-engine-image:b187-cypress-b45
+- wkc-init-container:1.0.81
+- wkc-ugconfig:3.0.80
+- solr-x86_64:8.6.3_b773_9e2daf854007
+- cassandra-x86_64:3.11.8_b773_9e2daf854007
+- zookeeper-x86_64:3.4.14_b773_9e2daf854007
+- kafka-x86_64:2.11-2.1.1_b773_9e2daf854007
+patchFile: patchCommands.txt
+description: "WKC 3.0 Patch"
