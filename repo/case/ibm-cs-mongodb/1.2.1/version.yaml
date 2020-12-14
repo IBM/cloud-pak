@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 1.2.1
+  catalogs:
+    framework: {}
+    icpclusterresource: {}
+    mcm: {}
+    rhocp: {}
+    ui: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Common Services MongoDB microservice in a k8s cluster
+  displayDescription: ""
+  displayName: IBM MongoDB Operator CASE Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-cs-mongodb
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.2.1
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.2.1
+  webPage: https://www.ibm.com
+created: 2020-12-14T15:35:29.95909918+0000
+digest: sha256:3da9809101d6f9488ab141c36b126360d71898c95eea7b5e940da85a88280f82
