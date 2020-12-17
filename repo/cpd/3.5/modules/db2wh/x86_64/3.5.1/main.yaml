@@ -1,0 +1,32 @@
+chart: zen-databases-catalog-3.5.1.tgz
+helmUpgradeForce: true
+images:
+  - name: zen-databases-catalog-db2wh
+    tag: 3.5.1-2314-dev-x86_64
+  - name: db2u.auxiliary.auth
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u.instdb
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u.tools
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u.hurricane
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u.bigsql.mariadb
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u.rest
+    tag: 11.5.5.0-2314-x86_64
+  - name: db2u.graph
+    tag: 11.5.5.0-2314-x86_64
+  - name: etcd
+    tag: 3.3.10-2314-x86_64
+installOverride: install-override.yaml
+name: db2wh module
+registry-reference: base-registry
+releaseName: db2wh-catalog-11.5.5.0
+serviceInstanceType:
+  - db2wh
+timeout: 90
+type: module
+upgradeOverride: install-override.yaml
