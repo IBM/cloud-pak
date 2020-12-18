@@ -1,0 +1,2 @@
+patch statefulset core-discovery-converter  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "converter","image": "{{.DockerRegistryPrefix}}/wd-ingestion:12.0.5-2024"}]}}}}'
+patch statefulset core-discovery-sdu-api  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "sdu","image": "{{.DockerRegistryPrefix}}/sdu-spark:1.5.39.1"}]}}}}'
