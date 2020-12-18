@@ -1,36 +1,226 @@
 source: ibm-baw-case-bundle/case/ibm-cs-bawautomation/case.yaml
 description: "A CASE for an operator which deploys baw operator"
 images:
+  - image: cp/cp4a/aae/dba-etcd
+  - image: cp/cp4a/aae/dba-keytool-initcontainer
+  - image: cp/cp4a/aae/solution-server
+  - image: cp/cp4a/aae/solution-server-helmjob-db
+  - image: cp/cp4a/ads/ads-front
+  - image: cp/cp4a/ads/ads-runtime
   - image: cp/cp4a/bai/bai-admin
+  - image: cp/cp4a/bai/bai-bawadv
   - image: cp/cp4a/bai/bai-bpmn
   - image: cp/cp4a/bai/bai-content
   - image: cp/cp4a/bai/bai-elasticsearch
   - image: cp/cp4a/bai/bai-event-forwarder
   - image: cp/cp4a/bai/bai-flink
+  - image: cp/cp4a/bai/bai-flink-taskmanager
   - image: cp/cp4a/bai/bai-flink-zookeeper
   - image: cp/cp4a/bai/bai-icm
   - image: cp/cp4a/bai/bai-ingestion
   - image: cp/cp4a/bai/bai-init
   - image: cp/cp4a/bai/bai-kibana
+  - image: cp/cp4a/bai/bai-management
   - image: cp/cp4a/bai/bai-monitoring-app
+  - image: cp/cp4a/bai/bai-odm
   - image: cp/cp4a/bai/bai-setup
+  - image: cp/cp4a/bai/dba-keytool-initcontainer
+  - image: cp/cp4a/bai/dba-umsregistration-initjob
+  - image: cp/cp4a/ban/navigator
   - image: cp/cp4a/ban/navigator-sso
+  - image: cp/cp4a/bas/bastudio
+  - image: cp/cp4a/bas/dba-dbcompatibility-initcontainer
+  - image: cp/cp4a/bas/dba-etcd
+  - image: cp/cp4a/bas/dba-keytool-initcontainer
+  - image: cp/cp4a/bas/dba-keytool-jobcontainer
+  - image: cp/cp4a/bas/dba-umsregistration-initjob
+  - image: cp/cp4a/bas/jms
+  - image: cp/cp4a/bas/solution-server
+  - image: cp/cp4a/bas/solution-server-helmjob-db
+  - image: cp/cp4a/bas/workflow-authoring
+  - image: cp/cp4a/baw/bui-task-prioritization
   - image: cp/cp4a/baw/dba-dbcompatibility-initcontainer
   - image: cp/cp4a/baw/dba-etcd
   - image: cp/cp4a/baw/dba-keytool-initcontainer
   - image: cp/cp4a/baw/dba-keytool-jobcontainer
   - image: cp/cp4a/baw/dba-umsregistration-initjob
+  - image: cp/cp4a/baw/iaws-ibm-workplace
   - image: cp/cp4a/baw/iaws-ps-content-integration
   - image: cp/cp4a/baw/jms
+  - image: cp/cp4a/baw-operator-bundle
   - image: cp/cp4a/baw/pfs-bpd-database-init-prod
   - image: cp/cp4a/baw/pfs-elasticsearch-prod
   - image: cp/cp4a/baw/pfs-init-prod
   - image: cp/cp4a/baw/pfs-nginx-prod
   - image: cp/cp4a/baw/pfs-prod
+  - image: cp/cp4a/baw/toolkit-installer
   - image: cp/cp4a/baw/workflow-server
   - image: cp/cp4a/baw/workflow-server-case-initialization
   - image: cp/cp4a/baw/workflow-server-dbhandling
+  - image: cp/cp4a/baw/workforce-insights
+  - image: cp/cp4a/demo/alpine
+  - image: cp/cp4a/demo/busybox
+  - image: cp/cp4a/demo/gitea
+  - image: cp/cp4a/demo/openldap
+  - image: cp/cp4a/demo/phpldapadmin
   - image: cp/cp4a/fncm/cmis
   - image: cp/cp4a/fncm/cpe
+  - image: cp/cp4a/fncm/css
+  - image: cp/cp4a/fncm/extshare
+  - image: cp/cp4a/fncm/graphql
+  - image: cp/cp4a/fncm/taskmgr
+  - image: cp/cp4a/iadp/backend
+  - image: cp/cp4a/iadp/cdra
+  - image: cp/cp4a/iadp/cds
+  - image: cp/cp4a/iadp/cpds
+  - image: cp/cp4a/iadp/deep_learning
+  - image: cp/cp4a/iadp/extraction
+  - image: cp/cp4a/iadp/gitgateway
+  - image: cp/cp4a/iadp/mongo
+  - image: cp/cp4a/iadp/natural_language_extractor
+  - image: cp/cp4a/iadp/processing
+  - image: cp/cp4a/iadp/rabbitmq
+  - image: cp/cp4a/iadp/redis
+  - image: cp/cp4a/iadp/viewone
+  - image: cp/cp4a/ibm-cs-bawautomation-catalog
+  - image: cp/cp4a/iccsap/iccsap
   - image: cp/cp4a/icp4a-operator
+  - image: cp/cp4a/ier/ier
+  - image: cp/cp4a/odm/dba-keytool-initcontainer
+  - image: cp/cp4a/odm/dbserver
+  - image: cp/cp4a/odm/odm-decisioncenter
+  - image: cp/cp4a/odm/odm-decisionrunner
+  - image: cp/cp4a/odm/odm-decisionserverconsole
+  - image: cp/cp4a/odm/odm-decisionserverruntime
+  - image: cp/cp4a/ums/dba-keytool-initcontainer
+  - image: cp/cp4a/ums/dba-keytool-jobcontainer
   - image: cp/cp4a/ums/ums
+  - image: cp/ibm-eventstreams-admin
+  - image: cp/ibm-eventstreams-admin-ui
+  - image: cp/ibm-eventstreams-apicurio-registry
+  - image: cp/ibm-eventstreams-jmxtrans
+  - image: cp/ibm-eventstreams-kafka
+  - image: cp/ibm-eventstreams-metrics-collector
+  - image: cp/ibm-eventstreams-rest-producer
+  - image: cp/ibm-eventstreams-schema-proxy
+  - image: cp/ibm-eventstreams-schema-registry
+  - image: cp/ibm-eventstreams-schema-registry-avro
+  - image: cp/ibm-eventstreams-session-store
+  - image: ibmcom/ibm-common-service-catalog
+  - image: ibmcom/ibm-eventstreams-catalog
+  - image: ibmcom/ibm-eventstreams-operator
+  - image: ibmcom/ibm-eventstreams-operator-bundle
+  - image: ibmcom/ibm-eventstreams-operator-init
+  - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-garbage-collector
+  - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/audit-syslog-service
+  - image: quay.io/opencloudio/collectd-exporter
+  - image: quay.io/opencloudio/common-service-operator
+  - image: quay.io/opencloudio/common-web-ui
+  - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/curl
+  - image: quay.io/opencloudio/dashboard-controller
+  - image: quay.io/opencloudio/default-http-backend
+  - image: quay.io/opencloudio/fluentd
+  - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/grafana-ocpthanos-proxy
+  - image: quay.io/opencloudio/iam-policy-administration
+  - image: quay.io/opencloudio/iam-policy-controller
+  - image: quay.io/opencloudio/iam-policy-decision
+  - image: quay.io/opencloudio/ibm-auditlogging-operator
+  - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
+  - image: quay.io/opencloudio/ibm-catalog-ui-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
+  - image: quay.io/opencloudio/ibm-common-service-operator-bundle
+  - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
+  - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-dashboard-data-collector
+  - image: quay.io/opencloudio/ibm-elastic-stack-operator
+  - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-operator
+  - image: quay.io/opencloudio/ibm-events-operator-bundle
+  - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
+  - image: quay.io/opencloudio/ibm-helm-api-operator
+  - image: quay.io/opencloudio/ibm-helm-repo-operator
+  - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-iam-operator-bundle
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
+  - image: quay.io/opencloudio/ibm-license-service-reporter
+  - image: quay.io/opencloudio/ibm-license-service-reporter-ui
+  - image: quay.io/opencloudio/ibm-licensing
+  - image: quay.io/opencloudio/ibm-licensing-operator
+  - image: quay.io/opencloudio/ibm-licensing-operator-bundle
+  - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
+  - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/ibm-metering-operator-bundle
+  - image: quay.io/opencloudio/ibm-mongodb
+  - image: quay.io/opencloudio/ibm-mongodb-exporter
+  - image: quay.io/opencloudio/ibm-mongodb-install
+  - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-mongodb-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
+  - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
+  - image: quay.io/opencloudio/ibm-postgresql
+  - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-catalog-ui
+  - image: quay.io/opencloudio/icp-cert-manager-acmesolver
+  - image: quay.io/opencloudio/icp-cert-manager-cainjector
+  - image: quay.io/opencloudio/icp-cert-manager-controller
+  - image: quay.io/opencloudio/icp-cert-manager-webhook
+  - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icp-elasticsearch-oss
+  - image: quay.io/opencloudio/icp-filebeat-oss
+  - image: quay.io/opencloudio/icp-helm-api
+  - image: quay.io/opencloudio/icp-helm-repo
+  - image: quay.io/opencloudio/icp-helm-rudder
+  - image: quay.io/opencloudio/icp-iam-onboarding
+  - image: quay.io/opencloudio/icp-identity-manager
+  - image: quay.io/opencloudio/icp-identity-provider
+  - image: quay.io/opencloudio/icp-initcontainer
+  - image: quay.io/opencloudio/icp-kibana-oss
+  - image: quay.io/opencloudio/icp-logstash-oss
+  - image: quay.io/opencloudio/icp-management-ingress
+  - image: quay.io/opencloudio/icp-memcached
+  - image: quay.io/opencloudio/icp-oidcclient-watcher
+  - image: quay.io/opencloudio/icp-platform-api
+  - image: quay.io/opencloudio/icp-platform-auth
+  - image: quay.io/opencloudio/icp-platform-header
+  - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/indices-cleaner
+  - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/logging-pki-init
+  - image: quay.io/opencloudio/metering-data-manager
+  - image: quay.io/opencloudio/metering-mcmui
+  - image: quay.io/opencloudio/metering-report
+  - image: quay.io/opencloudio/metering-ui
+  - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/must-gather-service
+  - image: quay.io/opencloudio/nginx-ingress-controller
+  - image: quay.io/opencloudio/node-exporter
+  - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
+  - image: quay.io/opencloudio/prometheus
+  - image: quay.io/opencloudio/prometheus-config-reloader
+  - image: quay.io/opencloudio/prometheus-controller
+  - image: quay.io/opencloudio/prometheus-operator
+  - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/tiller
