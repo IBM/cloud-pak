@@ -1,0 +1,1 @@
+patch deployment ia-analysis --patch '{"spec":{"template":{"spec":{"containers":[{"image":"{{.DockerRegistryPrefix}}/ia-analysis:b1754_ea56dd1f8bd9","name":"ia-analysis"}]}}}}'
