@@ -1,0 +1,5 @@
+patch deployment fci-cedm-integration --patch '{"spec": {"template": {"spec": {"containers": [{"name": "cedm-integration","image": "{{.DockerRegistryPrefix}}/fci-cedm-integration:6.5.2-PATCH1"}]}}}}'
+patch deployment fci-security-auth-nodejs --patch '{"spec": {"template": {"spec": {"containers": [{"name": "nodejs","image": "{{.DockerRegistryPrefix}}/fci-security-auth:6.5.2-PATCH1"}]}}}}'
+patch deployment fci-case-manager-fci-solution --patch '{"spec": {"template": {"spec": {"containers": [{"name": "fci-solution","image": "{{.DockerRegistryPrefix}}/fci-solution:6.5.2-PATCH1"}]}}}}'
+patch statefulset fci-case-manager-fci-messaging --patch '{"spec": {"template": {"spec": {"containers": [{"name": "fci-messaging","image": "{{.DockerRegistryPrefix}}/fci-messaging:6.5.2-PATCH1"}]}}}}'
+patch deployment fci-common-ui-iui-config-service  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iui-config-service","image": "{{.DockerRegistryPrefix}}/fci-investigative-ui-config-service:6.5.2-PATCH2"}]}}}}'
