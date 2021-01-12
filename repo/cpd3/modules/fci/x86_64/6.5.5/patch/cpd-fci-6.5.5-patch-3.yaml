@@ -1,0 +1,35 @@
+images:
+- fci-cedm-integration:6.5.5-PATCH1
+- fci-graph-writer:6.5.5-PATCH3
+- fci-graph-gremlin-server:6.5.5-PATCH2
+- fci-investigative-ui-config:6.5.5-PATCH2
+- fci-investigative-ui:6.5.5-PATCH3
+- fci-solution:6.5.5-PATCH2
+- fci-graph-writer-init-pv:6.5.5-PATCH3
+- fci-search-liberty:6.5.5-PATCH2
+- fci-messaging:6.5.5-PATCH2
+- fci-logsearch:6.5.5-PATCH2
+- fci-cedm-data-store-client:6.5.5-PATCH2
+patchFile: patchCommands.txt
+resourcesChanged:
+- kind: Deployment
+  name: fci-search-liberty
+- kind: Deployment
+  name: fci-cedm-integration
+- kind: Deployment
+  name: fci-graph-writer-gremlin
+- kind: Deployment
+  name: fci-graph-writer-liberty
+- kind: Deployment
+  name: fci-common-ui-iui
+- kind: Deployment
+  name: fci-common-ui-iui-config-service
+- kind: Deployment
+  name: fci-case-manager-fci-solution
+- kind: Statefulset
+  name: fci-case-manager-fci-messaging
+- kind: Statefulset
+  name: fci-elasticsearch
+- kind: Configmap
+  name: fci-elasticsearch
+description: "Patch 3 for FCI 6.5.5"
