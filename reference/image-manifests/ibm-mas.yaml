@@ -52,11 +52,16 @@ images:
   - image: cp/predict/predict-workspaceagent
   - image: cp/visualinspection/vision-dnn-actiondetect
   - image: cp/visualinspection/vision-dnn-custom
+  - image: cp/visualinspection/vision-dnn-custom-deploy
+  - image: cp/visualinspection/vision-dnn-deploy
   - image: cp/visualinspection/vision-dnn-detectron
+  - image: cp/visualinspection/vision-dnn-detectron-deploy
   - image: cp/visualinspection/vision-dnn-edge
   - image: cp/visualinspection/vision-dnn-microservices
   - image: cp/visualinspection/vision-dnn-ssd
+  - image: cp/visualinspection/vision-dnn-ssd-deploy
   - image: cp/visualinspection/vision-dnn-yolov3
+  - image: cp/visualinspection/vision-dnn-yolov3-deploy
   - image: cp/visualinspection/vision-edge-connector
   - image: cp/visualinspection/vision-edge-mqttbroker
   - image: cp/visualinspection/vision-elasticsearch
@@ -84,6 +89,7 @@ images:
   - image: cp/wiotp/api-devops
   - image: cp/wiotp/api-importconnectors
   - image: cp/wiotp/api-mbgadmin
+  - image: cp/wiotp/api-messagesight
   - image: cp/wiotp/api-org
   - image: cp/wiotp/api-organizations
   - image: cp/wiotp/api-resourcecontroller
@@ -131,6 +137,7 @@ images:
   - image: cp/wiotp/iot-state-operator
   - image: cp/wiotp/iot-webui-operator
   - image: cp/wiotp/iot-workspaceagent
+  - image: cp/wiotp/iot-workspace-operator
   - image: cp/wiotp/kafkamodel-actions
   - image: cp/wiotp/kafkamodel-auth
   - image: cp/wiotp/kafkamodel-mfgx
@@ -140,6 +147,7 @@ images:
   - image: cp/wiotp/masuseragent
   - image: cp/wiotp/messagesight
   - image: cp/wiotp/messagesight-configurator
+  - image: cp/wiotp/monagent-msserver
   - image: cp/wiotp/monagent-org
   - image: cp/wiotp/mongomodel-actions
   - image: cp/wiotp/mongomodel-dm
