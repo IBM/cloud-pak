@@ -1,15 +1,41 @@
 source: ibm-mas-bundle/case/ibm-mas/case.yaml
 description: "IBM Maximo Application Suite"
 images:
+  - image: cp/assist/assist-useragent
+  - image: cp/assist/assist-workspaceagent
+  - image: cp/assist/ema-admin-console
+  - image: cp/assist/ema-anti-virus
+  - image: cp/assist/ema-api
+  - image: cp/assist/ema-common-util
+  - image: cp/assist/ema-crawler
+  - image: cp/assist/ema-diagnosis
+  - image: cp/assist/ema-diagnosis-dataloader
+  - image: cp/assist/ema-diagnosis-engine
+  - image: cp/assist/ema-diagnosis-engine-bn
+  - image: cp/assist/ema-diagnosis-engine-dt
+  - image: cp/assist/ema-diagnosis-evaluation
+  - image: cp/assist/ema-diagnosis-learning
+  - image: cp/assist/ema-haproxy
+  - image: cp/assist/ema-monitor
+  - image: cp/assist/ema-multi-tenant
+  - image: cp/assist/ema-pg-cronjob
+  - image: cp/assist/ema-redis
+  - image: cp/assist/ema-studio
+  - image: cp/assist/ema-technician
+  - image: cp/assist/hook-ca-assist
   - image: cp/health/healthadmin
   - image: cp/health/healthfinal
   - image: cp/health/health-usersyncagent
   - image: cp/health/health-workspaceagent
   - image: cp/health/hook-ca-health
   - image: cp/health/hook-preinstall-health
+  - image: cp/mas/accapppoints
   - image: cp/mas/admin-dashboard
   - image: cp/mas/api-licensing
   - image: cp/mas/appsuite-operator
+  - image: cp/mas/assist-operator
+  - image: cp/mas/catalogapi
+  - image: cp/mas/catalogmgr
   - image: cp/mas/coreapi
   - image: cp/mas/coreidp
   - image: cp/mas/coreidp-login
@@ -21,16 +47,21 @@ images:
   - image: cp/mas/hook-coreapi
   - image: cp/mas/hook-licensing
   - image: cp/mas/hook-routes
+  - image: cp/mas/hook-sls-migration
   - image: cp/mas/hook-trackdeploy
   - image: cp/mas/internalapi
   - image: cp/mas/iot-operator
   - image: cp/mas/kubectl
   - image: cp/mas/licensing-mediator
   - image: cp/mas/ltpakeys-generator
+  - image: cp/mas/milestonesapi
+  - image: cp/mas/mobileapi
   - image: cp/mas/monitor-operator
   - image: cp/mas/navigator
   - image: cp/mas/predict-operator
+  - image: cp/mas/push-notification-service
   - image: cp/mas/rlks
+  - image: cp/mas/safety-operator
   - image: cp/mas/usersync-coordinator
   - image: cp/mas/workspace-coordinator
   - image: cp/monitor/as-library
@@ -50,6 +81,13 @@ images:
   - image: cp/predict/hook-ca-predict
   - image: cp/predict/predict-api
   - image: cp/predict/predict-workspaceagent
+  - image: cp/safety/hook-ca-safety
+  - image: cp/safety/safety-api
+  - image: cp/safety/safety-ui
+  - image: cp/safety/safety-usersyncagent
+  - image: cp/safety/safety-workspaceagent
+  - image: cp/sls/api-licensing
+  - image: cp/sls/rlks
   - image: cp/visualinspection/vision-dnn-actiondetect
   - image: cp/visualinspection/vision-dnn-custom
   - image: cp/visualinspection/vision-dnn-custom-deploy
@@ -172,3 +210,6 @@ images:
   - image: cp/wiotp/state-updater
   - image: cp/wiotp/statsd
   - image: cp/wiotp/ui-dashboard
+  - image: ibmcom/ibm-sls
+  - image: ibmcom/ibm-sls-operator-bundle
+  - image: ibmcom/ibm-sls-operator-catalog
