@@ -1,0 +1,74 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Watson OpenScale
+version: 3.5.1
+# The description is mandatory
+description: "An open and scalable platform for machine learning"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference : base-registry
+scale:
+- small.yaml
+- medium.yaml
+# Image list
+images:
+- name: aios-bias-service
+  tag: 3.5.1.1617
+- name: aios-bkpi-combined-services
+  tag: 3.5.1.68
+- name: drift
+  tag: 3.5.1.909
+- name: aios-common-api
+  tag: 3.5.1.46
+- name: aios-common-api-nlp
+  tag: 3.5.1.46
+- name: aios-configuration-service
+  tag: 3.5.1.888
+- name: aios-datamart-service-api
+  tag: 3.5.1.227
+- name: aios-dashboard
+  tag: 3.5.1.34
+- name: explainability
+  tag: 3.5.1.1405
+- name: aios-fast-path
+  tag: 3.5.1.479
+- name: aios-feedback-service
+  tag: 3.5.1.511
+- name: aios-payload-logging-service
+  tag: 3.5.1.729
+- name: aios-payload-logging-service-api
+  tag: 3.5.1.526
+- name: model-operation-service-scheduling
+  tag: 3.5.1.265
+- name: aios-ml-gateway-discovery
+  tag: 3.5.1.940
+- name: aios-ml-gateway-service
+  tag: 3.5.1.940
+- name: aios-orch-notifications-service
+  tag: 3.5.1.8
+- name: model-risk-management
+  tag: 3.5.1.636
+- name: aios-etcd
+  tag: 3.3.3-ubi8-r13
+- name: aios-redis
+  tag: 5.5.0-ubi8-r22
+- name: aios-nginx-local
+  tag: 1.15.5-ubi8-r26
+- name: aios-kubectl
+  tag: 1.0.25
+- name: aios-kafka
+  tag: 0.0.19
+- name: aios-zoo-keeper
+  tag: 0.0.18
+- name: aios-migration-tool
+  tag: 2.5.97
+chart: ibm-aiopenscale-prod-3.5.1.tgz
+# For download to verify the chart file is correct, optional
+md5: fc27da6660bffdeaccf72cb66406b72d
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 60
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: aiopenscale

@@ -1,0 +1,5 @@
+toleratedCommands:
+  - command: scale --replicas=5 deployment ibm-nginx
+  - command: set resources deployment ibm-nginx --requests=cpu=500m,memory=1024Mi --limits=cpu=2000m,memory=2048Mi
+    toleratedRegularExpressions:
+      -  was not changed

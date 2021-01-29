@@ -4,7 +4,7 @@ category: cr-yamls
 name: watson-assistant
 description: "Creates a Watson Assistant Custom Resource to deploy an IBM Watson Assistant for IBM Cloud Pak for Data instance"
 # Registry name reference maps to the name in the server-info.yaml, mandatory
-registry-reference: wa-registry
+registry-reference : base-registry
 
 # Timeout to monitor all CR status, <= 0 means cpd will fail
 timeout: 60 #minutes

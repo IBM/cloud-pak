@@ -1,0 +1,83 @@
+category: helm-chart
+chart: ibm-planning-analytics-cpd-addon-3.5.1.tgz
+description: This module is for the Planning Analytics Add-on install
+images:
+- name: pa-cp4d-addon
+  tag: 3.5.1-1615
+- name: pa-cp4d-service-provider
+  tag: 2.0.55-172-3
+- name: pa-bss
+  tag: 1.0.1181-ubi7-3
+- name: pa-bss-init
+  tag: 1.0.234-ubi7-3
+- name: pa-cdn
+  tag: 1.0.9-ubi7-3
+- name: pa-couchdb
+  tag: 114-ubi7-3
+- name: pa-gateway
+  tag: 1.0.1015-ubi7-3
+- name: pa-glass
+  tag: 1.0.9-ubi7-3
+- name: pa-mongo
+  tag: 1.0.91-ubi7-3
+- name: pa-monitor
+  tag: 2.0.55.2025-ubi7-3
+- name: pa-mysql-cluster
+  tag: 1.0.97-ubi7-3
+- name: pa-neo-idviz
+  tag: 9.0.425-ubi7-3
+- name: pa-neo-provision
+  tag: 1.0.239-ubi7-3
+- name: pa-k8s-config
+  tag: 1.0.40-ubi7-3
+- name: pa-content-service
+  tag: 1.0.82-ubi7-3
+- name: pa-paw-ui-api
+  tag: 1.0.74-ubi7-3
+- name: pa-prism-app
+  tag: 1.0.5245-ubi7-3
+- name: pa-prism-platform
+  tag: 1.0.1726.5-ubi7-3
+- name: pa-prism-proxy
+  tag: 1.0.9144-ubi7-3
+- name: pa-redis
+  tag: 1.0.122-ubi7-3
+- name: pa-share-app
+  tag: 1.0.388-ubi7-3
+- name: pa-share-platform
+  tag: 1.0.307.1-ubi7-3
+- name: pa-share-proxy
+  tag: 1.0.385-ubi7-3
+- name: pa-social
+  tag: 1.0.346-ubi7-3
+- name: pa-tm1proxy
+  tag: 1.0.256-ubi7-3
+- name: pa-user-admin
+  tag: 1.0.389-ubi7-3
+- name: pa-wa-proxy
+  tag: 1.0.594-ubi7-3
+- name: pa-welcome
+  tag: 1.0.704-ubi7-3
+- name: pa-tm1-cp4d
+  tag: b625CP4D-3
+- name: pa-tm1web
+  tag: 11.0.59-20110420-3
+- name: pa-evalservice
+  tag: 11.0.59-20110420-3
+- name: pa-cp4d-post-upgrade-job
+  tag: 2.0.55-21-3
+installOverride: icp4d-override.yaml
+name: Planning Analytics
+registry-reference : base-registry
+releaseName: planning-analytics
+scale:
+- pass-small.yaml
+- pass-medium.yaml
+- pass-large.yaml
+- pass-off.yaml
+- tm1-small.yaml
+- tm1-medium.yaml
+- tm1-large.yaml
+timeout: 20
+type: module
+version: 3.5.1

@@ -1,0 +1,10 @@
+toleratedCommands:
+- command: set resources deployment iis-xmetarepo --requests=cpu=1 --limits=cpu=3.1,memory=30Gi
+  toleratedRegularExpressions:
+    - was not changed
+- command: set resources deployment iis-services --requests=cpu=3.1
+  toleratedRegularExpressions:
+    - was not changed
+- command: set resources sts is-en-conductor --requests=cpu=4,memory=5Gi --limits=cpu=10,memory=20Gi
+  toleratedRegularExpressions:
+    - was not changed

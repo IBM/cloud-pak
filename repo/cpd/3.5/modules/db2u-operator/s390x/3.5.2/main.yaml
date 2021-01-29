@@ -1,0 +1,10 @@
+chart: db2u-operator-3.5.2.tgz
+images:
+  - name: db2u-operator
+    tag: 3.5.2-1145-dev-s390x
+installOverride: install-override.yaml
+name: db2u-operator
+registry-reference : base-registry
+releaseName: db2u-operator
+timeout: 90
+type: module
