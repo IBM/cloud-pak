@@ -1,14 +1,7 @@
-source: ibm-mq-v140-bundle/case/ibm-mq/case.yaml
+source: ibm-mq-bundle/case/ibm-mq/case.yaml
 description: "A CASE for IBM MQ"
 images:
-  - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
-  - image: quay.io/opencloudio/prometheus
   - image: cp/ibm-mqadvanced-server
-  - image: quay.io/opencloudio/prometheus-config-reloader
-  - image: quay.io/opencloudio/prometheus-controller
-  - image: quay.io/opencloudio/prometheus-operator
-  - image: quay.io/opencloudio/system-healthcheck-service
-  - image: quay.io/opencloudio/tiller
   - image: cp/ibm-mqadvanced-server-integration
   - image: cp/icp4i/od/icp4i-od-agent
   - image: cp/icp4i/od/icp4i-od-collector
