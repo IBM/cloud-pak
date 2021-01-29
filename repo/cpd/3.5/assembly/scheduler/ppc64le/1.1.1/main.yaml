@@ -1,0 +1,14 @@
+# IBM Cloud Pak for Data Scheduling assembly
+type: assembly
+name: cpd scheduling
+description: This provides resource management and scheduling to CPD.
+bricks:
+  - name: scheduler-adm
+    version: 1.1.1
+    type: module
+  - name: scheduler-operator
+    version: 1.1.1
+    type: module
+  - name: scheduler-cr
+    version: 1.1.1
+    type: module

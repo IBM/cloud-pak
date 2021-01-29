@@ -1,0 +1,157 @@
+#___________________________________________________________
+#
+# Copyright IBM Corp. 2020. All rights reserved.
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#___________________________________________________________
+#
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: ibm-cpd-scheduling-operator
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: "cpd-scheduler"
+    release: "cpd-scheduler"
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - pods/exec
+  - services
+  - services/finalizers
+  - endpoints
+  - persistentvolumeclaims
+  - events
+  - configmaps
+  - secrets
+  - serviceaccounts
+  - roles
+  - rolebindings
+  verbs:
+  - '*'
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - list
+  - get
+  - watch
+- apiGroups:
+  - security.openshift.io
+  # Operator needs UID 1001.  Can't use restricted SCC
+  resourceNames:
+  - ibm-cpd-scheduler-operator-scc
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - use
+- apiGroups:
+  - route.openshift.io
+  resources:
+  - routes
+  verbs:
+  - list
+  - get
+  - create
+  - update
+  - patch
+- apiGroups:
+  - apps
+  - extensions
+  resources:
+  - deployments
+  - daemonsets
+  - replicasets
+  - statefulsets
+  verbs:
+  - '*'
+- apiGroups:
+  - monitoring.coreos.com
+  resources:
+  - servicemonitors
+  verbs:
+  - get
+  - create
+- apiGroups:
+  - apps
+  resourceNames:
+  - ibm-cpd-scheduling-operator
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apps
+  resources:
+  - replicasets
+  verbs:
+  - get
+- apiGroups:
+  - scheduler.spectrumcomputing.ibm.com
+  - scheduler.spectrumcomputing.ibm.com/status
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - extensions
+  - networking.k8s.io
+  - crd.projectcalico.org
+  resources:
+  - networkpolicies
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+- apiGroups:
+  - extensions
+  - networking.k8s.io
+  resources:
+  - ingresses
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+# Needed to create the role
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  - rolebindings
+  - clusterroles
+  - clusterrolebindings
+  verbs:
+  - list
+  - get
+  - create
+  - patch
+  - update
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - networkpolicies
+  verbs:
+  - list
+  - get
+  - create
+  - patch
+  - update
+# Needed to create licensing service operand request
+- apiGroups:
+  - operator.ibm.com
+  resources:
+  - operandrequests
+  verbs:
+  - list
+  - get
+  - create
+  - patch
+  - update

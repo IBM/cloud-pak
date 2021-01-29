@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dmc-sa
+  labels:
+    app.kubernetes.io/instance: ibm-dmc-addon
+    app.kubernetes.io/name: serviceaccount
+    app.kubernetes.io/managed-by: helm

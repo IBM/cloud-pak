@@ -1,0 +1,19 @@
+type: module
+category: helm-chart
+name: WML UI module
+description: "This is the WML UI module"
+registry-reference : base-registry
+images:
+- name: wml-main
+  tag: 3.5.5750
+- name: spaces-ui-job
+  tag: 3.5.5750
+scale:
+- small.yaml
+- medium.yaml
+chart: ibm-wml-ui-prod-3.5.2.tgz
+md5: ef77cd4accbbcfec2f1f72daee8d585c
+timeout: 60
+releaseName: ibm-wml-ui-prod
+helmUpgradeForce: true
+newParent: true

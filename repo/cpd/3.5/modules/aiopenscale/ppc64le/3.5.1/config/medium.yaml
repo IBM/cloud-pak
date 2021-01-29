@@ -1,0 +1,12 @@
+commands:
+- set resources deployment aiopenscale-ibm-aios-datamart --requests=cpu=1 --limits=cpu=1
+- set resources deployment aiopenscale-ibm-aios-explainability --requests=cpu=1,memory=8Gi --limits=cpu=1,memory=8Gi
+- set resources deployment aiopenscale-ibm-aios-nginx --limits=cpu=500m,memory=1Gi
+- scale --replicas=6 deployment aiopenscale-ibm-aios-bias
+- scale --replicas=2 deployment aiopenscale-ibm-aios-configuration
+- scale --replicas=2 deployment aiopenscale-ibm-aios-datamart
+- scale --replicas=8 deployment aiopenscale-ibm-aios-drift
+- scale --replicas=10 deployment aiopenscale-ibm-aios-explainability
+- scale --replicas=3 deployment aiopenscale-ibm-aios-ml-gateway-service
+- scale --replicas=5 deployment aiopenscale-ibm-aios-nginx
+- scale --replicas=3 deployment aiopenscale-ibm-aios-payload-logging

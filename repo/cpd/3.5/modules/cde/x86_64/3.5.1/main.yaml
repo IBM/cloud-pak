@@ -1,0 +1,17 @@
+type: module
+name: cde module
+registry-reference : base-registry
+images:
+  - name: cde-backend-cp4d
+    tag: 11.1.2020121703-amd64
+  - name: cde-sb-proxy-cp4d
+    tag: 11.1.2020121701-amd64
+  - name: cde-redis-cp4d
+    tag: 1.0.8-amd64
+chart: ibm-cde-prod-3.5.1.tgz
+releaseName: cde
+helmUpgradeForce: true
+scale:
+  - small.yaml
+  - medium.yaml
+  - large.yaml

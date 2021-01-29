@@ -1,0 +1,10 @@
+commands:
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-admin --limits=cpu=1,memory=512Mi
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-nginx --limits=cpu=200m,memory=512Mi
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-dbapi --limits=cpu=1,memory=512Mi
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-runsql --limits=cpu=2,memory=1Gi
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-explain --limits=cpu=1,memory=512Mi
+- set resources statefulset {{ .ReleaseName }}-ibm-dmc-monitor --limits=cpu=2,memory=6Gi
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-job-scheduler --limits=cpu=200m,memory=256Mi
+- set resources deployment {{ .ReleaseName }}-ibm-dmc-registry-manager --limits=cpu=200m,memory=256Mi
+- set resources statefulset {{ .ReleaseName }}-ibm-redis-server -c redis --limits=cpu=100m,memory=440Mi

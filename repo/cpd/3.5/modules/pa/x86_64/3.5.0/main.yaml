@@ -3,9 +3,9 @@ chart: ibm-planning-analytics-cpd-addon-3.5.0.tgz
 description: This module is for the Planning Analytics Add-on install
 images:
 - name: pa-cp4d-addon
-  tag: 3.5.0-1496
+  tag: 3.5.0-latest
 - name: pa-cp4d-service-provider
-  tag: 2.0.55-163
+  tag: 2.0.55-172
 - name: pa-bss
   tag: 1.0.1181-ubi7-1
 - name: pa-bss-init
@@ -59,11 +59,11 @@ images:
 - name: pa-welcome
   tag: 1.0.704-ubi7-1
 - name: pa-tm1-cp4d
-  tag: b625CP4D-1
+  tag: b623CP4D
 - name: pa-tm1web
-  tag: 11.0.57-20110317
+  tag: 11.0.59-20110420
 - name: pa-evalservice
-  tag: 11.0.57-20110317
+  tag: 11.0.59-20110420
 - name: pa-cp4d-post-upgrade-job
   tag: 2.0.55-21-1
 installOverride: icp4d-override.yaml

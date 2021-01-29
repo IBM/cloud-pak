@@ -1,0 +1,66 @@
+##############################################################################
+# Licensed Materials - Property of IBM.
+# Copyright IBM Corporation 2019. All Rights Reserved.
+# U.S. Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+# Contributors:
+#  IBM Corporation - initial version
+###############################################################################
+#
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  annotations:
+    kubernetes.io/description: 'this allows the scheduler to control the GPU.'
+  name: ibm-cpd-scheduler-scc
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: "cpd-scheduler"
+    release: "cpd-scheduler"
+groups: []
+allowHostIPC: false
+allowHostNetwork: false
+allowHostPID: false
+allowHostPorts: false
+allowHostDirVolumePlugin: false
+allowPrivilegeEscalation: false
+allowPrivilegedContainer: false
+#priority: 5
+readOnlyRootFilesystem: false
+#defaultAddCapabilities: null
+requiredDropCapabilities:
+- ALL
+runAsUser:
+  type: MustRunAs
+  uid: 1000321495
+seLinuxContext:
+  type: MustRunAs
+seccompProfiles:
+- '*'
+supplementalGroups:
+  # This is Okay
+  type: MustRunAs
+  ranges:
+  - min: 1000321000
+    max: 1000321999
+volumes:
+- configMap
+- downwardAPI
+- emptyDir
+- persistentVolumeClaim
+- projected
+- secret
+# Users will be added by the cpd-linux installer
+#users:
+#- system:admin
+#- system:serviceaccount:MyNameSpace:scheduler-gpu-agent
+fsGroup:
+  # This seems to be okay
+  #type: RunAsAny
+  type: MustRunAs
+  ranges:
+  - min: 1000321000
+    max: 1000321999
+  

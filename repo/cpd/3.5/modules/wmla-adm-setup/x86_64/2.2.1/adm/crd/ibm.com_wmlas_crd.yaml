@@ -1,0 +1,478 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: wmlas.spectrumcomputing.ibm.com
+  annotations:
+    displayName: IBM WML-Accelerator
+    description: IBM WML-Accelerator
+  labels:
+    app.kubernetes.io/name: "ibm-spectrum-wmla"
+    app.kubernetes.io/managed-by: "wmlas.spectrumcomputing.ibm.com"
+    app.kubernetes.io/instance: "wmla"
+spec:
+  group: spectrumcomputing.ibm.com
+  names:
+    kind: Wmla
+    listKind: WmlaList
+    plural: wmlas
+    shortNames:
+    - wmla
+    singular: wmla
+  scope: Namespaced
+  subresources:
+    status: {}
+  version: v1
+  versions:
+  - name: v1
+    served: true
+    storage: true
+  validation:
+    openAPIV3Schema:
+      type: object
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        annotations:
+          type: object
+        spec:
+          required:
+          - license 
+          properties:
+            license:
+              properties:
+                accept: 
+                  type: boolean 
+              required:
+              - accept
+              type: object
+            version:
+              type: string
+            createResourcePlan:
+              description: "add meaningful description later"
+              type: boolean
+            isOcp:
+              description: "add meaningful description later"
+              type: boolean
+            arch:
+              type: string
+            isCpdaddon:
+              description: "add meaningful description later"
+              type: boolean
+            common:
+              properties:
+                etcd:
+                  properties:
+                    image:
+                      type: string
+                    resources:
+                      properties:
+                        limits:
+                          properties:
+                            cpu: 
+                              type: number
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu: 
+                              type: number
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                  type: object
+                ingress:
+                  properties:
+                    image:
+                      type: string
+                    resources:
+                      properties:
+                        limits:
+                          properties:
+                            cpu: 
+                              type: number
+                            memory:
+                              type: string
+                          type: object                   
+                  type: object
+              description: "add meaningful description later"
+              type: object
+            gui:
+              properties:
+                resources:
+                  properties:
+                    limits:
+                      properties:
+                        cpu: 
+                          type: number
+                        memory:
+                          type: string
+                      type: object
+                    requests:
+                      properties:
+                        cpu: 
+                          type: number
+                        memory:
+                          type: string
+                      type: object
+                  type: object
+                image:              
+                  type: string
+              description: "configuration values for new gui component"
+              type: object
+            components:
+              properties:
+                podscheduler:
+                  type: boolean
+                elk:
+                  type: boolean
+              description: "add meaningful description later"
+              type: object
+            podscheduler:
+              properties:
+                storageclass:
+                  type: string
+                pvcsize:
+                  type: string
+                placementincludelabel:
+                  type: string
+                placementexcludelabel:
+                  type: string
+                placementtolerationname:
+                  type: string
+                placementtolerationvalue:
+                  type: string
+                placementtolerationeffect:
+                  type: string
+                dynamicstorage:
+                  type: boolean
+              description: "add meaningful description later"
+              type: object
+            mss:
+              description: "add meaningful description later"
+              type: object
+            global:
+              properties:
+                dliVersion:
+                  type: string
+                imageRegistry:
+                  type: string
+                imagePullSecret:
+                  type: string
+                imagePullPolicy:
+                  type: string
+                selfSignedCertEncryption:
+                  type: string
+                selfSignedCertNbits:
+                  type: integer
+                selfSignedMd:
+                  type: string
+                defaultRunAsUser:
+                  type: string
+                defaultRunAsGroup:
+                  type: string
+                defaultFsGroup:
+                  type: string
+                loggingRootPath:
+                  type: string
+                serviceAccountName:
+                  type: string
+                podSchedulerNamespace:
+                  type: string
+                pod:
+                  properties:
+                    tolerationKey:
+                      type: string
+                    tolerationValue:
+                      type: string
+                    tolerationEffect:
+                      type: string
+                  type: object
+                security:
+                  properties:
+                    caSecretName:
+                      type: string
+                  type: object
+                persistence:
+                  properties:
+                    useDynamicProvisioning:
+                      type: boolean
+                    storageClassName:
+                      type: string
+                  type: object
+              description: "add meaningful description later"
+              type: object
+            inference:
+              properties:
+                default_resource_plan:
+                  type: string
+                iam:
+                  properties:
+                    manager:
+                      type: string
+                  type: object
+                etcd:
+                  properties:
+                    enabled:
+                      type: boolean
+                  type: object
+              description: "add meaningful description later"
+              type: object
+            keycloak:
+              properties:
+                core:
+                  properties:
+                    image:
+                      type: string
+                  type: object
+                rest:
+                  properties:
+                    image:
+                      type: string
+                  type: object
+              description: "add meaningful description later"
+              type: object
+            elasticstack:
+              properties:
+                logstash:
+                  properties:
+                    image:
+                      type: string
+                  type: object
+              description: "add meaningful description later"
+              type: object
+            core:
+              properties:
+                cluster:
+                  properties:
+                    namespaceLabelName:
+                      type: string
+                    externalEtcdEndpoint:
+                      type: string
+                    externalEtcdSecret:
+                      type: string
+                    tlsCertificateSecretName:
+                      type: string
+                    mgmtNodesLabelKey:
+                      type: string
+                    basePort:
+                      type: integer
+                    ascdDebugPort:
+                      type: integer
+                    fsGroup:
+                      type: integer
+                    externalEtcd:
+                      type: boolean
+                    securityContextConstraint:
+                      type: string
+                    type:
+                      type: string
+                    useDynamicProvisioning:
+                      type: boolean
+                  type: object
+                dli:
+                  properties:
+                    tolerationKey:
+                      type: string
+                    tolerationValue:
+                      type: string
+                    tolerationEffect:
+                      type: string
+                    jwtPublicKey:
+                      type: string         
+                  type: object
+                dlpd:
+                  properties:
+                    resources:
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: number
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: number
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                    image:
+                      type: string  
+                    existingcondapvc:
+                      type: string          
+                  type: object
+                conda:
+                  properties:
+                    image:
+                      type: string
+                  type: object
+                grafana:
+                  properties:
+                    image:
+                      type: string
+                    datasource:
+                      properties:
+                        promethues:
+                          properties:
+                            url:
+                              type: string
+                            username:
+                              type: string
+                            password:
+                              type: string
+                          type: object
+                      type: object
+                  type: object
+                prometheus:
+                  properties:
+                    image:
+                      type: string
+                  type: object
+              description: "add meaningful description later"
+              type: object
+            notebook:
+              properties:
+                hub:
+                  properties:
+                    image:
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                      type: object
+                    imagePullPolicy:
+                      type: string
+                  type: object
+                singleuser:
+                  properties:
+                    image:
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                      type: object
+                    imagePullPolicy:
+                      type: string
+                  type: object
+                proxy:
+                  properties:
+                    chp:
+                      properties:
+                        image:
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                          type: object
+                        imagePullPolicy:
+                          type: string
+                      type: object
+                    nginx:
+                      properties:
+                        image:
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                          type: object
+                        imagePullPolicy:
+                          type: string
+                      type: object
+                  type: object
+                gateway:
+                  properties:
+                    kernel:
+                      properties:
+                        socketTimeout:
+                          type: integer
+                        pollInterval:
+                          type: number
+                        maxPollAttempts:
+                          type: integer
+                        launchTimeout:
+                          type: integer
+                        cullIdleTimeout:
+                          type: integer
+                      type: object
+                    image:
+                      type: string
+                    imagePullPolicy:
+                      type: string
+                    worker:
+                      properties:
+                        defaultImage:
+                          type: string
+                        imagePullPolicy:
+                          type: string
+                      type: object
+                  type: object
+              description: "add meaningful description later"
+              type: object
+          type: object
+        status:
+          description: InstallStatus defines the observed state of Instal
+          properties:
+            conditions:
+              items:
+                properties:
+                  message:
+                    type: string
+                  reason:
+                    type: string
+                  status:
+                    type: string
+                  type:
+                    type: string
+                required:
+                - status
+                - type
+                type: object
+              type: array
+            name:
+              type: string
+            version: 
+              properties:
+                reconciled: 
+                  type: string
+              type: object
+            available:
+              properties:
+                versions:
+                  items:
+                    properties:
+                      name: 
+                        type: string
+                    type: object
+                    required:
+                    - name
+                  type: array
+                channels:
+                  items:
+                    properties:
+                      name: 
+                        type: string
+                    type: object
+                    required:
+                    - name
+                  type: array
+              type: object
+
