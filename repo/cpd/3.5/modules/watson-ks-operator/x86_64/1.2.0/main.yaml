@@ -6,7 +6,7 @@ name: watson-ks-operator
 # The description is mandatory
 description: IBM Watson Knowledge Studio for Cloud Pak for Data
 # Registry name reference maps to the name in the server-info.yaml, mandatory
-registry-reference : base-registry
+registry-reference : wks-registry
 # Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
 installOverride: installOverride.yaml
 upgradeOverride: upgradeOverride.yaml
