@@ -1,0 +1,3 @@
+patch configmap product-configmap --patch '{"data": {"LDAP_SYNC_ON_LOGIN" : "true"}}'
+patch cj usermgmt-ldap-sync-cron-job --patch '{"spec": {"suspend": true, "jobTemplate": {"spec": {"template": {"spec": {"containers": [{"name": "usermgmt-ldap-sync-cron-job","image": "{{.DockerRegistryPrefix}}/privatecloud-usermgmt:3.5.2-patch-x86_64-2"}]}}}}}}'
+patch deployment usermgmt --patch '{"spec": {"template": {"spec": {"containers": [{"name": "usermgmt-container","image": "{{.DockerRegistryPrefix}}/privatecloud-usermgmt:3.5.2-patch-x86_64-2"}]}}}}'
