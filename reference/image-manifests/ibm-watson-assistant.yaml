@@ -51,8 +51,11 @@ images:
   - image: cp/redis-proxy-5.0.9
   - image: cp/redis-proxylog-5.0.5
   - image: cp/redis-proxylog-5.0.9
+  - image: cp/watson-assistant/analytics
+  - image: cp/watson-assistant/assistant-operator
   - image: cp/watson-assistant/clu-controller
   - image: cp/watson-assistant/clu_embedding_service
+  - image: cp/watson-assistant/clu-embedding-service
   - image: cp/watson-assistant/clu-serving
   - image: cp/watson-assistant/clu-training
   - image: cp/watson-assistant/conan-tools
@@ -66,7 +69,9 @@ images:
   - image: cp/watson-assistant/improve-recommendations-data-embeddings-ubi.ja
   - image: cp/watson-assistant/improve-recommendations-engine-x86_64
   - image: cp/watson-assistant/improve-recommendations-mongo-ubi
+  - image: cp/watson-assistant/litelinks-grpc
   - image: cp/watson-assistant/model-mesh
+  - image: cp/watson-assistant/model-mesh-tfsa
   - image: cp/watson-assistant/objectstore-py4j-bridge
   - image: cp/watson-assistant/opencontent-bats
   - image: cp/watson-assistant/opencontent-common-utils
@@ -82,12 +87,19 @@ images:
   - image: cp/watson-assistant/opencontent-redis-3
   - image: cp/watson-assistant/openentities-serving
   - image: cp/watson-assistant/recommends-rest-x86_64
+  - image: cp/watson-assistant/servicedesk-integration
   - image: cp/watson-assistant/sireg
   - image: cp/watson-assistant/sireg-model-ubi
   - image: cp/watson-assistant/skill-search
+  - image: cp/watson-assistant/spellcheck-server-image
   - image: cp/watson-assistant/spellcheck-server-image-en-icp
   - image: cp/watson-assistant/spellcheck-server-image-fr-icp
   - image: cp/watson-assistant/store
+  - image: cp/watson-assistant/store-sync
+  - image: cp/watson-assistant/sync-resources
+  - image: cp/watson-assistant/system-entities
+  - image: cp/watson-assistant/tensorflow-model-upload
+  - image: cp/watson-assistant/tensorflow-serving
   - image: cp/watson-assistant/training-master
   - image: cp/watson-assistant/ui
   - image: cp/watson-assistant/watson-gateway
