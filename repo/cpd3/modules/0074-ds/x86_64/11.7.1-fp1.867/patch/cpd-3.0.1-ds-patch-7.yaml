@@ -1,0 +1,14 @@
+images:
+- is-en-compute-image:b89-CP4D-3_0_1-b50
+- is-db2xmeta-image:b89-CP4D-3_0_1-b50
+- is-services-image:b89-CP4D-3_0_1-b50
+- is-engine-image:b89-CP4D-3_0_1-b50
+- solr-x86_64:8.6.3_b800_ff8c98eefbe8
+- cassandra-x86_64:3.11.8_b800_ff8c98eefbe8
+- zookeeper-x86_64:3.4.14_b800_ff8c98eefbe8
+- kafka-x86_64:2.11-2.1.1_b800_ff8c98eefbe8
+- wkc-init-container:1.0.113
+- wkc-ugconfig:3.2.30
+
+patchFile: patchCommands.txt
+description: "DS Patch "
