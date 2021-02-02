@@ -2,6 +2,7 @@ source: ibm-etcd-operator-bundle/case/ibm-cp4d-ibm-etcd-operator/case.yaml
 description: "IBM cloudpak open operator for etcd"
 images:
   - image: cp/cpd/cp4d-tiller
+  - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/icp4data-nginx-repo
