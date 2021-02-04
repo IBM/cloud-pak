@@ -1,0 +1,3 @@
+patch deployment usermgmt --patch '{"spec": {"template": {"spec": {"containers": [{"name": "usermgmt-container","image": "{{.DockerRegistryPrefix}}/privatecloud-usermgmt:v3.0.1-patch-x86_64-15"}]}}}}'
+patch deployment couchdb --patch '{"spec": {"template": {"spec": {"containers": [{"name": "couchdb-container","image": "{{.DockerRegistryPrefix}}/zen-meta-couchdb:v3.0.1-patch-x86_64-3"}]}}}}'
+
