@@ -1,0 +1,1 @@
+patch deployment portal-ml-dl -p '{"spec": {"template": {"spec":{"containers": [{"name": "portal-ml-dl", "image":"{{.DockerRegistryPrefix}}/portal-ml-dl:3.0.5536"}]}}}}'
