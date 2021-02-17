@@ -1,0 +1,11 @@
+patch deployment iis-xmetarepo --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-xmetadocker-container","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b5-CP4D-3_5_2-PATCH-b5"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b5-CP4D-3_5_2-PATCH-b5"}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","image": "{{.DockerRegistryPrefix}}/is-services-image:b5-CP4D-3_5_2-PATCH-b5"}]}}}}'
+delete pod -l app=iis-services
+wait --for=condition=ready --timeout=90m pod -l app=iis-services
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","image": "{{.DockerRegistryPrefix}}/is-engine-image:b5-CP4D-3_5_2-PATCH-b5"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-engine-image:b5-CP4D-3_5_2-PATCH-b5"}]}}}}'
+patch sts is-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b5-CP4D-3_5_2-PATCH-b5"}]}}}}'
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","env": [{"name": "ZEN_SERVICE_BROKER_TOKEN", "valueFrom": {"secretKeyRef": {"key":"token","name":"zen-service-broker-secret"}}},{"name": "ZEN_SERVICE_BROKER_SECRET", "valueFrom": {"secretKeyRef": {"key":"token","name":"zen-service-broker-secret"}}},{"name": "GATEWAY_URL", "valueFrom": {"configMapKeyRef": {"key":"host-url","name":"wdp-config"}}}]}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","env": [{"name": "ZEN_SERVICE_BROKER_TOKEN", "valueFrom": {"secretKeyRef": {"key":"token","name":"zen-service-broker-secret"}}},{"name": "GATEWAY_URL", "valueFrom": {"configMapKeyRef": {"key":"host-url","name":"wdp-config"}}}]}]}}}}'
+delete pod -l app=iis-en-cond
+delete pod -l app=iis-en-comp
+delete pod -l app=dc-main
