@@ -1,0 +1,56 @@
+apiVersion: v1
+case:
+  appVersion: 2.2.6
+  catalogs:
+    automation: {}
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: Case for Cloud Automation Manager Operator
+  displayDescription: Case for Cloud Automation Manager Operator
+  displayName: Cloud Automation Manager CASE
+  icons: []
+  licenses:
+    licenseLaEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LA-en
+        name: licenseLaEn
+      ref: LICENSE-LA-en
+    licenseLiEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LI-en
+        name: licenseLiEn
+      ref: LICENSE-LI-en
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: nonIbmLicense
+      ref: NON_IBM_LICENSE
+  name: ibm-management-cam-install
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      icp: {}
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.2.1
+  webPage: https://www.ibm.com/support/knowledgecenter/en/SS2L37/product_welcome_cloud_automation_manager.html
+created: 2021-02-17T20:55:48.85543966+0000
+digest: sha256:dfb88f36aae2184430cfbdd4baa023c1f1d1bb54df91aa5567a4f5823e3a2292
