@@ -1,4 +1,4 @@
-##Principle of Least Privilege
+## Principle of Least Privilege
 
 In containerized software, the follow guidance prescribes how IBM validates applications run with the least privilege as possible. 
 
