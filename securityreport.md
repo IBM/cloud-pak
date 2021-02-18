@@ -1,20 +1,22 @@
 # Containerized Software Security Compliance
 
-[#What is it](#what-is-the-report)
+#### [What is it](#what-is-the-report)
 
-[#Why did IBM publish the report](#why-does-ibm-provide-the-report)
+#### [Why did IBM publish the report](#why-does-ibm-provide-the-report)
 
-[#Who should understand the report](#who-should-understand-the-report)
+#### [Who should understand the report](#who-should-understand-the-report)
 
-[#How does IBM know the compliance](#how-does-ibm-know-the-compliance)
+#### [How does IBM know the compliance](#how-does-ibm-know-the-compliance)
 
-[#Where is the report](#where-is-the-report)
+#### [Where is the report](#where-is-the-report)
 
-[Security Context Constraint](#run-with-the-red-hat-restricted-security-context-constraint) 
+#### [Principle of Least Privilege](#principle-of-least-privilege)
 
-[Numeric USER](#all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images)
+###### [Security Context Constraint](#run-with-the-red-hat-restricted-security-context-constraint) 
 
-[Sudo](#no-product-containers-use-sudo)
+###### [Numeric USER](#all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images)
+
+###### [Sudo](#no-product-containers-use-sudo)
 
 ### What is the report? 
 
