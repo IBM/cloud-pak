@@ -22,7 +22,7 @@
 
 2 Principle of Least Privilege
 
-+ [2.1 Run with the Red Hat restricted security context constraint](#21-run-with-the-red-hat-restricted-security-context-constraint)
++ [2.1 Run with the Red Hat restricted security context constraint(automated)](#21-run-with-the-red-hat-restricted-security-context-constraintautomated)
 
 + [2.2 All product containers specify a numeric USER in their dockerfile or equivalent OCI build file for container images](#22-all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images)
 
@@ -34,17 +34,17 @@
 
 3 Host and Container Isolation
 
-+ [3.1 Product containers do not target a host IP](#31-product-containers-do-not-target-a-host-ip)
++ [3.1 Product containers do not target a host IP(automated)](#31-product-containers-do-not-target-a-host-ipautomated)
 
-+ [3.2 Product containers do not specify a host port](#32-product-containers-do-not-specify-a-host-port)
++ [3.2 Product containers do not specify a host port(automated)](#32-product-containers-do-not-specify-a-host-portautomated)
 
-+ [3.3 Product containers do not specify a host path to mount file or directory from host node&#39;s filesystem](#33-product-containers-do-not-specify-a-host-path-to-mount-file-or-directory-from-host-nodes-filesystem)
++ [3.3 Product containers do not specify a host path to mount file or directory from host node&#39;s filesystem(automated)](#33-product-containers-do-not-specify-a-host-path-to-mount-file-or-directory-from-host-nodes-filesystemautomated)
 
-+ [3.4 Product containers do not enable host network access](#34-product-containers-do-not-enable-host-network-access)
++ [3.4 Product containers do not enable host network access(automated)](#34-product-containers-do-not-enable-host-network-accessautomated)
 
-+ [3.5 Product containers do not share the host process ID namespace](#35-product-containers-do-not-share-the-host-process-id-namespace)
++ [3.5 Product containers do not share the host process ID namespace(automated)](#35-product-containers-do-not-share-the-host-process-id-namespaceautomated)
 
-+ [3.6 Product containers do not share the host Inter Process Communication namespace](#36-product-containers-do-not-share-the-host-inter-process-communication-namespace)
++ [3.6 Product containers do not share the host Inter Process Communication namespace(automated)](#36-product-containers-do-not-share-the-host-inter-process-communication-namespaceautomated)
 
 + [3.7 SSH/remote access to containers is disabled](#37-sshremote-access-to-containers-is-disabled)
 
@@ -60,7 +60,7 @@
 
 6 Audit Capability
 
-+ [6.1 Pods are able to be identified as belonging to a product](#61-pods-are-able-to-be-identified-as-belonging-to-a-product)
++ [6.1 Pods are able to be identified as belonging to a product(automated)](#61-pods-are-able-to-be-identified-as-belonging-to-a-productautomated)
 
 7 Public Key Infrastructure (PKI) / Certificate and Key Management
 
@@ -70,25 +70,25 @@
 
 ### What is the report?
 
-The Containerized Software Security Compliance Report is a PDF file that explains the security posture of an IBM Containerized product. The report states if the given IBM product is compliant or not with several security principles for containerized software. The security principles included are IBM standards, guidelines, and best practices for delivering secure, enterprise grade Kubernetes software.
+The report is a PDF file that explains the security posture of an IBM Containerized product. The report indicates compliance for several containerized software security principles. The security principles included are IBM standards, guidelines, and best practices for delivering secure, enterprise grade Kubernetes software.
 
 ### Why does IBM provide the report?
 
-The report is intended to provide IBM customers with a simple way to understand the security compliance attributes in containerized software. IBM understands how important security transparency is in enterprise ready software. IBM is taking strides to make the security posture of its products transparent, known, and easily understandable by anyone. IBM is providing this so that it is easy to discover the security posture of IBM software products.
+The report is intended to provide IBM customers with a simple way to understand the security attributes in containerized software. IBM understands how important security transparency is in enterprise ready software. IBM is taking strides to make the security posture of its products transparent, known, and easily understandable by anyone. IBM is providing this so that it is easy to discover the security posture of IBM software products.
 
 ### Who is the intended audience for this report?
 
-Any system administrator or security analyst should be familiar with the security principles in this report when managing a Kubernetes cluster, thus allowing developers to deploy containers. This report provides a summary of key security principles in a single user friendly readable document.
+Any system administrator or security analyst should be familiar with the security principles in this report when managing a Kubernetes cluster, thus allowing developers to deploy containers to the cluster. This report provides a summary of key security principles in a single user friendly readable document.
 
 ### How does IBM determine the compliance?
 
 All IBM containerized software goes through a process called IBM Kubernetes Certification before publishing. An overview of the process is described in this [IBM Developer blog post](https://developer.ibm.com/blogs/the-ibm-kubernetes-certification-process/). IBM assesses over 100 attributes through this certification process to hold products accountable for complying with a rigorous set of standards and best practices. One of the attributes of IBM Kubernetes Certification is the IBM Security and Privacy by Design (SPbD) program. For more information on SPbD read [this Redbook](https://www.redbooks.ibm.com/redpapers/pdfs/redp4641.pdf), specifically pages 14-15
 
-This report takes a few critical security principles from certification process and externalizes it.
+This report takes a few critical security principles from the certification process and externalizes it. Through that process some of the attributes are automated in the CICD pipeline while others are verified with documentation. The attributes with "automated" in its name have been validated by an IBM internal linting tool
 
 ### Where is the report?
 
-The report is shipped as part of the product&#39;s Container Application Software for Enterprises (CASE). The CASE is the well defined file structure that provides packaging and metadata about the software as well as the certification and provenance
+The report is shipped as part of the product's [Container Application Software for Enterprises (CASE)](https://github.com/IBM/case). The CASE is the well defined file structure that provides packaging and metadata about the software as well as the certification and provenance
 
 To view the security report, follow the steps below.
 
@@ -97,19 +97,18 @@ To view the security report, follow the steps below.
 - Download the tgz file
 - Extract the tgz file
 
-_$ tar –xzvf \&lt;path to download\&gt;/ibm-example-1.0.tgz_
+    $ tar –xzvf <\download-location>/ibm-example-1.0.tgz
 
 - Cd to certificates/security folder
-
-_$ cd ibm-example/certifications/files_
+    
+    $ cd ibm-example/certifications/files
 
 - View the report with your favorite PDF viewer
 
-\&lt;insert a sample document image\&gt;
 
 # **Certification Attributes**
 
-Each line of the security report is explained in detail below to help you understand the criteria used to determine compliance and what risks exist if a product is non-compliant.
+Each line of the security report is explained in detail below to help you understand the criteria used to determine compliance.
 
 ## 1 Image Vulnerability Management
 
@@ -117,7 +116,7 @@ Each line of the security report is explained in detail below to help you unders
 
 **Description:**
 
-All product container images must be scanned with a set of approved tools before product shipment. IBM updates images as new CVEs are discovered over time. Any vulnerabilities are not resolved prior to product shipment are tracked through the [IBM Product Security Incident Response (PSIRT)](https://www.ibm.com/blogs/psirt/) process
+All product container images must be scanned with a set of approved tools before product shipment. IBM updates images as new [Common Vulnerabilities and Exposures (CVE)](https://cve.mitre.org/) are discovered over time. Any vulnerabilities are not resolved prior to product shipment are tracked through the [IBM Product Security Incident Response (PSIRT)](https://www.ibm.com/blogs/psirt/) process
 
 **Compliance Criteria:**
 
@@ -125,10 +124,10 @@ Confirmed by reviewing scan reports from an approved tool. Common tools used inc
 
 - Red Hat image certification
 - IBM Vulnerability Advisor
-- Twist lock _optionally_
+- Twist lock
 
 ## 2 Principle of Least Privilege
-### _2.1 Run with the Red Hat restricted security context constraint_
+### _2.1 Run with the Red Hat restricted security context constraint(automated)_
 
 **Description:**
 
@@ -164,67 +163,67 @@ Confirmed that root user is disabled in the Pod and Container security context.
 ### _2.5 Product does not require cluster level privilege_
 **Description:**
 
-A container must limit access to only the resources required to complete the actions necessary for the application to function. The container runs within a single project/namespace **not** across namespaces and **not** modifying cluster wide resources. Any dependencies that are cluster wide resources have to be documented as pre-install steps performed by a cluster administrator. Cluster wide resources include resources like Persistent Volumes, Storage Classes, Global Secrets, Catalogs, Cluster configuration.
+A container must limit authority to only the resources required to complete the actions necessary for the application. The container runs within a single project/namespace **not** across namespaces and **not** modifying cluster wide resources. Any dependencies that are cluster wide resources have to be documented as pre-install steps performed by a cluster administrator. Cluster wide resources include resources like Persistent Volumes, Storage Classes, Global Secrets, Catalogs, Cluster configuration.
 
 **Compliance Criteria:**
 
-Confirmed there are no ClusterRoleBindings associated to the products&#39; ServiceAccounts
+Confirmed there are no ClusterRoleBindings associated to the products' ServiceAccounts
 
 ## 3 Host and Container Isolation
-### _3.1 Product containers do not target a host IP_
+### _3.1 Product containers do not target a host IP(automated)_
 **Description:**
 
-A container cannot define hostIP as this restricts scheduling and is a privileged operation on the cluster.
+A container cannot define ``hostIP`` as this restricts scheduling and is a privileged operation on the cluster.
 
 **Compliance Criteria:**
 
-Confirmed by not allowing HostIP to be set in the Pod spec definition.
-### _3.2 Product containers do not specify a host port_
+Confirmed by not allowing ``HostIP`` to be set in the Pod spec definition.
+### _3.2 Product containers do not specify a host port(automated)_
 
 **Description:**
 
-A container cannot define hostPort as this restricts scheduling and is a privileged operation on the cluster.
+A container cannot define ``hostPort`` as this restricts scheduling and is a privileged operation on the cluster.
 
 **Compliance Criteria:**
 
-Confirmed by not allowing HostPort to be set in the Pod spec definition.
+Confirmed by not allowing ``HostPort`` to be set in the Pod spec definition.
 
-### _3.3 Product containers do not specify a host path to mount file or directory from host node&#39;s filesystem_
+### _3.3 Product containers do not specify a host path to mount file or directory from host node's filesystem(automated)_
 
 **Description:**
 
-A container cannot enable hostPath as this required external synchronization of data across host machines and is a privileged operation on the cluster
+A container cannot enable ``hostPath`` as this required external synchronization of data across host machines and is a privileged operation on the cluster
 
 **Compliance Criteria:**
 
-Confirmed by not allowing HostPath to be set in the Pod spec definition.
-### _3.4 Product containers do not enable host network access_
+Confirmed by not allowing ``HostPath`` to be set in the Pod spec definition.
+### _3.4 Product containers do not enable host network access(automated)_
 
 **Description:**
 
-A container must not enable hostNetwork as it allows direct visibility to / from all network interfaces of the host and is a privileged operation on the cluster
+A container must not enable ``hostNetwork`` as it allows direct visibility to / from all network interfaces of the host and is a privileged operation on the cluster
 
 **Compliance Criteria:**
 
-Confirmed by not allowing HostNetwork to be set in the Pod spec definition.
-### _3.5 Product containers do not share the host process ID namespace_
+Confirmed by not allowing ``HostNetwork`` to be set in the Pod spec definition.
+### _3.5 Product containers do not share the host process ID namespace(automated)_
 
 **Description:**
 
-A container must not enable hostPID as it allows control of all processes running on the host machine and is a privileged operation on the cluster
+A container must not enable ``hostPID`` as it allows control of all processes running on the host machine and is a privileged operation on the cluster
 
 **Compliance Criteria:**
 
-Confirmed by not allowing HostPID to be set in the Pod spec definition.
-### _3.6 Product containers do not share the host Inter Process Communication namespace_
+Confirmed by not allowing ``HostPID`` to be set in the Pod spec definition.
+### _3.6 Product containers do not share the host Inter Process Communication namespace(automated)_
 
 **Description:**
 
-A container must not enable hostIPC as it allows usage of IPC to interact with host processes outside the container and is considered a privileged operation
+A container must not enable ``hostIPC`` as it allows usage of IPC to interact with host processes outside the container and is considered a privileged operation
 
 **Compliance Criteria:**
 
-Confirmed by not allowing HostIPC to be set in the Pod spec
+Confirmed by not allowing ``HostIPC`` to be set in the Pod spec
 ### _3.7 SSH/remote access to containers is disabled_
 
 **Description:**
@@ -269,7 +268,7 @@ A container must encrypt all data in transit to other containers or pods using T
 
 Confirmed that TLS 1.2 is used for all network traffic
 ### 6 Audit Capability
-### _6.1 Pods are able to be identified as belonging to a product_
+### _6.1 Pods are able to be identified as belonging to a product(automated)_
 
 **Description:**
 
@@ -284,7 +283,7 @@ Confirmed all containers have the following labels:
 - app.kubernetes.io/instance
 - app.kubernetes.io/ownerReference
 - helm.sh/chart if created by a Helm chart
-## 7 Public Key Infrastructure (PKI) / Certificate and Key Management
+## 7 Key and Certificate Management
 ### _7.1 Support key rotation and replacement_
 
 **Description:**
