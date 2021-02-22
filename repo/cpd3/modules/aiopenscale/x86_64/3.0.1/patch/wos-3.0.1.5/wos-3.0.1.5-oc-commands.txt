@@ -1,0 +1,45 @@
+patch deployment aiopenscale-ibm-aios-bias --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-bias","image": "{{.DockerRegistryPrefix}}/aios-bias-service:3.0.1.1403"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'	
+
+patch deployment aiopenscale-ibm-aios-bkpicombined --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-bkpi-combined","image": "{{.DockerRegistryPrefix}}/aios-bkpi-combined-services:3.0.1.55"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-common-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-common-api","image": "{{.DockerRegistryPrefix}}/aios-common-api:3.0.1.13"}, {"name": "aios-common-api-nlp","image": "{{.DockerRegistryPrefix}}/aios-common-api-nlp:3.0.1.13"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-redis:5.5.0-ubi8-r23"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-configuration --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-configuration-service","image": "{{.DockerRegistryPrefix}}/aios-configuration-service:3.0.1.774"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"},{"name": "redis-check","image": "{{.DockerRegistryPrefix}}/aios-redis:5.5.0-ubi8-r23"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-dashboard --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-dashboard","image": "{{.DockerRegistryPrefix}}/aios-dashboard:3.0.1.26"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-redis:5.5.0-ubi8-r23"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-datamart --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-datamart","image": "{{.DockerRegistryPrefix}}/aios-datamart-service-api:3.0.1.135"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-redis:5.5.0-ubi8-r23"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-fast-path --patch '{"spec": {"template": {"spec": {"containers": [{"name": "fast-path-service","image": "{{.DockerRegistryPrefix}}/aios-fast-path:3.0.1.407"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-feedback --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-feedback","image": "{{.DockerRegistryPrefix}}/aios-feedback-service:3.0.1.451"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-ml-gateway-discovery --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-ml-gateway-discovery","image": "{{.DockerRegistryPrefix}}/aios-ml-gateway-discovery:3.0.1.850"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-ml-gateway-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-ml-gateway-service","image": "{{.DockerRegistryPrefix}}/aios-ml-gateway-service:3.0.1.850"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-notification --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-notification","image": "{{.DockerRegistryPrefix}}/aios-orch-notifications-service:3.0.1.9"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-payload-logging --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-payload-logging","image": "{{.DockerRegistryPrefix}}/aios-payload-logging-service:3.0.1.674"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-payload-logging-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-payload-logging-api","image": "{{.DockerRegistryPrefix}}/aios-payload-logging-service-api:3.0.1.475"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-drift --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-drift","image": "{{.DockerRegistryPrefix}}/drift:3.0.1.708"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-explainability --patch '{"spec": {"template": {"spec": {"containers": [{"name": "explainability-service","image": "{{.DockerRegistryPrefix}}/explainability:3.0.1.22"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-scheduling --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-scheduling-service","image": "{{.DockerRegistryPrefix}}/model-operation-service-scheduling:3.0.1.241"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-mrm --patch '{"spec": {"template": {"spec": {"containers": [{"name": "mrm-service","image": "{{.DockerRegistryPrefix}}/model-risk-management:3.0.1.470"}], "initContainers": [{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}]}}}}'
+
+patch statefulset aiopenscale-ibm-aios-etcd --patch '{"spec": {"template": {"spec": {"containers": [{"name": "etcd","image": "{{.DockerRegistryPrefix}}/aios-etcd:3.3.3-ubi8-r14"}], "initContainers": [{"name": "init-volume-container","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}]}}}}'
+
+patch statefulset aiopenscale-ibm-aios-kafka --patch '{"spec": {"template": {"spec": {"containers": [{"name": "kafka-broker","image": "{{.DockerRegistryPrefix}}/aios-kafka:0.0.21"}], "initContainers": [{"name": "init-volume-container","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"},{"name": "ready-check","image": "{{.DockerRegistryPrefix}}/aios-kafka:0.0.21"}]}}}}'
+
+patch statefulset aiopenscale-ibm-aios-redis --patch '{"spec": {"template": {"spec": {"containers": [{"name": "sentinel","image": "{{.DockerRegistryPrefix}}/aios-redis:5.5.0-ubi8-r23"}, {"name": "server","image": "{{.DockerRegistryPrefix}}/aios-redis:5.5.0-ubi8-r23"}]}}}}'
+
+patch statefulset aiopenscale-ibm-aios-zookeeper --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zookeeper","image": "{{.DockerRegistryPrefix}}/aios-zoo-keeper:0.0.19"}], "initContainers": [{"name": "init-volume-container","image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}]}}}}'
+
+patch deployment aiopenscale-ibm-aios-nginx --patch '{"spec": {"template": {"spec": {"containers": [{"name": "nginx","image": "{{.DockerRegistryPrefix}}/aios-nginx-local:1.15.5-ubi8-r27"}]}}}}'
+
+patch cronjob aiopenscale-ibm-aios-private-deployment-cleanup --patch '{ "spec": { "jobTemplate": { "spec": { "template": { "spec": { "containers": [{ "name": "private-deployment-cleanup", "image": "{{.DockerRegistryPrefix}}/aios-kubectl:1.0.26"}] } } } } } }'
