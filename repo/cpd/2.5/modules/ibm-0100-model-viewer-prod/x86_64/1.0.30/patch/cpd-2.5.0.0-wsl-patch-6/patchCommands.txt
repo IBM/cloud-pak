@@ -1,0 +1,2 @@
+patch deployment ibm-0100-model-viewer-prod --patch '{"spec": {"template": {"spec": {"containers": [{"name": "service","image": "{{.DockerRegistryPrefix}}/model_viewer:1.0.176_3"}]}}}}'
+
