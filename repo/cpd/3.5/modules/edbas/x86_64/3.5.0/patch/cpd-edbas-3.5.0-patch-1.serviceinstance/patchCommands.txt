@@ -1,0 +1,1 @@
+patch deployment edbas-{{.InstanceID}}-api-management -p '{"spec": {"template": {"spec": {"containers": [{"name": "edb-status","image":"{{.DockerRegistryPrefix}}/edb-apimgmt:3.5.0-583-x86_64"}]}}}}'
