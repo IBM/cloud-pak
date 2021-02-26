@@ -1,0 +1,461 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: watsondiscoverytoolings.discovery.watson.ibm.com
+spec:
+  additionalPrinterColumns:
+  - JSONPath: .spec.version
+    description: Version of the resource
+    name: Version
+    type: string
+  - JSONPath: .status.conditions[?(@.type=="Ready")].status
+    description: Condition ready
+    name: Ready
+    type: string
+  - JSONPath: .status.conditions[?(@.type=="Ready")].reason
+    description: Condition ready reason
+    name: ReadyReason
+    type: string
+  - JSONPath: .status.conditions[?(@.type=="Updating")].status
+    description: Condition updating
+    name: Updating
+    type: string
+  - JSONPath: .status.conditions[?(@.type=="Updating")].reason
+    description: Condition updating reason
+    name: UpdatingReason
+    type: string
+  - JSONPath: .status.componentStatus.deployed
+    description: Number of deployed components
+    name: Deployed
+    type: string
+  - JSONPath: .status.componentStatus.verified
+    description: Number of verified components
+    name: Verified
+    type: string
+  - JSONPath: .status.customResourceQuiesce
+    description: Quiesce status
+    name: Quiesce
+    type: string
+  - JSONPath: .metadata.creationTimestamp
+    description: Age of the resource
+    name: Age
+    type: date
+  group: discovery.watson.ibm.com
+  names:
+    kind: WatsonDiscoveryTooling
+    listKind: WatsonDiscoveryToolingList
+    plural: watsondiscoverytoolings
+    shortNames:
+    - tooling
+    - wdtooling
+    singular: watsondiscoverytooling
+  scope: Namespaced
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: WatsonDiscoveryTooling is the Schema for the watsondiscoverytoolings API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation of an object.
+            Servers should convert recognized schemas to the latest internal value, and may reject
+            unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        appConfigOverrides:
+          description: The key-value specified here override app config
+          type: object
+        kind:
+          description: 'Kind is a string value representing the REST resource this object represents.
+            Servers may infer this from the endpoint the client submits requests to. Cannot be
+            updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: Spec defines the desired state of WatsonDiscoveryTooling
+          properties:
+            shared:
+              description: Global configuration shared across sub-systems of Watson Discovery
+              properties:
+                admin:
+                  properties:
+                    tls:
+                      type: string
+                  type: object
+                contentIntelligence:
+                  description: The description for content intelligence
+                  properties:
+                    enabled:
+                      type: boolean
+                  type: object
+                database:
+                  properties:
+                    pg:
+                      properties:
+                        initJob:
+                          properties:
+                            activeDeadlineSeconds:
+                              type: integer
+                            backoffLimit:
+                              type: integer
+                          type: object
+                        initializeWithLiquibase:
+                          type: boolean
+                        name:
+                          type: string
+                      type: object
+                  type: object
+                deploymentType:
+                  description: DeploymentType controls replicas for Watson Discovery resources.
+                    Development consumes minimum resource usage. Production supports high availability.
+                  type: string
+                dockerRegistryPrefix:
+                  description: The prefix of docker registry where Watson Discovery containers
+                    are located
+                  type: string
+                elastic:
+                  properties:
+                    configmap:
+                      type: string
+                    publishTimeoutSeconds:
+                      type: integer
+                    secret:
+                      type: string
+                  type: object
+                imagePullSecret:
+                  description: The secret name storing docker registry pull secret.
+                  type: string
+                initContainer:
+                  properties:
+                    etcd:
+                      properties:
+                        etcdTimeoutSeconds:
+                          type: integer
+                      type: object
+                    postgres:
+                      properties:
+                        image:
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                          type: object
+                        resources:
+                          properties:
+                            limits:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                            requests:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                    utils:
+                      description: Init container configurations for common utility container
+                      properties:
+                        image:
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                          type: object
+                        resources:
+                          properties:
+                            limits:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                            requests:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                    watsonNlp:
+                      properties:
+                        image:
+                          properties:
+                            name:
+                              type: string
+                            tag:
+                              type: string
+                          type: object
+                        resources:
+                          properties:
+                            limits:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                            requests:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                  type: object
+                metering:
+                  description: Metering annotations.
+                  properties:
+                    cloudpakId:
+                      description: The ID of IBM Cloud Pak
+                      type: string
+                    cloudpakInstanceId:
+                      description: The instance ID of IBM Cloud Pak
+                      type: string
+                    cloudpakName:
+                      description: The name of IBM Cloud Pak
+                      type: string
+                    productChargedContainers:
+                      description: The charged containers of product.
+                      type: string
+                    productCloudpakRatio:
+                      description: The ratio of cloudpak.
+                      type: string
+                    productId:
+                      description: The ID of this a product.
+                      type: string
+                    productMetric:
+                      description: The type of product metrics.
+                      type: string
+                    productName:
+                      description: The name of this a product.
+                      type: string
+                    productVersion:
+                      description: The version of a product.
+                      type: string
+                  type: object
+                metricsCollection:
+                  properties:
+                    enabled:
+                      type: boolean
+                  type: object
+                modelTrain:
+                  properties:
+                    serviceUrl:
+                      type: string
+                  type: object
+                mtdata:
+                  properties:
+                    enabled:
+                      type: boolean
+                  type: object
+                planLimits:
+                  properties:
+                    concurrentQueries:
+                      type: integer
+                    maxCollections:
+                      type: integer
+                    maxCollectionsPerProject:
+                      type: integer
+                    maxCustomModels:
+                      type: integer
+                    sdu:
+                      properties:
+                        maxTrainingDocuments:
+                          type: integer
+                      type: object
+                  type: object
+                privilegedServiceAccount:
+                  description: The privileged service account used in the pods performing administration
+                    tasks
+                  type: string
+                quiesce:
+                  properties:
+                    enabled:
+                      description: Set true when quiesce all components otherwise false
+                      type: boolean
+                  type: object
+                serviceAccount:
+                  description: The service account used in Watson Discovery pods
+                  type: string
+                statsd:
+                  properties:
+                    exporterPrometheusPort:
+                      type: number
+                    image:
+                      properties:
+                        name:
+                          type: string
+                        tag:
+                          type: string
+                      type: object
+                    resources:
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                  type: object
+                storageClassName:
+                  description: The storage class name for the persistent volumes used in Watson
+                    Discovery
+                  type: string
+              required:
+              - dockerRegistryPrefix
+              - storageClassName
+              type: object
+            tooling:
+              properties:
+                minerapp:
+                  description: Minerapp component
+                  properties:
+                    adminapp:
+                      properties:
+                        image:
+                          description: Image for miner adminapp
+                          properties:
+                            name:
+                              description: Image name for miner adminapp
+                              type: string
+                            tag:
+                              description: Imange tag for miner adminapp
+                              type: string
+                          type: object
+                        resources:
+                          description: Miner adminapp container resource requirements
+                          properties:
+                            limits:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                            requests:
+                              properties:
+                                cpu:
+                                  type: string
+                                memory:
+                                  type: string
+                              type: object
+                          type: object
+                        wlpMaxHeap:
+                          type: string
+                        wlpTimeout:
+                          type: string
+                      type: object
+                    antiAffinity:
+                      type: string
+                    image:
+                      description: Image for minerapp
+                      properties:
+                        name:
+                          description: Image name for minerapp
+                          type: string
+                        tag:
+                          description: Imange tag for minerapp
+                          type: string
+                      type: object
+                    replicas:
+                      description: Number of replicas for minerapp deployment
+                      type: integer
+                    resources:
+                      description: Minerapp container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                    wlpMaxHeap:
+                      type: string
+                    wlpTimeout:
+                      type: string
+                  type: object
+                quiesce:
+                  properties:
+                    enabled:
+                      description: Set true when start quiesce of tooling component otherwise false
+                      type: boolean
+                  type: object
+                tooling:
+                  description: Tooling component
+                  properties:
+                    image:
+                      description: Image for tooling
+                      properties:
+                        name:
+                          description: Image name for tooling
+                          type: string
+                        tag:
+                          description: Imange tag for tooling
+                          type: string
+                      type: object
+                    replicas:
+                      description: Number of replicas for tooling deployment
+                      type: integer
+                    resources:
+                      description: Tooling container resource requirements
+                      properties:
+                        limits:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                        requests:
+                          properties:
+                            cpu:
+                              type: string
+                            memory:
+                              type: string
+                          type: object
+                      type: object
+                  type: object
+              type: object
+            version:
+              description: The version of Watson Discovery to be deployed.
+              type: string
+          type: object
+        status:
+          description: Status defines the observed state of WatsonDiscoveryTooling
+          type: object
+      type: object
+  versions:
+  - name: v1
+    served: true
+    storage: true

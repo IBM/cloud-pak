@@ -1,0 +1,9 @@
+###############################################################################
+## WKC-Core installation overrides for CP4D 3.5.0
+###############################################################################
+
+wdp-db2:
+  support4kDevice: true
+  dataVolume:
+    storageClassName: "portworx-db2-rwo-sc"
+    overrideStorageClass: true
