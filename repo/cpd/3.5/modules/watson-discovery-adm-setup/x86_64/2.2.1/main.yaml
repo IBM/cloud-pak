@@ -1,0 +1,34 @@
+type: module
+category: adm-setup
+name: Watson Discovery Admin Setup Module
+description: Contains required Custom Resource Definitions, Roles, RoleBindings, ServiceAccounts, and SecurityContextContraints for Watson Discovery
+files:
+  # Do not edit, automatically generated
+  - adm/rb/discovery-operator-rolebinding.yaml 
+  - adm/rb/admin-discovery-rolebinding.yaml 
+  - adm/scc/admin-discovery-scc.yaml 
+  - adm/sa/discovery-operator-sa.yaml 
+  - adm/sa/admin-discovery-sa.yaml 
+  - adm/roles/admin-discovery-role.yaml 
+  - adm/roles/discovery-operator-role.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverytoolings.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveryapis.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveryingestions.yaml 
+  - adm/crd/temporarypatches_oppy_ibm_com.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverydfs.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveries.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverystatelessapis.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverywires.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverycoreapis.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverycnms.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverysdus.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveryorchestrators.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveryhdps.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveryfoundations.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoverywksmls.yaml 
+  - adm/crd/discovery.watson.ibm.com_watsondiscoveryqueries.yaml
+add-scc-to-user:
+  - scc: admin-discovery-scc
+    sa: admin-discovery-sa
+  - scc: admin-discovery-scc
+    sa: discovery-operator-sa

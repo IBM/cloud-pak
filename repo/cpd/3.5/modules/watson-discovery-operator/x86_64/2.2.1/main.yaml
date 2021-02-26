@@ -1,0 +1,28 @@
+type: module
+category: helm-chart
+name: IBM Watson Discovery -- Operator
+releaseName: wd
+description: Operator for Watson Discovery
+
+# Timeout to wait for all resources up and running (minutes)
+timeout: 5
+
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+# installOverride: install-override.yaml
+# upgradeOverride: upgrade-override.yaml
+
+# This is the matching to addon.json so cpd will depends on the assembly name to find out all service instance type
+# serviceInstanceType:
+# - type1
+# - type2
+
+# The list is file names only, and expected to located under config/
+# scale:
+# - small.yaml
+
+chart: ibm-watson-discovery-operator-prod-1.0.3.tgz
+
+registry-reference: watson-discovery-registry
+images:
+  - name: discovery-operator
+    tag: 2.2.1-20e81f2b

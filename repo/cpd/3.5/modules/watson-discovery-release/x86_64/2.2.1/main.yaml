@@ -1,0 +1,144 @@
+type: module
+category: cr-yamls
+releaseName: wd
+
+# Timeout to monitor all CR status, <= 0 means forever
+timeout: 90
+
+# Override file to update the crContent before creation
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+# scale:
+# - small.yaml
+# - medium.yaml
+# - large.yaml
+
+# This is important for cpd to understand how to monitor, options: golang, ansible, helm
+operatorType: ansible
+
+# The list of the CR to be created (rendered by override files before apply)
+crFiles:
+  - file: watson-discovery-cr.yaml
+
+#uninstall:
+#  before: pre-uninstall-job.yaml # Optional: Only executed before delete all resources from the module
+#  after: post-uninstall-job.yaml # Optional: Only executed after all resources from the module deleted
+#  uninstallLabels:
+#    job:
+#      product: watson
+#      InstanceId: {{ .instanceId }}
+#    deployment:
+#      InstanceId: {{ .instanceId }}
+
+# Images
+registry-reference: watson-discovery-registry
+images: # ../images/manifest.yaml
+  - name: cnm-api 
+    tag: 1.1.0.0-1-fceb066 
+  - name: cnm-dbinit 
+    tag: 1.1.0.0-1-fceb066 
+  - name: cnm-seer 
+    tag: 1.0.0.7-2-faa9c95 
+  - name: configure-etcd 
+    tag: 1.3.2 
+  - name: configure-postgres 
+    tag: 20210125-125416-965-6d968a26 
+  - name: disco-ranker-server 
+    tag: 20210107-134222-576-40f3cdf 
+  - name: discovery-ranker-rest-service 
+    tag: 20210113-152106-653-26b3dbb 
+  - name: haywire 
+    tag: 20210107-012911-625-b5d32ec 
+  - name: icp-jks-gen 
+    tag: 1.0.23 
+  - name: icp-util 
+    tag: 1.0.23 
+  - name: kg-gensim-nonroot-user 
+    tag: masterv1.0.21 
+  - name: kg-induction 
+    tag: masterv1.0.78 
+  - name: kg-modelmesh 
+    tag: masterv1.0.29 
+  - name: logging-server 
+    tag: 0.0.21 
+  - name: model-mesh 
+    tag: main-20210219-10 
+  - name: objectstore-toolbox 
+    tag: 1.0.7 
+  - name: opencontent-icp-cert-gen-1 
+    tag: 1.1.11 
+  - name: opencontent-postgres-stolon 
+    tag: 2.0.5 
+  - name: po-box 
+    tag: 0.3.22 
+  - name: ranker-monitor-agent 
+    tag: 20210107-012806-607-ec731767 
+  - name: ranker-training 
+    tag: 20210221-005508-663-a716662 
+  - name: rhubi-statsd-exporter 
+    tag: 2.1.7 
+  - name: sdu-spark 
+    tag: 1.5.71 
+  - name: sdu-spark-db-init 
+    tag: 1.2.17 
+  - name: sentence-classification 
+    tag: v1.0.12 
+  - name: sentence-classification-gpu 
+    tag: v1.0.12 
+  - name: tooling 
+    tag: 2.2.1-rc.11 
+  - name: training-agent 
+    tag: 20210121-013211-773-38f46801 
+  - name: training-data-crud 
+    tag: 20210125-125416-965-6d968a26 
+  - name: training-master 
+    tag: 20210210-151542-2-727342 
+  - name: training-rest 
+    tag: 20210111-002819-686-0fb3b3e-non-root 
+  - name: watson-nlp-models 
+    tag: 1.3.0-3-37410f8 
+  - name: wd-adminapp 
+    tag: 12.0.7-3004 
+  - name: wd-api 
+    tag: 12.0.7-3005 
+  - name: wd-elastic-plugins 
+    tag: 12.0.7-3006 
+  - name: wd-hdp 
+    tag: 12.0.7-3022 
+  - name: wd-indexer 
+    tag: 0.3.1 
+  - name: wd-ingestion 
+    tag: 12.0.7-3020 
+  - name: wd-ingestion-api 
+    tag: 12.0.7-3020 
+  - name: wd-management 
+    tag: 12.0.7-3007 
+  - name: wd-migrator 
+    tag: 12.0.7-3010 
+  - name: wd-minerapp 
+    tag: 12.0.7-3007 
+  - name: wd-nginx 
+    tag: 12.0.7-3003 
+  - name: wd-orchestrator 
+    tag: 12.0.7-3014 
+  - name: wd-rapi 
+    tag: 12.0.7-3009 
+  - name: wd-rcm 
+    tag: 0.0.20 
+  - name: wd-stateless-api-model-runtime 
+    tag: 12.0.7-3012 
+  - name: wd-stateless-api-rest-proxy 
+    tag: 12.0.7-3012 
+  - name: wd-utils 
+    tag: 12.0.7-3008 
+  - name: wd-webpagecleaner 
+    tag: 12.0.7-3003 
+  - name: wd-wksml 
+    tag: 12.0.7-3007 
+  - name: wks-ene-expand 
+    tag: release-1-0-23-20210119-1210-4 
+  - name: wks-glimpse-ene-builder 
+    tag: release-1-0-23-20210119-1210-4 
+  - name: wks-ibmjdk8-rhubi8 
+    tag: master-20210209-1926-318
