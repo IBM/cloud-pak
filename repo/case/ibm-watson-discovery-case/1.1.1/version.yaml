@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 2.2.1
+  catalogs:
+    discovery: {}
+    rhocp: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Watson Discovery for IBM Cloud Pak for Data
+  displayDescription: IBM Watson Discovery for IBM Cloud Pak for Data
+  displayName: IBM Watson Discovery for IBM Cloud Pak for Data
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: https://wbi.mybluemix.net/icons/discovery.svg
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    discovery-license:
+      mediaType: application/text
+      metadata:
+        displayDescription: Licenses - IBM Watson Discovery for IBM Cloud Pak for Data
+        displayName: Licenses - IBM Watson Discovery for IBM Cloud Pak for Data
+      ref: LICENSE-discovery
+    discovery-notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: Notices - IBM Watson Discovery for IBM Cloud Pak for Data
+        displayName: Notices - IBM Watson Discovery for IBM Cloud Pak for Data
+      ref: NOTICES-discovery
+  name: ibm-watson-discovery-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 1.1.1
+  webPage: https://www.ibm.com
+created: 2021-02-26T20:26:21.96668760+0000
+digest: sha256:c5e1cd683c264f286904c7661d72fa4e716d72e6eadfce794466f77996ff1521
