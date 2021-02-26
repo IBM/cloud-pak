@@ -1,0 +1,17 @@
+#___________________________________________________________
+#
+# Copyright IBM Corp. 2020. All rights reserved.
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#___________________________________________________________
+#
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ibm-cpd-scheduler-sa
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: "replace-this-token"
+    release: "cpd-scheduler"
+
