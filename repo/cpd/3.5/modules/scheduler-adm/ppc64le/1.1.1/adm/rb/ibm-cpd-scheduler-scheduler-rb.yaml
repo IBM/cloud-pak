@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: "ibm-cpd-scheduler-scheduler-rb"
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: "cpd-scheduler"
+    release: "cpd-scheduler"
+subjects:
+- kind: ServiceAccount
+  name: "ibm-cpd-scheduler-sa"
+roleRef:
+  kind: Role
+  name: "ibm-cpd-scheduler-role"
+  apiGroup: rbac.authorization.k8s.io

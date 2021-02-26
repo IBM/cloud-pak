@@ -1,0 +1,48 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Scheduler
+# # The description is optional
+description: Setup Scheduler
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/cr/cpd-scheduler-clusterrole.yaml
+- adm/roles/ibm-cpd-scheduling-operator-role.yaml
+- adm/sa/ibm-cpd-scheduling-operator-sa.yaml
+- adm/sa/ibm-cpd-scheduler-agent-sa.yaml
+- adm/sa/ibm-cpd-scheduler-mutate-webhook-sa.yaml
+- adm/sa/ibm-cpd-scheduler-webhook-sa.yaml
+- adm/sa/ibm-cpd-scheduler-gpu-agent-sa.yaml
+- adm/sa/ibm-cpd-scheduler-sa.yaml
+- adm/rb/ibm-cpd-scheduling-operator-rb.yaml
+#- adm/crb/cpd-scheduling-operator-kube-scheduler-crb.yaml
+#- adm/crb/cpd-scheduling-operator-crb.yaml
+- adm/scc/cpd-scheduler-gpu-agent-scc.yaml
+- adm/scc/ibm-cpd-scheduler-operator-scc.yaml
+- adm/scc/ibm-cpd-scheduler-gpu-scc.yaml
+- adm/crd/cpd-scheduling-crd.yaml
+
+# Create clusterrolebindings
+add-cluster-role-to-user:
+- clusterrole: ibm-cpd-scheduling-operator
+  sa: ibm-cpd-scheduling-operator
+- clusterrole: system:kube-scheduler
+  sa: ibm-cpd-scheduling-operator
+
+# Optional, only when you have scc defined
+add-scc-to-user:
+- scc: ibm-cpd-scheduler-scc
+  sa: ibm-cpd-scheduler-agent-sa
+- scc: ibm-cpd-scheduler-scc
+  sa: ibm-cpd-scheduler-mutate-webhook-sa
+- scc: ibm-cpd-scheduler-scc
+  sa: ibm-cpd-scheduler-webhook-sa
+- scc: ibm-cpd-scheduler-scc
+  sa: ibm-cpd-scheduler-sa
+- scc: ibm-cpd-scheduler-operator-scc
+  sa: ibm-cpd-scheduling-operator
+- scc: ibm-cpd-scheduler-gpu-scc
+  sa: ibm-cpd-scheduler-gpu-agent-sa

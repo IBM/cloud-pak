@@ -1,0 +1,20 @@
+#___________________________________________________________
+#
+# Copyright IBM Corp. 2020. All rights reserved.
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#___________________________________________________________
+#
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ibm-cpd-scheduling-operator
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: "cpd-scheduler"
+    release: "cpd-scheduler"
+# Image Pull Secrets will be added by cpd-linux
+# imagePullSecrets:
+#- name: aks-image-pull-secret
+
