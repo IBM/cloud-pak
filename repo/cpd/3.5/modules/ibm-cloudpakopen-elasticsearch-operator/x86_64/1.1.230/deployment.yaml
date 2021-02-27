@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-es-controller-manager
+  labels:
+    control-plane: ibm-es-controller-manager
+    name: {{ .releaseName }} # must inject realse label for cpd tracking status
+    app.kubernetes.io/instance: {{ .releaseName }} # must inject realse label for cpd tracking status
+    app.kubernetes.io/managed-by: {{ .releaseName }} # must inject realse label for cpd tracking status
+    app.kubernetes.io/name: {{ .releaseName }} # must inject realse label for cpd tracking status
+spec:
+  selector:
+    matchLabels:
+      control-plane: ibm-es-controller-manager
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: {{ .releaseName }} # must inject realse label for cpd tracking status
+        control-plane: ibm-es-controller-manager
+        app.kubernetes.io/instance: {{ .releaseName }} # must inject realse label for cpd tracking status
+        app.kubernetes.io/managed-by: {{ .releaseName }} # must inject realse label for cpd tracking status
+        app.kubernetes.io/name: {{ .releaseName }} # must inject realse label for cpd tracking status
+      annotations:
+        productName: "IBM Operator for Elasticsearch"
+        productID: "AA85EFEB5C234A44A824BE23FB1896AF"
+        productVersion: "1.0.0"
+        productMetric: FREE
+        cloudpakId: "86798888679886798867988679886798"
+        cloudpakName: "Cloud Pak Open"
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 3
+              preference:
+                matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      serviceAccountName: ibm-cpo-elasticsearch-sa
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: manager
+          imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 6789
+            initialDelaySeconds: 5
+            periodSeconds: 3
+          securityContext:
+            privileged: false
+            readOnlyRootFilesystem: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "100Mi"
+            limits:
+              cpu: "100m"
+              memory: "1Gi"
+          args:
+            - "--enable-leader-election"
+            - "--leader-election-id=ibm-elasticsearch-operator"
+          image: "{{ .registryPrefix }}/opencontent-elasticsearch-operator:{{.global.image.tag}}"
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+      terminationGracePeriodSeconds: 10

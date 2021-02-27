@@ -1,0 +1,48 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ibm-etcd-operator-role
+  labels:
+    app.kubernetes.io/instance: ibm-etcd-operator
+    app.kubernetes.io/managed-by: ibm-etcd-operator
+    app.kubernetes.io/name: ibm-etcd-operator
+rules:
+- apiGroups:
+  - etcd.database.coreos.com
+  resources:
+  - "*"
+  verbs:
+  - "*"
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - services
+  - endpoints
+  - persistentvolumeclaims
+  - events
+  - configmaps
+  - secrets
+  verbs:
+  - "*"
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  - statefulsets
+  - replicasets
+  verbs:
+  - "*"
+- apiGroups: ["apps"]
+  resources:
+  - deployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  -  security.openshift.io
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - use
+  resourceNames:
+  - restricted

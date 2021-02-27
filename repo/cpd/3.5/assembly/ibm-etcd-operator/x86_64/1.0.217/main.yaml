@@ -1,0 +1,29 @@
+# mandatory - once this file uploaded, we will not delete any more,
+lifeCycle: live
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+license: "http://icp4d.ibm.com"
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: ibm-etcd-operator
+# Version is mandatory
+version: 1.0.217
+# Descriptioin is optional
+description: CP4D assembly for IBM ETCD ansible operator
+# architecture is optional
+# if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
+# sub product have to be homogerious architucture
+architecture: x86_64
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# overrideValues:
+#  install: install-override.yaml
+#  upgrade: upgrade-override.yaml
+
+bricks:
+  - name: lite
+    version: 3.0.1
+    type: assembly
+  - name: ibm-etcd-operator-adm-setup   # adm-setup module
+    version: 1.0.217
+    type: module
+  - name: ibm-etcd-operator    # template module
+    version: 1.0.217
+    type: module

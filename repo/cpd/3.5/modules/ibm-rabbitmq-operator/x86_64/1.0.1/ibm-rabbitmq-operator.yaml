@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibm-rabbitmq-operator
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }} # must inject realse label for cpd tracking status
+    app.kubernetes.io/managed-by: ibm-rabbitmq-operator
+    app.kubernetes.io/name: ibm-rabbitmq-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: ibm-rabbitmq-operator
+      app.kubernetes.io/instance: {{ .releaseName }}
+  template:
+    metadata:
+      labels:
+        name: ibm-rabbitmq-operator
+        app.kubernetes.io/instance: {{ .releaseName }}
+        app.kubernetes.io/managed-by: ibm-rabbitmq-operator
+        app.kubernetes.io/name: ibm-rabbitmq-operator
+      annotations:
+        productName: "ibm-rabbitmq"
+        productID: "86798888679886798867988679886798"
+        productVersion: "1.0.0"
+        productMetric: VIRTUAL_PROCESSOR_CORE
+        cloudpakId: "86798888679886798867988679886798"
+        cloudpakName: "Cloud Pak Open"
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 3
+              preference:
+                matchExpressions:
+                  - key: beta.kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      securityContext:
+        runAsNonRoot: true
+      serviceAccountName: ibm-rabbitmq-operator
+      containers:
+      - name: ibm-rabbitmq-operator
+        # Replace this with the built image name
+        image: "{{.registryPrefix}}/opencontent-rabbitmq-operator:{{.global.image.tag}}"
+        imagePullPolicy: Always
+        securityContext:
+          privileged: false
+          readOnlyRootFilesystem: false
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+        env:
+        - name: WATCH_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: OPERATOR_NAME
+          value: "ibm-rabbitmq-operator"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 512Mi

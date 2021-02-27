@@ -1,0 +1,13 @@
+# type is mandatory here
+type: module
+category: "adm-setup"
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: ibm-minio-adm-setup
+# The description is optional
+description: ibm-minio crd, roles, role-bindings and service accounts.
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/crd/ibm-minio-crd.yaml
+- adm/roles/ibm-minio-role.yaml
+- adm/rb/ibm-minio-rb.yaml
+- adm/sa/ibm-minio-sa.yaml
