@@ -1,0 +1,17 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: watson-gateway
+  labels:
+    operator: gateway-operator
+    component: watson-gateway
+    app.kubernetes.io/instance: ibm-watson-gateway-operator
+    app.kubernetes.io/managed-by: Ansible
+    app.kubernetes.io/name: ibm-watson-gateway-operator
+subjects:
+  - kind: ServiceAccount
+    name: watson-gateway
+roleRef:
+  kind: Role
+  name: watson-gateway
+  apiGroup: rbac.authorization.k8s.io

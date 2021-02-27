@@ -1,0 +1,16 @@
+type: module
+category: template-yamls
+
+#Images related
+registry-reference: "entitled-registry" #new registry from repo.yaml
+images:
+  - name: "opencontent-etcd-3"
+    tag: "2.1.2"
+
+# Timeout to wait for all resources and running
+timeout: 5 #minutes
+
+#Simlar to the helm, inject name as the label to the resources
+releaseName: ibm-etcd-operator-images-3
+
+templateModuleFiles: []

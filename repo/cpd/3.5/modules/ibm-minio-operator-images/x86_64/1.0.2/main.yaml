@@ -1,0 +1,22 @@
+type: module
+category: template-yamls
+
+# Images related
+registry-reference: "prod-entitled-registry"
+
+images:
+- name: "opencontent-minio"
+  tag: "1.1.6"
+- name: "opencontent-minio-client"
+  tag: "1.0.6"
+- name: "opencontent-icp-cert-gen-1"
+  tag: "1.1.10"
+
+# Timeout to wait for all resources up and running
+timeout: 5 #minutes
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: ibm-minio-operator-images
+
+
+templateModuleFiles: []

@@ -1,0 +1,113 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: watson-gateway
+  labels:
+    operator: gateway-operator
+    component: watson-gateway
+    app.kubernetes.io/instance: ibm-watson-gateway-operator
+    app.kubernetes.io/managed-by: Ansible
+    app.kubernetes.io/name: ibm-watson-gateway-operator
+rules:
+  - apiGroups:
+      - ""
+      - batch
+    resources:
+      - pods
+      - services
+      - services/finalizers
+      - endpoints
+      - persistentvolumeclaims
+      - events
+      - configmaps
+      - secrets
+      - jobs
+      - serviceaccounts
+    verbs:
+      - apply
+      - create
+      - get
+      - delete
+      - watch
+      - update
+      - edit
+      - list
+      - patch
+      - deletecollection
+  - apiGroups:
+      - apps
+    resources:
+      - deployments
+      - replicasets
+      - statefulsets
+    verbs:
+      - apply
+      - create
+      - get
+      - delete
+      - watch
+      - update
+      - edit
+      - list
+      - patch
+      - deletecollection
+  - apiGroups:
+      - monitoring.coreos.com # Not part of cpd-admin-role
+    resources:
+      - servicemonitors
+    verbs:
+      - get
+      - create
+  - apiGroups: # Not part of cpd-admin-role
+      - apps
+    resourceNames:
+      - watson-gateway
+    resources:
+      - deployments/finalizers
+    verbs:
+      - update
+  - apiGroups: # Not part of cpd-admin-role
+      - com.ibm.watson.watson-gateway
+    resources:
+      - "*"
+    verbs:
+      - apply
+      - create
+      - get
+      - delete
+      - watch
+      - update
+      - edit
+      - list
+      - patch
+      - deletecollection
+  - apiGroups:
+      - policy
+    resources:
+      - poddisruptionbudgets
+    verbs:
+      - apply
+      - create
+      - get
+      - delete
+      - watch
+      - update
+      - edit
+      - list
+      - patch
+      - deletecollection
+  - apiGroups:
+      - autoscaling
+    verbs:
+      - apply
+      - create
+      - get
+      - delete
+      - watch
+      - update
+      - edit
+      - list
+      - patch
+      - deletecollection
+    resources:
+      - horizontalpodautoscalers

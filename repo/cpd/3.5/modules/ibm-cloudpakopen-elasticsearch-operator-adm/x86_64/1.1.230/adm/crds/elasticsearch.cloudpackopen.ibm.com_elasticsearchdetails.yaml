@@ -1,0 +1,336 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: elasticsearchdetails.elasticsearch.cloudpackopen.ibm.com
+  labels:
+    app.kubernetes.io/instance: ibm-cloudpakopen-elasticsearch-operator
+    app.kubernetes.io/managed-by: ibm-cloudpakopen-elasticsearch-operator
+    app.kubernetes.io/name: ibm-cloud-databases-redis-operator
+spec:
+  group: elasticsearch.cloudpackopen.ibm.com
+  names:
+    kind: ElasticsearchDetails
+    listKind: ElasticsearchDetailsList
+    plural: elasticsearchdetails
+    singular: elasticsearchdetails
+  scope: Namespaced
+  preserveUnknownFields: true
+  versions:
+    - name: v1
+      served: true
+      storage: true
+  validation:
+    openAPIV3Schema:
+      description: ElasticsearchDetails is the Schema for the elasticseachdetails API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: Spec defines the desired state of ElasticsearchDetails
+          type: object
+          x-kubernetes-preserve-unknown-fields: true
+          properties:
+            tlsSecret:
+              description: Provided kubernetes secret with TLS certificate included. If left blank one will be generated. The tls cert is used for both https and ssl tunnel. So both certificate and private key are required. They are combined into a single cert.pem file. If left empty a TLS certificate will be generated.
+              type: string
+            credentialSecret:
+              type: string
+              description: Secret containing username (key) and password (value). If left blank one will be generated. The elastic username is required to be present. 
+            image:
+              type: string
+              description: The single docker image to use for the operand. This image differs for version 6 & 7. 
+            imagePullSecret:
+              type: string
+              description: Secret with Image pull credentials
+            imagePullPolicy:
+              type: string
+              description: Container pull policy.
+            generateDaysExpire:
+              type: integer
+              description: When a self signed certificate is generated after how many days should it expire. Defaults to 3650
+            labels:
+              type: object
+              description: labels to be added to the resouces
+            elasticsearchConfig:
+              type: object
+              description: Internal elasticsearch config to enable sidecar used across all nodes
+              properties:
+                cluster:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Elasticsearch cluster name
+                transport:
+                  type: object
+                  properties:
+                    port:
+                      type: integer
+                      description: Elasticsearch transport port. defaults to 19300 and should not be 9300
+                network:
+                  type: object
+                  properties:
+                    publishHost:
+                      type: string
+                      description: host to publish to other nodes.  Defaults to "127.0.0.1" which the ha proxy uses for port forwarding.
+                http:
+                  type: object
+                  properties:
+                    log:
+                      type: object
+                      properties:
+                        frontend:
+                          type: boolean
+                          description: If true, enable the http log of Elasticsearch frontend. Defaults to false.
+                    port:
+                      type: integer
+                      description: port to use for internal http communication within the pod. Defaults to 19200.
+                    timeout:
+                      type: object
+                      properties:
+                        connect:
+                          type: string
+                          description: Elasticsearch backend HTTP connection timeout. Defaults to 30000
+                        client:
+                          type: string
+                          description: Elasticsearch frontend HTTP client timeout. Defaults to 30000
+                        server:
+                          type: string
+                          description: Elasticsearch backend HTTP server timeout. Defaults to 30000
+            proxyHttpPort:
+              type: integer
+              description: HAProxy encrypted Elasticsearch http port. Defaults to 9200
+            proxyTransportPort:
+              type: integer
+              description: HAProxy encrypted Elasticsearch transport port. Defaults to 9300
+            proxyTimeout:
+              type: object
+              description: HAProxy timeout configurations.
+              properties:
+                connect:
+                  type: string
+                  description: Connection timeout value of HAProxy. Defaults to 30000
+                client:
+                  type: string
+                  description: Client timeout value of HAProxy. Defaults to 30000
+                server:
+                  type: string
+                  description: Server timeout value of HAProxy. Defaults to 30000
+            updateStrategy:
+              type: string
+              description: method used for applying updates. This is also used for applying haproxy updates including scaling nodes. Defaults to RollingUpdate.
+            minimumMasterNodes:
+              type: integer
+              description: Defaults to 2. (ES6 only setting)
+            maxUnavailable:
+              type: integer
+              description: Pod Disruption Budget setting
+            podAnnotations: 
+              type: object
+              description: pod annotations used for licensing and metering
+            nodes:
+              type: array
+              description: Definition of different Elastic search node types
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: Name given to a set of nodes
+                  description:
+                    type: string
+                    description: Description given to a set of nodes
+                  data:
+                    type: boolean
+                    description: Should the set of nodes be given a data node role
+                  ingest:
+                    type: boolean
+                    description: Should the set of nodes be given ingest node role
+                  master:
+                    type: boolean
+                    description: Should the set of nodes be given a master node role
+                  replicas:
+                    type: integer
+                    description: Number of replicas. Should not be less than 3 and for elasticsearch 6 should be an odd number to prevent split brain. 
+                  additionalConfiguration:
+                    type: array
+                    description: Additional values to include in elasticsearch.yml
+                    items:
+                      type: object
+                      properties:
+                        name: 
+                          type: string
+                          description: elasticsearch.yml key
+                        value:
+                          type: string
+                          description: elasticsearch.yml value
+                  jvmOpts:
+                    type: string
+                    description: JVM options to set for the set of nodes. For elasticsearch 6 set -Dlog4j2.disable.jmx=true due to https://github.com/elastic/elasticsearch/issues/21932#issuecomment-264435034
+                  storageClass:
+                    type: string
+                    description: A RWO storage class.
+                  storageSize:
+                    type: string
+                    description: Size of the storage to provision
+                  nodeGroupLabels:
+                    type: object
+                    description: elastic node group specific labels
+                  podAffinity:
+                    type: object
+                    description: Set the pod affinity for the elasticsearch node groups
+                  podAntiAffinity:
+                    type: object
+                    description: Set the pod anti-ffinity for the elasticsearch node groups
+                  nodeAffinity:
+                    type: object
+                    description: Set the node affinity for the elasticsearch node groups
+                  nodeSelector:
+                    type: object
+                    description: Set the node selector for the elasticsearch node groups
+                  environmentVariables:
+                    type: object
+                    description: key/value Environmnet variables to pass to the elasticsearch container
+                  secureEnvironmentVariables:
+                    type: array
+                    description: Environment variables to pass to the elasticsearch container from a secure secret.
+                    items:
+                      type: object
+                      properties:
+                        envVar:
+                          type: string
+                          description: Environment Variable to be set
+                        secretName:
+                          type: string
+                        secretKey:
+                          type: string
+                  mountSecrets:
+                    type: array
+                    description: Collection of kubernetes secrets to mount in the elasticsearch container
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          description: Secret name to mount. Will be named as user-<name> in the CR
+                        path:
+                          type: string
+                          description: path to mount the secret to.
+                  addKeys:
+                    type: array
+                    description: An array of keys that will be passed to the elasticsearch key store from a secret.
+                    items:
+                      type: object
+                      properties: 
+                        secret:
+                          type: string
+                          description: kubernetes secret name
+                        esKeys:
+                          type: array
+                          desciprtion: An Array or secret key to elasticsearch keystore mappings
+                          items:
+                            type: object
+                            properties:
+                              envVar:
+                                type: string
+                                description: Kubernetes secret key
+                              esKey:
+                                type: string
+                                description: Elasticsearch keystore key
+                  esResources:
+                    type: object
+                    description: Elasticsearch specific resource requests and limits
+                    properties:
+                      requests:
+                        type: object
+                        properties:
+                          cpu:
+                            type: string
+                          memory:
+                            type: string
+                      limits:
+                        type: object
+                        properties:
+                          cpu:
+                            type: string
+                          memory:
+                            type: string
+                  haResources:
+                    type: object
+                    description: HAproxy TLS sidecar specific resource requests and limits
+                    properties:
+                      requests:
+                        type: object
+                        properties:
+                          cpu:
+                            type: string
+                          memory:
+                            type: string
+                      limits:
+                        type: object
+                        properties:
+                          cpu:
+                            type: string
+                          memory:
+                            type: string
+            plugins:
+              type: array
+              description: A list of plugins to load
+              items:
+                type: object
+                properties:
+                  image:
+                    type: string
+                    description: Docker image containing the plugins
+                  directory:
+                    type: string
+                    description: Location on the docker image containing the docker images
+            esVersion:
+              type: integer
+              description: Elastic search major version. Only 6 and 7 are supported              
+            livenessProbe:
+              type: object
+              properties:
+                failureThreshold:
+                  type: integer
+                initialDelaySeconds:
+                  type: integer
+                periodSeconds:
+                  type: integer
+                successThreshold:
+                  type: integer
+                timeoutSeconds:
+                  type: integer
+            readinessProbe:
+              type: object
+              properties:
+                failureThreshold:
+                  type: integer
+                initialDelaySeconds:
+                  type: integer
+                periodSeconds:
+                  type: integer
+                successThreshold:
+                  type: integer
+                timeoutSeconds:
+                  type: integer
+            clusterHealthCheckParams:
+              type: string
+              description: parameters to pass to the curl command verifying the pod health.
+        status:
+          description: Status defines the observed state of ElasticsearchDetails
+          type: object
+          x-kubernetes-preserve-unknown-fields: true
+      type: object
+  subresources:
+    status: {}

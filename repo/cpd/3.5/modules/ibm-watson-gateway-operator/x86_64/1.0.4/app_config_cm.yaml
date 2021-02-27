@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-app-config
+  labels:
+    operator: gateway-operator
+    component: watson-gateway
+    app.kubernetes.io/instance: "{{ .releaseName }}"
+    app.kubernetes.io/managed-by: Ansible
+    app.kubernetes.io/name: "{{ .releaseName }}"
+data:
+  app_config.yaml: |
+
+    cluster_domain: "cluster.local"
+
+    replicas:
+      small: 1
+      medium: 2
+      large: 3
+
+    resources:
+      limits:
+        cpu:     800m
+        memory:  1024Mi
+      requests:
+        cpu:     100m
+        memory:  512Mi
+
+    ############
+    ## Images ##
+    ############
+    container_images:
+      gateway:
+        registry: "{{ .registryPrefix }}"
+        namespace: ""
+        name: watson-gateway
+        tag: 3.7.8
+
+    ##############
+    ## Metering ##
+    ##############
+    metering:
+      productVersion: "3.7.8"
+      productID: "ICP4D-addon-IBMWatsonGateway"
+      productName: "IBM Watson Gateway"
+      cloudpakName: "IBM Cloud Pak for Data"
+      cloudpakId: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+      cloudpakInstanceId: "{{ .cloudpakInstanceId }}"
+      productCloudpakRatio: "1:1"
+      productChargedContainers: "All"
+      productMetric: "VIRTUAL_PROCESSOR_CORE"
+
+    ################################
+    ## Horizontal Pod Autoscaling ##
+    ################################
+    autoscaling:
+      enabled: true
+      max_replicas: 3
+      min_replicas: 1
+      target_cpu_utilization_percentage: 90
+
+    #########################
+    ## PodDisruptionBudget ##
+    #########################
+    pdb:
+      enabled: true
+
+    additional_labels:
+      app.kubernetes.io/instance: "{{ .releaseName }}"
+      app.kubernetes.io/managed-by: Ansible
+      app.kubernetes.io/name: "{{ .releaseName }}"
