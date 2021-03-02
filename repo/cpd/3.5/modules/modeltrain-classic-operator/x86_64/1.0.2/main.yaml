@@ -1,0 +1,39 @@
+type: module
+category: template-yamls
+
+# Images related
+registry-reference: "modeltrain-classic-registry"
+images:
+- name: model-train-controller
+  tag: 20210216-1
+- name: coordinator
+  tag: rhubi-master-856
+- name: databroker-s3
+  tag: rhubi-master-856
+- name: jobmonitor
+  tag: rhubi-master-856
+- name: lifecycle-manager-service
+  tag: rhubi-master-856
+- name: ratelimiter
+  tag: rhubi-master-181
+- name: trainer-v2-service
+  tag: rhubi-master-562
+
+# Timeout to wait for all resources up and running
+timeout: 5 #minutes
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: ibm-modeltrain-classic-operator
+
+# The override values to update the yamls before install and upgrade
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+# scale:
+# - small.yaml
+# - medium.yaml
+
+templateModuleFiles:
+- name: modeltrain-classic-operator.yaml
+  case: ""  # Optional: Default is for both install and upgrade
+  wait: false # Optional: Default is false
