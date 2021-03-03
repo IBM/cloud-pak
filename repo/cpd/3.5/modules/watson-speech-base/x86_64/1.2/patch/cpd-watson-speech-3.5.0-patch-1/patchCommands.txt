@@ -1,0 +1,1 @@
+patch deployment {{ .ReleaseName }}-speech-to-text-stt-async -p '{"spec": {"template": {"spec":{"containers": [{"name": "stt-async", "image":"{{.DockerRegistryPrefix }}/stt-async:master-751"}]}}}}'
