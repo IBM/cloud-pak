@@ -1,0 +1,10 @@
+chart: db2u-operator-3.5.3.tgz
+images:
+  - name: db2u-operator
+    tag: 3.5.3-1466-ppc64le
+installOverride: install-override.yaml
+name: db2u-operator
+registry-reference : base-registry
+releaseName: db2u-operator
+timeout: 90
+type: module
