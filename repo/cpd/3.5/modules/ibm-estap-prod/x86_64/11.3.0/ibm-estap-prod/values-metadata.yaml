@@ -1,0 +1,35 @@
+global:
+  __metadata:
+    label: "Global"
+    description: "Global parameters"
+    type: "string"
+    immutable: false
+    required: true
+  dockerRegistryPrefix:
+    __metadata:
+      label: "Registry server"
+      description: "Registry server containing image to download"
+      type: "string"
+      immutable: true
+      required: true
+  requisiteImage:
+    __metadata:
+      label: "Image"
+      description: "Name of image"
+      type: "string"
+      immutable: true
+      required: true
+  requisiteTag:
+    __metadata:
+      label: "Tag"
+      description: "Tag for image"
+      type: "string"
+      immutable: true
+      required: true
+  editor:
+    __metadata:
+      label: "Service account name"
+      description: "Service account name for Guardium External S-TAP deployment"
+      type: "string"
+      immutable: false
+      required: true
