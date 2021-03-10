@@ -1,0 +1,14 @@
+type: assembly
+lifeCycle: live
+license: http://icp4d.ibm.com
+name: ibm-estap-prod
+version: 1.1.0
+description: IBM Cloud Private for Data Systems assembly
+architecture: x86_64
+bricks:
+  - name: lite
+    minVersion: 3.5.0
+    type: assembly
+  - name: ibm-estap-prod
+    version: 11.2.1
+    type: module

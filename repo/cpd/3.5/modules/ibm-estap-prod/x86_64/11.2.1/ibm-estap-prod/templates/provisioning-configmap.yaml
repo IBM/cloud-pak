@@ -1,0 +1,970 @@
+# vim: ts=2:sw=2:et
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: external-stap-provisioning
+  labels:
+    icpdata_addon: "true"
+data:
+  extensions: |
+    [
+      {
+        "extension_point_id": "service_provisioning",
+        "extension_name": "external-stap-provisioning",
+        "display_name": "External S-TAP",
+        "order_hint": 100,
+        "match_permissions": "",
+        "meta": {},
+        "details": {
+          "provisioning": {
+            "storage": {
+                 "existing_pv_selection": true
+            },
+            "custom_steps": [{
+              "step_key": "generalConfig",
+              "label": "General",
+              "description": "Specify the deployment and image settings for IBM Guardium External S-TAP",
+              "columns": [
+                ["section1Req"],
+                ["section2Req"]
+              ],
+              "sections": {
+                "section1Req": {
+                  "form_title": "Deployment",
+                  "items": [ "estap.name", "global.secret", "estap.replicas", "estap.nodePort" ]
+                },
+                "section2Req": {
+                  "form_title": "Image",
+                  "items": [ "estap.serviceAccountName", "global.dockerRegistryPrefix", "estap.image", "estap.tag" ]
+                }
+              },
+              "properties": {
+                "estap.name": {
+                  "type": "string",
+                  "label": "Deployment name",
+                  "tooltip": {
+                    "trigger_text": "Deployment name",
+                    "text": "A unique name for this deployment"
+                  },
+                  "placeholder": "estap",
+                  "default": "estap",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "global.secret": {
+                  "type": "string",
+                  "label": "Secret",
+                  "tooltip": {
+                    "trigger_text": "Secret",
+                    "text": "Specify an existing kubernetes secret.  At the time the assembly is installed, a default secret is created with the name 'estap-secret'.  This secret contains an automatically generated RSA key and certificate pair for External S-TAP to use.  You may specify a different kubernetes secret or modify the default one.  It must contain either a certificate/key pair (tls.key and tls.crt) or a key/value pair defining a secret token that is provided by the Guardium appliance.  The kubernetes secret may contain both a certificate/key pair and a key/value pair for the token, or even contain multiple key/value pairs."
+                  },
+                  "placeholder": "estap-secret",
+                  "default": "estap-secret",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.serviceAccountName": {
+                  "type": "string",
+                  "label": "Service account name",
+                  "placeholder": "default",
+                  "default": "default",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "global.dockerRegistryPrefix": {
+                  "type": "string",
+                  "label": "Registry path",
+                  "tooltip": {
+                    "trigger_text": "Registry path",
+                    "text": "Specify a valid registry path accessible from the {{ .Release.Namespace }} namespace which contains the External S-TAP image.  The registry path defines the location from where the External S-TAP image is to be pulled.  An incorrect path specified here will prevent the External S-TAP pods from deploying."
+                  },
+                  "placeholder": "image-registry.openshift-image-registry.svc:5000/{{ .Release.Namespace }}",
+                  "default": "image-registry.openshift-image-registry.svc:5000/{{ .Release.Namespace }}",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:-]*$"
+                },
+                "estap.image": {
+                  "type": "string",
+                  "label": "Image label",
+                  "tooltip": {
+                    "trigger_text": "Image label",
+                    "text": "Specify the label given to the External S-TAP image in the registry indicated.  An incorrect label specified here will prevent the External S-TAP pods from deploying."
+                  },
+                  "placeholder": "guardium_external_s-tap",
+                  "default": "guardium_external_s-tap",
+                  "validTextRegex": "^[A-Za-z0-9_]+[A-Za-z0-9_-]*$"
+                },
+                "estap.tag": {
+                  "type": "string",
+                  "label": "Image tag",
+                  "tooltip": {
+                    "trigger_text": "Image tag",
+                    "text": "Specify the tag for the External S-TAP image.  The tag allows you to specify a particular External S-TAP image to be used in deployment.  This is typically used to indicate a particular version to be used when deploying.  Specifying a missing tag here will prevent the External S-TAP pods from deploying.  It is important to use images that are intended to be deployed with the assembly version installed."
+                  },
+                  "placeholder": "v11.2.0",
+                  "default": "v11.2.0",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9.-]*$"
+                },
+                "estap.nodePort": {
+                  "type": "range",
+                  "label": "NodePort",
+                  "tooltip": {
+                    "trigger_text": "NodePort",
+                    "text": "Specify the port number for the NodePort that will be automatically created.  When External S-TAP is deployed, a LoadBalancer will be created.  This LoadBalancer will automatically have a NodePort created for it.  Specify the port via which you wish the NodePort to be accessible.  Specifying a port that is already in use will cause the deployment to fail."
+                  },
+                  "default": 30000,
+                  "min": 30000,
+                  "max": 32767
+                },
+                "estap.replicas": {
+                  "type": "range",
+                  "label": "Replicas",
+                  "tooltip": {
+                    "trigger_text": "Replicas",
+                    "text": "Specify the number of replicas of External S-TAP to create in this deployment."
+                  },
+                  "default": 2,
+                  "min": 1,
+                  "max": 5
+                }
+              }
+            },
+            {
+              "step_key": "dbProxyConfig",
+              "label": "Database and Proxy",
+              "description": "Configure the back-end database service and proxy parameters for External S-TAP",
+              "required": [
+                "estap.db.host",
+                "estap.db.type"
+              ],
+              "columns": [
+                ["section1Req"],
+                ["section2Opt1", "section3Opt2"]
+              ],
+              "sections": {
+                "section1Req": {
+                  "form_title": "Back-end Database Service (Required)",
+                  "items": [ "estap.db.host", "estap.db.port", "estap.db.type", "estap.proxy.debug" ]
+                },
+                "section2Opt1": {
+                  "form_title": "General Proxy Parameters (Optional)",
+                  "items": [ "estap.proxy.secret", "estap.proxy.group_uuid", "estap.proxy.num_workers", "estap.proxy.proxy_protocol", "estap.proxy.disconnect_on_invalid_certificate", "estap.proxy.notify_on_invalid_certificate", "estap.proxy.listen_port" ]
+                },
+                "section3Opt2": {
+                  "form_title": "Proxy Certificate CSR Parameters (Optional)",
+                  "items": [ "estap.proxy.csr.name", "estap.proxy.csr.country", "estap.proxy.csr.province", "estap.proxy.csr.city", "estap.proxy.csr.organization", "estap.proxy.csr.keylength" ]
+                }
+              },
+              "properties": {
+                "estap.db.host": {
+                  "type": "string",
+                  "label": "Database host",
+                  "tooltip": {
+                    "trigger_text": "Database host",
+                    "text": "Specify the hostname or IP of the database instance for which External S-TAP will be monitoring client connections."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.db.port": {
+                  "type": "range",
+                  "label": "Database port",
+                  "tooltip": {
+                    "trigger_text": "Database port",
+                    "text": "Port on which the specified database is listening for client connections."
+                  },
+                  "default": 50000,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.db.type": {
+                  "type": "string",
+                  "label": "Database type",
+                  "tooltip": {
+                    "trigger_text": "Database type",
+                    "text": "Specify the type of database that will be monitored.  The string specified must be one of the documented allowable database type strings for IBM Guardium External S-TAP.  See the online Guardium documentation for examples."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9_-]*$"
+                },
+                "estap.proxy.debug": {
+                  "type": "enum",
+                  "label": "Debug",
+                  "tooltip": {
+                    "trigger_text": "Debug",
+                    "text": "Enables debug logging for troubleshooting.  This parameter should not be set to a non-zero value except for when debugging and troubleshooting is required.  Decrypted traffic may be stored in the logs and performance of the External S-TAP may be impacted with the additional logging."
+                  },
+                  "placeholder": "Select a value",
+                  "default": "0 - off",
+                  "items": [
+                    { "id": "0", "text": "0 - off" },
+                    { "id": "1", "text": "1 - Configuration logging" },
+                    { "id": "2", "text": "2 - Packet digest 1" },
+                    { "id": "3", "text": "3 - Packet digest 2" },
+                    { "id": "4", "text": "4 - Full verbose" }
+                  ]
+                },
+                "estap.proxy.secret": {
+                  "type": "string",
+                  "label": "Proxy secret token",
+                  "tooltip": {
+                    "trigger_text": "Proxy secret token",
+                    "text": "Specify the key for token retrieved from the Guardium appliance which is stored in the kubernetes secret previously specified.  Only used when retrieving or signing certificates with the collector."
+                  },
+                  "placeholder": "estap-token",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.proxy.group_uuid": {
+                  "type": "string",
+                  "label": "Proxy group UUID",
+                  "tooltip": {
+                    "trigger_text": "Proxy group UUID",
+                    "text": "Optionally specify a unique identifier to group replicas together in the Guardium appliance.  Randomly generated if not set."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.proxy.num_workers": {
+                  "type": "range",
+                  "label": "Worker threads",
+                  "tooltip": {
+                    "trigger_text": "Worker threads",
+                    "text": "Specify the number of threads each External S-TAP container will use.  You may specify up the number of cores available on the kubernetes worker nodes."
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 64
+                },
+                "estap.proxy.proxy_protocol": {
+                  "type": "boolean",
+                  "label": "Proxy protocol expected",
+                  "tooltip": {
+                    "trigger_text": "Proxy protocol expected",
+                    "text": "Proxy protocol allows External S-TAP to know the real client IP address, however proxy protocol must be injected at some point to the application data stream prior to reaching External S-TAP.  This is typically done by passing the traffic through a load balancer configured to add the necessary packets.  In order for the client IP encoded in the proxy protocol packet to be meaningful, it must be added when the client IP is still visible from the connection metadata.  When enabled, this parameter tells External S-TAP to expect the proxy protocol v1 packet at the beginning of each client connection.  If the packet is expected and not present, then the connection will fail.  External S-TAP will remove the proxy protocol packet from the stream prior to relaying the connection to the back end service."
+                  },
+                  "default": false
+                },
+                "estap.proxy.disconnect_on_invalid_certificate": {
+                  "type": "boolean",
+                  "label": "Disconnect on invalid certificate",
+                  "tooltip": {
+                    "trigger_text": "Disconnect on invalid certificate",
+                    "text": "Disconnect from server/client if the certificate is invalid."
+                  },
+                  "default": false
+                },
+                "estap.proxy.notify_on_invalid_certificate": {
+                  "type": "boolean",
+                  "label": "Notify on invalid certificate",
+                  "tooltip": {
+                    "trigger_text": "Notify on invalid certificate",
+                    "text": "Send an alert if the server/client certificate is invalid."
+                  },
+                  "default": false
+                },
+                "estap.proxy.listen_port": {
+                  "type": "range",
+                  "label": "Internal container listen port",
+                  "tooltip": {
+                    "trigger_text": "Internal container listen port",
+                    "text": "The port on which External S-TAP will listen inside the container."
+                  },
+                  "default": 8888,
+                  "min": 1024,
+                  "max": 65535
+                },
+                "estap.proxy.csr.name": {
+                  "type": "string",
+                  "label": "CSR Common Name",
+                  "placeholder": "db.example.com",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9.-]*$"
+                },
+                "estap.proxy.csr.country": {
+                  "type": "string",
+                  "label": "CSR Country",
+                  "placeholder": "us",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.proxy.csr.province": {
+                  "type": "string",
+                  "label": "CSR Province",
+                  "placeholder": "massachusetts",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.proxy.csr.city": {
+                  "type": "string",
+                  "label": "CSR City",
+                  "placeholder": "littleton",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.proxy.csr.organization": {
+                  "type": "string",
+                  "label": "CSR Organization",
+                  "placeholder": "IBM",
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9-]*$"
+                },
+                "estap.proxy.csr.keylength": {
+                  "type": "number",
+                  "label": "Key length",
+                  "tooltip": {
+                    "trigger_text": "Key length",
+                    "text": "Bit length of the private key generated with the CSR"
+                  },
+                  "default": 2048
+                }
+              }
+            },
+            {
+              "step_key": "guardiumConfig",
+              "label": "Collector",
+              "description": "Guardium Collector Configuration",
+              "required": [
+                "estap.guardium.host"
+              ],
+              "columns": [
+                ["section1Primary","section3Secondary","section5Secondary","section7Secondary","section9Secondary"],
+                ["section2Secondary","section4Secondary","section6Secondary","section8Secondary","section10Secondary"]
+              ],
+              "sections": {
+                "section1Primary": {
+                  "form_title": "Primary Guardium Collector",
+                  "items": [ "estap.guardium.host", "estap.guardium.port", "estap.guardium.connection_pool_size", "estap.guardium.num_main_thread", "estap.participate_in_load_balancing" ]
+                },
+                "section2Secondary": {
+                  "form_title": "Secondary Guardium Collector 1 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s1.host", "estap.guardium.secondaries.s1.port", "estap.guardium.secondaries.s1.connection_pool_size", "estap.guardium.secondaries.s1.num_main_thread" ]
+                },
+                "section3Secondary": {
+                  "form_title": "Secondary Guardium Collector 2 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s2.host", "estap.guardium.secondaries.s2.port", "estap.guardium.secondaries.s2.connection_pool_size", "estap.guardium.secondaries.s2.num_main_thread" ]
+                },
+                "section4Secondary": {
+                  "form_title": "Secondary Guardium Collector 3 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s3.host", "estap.guardium.secondaries.s3.port", "estap.guardium.secondaries.s3.connection_pool_size", "estap.guardium.secondaries.s3.num_main_thread" ]
+                },
+                "section5Secondary": {
+                  "form_title": "Secondary Guardium Collector 4 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s4.host", "estap.guardium.secondaries.s4.port", "estap.guardium.secondaries.s4.connection_pool_size", "estap.guardium.secondaries.s4.num_main_thread" ]
+                },
+                "section6Secondary": {
+                  "form_title": "Secondary Guardium Collector 5 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s5.host", "estap.guardium.secondaries.s5.port", "estap.guardium.secondaries.s5.connection_pool_size", "estap.guardium.secondaries.s5.num_main_thread" ]
+                },
+                "section7Secondary": {
+                  "form_title": "Secondary Guardium Collector 6 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s6.host", "estap.guardium.secondaries.s6.port", "estap.guardium.secondaries.s6.connection_pool_size", "estap.guardium.secondaries.s6.num_main_thread" ]
+                },
+                "section8Secondary": {
+                  "form_title": "Secondary Guardium Collector 7 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s7.host", "estap.guardium.secondaries.s7.port", "estap.guardium.secondaries.s7.connection_pool_size", "estap.guardium.secondaries.s7.num_main_thread" ]
+                },
+                "section9Secondary": {
+                  "form_title": "Secondary Guardium Collector 8 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s8.host", "estap.guardium.secondaries.s8.port", "estap.guardium.secondaries.s8.connection_pool_size", "estap.guardium.secondaries.s8.num_main_thread" ]
+                },
+                "section10Secondary": {
+                  "form_title": "Secondary Guardium Collector 9 (Optional, leave host empty to disable)",
+                  "items": [ "estap.guardium.secondaries.s9.host", "estap.guardium.secondaries.s9.port", "estap.guardium.secondaries.s9.connection_pool_size", "estap.guardium.secondaries.s9.num_main_thread" ]
+                }
+              },
+              "properties": {
+                "estap.guardium.host": {
+                  "type": "string",
+                  "label": "Primary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Primary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.port": {
+                  "type": "range",
+                  "label": "Primary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Primary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.connection_pool_size": {
+                  "type": "number",
+                  "label": "Primary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Primary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.num_main_thread": {
+                  "type": "range",
+                  "label": "Primary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Primary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.participate_in_load_balancing": {
+                  "type": "enum",
+                  "label": "Participate in load balancing with Guardium collectors",
+                  "tooltip": {
+                    "trigger_text": "Participate in load balancing with Guardium collectors",
+                    "text": "Specify the load balancing type for External S-TAP."
+                  },
+                  "placeholder": "Select a mode",
+                  "default": "0 - none",
+                  "items": [
+                    { "id": "0", "text": "0 - none" },
+                    { "id": "1", "text": "1 - split" },
+                    { "id": "2", "text": "2 - duplicate" },
+                    { "id": "3", "text": "3 - external" },
+                    { "id": "4", "text": "4 - threaded" }
+                  ]
+                },
+                "estap.guardium.secondaries.s1.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s1.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s1.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s1.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s2.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s2.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s2.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s2.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s3.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s3.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s3.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s3.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s4.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s4.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s4.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s4.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s5.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s5.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s5.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s5.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s6.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s6.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s6.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s6.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s7.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s7.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s7.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s7.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s8.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s8.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s8.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s8.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.guardium.secondaries.s9.host": {
+                  "type": "string",
+                  "label": "Secondary Guardium collector host",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector host",
+                    "text": "Hostname or IP of Guardium appliance to which the External S-TAPs will connect."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.guardium.secondaries.s9.port": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector port",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector port",
+                    "text": "Base port on which the Guardium appliance is accepting UNIX protocol traffic."
+                  },
+                  "default": 16016,
+                  "min": 1,
+                  "max": 65535
+                },
+                "estap.guardium.secondaries.s9.connection_pool_size": {
+                  "type": "number",
+                  "label": "Secondary Guardium collector connection pool size",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector connection pool size",
+                    "text": "Number of auxilliary threads created by External S-TAP to send data to the Guardium appliance."
+                  },
+                  "default": 0,
+                  "placeholder": "0"
+                },
+                "estap.guardium.secondaries.s9.num_main_thread": {
+                  "type": "range",
+                  "label": "Secondary Guardium collector number of main threads",
+                  "tooltip": {
+                    "trigger_text": "Secondary Guardium collector number of main threads",
+                    "text": "Number of main threads created by External S-TAP to communicate with the Guardium appliance.  Main threads are for use when participating in load balancing (options 1 and 4).  The same collector is connected to multiple times when threading the STAP's intercepted traffic read end.  This is a shortcut for specifying the same collector multiple times as secondaries and should only be used when the collector has capacity for the extra connections"
+                  },
+                  "default": 1,
+                  "min": 1,
+                  "max": 10
+                }
+              }
+            },
+            {
+              "step_key": "advancedConfig",
+              "label": "Probes and Limits",
+              "description": "Configuration for the liveness/readiness probes and other infrequently used options",
+              "columns": [
+                [ "section1Liveness", "section2Readiness" ],
+                [ "section3Other", "section4Other" ]
+              ],
+              "sections": {
+                "section1Liveness": {
+                  "form_title": "Liveness Probe",
+                  "items": [ "estap.livenessProbe.command", "estap.livenessProbe.initialDelaySeconds", "estap.livenessProbe.periodSeconds", "estap.livenessProbe.failureThreshold" ]
+                },
+                "section2Readiness": {
+                  "form_title": "Readiness Probe",
+                  "items": [ "estap.readinessProbe.command", "estap.readinessProbe.initialDelaySeconds", "estap.readinessProbe.periodSeconds", "estap.readinessProbe.failureThreshold" ]
+                },
+                "section3Other": {
+                  "form_title": "Limits",
+                  "items": [ "estap.requests.cpu", "estap.requests.memory", "estap.limits.cpu", "estap.limits.memory", "estap.imagePullPolicy" ]
+                },
+                "section4Other": {
+                  "form_title": "Advanced External S-TAP features",
+                  "items": [ "estap.override_server_ip", "estap.verify_guardium.cn", "estap.verify_guardium.ca_path" ]
+                }
+              },
+              "properties": {
+                "estap.override_server_ip": {
+                  "type": "string",
+                  "label": "Override server IP",
+                  "tooltip": {
+                    "trigger_text": "Override server IP",
+                    "text": "Override server IP recorded for intercepted traffic in the Guardium appliance with this value."
+                  },
+                  "validTextRegex": "^[A-Za-z0-9]+[A-Za-z0-9:.-]*$"
+                },
+                "estap.verify_guardium.cn": {
+                  "type": "string",
+                  "label": "SQLGuard Certificate Common Name",
+                  "tooltip": {
+                    "trigger_text": "SQLGuard Certificate Common Name",
+                    "text": "Common Name (CN) that External S-TAP will verify that the Guardium appliance reports in its certificate will have before successfully connecting.  Failure to match the CN will prevent the External S-TAP from communicating with the Guardium appliance."
+                  }
+                },
+                "estap.verify_guardium.ca_path": {
+                  "type": "string",
+                  "label": "Guardium certificate authority path",
+                  "tooltip": {
+                    "trigger_text": "Guardium certificate authority path",
+                    "text": "Path to CA certificate that will be used by External S-TAP to verify the connection to the Guardium appliance."
+                  },
+                  "placeholder": "/etc/guardium/guardium_ca.crt",
+                  "validTextRegex": "^[A-Za-z0-9/.]+$"
+                },
+                "estap.livenessProbe.command": {
+                  "type": "string",
+                  "label": "Probe command",
+                  "tooltip": {
+                    "trigger_text": "Probe command",
+                    "text": "Script used to determine if the container is considered 'live'."
+                  },
+                  "placeholder": "/usr/sbin/gproxy_live",
+                  "default": "/usr/sbin/gproxy_live",
+                  "validTextRegex": "^[A-Za-z0-9/.]+$"
+                },
+                "estap.livenessProbe.initialDelaySeconds": {
+                  "type": "range",
+                  "label": "Initial delay",
+                  "tooltip": {
+                    "trigger_text": "Initial delay",
+                    "text": "Time in seconds to wait before running the probe."
+                  },
+                  "default": 0,
+                  "min": 1,
+                  "max": 60
+                },
+                "estap.livenessProbe.periodSeconds": {
+                  "type": "range",
+                  "label": "Period",
+                  "tooltip": {
+                    "trigger_text": "Period",
+                    "text": "Period in seconds between runs of the probe."
+                  },
+                  "default": 10,
+                  "min": 1,
+                  "max": 600
+                },
+                "estap.livenessProbe.failureThreshold": {
+                  "type": "range",
+                  "label": "Failure threshold",
+                  "tooltip": {
+                    "trigger_text": "Failure threshold",
+                    "text": "Number of failures at which to consider the container failed."
+                  },
+                  "default": 4,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.readinessProbe.command": {
+                  "type": "string",
+                  "label": "Probe command",
+                  "tooltip": {
+                    "trigger_text": "Probe command",
+                    "text": "Script used to determine if the container is considered 'ready'."
+                  },
+                  "placeholder": "/usr/sbin/gproxy_ready",
+                  "default": "/usr/sbin/gproxy_ready",
+                  "validTextRegex": "^[A-Za-z0-9/.]+$"
+                },
+                "estap.readinessProbe.initialDelaySeconds": {
+                  "type": "range",
+                  "label": "Initial delay",
+                  "tooltip": {
+                    "trigger_text": "Initial delay",
+                    "text": "Time in seconds to wait before running the probe."
+                  },
+                  "default": 0,
+                  "min": 1,
+                  "max": 60
+                },
+                "estap.readinessProbe.periodSeconds": {
+                  "type": "range",
+                  "label": "Period",
+                  "tooltip": {
+                    "trigger_text": "Period",
+                    "text": "Time in seconds to wait before running the probe."
+                  },
+                  "default": 5,
+                  "min": 1,
+                  "max": 600
+                },
+                "estap.readinessProbe.failureThreshold": {
+                  "type": "range",
+                  "label": "Failure threshold",
+                  "tooltip": {
+                    "trigger_text": "Failure threshold",
+                    "text": "Number of failures at which to consider the container failed."
+                  },
+                  "default": 5,
+                  "min": 1,
+                  "max": 10
+                },
+                "estap.requests.cpu": {
+                  "type": "string",
+                  "label": "CPU request",
+                  "placeholder": "500m",
+                  "default": "500m"
+                },
+                "estap.requests.memory": {
+                  "type": "string",
+                  "label": "Memory request",
+                  "placeholder": "512Mi",
+                  "default": "512Mi"
+                },
+                "estap.limits.cpu": {
+                  "type": "string",
+                  "label": "CPU limit",
+                  "placeholder": "500m",
+                  "default": "500m"
+                },
+                "estap.limits.memory": {
+                  "type": "string",
+                  "label": "Memory limit",
+                  "placeholder": "512Mi",
+                  "default": "512Mi"
+                },
+                "estap.imagePullPolicy": {
+                  "type": "string",
+                  "label": "Image pull policy",
+                  "placeholder": "IfNotPresent",
+                  "default": "IfNotPresent"
+                }
+              }
+            }]
+          }
+        }
+      }
+    ]
