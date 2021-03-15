@@ -1,6 +1,7 @@
 source: ibm-datastage-bundle/case/ibm-datastage/case.yaml
 description: "IBM InfoSphere Information Server for DataStage V11.7"
 images:
+  - image: cp/cpd/cassandra-x86_64
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cpdoperator
@@ -10,14 +11,20 @@ images:
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/is-db2xmeta-image
   - image: cp/cpd/is-en-compute-image
   - image: cp/cpd/is-engine-image
+  - image: cp/cpd/is-services-image
+  - image: cp/cpd/kafka-x86_64
   - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/solr-x86_64
   - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-ugconfig
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
   - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
+  - image: cp/cpd/zookeeper-x86_64
   - image: icp4data-nginx-repo
