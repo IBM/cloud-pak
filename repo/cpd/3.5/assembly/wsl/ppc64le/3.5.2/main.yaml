@@ -20,13 +20,6 @@ architecture: ppc64le
 # To be discussed after Oct - consult with the install team to make sure this is implemented
 installOverride: override.yaml
 upgradeOverride: override.yaml
-predefinedOverride:
-- name: portworx
-  installOverride: px-override.yaml
-  upgradeOverride: px-override.yaml
-- name: ocs
-  installOverride: ocs-override.yaml
-  upgradeOverride: ocs-override.yaml
 # bricks is mandatory, it could contains another "product"
 # When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
 # although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
