@@ -1,0 +1,67 @@
+assistant.watson.ibm.com_watsonassistant_cr.yaml:
+  watsonAssistant:
+    appConfigOverrides: |
+      #comment
+        container_images:
+          ui:
+            tag: 20210315-141750-636b2a1da
+        redis:
+          resources:
+            member:
+              db:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 4000m
+                  memory: 256Mi
+              mgmt:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m
+                  memory: 256Mi
+              proxy:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m
+                  memory: 256Mi
+              proxylog:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m  
+                  memory: 256Mi
+            sentinel:
+              db:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m
+                  memory: 256Mi
+              mgmt:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m
+                  memory: 256Mi
+              proxy:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m
+                  memory: 256Mi
+              proxylog:
+                requests:
+                  cpu: 50m
+                  memory: 256Mi
+                limits:
+                  cpu: 2000m
+                  memory: 256Mi
