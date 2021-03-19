@@ -2,6 +2,8 @@ source: ibm-wazi-case-bundle/case/ibm-wazi-sandbox/case.yaml
 description: "The IBM Wazi Sandbox is a platform for z/OS® application development and testing on x86 Red Hat® OpenShift® or Kubernetes clusters without Z mainframe hardware."
 images:
   - image: cp/wazi-sandbox
+  - image: cp/wazi-sandbox-setup
   - image: cp/wazi-sandbox-volume-copy
+  - image: cp/wazi-sandbox-zpdt
   - image: ibmcom/wazi-sandbox-catalog
   - image: ibmcom/wazi-sandbox-operator
