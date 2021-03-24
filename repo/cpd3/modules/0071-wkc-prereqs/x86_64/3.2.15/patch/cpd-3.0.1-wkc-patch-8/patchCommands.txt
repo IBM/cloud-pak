@@ -1,0 +1,1 @@
+patch sts wdp-db2 --patch '{"spec": {"template": {"metadata":{"labels":{"type":"engine"}}, "spec": {"containers": [{"name": "wdp-db2","image": "{{.DockerRegistryPrefix}}/wdp-db2:3.1.61"}]}}}}'

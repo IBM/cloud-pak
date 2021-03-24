@@ -1,0 +1,12 @@
+patch deployment catalog-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "catalog-api","image": "{{.DockerRegistryPrefix}}/catalog_master:2.0.0-20210303142505-a0b21be"}]}}}}'
+set env deployment/portal-catalog PRODUCT_VERSION=v0.2.890
+patch deployment portal-catalog --patch '{"spec": {"template": {"spec": {"containers": [{"name": "portal-catalog","image": "{{.DockerRegistryPrefix}}/portal-catalog:v0.2.890"}]}}}}'
+set env deployment/dc-main PRODUCT_VERSION=v0.2.362
+patch deployment dc-main --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dc-main","image": "{{.DockerRegistryPrefix}}/dc-main:v0.2.362"}]}}}}'
+patch deployment wdp-connect-connector --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-connect-connector","image": "{{.DockerRegistryPrefix}}/wdp-connect-connector:2.0.105"}]}}}}'
+patch deployment wdp-connect-connection --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-connect-connection","image": "{{.DockerRegistryPrefix}}/wdp-connect-connection:2.0.105"}]}}}}'
+patch deployment wkc-search --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wkc-search","image": "{{.DockerRegistryPrefix}}/wkc-search_master:1.0.289"}]}}}}'
+delete deploy nlq-search --ignore-not-found=true
+delete service nlq-search --ignore-not-found=true
+delete deploy nlq-search-extractor --ignore-not-found=true
+delete service nlq-search-extractor --ignore-not-found=true
