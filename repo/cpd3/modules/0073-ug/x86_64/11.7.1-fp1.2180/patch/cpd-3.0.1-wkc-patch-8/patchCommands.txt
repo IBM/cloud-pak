@@ -1,0 +1,36 @@
+patch deployment finley-ml --patch '{"spec":{"template":{"spec":{"containers":[{"name":"finley-ml","image":"{{.DockerRegistryPrefix}}/finley:b4290_1b8759af2e99629c025cbf04a2ff92d04874634b"}]}}}}'
+patch deployment odf-fast-analyzer --patch '{"spec": {"template": {"spec": {"serviceAccountName": "cpd-viewer-sa", "volumes": [{"name": "engine-dedicated-volume", "persistentVolumeClaim": {"claimName": "0072-iis-en-dedicated-pvc"}}], "containers": [{"name": "odf-fast-analyzer","image": "{{.DockerRegistryPrefix}}/odf-fast-analyzer-kube:bcp4d30121_cfcbf70122ce"}, {"name": "odf-fast-analyzer","volumeMounts": [{"name": "engine-dedicated-volume","mountPath": "/mnt/dedicated_vol/Engine"}]}]}}}}'
+patch deployment omag --patch '{"spec": {"template": {"spec": {"containers": [{"name": "omag","image": "{{.DockerRegistryPrefix}}/omag:b62_31ac8a3ca9fb5"}], "initContainers": [{"name": "wait-services","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}], "initContainers": [{"name": "wait-kafka","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}], "initContainers": [{"name": "wait-redis","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}]}}}}'
+patch deployment gov-quality-ui --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-quality-ui","image": "{{.DockerRegistryPrefix}}/gov-quality-ui:b9262_7fac989f3d57"}]}}}}'
+patch deployment gov-enterprise-search-ui --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-enterprise-search-ui","image": "{{.DockerRegistryPrefix}}/gov-enterprise-search-ui:b1427_b708423375bb"}]}}}}'
+patch deployment gov-admin-ui --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-admin-ui","image": "{{.DockerRegistryPrefix}}/gov-admin-ui:b1360_1d6598c3c54a"}]}}}}'
+patch deployment igc-ui-react --patch '{"spec": {"template": {"spec": {"containers": [{"name": "igc-ui-react","image": "{{.DockerRegistryPrefix}}/igc-ui-react:b9175_ab9eaecda46a"}]}}}}'
+patch deployment gov-ui-commons --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-ui-commons","image": "{{.DockerRegistryPrefix}}/gov-ui-commons:b495_06b7a55cac5e"}]}}}}'
+patch sts shop4info-event-consumer --patch '{"spec": {"template": {"spec": {"containers": [{"name": "shop4info-event-consumer", "image": "{{.DockerRegistryPrefix}}/shop4info-event-consumer:b87_9f5e456fd117"}]}}}}'
+patch sts shop4info-mappers-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "shop4info-mappers-service", "image": "{{.DockerRegistryPrefix}}/shop4info-mappers-service:b87_9f5e456fd117"}]}}}}'
+patch sts shop4info-mappers-wkc --patch '{"spec": {"template": {"spec": {"containers": [{"name": "shop4info-mappers-wkc", "image": "{{.DockerRegistryPrefix}}/shop4info-mappers-wkc:b87_9f5e456fd117"}]}}}}'
+patch sts shop4info-rest --patch '{"spec": {"template": {"spec": {"containers": [{"name": "shop4info-rest", "image": "{{.DockerRegistryPrefix}}/shop4info-rest:b87_9f5e456fd117"}]}}}}'
+patch sts shop4info-scheduler --patch '{"spec": {"template": {"spec": {"containers": [{"name": "shop4info-scheduler", "image": "{{.DockerRegistryPrefix}}/shop4info-scheduler:b87_9f5e456fd117"}]}}}}'
+patch sts shop4info-type-registry-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "shop4info-type-registry-service", "image": "{{.DockerRegistryPrefix}}/shop4info-type-registry-service:b87_9f5e456fd117"}]}}}}'
+patch deployment gremlin-console --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gremlin-console","image": "{{.DockerRegistryPrefix}}/gremlin-console-ubi7-x86_64:0.5.2_b854_3088fa88a42d"}]}}}}'
+patch deployment gov-app-config-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-app-config-service","image": "{{.DockerRegistryPrefix}}/gov-app-config-service:b544_d517174722a3"}], "initContainers": [{"name": "wait-services","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}]}}}}'
+patch deployment gov-user-prefs-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-user-prefs-service","image": "{{.DockerRegistryPrefix}}/gov-user-prefs-service:b408_738c1e801064"}], "initContainers": [{"name": "wait-services","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}]}}}}'
+patch deployment ia-analysis --patch '{"spec":{"template":{"spec":{"containers":[{"env":[{"name":"ZEN_DATA_TOKEN","valueFrom":{"secretKeyRef":{"key":"token","name":"zen-service-broker-secret"}}}],"image":"{{.DockerRegistryPrefix}}/ia-analysis:b1778_6f158afe6cb2","name":"ia-analysis","volumeMounts":[{"mountPath":"/var/run/sharedsecrets","name":"zen-service-broker-secret"}]}],"initContainers":[{"image":"{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113","name":"wait-services"}],"volumes":[{"name":"zen-service-broker-secret","secret":{"defaultMode":420,"secretName":"zen-service-broker-secret"}}]}}}}'
+patch deployment gov-insights-service --patch '{"spec": {"template": {"spec": {"containers": [{"env":[{"name":"INSIGHTS_ZEN_URL","valueFrom":{"configMapKeyRef":{"key":"icp4d-host-url","name":"wdp-config"}}}],"name": "gov-insights-service","image": "{{.DockerRegistryPrefix}}/gov-insights-service:b924_7ea60fb99cd6"}], "initContainers": [{"name": "gov-insights-service-config-init","image": "{{.DockerRegistryPrefix}}/gov-insights-service:b924_7ea60fb99cd6"}]}}}}'
+patch deployment gov-catalog-search-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-catalog-search-service","image": "{{.DockerRegistryPrefix}}/gov-catalog-search-service:3.0.1-patch8"}], "initContainers": [{"name": "wait-services","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}]}}}}'
+patch deployment gov-catalog-search-index --patch '{"spec": {"template": {"spec": {"containers": [{"name": "gov-catalog-search-index","image": "{{.DockerRegistryPrefix}}/gov-catalog-search-index:b369_843d33c290f9"}], "initContainers": [{"name": "wait-services","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}]}}}}'
+patch deployment audit-trail-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "audit-trail-service","image": "{{.DockerRegistryPrefix}}/audit-trail-service:b119_d15600b57376"}]}}}}'
+delete pod -l app=finley-ml
+delete pod -l app=information-analyzer
+delete pod -l app=odf-fast-analyzer
+delete pod -l app=audit-trail-service
+delete pod -l app=gov-insights-service
+delete pod -l app=gov-app-config-service
+delete pod -l app=gov-catalog-search-service
+delete pod -l app=gov-user-prefs-service
+delete pod -l app=omag
+delete pod -l app=shop4info-event-consumer
+delete pod -l app=shop4info-mappers-service
+delete pod -l app=shop4info-rest
+delete pod -l app=shop4info-scheduler
+delete pod -l app=shop4info-type-registry-service
