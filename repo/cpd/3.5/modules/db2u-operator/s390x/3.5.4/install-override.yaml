@@ -1,0 +1,18 @@
+# this file gets filled up at build time.
+global:
+  image:
+    tag: v2.5.0.0
+  use_external_prefix: true
+  docker_registry_prefix: #docker_registry_prefix#
+  persistence:
+    enabled: true
+    storageClassName: #storageclass#
+    useDynamicProvisioning: true
+  ibmProduct: zen
+  databases: true
+  cloudpakInstanceId: #cloudpakInstanceId#
+zenProxy:
+  serviceType: ClusterIP
+namespace: #namespace#
+nginxRepo:
+  resolver: "kubernetes.default"

@@ -1,0 +1,17 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart" or "adm-exception"
+# For now, we only support "helm-chart" and "adm-exception", "template will NOT support yet
+category: "adm-setup"
+# The description is optional
+description: Yes, this is the account
+# Mandatory - List all the files needed to generate the exception, cpd will download/execute those yamls listed here
+files:
+- adm/db2u-scc.yaml
+- adm/db2u-sa.yaml
+- adm/db2u-role.yaml
+- adm/db2u-rolebinding.yaml
+
+add-scc-to-user:
+- scc: db2u-scc
+  sa: db2u

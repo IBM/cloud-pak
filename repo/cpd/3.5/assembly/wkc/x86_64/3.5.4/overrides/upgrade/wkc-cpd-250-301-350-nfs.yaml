@@ -1,0 +1,14 @@
+##################################################################################################
+## Overrides specifically for an upgrade from CP4D 2.5.0 to CP4D 3.0.1 to CP4D 3.5.0/3.5.3 for WKC
+##################################################################################################
+
+iis-chart:
+  sampleData:
+    volumeClaim:
+      name: "sampledata-pvc"
+      size: 1Mi
+
+omag:
+  omag:
+    volumeClaim:
+      accessMode: ReadWriteOnce
