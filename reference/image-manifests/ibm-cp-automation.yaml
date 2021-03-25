@@ -177,6 +177,7 @@ images:
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/cp4d-tiller
   - image: quay.io/opencloudio/curl
   - image: quay.io/opencloudio/dashboard-controller
   - image: quay.io/opencloudio/default-http-backend
@@ -205,6 +206,7 @@ images:
   - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
   - image: quay.io/opencloudio/ibm-iam-operator
   - image: quay.io/opencloudio/ibm-iam-operator-bundle
+  - image: quay.io/opencloudio/ibm-iam-policy-operator-bundle
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
   - image: quay.io/opencloudio/ibm-license-service-reporter
@@ -212,6 +214,7 @@ images:
   - image: quay.io/opencloudio/ibm-licensing
   - image: quay.io/opencloudio/ibm-licensing-operator
   - image: quay.io/opencloudio/ibm-licensing-operator-bundle
+  - image: quay.io/opencloudio/ibm-licensing-usage
   - image: quay.io/opencloudio/ibm-management-ingress-operator
   - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
   - image: quay.io/opencloudio/ibm-metering-operator
@@ -234,11 +237,15 @@ images:
   - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
   - image: quay.io/opencloudio/ibm-postgresql
   - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/ibm-zen-operator
+  - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-elasticsearch-oss
   - image: quay.io/opencloudio/icp-filebeat-oss
   - image: quay.io/opencloudio/icp-iam-onboarding
@@ -255,6 +262,7 @@ images:
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
   - image: quay.io/opencloudio/indices-cleaner
+  - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/logging-pki-init
@@ -268,8 +276,16 @@ images:
   - image: quay.io/opencloudio/node-exporter
   - image: quay.io/opencloudio/odlm
   - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
+  - image: quay.io/opencloudio/privatecloud-usermgmt
   - image: quay.io/opencloudio/prometheus
   - image: quay.io/opencloudio/prometheus-config-reloader
   - image: quay.io/opencloudio/prometheus-controller
   - image: quay.io/opencloudio/prometheus-operator
   - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/zen-audit
+  - image: quay.io/opencloudio/zen-core
+  - image: quay.io/opencloudio/zen-core-api
+  - image: quay.io/opencloudio/zen-data-sorcerer
+  - image: quay.io/opencloudio/zen-iam-config
+  - image: quay.io/opencloudio/zen-metastoredb
+  - image: quay.io/opencloudio/zen-watchdog
