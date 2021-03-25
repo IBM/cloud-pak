@@ -1,0 +1,14 @@
+patch sts solr --patch '{"spec": {"template": {"spec": {"containers": [{"name": "solr","image": "{{.DockerRegistryPrefix}}/solr-ubi7-x86_64:8.6.3_b854_3088fa88a42d"}], "initContainers": [{"name": "ug-config","image": "{{.DockerRegistryPrefix}}/wkc-ugconfig:3.2.37"},{"name": "zk-wait","image": "{{.DockerRegistryPrefix}}/wkc-init-container:1.0.113"}]}}}}'
+patch sts zookeeper --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zookeeper","image": "{{.DockerRegistryPrefix}}/zookeeper-ubi7-x86_64:3.4.14_b854_3088fa88a42d"}]}}}}'
+patch sts kafka --patch '{"spec": {"template": {"spec": {"containers": [{"name": "kafka","image": "{{.DockerRegistryPrefix}}/kafka-ubi7-x86_64:2.13-2.6.0_b854_3088fa88a42d"}]}}}}'
+patch sts cassandra --patch '{"spec": {"template": {"spec": {"containers": [{"name": "cassandra","image": "{{.DockerRegistryPrefix}}/cassandra-ubi7-x86_64:3.11.8_b854_3088fa88a42d"}]}}}}'
+patch deployment iis-xmetarepo --patch '{"spec": {"template": {"metadata":{"labels":{"type":"engine"}}, "spec": {"containers": [{"name": "iis-xmetadocker-container","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b104-CP4D-3_0_1-b56"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b104-CP4D-3_0_1-b56"}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","image": "{{.DockerRegistryPrefix}}/is-services-image:b104-CP4D-3_0_1-b56"}]}}}}'
+delete pod -l app=iis-services
+wait --for=condition=ready --timeout=90m pod -l app=iis-services
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","image": "{{.DockerRegistryPrefix}}/is-engine-image:b104-CP4D-3_0_1-b56"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-engine-image:b104-CP4D-3_0_1-b56"}]}}}}'
+patch sts is-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b104-CP4D-3_0_1-b56"}]}}}}'
+patch sts ds-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b104-CP4D-3_0_1-b56"}]}}}}'
+delete pod -l app=iis-en-cond
+delete pod -l app=iis-en-comp
+delete pod -l app=dc-main
