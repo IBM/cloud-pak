@@ -1,0 +1,64 @@
+type: module
+category: helm-chart
+name: 0073-ug module
+description: this is the 0073-ug module to install
+registry-reference : base-registry
+installOverride: installOverride.yaml
+upgradeOverride: upgradeOverride.yaml
+helmUpgradeForce: false
+forceUpgradeOnFailedRelease: true
+images:
+- name: audit-trail-service
+  tag: b89_3f31833605b3
+- name: wkc-init-container
+  tag: 1.0.122
+- name: finley
+  tag: b4444_ac28352f60764acea57d1c707cf88e6e95d7c4a6
+- name: gov-admin-ui
+  tag: b1346_58fb9ae7fbc8
+- name: gov-app-config-service
+  tag: b533_18b0362b1b43
+- name: gov-catalog-search-index
+  tag: b367_5da3f517b395
+- name: gov-catalog-search-service
+  tag: b1125_555eaa37ff47
+- name: gov-enterprise-search-ui
+  tag: b1415_93abc208acc8
+- name: gov-insights-service
+  tag: b915_2f57bd996c36
+- name: gov-quality-ui
+  tag: b9184_b7a067c8662e
+- name: gov-ui-commons
+  tag: b479_7f96dc7ee55f
+- name: gov-user-prefs-service
+  tag: b397_fababdf1554e
+- name: gremlin-console-ubi7-x86_64
+  tag: 0.5.2_b820_bca3c97bb844
+- name: ia-analysis
+  tag: b1957_44f51bfd1054
+- name: igc-ui-react
+  tag: b9162_eb94af172998
+- name: odf-fast-analyzer-kube
+  tag: bcp4d35113_e577dcdf72f0
+- name: omag
+  tag: b39_35f0bbdc232f4
+- name: shop4info-rest
+  tag: b86_464c255d22c0
+- name: shop4info-scheduler
+  tag: b86_464c255d22c0
+- name: shop4info-type-registry-service
+  tag: b86_464c255d22c0
+- name: shop4info-event-consumer
+  tag: b86_464c255d22c0
+- name: shop4info-schema-init
+  tag: b86_464c255d22c0
+- name: shop4info-mappers-service
+  tag: b86_464c255d22c0
+- name: shop4info-mappers-wkc
+  tag: b86_464c255d22c0
+- name: kafka-ubi7-x86_64
+  tag: 2.13-2.6.0_b820_bca3c97bb844
+chart: ug-3.5.798.tgz
+md5: 9e720ba6896ea1f0562bb835f4d27b81
+timeout: 90
+releaseName: 0073-ug
