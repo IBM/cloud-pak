@@ -1,0 +1,9 @@
+commands:
+- scale --replicas=4 deployment ap-analysis-service
+- scale --replicas=1 deployment ap-service
+- scale --replicas=4 deployment ap-tika
+- scale --replicas=1 deployment doc-preview-service
+- scale --replicas=1 deployment instascan-api-server
+- scale --replicas=4 deployment instascan-ds-manager
+- scale --replicas=1 deployment instascan-nginx  
+- scale --replicas=1 deployment instascan-vault

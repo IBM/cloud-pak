@@ -1,0 +1,7 @@
+patch cj usermgmt-ldap-sync-cron-job --patch '{"spec": {"suspend": true, "startingDeadlineSeconds": 300, "jobTemplate": {"spec": {"template": {"spec": {"containers": [{"name": "usermgmt-ldap-sync-cron-job","command": ["/usr/src/server-src/kube-job-scripts/ldap-sync-job/ldap-sync.sh"],"image": "{{.DockerRegistryPrefix}}/privatecloud-usermgmt:3.5.2-patch-x86_64-4"}]}}}}}}'
+patch deployment zen-core --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-container","image": "{{.DockerRegistryPrefix}}/zen-core:3.5.2-patch-x86_64-6"}]}}}}'
+patch deployment zen-core-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-api-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:3.5.2-patch-x86_64-9"}]}}}}'
+set env deploy zen-core-api IMAGE_TAG=3.5.2-patch-x86_64-9
+patch deployment zen-watcher --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-watcher-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:3.5.2-patch-x86_64-9"}],"initContainers":[{"name": "zen-placeholder-init","image": "{{.DockerRegistryPrefix}}/zen-core-api:3.5.2-patch-x86_64-9"}]}}}}'
+patch deployment zen-data-sorcerer --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-data-sorcerer-container","image": "{{.DockerRegistryPrefix}}/zen-data-sorcerer:3.5.2-patch-x86_64-3"}]}}}}'
+patch deployment zen-watchdog --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-watchdog-container","image": "{{.DockerRegistryPrefix}}/zen-watchdog:3.5.2-patch-x86_64-4"}]}}}}'
