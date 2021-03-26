@@ -1,5 +1,5 @@
-source: ibm-cp-automation-bundle/case/ibm-cp-automation/case.yaml
-description: "Delivers application modernization and cloud-native application development for multicloud deployments."
+source: ibm-cp4a-case-bundle/case/ibm-cp-automation/case.yaml
+description: ""
 images:
   - image: cp/cp4a/aae/dba-dbcompatibility-initcontainer
   - image: cp/cp4a/aae/dba-etcd
@@ -292,6 +292,7 @@ images:
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
   - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
