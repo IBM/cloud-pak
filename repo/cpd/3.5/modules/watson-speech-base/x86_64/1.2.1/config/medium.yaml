@@ -1,0 +1,7 @@
+commands:
+  - scale --replicas=2 deployment -l app.kubernetes.io/component=gdpr-data-deletion
+  - scale --replicas=2 deployment -l app.kubernetes.io/component=gw-deployment
+  - scale --replicas=2 deployment -l app.kubernetes.io/component=stt-am-patcher
+  - scale --replicas=2 deployment -l app.kubernetes.io/component=stt-async
+  - scale --replicas=2 deployment -l app.kubernetes.io/component=stt-customization
+  - scale --replicas=2 deployment -l app.kubernetes.io/component=stt-runtime

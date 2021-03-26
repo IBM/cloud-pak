@@ -1,0 +1,24 @@
+chart: zen-databases-catalog-3.5.4.tgz
+helmUpgradeForce: true
+images:
+  - name: zen-databases-catalog-db2oltp
+    tag: 3.5.4-3074-dev-s390x
+  - name: db2u.auxiliary.auth
+    tag: 11.5.5.0-cn3-3074-s390x
+  - name: db2u.instdb
+    tag: 11.5.5.0-cn3-3074-s390x
+  - name: db2u.tools
+    tag: 11.5.5.0-cn3-3074-s390x
+  - name: db2u
+    tag: 11.5.5.0-cn3-3074-s390x
+  - name: etcd
+    tag: 3.4.14-3074-s390x
+installOverride: install-override.yaml
+name: db2oltp module
+registry-reference : base-registry
+releaseName: db2oltp-catalog
+serviceInstanceType:
+  - db2oltp
+timeout: 90
+type: module
+upgradeOverride: install-override.yaml

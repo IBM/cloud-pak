@@ -1,0 +1,86 @@
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: wml
+# The description is mandatory
+description: "Watson Machine Learning add on module"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference : base-registry
+helmUpgradeForce: true
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure
+scale:
+- small.yaml
+- medium.yaml
+images:
+- name: wmlrepositoryv4
+  tag:  v.352.2.0.619.63.33-ppc64le
+- name: mlrepositoryservicehydra
+  tag:  v.352.3.5.1474.4.5-ppc64le
+- name: wml-deployment-manager
+  tag:  v.352.3.0.349.29.15-ppc64le
+- name: wml-rt-rshiny0.1
+  tag:  v.352.3.0.10.7.31-ppc64le
+- name: wml-deployment-envoy
+  tag:  v.352.3.0.24.4.7-ppc64le
+- name: wml-rt-mllib2.4
+  tag:  v.352.3.0.54.25.18-ppc64le
+- name: wml-rt-mc3-py368-g2
+  tag:  v.352.3.0.156.17.52-ppc64le
+- name: wml-rt-autoai_kb_3.0-py3612-g1
+  tag:  v.352.3.0.166.24.34-ppc64le
+- name: wml-rt-autoai_kb_3.1-py379-g1
+  tag:  v.352.3.0.160.20.34-ppc64le
+- name: wml-rt-ac201903-py368-g1
+  tag:  v.352.3.0.174.23.51-ppc64le
+- name: wml-rt-ac201903-r36-py379-g1
+  tag:  v.352.3.0.150.25.48-ppc64le
+- name: wml-rt-ac201903-py368-g3
+  tag:  v.352.3.0.174.19.51-ppc64le
+- name: wml-rt-ac201903-py368-g2
+  tag:  v.352.3.0.175.0.51-ppc64le
+- name: wml-rt-init-dep-service-py
+  tag:  v.352.0.1.3.20.53-ppc64le
+- name: wml-deployment-runtime-py37-1
+  tag:  v.352.0.1.40.51.10-ppc64le
+- name: wml-rt-mc3-py379-g1
+  tag:  v.352.3.0.173.53-ppc64le
+- name: wml-rt-od-spss18.1
+  tag:  v.352.3.0.77.16.22-ppc64le
+- name: wml-rt-bd-spss18.1
+  tag:  v.352.3.0.77.16.22-ppc64le
+- name: wml-os-runtimes-do
+  tag:  v.1.0-cp4d-v3.5-b33-ppc64le
+- name: wml-deployment-agent
+  tag:  v.352.3.0.30.9-ppc64le
+- name: etcd-ubi
+  tag:  v.352.3.5.0.6.6-ppc64le
+- name: wmltrainingservicehydra
+  tag:  v.352.2.1.585.9.11-ppc64le
+- name: wml-rt-hybrid
+  tag:  v.352.3.0.67.4.5-ppc64le
+- name: kubectlclient
+  tag:  v.352.3.5.0.3.6-ppc64le
+- name: wml-autoai-kb
+  tag:  v.352.3.0.76.4.11-ppc64le
+- name: wml-preinstall-secret  
+  tag: v.352.3.5.0.2.6-ppc64le
+- name: wml-automl-obm-hybrid-pipeline
+  tag: v.352.2.0.46.3.3-ppc64le
+- name: wml-cp4d-3.5-upgrade
+  tag:  v.352.0.1.14-ppc64le
+- name: wml-federated-learning
+  tag:  v.352.1.1.307.12.7-ppc64le
+- name: wml-aux
+  tag:  v.30-ppc64le
+
+chart:  wml-base-3.5.2-19.tgz
+# For download to verify the chart file is correct, optional
+md5: 540ca6e5c56f89e2612dc5354eac8f2f
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 180
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: wml
