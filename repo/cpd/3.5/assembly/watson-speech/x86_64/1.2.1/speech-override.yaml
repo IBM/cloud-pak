@@ -1,0 +1,140 @@
+tags:
+  sttAsync: true
+  sttCustomization: true
+  ttsCustomization: true
+  sttRuntime: true
+  ttsRuntime: true
+
+affinity: {}
+
+global:
+  dockerRegistryPrefix: "cp.icr.io/cp/watson-speech"
+  image:
+    pullSecret: "docker-pull-{{ .Release.Namespace }}-cp-icr-io-spch-registry-registry"
+    pullPolicy: "IfNotPresent"
+
+  datastores:
+    minio:
+      authSecretName: "minio"
+      storageClassName: "portworx-sc"
+
+      replicas: 4
+      replicasForDev: 4
+      replicasForProd: 4
+      memoryLimit: 2048Mi
+      cpuRequest: 250m
+      memoryRequest: 256Mi
+
+    rabbitMQ:
+      storageClassName: "portworx-sc"
+
+      cpuRequest: 200m
+      cpuLimit: 200m
+      memoryRequest: 256Mi
+      memoryLimit: 256Mi
+
+    postgressql:
+      authSecretName: "user-provided-postgressql"
+      databaseStorageClass: "portworx-sc"
+      databaseArchiveStorageClass: "portworx-sc"
+      databaseWalStorageClass: "portworx-sc"
+
+      numReplicas: 3
+      databaseMemoryLimit: "5Gi"
+      databaseMemoryRequest: "1Gi"
+      databaseCPULimit: "1000m"
+      databaseCPU: "50m"
+      databaseStorageRequest: "5Gi"
+
+
+  sttModels:
+    enUsBroadbandModel:
+      enabled: true
+    enUsNarrowbandModel:
+      enabled: true
+    enUsShortFormNarrowbandModel:
+      enabled: true
+
+    jaJpBroadbandModel:
+      enabled: false
+    jaJpNarrowbandModel:
+      enabled: false
+    koKrBroadbandModel:
+      enabled: false
+    koKrNarrowbandModel:
+      enabled: false
+    esEsBroadbandModel:
+      enabled: false
+    esEsNarrowbandModel:
+      enabled: false
+    frFrBroadbandModel:
+      enabled: false
+    frFrNarrowbandModel:
+      enabled: false
+    arArBroadbandModel:
+      enabled: false
+    deDeBroadbandModel:
+      enabled: false
+    deDeNarrowbandModel:
+      enabled: false
+    enGbBroadbandModel:
+      enabled: false
+    enGbNarrowbandModel:
+      enabled: false
+    ptBrBroadbandModel:
+      enabled: false
+    ptBrNarrowbandModel:
+      enabled: false
+    zhCnBroadbandModel:
+      enabled: false
+    zhCnNarrowbandModel:
+      enabled: false
+    itItBroadbandModel:
+      enabled: false
+    itItNarrowbandModel:
+      enabled: false
+    nlNlBroadbandModel:
+      enabled: false
+    nlNlNarrowbandModel:
+      enabled: false
+
+  ttsVoices:
+    enUSMichaelV3Voice:
+      enabled: true
+    enUSAllisonV3Voice:
+      enabled: true
+    enUSLisaV3Voice:
+      enabled: true
+
+    deDEBirgitV3Voice:
+      enabled: false
+    deDEDieterV3Voice:
+      enabled: false
+    enGBKateV3Voice:
+      enabled: false
+    esLASofiaV3Voice:
+      enabled: false
+    esUSSofiaV3Voice:
+      enabled: false
+    ptBRIsabelaV3Voice:
+      enabled: false
+    esESEnriqueV3Voice:
+      enabled: false
+    esESLauraV3Voice:
+      enabled: false
+    frFRReneeV3Voice:
+      enabled: false
+    itITFrancescaV3Voice:
+      enabled: false
+    jaJPEmiV3Voice:
+      enabled: false
+    deDEErikaV3Voice:
+      enabled: false
+    enUSEmilyV3Voice:
+      enabled: false
+    enUSHenryV3Voice:
+      enabled: false
+    enUSKevinV3Voice:
+      enabled: false
+    enUSOliviaV3Voice:
+      enabled: false

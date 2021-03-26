@@ -1,0 +1,41 @@
+type: module
+category: helm-chart
+name: 0074-datastage module
+description: This is the 0074-datastage module to install
+registry-reference: base-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+helmUpgradeForce: false
+scale:
+- large.yaml
+- medium.yaml
+- small.yaml
+images:
+- name: cassandra-ubi7-x86_64
+  tag: 3.11.8_b854_3088fa88a42d
+- name: ds-ent-entitlement-image
+  tag: 3.5.4
+- name: ds-nginx-proxy
+  tag: 3.5.4
+- name: is-services-image
+  tag: b279-CP4D-3_5_0-b156
+- name: is-en-compute-image
+  tag: b279-CP4D-3_5_0-b156
+- name: is-db2xmeta-image
+  tag: b279-CP4D-3_5_0-b156
+- name: is-engine-image
+  tag: b279-CP4D-3_5_0-b156
+- name: kafka-ubi7-x86_64
+  tag: 2.13-2.6.0_b854_3088fa88a42d
+- name: solr-ubi7-x86_64
+  tag: 8.6.3_b854_3088fa88a42d
+- name: wkc-init-container
+  tag: 1.0.122
+- name: wkc-ugconfig
+  tag: 3.5.43
+- name: zookeeper-ubi7-x86_64
+  tag: 3.4.14_b854_3088fa88a42d
+chart: datastage-ent-3.5.1822.tgz
+md5: 
+timeout: 45
+releaseName: 0074-datastage
