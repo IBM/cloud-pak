@@ -324,6 +324,28 @@ cloudctl case launch                                   \
     --args "--recursive --inputDir /tmp/cases"
 ```
 
+## To install using helm chart
+
+```
+cloudctl case launch                                   \
+    --case /tmp/cases/ibm-ucd-prod-@caseversion@.tgz   \
+    --namespace <target namespace>                     \
+    --inventory ibmUcdProd                             \
+    --action install-helm-chart                        \
+    --args "--helmReleaseName <Name of the helm release> --valuesPath <Path to the values.yaml> --helmChartPath <Path to the helm chart>"
+```
+
+## To uninstall using helm chart
+
+```
+cloudctl case launch                                   \
+    --case /tmp/cases/ibm-ucd-prod-@caseversion@.tgz   \
+    --namespace <target namespace>                     \
+    --inventory ibmUcdProd                             \
+    --action uninstall-helm-chart                      \
+    --args "--helmReleaseName <Name of the helm release>"
+```
+
 ### Configure Air-Gapped OpenShift Cluster With a Bastion Host
 
 #### 1. Prepare Bastion Host
