@@ -1,6 +1,14 @@
-source: ibm-watson-ai-manager-case-bundle/case/ibm-watson-ai-manager/case.yaml
-description: "IBM Watson® AIOps for IBM Cloud Pak® provides holistic insights that help prioritize issues and resolution efforts that take place in ever-evolving hybrid cloud and traditional IT environments. It identifies and gathers signals across a variety of structured and unstructured data channels, including alerts, logs, and tickets."
+source: ibm-watson-ai-manager-case-aiops31-bundle/case/ibm-watson-ai-manager/case.yaml
+description: "IBM Watson® AIOps for IBM Cloud Pak® for Data provides holistic insights that help prioritize issues and resolution efforts that take place in ever-evolving hybrid cloud and traditional IT environments. It identifies and gathers signals across a variety of structured and unstructured data channels, including alerts, logs, and tickets."
 images:
+  - image: /aiops-api
+  - image: /ai-platform-api-server
+  - image: /alert-localization
+  - image: /change-risk
+  - image: /chatops-orchestrator
+  - image: /chatops-slack-integrator
+  - image: /chatops-teams-integrator
+  - image: /connection-manager
   - image: cp/ibm-watson-ai-manager/aiops-api
   - image: cp/ibm-watson-ai-manager/alert-localization
   - image: cp/ibm-watson-ai-manager/chatops-orchestrator
@@ -17,6 +25,7 @@ images:
   - image: cp/ibm-watson-ai-manager/event-grouping
   - image: cp/ibm-watson-ai-manager/event-grouping_modeltrain
   - image: cp/ibm-watson-ai-manager/flink-core
+  - image: cp/ibm-watson-ai-manager/ibm-cloudpakopen-elasticsearch-7.10.2
   - image: cp/ibm-watson-ai-manager/ibm-cloudpakopen-elasticsearch-7.8.1
   - image: cp/ibm-watson-ai-manager/ibm-cloudpakopen-elasticsearch-operator
   - image: cp/ibm-watson-ai-manager/ibm-cp-data-operator
@@ -29,6 +38,7 @@ images:
   - image: cp/ibm-watson-ai-manager/log-anomaly-training
   - image: cp/ibm-watson-ai-manager/model-train-console
   - image: cp/ibm-watson-ai-manager/model-train-controller
+  - image: cp/ibm-watson-ai-manager/netcool-gateway-messagebus
   - image: cp/ibm-watson-ai-manager/opencontent-common-utils
   - image: cp/ibm-watson-ai-manager/opencontent-icp-cert-gen-1
   - image: cp/ibm-watson-ai-manager/opencontent-minio
@@ -46,6 +56,16 @@ images:
   - image: cp/ibm-watson-ai-manager/zen-data-sorcerer
   - image: cp/ibm-watson-ai-manager/zen-metastoredb
   - image: cp/ibm-watson-ai-manager/zen-watchdog
+  - image: /elasticsearch-curator
+  - image: /event-grouping
+  - image: /event-grouping_modeltrain
+  - image: /flink-core
   - image: ibmcom/ibm-watson-ai-manager-operator
   - image: ibmcom/ibm-watson-ai-manager-operator-bundle
   - image: ibmcom/ibm-watson-ai-manager-operator-catalog
+  - image: /log-anomaly
+  - image: /log-anomaly-training
+  - image: /persistence-service
+  - image: /similar-incidents-service
+  - image: /similar-incidents-training
+  - image: /topology
