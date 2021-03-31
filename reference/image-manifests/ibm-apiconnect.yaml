@@ -1,4 +1,4 @@
-source: ibm-apiconnect-v30-bundle/case/ibm-apiconnect/case.yaml
+source: ibm-apiconnect-bundle/case/ibm-apiconnect/case.yaml
 description: ""
 images:
   - image: cp/apic/ibm-apiconnect-analytics-analytics-client
@@ -13,6 +13,7 @@ images:
   - image: cp/apic/ibm-apiconnect-apiconnect-master
   - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
   - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
+  - image: cp/apic/ibm-apiconnect-gateway-haproxy
   - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
   - image: cp/apic/ibm-apiconnect-management-apim
@@ -65,6 +66,9 @@ images:
   - image: ibmcom/ibm-apiconnect-operator
   - image: ibmcom/ibm-apiconnect-operator-bundle
   - image: ibmcom/ibm-apiconnect-operator-init
+  - image: ibmcom/ibm-apiconnect-upgrade-operator
+  - image: ibmcom/ibm-apiconnect-upgrade-operator-bundle
+  - image: ibmcom/ibm-apiconnect-upgrade-operator-init
   - image: ibmcom/ibm-apiconnect-webhook-delete
   - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
