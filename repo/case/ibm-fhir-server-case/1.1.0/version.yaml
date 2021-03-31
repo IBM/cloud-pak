@@ -1,0 +1,302 @@
+apiVersion: v1
+case:
+  appVersion: 4.6.1
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: IBM FHIR Server for CloudPak CASE that deploys an Operator
+  displayDescription: IBM FHIR Server for CloudPak Operator
+  displayName: IBM FHIR Server for CloudPak Operator
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/case/master/design/case.png
+  licenses:
+    LA_cs:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_cs
+      ref: LA_cs
+    LA_de:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_de
+      ref: LA_de
+    LA_el:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_el
+      ref: LA_el
+    LA_en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_en
+      ref: LA_en
+    LA_es:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_es
+      ref: LA_es
+    LA_fr:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_fr
+      ref: LA_fr
+    LA_in:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_in
+      ref: LA_in
+    LA_it:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_it
+      ref: LA_it
+    LA_ja:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_ja
+      ref: LA_ja
+    LA_ko:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_ko
+      ref: LA_ko
+    LA_lt:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_lt
+      ref: LA_lt
+    LA_pl:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_pl
+      ref: LA_pl
+    LA_pt:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_pt
+      ref: LA_pt
+    LA_ru:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_ru
+      ref: LA_ru
+    LA_sl:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_sl
+      ref: LA_sl
+    LA_tr:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_tr
+      ref: LA_tr
+    LA_zh:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_zh
+      ref: LA_zh
+    LA_zh_TW:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LA_zh_TW
+      ref: LA_zh_TW
+    LI_cs:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_cs
+      ref: LI_cs
+    LI_de:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_de
+      ref: LI_de
+    LI_el:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_el
+      ref: LI_el
+    LI_en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_en
+      ref: LI_en
+    LI_es:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_es
+      ref: LI_es
+    LI_fr:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_fr
+      ref: LI_fr
+    LI_in:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_in
+      ref: LI_in
+    LI_it:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_it
+      ref: LI_it
+    LI_ja:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_ja
+      ref: LI_ja
+    LI_ko:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_ko
+      ref: LI_ko
+    LI_lt:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_lt
+      ref: LI_lt
+    LI_pl:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_pl
+      ref: LI_pl
+    LI_pt:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_pt
+      ref: LI_pt
+    LI_ru:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_ru
+      ref: LI_ru
+    LI_sl:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_sl
+      ref: LI_sl
+    LI_tr:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_tr
+      ref: LI_tr
+    LI_zh:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_zh
+      ref: LI_zh
+    LI_zh_TW:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0 (5737-N82)
+        displayName: IBM FHIR Server
+        name: LI_zh_TW
+      ref: LI_zh_TW
+    LICENSE:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: LICENSE
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM FHIR Server 1.1.0
+        displayName: IBM FHIR Server NOTICES AND INFORMATION
+        name: notices
+      ref: notices
+  name: ibm-fhir-server-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+  version: 1.1.0
+  webPage: https://ibm.github.io/FHIR
+created: 2021-03-31T12:14:50.35198560+0000
+digest: sha256:ea225c9de3b5237b123d0071e42972cb2a2a9703baca286b0b8615cd56db2666
