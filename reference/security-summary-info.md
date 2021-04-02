@@ -36,36 +36,36 @@
 
 <!-- /TOC -->
 
-<a id="markdown-overview" name="overview"></a>
 
+<a id="markdown-overview" name="overview"></a>
 ## Overview
 
-<a id="markdown-what-is-the-security-summary" name="what-is-the-security-summary"></a>
 
+<a id="markdown-what-is-the-security-summary" name="what-is-the-security-summary"></a>
 ### What is the Security Summary?
 
 The Security Summary is a PDF file that explains the security posture of an IBM Containerized product. The summary indicates compliance with several IBM Certification security metrics. The security metrics included are based on IBM standards, guidelines, and best practices for delivering secure, enterprise grade software for Red Hat&reg; OpenShift&reg; Container Platform.
 
-<a id="markdown-why-does-ibm-provide-these-summaries" name="why-does-ibm-provide-these-summaries"></a>
 
+<a id="markdown-why-does-ibm-provide-these-summaries" name="why-does-ibm-provide-these-summaries"></a>
 ### Why does IBM provide these summaries?
 
 The Security Summary provides IBM customers with a simple way to understand the product's software posture before deployment. The summary helps IBM make the security posture of its products transparent, known, and easily understandable.
 
-<a id="markdown-who-is-the-intended-audience" name="who-is-the-intended-audience"></a>
 
+<a id="markdown-who-is-the-intended-audience" name="who-is-the-intended-audience"></a>
 ### Who is the intended audience?
 
 The summary is intended for OpenShift Container Platform system and application administrators, and security professionals who deploy, plan to deploy, evaluate, or secure container workloads in a cluster.  These metrics can be used to apply the appropriate controls and configurations to the OpenShift Container Platform cluster and topology to protect workloads and provide secure access.  
 
-<a id="markdown-how-does-ibm-determine-the-compliance" name="how-does-ibm-determine-the-compliance"></a>
 
+<a id="markdown-how-does-ibm-determine-the-compliance" name="how-does-ibm-determine-the-compliance"></a>
 ### How does IBM determine the compliance?
 
 All IBM containerized software goes through a process that is called IBM Certification before publishing. An overview of the process is described in this [IBM Developer blog post](https://developer.ibm.com/blogs/the-ibm-kubernetes-certification-process/). IBM assesses over 100 metrics through this certification process to measure and ensure compliance with a rigorous set of standards and best practices. One of the attributes of IBM Certification is the IBM Security and Privacy by Design (SPbD) program. For more information on SPbD, see [Security in Development](https://www.ibm.com/trust/security-spbd). This summary takes a few critical security metrics from the certification process and externalizes it. Through that process some of the metrics are automated in the continuous integration and delivery pipeline while others are verified with documentation. The attributes with "automated" in their name are validated by an IBM internal linter tool.
 
-<a id="markdown-where-is-the-summary" name="where-is-the-summary"></a>
 
+<a id="markdown-where-is-the-summary" name="where-is-the-summary"></a>
 ### Where is the summary?
 
 The summary is shipped as part of the product's [Container Application Software for Enterprises (CASE)](https://github.com/IBM/case#case-specification). A CASE is a well-defined file structure that provides packaging and metadata about the software, including its certification state and provenance.
@@ -79,26 +79,26 @@ To view the Security Summary, follow the steps below:
 
     `$ tar –xzvf <\download-location>/ibm-example-1.0.tgz`
 
-5. Change the working directory to the `certificates/security` folder.  For example:
+5. Change the working directory to the `certifications/files` folder.  For example:
 
-    `$ cd ibm-example/certifications/security`
+    `$ cd ibm-example/certifications/files`
 
 6. View the summary with your PDF viewer
 
-<a id="markdown-certification-metrics" name="certification-metrics"></a>
 
+<a id="markdown-certification-metrics" name="certification-metrics"></a>
 ## Certification Metrics
 
 Each line of the Security Summary is explained in detail below to help you understand the criteria that are used to determine compliance.
 
-<a id="markdown-1-image-vulnerability-management" name="1-image-vulnerability-management"></a>
 
+<a id="markdown-1-image-vulnerability-management" name="1-image-vulnerability-management"></a>
 ### 1. Image Vulnerability Management
 
 Image vulnerability management consists of security metrics for security vulnerabilities that are found in the packaged images.
 
-<a id="markdown-_11-all-product-images-have-been-scanned-for-vulnerabilities-prior-to-release_" name="_11-all-product-images-have-been-scanned-for-vulnerabilities-prior-to-release_"></a>
 
+<a id="markdown-_11-all-product-images-have-been-scanned-for-vulnerabilities-prior-to-release_" name="_11-all-product-images-have-been-scanned-for-vulnerabilities-prior-to-release_"></a>
 #### _1.1 All product images have been scanned for vulnerabilities prior to release_
 
 **Description:**
@@ -112,14 +112,14 @@ Confirmed by reviewing scan reports from an approved tool. Common tools that are
 - Red Hat image certification
 - IBM Vulnerability Advisor
 
-<a id="markdown-2-principle-of-least-privilege" name="2-principle-of-least-privilege"></a>
 
+<a id="markdown-2-principle-of-least-privilege" name="2-principle-of-least-privilege"></a>
 ### 2. Principle of Least Privilege
 
 Principle of least privilege consists of security metrics ensuring products run with the fewest privileges necessary.
 
-<a id="markdown-_21-run-with-the-red-hat-restricted-security-context-constraintautomated_" name="_21-run-with-the-red-hat-restricted-security-context-constraintautomated_"></a>
 
+<a id="markdown-_21-run-with-the-red-hat-restricted-security-context-constraintautomated_" name="_21-run-with-the-red-hat-restricted-security-context-constraintautomated_"></a>
 #### _2.1 Run with the Red Hat restricted security context constraint(automated)_
 
 **Description:**
@@ -130,8 +130,8 @@ IBM products must use the restricted [security context constraint(SCC)](https://
 
 Confirmed the pod and container specifications use the restricted SCC
 
-<a id="markdown-_22-all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images_" name="_22-all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images_"></a>
 
+<a id="markdown-_22-all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images_" name="_22-all-product-containers-specify-a-numeric-user-in-their-dockerfile-or-equivalent-oci-build-file-for-container-images_"></a>
 #### _2.2 All product containers specify a numeric USER in their Dockerfile or equivalent OCI build file for container images_
 
 **Description:**   A container that is created without the USER field specified in the image build file could run as the root user.
@@ -140,8 +140,8 @@ Confirmed the pod and container specifications use the restricted SCC
 
 Confirmed the USER field is set in container build file
 
-<a id="markdown-_23-no-product-containers-use-sudo_" name="_23-no-product-containers-use-sudo_"></a>
 
+<a id="markdown-_23-no-product-containers-use-sudo_" name="_23-no-product-containers-use-sudo_"></a>
 #### _2.3 No product containers use sudo_
 
 **Description:**
@@ -155,8 +155,8 @@ Confirmed by checking 3 conditions:
 1. sysctls to use ``sudo`` is turned off in the container
 2. ``sudo`` privilege escalation is NOT used in a container image(s)
 
-<a id="markdown-_24-no-product-containers-run-as-root_" name="_24-no-product-containers-run-as-root_"></a>
 
+<a id="markdown-_24-no-product-containers-run-as-root_" name="_24-no-product-containers-run-as-root_"></a>
 #### _2.4 No product containers run as root_
 
 **Description:**
@@ -167,14 +167,14 @@ A container must run with an [arbitrary userID](https://docs.openshift.com/conta
 
 Confirmed that root user is disabled in the Pod and Container security context.
 
-<a id="markdown-3-host-and-container-isolation" name="3-host-and-container-isolation"></a>
 
+<a id="markdown-3-host-and-container-isolation" name="3-host-and-container-isolation"></a>
 ### 3. Host and Container Isolation
 
 Host and container isolation consists of security principles to maintain the running container does **not** have access to modify the host machine.
 
-<a id="markdown-_31-product-containers-do-not-target-a-host-ipautomated_" name="_31-product-containers-do-not-target-a-host-ipautomated_"></a>
 
+<a id="markdown-_31-product-containers-do-not-target-a-host-ipautomated_" name="_31-product-containers-do-not-target-a-host-ipautomated_"></a>
 #### _3.1 Product containers do not target a host IP(automated)_
 
 **Description:**
@@ -185,8 +185,8 @@ A container cannot define ``hostIP`` as this restricts scheduling and is a privi
 
 Confirmed by not allowing ``HostIP`` to be set in the Pod spec definition.
 
-<a id="markdown-_32-product-containers-do-not-specify-a-host-portautomated_" name="_32-product-containers-do-not-specify-a-host-portautomated_"></a>
 
+<a id="markdown-_32-product-containers-do-not-specify-a-host-portautomated_" name="_32-product-containers-do-not-specify-a-host-portautomated_"></a>
 #### _3.2 Product containers do not specify a host port(automated)_
 
 **Description:**
@@ -197,8 +197,8 @@ A container cannot define ``hostPort`` as this restricts scheduling and is a pri
 
 Confirmed by not allowing ``HostPort`` to be set in the Pod spec definition.
 
-<a id="markdown-_33-product-containers-do-not-specify-a-host-path-to-mount-file-or-directory-from-host-nodes-filesystemautomated_" name="_33-product-containers-do-not-specify-a-host-path-to-mount-file-or-directory-from-host-nodes-filesystemautomated_"></a>
 
+<a id="markdown-_33-product-containers-do-not-specify-a-host-path-to-mount-file-or-directory-from-host-nodes-filesystemautomated_" name="_33-product-containers-do-not-specify-a-host-path-to-mount-file-or-directory-from-host-nodes-filesystemautomated_"></a>
 #### _3.3 Product containers do not specify a host path to mount file or directory from host node's filesystem(automated)_
 
 **Description:**
@@ -209,8 +209,8 @@ A container cannot enable ``hostPath`` as this required external synchronization
 
 Confirmed by not allowing ``HostPath`` to be set in the Pod spec definition.
 
-<a id="markdown-_34-product-containers-do-not-enable-host-network-accessautomated_" name="_34-product-containers-do-not-enable-host-network-accessautomated_"></a>
 
+<a id="markdown-_34-product-containers-do-not-enable-host-network-accessautomated_" name="_34-product-containers-do-not-enable-host-network-accessautomated_"></a>
 #### _3.4 Product containers do not enable host network access(automated)_
 
 **Description:**
@@ -221,8 +221,8 @@ A container must not enable ``hostNetwork`` as it allows direct visibility to / 
 
 Confirmed by not allowing ``HostNetwork`` to be set in the Pod spec definition.
 
-<a id="markdown-_35-product-containers-do-not-share-the-host-process-id-namespaceautomated_" name="_35-product-containers-do-not-share-the-host-process-id-namespaceautomated_"></a>
 
+<a id="markdown-_35-product-containers-do-not-share-the-host-process-id-namespaceautomated_" name="_35-product-containers-do-not-share-the-host-process-id-namespaceautomated_"></a>
 #### _3.5 Product containers do not share the host process ID namespace(automated)_
 
 **Description:**
@@ -233,8 +233,8 @@ A container must not enable ``hostPID`` as it allows control of all processes ru
 
 Confirmed by not allowing ``HostPID`` to be set in the Pod spec definition.
 
-<a id="markdown-_36-product-containers-do-not-share-the-host-inter-process-communication-namespaceautomated_" name="_36-product-containers-do-not-share-the-host-inter-process-communication-namespaceautomated_"></a>
 
+<a id="markdown-_36-product-containers-do-not-share-the-host-inter-process-communication-namespaceautomated_" name="_36-product-containers-do-not-share-the-host-inter-process-communication-namespaceautomated_"></a>
 #### _3.6 Product containers do not share the host Inter Process Communication namespace(automated)_
 
 **Description:**
@@ -245,8 +245,8 @@ A container must not enable ``hostIPC`` as it allows usage of IPC to interact wi
 
 Confirmed by not allowing ``HostIPC`` to be set in the Pod spec
 
-<a id="markdown-_37-sshremote-access-to-containers-is-disabled_" name="_37-sshremote-access-to-containers-is-disabled_"></a>
 
+<a id="markdown-_37-sshremote-access-to-containers-is-disabled_" name="_37-sshremote-access-to-containers-is-disabled_"></a>
 #### _3.7 SSH/remote access to containers is disabled_
 
 **Description:**
@@ -257,14 +257,14 @@ A container should not be treated as Virtual Machine. By enabling SSH in a conta
 
 Confirmed that SSH and any remote access is not enabled by default
 
-<a id="markdown-4-network-security-and-protection" name="4-network-security-and-protection"></a>
 
+<a id="markdown-4-network-security-and-protection" name="4-network-security-and-protection"></a>
 ### 4. Network Security and Protection
 
 Network security and protection consists of security metrics necessary to isolate and secure network traffic.
 
-<a id="markdown-_41-product-does-not-allow-anonymous-access_" name="_41-product-does-not-allow-anonymous-access_"></a>
 
+<a id="markdown-_41-product-does-not-allow-anonymous-access_" name="_41-product-does-not-allow-anonymous-access_"></a>
 #### _4.1 Product does not allow anonymous access_
 
 **Description:**
@@ -275,8 +275,8 @@ A container must authenticate network communication between containers and servi
 
 Confirmed that IAM or mTLS is used without anonymous access
 
-<a id="markdown-_42-product-provides-default-networkpolicies-that-limit-network-traffic_" name="_42-product-provides-default-networkpolicies-that-limit-network-traffic_"></a>
 
+<a id="markdown-_42-product-provides-default-networkpolicies-that-limit-network-traffic_" name="_42-product-provides-default-networkpolicies-that-limit-network-traffic_"></a>
 #### _4.2 Product provides default NetworkPolicies that limit network traffic_
 
 **Description:**
@@ -287,14 +287,14 @@ A containerized software product must use Kubernetes [NetworkPolicies](https://k
 
 Confirmed that at least 1 NetworkPolicy resource is configured in the deployment
 
-<a id="markdown-5-data-security" name="5-data-security"></a>
 
+<a id="markdown-5-data-security" name="5-data-security"></a>
 ### 5. Data Security
 
 Data security consists of security metrics that ensure data is accessible only as required for product functionality.
 
-<a id="markdown-_51-data-encryption-in-transit-is-enabled-by-default-using-tls-12_" name="_51-data-encryption-in-transit-is-enabled-by-default-using-tls-12_"></a>
 
+<a id="markdown-_51-data-encryption-in-transit-is-enabled-by-default-using-tls-12_" name="_51-data-encryption-in-transit-is-enabled-by-default-using-tls-12_"></a>
 #### _5.1 Data encryption in transit is enabled by default using TLS 1.2_
 
 **Description:**
@@ -305,14 +305,14 @@ A container must encrypt all data in transit to other containers or pods using T
 
 Confirmed that TLS 1.2 is used for all network traffic
 
-<a id="markdown-6-audit-capability" name="6-audit-capability"></a>
 
+<a id="markdown-6-audit-capability" name="6-audit-capability"></a>
 ### 6. Audit Capability
 
 Audit capability consists of security metrics for auditing and accountability for the product
 
-<a id="markdown-_61-pods-are-able-to-be-identified-as-belonging-to-a-productautomated_" name="_61-pods-are-able-to-be-identified-as-belonging-to-a-productautomated_"></a>
 
+<a id="markdown-_61-pods-are-able-to-be-identified-as-belonging-to-a-productautomated_" name="_61-pods-are-able-to-be-identified-as-belonging-to-a-productautomated_"></a>
 #### _6.1 Pods are able to be identified as belonging to a product(automated)_
 
 **Description:**
@@ -329,14 +329,14 @@ Confirmed that all containers have the following labels:
 - app.kubernetes.io/ownerReference if Operator
 - helm.sh/chart if created by a Helm chart
 
-<a id="markdown-7-key-and-certificate-management" name="7-key-and-certificate-management"></a>
 
+<a id="markdown-7-key-and-certificate-management" name="7-key-and-certificate-management"></a>
 ### 7. Key and Certificate Management
 
 Key and certification management consists of security metrics to secure and manage the certificate lifecycle.
 
-<a id="markdown-_71-support-key-rotation-and-replacement_" name="_71-support-key-rotation-and-replacement_"></a>
 
+<a id="markdown-_71-support-key-rotation-and-replacement_" name="_71-support-key-rotation-and-replacement_"></a>
 #### _7.1 Support key rotation and replacement_
 
 **Description:**
@@ -347,8 +347,8 @@ Key and certification management consists of security metrics to secure and mana
 
 Automated or documented process exists for a customer to replace and/or rotate a key in production use
 
-<a id="markdown-_72-certificate-rotation-and-replacement-is-supported-by-the-product_" name="_72-certificate-rotation-and-replacement-is-supported-by-the-product_"></a>
 
+<a id="markdown-_72-certificate-rotation-and-replacement-is-supported-by-the-product_" name="_72-certificate-rotation-and-replacement-is-supported-by-the-product_"></a>
 #### _7.2 Certificate rotation and replacement is supported by the product_
 
 **Description:**
