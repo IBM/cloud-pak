@@ -1,0 +1,34 @@
+case-manager:
+  mqPvcSpec:
+    storageClassName: rook-ceph-block-internal
+    selector: null
+
+db2:
+  storageType:
+    DATA_STORAGE_CLASS: rook-ceph-block-internal
+
+cognos:
+  storageType:
+    DATA_STORAGE_CLASS: rook-ceph-block-internal
+
+elasticsearch:
+  master:
+    pvcSpec:
+      storageClassName: rook-ceph-block-internal
+  data:
+    pvcSpec:
+      storageClassName: rook-ceph-block-internal
+
+kafka:
+  pvcSpec:
+    storageClassName: rook-ceph-block-internal
+    selector: null
+  zookeeper:
+    dataPvcSpec:
+      storageClassName: rook-ceph-block-internal
+      selector: null
+
+mongodb:
+  pvcSpec:
+    storageClassName: rook-ceph-block-internal
+    selector: null

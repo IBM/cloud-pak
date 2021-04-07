@@ -1,0 +1,31 @@
+type: assembly
+lifeCycle: live
+name: fcdd
+licenseArchiveName: fcdd-6.6.0.zip
+description: fcdd assembly
+architecture: x86_64
+installOverride: assembly_install.yaml
+upgradeOverride: assembly_upgrade.yaml
+predefinedOverride:
+- name: portworx
+  installOverride: portworx-override.yaml
+  upgradeOverride: portworx-override.yaml
+- name: ocs
+  installOverride: ocs-override.yaml
+  upgradeOverride: ocs-override.yaml
+- name: ceph
+  installOverride: ceph-override.yaml
+  upgradeOverride: ceph-override.yaml
+- name: ibmcloud
+  installOverride: ibmcloud-override.yaml
+  upgradeOverride: ibmcloud-override.yaml
+- name: ibmcloud_nonretain
+  installOverride: ibmcloud-nonretain-override.yaml
+  upgradeOverride: ibmcloud-nonretain-override.yaml
+bricks:
+  - name: db2aaservice
+    minVersion: 3.5.0
+    type: assembly
+  - name: fcdd
+    version: 6.6.0
+    type: module

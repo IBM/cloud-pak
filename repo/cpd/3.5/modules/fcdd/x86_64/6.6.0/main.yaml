@@ -1,0 +1,71 @@
+type: module
+category: helm-chart
+name: fcdd module
+description: "fcdd is the first module to install"
+registry-reference: base-registry
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml
+helmUpgradeForce: true
+chart: ibm-fci-entity-research-prod-6.6.0.tgz
+md5: 09f8e41be3522d45053b645131fd94fa
+timeout: 75
+releaseName: fcdd
+images:
+  - name: opencontent-common-utils
+    tag: 1.1.4
+  - name: eraas-article-service
+    tag: 6.6.0-610
+  - name: eraas-cadence-workers
+    tag: 6.6.0-610
+  - name: eraas-investigation-service
+    tag: 6.6.0-610
+  - name: eraas-kyc-adapter
+    tag: 6.6.0-610
+  - name: eraas-ml-api-service
+    tag: 6.6.0-610
+  - name: eraas-news-mcd-service
+    tag: 6.6.0-610
+  - name: eraas-news-service
+    tag: 6.6.0-610
+  - name: eraas-outcome-service
+    tag: 6.6.0-610
+  - name: eraas-plan-service
+    tag: 6.6.0-610
+  - name: fci-workflow-service
+    tag: 6.6.0-610
+  - name: kyc-api
+    tag: 6.6.0-610
+  - name: kyc-application
+    tag: 6.6.0-610
+  - name: kyc-application-init-pv
+    tag: 6.6.0-610
+  - name: kyc-common-scripts
+    tag: 6.6.0-610
+  - name: kyc-crypto-utils
+    tag: 6.6.0-610
+  - name: kyc-data-source-framework
+    tag: 6.6.0-610
+  - name: kyc-db
+    tag: 6.6.0-610
+  - name: kyc-dossier
+    tag: 6.6.0-610
+  - name: kyc-graphql-service
+    tag: 6.6.0-610
+  - name: kyc-liberty
+    tag: 6.6.0-610
+  - name: kyc-ml
+    tag: 6.6.0-610
+  - name: kyc-ml-grouping
+    tag: 6.6.0-610
+  - name: kyc-ml-init-pv
+    tag: 6.6.0-610
+  - name: kyc-record-management
+    tag: 6.6.0-610
+  - name: kyc-royalty-management
+    tag: 6.6.0-610
+  - name: kyc-wca
+    tag: 6.6.0-610
+  - name: kyc-wca-kafka-consumer
+    tag: 6.6.0-610
+  - name: kyc-wex
+    tag: 6.6.0-610

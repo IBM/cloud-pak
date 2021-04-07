@@ -1,0 +1,21 @@
+type: module
+category: helm-chart
+name: fcai module
+description: "fcai is the first module to install"
+registry-reference: base-registry
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml
+helmUpgradeForce: true
+chart: ibm-fci-alert-triage-prod-6.6.0.tgz
+md5: 18f4b7b27187fcfeaeea97e04a42a569
+timeout: 75
+releaseName: fcai
+images:
+  - name: opencontent-common-utils
+    tag: 1.1.4
+  - name: fcai-common-scripts
+    tag: 6.6.0-606
+  - name: fcai-tls-analytics
+    tag: 6.6.0-606
+  - name: fcai-tls-ui
+    tag: 6.6.0-606

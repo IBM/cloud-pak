@@ -1,0 +1,34 @@
+case-manager:
+  mqPvcSpec:
+    storageClassName: ibmc-block-retain-gold
+    selector: null
+
+db2:
+  storageType:
+    DATA_STORAGE_CLASS: ibmc-block-retain-gold
+
+cognos:
+  storageType:
+    DATA_STORAGE_CLASS: ibmc-block-retain-gold
+
+elasticsearch:
+  master:
+    pvcSpec:
+      storageClassName: ibmc-block-retain-gold
+  data:
+    pvcSpec:
+      storageClassName: ibmc-block-retain-gold
+
+kafka:
+  pvcSpec:
+    storageClassName: ibmc-block-retain-gold
+    selector: null
+  zookeeper:
+    dataPvcSpec:
+      storageClassName: ibmc-block-retain-gold
+      selector: null
+
+mongodb:
+  pvcSpec:
+    storageClassName: ibmc-block-retain-gold
+    selector: null
