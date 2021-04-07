@@ -1,0 +1,1 @@
+patch deployment fcii-ibm-fci-claims-fraud-prod-liberty --patch '{"spec": {"template": {"spec": {"containers": [{"name": "liberty","image": "{{.DockerRegistryPrefix}}/fcii-ui:6.5.6-PATCH1"}]}}}}'
