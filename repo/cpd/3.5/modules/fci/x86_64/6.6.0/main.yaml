@@ -1,0 +1,103 @@
+type: module
+category: helm-chart
+name: fci module
+description: "fci is the first module to install"
+registry-reference: base-registry
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml
+helmUpgradeForce: true
+chart: ibm-fci-platform-prod-6.6.0.tgz
+md5: 5de3293fa71d77fdfecc06492292843d
+timeout: 75
+releaseName: fci
+images:
+  - name: opencontent-common-utils
+    tag: 1.1.4
+  - name: fci-analytics-runtime-canvas
+    tag: 6.6.0-773
+  - name: fci-analytics-runtime-liberty
+    tag: 6.6.0-773
+  - name: fci-audit-sidecar
+    tag: 6.6.0-773
+  - name: fci-cadence-server
+    tag: 6.6.0-773
+  - name: fci-cdn-proxy
+    tag: 6.6.0-773
+  - name: fci-cedm-data-store-client
+    tag: 6.6.0-773
+  - name: fci-cedm-integration
+    tag: 6.6.0-773
+  - name: fci-common-scripts
+    tag: 6.6.0-773
+  - name: fci-common-ui
+    tag: 6.6.0-773
+  - name: fci-common-ui-web
+    tag: 6.6.0-773
+  - name: fci-crypto-utils
+    tag: 6.6.0-773
+  - name: fci-global-name-mgmt
+    tag: 6.6.0-773
+  - name: fci-graph-gremlin-server
+    tag: 6.6.0-773
+  - name: fci-graph-writer
+    tag: 6.6.0-773
+  - name: fci-graph-writer-init-pv
+    tag: 6.6.0-773
+  - name: fci-hdp-client
+    tag: 6.6.0-773
+  - name: fci-investigative-ui
+    tag: 6.6.0-773
+  - name: fci-investigative-ui-config
+    tag: 6.6.0-773
+  - name: fci-investigative-ui-config-service
+    tag: 6.6.0-773
+  - name: fci-kafka
+    tag: 6.6.0-773
+  - name: fci-loganalysis
+    tag: 6.6.0-773
+  - name: fci-logsearch
+    tag: 6.6.0-773
+  - name: fci-logvisualization
+    tag: 6.6.0-773
+  - name: fci-memoryds
+    tag: 6.6.0-773
+  - name: fci-messaging
+    tag: 6.6.0-773
+  - name: fci-mongodb
+    tag: 6.6.0-773
+  - name: fci-narrative-service
+    tag: 6.6.0-773
+  - name: fci-nginx-ssl-proxy
+    tag: 6.6.0-773
+  - name: fci-odm-decisioncenter
+    tag: 6.6.0-773
+  - name: fci-odm-decisionrunner
+    tag: 6.6.0-773
+  - name: fci-odm-decisionserverconsole
+    tag: 6.6.0-773
+  - name: fci-odm-decisionserverruntime
+    tag: 6.6.0-773
+  - name: fci-realtime-scoring
+    tag: 6.6.0-773
+  - name: fci-rms-odm-data-store
+    tag: 6.6.0-773
+  - name: fci-search-liberty
+    tag: 6.6.0-773
+  - name: fci-security-audit-app
+    tag: 6.6.0-773
+  - name: fci-security-audit-data-store
+    tag: 6.6.0-773
+  - name: fci-security-auth
+    tag: 6.6.0-773
+  - name: fci-shell-detection
+    tag: 6.6.0-773
+  - name: fci-solution
+    tag: 6.6.0-773
+  - name: fci-translations
+    tag: 6.6.0-773
+  - name: fci-wca
+    tag: 6.6.0-773
+  - name: fci-zookeeper
+    tag: 6.6.0-773
+  - name: kyc-data-source-framework
+    tag: 6.6.0-773

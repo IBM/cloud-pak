@@ -1,0 +1,74 @@
+case-manager:
+  mqPvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null
+
+common-scripts:
+  pvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null
+
+db2:
+  storageType:
+    DATA_STORAGE_CLASS: portworx-db2-rwo-sc
+    META_STORAGE_CLASS: portworx-db2-rwx-sc
+    BACKUP_STORAGE_CLASS: portworx-db2-rwx-sc
+
+cognos:
+  storageType:
+    DATA_STORAGE_CLASS: portworx-db2-rwo-sc
+    META_STORAGE_CLASS: portworx-db2-rwx-sc
+
+elasticsearch:
+  pvcSpec:
+    storageClassName: portworx-elastic-sc
+    selector: null
+  master:
+    pvcSpec:
+      storageClassName: portworx-gp3-sc
+  data:
+    pvcSpec:
+      storageClassName: portworx-gp3-sc
+
+kafka:
+  pvcSpec:
+    storageClassName: portworx-kafka-sc
+    selector: null
+  zookeeper:
+    dataPvcSpec:
+      storageClassName: portworx-kafka-sc
+      selector: null
+    logPvcSpec:
+      storageClassName: portworx-gp3-sc
+      selector: null
+
+mongodb:
+  pvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null
+
+prometheus:
+  alertmanager:
+    pvcSpec:
+      storageClassName: portworx-gp3-sc
+      selector: null
+  server:
+    pvcSpec:
+      storageClassName: portworx-gp3-sc
+      selector: null
+
+wca:
+  pvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null
+
+rms:
+  libertymodulesPvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null
+  libertyhdfsPvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null
+  libertyPvcSpec:
+    storageClassName: portworx-gp3-sc
+    selector: null

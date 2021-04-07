@@ -1,0 +1,176 @@
+global:
+  # The fully qualified domain name of the kubernetes manager node.
+  managerFQDN: ""
+
+
+  # Set to true if deploying on IBM Cloud Pak for Data
+  deployOnCP4D: true
+
+  # Change to CLOUD_PAK to use DB2 from Cloud Pak
+  DB2_PROVISIONER: "CLOUD_PAK"
+
+  # The type of LDAP server being used.
+  # Options include 'msad', 'sds', 'open', or 'none' (Keep the ' around the value)
+  # msad -- Microsoft Active Directory
+  # sds -- IBM Security Directory Server, formerly known as Tivoli Directory Server
+  # open -- OpenLDAP
+  # none -- no LDAP server, use basic registry instead
+  IDENTITY_SERVER_TYPE: 'msad'
+  # If this chart is not part of the core, and needs to make references
+  # to services provided by the core, use the coreReleaseName as the prefix
+  # for the services.
+  coreReleaseName: fci
+
+  # hostAliases provides a way to manage /etc/hosts in all Kubernetes
+  # pods that will be installed in the Kubernetes cluster.
+  # This is useful in situations where DNS may not work properly,
+  # or DNS entries are not used at all.  Most often, this is used
+  # to add the Hadoop (HDP) servers into the /etc/hosts of each pod to
+  # ensure that pods can resolve the HDP servers to the correct IP
+  # addresses.
+
+  # In addition if you are using this because of DNS issues
+  # you most likely would need to create /etc/hosts entries on the
+  # nodes (hosts) that are running Kubernetes (the Kubernetes Master
+  # and Kubernetes Worker nodes) to contain the hostnames and ip
+  # addresses of the Hadoop servers (nodes).
+  #
+  # Below are examples with hostnames of hdp1, hdp2, hdp3
+  # and the dns of the servers end in .yourcompany.com
+  # If you have 6 HDP servers then follow the pattern below
+  # and enter ip and hostnames for 6 servers
+  #
+  # Also uncomment all the lines below for this to take affect
+  #
+  # hostAliases:
+  # - ip: "10.187.45.4"
+  #   hostnames:
+  #   - "hdp1.yourcompany.com"
+  # - ip: "10.187.45.38"
+  #   hostnames:
+  #   - "hdp2.yourcompany.com"
+  # - ip: "10.187.45.37"
+  #   hostnames:
+  #   - "hdp3.yourcompany.com"
+
+  swidtag:
+    # Indicate license used for this installation.
+    # For FCI Claims Fraud for Healthcare version, set file to: ibm.com_IBM_Financial_Crimes_Insight_for_Claims_Fraud_Software_-_Healthcare-6.6.0.swidtag
+    file: 'ibm.com_IBM_Financial_Crimes_Insight_for_Claims_Fraud_Software_Property_and_Casualty-6.6.0.swidtag'
+
+  commonScripts:
+    resources:
+      requests:
+        memory: "16Mi"
+        cpu: "0.1"
+      limits:
+        memory: "256Mi"
+        cpu: "0.2"
+    image:
+      repository: fcii-common-scripts
+      tag: 6.6.0-679
+      pullPolicy: IfNotPresent
+
+  cryptoUtils:
+    image:
+      repository: fcii-crypto-utils
+      tag: 6.6.0-679
+      pullPolicy: "IfNotPresent"
+
+    resources:
+      requests:
+        memory: "16Mi"
+        cpu: "0.01"
+      limits:
+        memory: "512Mi"
+        cpu: "0.2"
+
+  #For Non Cloud-Pak deployments, set the userid for non-root containers to run
+  runAsUser: 1000
+
+  #Set the Additional Group ID settings that the containers should run as
+  #This depends on the GID of the shared storage like NFS
+  fsGroupConfig:
+    supplementalGroups:
+    - 0
+
+## Image names are kept in the yaml, they typically do not change.  However
+## the tag is here so it is easy to change and test a new release using an
+## old chart.
+
+#This includes message-log, trace-log and init-svc-depend containers
+sideCarContainers:
+  resources:
+    limits:
+      memory: "128Mi"
+      cpu: "200m"
+    requests:
+      cpu: "10m"
+      memory: "16Mi"
+
+dbClient:
+  image:
+    repository: fcii-data-store-client
+    tag: 6.6.0-679
+    pullPolicy: IfNotPresent
+  resources:
+    limits:
+      memory: "1Gi"
+      cpu: "0.5"
+    requests:
+      cpu: "0.1"
+      memory: "128Mi"
+
+fciiUi:
+  image:
+    repository: fcii-ui
+    tag: 6.6.0-679
+    pullPolicy: IfNotPresent
+  resources:
+    limits:
+      memory: "4Gi"
+      cpu: "1"
+    requests:
+      cpu: "0.1"
+      memory: "256Mi"
+## Add configmap entries to the values.xml
+## Note that if there are URLs that reference
+## either the manager node using global.managerFQDN
+## or {{ .Release.Name }} then they will have to be placed
+## directly in the configmap (templates/liberty-config.yaml) file.
+##
+## Note that use of the config map is commented out in the
+## nodejs-deploy.yaml and liberty-deploy.yaml files in case
+## it's not needed.
+readinessProbe:
+  initialDelaySeconds: 60
+  periodSeconds: 60
+  timeoutSeconds: 10
+  successThreshold: 1
+  failureThreshold: 2
+
+livenessProbe:
+  initialDelaySeconds: 180
+  periodSeconds: 60
+  timeoutSeconds: 10
+  successThreshold: 1
+  failureThreshold: 2
+
+config:
+  FLYWAY_BASELINE_ON_MIGRATE: 'true'
+  FLYWAY_PLACEHOLDER_REPLACEMENT: 'false'
+  com_fci_db2_config: fcii_server_ssl_db2.xml
+  com_fci_db2_dbname: fcidb
+  com_fci_db2_java: /opt/ibm/fci/db2/java
+  com_fci_db2_port: "50000"
+  com_fci_home: /opt/ibm/fci
+  JWT_ISSUER: 'fci.ibm.com'
+  LICENSE: 'accept'
+
+
+
+  #-- Kafka variables:
+  AUDIT_ACTIVE: "0"
+  #-- End Kafka variables
+
+arch: "amd64"

@@ -1,0 +1,34 @@
+case-manager:
+  mqPvcSpec:
+    storageClassName: ocs-storagecluster-ceph-rbd
+    selector: null
+
+db2:
+  storageType:
+    DATA_STORAGE_CLASS: ocs-storagecluster-ceph-rbd
+
+cognos:
+  storageType:
+    DATA_STORAGE_CLASS: ocs-storagecluster-ceph-rbd
+
+elasticsearch:
+  master:
+    pvcSpec:
+      storageClassName: ocs-storagecluster-ceph-rbd
+  data:
+    pvcSpec:
+      storageClassName: ocs-storagecluster-ceph-rbd
+
+kafka:
+  pvcSpec:
+    storageClassName: ocs-storagecluster-ceph-rbd
+    selector: null
+  zookeeper:
+    dataPvcSpec:
+      storageClassName: ocs-storagecluster-ceph-rbd
+      selector: null
+
+mongodb:
+  pvcSpec:
+    storageClassName: ocs-storagecluster-ceph-rbd
+    selector: null

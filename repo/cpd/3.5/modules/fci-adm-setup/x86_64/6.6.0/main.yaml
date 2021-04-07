@@ -1,0 +1,46 @@
+type: module
+category: adm-setup
+name: fci administrative configuration module
+description: "Module to configure the cluster for fci"
+add-scc-to-user:
+  - scc: fci-kube-api-fowner
+    sa:  fci-kube-api-fowner
+  - scc: fci-kube-api-chown
+    sa:  fci-kube-api-chown
+  - scc: fci-kube-api
+    sa:  fci-kube-api
+  - scc: fci-kafka
+    sa:  fci-kafka
+  - scc: fci-mongodb
+    sa:  fci-mongodb
+  - scc: fci-mq
+    sa:  fci-mq
+  - scc: fci-wca
+    sa:  fci-wca
+  - scc: fci-restricted
+    sa:  fci-secrets-gen
+  - scc: fci-elasticsearch
+    sa:  fci-elasticsearch
+files:
+  - sa/sa-common-scripts.yaml
+  - sa/sa-common.yaml
+  - sa/sa-elasticsearch.yaml
+  - sa/sa-fci-kube-api-chown.yaml
+  - sa/sa-fci-kube-api-fowner.yaml
+  - sa/sa-fci-kube-api.yaml
+  - sa/sa-kafka.yaml
+  - sa/sa-mongodb.yaml
+  - sa/sa-mq.yaml
+  - sa/sa-secrets-gen.yaml
+  - sa/sa-wca.yaml
+  - scc/scc-elasticsearch.yaml
+  - scc/scc-fci-kube-api-chown.yaml
+  - scc/scc-fci-kube-api-fowner.yaml
+  - scc/scc-fci-kube-api.yaml
+  - scc/scc-kafka.yaml
+  - scc/scc-mongodb.yaml
+  - scc/scc-mq.yaml
+  - scc/scc-restricted.yaml
+  - scc/scc-wca.yaml
+  - roles/secrets-gen-role.yaml
+  - rolebindings/secrets-gen-rolebinding.yaml
