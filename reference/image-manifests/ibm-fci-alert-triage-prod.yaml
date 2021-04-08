@@ -1,6 +1,7 @@
-source: ibm-fci-alert-triage-prod/ibm_cloud_pak/manifest.yaml
-description: "A Helm chart for FCAI"
+source: ibm-fci-alert-triage-prod-bundle/case/ibm-fci-alert-triage-prod/case.yaml
+description: "IBM Financial Crimes Insight for Alert Triage Software"
 images:
+  - image: cp/cpd/fcai-common-scripts
   - image: cp/cpd/fcai-shiny
   - image: cp/cpd/fcai-tls-analytics
   - image: cp/cpd/fcai-tls-ui
