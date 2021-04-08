@@ -1,0 +1,62 @@
+apiVersion: v1
+case:
+  appVersion: 6.1.0
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    c:d: {}
+    cdu: {}
+    commercial: {}
+    connectDirect: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+  description: A CASE for IBM Connect Direct for Unix on a containerized platform
+  displayDescription: A CASE to deploy IBM Connect Direct for Unix
+  displayName: IBM Connect Direct for Unix CASE
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-connectdirect.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenseEn
+      ref: LICENSE-en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+        name: licenseNonIbm
+      ref: LICENSE_NON_IBM
+  name: ibm-connect-direct
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.2.1
+  webPage: https://www.ibm.com/support/knowledgecenter/SS4PJT_6.1.0/cd_61_welcome.html
+created: 2021-04-08T16:05:39.04277673+0000
+digest: sha256:0ab9bcb3eb8a9bf2b9ac44503fb3e1f43d08f8320b9ab2364203e8d3d3289740
