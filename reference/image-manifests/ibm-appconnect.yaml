@@ -1,4 +1,4 @@
-source: ibm-appconnect-v120-bundle/case/ibm-appconnect/case.yaml
+source: ibm-appconnect-bundle/case/ibm-appconnect/case.yaml
 description: "IBM AppConnect Operator"
 images:
   - image: cp/appc/acecc-connector-auth-service-prod
@@ -163,10 +163,3 @@ images:
   - image: quay.io/opencloudio/prometheus-controller
   - image: quay.io/opencloudio/prometheus-operator
   - image: quay.io/opencloudio/system-healthcheck-service
-  - image: quay.io/opencloudio/zen-audit
-  - image: quay.io/opencloudio/zen-core
-  - image: quay.io/opencloudio/zen-core-api
-  - image: quay.io/opencloudio/zen-data-sorcerer
-  - image: quay.io/opencloudio/zen-iam-config
-  - image: quay.io/opencloudio/zen-metastoredb
-  - image: quay.io/opencloudio/zen-watchdog
