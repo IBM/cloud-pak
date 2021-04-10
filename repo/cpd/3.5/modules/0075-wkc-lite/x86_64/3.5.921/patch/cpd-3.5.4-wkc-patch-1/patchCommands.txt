@@ -1,0 +1,4 @@
+patch deployment wdp-profiling --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-profiling","image": "{{.DockerRegistryPrefix}}/wdp-profiling:3.5.123"}]}}}}'
+patch deployment wdp-profiling-messaging --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-profiling-messaging","image": "{{.DockerRegistryPrefix}}/wdp-profiling-messaging:3.5.70"}]}}}}'
+patch deployment wdp-profiling-ui --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-profiling-ui","image": "{{.DockerRegistryPrefix}}/wdp-profiling-ui:3.5.115"}]}}}}'
+

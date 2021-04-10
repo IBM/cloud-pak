@@ -1,0 +1,1 @@
+patch deployment portal-main --patch '{"spec": {"template": {"spec": {"containers": [{"name": "portal-main","image": "{{.DockerRegistryPrefix}}/portal-main-ppc64le:v3.5.3_080421"}]}}}}'

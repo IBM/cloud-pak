@@ -1,0 +1,24 @@
+patch deployment iis-xmetarepo --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-xmetadocker-container","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b287-CP4D-3_5_4-PATCH1-b4"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b287-CP4D-3_5_4-PATCH1-b4"}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","image": "{{.DockerRegistryPrefix}}/is-services-image:b287-CP4D-3_5_4-PATCH1-b4"}]}}, "progressDeadlineSeconds": 3600 }}'
+delete pod -l app=iis-services
+rollout status deployment/iis-services --watch=true --timeout=90m --request-timeout=0
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","image": "{{.DockerRegistryPrefix}}/is-engine-image:b287-CP4D-3_5_4-PATCH1-b4"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-engine-image:b287-CP4D-3_5_4-PATCH1-b4"}]}}}}'
+patch sts is-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b287-CP4D-3_5_4-PATCH1-b4"}]}}}}'
+
+delete pod -l app=iis-en-cond
+delete pod -l app=iis-en-comp
+delete pod -l app=dc-main
+delete pod -l app=finley-ml
+delete pod -l app=information-analyzer
+delete pod -l app=odf-fast-analyzer
+delete pod -l app=audit-trail-service
+delete pod -l app=gov-insights-service
+delete pod -l app=gov-app-config-service
+delete pod -l app=gov-catalog-search-service
+delete pod -l app=gov-user-prefs-service
+delete pod -l app=omag
+delete pod -l app=shop4info-event-consumer
+delete pod -l app=shop4info-mappers-service
+delete pod -l app=shop4info-rest
+delete pod -l app=shop4info-scheduler
+delete pod -l app=shop4info-type-registry-service

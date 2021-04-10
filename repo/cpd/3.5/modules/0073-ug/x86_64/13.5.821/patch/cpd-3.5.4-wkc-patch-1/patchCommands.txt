@@ -1,0 +1,4 @@
+patch deployment finley-ml --patch '{"spec":{"template":{"spec":{"containers":[{"name":"finley-ml","image":"{{.DockerRegistryPrefix}}/finley:b4587_5750eb02dcb1ff785ff2b6fa0a8496efdf2df58f"}]}}}}'
+patch deployment odf-fast-analyzer --patch '{"spec": {"template": {"spec": {"containers": [{"name": "odf-fast-analyzer","image": "{{.DockerRegistryPrefix}}/odf-fast-analyzer-kube:bcp4d351_20_bd4684521e9f"}]}}}}'
+delete pod -l app=finley-ml
+delete pod -l app=odf-fast-analyzer
