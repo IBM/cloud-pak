@@ -1,10 +1,9 @@
 # Description of the patch
-description: A test patch to bring a Db2 Big SQL instance to the 312 level. 
+description: "This patch addresses APAR PH35403, Exception Label: UNMAPPED(java.lang.Error: Maximum permit count exceeded) error with call stack containing com.ibm.biginsights.bigsql.dfsrw.jaro.DfsSplitManager$SplitRunnable.run(DfsSplitManager.java:137)"
 
 # Image versions for the patch
 images:
-  - bigsql-engine-7_1_1_0:312
-  - bigsql-init-volume-7_1_1_0:312
+  - bigsql-engine-7_1_1_0:341
 
 # This is for the undo option to backup before the patch
 # resourcesChanged:  

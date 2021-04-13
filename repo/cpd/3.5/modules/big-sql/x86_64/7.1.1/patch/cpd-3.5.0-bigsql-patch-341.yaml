@@ -1,10 +1,9 @@
 # Description of the patch
-description: A test patch to bring Db2 Big SQL to the 312 level.
+description: "This patch addresses issue 7893: UI Error when trying to provision a Big SQL on CP4D 3.5 instance connected to AWS S3 service"
 
 # Image versions for the patch
 images:
-  - bigsql-addon-7_1_1_0:312
-  - bigsql-service-provider-7_1_1_0:312
+  - bigsql-service-provider-7_1_1_0:341
 
 # This is for the undo option to backup before the patch
 # resourcesChanged:  
