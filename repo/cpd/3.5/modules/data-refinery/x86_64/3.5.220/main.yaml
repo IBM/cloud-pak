@@ -1,0 +1,22 @@
+type: module
+category: helm-chart
+name: data-refinery
+description: "data refinery service for Watson Studio Local"
+registry-reference : base-registry
+helmUpgradeForce: true
+images:
+  - name: wdp-shaper
+    tag: 3.6.211-amd64
+  - name: shaper-preinstall
+    tag: 3.5.904-amd64
+  - name: wdp-dataprep
+    tag: 3.6.204-amd64
+  - name: shaper-server
+    tag: 3.5.904-amd64
+chart: ibm-data-refinery-prod-3.5.4.tgz
+md5: 0c0a696429f12654743e683657b6fc45 
+timeout: 60
+releaseName: ibm-data-refinery-prod
+scale:
+- small.yaml
+- medium.yaml
