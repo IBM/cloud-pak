@@ -1,4 +1,4 @@
-source: ibm-mq-bundle/case/ibm-mq/case.yaml
+source: ibm-mq-v140-bundle/case/ibm-mq/case.yaml
 description: "A CASE for IBM MQ"
 images:
   - image: cp/ibm-mqadvanced-server
@@ -119,8 +119,16 @@ images:
   - image: quay.io/opencloudio/node-exporter
   - image: quay.io/opencloudio/odlm
   - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
+  - image: quay.io/opencloudio/privatecloud-usermgmt
   - image: quay.io/opencloudio/prometheus
   - image: quay.io/opencloudio/prometheus-config-reloader
   - image: quay.io/opencloudio/prometheus-controller
   - image: quay.io/opencloudio/prometheus-operator
   - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/zen-audit
+  - image: quay.io/opencloudio/zen-core
+  - image: quay.io/opencloudio/zen-core-api
+  - image: quay.io/opencloudio/zen-data-sorcerer
+  - image: quay.io/opencloudio/zen-iam-config
+  - image: quay.io/opencloudio/zen-metastoredb
+  - image: quay.io/opencloudio/zen-watchdog
