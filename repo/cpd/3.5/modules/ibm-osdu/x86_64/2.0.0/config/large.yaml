@@ -1,0 +1,13 @@
+toleratedCommands:
+  - command: scale --replicas=2 deployment og-crs-catalog-ibm
+  - command: scale --replicas=2 deployment og-delivery-ibm
+  - command: scale --replicas=5 deployment og-entitlements-ibm
+  - command: scale --replicas=2 deployment og-indexer-ibm
+  - command: scale --replicas=2 deployment og-indexer-queue-ibm
+  - command: scale --replicas=2 deployment og-legal-ibm
+  - command: scale --replicas=2 deployment og-notification-ibm
+  - command: scale --replicas=2 deployment og-registration-ibm
+  - command: scale --replicas=2 deployment og-schema-ibm
+  - command: scale --replicas=2 deployment og-search-ibm
+  - command: scale --replicas=2 deployment og-storage-ibm
+  - command: scale --replicas=2 deployment og-unit-ibm

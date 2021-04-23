@@ -1,0 +1,26 @@
+type: assembly
+lifeCycle: live
+license: http://icp4d.ibm.com
+name: rstudio
+version: 3.5.3
+description: Watson Studio Local RStudio for Cloud Pak for Data
+architecture: x86_64
+installOverride: override.yaml
+upgradeOverride: override.yaml
+predefinedOverride:
+- name: portworx
+  installOverride: px-override.yaml
+  upgradeOverride: px-override.yaml
+- name: ocs
+  installOverride: ocs-override.yaml
+  upgradeOverride: ocs-override.yaml
+bricks:
+  - name: lite
+    minVersion: 3.5.0
+    type: assembly
+  - name: common-core-services
+    minVersion: 3.5.1
+    type: assembly
+  - name: ibm-ws-rstudio
+    version: 3.5.358
+    type: module
