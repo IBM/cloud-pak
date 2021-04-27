@@ -1,76 +1,67 @@
-source: ibm-apiconnect-bundle/case/ibm-apiconnect/case.yaml
-description: ""
+source: ibm-tnc-orchestration-case-bundle/case/ibm-tnc-orchestration/case.yaml
+description: "TNC Orchestration provides ¿"
 images:
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-client
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-cronjobs
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-ingestion
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-kafka
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-zookeeper
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-mtls
-  - image: cp/apic/ibm-apiconnect-analytics-analytics-storage
-  - image: cp/apic/ibm-apiconnect-analytics-k8s-init
-  - image: cp/apic/ibm-apiconnect-apiconnect-configurator
-  - image: cp/apic/ibm-apiconnect-apiconnect-master
-  - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
-  - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
-  - image: cp/apic/ibm-apiconnect-gateway-haproxy
-  - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
-  - image: cp/apic/ibm-apiconnect-management-analytics-proxy
-  - image: cp/apic/ibm-apiconnect-management-apim
-  - image: cp/apic/ibm-apiconnect-management-billing
-  - image: cp/apic/ibm-apiconnect-management-client-downloads-server
-  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
-  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbouncer
-  - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-ha
-  - image: cp/apic/ibm-apiconnect-management-hub
-  - image: cp/apic/ibm-apiconnect-management-juhu
-  - image: cp/apic/ibm-apiconnect-management-k8s-init
-  - image: cp/apic/ibm-apiconnect-management-ldap
-  - image: cp/apic/ibm-apiconnect-management-lur
-  - image: cp/apic/ibm-apiconnect-management-nats-operator
-  - image: cp/apic/ibm-apiconnect-management-nats-server
-  - image: cp/apic/ibm-apiconnect-management-nats-streaming-operator
-  - image: cp/apic/ibm-apiconnect-management-nats-streaming-server
-  - image: cp/apic/ibm-apiconnect-management-openapi-analyser
-  - image: cp/apic/ibm-apiconnect-management-pgo-apiserver
-  - image: cp/apic/ibm-apiconnect-management-pgo-backrest
-  - image: cp/apic/ibm-apiconnect-management-pgo-backrest-repo
-  - image: cp/apic/ibm-apiconnect-management-pgo-backrest-restore
-  - image: cp/apic/ibm-apiconnect-management-pgo-client
-  - image: cp/apic/ibm-apiconnect-management-pgo-event
-  - image: cp/apic/ibm-apiconnect-management-pgo-rmdata
-  - image: cp/apic/ibm-apiconnect-management-pgo-scheduler
-  - image: cp/apic/ibm-apiconnect-management-portal-proxy
-  - image: cp/apic/ibm-apiconnect-management-postgres-operator
-  - image: cp/apic/ibm-apiconnect-management-task-manager
-  - image: cp/apic/ibm-apiconnect-management-turnstile
-  - image: cp/apic/ibm-apiconnect-management-ui
-  - image: cp/apic/ibm-apiconnect-management-v10-upgrade
-  - image: cp/apic/ibm-apiconnect-management-ws-tunnel
-  - image: cp/apic/ibm-apiconnect-portal-k8s-init
-  - image: cp/apic/ibm-apiconnect-portal-openresty
-  - image: cp/apic/ibm-apiconnect-portal-portal-admin
-  - image: cp/apic/ibm-apiconnect-portal-portal-db
-  - image: cp/apic/ibm-apiconnect-portal-portal-dbproxy
-  - image: cp/apic/ibm-apiconnect-portal-portal-nginx
-  - image: cp/apic/ibm-apiconnect-portal-portal-web
-  - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
-  - image: cp/datapower/datapower
-  - image: cp/datapower/datapower-prod
-  - image: ibmcom/datapower-monitor
-  - image: ibmcom/datapower-operator
-  - image: ibmcom/datapower-operator-bundle
-  - image: ibmcom/datapower-operator-catalog
-  - image: ibmcom/datapower-operator-conversion-webhook
-  - image: ibmcom/ibm-apiconnect-catalog
-  - image: ibmcom/ibm-apiconnect-operator
-  - image: ibmcom/ibm-apiconnect-operator-bundle
-  - image: ibmcom/ibm-apiconnect-operator-init
-  - image: ibmcom/ibm-apiconnect-upgrade-operator
-  - image: ibmcom/ibm-apiconnect-upgrade-operator-bundle
-  - image: ibmcom/ibm-apiconnect-upgrade-operator-init
-  - image: ibmcom/ibm-apiconnect-webhook-delete
+  - image: cp/iaf-ai-pipeline-ctrl
+  - image: cp/iaf-ai-pipeline-step
+  - image: cp/iaf-apicurio-registry
+  - image: cp/iaf-elasticsearch
+  - image: cp/iaf-elasticsearch-metrics-exporter
+  - image: cp/iaf-elasticsearch-proxy
+  - image: cp/iaf-eventprocessing-proxy
+  - image: cp/iaf-flink
+  - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
+  - image: cp/tnc/alm-base-layer
+  - image: cp/tnc/alm-ibmjava
+  - image: cp/tnc/alm-vault
+  - image: cp/tnc/apollo
+  - image: cp/tnc/brent
+  - image: cp/tnc/cassandra
+  - image: cp/tnc/conductor
+  - image: cp/tnc/daytona
+  - image: cp/tnc/doki
+  - image: cp/tnc/galileo
+  - image: cp/tnc/irpmanager
+  - image: cp/tnc/ishtar
+  - image: cp/tnc/lm-configurator
+  - image: cp/tnc/nimrod
+  - image: cp/tnc/relay
+  - image: cp/tnc/siteplanner
+  - image: cp/tnc/siteplanner-nginx
+  - image: cp/tnc/siteplanner-postgres
+  - image: cp/tnc/talledega
+  - image: cp/tnc/watchtower
+  - image: cp/tnc/zookeeper
+  - image: ibmcom/iaf-ai-operator
+  - image: ibmcom/iaf-ai-operator-bundle
+  - image: ibmcom/iaf-base-operator
+  - image: ibmcom/iaf-base-operator-bundle
+  - image: ibmcom/iaf-core-operator
+  - image: ibmcom/iaf-core-operator-bundle
+  - image: ibmcom/iaf-elastic-operator
+  - image: ibmcom/iaf-elastic-operator-bundle
+  - image: ibmcom/iaf-eventprocessing-operator
+  - image: ibmcom/iaf-eventprocessing-operator-bundle
+  - image: ibmcom/iaf-flink-operator
+  - image: ibmcom/iaf-flink-operator-bundle
+  - image: ibmcom/ibm-automation-foundation-core-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: ibmcom/ibm-common-service-catalog
+  - image: ibmcom/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-tnc-orchestration-catalog
+  - image: icr.io/cpopen/ibm-tnc-orchestration-operator
+  - image: icr.io/cpopen/ibm-tnc-orchestration-operator-bundle
+  - image: icr.io/cpopen/ibm-tnc-siteplanner-operator
+  - image: icr.io/cpopen/ibm-tnc-siteplanner-operator-bundle
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
@@ -80,7 +71,6 @@ images:
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
   - image: quay.io/opencloudio/cp4d-tiller
-  - image: quay.io/opencloudio/curl
   - image: quay.io/opencloudio/dashboard-controller
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
@@ -91,28 +81,21 @@ images:
   - image: quay.io/opencloudio/iam-policy-decision
   - image: quay.io/opencloudio/ibm-auditlogging-operator
   - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
-  - image: quay.io/opencloudio/ibm-catalog-ui-operator
   - image: quay.io/opencloudio/ibm-cert-manager-operator
   - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
-  - image: quay.io/opencloudio/ibm-common-service-catalog
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
-  - image: quay.io/opencloudio/ibm-elastic-stack-operator
-  - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
   - image: quay.io/opencloudio/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
   - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
-  - image: quay.io/opencloudio/ibm-helm-api-operator
-  - image: quay.io/opencloudio/ibm-helm-repo-operator
   - image: quay.io/opencloudio/ibm-iam-operator
   - image: quay.io/opencloudio/ibm-iam-operator-bundle
-  - image: quay.io/opencloudio/ibm-iam-policy-operator-bundle
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
   - image: quay.io/opencloudio/ibm-license-service-reporter
@@ -123,8 +106,6 @@ images:
   - image: quay.io/opencloudio/ibm-licensing-usage
   - image: quay.io/opencloudio/ibm-management-ingress-operator
   - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
-  - image: quay.io/opencloudio/ibm-metering-operator
-  - image: quay.io/opencloudio/ibm-metering-operator-bundle
   - image: quay.io/opencloudio/ibm-mongodb
   - image: quay.io/opencloudio/ibm-mongodb-exporter
   - image: quay.io/opencloudio/ibm-mongodb-install
@@ -147,24 +128,16 @@ images:
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
   - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
-  - image: quay.io/opencloudio/icp-catalog-ui
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
   - image: quay.io/opencloudio/icpd-requisite
-  - image: quay.io/opencloudio/icp-elasticsearch-oss
-  - image: quay.io/opencloudio/icp-filebeat-oss
-  - image: quay.io/opencloudio/icp-helm-api
-  - image: quay.io/opencloudio/icp-helm-repo
-  - image: quay.io/opencloudio/icp-helm-rudder
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
   - image: quay.io/opencloudio/icp-initcontainer
-  - image: quay.io/opencloudio/icp-kibana-oss
-  - image: quay.io/opencloudio/icp-logstash-oss
   - image: quay.io/opencloudio/icp-management-ingress
   - image: quay.io/opencloudio/icp-memcached
   - image: quay.io/opencloudio/icp-oidcclient-watcher
@@ -172,15 +145,9 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/indices-cleaner
   - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
-  - image: quay.io/opencloudio/logging-pki-init
-  - image: quay.io/opencloudio/metering-data-manager
-  - image: quay.io/opencloudio/metering-mcmui
-  - image: quay.io/opencloudio/metering-report
-  - image: quay.io/opencloudio/metering-ui
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller
@@ -193,7 +160,6 @@ images:
   - image: quay.io/opencloudio/prometheus-controller
   - image: quay.io/opencloudio/prometheus-operator
   - image: quay.io/opencloudio/system-healthcheck-service
-  - image: quay.io/opencloudio/tiller
   - image: quay.io/opencloudio/zen-audit
   - image: quay.io/opencloudio/zen-core
   - image: quay.io/opencloudio/zen-core-api
