@@ -1,0 +1,44 @@
+# type will be either "assembly" or "module", mandatory
+type: assembly
+# mandatory - once this file uploaded, we will not delete any more
+lifeCycle: live
+# License archive name to be downloaded from fileserver and extracted. Default extension is .zip
+licenseArchiveName: DOWS_LICENSES.zip
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+name: dods
+# Version is mandatory
+version: 3.5.4
+# build number: b112
+# Description is optional
+description: Decision Optimization add-on for Cloud Pak for Data
+# Architecture is optional
+# if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
+# sub product have to be homogerious architucture
+architecture: x86_64
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+installOverride: override.yaml
+upgradeOverride: override.yaml
+# This is for the flag --override-config from cpd-cli
+# If the flag value matching the name here, the assembly override will use the matching one, 
+# rather than the default one above
+predefinedOverride:
+- name: portworx
+  installOverride: override.yaml
+  upgradeOverride: override.yaml
+- name: ocs
+  installOverride: override.yaml
+  upgradeOverride: override.yaml
+# bricks is mandatory, it is our modules and dependencies
+bricks:
+  - name: lite
+    minVersion: 3.5.0
+    type: assembly
+  - name: wsl
+    minVersion: 3.5.0
+    type: assembly
+  - name: wml
+    minVersion: 3.5.0
+    type: assembly
+  - name: dods
+    version: 3.5.4
+    type: module

@@ -1,0 +1,1 @@
+patch deployment usermgmt --patch '{"spec": {"template": {"spec": {"containers": [{"name": "usermgmt-container","image": "{{.DockerRegistryPrefix}}/privatecloud-usermgmt:v2.5.0.0-maint-x86_64-8"}]}}}}'
