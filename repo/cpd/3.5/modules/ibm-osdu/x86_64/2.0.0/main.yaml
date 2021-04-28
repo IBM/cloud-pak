@@ -1,0 +1,52 @@
+# This file is in fileserver
+type: module
+name: infra module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference : base-registry
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+  - name: og-delivery-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-entitlements-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-indexer-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-indexer-queue-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-legal-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-search-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-storage-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-schema-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-registration-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-notification-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-unit-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-crs-catalog-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-dataset-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-file-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-workflow-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-crs-conversion-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-ingest-ibm
+    tag: cp4d-april-rel-1.0
+  - name: og-partition-ibm
+    tag: cp4d-april-rel-1.0
+chart: ibm-osdu-0.3.0.tgz
+# For download to verify the chart file is correct, optional
+#md5:
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: ibm-osdu
