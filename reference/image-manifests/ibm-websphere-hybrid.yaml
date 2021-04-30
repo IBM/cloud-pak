@@ -1,11 +1,13 @@
 source: ibm-websphere-hybrid-bundle/case/ibm-websphere-hybrid/case.yaml
 description: "WebSphere Hybrid Edition 5.0 is a flexible solution for WebSphere Application Server deployments that can enable organizations to meet current and future requirements. It delivers a broad range of technical portfolio options, the capability to mix and match across options over time without additional purchases, a cloud-friendly Virtual Processor Core (VPC)-based metric, and the latest entitlement options from IBM, including perpetual and subscription options."
 images:
+  - image: cp/ibm-cfmr/app-autoscaler
   - image: cp/ibm-cfmr/binary-buildpack
   - image: cp/ibm-cfmr/bits-service
   - image: cp/ibm-cfmr/capi
   - image: cp/ibm-cfmr/cf-cli
   - image: cp/ibm-cfmr/cfmr-installer
+  - image: cp/ibm-cfmr/cfmr-service-broker
   - image: cp/ibm-cfmr/cf-networking
   - image: cp/ibm-cfmr/cf-operator
   - image: cp/ibm-cfmr/cf-smoke-tests
@@ -14,6 +16,7 @@ images:
   - image: cp/ibm-cfmr/diego
   - image: cp/ibm-cfmr/dotnet-core-buildpack
   - image: cp/ibm-cfmr/eirini-dns-aliases
+  - image: cp/ibm-cfmr/eirinix-annotate
   - image: cp/ibm-cfmr/eirinix-loggregator-bridge
   - image: cp/ibm-cfmr/eirinix-persi
   - image: cp/ibm-cfmr/eirinix-persi-broker
@@ -37,10 +40,13 @@ images:
   - image: cp/ibm-cfmr/nodejs-buildpack
   - image: cp/ibm-cfmr/opi
   - image: cp/ibm-cfmr/php-buildpack
+  - image: cp/ibm-cfmr/postgres
   - image: cp/ibm-cfmr/pxc
   - image: cp/ibm-cfmr/python-buildpack
   - image: cp/ibm-cfmr/quarks-job
+  - image: cp/ibm-cfmr/quarks-operator
   - image: cp/ibm-cfmr/quarks-secret
+  - image: cp/ibm-cfmr/quarks-statefulset
   - image: cp/ibm-cfmr/r-buildpack
   - image: cp/ibm-cfmr/recipe-downloader
   - image: cp/ibm-cfmr/recipe-executor
@@ -52,10 +58,17 @@ images:
   - image: cp/ibm-cfmr/ruby-buildpack
   - image: cp/ibm-cfmr/silk
   - image: cp/ibm-cfmr/staging-reporter
+  - image: cp/ibm-cfmr/staticfile-buildpack
   - image: cp/ibm-cfmr/statsd-injector
+  - image: cp/ibm-cfmr/stratos-kube-terminal
   - image: cp/ibm-cfmr/uaa
+  - image: cp/ibm-cfmr/ubi-stratos-analyzers
+  - image: cp/ibm-cfmr/ubi-stratos-bk-base
+  - image: cp/ibm-cfmr/ubi-stratos-bk-build-base
   - image: cp/ibm-cfmr/ubi-stratos-config-init
   - image: cp/ibm-cfmr/ubi-stratos-console
+  - image: cp/ibm-cfmr/ubi-stratos-db-base
+  - image: cp/ibm-cfmr/ubi-stratos-init-base
   - image: cp/ibm-cfmr/ubi-stratos-jetstream
   - image: cp/ibm-cfmr/ubi-stratos-mariadb
   - image: cp/icpa/transadv-db
