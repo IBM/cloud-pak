@@ -1,4 +1,4 @@
-source: ibm-asm-operator-case-bundle/case/ibm-asm-operator-case/case.yaml
+source: ibm-asm-operator-case-aiops31-bundle/case/ibm-asm-operator-case/case.yaml
 description: "IBM® Netcool® Agile Service Manager"
 images:
   - image: cp/noi/cassandra
@@ -11,8 +11,6 @@ images:
   - image: cp/noi/nasm-app-disco-log-collector
   - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-app-disco-primarystorage
-  - image: cp/noi/nasm-app-disco-services
-  - image: cp/noi/nasm-app-disco-utils
   - image: cp/noi/nasm-appdynamics-observer
   - image: cp/noi/nasm-aws-observer
   - image: cp/noi/nasm-azure-observer
@@ -23,8 +21,6 @@ images:
   - image: cp/noi/nasm-dns-observer
   - image: cp/noi/nasm-docker-observer
   - image: cp/noi/nasm-dynatrace-observer
-  - image: cp/noi/nasm-elasticsearch
-  - image: cp/noi/nasm-event-observer
   - image: cp/noi/nasm-file-observer
   - image: cp/noi/nasm-googlecloud-observer
   - image: cp/noi/nasm-ibmcloud-observer
@@ -34,20 +30,7 @@ images:
   - image: cp/noi/nasm-kubernetes-observer
   - image: cp/noi/nasm-layout-service
   - image: cp/noi/nasm-merge-service
-  - image: cp/noi/nasm-net-disco-collector
-  - image: cp/noi/nasm-net-disco-config
-  - image: cp/noi/nasm-net-disco-control
-  - image: cp/noi/nasm-net-disco-fluentd
   - image: cp/noi/nasm-netdisco-observer
-  - image: cp/noi/nasm-net-disco-schema-registry
-  - image: cp/noi/nasm-net-disco-security
-  - image: cp/noi/nasm-net-disco-sidecar
-  - image: cp/noi/nasm-net-disco-status
-  - image: cp/noi/nasm-net-disco-swagger-service
-  - image: cp/noi/nasm-net-disco-swagger-ui
-  - image: cp/noi/nasm-net-disco-topogram
-  - image: cp/noi/nasm-net-disco-ubi-minimal
-  - image: cp/noi/nasm-net-disco-worker
   - image: cp/noi/nasm-newrelic-observer
   - image: cp/noi/nasm-observer-service
   - image: cp/noi/nasm-openstack-observer

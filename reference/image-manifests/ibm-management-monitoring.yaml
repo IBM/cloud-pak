@@ -105,9 +105,12 @@ images:
   - image: cp/cp4mcm/hdm-normalizer
   - image: cp/cp4mcm/hdm-notificationprocessor
   - image: cp/cp4mcm/hdm-scheduling-ui
+  - image: cp/cp4mcm/ibm-dc-autoconfig-operator
   - image: cp/cp4mcm/ibm-management-monitoring
   - image: cp/cp4mcm/inference-service
   - image: cp/cp4mcm/itopsui
+  - image: cp/cp4mcm/k8-monitor
+  - image: cp/cp4mcm/k8sdc-operator
   - image: cp/cp4mcm/kafka
   - image: cp/cp4mcm/kafkarest
   - image: cp/cp4mcm/linking
@@ -118,6 +121,10 @@ images:
   - image: cp/cp4mcm/metric_service_db
   - image: cp/cp4mcm/metricsummarycreation
   - image: cp/cp4mcm/metric_summary_policy
+  - image: cp/cp4mcm/metricsvc-api-ingress
+  - image: cp/cp4mcm/metricsvc-api-query
+  - image: cp/cp4mcm/metricsvc-collector-kafka
+  - image: cp/cp4mcm/metricsvc-summary-policy
   - image: cp/cp4mcm/nasm-elasticsearch
   - image: cp/cp4mcm/nasm-event-observer
   - image: cp/cp4mcm/nasm-layout-service
@@ -132,6 +139,7 @@ images:
   - image: cp/cp4mcm/opentt-ingester
   - image: cp/cp4mcm/opentt-query
   - image: cp/cp4mcm/policy-registry-service
+  - image: cp/cp4mcm/reloader
   - image: cp/cp4mcm/slo
   - image: cp/cp4mcm/slo-operator
   - image: cp/cp4mcm/spark
@@ -145,5 +153,9 @@ images:
   - image: cp/cp4mcm/temasda
   - image: cp/cp4mcm/threshold
   - image: cp/cp4mcm/training-service
+  - image: cp/cp4mcm/ua-cloud-monitoring
+  - image: cp/cp4mcm/ua-operator
+  - image: cp/cp4mcm/ua-plugins
+  - image: cp/cp4mcm/ua-repo
   - image: cp/cp4mcm/ubi-base
   - image: cp/cp4mcm/zookeeper
