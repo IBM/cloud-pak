@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  description: The SDK Operator for the CloudPak for Multicloud Management enables the easy integration of ecosystem-partnered software products with the CloudPak
+  displayDescription: CP4MCM-SDK Operator
+  displayName: CP4MCM-SDK
+  icons:
+  - mediaType: image/png
+  licenses:
+    cp4mcm-20-license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Multicloud Management v2.3
+        displayName: cp4mcm-23-license
+      ref: LICENSE
+      url: https://ibm.biz/cp4mcm-23-license
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-management-sdk
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2021-04-30T16:34:10.81637829+0000
+digest: sha256:3052ac73bf651f09650a16befeabb59d1c49e1431287cafd904686058b9df8ff
