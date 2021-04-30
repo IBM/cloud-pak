@@ -228,10 +228,6 @@ images:
   - image: cp/cp4mcm/metric_service_db
   - image: cp/cp4mcm/metricsummarycreation
   - image: cp/cp4mcm/metric_summary_policy
-  - image: cp/cp4mcm/metricsvc-api-ingress
-  - image: cp/cp4mcm/metricsvc-api-query
-  - image: cp/cp4mcm/metricsvc-collector-kafka
-  - image: cp/cp4mcm/metricsvc-summary-policy
   - image: cp/cp4mcm/minio
   - image: cp/cp4mcm/minio-mc
   - image: cp/cp4mcm/nasm-elasticsearch
@@ -244,7 +240,6 @@ images:
   - image: cp/cp4mcm/notary-server
   - image: cp/cp4mcm/notary-signer
   - image: cp/cp4mcm/opencontent-redis-3
-  - image: cp/cp4mcm/opencontent-redis-5
   - image: cp/cp4mcm/opentt-analyzer
   - image: cp/cp4mcm/opentt-collector
   - image: cp/cp4mcm/opentt-ingester
@@ -312,7 +307,6 @@ images:
   - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/cp4mcm/cp4mcm-orchestrator-bundle
   - image: quay.io/cp4mcm/cp4mcm-orchestrator-catalog
-  - image: quay.io/cp4mcm/cp4mcm-orchestrator-operator-bundle
   - image: quay.io/cp4mcm/ibm-management-orchestrator
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-policy-controller
