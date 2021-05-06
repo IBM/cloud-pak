@@ -1,0 +1,15 @@
+ibm.com_v1_wmla_cr.yaml:
+  wmlaCPDOverride:
+    core:
+      dlpd:
+        image:
+          name: wml-accelerator
+          tag: 2.2.1-fp1-x86_64
+      worker:
+       image:
+         name: wml-accelerator-worker
+         tag: 2.2.1-fp1-x86_64
+      conda:
+        image:
+          name: wml-accelerator-conda
+          tag: 2.2.1-fp2-x86_64

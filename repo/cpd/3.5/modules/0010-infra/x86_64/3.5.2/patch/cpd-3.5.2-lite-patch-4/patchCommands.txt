@@ -1,0 +1,2 @@
+patch configmap product-configmap --patch '{"data": {"LDAP_SYNC_ON_LOGIN" : "true"}}'
+patch deployment usermgmt --patch '{"spec": {"template": {"spec": {"containers": [{"name": "usermgmt-container","image": "{{.DockerRegistryPrefix}}/privatecloud-usermgmt:3.5.2-patch-x86_64-8"}]}}}}'
