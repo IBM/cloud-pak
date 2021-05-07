@@ -1,0 +1,63 @@
+apiVersion: v1
+case:
+  appVersion: 6.1.0.4_iFix000
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    c:d: {}
+    cdu: {}
+    commercial: {}
+    connectDirect: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+  description: IBM Connect:Direct for Unix Case which deploy Helm chart
+  displayDescription: IBM Connect Direct for Unix Helm chart
+  displayName: IBM Connect:Direct for Unix Helm chart
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-connectdirect.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: license
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Connect:Direct for Unix 6.1
+        displayName: IBM Connect:Direct for Unix
+        name: licenseEn
+      ref: LICENSE-en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Connect:Direct for Unix 6.1 Separately licensed code
+        displayName: IBM Connect:Direct for Unix non-IBM licenses
+        name: licenseNonIbm
+      ref: LICENSE_NON_IBM
+  name: ibm-connect-direct
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.2.2
+  webPage: https://www.ibm.com/support/knowledgecenter/SS4PJT_6.1.0/cd_61_welcome.html
+created: 2021-05-07T18:51:47.66658783+0000
+digest: sha256:314903e8121642a630d2f8630163bb17f91f7063f84674ab33a5b3171985f98c
