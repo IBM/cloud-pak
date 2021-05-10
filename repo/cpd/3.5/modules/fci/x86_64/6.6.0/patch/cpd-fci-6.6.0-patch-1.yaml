@@ -1,0 +1,25 @@
+images:
+- fci-cedm-integration:6.6.0-PATCH1
+- fci-solution:6.6.0-PATCH1
+- fci-graph-writer:6.6.0-PATCH1
+- fci-search-liberty:6.6.0-PATCH1
+- fci-security-audit-app:6.6.0-PATCH1
+- fci-analytics-runtime-liberty:6.6.0-PATCH1
+- fci-realtime-scoring:6.6.0-PATCH1
+patchFile: patchCommands.txt
+resourcesChanged:
+- kind: Deployment
+  name: fci-cedm-integration
+- kind: Deployment
+  name: fci-case-manager-fci-solution 
+- kind: Deployment
+  name: fci-graph-writer-liberty
+- kind: Deployment
+  name: fci-search-liberty
+- kind: Deployment
+  name: fci-security-audit-app
+- kind: Deployment
+  name: fci-analytics-runtime-liberty
+- kind: Deployment
+  name: fci-realtime-scoring-liberty
+description: "Patch 1 for FCI 6.6.0"
