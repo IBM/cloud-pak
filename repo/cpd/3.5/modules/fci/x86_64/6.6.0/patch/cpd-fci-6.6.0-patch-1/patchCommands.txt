@@ -1,0 +1,7 @@
+patch deployment fci-cedm-integration --patch '{"spec": {"template": {"spec": {"containers": [{"name": "cedm-integration","image": "{{.DockerRegistryPrefix}}/fci-cedm-integration:6.6.0-PATCH1"}]}}}}'
+patch deployment fci-case-manager-fci-solution --patch '{"spec": {"template": {"spec": {"containers": [{"name": "fci-solution","image": "{{.DockerRegistryPrefix}}/fci-solution:6.6.0-PATCH1"}]}}}}'
+patch deployment fci-graph-writer-liberty --patch '{"spec": {"template": {"spec": {"containers": [{"name": "liberty","image": "{{.DockerRegistryPrefix}}/fci-graph-writer:6.6.0-PATCH1"}]}}}}'
+patch deployment fci-search-liberty --patch '{"spec": {"template": {"spec": {"containers": [{"name": "liberty","image": "{{.DockerRegistryPrefix}}/fci-search-liberty:6.6.0-PATCH1"}]}}}}'
+patch deployment fci-security-audit-app --patch '{"spec": {"template": {"spec": {"containers": [{"name": "security-audit-app","image": "{{.DockerRegistryPrefix}}/fci-security-audit-app:6.6.0-PATCH1"}]}}}}'
+patch deployment fci-analytics-runtime-liberty --patch '{"spec": {"template": {"spec": {"containers": [{"name": "ar-liberty","image": "{{.DockerRegistryPrefix}}/fci-analytics-runtime-liberty:6.6.0-PATCH1"}]}}}}'
+patch deployment fci-realtime-scoring-liberty --patch '{"spec": {"template": {"spec": {"containers": [{"name": "liberty","image": "{{.DockerRegistryPrefix}}/fci-realtime-scoring:6.6.0-PATCH1"}]}}}}'
