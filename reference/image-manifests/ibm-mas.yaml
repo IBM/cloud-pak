@@ -30,8 +30,35 @@ images:
   - image: cp/health/health-workspaceagent
   - image: cp/health/hook-ca-health
   - image: cp/health/hook-preinstall-health
+  - image: cp/manage/bdi
+  - image: cp/manage/extension-acm
+  - image: cp/manage/extension-anywhere
+  - image: cp/manage/extension-aviation
+  - image: cp/manage/extension-civil
+  - image: cp/manage/extension-health
+  - image: cp/manage/extension-hse
+  - image: cp/manage/extension-nuclear
+  - image: cp/manage/extension-oilandgas
+  - image: cp/manage/extension-oracleadapter
+  - image: cp/manage/extension-sapadapter
+  - image: cp/manage/extension-serviceprovider
+  - image: cp/manage/extension-spatial
+  - image: cp/manage/extension-transportation
+  - image: cp/manage/extension-utilities
+  - image: cp/manage/ibm-mas-manage-appstatus
+  - image: cp/manage/ibm-mas-manage-bdi
+  - image: cp/manage/ibm-mas-manage-ws
+  - image: cp/manage/maf-tools
+  - image: cp/manage/manageadmin
+  - image: cp/manage/manage-groupsyncagent
+  - image: cp/manage/manage-usersyncagent
+  - image: cp/manage/maxloader
+  - image: cp/manage/monitoragent
+  - image: cp/manage/ubi-wlp-manage
   - image: cp/mas/accapppoints
   - image: cp/mas/admin-dashboard
+  - image: cp/mas/adoptionusageapi
+  - image: cp/mas/adoptionusage-reporter
   - image: cp/mas/api-licensing
   - image: cp/mas/appsuite-operator
   - image: cp/mas/assist-operator
@@ -40,6 +67,7 @@ images:
   - image: cp/mas/coreapi
   - image: cp/mas/coreidp
   - image: cp/mas/coreidp-login
+  - image: cp/mas/groupsync-coordinator
   - image: cp/mas/health-operator
   - image: cp/mas/health-tenant-operator
   - image: cp/mas/homepage
@@ -50,6 +78,23 @@ images:
   - image: cp/mas/hook-routes
   - image: cp/mas/hook-sls-migration
   - image: cp/mas/hook-trackdeploy
+  - image: cp/mas-hputilities/hook-ca-hputilities
+  - image: cp/mas-hputilities/hputilities-model-engine
+  - image: cp/mas-hputilities/hputilities-workspaceagent
+  - image: cp/mas/hputilities-operator
+  - image: cp/mas/ibm-mas-addons
+  - image: cp/mas/ibm-mas-cfg-bas
+  - image: cp/mas/ibm-mas-cfg-idp
+  - image: cp/mas/ibm-mas-cfg-jdbc
+  - image: cp/mas/ibm-mas-cfg-kafka
+  - image: cp/mas/ibm-mas-cfg-mongo
+  - image: cp/mas/ibm-mas-cfg-objectstorage
+  - image: cp/mas/ibm-mas-cfg-pushnotification
+  - image: cp/mas/ibm-mas-cfg-scim
+  - image: cp/mas/ibm-mas-cfg-sls
+  - image: cp/mas/ibm-mas-cfg-smtp
+  - image: cp/mas/ibm-mas-coreidp
+  - image: cp/mas/ibm-mas-ws
   - image: cp/mas/internalapi
   - image: cp/mas/iot-operator
   - image: cp/mas/kubectl
@@ -57,12 +102,17 @@ images:
   - image: cp/mas/ltpakeys-generator
   - image: cp/mas/milestonesapi
   - image: cp/mas/mobileapi
+  - image: cp/mas/monagent-mas
   - image: cp/mas/monitor-operator
   - image: cp/mas/navigator
+  - image: cp/mas/oidcclient-reg
   - image: cp/mas/predict-operator
   - image: cp/mas/push-notification-service
   - image: cp/mas/rlks
   - image: cp/mas/safety-operator
+  - image: cp/mas/scimsync
+  - image: cp/mas/scimsync-agent
+  - image: cp/mas/sendmailapi
   - image: cp/mas/usersync-coordinator
   - image: cp/mas/workspace-coordinator
   - image: cp/monitor/as-library
@@ -215,3 +265,16 @@ images:
   - image: ibmcom/ibm-sls
   - image: ibmcom/ibm-sls-operator-bundle
   - image: ibmcom/ibm-sls-operator-catalog
+  - image: icr.io/cpopen/ibm-mas
+  - image: icr.io/cpopen/ibm-mas-manage
+  - image: icr.io/cpopen/ibm-mas-manage-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-manage-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-manage-webhook
+  - image: icr.io/cpopen/ibm-mas-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-operator-catalog
+  - image: icr.io/cpopen/ibm-sls
+  - image: icr.io/cpopen/ibm-sls-operator-bundle
+  - image: icr.io/cpopen/ibm-sls-operator-catalog
+  - image: icr.io/cpopen/ibm-truststore-mgr
+  - image: icr.io/cpopen/ibm-truststore-mgr-operator-bundle
+  - image: icr.io/cpopen/ibm-truststore-mgr-operator-catalog
