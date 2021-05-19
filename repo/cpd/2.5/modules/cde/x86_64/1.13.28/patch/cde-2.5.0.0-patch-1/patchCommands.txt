@@ -1,0 +1,5 @@
+scale deployment cognos-ibm-cde-prod-proxy --replicas 0
+patch configmap cognos-ibm-cde-prod-proxy-config --patch '{ "data": { "DAAS_TLS_CERT_PATH": "/etc/certificate/tls.crt", "DAAS_TLS_KEY_PATH": "/etc/certificate/tls.key", "CSRF_COOKIE_PATH": "/" } }'
+patch deployment cognos-ibm-cde-prod-proxy --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "daas-sb-proxy", "image":"{{ .DockerRegistryPrefix }}/daas-sb-proxy:x86.11.1.2021051701", "volumeMounts": [{"name": "certificate", "mountPath": "/etc/certificate"} ] } ] } } } }'
+patch deployment cognos-ibm-cde-prod-proxy --patch '{ "spec": { "template": { "spec": { "containers": [{"name": "daas-server", "image":"{{ .DockerRegistryPrefix }}/daas_server:x86.11.1.2021050501"} ] } } } }'
+scale deployment cognos-ibm-cde-prod-proxy --replicas 2
