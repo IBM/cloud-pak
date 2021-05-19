@@ -1,0 +1,5 @@
+patch deployment dataconn-engine-service --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dataconn-engine-service","image": "{{.DockerRegistryPrefix}}/dataconn-engine-service:5.1.2"}]}}}}'
+patch deployment dataconn-engine-spark-cluster --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dataconn-engine-spark-cluster","image": "{{.DockerRegistryPrefix}}/dataconn-engine-spark-cluster:5.1.2"}]}}}}'
+patch deployment wkc-gov-ui --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wkc-gov-ui","image": "{{.DockerRegistryPrefix}}/wkc-gov-ui:3.7.3"}]}}}}'
+patch deployment wdp-profiling --patch '{"spec": {"template": {"spec": {"containers": [{"name": "wdp-profiling","image": "{{.DockerRegistryPrefix}}/wdp-profiling:3.5.119"}]}}}}'
+set env deployment/wkc-gov-ui BM_APP_VERSION=3.7.3
