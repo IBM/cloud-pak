@@ -1,0 +1,10 @@
+images:
+  - daas-sb-proxy:x86.11.1.2021051701
+  - daas_server:x86.11.1.2021050501
+patchFile: patchCommands.txt
+resourcesChanged:
+  - Kind: Deployment
+    Name: cognos-ibm-cde-prod-proxy
+  - Kind: ConfigMap
+    Name: cognos-ibm-cde-prod-proxy-config
+description: SSL Certificate Fix
