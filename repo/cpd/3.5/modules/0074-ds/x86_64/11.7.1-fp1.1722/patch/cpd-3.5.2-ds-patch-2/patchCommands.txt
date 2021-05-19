@@ -1,0 +1,10 @@
+patch deployment iis-xmetarepo --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-xmetadocker-container","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b30-CP4D-3_5_2-PATCH-b194"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-db2xmeta-image:b30-CP4D-3_5_2-PATCH-b194"}]}}}}'
+patch deployment iis-services --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-servicesdocker-container","image": "{{.DockerRegistryPrefix}}/is-services-image:b30-CP4D-3_5_2-PATCH-b194"}]}}}}'
+delete pod -l app=iis-services
+wait --for=condition=ready --timeout=90m pod -l app=iis-services
+patch sts is-en-conductor --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-conductor","image": "{{.DockerRegistryPrefix}}/is-engine-image:b30-CP4D-3_5_2-PATCH-b194"}], "initContainers": [{"name": "load-data","image": "{{.DockerRegistryPrefix}}/is-engine-image:b30-CP4D-3_5_2-PATCH-b194"}]}}}}'
+patch sts is-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b30-CP4D-3_5_2-PATCH-b194"}]}}}}'
+patch sts ds-engine-compute --patch '{"spec": {"template": {"spec": {"containers": [{"name": "iis-en-compute","image": "{{.DockerRegistryPrefix}}/is-en-compute-image:b30-CP4D-3_5_2-PATCH-b194"}]}}}}'
+delete pod -l app=iis-en-cond
+delete pod -l app=iis-en-comp
+delete pod -l app=dc-main
