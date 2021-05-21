@@ -1,0 +1,60 @@
+apiVersion: v1
+case:
+  appVersion: 6.0.2.0.01
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+    seas: {}
+  description: A CASE for Sterling External Authentication Server on a containerized platform
+  displayDescription: A CASE for IBM Sterling External Authentication Server
+  displayName: IBM Sterling External Authentication Server CASE
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm_seas.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenseEn
+      ref: LA_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+  name: ibm-seas
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com/support/knowledgecenter/SS4T7T_6.0.2/product_landing.html
+created: 2021-05-21T11:34:59.72560093+0000
+digest: sha256:8c331c4b5852341fca3ee7915c856bb0b3a252c69a422a919b999a4a7cf6a89c
