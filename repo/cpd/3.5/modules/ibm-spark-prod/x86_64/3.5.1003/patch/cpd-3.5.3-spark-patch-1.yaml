@@ -1,0 +1,11 @@
+images:
+  - spark-hb-jkg:2.4.7.v12.7-3.5.3-amd64
+  - spark-hb-jkg:3.0.2.v1.7-3.5.3-amd64
+  - spark-hb-control-plane:3.5.1003.1-amd64
+patchFile: patchCommands.txt
+resourcesChanged:
+  - Kind: CronJob
+    Name: spark-hb-preload-jkg-image
+  - Kind: Deployment
+    Name: spark-hb-control-plane
+description: "Patch to update RStudio Sparklyr libs for CPD 3.5.3"
