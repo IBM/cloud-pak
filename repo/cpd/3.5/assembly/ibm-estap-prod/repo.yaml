@@ -1,0 +1,14 @@
+registry:
+  - url: hyc-cp4d-team-bootstrap-docker-local.artifactory.swg-devops.com
+    username: <username>
+    apikey: <api_key>
+    namespace: ""
+    name: base-registry
+  - url: hyc-cp4d-team-guardium-estap-docker-local.artifactory.swg-devops.com
+    username: <username>
+    apikey: <api_key>
+    namespace: ""
+    name: estap-registry
+fileservers:
+  - url: http://icpfs1.svl.ibm.com/zen/cp4d-builds/3.5.0/local/components/lite/latest/
+  - url: http://icpfs1.svl.ibm.com/zen/cp4d-builds/3.5-maint/Feb2021/local/components/ibm-estap-prod/latest/
