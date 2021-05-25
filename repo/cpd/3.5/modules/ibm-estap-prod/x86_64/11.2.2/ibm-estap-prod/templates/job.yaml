@@ -1,0 +1,89 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: "setup-job"
+  labels:
+    release: "{{.Release.Name}}"
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    helm.sh/chart: {{ .Chart.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  template:
+    metadata:
+      labels:
+        chart: "{{ .Chart.Name }}"
+        heritage: {{ .Release.Service }}
+        release: {{ .Release.Name }}
+        app.kubernetes.io/name: {{ .Chart.Name }}
+        helm.sh/chart: {{ .Chart.Name }}
+        app.kubernetes.io/managed-by: {{ .Release.Service }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app: IBM_Guardium_External_S-TAP
+        icpdsupport/addOnId: ibm-estap-prod
+        icpdsupport/app: IBM_Guardium_External_S-TAP
+      annotations:
+        cloudpakId: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        cloudpakInstanceId: {{ .Values.global.cloudpakInstanceId }}
+        cloudpakName: "IBM Cloud Pak for Data"
+        productChargedContainers: All
+        productCloudpakRatio: "1:1"
+        productID: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        productMetric: VIRTUAL_PROCESSOR_CORE
+        productName: IBM Guardium External S-TAP
+        productVersion: {{ .Values.estap.version }}
+        cloudpakVersion: {{ .Values.global.cloudpakVersion }}
+    spec:
+      serviceAccountName: cpd-admin-sa
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+      hostIPC: false
+      hostNetwork: false
+      hostPID: false
+      containers:
+      - name: "setup-container"
+        args: ["/entrypoint.sh"]
+        command:
+        - /bin/sh
+        - '-c'
+        image: "{{ .Values.global.dockerRegistryPrefix }}/{{ .Values.global.requisiteImage }}:{{ .Values.global.requisiteTag }}"
+        imagePullPolicy: Always
+        env:
+        - name: ICPD_CONTROLPLANE_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        volumeMounts:
+        - mountPath: /var/run/sharedsecrets
+          name: zen-service-broker-secret
+        resources:
+          requests:
+            cpu: 100m
+            memory: 256Mi
+          limits:
+            cpu: 100m
+            memory: 512Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          privileged: false
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000321000
+      volumes:
+      - name: zen-service-broker-secret
+        secret:
+          defaultMode: 420
+          secretName: zen-service-broker-secret
+      restartPolicy: OnFailure
+      serviceAccount: {{ .Values.global.editor }}
+      serviceAccountName: {{ .Values.global.editor }}
