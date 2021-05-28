@@ -1,0 +1,7 @@
+source: ibm-etcd-operator-case-bundle/case/ibm-etcd-operator/case.yaml
+description: "IBM cloudpak open operator for etcd"
+images:
+  - image: cp/opencontent-etcd-3
+  - image: icr.io/cpopen/ibm-etcd-operator-bundle
+  - image: icr.io/cpopen/ibm-etcd-operator-catalog
+  - image: icr.io/cpopen/opencontent-etcd-operator
