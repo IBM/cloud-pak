@@ -1,5 +1,5 @@
-source: ibm-cp-automation-bundle/case/ibm-cp-automation/case.yaml
-description: "Delivers application modernization and cloud-native application development for multicloud deployments."
+source: ibm-automation-foundation-core-bundle/case/ibm-automation-foundation-core/case.yaml
+description: "IBM Automation Foundation Core"
 images:
   - image: cp/cp4a/aae/dba-dbcompatibility-initcontainer
   - image: cp/cp4a/aae/dba-etcd
@@ -142,6 +142,17 @@ images:
   - image: cp/iaf-elasticsearch-proxy
   - image: cp/iaf-eventprocessing-proxy
   - image: cp/iaf-flink
+  - image: cp/ibm-eventstreams-admin
+  - image: cp/ibm-eventstreams-admin-ui
+  - image: cp/ibm-eventstreams-apicurio-registry
+  - image: cp/ibm-eventstreams-jmxtrans
+  - image: cp/ibm-eventstreams-kafka
+  - image: cp/ibm-eventstreams-metrics-collector
+  - image: cp/ibm-eventstreams-rest-producer
+  - image: cp/ibm-eventstreams-schema-proxy
+  - image: cp/ibm-eventstreams-schema-registry
+  - image: cp/ibm-eventstreams-schema-registry-avro
+  - image: cp/ibm-eventstreams-session-store
   - image: cp/processmining-analytics
   - image: cp/processmining-bpa
   - image: cp/processmining-discovery
@@ -170,6 +181,10 @@ images:
   - image: ibmcom/ibm-automation-foundation-core-catalog
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-cp-automation-foundation-catalog
+  - image: ibmcom/ibm-eventstreams-catalog
+  - image: ibmcom/ibm-eventstreams-operator
+  - image: ibmcom/ibm-eventstreams-operator-bundle
+  - image: ibmcom/ibm-eventstreams-operator-init
   - image: ibmcom/icp4a-operator-bundle
   - image: ibmcom/processmining-operator
   - image: ibmcom/processmining-operator-bundle
