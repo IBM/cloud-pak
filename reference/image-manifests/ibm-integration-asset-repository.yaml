@@ -1,5 +1,5 @@
-source: ibm-integration-asset-repository-cd-bundle/case/ibm-integration-asset-repository/case.yaml
-description: "IBM Automation Automation assets allows the user to store, manage, retrieve and search integration assets within CP4I and its capabilities."
+source: ibm-integration-asset-repository-bundle/case/ibm-integration-asset-repository/case.yaml
+description: "IBM Cloud Pak for Integration Asset Repository is an add-on to the IBM Cloud Pak for Integration (CP4I) that allows the user to store, manage, retrieve and search integration assets within CP4I and its capabilities."
 images:
   - image: cp/icp4i/cp4i-asset-repo-api
   - image: cp/icp4i/icp4i-asset-repo-ui
@@ -16,6 +16,10 @@ images:
   - image: ibmcom/ibm-integration-asset-repository-catalog
   - image: ibmcom/ibm-integration-asset-repository-operator
   - image: ibmcom/ibm-integration-asset-repository-webhook-init
+  - image: icr.io/cpopen/ibm-integration-asset-repository-bundle
+  - image: icr.io/cpopen/ibm-integration-asset-repository-catalog
+  - image: icr.io/cpopen/ibm-integration-asset-repository-operator
+  - image: icr.io/cpopen/ibm-integration-asset-repository-webhook-init
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
