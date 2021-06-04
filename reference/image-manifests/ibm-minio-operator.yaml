@@ -1,0 +1,9 @@
+source: ibm-minio-operator-case-bundle/case/ibm-minio-operator/case.yaml
+description: "MinIO is a distributed object storage. Redhat certified by IBM"
+images:
+  - image: cp/opencontent-icp-cert-gen-1
+  - image: cp/opencontent-minio
+  - image: cp/opencontent-minio-client
+  - image: icr.io/cpopen/opencontent-minio-operator
+  - image: icr.io/cpopen/opencontent-minio-operator-bundle
+  - image: icr.io/cpopen/opencontent-minio-operator-catalog
