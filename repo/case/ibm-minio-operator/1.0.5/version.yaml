@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: "3.4"
+  catalogs:
+    objectStorage: {}
+    rhocp: {}
+    s3: {}
+    storage: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: MinIO is a distributed object storage. Redhat certified by IBM
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: image/png
+    url: https://min.io/resources/img/logo/MINIO_wordmark.png
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-minio-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      ibm-roks: {}
+      onPrem: {}
+  version: 1.0.5
+  webPage: https://www.ibm.com
+created: 2021-06-04T20:36:42.96969076+0000
+digest: sha256:b535d29e6918e8316156b7c47ee87339a050542694373233af1d8c10573a6be0
