@@ -1,0 +1,7 @@
+patch deployment zen-admin --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-admin","image": "{{.DockerRegistryPrefix}}/zen-admin:v3.0.1-patch-x86_64-9"}]}}}}'
+patch deployment zen-audit --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-audit-container","image": "{{.DockerRegistryPrefix}}/zen-audit:v3.0.1-patch-x86_64-6"}]}}}}'
+patch deployment zen-core --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-container","image": "{{.DockerRegistryPrefix}}/zen-core:v3.0.1-patch-x86_64-12"}]}}}}'
+patch deployment zen-core-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-core-api-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:v3.0.1-patch-x86_64-10"}]}}}}'
+patch deployment zen-data-sorcerer --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-data-sorcerer-container","image": "{{.DockerRegistryPrefix}}/zen-data-sorcerer:v3.0.1-patch-x86_64-6"}]}}}}'
+patch deployment zen-watchdog --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-watchdog-container","image": "{{.DockerRegistryPrefix}}/zen-watchdog:v3.0.1-patch-x86_64-21"}]}}}}'
+patch deployment zen-watcher --patch '{"spec": {"template": {"spec": {"containers": [{"name": "zen-watcher-container","image": "{{.DockerRegistryPrefix}}/zen-core-api:v3.0.1-patch-x86_64-10"}],"initContainers":[{"name": "zen-placeholder-init","image": "{{.DockerRegistryPrefix}}/zen-core-api:v3.0.1-patch-x86_64-10"}]}}}}'
