@@ -1,0 +1,35 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    ai: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    beta: {}
+  description: CASE that deploys the WML Core Serving Operator
+  displayDescription: WML Core Serving Operator
+  displayName: WML Core Serving
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: license
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-ai-wmlserving
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2021-06-07T17:05:12.84789101+0000
+digest: sha256:4e0f28c8721a79b4ba90cc158be1cb08e691b37e0b9e6c33a687601b38e2a893
