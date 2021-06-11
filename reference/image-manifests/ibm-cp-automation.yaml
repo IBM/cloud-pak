@@ -1,6 +1,16 @@
 source: ibm-cp-automation-bundle/case/ibm-cp-automation/case.yaml
 description: "Delivers application modernization and cloud-native application development for multicloud deployments."
 images:
+  - image: cp/ai/ibm-ai-wmltraining-controller
+  - image: cp/ai/ibm-ai-wmltraining-init-sidecar
+  - image: cp/ai/ibm-ai-wmltraining-proxy-controller
+  - image: cp/ai/ibm-ai-wmltraining-sidecar
+  - image: cp/ai/model-mesh
+  - image: cp/ai/model-serving-runtime-adapter
+  - image: cp/ai/msp-ml-server
+  - image: cp/ai/seldonio-mlserver
+  - image: cp/ai/triton-inference-server
+  - image: cp/ai/wmlserving-controller
   - image: cp/cp4a/aae/dba-dbcompatibility-initcontainer
   - image: cp/cp4a/aae/dba-etcd
   - image: cp/cp4a/aae/dba-keytool-initcontainer
@@ -54,8 +64,8 @@ images:
   - image: cp/cp4a/bai/bai-monitoring-app
   - image: cp/cp4a/bai/bai-nlq-core
   - image: cp/cp4a/bai/bai-nlq-deployment
-  - image: cp/cp4a/bai/bai-nlq-ontology
   - image: cp/cp4a/bai/bai_nlq_ontology
+  - image: cp/cp4a/bai/bai-nlq-ontology
   - image: cp/cp4a/bai/bai-nlq-runtime
   - image: cp/cp4a/bai/bai-odm
   - image: cp/cp4a/bai/bai-setup
@@ -105,7 +115,7 @@ images:
   - image: cp/cp4a/fncm/cpe
   - image: cp/cp4a/fncm/crs
   - image: cp/cp4a/fncm/css
-  - image: cp/cp4a/fncm/css-if002  
+  - image: cp/cp4a/fncm/css-if002
   - image: cp/cp4a/fncm/extshare
   - image: cp/cp4a/fncm/graphql
   - image: cp/cp4a/fncm/taskmgr
@@ -144,6 +154,8 @@ images:
   - image: cp/iaf-elasticsearch-proxy
   - image: cp/iaf-eventprocessing-proxy
   - image: cp/iaf-flink
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
   - image: cp/ibm-eventstreams-admin
   - image: cp/ibm-eventstreams-admin-ui
   - image: cp/ibm-eventstreams-apicurio-registry
@@ -155,6 +167,7 @@ images:
   - image: cp/ibm-eventstreams-schema-registry
   - image: cp/ibm-eventstreams-schema-registry-avro
   - image: cp/ibm-eventstreams-session-store
+  - image: cp/opencontent-etcd-3
   - image: cp/processmining-analytics
   - image: cp/processmining-bpa
   - image: cp/processmining-discovery
@@ -191,6 +204,30 @@ images:
   - image: ibmcom/processmining-operator
   - image: ibmcom/processmining-operator-bundle
   - image: ibmcom/processmining-operator-catalog
+  - image: icr.io/cpopen/iaf-ai-operator
+  - image: icr.io/cpopen/iaf-ai-operator-bundle
+  - image: icr.io/cpopen/iaf-base-operator
+  - image: icr.io/cpopen/iaf-base-operator-bundle
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/iaf-elastic-operator
+  - image: icr.io/cpopen/iaf-elastic-operator-bundle
+  - image: icr.io/cpopen/iaf-eventprocessing-operator
+  - image: icr.io/cpopen/iaf-eventprocessing-operator-bundle
+  - image: icr.io/cpopen/iaf-flink-operator
+  - image: icr.io/cpopen/iaf-flink-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmlserving-operator
+  - image: icr.io/cpopen/ibm-ai-wmlserving-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmlserving-operator-catalog
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-etcd-operator-bundle
+  - image: icr.io/cpopen/ibm-etcd-operator-catalog
+  - image: icr.io/cpopen/opencontent-etcd-operator
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
