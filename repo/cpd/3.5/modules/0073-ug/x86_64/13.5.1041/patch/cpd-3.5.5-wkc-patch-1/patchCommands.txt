@@ -1,0 +1,2 @@
+patch deployment odf-fast-analyzer --patch '{"spec": {"template": {"spec": {"containers": [{"name": "odf-fast-analyzer","image": "{{.DockerRegistryPrefix}}/odf-fast-analyzer-kube:bcp4d351_25_7a47b16ba667"}]}}}}'
+delete pod -l app=odf-fast-analyzer
