@@ -1,6 +1,8 @@
 source: ibm-process-mining-bundle/case/ibm-process-mining/case.yaml
 description: "IBM Process and Task Mining is a process mining and Digital Twin of an Organization solution that offers a fail-fast approach to analyze, constantly monitor, improve business processes, and drive digital transformation."
 images:
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
   - image: cp/processmining-analytics
   - image: cp/processmining-bpa
   - image: cp/processmining-discovery
@@ -21,6 +23,10 @@ images:
   - image: ibmcom/processmining-operator
   - image: ibmcom/processmining-operator-bundle
   - image: ibmcom/processmining-operator-catalog
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller

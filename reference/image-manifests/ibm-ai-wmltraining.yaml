@@ -1,0 +1,10 @@
+source: ibm-ai-wmltraining-case-bundle/case/ibm-ai-wmltraining/case.yaml
+description: "CASE that deploys the AI Wmltraining Operator"
+images:
+  - image: cp/ai/ibm-ai-wmltraining-controller
+  - image: cp/ai/ibm-ai-wmltraining-init-sidecar
+  - image: cp/ai/ibm-ai-wmltraining-proxy-controller
+  - image: cp/ai/ibm-ai-wmltraining-sidecar
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog

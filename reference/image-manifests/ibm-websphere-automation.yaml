@@ -1,6 +1,16 @@
 source: ibm-websphere-automation-bundle/case/ibm-websphere-automation/case.yaml
 description: "IBM WebSphere Automation helps ensure the security and compliance of WebSphere environments by allowing administrators to easily see all of the unresolved security vulnerabilities that affect either the WebSphere Application Servers or the Java virtual machines in their purview."
 images:
+  - image: cp/ai/ibm-ai-wmltraining-controller
+  - image: cp/ai/ibm-ai-wmltraining-init-sidecar
+  - image: cp/ai/ibm-ai-wmltraining-proxy-controller
+  - image: cp/ai/ibm-ai-wmltraining-sidecar
+  - image: cp/ai/model-mesh
+  - image: cp/ai/model-serving-runtime-adapter
+  - image: cp/ai/msp-ml-server
+  - image: cp/ai/seldonio-mlserver
+  - image: cp/ai/triton-inference-server
+  - image: cp/ai/wmlserving-controller
   - image: cp/iaf-ai-pipeline-ctrl
   - image: cp/iaf-ai-pipeline-step
   - image: cp/iaf-apicurio-registry
@@ -9,6 +19,9 @@ images:
   - image: cp/iaf-elasticsearch-proxy
   - image: cp/iaf-eventprocessing-proxy
   - image: cp/iaf-flink
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
+  - image: cp/opencontent-etcd-3
   - image: cp/websphere-automation-api-selfsecure
   - image: cp/websphere-automation-api-usagemetering
   - image: cp/websphere-automation-cve-monitor
@@ -32,6 +45,30 @@ images:
   - image: ibmcom/ibm-automation-foundation-core-catalog
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/iaf-ai-operator
+  - image: icr.io/cpopen/iaf-ai-operator-bundle
+  - image: icr.io/cpopen/iaf-base-operator
+  - image: icr.io/cpopen/iaf-base-operator-bundle
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/iaf-elastic-operator
+  - image: icr.io/cpopen/iaf-elastic-operator-bundle
+  - image: icr.io/cpopen/iaf-eventprocessing-operator
+  - image: icr.io/cpopen/iaf-eventprocessing-operator-bundle
+  - image: icr.io/cpopen/iaf-flink-operator
+  - image: icr.io/cpopen/iaf-flink-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmlserving-operator
+  - image: icr.io/cpopen/ibm-ai-wmlserving-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmlserving-operator-catalog
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-etcd-operator-bundle
+  - image: icr.io/cpopen/ibm-etcd-operator-catalog
+  - image: icr.io/cpopen/opencontent-etcd-operator
   - image: icr.io/cpopen/websphere-automation-operator
   - image: icr.io/cpopen/websphere-automation-operator-bundle
   - image: icr.io/cpopen/websphere-automation-operator-catalog
