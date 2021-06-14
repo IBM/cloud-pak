@@ -1,4 +1,4 @@
-source: ibm-apiconnect-v30-bundle/case/ibm-apiconnect/case.yaml
+source: ibm-apiconnect-bundle/case/ibm-apiconnect/case.yaml
 description: ""
 images:
   - image: cp/apic/ibm-apiconnect-analytics-analytics-client
@@ -70,6 +70,7 @@ images:
   - image: ibmcom/ibm-apiconnect-upgrade-operator-init
   - image: ibmcom/ibm-apiconnect-webhook-delete
   - image: ibmcom/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller

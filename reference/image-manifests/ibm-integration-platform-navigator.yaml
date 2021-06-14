@@ -1,6 +1,8 @@
 source: ibm-integration-platform-navigator-bundle/case/ibm-integration-platform-navigator/case.yaml
 description: "The CP4I Platform Navigator allows seamless access and management of any IBM Cloud Pak for Integration components you have running."
 images:
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
   - image: cp/icp4i/icip-navigator
   - image: cp/icp4i/icip-services
   - image: ibmcom/iaf-core-operator
@@ -13,6 +15,13 @@ images:
   - image: ibmcom/ibm-integration-platform-navigator-operator-bundle
   - image: ibmcom/ibm-integration-platform-navigator-operator-init
   - image: ibmcom/ibm-integration-platform-navigator-webhook-init
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-integration-platform-navigator-catalog
+  - image: icr.io/cpopen/ibm-integration-platform-navigator-operator
+  - image: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller

@@ -1,10 +1,16 @@
-source: ibm-automation-foundation-core-bundle/case/ibm-automation-foundation-core/case.yaml
+source: ibm-automation-foundation-core-v11-bundle/case/ibm-automation-foundation-core/case.yaml
 description: "IBM Automation Foundation Core"
 images:
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
   - image: ibmcom/iaf-core-operator
   - image: ibmcom/iaf-core-operator-bundle
   - image: ibmcom/ibm-automation-foundation-core-catalog
   - image: ibmcom/ibm-common-service-catalog
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller

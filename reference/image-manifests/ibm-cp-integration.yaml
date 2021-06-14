@@ -17,6 +17,7 @@ images:
   - image: cp/apic/ibm-apiconnect-apiconnect-master
   - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
   - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
+  - image: cp/apic/ibm-apiconnect-gateway-haproxy
   - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
   - image: cp/apic/ibm-apiconnect-management-apim
@@ -76,6 +77,8 @@ images:
   - image: cp/datapower/datapower
   - image: cp/datapower/datapower-cp4i
   - image: cp/datapower/datapower-prod
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
   - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/ibm-eventstreams-admin
   - image: cp/ibm-eventstreams-admin-ui
@@ -500,6 +503,9 @@ images:
   - image: ibmcom/ibm-apiconnect-operator
   - image: ibmcom/ibm-apiconnect-operator-bundle
   - image: ibmcom/ibm-apiconnect-operator-init
+  - image: ibmcom/ibm-apiconnect-upgrade-operator
+  - image: ibmcom/ibm-apiconnect-upgrade-operator-bundle
+  - image: ibmcom/ibm-apiconnect-upgrade-operator-init
   - image: ibmcom/ibm-apiconnect-webhook-delete
   - image: ibmcom/ibm-automation-foundation-core-catalog
   - image: ibmcom/ibm-cloud-databases-redis-catalog
@@ -533,6 +539,26 @@ images:
   - image: ibmcom/icp4i-od-agent
   - image: ibmcom/icp4i-od-collector
   - image: ibmcom/mq
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-cp-integration-catalog
+  - image: icr.io/cpopen/ibm-cp-integration-operator
+  - image: icr.io/cpopen/ibm-cp-integration-operator-bundle
+  - image: icr.io/cpopen/ibm-integration-asset-repository-bundle
+  - image: icr.io/cpopen/ibm-integration-asset-repository-catalog
+  - image: icr.io/cpopen/ibm-integration-asset-repository-operator
+  - image: icr.io/cpopen/ibm-integration-asset-repository-webhook-init
+  - image: icr.io/cpopen/ibm-integration-operations-dashboard-bundle
+  - image: icr.io/cpopen/ibm-integration-operations-dashboard-catalog
+  - image: icr.io/cpopen/ibm-integration-operations-dashboard-operator
+  - image: icr.io/cpopen/ibm-integration-platform-navigator-catalog
+  - image: icr.io/cpopen/ibm-integration-platform-navigator-operator
+  - image: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
