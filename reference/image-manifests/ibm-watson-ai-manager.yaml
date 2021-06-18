@@ -1,13 +1,21 @@
-source: ibm-watson-ai-manager-case-bundle/case/ibm-watson-ai-manager/case.yaml
-description: "IBM Watson® AIOps for IBM Cloud Pak® provides holistic insights that help prioritize issues and resolution efforts that take place in ever-evolving hybrid cloud and traditional IT environments. It identifies and gathers signals across a variety of structured and unstructured data channels, including alerts, logs, and tickets."
+source: ibm-watson-ai-manager-case-aiops31-bundle/case/ibm-watson-ai-manager/case.yaml
+description: "IBM Watson® AIOps for IBM Cloud Pak® for Data provides holistic insights that help prioritize issues and resolution efforts that take place in ever-evolving hybrid cloud and traditional IT environments. It identifies and gathers signals across a variety of structured and unstructured data channels, including alerts, logs, and tickets."
 images:
   - image: /aiops-api
+  - image: /aiops-api
+  - image: /ai-platform-api-server
   - image: /ai-platform-api-server
   - image: /alert-localization
+  - image: /alert-localization
+  - image: /change-risk
   - image: /change-risk
   - image: /chatops-orchestrator
+  - image: /chatops-orchestrator
+  - image: /chatops-slack-integrator
   - image: /chatops-slack-integrator
   - image: /chatops-teams-integrator
+  - image: /chatops-teams-integrator
+  - image: /connection-manager
   - image: /connection-manager
   - image: cp/ibm-watson-ai-manager/aiops-api
   - image: cp/ibm-watson-ai-manager/alert-localization
@@ -57,15 +65,25 @@ images:
   - image: cp/ibm-watson-ai-manager/zen-metastoredb
   - image: cp/ibm-watson-ai-manager/zen-watchdog
   - image: /elasticsearch-curator
+  - image: /elasticsearch-curator
+  - image: /event-grouping
   - image: /event-grouping
   - image: /event-grouping_modeltrain
+  - image: /event-grouping_modeltrain
+  - image: /flink-core
   - image: /flink-core
   - image: ibmcom/ibm-watson-ai-manager-operator
   - image: ibmcom/ibm-watson-ai-manager-operator-bundle
   - image: ibmcom/ibm-watson-ai-manager-operator-catalog
   - image: /log-anomaly
+  - image: /log-anomaly
+  - image: /log-anomaly-training
   - image: /log-anomaly-training
   - image: /persistence-service
+  - image: /persistence-service
+  - image: /similar-incidents-service
   - image: /similar-incidents-service
   - image: /similar-incidents-training
+  - image: /similar-incidents-training
+  - image: /topology
   - image: /topology

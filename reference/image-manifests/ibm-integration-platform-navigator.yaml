@@ -1,4 +1,4 @@
-source: ibm-integration-platform-navigator-eus-bundle/case/ibm-integration-platform-navigator/case.yaml
+source: ibm-integration-platform-navigator-bundle/case/ibm-integration-platform-navigator/case.yaml
 description: "The CP4I Platform Navigator allows seamless access and management of any IBM Cloud Pak for Integration components you have running."
 images:
   - image: cp/iaf-health-service
@@ -121,17 +121,10 @@ images:
   - image: quay.io/opencloudio/icp-oidcclient-watcher
   - image: quay.io/opencloudio/icp-platform-api
   - image: quay.io/opencloudio/icp-platform-auth
-  - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/indices-cleaner
   - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
-  - image: quay.io/opencloudio/logging-pki-init
-  - image: quay.io/opencloudio/metering-data-manager
-  - image: quay.io/opencloudio/metering-mcmui
-  - image: quay.io/opencloudio/metering-report
-  - image: quay.io/opencloudio/metering-ui
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller
@@ -144,7 +137,6 @@ images:
   - image: quay.io/opencloudio/prometheus-controller
   - image: quay.io/opencloudio/prometheus-operator
   - image: quay.io/opencloudio/system-healthcheck-service
-  - image: quay.io/opencloudio/tiller
   - image: quay.io/opencloudio/zen-audit
   - image: quay.io/opencloudio/zen-core
   - image: quay.io/opencloudio/zen-core-api
