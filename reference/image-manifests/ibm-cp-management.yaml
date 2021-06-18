@@ -1,4 +1,4 @@
-source: ibm-cp-management-tgz-bundle/case/ibm-cp-management/case.yaml
+source: ibm-cp-management-bundle/case/ibm-cp-management/case.yaml
 description: "Accelerate innovation with a next-generation hybrid multicloud platform."
 images:
   - image: cp/app-mgmt/agentbootstrap
@@ -119,10 +119,12 @@ images:
   - image: cp/cp4mcm/etcd
   - image: cp/cp4mcm/etcd-operator
   - image: cp/cp4mcm/event-evaluator
+  - image: cp/cp4mcm/evidence-store-manager
   - image: cp/cp4mcm/findings-adapter
   - image: cp/cp4mcm/grafeas
   - image: cp/cp4mcm/ham-application-assembler
   - image: cp/cp4mcm/ham-deployable-operator
+  - image: cp/cp4mcm/ham-placement
   - image: cp/cp4mcm/ham-resource-discoverer
   - image: cp/cp4mcm/hdm-brokers
   - image: cp/cp4mcm/hdm-cem-users
@@ -140,6 +142,8 @@ images:
   - image: cp/cp4mcm/httpd
   - image: cp/cp4mcm/hybrid-grc-policy-propagator
   - image: cp/cp4mcm/ibm-cp4mcm-manage-runtime-operator
+  - image: cp/cp4mcm/ibm-cp4mcm-manage-runtimes
+  - image: cp/cp4mcm/ibm-dc-autoconfig-operator
   - image: cp/cp4mcm/ibm-infra-management-install-operator
   - image: cp/cp4mcm/ibm-kong-operator
   - image: cp/cp4mcm/ibm-license-advisor-db
@@ -148,8 +152,10 @@ images:
   - image: cp/cp4mcm/ibm-license-advisor-sender
   - image: cp/cp4mcm/ibm-license-advisor-sender-operator
   - image: cp/cp4mcm/ibm-license-advisor-ui
+  - image: cp/cp4mcm/ibm-management-awspolicy-ansible
   - image: cp/cp4mcm/ibm-management-hybridapp
   - image: cp/cp4mcm/ibm-management-hybridgrc-car
+  - image: cp/cp4mcm/ibm-management-hybridgrc-core
   - image: cp/cp4mcm/ibm-management-image-security-enforcement
   - image: cp/cp4mcm/ibm-management-mcm-operator
   - image: cp/cp4mcm/ibm-management-monitoring
@@ -159,7 +165,10 @@ images:
   - image: cp/cp4mcm/ibm-management-vmpolicy-ansible
   - image: cp/cp4mcm/ibm-mongodb-install
   - image: cp/cp4mcm/ibm-mongodb-ubi8
+  - image: cp/cp4mcm/ibm-monitoring-dataprovider-mgmt-operator
   - image: cp/cp4mcm/ibm-mutation-advisor-operator
+  - image: cp/cp4mcm/ibm-sdk-operator
+  - image: cp/cp4mcm/ibm-secure-tunnel-operator
   - image: cp/cp4mcm/ibm-sre-bastion-operator
   - image: cp/cp4mcm/ibm-sre-chatops-operator
   - image: cp/cp4mcm/ibm-sre-inventory-operator
@@ -182,15 +191,21 @@ images:
   - image: cp/cp4mcm/icam-tenant-api
   - image: cp/cp4mcm/icam-ui-basic
   - image: cp/cp4mcm/icp-audit-service
+  - image: cp/cp4mcm/icp-elasticsearch-oss
+  - image: cp/cp4mcm/icp-management-ingress
   - image: cp/cp4mcm/icp-redisgraph
+  - image: cp/cp4mcm/indices-cleaner
   - image: cp/cp4mcm/inference-service
   - image: cp/cp4mcm/infra-management-grc-operator
   - image: cp/cp4mcm/infra-management-vm-operator
+  - image: cp/cp4mcm/infra-mgmt-application
   - image: cp/cp4mcm/infra-mgmt-base-worker
   - image: cp/cp4mcm/infra-mgmt-orchestrator
   - image: cp/cp4mcm/infra-mgmt-ui-worker
   - image: cp/cp4mcm/infra-mgmt-webserver-worker
   - image: cp/cp4mcm/itopsui
+  - image: cp/cp4mcm/k8-monitor
+  - image: cp/cp4mcm/k8sdc-operator
   - image: cp/cp4mcm/k8szk
   - image: cp/cp4mcm/kafka
   - image: cp/cp4mcm/kafkarest
@@ -222,6 +237,10 @@ images:
   - image: cp/cp4mcm/metric_service_db
   - image: cp/cp4mcm/metricsummarycreation
   - image: cp/cp4mcm/metric_summary_policy
+  - image: cp/cp4mcm/metricsvc-api-ingress
+  - image: cp/cp4mcm/metricsvc-api-query
+  - image: cp/cp4mcm/metricsvc-collector-kafka
+  - image: cp/cp4mcm/metricsvc-summary-policy
   - image: cp/cp4mcm/minio
   - image: cp/cp4mcm/minio-mc
   - image: cp/cp4mcm/nasm-elasticsearch
@@ -234,6 +253,7 @@ images:
   - image: cp/cp4mcm/notary-server
   - image: cp/cp4mcm/notary-signer
   - image: cp/cp4mcm/opencontent-redis-3
+  - image: cp/cp4mcm/opencontent-redis-5
   - image: cp/cp4mcm/opentt-analyzer
   - image: cp/cp4mcm/opentt-collector
   - image: cp/cp4mcm/opentt-ingester
@@ -244,12 +264,14 @@ images:
   - image: cp/cp4mcm/postgresql
   - image: cp/cp4mcm/py-generic-indexer
   - image: cp/cp4mcm/rabbitmq-ubi
+  - image: cp/cp4mcm/reloader
   - image: cp/cp4mcm/rootkit-annotator
   - image: cp/cp4mcm/sas-base
   - image: cp/cp4mcm/search-aggregator
   - image: cp/cp4mcm/search-api
   - image: cp/cp4mcm/search-collector
   - image: cp/cp4mcm/secure-config-annotator
+  - image: cp/cp4mcm/secure-tunnel
   - image: cp/cp4mcm/security-advisor-findingsapi
   - image: cp/cp4mcm/security-advisor-onboarding
   - image: cp/cp4mcm/slo
@@ -289,6 +311,11 @@ images:
   - image: cp/cp4mcm/temasda
   - image: cp/cp4mcm/threshold
   - image: cp/cp4mcm/training-service
+  - image: cp/cp4mcm/tunnel-ui
+  - image: cp/cp4mcm/ua-cloud-monitoring
+  - image: cp/cp4mcm/ua-operator
+  - image: cp/cp4mcm/ua-plugins
+  - image: cp/cp4mcm/ua-repo
   - image: cp/cp4mcm/ubi-base
   - image: cp/cp4mcm/ubi-minimal
   - image: cp/cp4mcm/usncrawler
@@ -301,9 +328,12 @@ images:
   - image: ibmcom/ibm-common-service-catalog
   - image: quay.io/cp4mcm/cp4mcm-orchestrator-bundle
   - image: quay.io/cp4mcm/cp4mcm-orchestrator-catalog
+  - image: quay.io/cp4mcm/cp4mcm-orchestrator-operator-bundle
   - image: quay.io/cp4mcm/ibm-management-orchestrator
   - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/collectd-exporter
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
@@ -313,6 +343,7 @@ images:
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
   - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/grafana-ocpthanos-proxy
   - image: quay.io/opencloudio/iam-policy-administration
   - image: quay.io/opencloudio/iam-policy-controller
   - image: quay.io/opencloudio/iam-policy-decision
@@ -330,6 +361,9 @@ images:
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-elastic-stack-operator
   - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-operator
+  - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
   - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
   - image: quay.io/opencloudio/ibm-helm-api-operator
@@ -360,6 +394,9 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
   - image: quay.io/opencloudio/ibm-platform-api-operator
   - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
   - image: quay.io/opencloudio/ibm-postgresql
