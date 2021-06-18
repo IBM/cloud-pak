@@ -2,3 +2,6 @@ source: ibm-dbb-case-bundle/case/ibm-dbb-case/case.yaml
 description: "IBM Dependency Based Build is a tool for scripted pipeline builds for z/OS® application"
 images:
   - image: ibmcom/dependency-based-build
+  - image: icr.io/cpopen/dependency-based-build-operator
+  - image: icr.io/cpopen/dependency-based-build-operator-bundle
+  - image: icr.io/cpopen/dependency-based-build-operator-catalog
