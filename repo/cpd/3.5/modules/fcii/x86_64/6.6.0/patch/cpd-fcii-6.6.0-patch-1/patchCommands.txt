@@ -1,0 +1,1 @@
+exec deploy/cpd-install-operator -- /bin/bash  -c  'oc get job fcii-ibm-fci-claims-fraud-prod-post-upgrade -o yaml | sed /controller-uid/d | sed "/image:/ s#image:.*#image: {{.DockerRegistryPrefix}}/fcii-common-scripts:6.6.0-PATCH1#g" | oc replace --save-config --force -f -'
