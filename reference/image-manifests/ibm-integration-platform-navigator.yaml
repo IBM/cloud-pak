@@ -45,7 +45,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
   - image: quay.io/opencloudio/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-operator-bundle
@@ -63,6 +65,8 @@ images:
   - image: quay.io/opencloudio/ibm-licensing-usage
   - image: quay.io/opencloudio/ibm-management-ingress-operator
   - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
+  - image: quay.io/opencloudio/ibm-metering-operator
+  - image: quay.io/opencloudio/ibm-metering-operator-bundle
   - image: quay.io/opencloudio/ibm-mongodb
   - image: quay.io/opencloudio/ibm-mongodb-exporter
   - image: quay.io/opencloudio/ibm-mongodb-install
@@ -100,10 +104,15 @@ images:
   - image: quay.io/opencloudio/icp-oidcclient-watcher
   - image: quay.io/opencloudio/icp-platform-api
   - image: quay.io/opencloudio/icp-platform-auth
+  - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
   - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/metering-data-manager
+  - image: quay.io/opencloudio/metering-mcmui
+  - image: quay.io/opencloudio/metering-report
+  - image: quay.io/opencloudio/metering-ui
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller

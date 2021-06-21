@@ -1,4 +1,4 @@
-source: ibm-watson-gateway-operator-case-bundle/case/ibm-watson-gateway-operator/case.yaml
+source: ibm-watson-gateway-operator-case-cp4d40-bundle/case/ibm-watson-gateway-operator/case.yaml
 description: "A CASE for IBM Watson Gateway Operator"
 images:
   - image: cp/cpd/cp4d-tiller
@@ -19,3 +19,6 @@ images:
   - image: cp/watson-gateway
   - image: cp/watson-gateway-operator
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/watson-gateway-operator
+  - image: icr.io/cpopen/watson-gateway-operator-bundle
+  - image: icr.io/cpopen/watson-gateway-operator-catalog
