@@ -1,10 +1,11 @@
-source: ibm-dods-bundle/case/ibm-dods/case.yaml
+source: ibm-dods-cp4d40-bundle/case/ibm-dods/case.yaml
 description: "IBM Decision Optimization is an add-on to Cloud Pack for Data that provides advanced decision capabilities."
 images:
   - image: cp/cpd/ailc-kubectl
   - image: cp/cpd/aios-kubectl
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/asset-files-api-ppc64le
+  - image: cp/cpd/catalog-api-aux_master
   - image: cp/cpd/catalog_master
   - image: cp/cpd/couchdb3
   - image: cp/cpd/cp4d-tiller
@@ -21,6 +22,10 @@ images:
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dataview-secrets-job
   - image: cp/cpd/dc-main
+  - image: cp/cpd/dd-cognitive
+  - image: cp/cpd/dd-init
+  - image: cp/cpd/dd-scenario-api
+  - image: cp/cpd/dd-scenario-ui
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
   - image: cp/cpd/environments
@@ -58,12 +63,14 @@ images:
   - image: cp/cpd/portal-ml-dl-ppc64le
   - image: cp/cpd/portal-notifications
   - image: cp/cpd/portal-notifications-ppc64le
+  - image: cp/cpd/portal-projects
   - image: cp/cpd/privatecloud-dsx-hi-proxy
   - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/privatecloud-utils-api
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
+  - image: cp/cpd/runtimes-init-job
   - image: cp/cpd/shaper-preinstall
   - image: cp/cpd/shaper-server
   - image: cp/cpd/spaces
@@ -80,12 +87,14 @@ images:
   - image: cp/cpd/ubi
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
+  - image: cp/cpd/wdp-connect-flight
   - image: cp/cpd/wdp-dataprep
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-shaper
   - image: cp/cpd/wkc-init-container
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-autoai-kb
+  - image: cp/cpd/wml-autoai-ts
   - image: cp/cpd/wml-automl-obm-hybrid-pipeline
   - image: cp/cpd/wml-aux
   - image: cp/cpd/wml-cp4d-3.5-upgrade
@@ -93,10 +102,12 @@ images:
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
   - image: cp/cpd/wml-deployment-runtime-py37-1
+  - image: cp/cpd/wml-deployment-runtime-py37-2
   - image: cp/cpd/wml-federated-learning
   - image: cp/cpd/wml-main
   - image: cp/cpd/wml-main-ppc64le
   - image: cp/cpd/wml-os-runtimes-do
+  - image: cp/cpd/wml-post-upgrade-cleanup-deployments
   - image: cp/cpd/wml-preinstall-secret
   - image: cp/cpd/wmlrepositoryv4
   - image: cp/cpd/wml-rt-ac201903-py368-g1
@@ -105,13 +116,19 @@ images:
   - image: cp/cpd/wml-rt-ac201903-r36-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.0-py3612-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.1-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.1-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.2-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.2-py37-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.3-py37-g1
+  - image: cp/cpd/wml-rt-autoai_ts_3.1-py37-g1
   - image: cp/cpd/wml-rt-bd-spss18.1
   - image: cp/cpd/wml-rt-hybrid
   - image: cp/cpd/wml-rt-init-dep-service-py
   - image: cp/cpd/wml-rt-mc3-py368-g2
   - image: cp/cpd/wml-rt-mc3-py379-g1
   - image: cp/cpd/wml-rt-mc3-py379-g2
+  - image: cp/cpd/wml-rt-mc3-py37-g1-ms
+  - image: cp/cpd/wml-rt-mc3-py37-g2-ms
   - image: cp/cpd/wml-rt-mllib2.3
   - image: cp/cpd/wml-rt-mllib2.4
   - image: cp/cpd/wml-rt-od-spss18.1
@@ -151,3 +168,18 @@ images:
   - image: dd-scenario-api
   - image: dd-scenario-ui
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-datarefinery-operator
+  - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-dods-operator
+  - image: icr.io/cpopen/ibm-cpd-dods-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-dods-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-wml-operator
+  - image: icr.io/cpopen/ibm-cpd-wml-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-wml-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-operator
+  - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog

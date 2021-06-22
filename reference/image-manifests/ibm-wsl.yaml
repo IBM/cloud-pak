@@ -1,5 +1,5 @@
-source: ibm-wsl-bundle/case/ibm-wsl/case.yaml
-description: "A CASE for helm charts related to Watson Studio Local"
+source: ibm-wsl-cp4dv4-bundle/case/ibm-wsl/case.yaml
+description: "Watson Studio Local"
 images:
   - image: asset-files-api
   - image: cp4d-ws-secrets-job
@@ -7,6 +7,7 @@ images:
   - image: cp/cpd/aios-kubectl
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/asset-files-api-ppc64le
+  - image: cp/cpd/catalog-api-aux_master
   - image: cp/cpd/catalog_master
   - image: cp/cpd/couchdb3
   - image: cp/cpd/cp4d-tiller
@@ -57,12 +58,14 @@ images:
   - image: cp/cpd/portal-ml-dl-ppc64le
   - image: cp/cpd/portal-notifications
   - image: cp/cpd/portal-notifications-ppc64le
+  - image: cp/cpd/portal-projects
   - image: cp/cpd/privatecloud-dsx-hi-proxy
   - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/privatecloud-utils-api
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
+  - image: cp/cpd/runtimes-init-job
   - image: cp/cpd/shaper-preinstall
   - image: cp/cpd/shaper-server
   - image: cp/cpd/spaces
@@ -79,6 +82,7 @@ images:
   - image: cp/cpd/ubi
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
+  - image: cp/cpd/wdp-connect-flight
   - image: cp/cpd/wdp-dataprep
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-shaper
@@ -112,6 +116,15 @@ images:
   - image: cp/cpd/zen-watchdog
   - image: dap-dashboards-api
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-datarefinery-operator
+  - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-operator
+  - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog
   - image: jobs-api
   - image: jobs-ui
   - image: job-trigger
