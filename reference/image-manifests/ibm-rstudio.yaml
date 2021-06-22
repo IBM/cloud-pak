@@ -1,0 +1,9 @@
+source: ibm-rstudio-bundle/case/ibm-rstudio/case.yaml
+description: "IBM Cloud Pak for Data RStudio Addon"
+images:
+  - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-rstudio
+  - image: cp/cpd/wslocal-runtime-shiny
+  - image: icr.io/cpopen/ibm-cpd-rstudio-operator
+  - image: icr.io/cpopen/ibm-cpd-rstudio-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-rstudio-operator-catalog
