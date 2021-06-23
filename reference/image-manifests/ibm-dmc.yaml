@@ -1,4 +1,4 @@
-source: ibm-dmc-bundle/case/ibm-dmc/case.yaml
+source: ibm-dmc-cp4d40-bundle/case/ibm-dmc/case.yaml
 description: "IBM Db2 Data Management Console"
 images:
   - image: cp/cpd/ibm-dmc-addon-api
@@ -15,3 +15,20 @@ images:
   - image: cp/cpd/ibm-dmc-registry-manager
   - image: cp/cpd/ibm-dmc-runsql
   - image: cp/cpd/ibm-dmc-ucgoapi
+  - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-dmc-operator
+  - image: icr.io/cpopen/ibm-dmc-operator-bundle
+  - image: icr.io/cpopen/ibm-dmc-operator-catalog
