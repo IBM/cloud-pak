@@ -1,0 +1,17 @@
+source: ibm-iis-bundle/case/ibm-iis/case.yaml
+description: "IBM Cloud Pak for Data IBM Information Server"
+images:
+  - image: cp/cpd/cassandra-ubi8-x86_64
+  - image: cp/cpd/is-db2u-image
+  - image: cp/cpd/is-db2xmeta-image
+  - image: cp/cpd/is-en-compute-image
+  - image: cp/cpd/is-engine-image
+  - image: cp/cpd/is-services-image
+  - image: cp/cpd/kafka-ubi8-x86_64
+  - image: cp/cpd/solr-ubi8-x86_64
+  - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-ugconfig
+  - image: cp/cpd/zookeeper-ubi8-x86_64
+  - image: icr.io/cpopen/ibm-cpd-iis-operator
+  - image: icr.io/cpopen/ibm-cpd-iis-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-iis-operator-catalog
