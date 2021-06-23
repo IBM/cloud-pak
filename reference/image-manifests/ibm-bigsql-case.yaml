@@ -1,7 +1,31 @@
-source: ibm-bigsql-bundle/case/ibm-bigsql-case/case.yaml
-description: "Chart to deploy IBM Db2 Big SQL on IBM Cloud Pak for Data"
+source: ibm-bigsql-cp4d40-bundle/case/ibm-bigsql-case/case.yaml
+description: "Db2 Big SQL"
 images:
   - image: cp/cpd/bigsql-addon-7_1_1_0
   - image: cp/cpd/bigsql-engine-7_1_1_0
   - image: cp/cpd/bigsql-init-volume-7_1_1_0
   - image: cp/cpd/bigsql-service-provider-7_1_1_0
+  - image: cp/cpd/dv-addon
+  - image: cp/cpd/dv-service-provider
+  - image: cp/db2u
+  - image: cp/db2u.auxiliary.auth
+  - image: cp/db2u.bigsql.cdh7
+  - image: cp/db2u.bigsql.mariadb
+  - image: cp/db2u.dv
+  - image: cp/db2u.dv.api
+  - image: cp/db2u.dv.caching
+  - image: cp/db2u.dv.utils
+  - image: cp/db2u.graph
+  - image: cp/db2u.hurricane
+  - image: cp/db2u.instdb
+  - image: cp/db2u.instdb.restricted
+  - image: cp/db2u.rest
+  - image: cp/db2u.restricted
+  - image: cp/db2u.tools
+  - image: cp/etcd
+  - image: ibmcom/db2u-operator
+  - image: ibmcom/ibm-db2uoperator-bundle
+  - image: ibmcom/ibm-db2uoperator-catalog
+  - image: icr.io/cpopen/ibm-cpd-bigsql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-bigsql-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-dv-operator

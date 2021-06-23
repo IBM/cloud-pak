@@ -1,6 +1,16 @@
-source: ibm-dv-bundle/case/ibm-dv-case/case.yaml
-description: "Data Virtualization on IBM Cloud Private for Data"
+source: ibm-dv-cp4d40-bundle/case/ibm-dv-case/case.yaml
+description: "Db2 DV"
 images:
+  - image: cp/cpd/ailc-kubectl
+  - image: cp/cpd/asset-files-api
+  - image: cp/cpd/catalog-api-aux_master
+  - image: cp/cpd/catalog_master
+  - image: cp/cpd/couchdb3
+  - image: cp/cpd/dap-base-job
+  - image: cp/cpd/dap-dashboards-api
+  - image: cp/cpd/dataview-api-service
+  - image: cp/cpd/dc-main
+  - image: cp/cpd/dsx-requisite
   - image: cp/cpd/dv-addon
   - image: cp/cpd/dv-api
   - image: cp/cpd/dv-caching
@@ -9,5 +19,86 @@ images:
   - image: cp/cpd/dv-init-volume
   - image: cp/cpd/dv-metastore
   - image: cp/cpd/dv-service-provider
+  - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environments
+  - image: cp/cpd/environments-init-job
+  - image: cp/cpd/event-logger-api
+  - image: cp/cpd/haproxy
+  - image: cp/cpd/ibm-dmc-addon-api
+  - image: cp/cpd/ibm-dmc-addon-ui
+  - image: cp/cpd/ibm-dmc-admin
+  - image: cp/cpd/ibm-dmc-dbapi
+  - image: cp/cpd/ibm-dmc-explain
+  - image: cp/cpd/ibm-dmc-job-scheduler
+  - image: cp/cpd/ibm-dmc-monitor
+  - image: cp/cpd/ibm-dmc-nginx
+  - image: cp/cpd/ibm-dmc-registry-manager
+  - image: cp/cpd/ibm-dmc-runsql
+  - image: cp/cpd/jobs-api
+  - image: cp/cpd/jobs-ui
+  - image: cp/cpd/job-trigger
+  - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/opencontent-common-utils
+  - image: cp/cpd/portal-catalog
+  - image: cp/cpd/portal-common-api
+  - image: cp/cpd/portal-dashboards
+  - image: cp/cpd/portal-job-manager
+  - image: cp/cpd/portal-main
+  - image: cp/cpd/portal-notifications
+  - image: cp/cpd/portal-projects
+  - image: cp/cpd/privatecloud-spawner-api-k8s
+  - image: cp/cpd/rabbitmq
+  - image: cp/cpd/redis
+  - image: cp/cpd/spaces
+  - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/wdp-connect-connection
+  - image: cp/cpd/wdp-connect-connector
+  - image: cp/cpd/wdp-connect-flight
+  - image: cp/cpd/wdp-dataview
+  - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-search_master
+  - image: cp/cpd/wml-main
+  - image: cp/cpd/wmlrepositoryv4
+  - image: cp/db2u
+  - image: cp/db2u.auxiliary.auth
+  - image: cp/db2u.bigsql.cdh7
+  - image: cp/db2u.bigsql.mariadb
+  - image: cp/db2u.dv
+  - image: cp/db2u.dv.api
+  - image: cp/db2u.dv.caching
+  - image: cp/db2u.dv.utils
+  - image: cp/db2u.graph
+  - image: cp/db2u.hurricane
+  - image: cp/db2u.instdb
+  - image: cp/db2u.instdb.restricted
+  - image: cp/db2u.rest
+  - image: cp/db2u.restricted
+  - image: cp/db2u.tools
+  - image: cp/etcd
+  - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/opencontent-common-utils
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
+  - image: ibmcom/db2u-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: ibmcom/ibm-db2uoperator-bundle
+  - image: ibmcom/ibm-db2uoperator-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-dv-operator
+  - image: icr.io/cpopen/ibm-cpd-dv-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-dv-operator-catalog
+  - image: icr.io/cpopen/ibm-dmc-operator
+  - image: icr.io/cpopen/ibm-dmc-operator-bundle
+  - image: icr.io/cpopen/ibm-dmc-operator-catalog
