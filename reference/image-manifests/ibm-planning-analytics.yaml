@@ -1,5 +1,5 @@
 source: ibm-planning-analytics-bundle/case/ibm-planning-analytics/case.yaml
-description: "IBM Cloud Pak for Data Planning Analytics"
+description: "IBM Planning Analytics Cartridge for IBM Cloud Pak for Data"
 images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
@@ -58,3 +58,6 @@ images:
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/ibm-planning-analytics-operator
+  - image: icr.io/cpopen/ibm-planning-analytics-operator-bundle
+  - image: icr.io/cpopen/ibm-planning-analytics-operator-catalog
