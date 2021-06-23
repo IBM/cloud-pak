@@ -1,4 +1,4 @@
-source: ibm-cp-datacore-bundle/case/ibm-cp-datacore/case.yaml
+source: ibm-cp-datacore-cp4d40-bundle/case/ibm-cp-datacore/case.yaml
 description: "A fully-integrated software platform to collect, organize, and analyze data to infuse AI throughout your organization."
 images:
   - image: cp/cpd/ailc-kubectl
@@ -86,6 +86,10 @@ images:
   - image: cp/cpd/db2u.rest
   - image: cp/cpd/db2u.tools
   - image: cp/cpd/dc-main
+  - image: cp/cpd/dd-cognitive
+  - image: cp/cpd/dd-init
+  - image: cp/cpd/dd-scenario-api
+  - image: cp/cpd/dd-scenario-ui
   - image: cp/cpd/drift
   - image: cp/cpd/ds-ent-entitlement-image
   - image: cp/cpd/dsx-requisite
@@ -121,7 +125,13 @@ images:
   - image: cp/cpd/eventstore-ci-ui-console
   - image: cp/cpd/eventstore-ci-zookeeper
   - image: cp/cpd/explainability
+  - image: cp/cpd/fdb-kubernetes-operator
   - image: cp/cpd/finley
+  - image: cp/cpd/flow-api
+  - image: cp/cpd/flow-session
+  - image: cp/cpd/flow-ui
+  - image: cp/cpd/foundationdb
+  - image: cp/cpd/foundationdb-kubernetes-sidecar
   - image: cp/cpd/gov-admin-ui
   - image: cp/cpd/gov-app-config-service
   - image: cp/cpd/gov-catalog-search-index
@@ -218,11 +228,26 @@ images:
   - image: cp/cpd/mdc-couchdb3
   - image: cp/cpd/mdc-elasticsearch
   - image: cp/cpd/mdc-spark-driver
+  - image: cp/cpd/mdm-aspera-server
+  - image: cp/cpd/mdm-audit-rsyslog
+  - image: cp/cpd/mdm-boarding
+  - image: cp/cpd/mdm-config-ui
+  - image: cp/cpd/mdm-configuration
+  - image: cp/cpd/mdm-data
+  - image: cp/cpd/mdm-data-sample-data
+  - image: cp/cpd/mdm-data-spark-driver
+  - image: cp/cpd/mdm-em-ui
+  - image: cp/cpd/mdm-job
+  - image: cp/cpd/mdm-matching
+  - image: cp/cpd/mdm-model
+  - image: cp/cpd/mdm-spark-job
+  - image: cp/cpd/mdm-spark-sample-job
   - image: cp/cpd/metadata-api-server-x86_64
   - image: cp/cpd/metadata-discovery
   - image: cp/cpd/metadata-engine-x86_64
   - image: cp/cpd/mlrepositoryservicehydra
   - image: cp/cpd/mlrepositoryservicehydra-ppc64le-ubi
+  - image: cp/cpd/modeler-flow-api
   - image: cp/cpd/model-operation-service-scheduling
   - image: cp/cpd/model-risk-management
   - image: cp/cpd/model_viewer
@@ -268,6 +293,7 @@ images:
   - image: cp/cpd/post-install-repo-cams-assettype-ppc
   - image: cp/cpd/pre-upgrade-repo-cams-assets
   - image: cp/cpd/privatecloud-dsx-hi-proxy
+  - image: cp/cpd/privatecloud-haproxy
   - image: cp/cpd/privatecloud-redis-repo
   - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/privatecloud-usermgmt
@@ -294,6 +320,7 @@ images:
   - image: cp/cpd/spaces-ui-job-ppc64le
   - image: cp/cpd/spark-hb-control-plane
   - image: cp/cpd/spark-hb-db-spec
+  - image: cp/cpd/spark-hb-deployer-agent
   - image: cp/cpd/spark-hb-helm-repo
   - image: cp/cpd/spark-hb-jkg
   - image: cp/cpd/spark-hb-nginx
@@ -363,6 +390,7 @@ images:
   - image: cp/cpd/wml-app-runtimes-rshiny-ppc64le
   - image: cp/cpd/wml-autoai-kb
   - image: cp/cpd/wml-autoai-kb-ppc64le
+  - image: cp/cpd/wml-autoai-ts
   - image: cp/cpd/wml-automl-obm-hybrid-pipeline
   - image: cp/cpd/wml-aux
   - image: cp/cpd/wml-batch-runtimes-spss18.1
@@ -373,6 +401,7 @@ images:
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
   - image: cp/cpd/wml-deployment-runtime-py37-1
+  - image: cp/cpd/wml-deployment-runtime-py37-2
   - image: cp/cpd/wml-edi-imd
   - image: cp/cpd/wml-edi-isd
   - image: cp/cpd/wml-edi-kernel
@@ -404,6 +433,7 @@ images:
   - image: cp/cpd/wml-os-runtimes-mllib2.4-ppc64le-ubi
   - image: cp/cpd/wml-os-runtimes-spss18.1
   - image: cp/cpd/wml-os-runtimes-spss18.1-ppc64le-ubi
+  - image: cp/cpd/wml-post-upgrade-cleanup-deployments
   - image: cp/cpd/wml-preinstall-secret
   - image: cp/cpd/wml-preinstall-secret-ppc
   - image: cp/cpd/wmlproxyservice-ubi
@@ -415,13 +445,19 @@ images:
   - image: cp/cpd/wml-rt-ac201903-r36-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.0-py3612-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.1-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.1-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.2-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.2-py37-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.3-py37-g1
+  - image: cp/cpd/wml-rt-autoai_ts_3.1-py37-g1
   - image: cp/cpd/wml-rt-bd-spss18.1
   - image: cp/cpd/wml-rt-hybrid
   - image: cp/cpd/wml-rt-init-dep-service-py
   - image: cp/cpd/wml-rt-mc3-py368-g2
   - image: cp/cpd/wml-rt-mc3-py379-g1
   - image: cp/cpd/wml-rt-mc3-py379-g2
+  - image: cp/cpd/wml-rt-mc3-py37-g1-ms
+  - image: cp/cpd/wml-rt-mc3-py37-g2-ms
   - image: cp/cpd/wml-rt-mllib2.3
   - image: cp/cpd/wml-rt-mllib2.4
   - image: cp/cpd/wml-rt-od-spss18.1
@@ -501,6 +537,20 @@ images:
   - image: cp/etcd
   - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/opencontent-common-utils
+  - image: cp/opencontent-elasticsearch-6.8.14
+  - image: cp/opencontent-elasticsearch-7.10.2
+  - image: cp/opencontent-elasticsearch-7.8.0
+  - image: cp/opencontent-elasticsearch-7.8.1
+  - image: cp/opencontent-elasticsearch-7.9.3
+  - image: cp/opencontent-elasticsearch-base-plugins-6.8.14
+  - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
+  - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
+  - image: cp/opencontent-icp-cert-gen-1
+  - image: cp/opencontent-rabbitmq-3
+  - image: cp/opencontent-rabbitmq-config-copy
+  - image: cp/opencontent-rabbitmq-operator
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
   - image: cp/redis-mgmt-5.0.5
@@ -521,6 +571,10 @@ images:
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator
+  - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-bigsql-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-bigsql-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
@@ -532,24 +586,45 @@ images:
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-dods-operator
+  - image: icr.io/cpopen/ibm-cpd-dods-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-dods-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-dv-operator
   - image: icr.io/cpopen/ibm-cpd-dv-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-dv-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-hadoop-operator
+  - image: icr.io/cpopen/ibm-cpd-hadoop-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-hadoop-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-iis-operator
   - image: icr.io/cpopen/ibm-cpd-iis-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-iis-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-platform-operator
+  - image: icr.io/cpopen/ibm-cpd-platform-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-platform-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-rstudio-operator
+  - image: icr.io/cpopen/ibm-cpd-rstudio-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-rstudio-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-scheduler-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-scheduling-operator
   - image: icr.io/cpopen/ibm-cpd-scheduling-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-spss-operator
+  - image: icr.io/cpopen/ibm-cpd-spss-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-spss-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-wkc-operator
   - image: icr.io/cpopen/ibm-cpd-wkc-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-wkc-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-wml-accelerator-operator
   - image: icr.io/cpopen/ibm-cpd-wml-accelerator-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-wml-accelerator-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-wml-operator
+  - image: icr.io/cpopen/ibm-cpd-wml-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-wml-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ws-operator
   - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
   - image: icr.io/cpopen/ibm-datagate-operator
   - image: icr.io/cpopen/ibm-datagate-operator-bundle
   - image: icr.io/cpopen/ibm-datagate-operator-catalog
@@ -565,3 +640,113 @@ images:
   - image: icr.io/cpopen/ibm-dmc-operator
   - image: icr.io/cpopen/ibm-dmc-operator-bundle
   - image: icr.io/cpopen/ibm-dmc-operator-catalog
+  - image: icr.io/cpopen/ibm-watson-openscale-operator
+  - image: icr.io/cpopen/ibm-watson-openscale-operator-bundle
+  - image: icr.io/cpopen/ibm-watson-openscale-operator-catalog
+  - image: icr.io/cpopen/mdm-operator
+  - image: icr.io/cpopen/mdm-operator-bundle
+  - image: icr.io/cpopen/mdm-operator-catalog
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog
+  - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-garbage-collector
+  - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/audit-syslog-service
+  - image: quay.io/opencloudio/collectd-exporter
+  - image: quay.io/opencloudio/common-service-operator
+  - image: quay.io/opencloudio/common-web-ui
+  - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/dashboard-controller
+  - image: quay.io/opencloudio/default-http-backend
+  - image: quay.io/opencloudio/fluentd
+  - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/grafana-ocpthanos-proxy
+  - image: quay.io/opencloudio/iam-policy-administration
+  - image: quay.io/opencloudio/iam-policy-controller
+  - image: quay.io/opencloudio/iam-policy-decision
+  - image: quay.io/opencloudio/ibm-auditlogging-operator
+  - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
+  - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
+  - image: quay.io/opencloudio/ibm-common-service-operator-bundle
+  - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-operator
+  - image: quay.io/opencloudio/ibm-events-operator-bundle
+  - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
+  - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-iam-operator-bundle
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
+  - image: quay.io/opencloudio/ibm-license-service-reporter
+  - image: quay.io/opencloudio/ibm-license-service-reporter-ui
+  - image: quay.io/opencloudio/ibm-licensing
+  - image: quay.io/opencloudio/ibm-licensing-operator
+  - image: quay.io/opencloudio/ibm-licensing-operator-bundle
+  - image: quay.io/opencloudio/ibm-licensing-usage
+  - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
+  - image: quay.io/opencloudio/ibm-mongodb
+  - image: quay.io/opencloudio/ibm-mongodb-exporter
+  - image: quay.io/opencloudio/ibm-mongodb-install
+  - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-mongodb-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
+  - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
+  - image: quay.io/opencloudio/ibm-postgresql
+  - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/ibm-zen-operator
+  - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-cert-manager-acmesolver
+  - image: quay.io/opencloudio/icp-cert-manager-cainjector
+  - image: quay.io/opencloudio/icp-cert-manager-controller
+  - image: quay.io/opencloudio/icp-cert-manager-webhook
+  - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
+  - image: quay.io/opencloudio/icp-iam-onboarding
+  - image: quay.io/opencloudio/icp-identity-manager
+  - image: quay.io/opencloudio/icp-identity-provider
+  - image: quay.io/opencloudio/icp-initcontainer
+  - image: quay.io/opencloudio/icp-management-ingress
+  - image: quay.io/opencloudio/icp-memcached
+  - image: quay.io/opencloudio/icp-oidcclient-watcher
+  - image: quay.io/opencloudio/icp-platform-api
+  - image: quay.io/opencloudio/icp-platform-auth
+  - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/influxdb
+  - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/must-gather-service
+  - image: quay.io/opencloudio/nginx-ingress-controller
+  - image: quay.io/opencloudio/node-exporter
+  - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
+  - image: quay.io/opencloudio/privatecloud-usermgmt
+  - image: quay.io/opencloudio/prometheus
+  - image: quay.io/opencloudio/prometheus-config-reloader
+  - image: quay.io/opencloudio/prometheus-controller
+  - image: quay.io/opencloudio/prometheus-operator
+  - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/zen-audit
+  - image: quay.io/opencloudio/zen-core
+  - image: quay.io/opencloudio/zen-core-api
+  - image: quay.io/opencloudio/zen-data-sorcerer
+  - image: quay.io/opencloudio/zen-iam-config
+  - image: quay.io/opencloudio/zen-metastoredb
+  - image: quay.io/opencloudio/zen-watchdog
