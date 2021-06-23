@@ -1,0 +1,15 @@
+source: ibm-cpd-mongodb-bundle/case/ibm-cpd-mongodb/case.yaml
+description: "IBM Mongodb for CPD"
+images:
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-appdb-ubi
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-database-ubi
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-init-appdb-ubi
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-init-database-ubi
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-init-ops-manager-ubi
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-ops-manager-ubi
+  - image: icr.io/cpopen/ibm-cpd-mongodb-enterprise-bundle
+  - image: icr.io/cpopen/ibm-cpd-mongodb-enterprise-catalog
+  - image: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator
+  - image: icr.io/cpopen/ibm-cpd-mongodb-operator
+  - image: icr.io/cpopen/ibm-cpd-mongodb-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-mongodb-operator-catalog
