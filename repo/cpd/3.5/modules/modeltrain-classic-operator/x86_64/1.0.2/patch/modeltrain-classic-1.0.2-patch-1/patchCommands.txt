@@ -1,0 +1,2 @@
+patch deployment model-train-classic-operator --patch '{"spec": {"template": {"spec": {"containers": [{"name": "manager","image": "{{.DockerRegistryPrefix}}/model-train-controller:1.0.2-patch-1"}]}}}}'
+delete ModelTrain wd
