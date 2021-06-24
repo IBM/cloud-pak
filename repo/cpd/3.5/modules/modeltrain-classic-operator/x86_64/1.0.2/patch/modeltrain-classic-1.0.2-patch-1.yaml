@@ -1,0 +1,17 @@
+description: Model Train 1.0.2 operator patch for security updates
+patchFile: patchCommands.txt
+backupForRollback:
+- kind: Deployment
+  name: model-train-classic-operator
+  namespace: controlplane
+- kind: ModelTrain
+  name: wd
+  namespace: controlplane
+images:
+- model-train-controller:1.0.2-patch-1
+- coordinator:rhubi-cpd-1.0.2-patch-1-1
+- databroker-s3:rhubi-cpd-1.0.2-patch-1-1
+- jobmonitor:rhubi-cpd-1.0.2-patch-1-1
+- lifecycle-manager-service:rhubi-cpd-1.0.2-patch-1-1
+- ratelimiter:rhubi-cpd-1.0.2-patch-1-1
+- trainer-v2-service:rhubi-cpd-1.0.2-patch-1-2
