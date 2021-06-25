@@ -1,6 +1,10 @@
 source: ibm-apiconnect-bundle/case/ibm-apiconnect/case.yaml
 description: ""
 images:
+  - image: cp/ai/ibm-ai-wmltraining-controller
+  - image: cp/ai/ibm-ai-wmltraining-init-sidecar
+  - image: cp/ai/ibm-ai-wmltraining-proxy-controller
+  - image: cp/ai/ibm-ai-wmltraining-sidecar
   - image: cp/apic/ibm-apiconnect-analytics-analytics-client
   - image: cp/apic/ibm-apiconnect-analytics-analytics-cronjobs
   - image: cp/apic/ibm-apiconnect-analytics-analytics-ingestion
@@ -11,16 +15,24 @@ images:
   - image: cp/apic/ibm-apiconnect-analytics-k8s-init
   - image: cp/apic/ibm-apiconnect-apiconnect-configurator
   - image: cp/apic/ibm-apiconnect-apiconnect-master
+  - image: cp/apic/ibm-apiconnect-eventgateway-event-gateway
   - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
   - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
   - image: cp/apic/ibm-apiconnect-gateway-haproxy
   - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
   - image: cp/apic/ibm-apiconnect-management-apim
+  - image: cp/apic/ibm-apiconnect-management-api-testgen-coordinator
+  - image: cp/apic/ibm-apiconnect-management-api-testgen-data
+  - image: cp/apic/ibm-apiconnect-management-api-testgen-discovery
+  - image: cp/apic/ibm-apiconnect-management-api-testgen-generator
   - image: cp/apic/ibm-apiconnect-management-billing
   - image: cp/apic/ibm-apiconnect-management-client-downloads-server
+  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbackrest
+  - image: cp/apic/ibm-apiconnect-management-crunchy-pgbackrest-repo
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbouncer
+  - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-exporter
   - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-ha
   - image: cp/apic/ibm-apiconnect-management-hub
   - image: cp/apic/ibm-apiconnect-management-juhu
@@ -43,6 +55,7 @@ images:
   - image: cp/apic/ibm-apiconnect-management-portal-proxy
   - image: cp/apic/ibm-apiconnect-management-postgres-operator
   - image: cp/apic/ibm-apiconnect-management-task-manager
+  - image: cp/apic/ibm-apiconnect-management-training-runtime
   - image: cp/apic/ibm-apiconnect-management-turnstile
   - image: cp/apic/ibm-apiconnect-management-ui
   - image: cp/apic/ibm-apiconnect-management-v10-upgrade
@@ -70,6 +83,13 @@ images:
   - image: ibmcom/ibm-apiconnect-upgrade-operator-init
   - image: ibmcom/ibm-apiconnect-webhook-delete
   - image: ibmcom/ibm-common-service-catalog
+  - image: icr.io/cpopen/datapower-operator
+  - image: icr.io/cpopen/datapower-operator-bundle
+  - image: icr.io/cpopen/datapower-operator-catalog
+  - image: icr.io/cpopen/datapower-operator-conversion-webhook
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
   - image: icr.io/cpopen/ibm-common-service-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
