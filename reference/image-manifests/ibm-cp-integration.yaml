@@ -279,6 +279,7 @@ images:
   - image: cp/icp4i/mq/ibm-mq-oidc-registration
   - image: cp/icp4i/mq/icp4i-od-agent
   - image: cp/icp4i/mq/icp4i-od-collector
+  - image: cp/icp4i/nl-flow-generation
   - image: cp/icp4i/od/icp4i-od-agent
   - image: cp/icp4i/od/icp4i-od-api-proxy
   - image: cp/icp4i/od/icp4i-od-collector
@@ -539,6 +540,18 @@ images:
   - image: ibmcom/icp4i-od-agent
   - image: ibmcom/icp4i-od-collector
   - image: ibmcom/mq
+  - image: icr.io/appc-dev/acecc-content-server
+  - image: icr.io/appc-dev/acecc-dashboard
+  - image: icr.io/appc-dev/acecc-designerflows
+  - image: icr.io/appc-dev/acecc-ecp
+  - image: icr.io/appc-dev/acecc-lcp
+  - image: icr.io/appc-dev/acecc-proxy
+  - image: icr.io/appc-dev/ace-server
+  - image: icr.io/appc-dev/icp4i-od-agent
+  - image: icr.io/appc-dev/icp4i-od-collector
+  - image: icr.io/cpopen/appconnect-operator
+  - image: icr.io/cpopen/appconnect-operator-bundle
+  - image: icr.io/cpopen/appconnect-operator-catalog
   - image: icr.io/cpopen/aspera-hsts-bundle
   - image: icr.io/cpopen/aspera-hsts-catalog
   - image: icr.io/cpopen/aspera-hsts-operator
@@ -546,6 +559,10 @@ images:
   - image: icr.io/cpopen/couchdb-operator
   - image: icr.io/cpopen/couchdb-operator-bundle
   - image: icr.io/cpopen/couchdb-operator-catalog
+  - image: icr.io/cpopen/datapower-operator
+  - image: icr.io/cpopen/datapower-operator-bundle
+  - image: icr.io/cpopen/datapower-operator-catalog
+  - image: icr.io/cpopen/datapower-operator-conversion-webhook
   - image: icr.io/cpopen/iaf-core-operator
   - image: icr.io/cpopen/iaf-core-operator-bundle
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
