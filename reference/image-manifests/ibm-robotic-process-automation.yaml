@@ -1,8 +1,43 @@
-source: ibm-cp-common-services-cdv3-bundle/case/ibm-cp-common-services/case.yaml
-description: "IBM Common Services CASE"
+source: ibm-robotic-process-automation-case-bundle/case/ibm-robotic-process-automation/case.yaml
+description: "CASE of IBM Robotic Process Automation"
 images:
-  - image: ibmcom/ibm-common-service-catalog
+  - image: cp/iaf-health-service
+  - image: cp/iaf-ui-customization
+  - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/ibm-mqadvanced-server
+  - image: cp/ibm-mqadvanced-server-integration
+  - image: cp/ibm-rpa-abbyy
+  - image: cp/ibm-rpa-api
+  - image: cp/ibm-rpa-minimal
+  - image: cp/ibm-rpa-ui
+  - image: cp/icp4i/od/icp4i-od-agent
+  - image: cp/icp4i/od/icp4i-od-collector
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
+  - image: ibmcom/iaf-core-operator
+  - image: ibmcom/iaf-core-operator-bundle
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: ibmcom/ibm-mq-operator
+  - image: ibmcom/ibm-mq-operator-bundle
+  - image: ibmcom/ibm-mq-operator-catalog
+  - image: ibmcom/mq
+  - image: icr.io/cpopen/iaf-core-operator
+  - image: icr.io/cpopen/iaf-core-operator-bundle
+  - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-rpa-operator
+  - image: icr.io/cpopen/ibm-rpa-operator-bundle
+  - image: icr.io/cpopen/ibm-rpa-operator-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
@@ -11,8 +46,6 @@ images:
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
-  - image: quay.io/opencloudio/cp4d-tiller
-  - image: quay.io/opencloudio/curl
   - image: quay.io/opencloudio/dashboard-controller
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
@@ -23,17 +56,12 @@ images:
   - image: quay.io/opencloudio/iam-policy-decision
   - image: quay.io/opencloudio/ibm-auditlogging-operator
   - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
-  - image: quay.io/opencloudio/ibm-catalog-ui-operator
-  - image: quay.io/opencloudio/ibm-catalog-ui-operator-bundle
   - image: quay.io/opencloudio/ibm-cert-manager-operator
   - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
-  - image: quay.io/opencloudio/ibm-common-service-catalog
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
-  - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
-  - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
   - image: quay.io/opencloudio/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-operator-bundle
@@ -51,8 +79,6 @@ images:
   - image: quay.io/opencloudio/ibm-licensing-usage
   - image: quay.io/opencloudio/ibm-management-ingress-operator
   - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
-  - image: quay.io/opencloudio/ibm-metering-operator
-  - image: quay.io/opencloudio/ibm-metering-operator-bundle
   - image: quay.io/opencloudio/ibm-mongodb
   - image: quay.io/opencloudio/ibm-mongodb-exporter
   - image: quay.io/opencloudio/ibm-mongodb-install
@@ -90,15 +116,10 @@ images:
   - image: quay.io/opencloudio/icp-oidcclient-watcher
   - image: quay.io/opencloudio/icp-platform-api
   - image: quay.io/opencloudio/icp-platform-auth
-  - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
   - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
-  - image: quay.io/opencloudio/metering-data-manager
-  - image: quay.io/opencloudio/metering-mcmui
-  - image: quay.io/opencloudio/metering-report
-  - image: quay.io/opencloudio/metering-ui
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller
