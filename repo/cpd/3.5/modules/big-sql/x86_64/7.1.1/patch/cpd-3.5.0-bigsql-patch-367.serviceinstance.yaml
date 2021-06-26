@@ -1,0 +1,10 @@
+# Description of the patch
+description: "This patch will update the Grant and Revoke code to allow a UserID containing special characters."
+
+# Image versions for the patch
+images:
+  - bigsql-engine-7_1_1_0:367
+  - bigsql-init-volume-7_1_1_0:367
+
+# File containing OC commands to execute as part of patch
+patchFile: patch-oc-commands.txt
