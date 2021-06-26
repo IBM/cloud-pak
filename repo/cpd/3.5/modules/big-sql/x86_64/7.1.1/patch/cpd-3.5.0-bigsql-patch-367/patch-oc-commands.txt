@@ -1,0 +1,2 @@
+patch deployment bigsql-addon  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bigsql-addon","image": "{{ .DockerRegistryPrefix }}/bigsql-addon-7_1_1_0:367"}]}}}}'
+patch deployment bigsql-service-provider  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bigsql-service-provider","image": "{{ .DockerRegistryPrefix }}/bigsql-service-provider-7_1_1_0:367"}]}}}}'
