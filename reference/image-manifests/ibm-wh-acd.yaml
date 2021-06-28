@@ -1,0 +1,17 @@
+source: ibm-wh-acd-operator-bundle/case/ibm-wh-acd/case.yaml
+description: "IBM Annotator for Clinical Data Container Edition CASE that deploys an Operator"
+images:
+  - image: cp/wh-acd/advanced-care-insights
+  - image: cp/wh-acd/attribute-detection
+  - image: cp/wh-acd/clinical-data-annotator
+  - image: cp/wh-acd/concept-detection
+  - image: cp/wh-acd/concept-disambiguation
+  - image: cp/wh-acd/concept-value-detection
+  - image: cp/wh-acd/hypothetical-detection
+  - image: cp/wh-acd/model-broker
+  - image: cp/wh-acd/negation-detection
+  - image: cp/wh-acd/ontology
+  - image: cp/wh-acd/spell-checker
+  - image: icr.io/cpopen/ibm-wh-acd-operator
+  - image: icr.io/cpopen/ibm-wh-acd-operator-bundle
+  - image: icr.io/cpopen/ibm-wh-acd-operator-catalog
