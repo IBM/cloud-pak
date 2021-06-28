@@ -1,6 +1,23 @@
 source: ibm-guardium-insights-bundle/case/ibm-guardium-insights/case.yaml
 description: "Guardium Insights eases and enriches database compliance with Analytics and AI."
 images:
+  - image: cp/db2u
+  - image: cp/db2u.auxiliary.auth
+  - image: cp/db2u.bigsql.cdh7
+  - image: cp/db2u.bigsql.mariadb
+  - image: cp/db2u.dv
+  - image: cp/db2u.dv.api
+  - image: cp/db2u.dv.caching
+  - image: cp/db2u.dv.utils
+  - image: cp/db2u.graph
+  - image: cp/db2u.hurricane
+  - image: cp/db2u.instdb
+  - image: cp/db2u.instdb.restricted
+  - image: cp/db2u.rest
+  - image: cp/db2u.restricted
+  - image: cp/db2u.tools
+  - image: cp/etcd
+  - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/ibm-guardium-insights/analytics-events
   - image: cp/ibm-guardium-insights/analytics-extract
   - image: cp/ibm-guardium-insights/apigateway
@@ -20,6 +37,7 @@ images:
   - image: cp/ibm-guardium-insights/guardium-agent-cert-generator
   - image: cp/ibm-guardium-insights/guardium-connector
   - image: cp/ibm-guardium-insights/health-collector
+  - image: cp/ibm-guardium-insights/ibm-guardium-insights-operator
   - image: cp/ibm-guardium-insights/insights
   - image: cp/ibm-guardium-insights/insights-deploy-common-utils
   - image: cp/ibm-guardium-insights/jumpbox
@@ -34,18 +52,153 @@ images:
   - image: cp/ibm-guardium-insights/outlier2-aggregation
   - image: cp/ibm-guardium-insights/pa-alert
   - image: cp/ibm-guardium-insights/pa-core
+  - image: cp/ibm-guardium-insights/pam-connector-thycotic
+  - image: cp/ibm-guardium-insights/pam-proxy
   - image: cp/ibm-guardium-insights/parquet-store
   - image: cp/ibm-guardium-insights/pipeline-config
+  - image: cp/ibm-guardium-insights/policy-builder
   - image: cp/ibm-guardium-insights/recommendation
   - image: cp/ibm-guardium-insights/reports
   - image: cp/ibm-guardium-insights/reports-runner
+  - image: cp/ibm-guardium-insights/resource-controller-k8
   - image: cp/ibm-guardium-insights/risk-engine
   - image: cp/ibm-guardium-insights/risk-register
   - image: cp/ibm-guardium-insights/risk-threats
   - image: cp/ibm-guardium-insights/scheduler
+  - image: cp/ibm-guardium-insights/settings-datasources
+  - image: cp/ibm-guardium-insights/snif-assist
   - image: cp/ibm-guardium-insights/ssh-service
   - image: cp/ibm-guardium-insights/streams
+  - image: cp/ibm-guardium-insights/templates
   - image: cp/ibm-guardium-insights/tenant-fetcher
   - image: cp/ibm-guardium-insights/tenant-user
   - image: cp/ibm-guardium-insights/ticketing
+  - image: cp/ibm-guardium-insights/universal-connector
+  - image: cp/ibm-guardium-insights/universal-connector-manager
+  - image: cp/ibm-guardium-insights/workflow
   - image: cp/ibm-guardium-insights/zookeeper
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
+  - image: ibmcom/db2u-operator
+  - image: ibmcom/ibm-cloud-databases-redis-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
+  - image: ibmcom/ibm-common-service-catalog
+  - image: ibmcom/ibm-db2uoperator-bundle
+  - image: ibmcom/ibm-db2uoperator-catalog
+  - image: quay.io/mongodb/mongodb-agent
+  - image: quay.io/mongodb/mongodb-kubernetes-operator
+  - image: quay.io/mongodb/mongodb-kubernetes-operator-version-upgrade-post-start-hook
+  - image: quay.io/mongodb/mongodb-kubernetes-readinessprobe
+  - image: quay.io/opencloudio/alertmanager
+  - image: quay.io/opencloudio/audit-garbage-collector
+  - image: quay.io/opencloudio/audit-policy-controller
+  - image: quay.io/opencloudio/audit-syslog-service
+  - image: quay.io/opencloudio/collectd-exporter
+  - image: quay.io/opencloudio/common-service-operator
+  - image: quay.io/opencloudio/common-web-ui
+  - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/cp4d-tiller
+  - image: quay.io/opencloudio/dashboard-controller
+  - image: quay.io/opencloudio/default-http-backend
+  - image: quay.io/opencloudio/fluentd
+  - image: quay.io/opencloudio/grafana
+  - image: quay.io/opencloudio/grafana-ocpthanos-proxy
+  - image: quay.io/opencloudio/iam-policy-administration
+  - image: quay.io/opencloudio/iam-policy-controller
+  - image: quay.io/opencloudio/iam-policy-decision
+  - image: quay.io/opencloudio/ibm-auditlogging-operator
+  - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
+  - image: quay.io/opencloudio/ibm-cert-manager-operator
+  - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
+  - image: quay.io/opencloudio/ibm-common-service-operator-bundle
+  - image: quay.io/opencloudio/ibm-commonui-operator
+  - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
+  - image: quay.io/opencloudio/ibm-cs-webhook
+  - image: quay.io/opencloudio/ibm-dashboard-data-collector
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-operator
+  - image: quay.io/opencloudio/ibm-events-operator-bundle
+  - image: quay.io/opencloudio/ibm-healthcheck-operator
+  - image: quay.io/opencloudio/ibm-healthcheck-operator-bundle
+  - image: quay.io/opencloudio/ibm-iam-operator
+  - image: quay.io/opencloudio/ibm-iam-operator-bundle
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator
+  - image: quay.io/opencloudio/ibm-ingress-nginx-operator-bundle
+  - image: quay.io/opencloudio/ibm-license-service-reporter
+  - image: quay.io/opencloudio/ibm-license-service-reporter-ui
+  - image: quay.io/opencloudio/ibm-licensing
+  - image: quay.io/opencloudio/ibm-licensing-operator
+  - image: quay.io/opencloudio/ibm-licensing-operator-bundle
+  - image: quay.io/opencloudio/ibm-licensing-usage
+  - image: quay.io/opencloudio/ibm-management-ingress-operator
+  - image: quay.io/opencloudio/ibm-management-ingress-operator-bundle
+  - image: quay.io/opencloudio/ibm-mongodb
+  - image: quay.io/opencloudio/ibm-mongodb-exporter
+  - image: quay.io/opencloudio/ibm-mongodb-install
+  - image: quay.io/opencloudio/ibm-mongodb-operator
+  - image: quay.io/opencloudio/ibm-mongodb-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator
+  - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
+  - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
+  - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
+  - image: quay.io/opencloudio/ibm-platform-api-operator
+  - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
+  - image: quay.io/opencloudio/ibm-postgresql
+  - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/ibm-zen-operator
+  - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icp-audit-service
+  - image: quay.io/opencloudio/icp-cert-manager-acmesolver
+  - image: quay.io/opencloudio/icp-cert-manager-cainjector
+  - image: quay.io/opencloudio/icp-cert-manager-controller
+  - image: quay.io/opencloudio/icp-cert-manager-webhook
+  - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
+  - image: quay.io/opencloudio/icp-iam-onboarding
+  - image: quay.io/opencloudio/icp-identity-manager
+  - image: quay.io/opencloudio/icp-identity-provider
+  - image: quay.io/opencloudio/icp-initcontainer
+  - image: quay.io/opencloudio/icp-management-ingress
+  - image: quay.io/opencloudio/icp-memcached
+  - image: quay.io/opencloudio/icp-oidcclient-watcher
+  - image: quay.io/opencloudio/icp-platform-api
+  - image: quay.io/opencloudio/icp-platform-auth
+  - image: quay.io/opencloudio/icp-platform-header
+  - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/influxdb
+  - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/must-gather
+  - image: quay.io/opencloudio/must-gather-service
+  - image: quay.io/opencloudio/nginx-ingress-controller
+  - image: quay.io/opencloudio/node-exporter
+  - image: quay.io/opencloudio/odlm
+  - image: quay.io/opencloudio/operand-deployment-lifecycle-manager-bundle
+  - image: quay.io/opencloudio/privatecloud-usermgmt
+  - image: quay.io/opencloudio/prometheus
+  - image: quay.io/opencloudio/prometheus-config-reloader
+  - image: quay.io/opencloudio/prometheus-controller
+  - image: quay.io/opencloudio/prometheus-operator
+  - image: quay.io/opencloudio/system-healthcheck-service
+  - image: quay.io/opencloudio/zen-audit
+  - image: quay.io/opencloudio/zen-core
+  - image: quay.io/opencloudio/zen-core-api
+  - image: quay.io/opencloudio/zen-data-sorcerer
+  - image: quay.io/opencloudio/zen-iam-config
+  - image: quay.io/opencloudio/zen-metastoredb
+  - image: quay.io/opencloudio/zen-watchdog
+  - image: registry.hub.docker.com/library/mongo
