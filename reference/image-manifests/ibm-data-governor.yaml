@@ -1,0 +1,12 @@
+source: ibm-data-governor-case-bundle/case/ibm-data-governor/case.yaml
+description: "A CASE for deploying Data Governor."
+images:
+  - image: cp/data-exhaust-admin
+  - image: cp/data-exhaust-config-jobs
+  - image: cp/data-exhaust-consumer
+  - image: cp/data-exhaust-healthcheck
+  - image: cp/data-exhaust-producer
+  - image: cp/data-exhaust-proxy
+  - image: icr.io/cpopen/ibm-data-governor-operator
+  - image: icr.io/cpopen/ibm-data-governor-operator-bundle
+  - image: icr.io/cpopen/ibm-data-governor-operator-catalog
