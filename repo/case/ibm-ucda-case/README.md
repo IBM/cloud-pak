@@ -103,11 +103,107 @@ spec:
 
 ### PodSecurityPolicy Requirements
 
-The containerized UrbanCode Deploy agent works well with restricted security requirements.  No root access is required.
+If you are running on OpenShift, skip this section and continue to the [SecurityContextConstraints Requirements](#securitycontextconstraints-requirements) section below.
+
+This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose either a predefined PodSecurityPolicy or have your cluster administrator create a custom PodSecurityPolicy for you.
+
+The predefined PodSecurityPolicy named [`ibm-restricted-psp`](https://ibm.biz/cpkspec-psp) has been verified for this chart, if your target namespace is bound to this PodSecurityPolicy you can proceed to install the chart.
+
+  * Custom PodSecurityPolicy definition:
+```
+    apiVersion: extensions/v1beta1
+    kind: PodSecurityPolicy
+    metadata:
+      annotations:
+        kubernetes.io/description: "This policy is based on the most restrictive policy,
+        requiring pods to run with a non-root UID, and preventing pods from accessing the host."
+        seccomp.security.alpha.kubernetes.io/allowedProfileNames: docker/default
+        seccomp.security.alpha.kubernetes.io/defaultProfileName: docker/default
+      name: ibm-ucd-prod-psp
+    spec:
+      allowPrivilegeEscalation: false
+      forbiddenSysctls:
+      - '*'
+      fsGroup:
+        ranges:
+        - max: 65535
+          min: 1
+        rule: MustRunAs
+      hostNetwork: false
+      hostPID: false
+      hostIPC: false
+      requiredDropCapabilities:
+      - ALL
+      runAsUser:
+        rule: MustRunAsNonRoot
+      seLinux:
+        rule: RunAsAny
+      supplementalGroups:
+        ranges:
+        - max: 65535
+          min: 1
+        rule: MustRunAs
+      volumes:
+      - configMap
+      - emptyDir
+      - projected
+      - secret
+      - downwardAPI
+      - persistentVolumeClaim
+```
 
 ### SecurityContextConstraints Requirements
 
-The containerized UrbanCode Deploy agent works with the default OpenShift SecurityContextConstraint named 'restricted'.  No root access is required.
+This chart requires a `SecurityContextConstraints` to be bound to the target namespace prior to installation. The predefined `SecurityContextConstraints` name: [`ibm-restricted-scc`](https://ibm.biz/cpkspec-scc) has been verified for this chart, if your target namespace is bound to this `SecurityContextConstraints` resource you can proceed to install the chart.
+
+  * Custom SecurityContextConstraints definition:
+
+```
+  apiVersion: security.openshift.io/v1
+  kind: SecurityContextConstraints
+  metadata:
+    annotations:
+    name: ibm-ucd-prod-scc
+  allowHostDirVolumePlugin: false
+  allowHostIPC: false
+  allowHostNetwork: false
+  allowHostPID: false
+  allowHostPorts: false
+  allowPrivilegedContainer: false
+  allowedCapabilities: []
+  allowedFlexVolumes: []
+  defaultAddCapabilities: []
+  defaultPrivilegeEscalation: false
+  forbiddenSysctls:
+    - "*"
+  fsGroup:
+    type: MustRunAs
+    ranges:
+    - max: 65535
+      min: 1
+  readOnlyRootFilesystem: false
+  requiredDropCapabilities:
+  - ALL
+  runAsUser:
+    type: MustRunAsNonRoot
+  seccompProfiles:
+  - docker/default
+  seLinuxContext:
+    type: RunAsAny
+  supplementalGroups:
+    type: MustRunAs
+    ranges:
+    - max: 65535
+      min: 1
+  volumes:
+  - configMap
+  - downwardAPI
+  - emptyDir
+  - persistentVolumeClaim
+  - projected
+  - secret
+  priority: 0
+```
 
 ## Resources Required
 * 200MB of RAM
@@ -148,7 +244,7 @@ By default, TARGET_REGISTRY is `docker.io/ibmcom`. You could export the TARGET_R
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-catalog                           \
@@ -159,7 +255,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator
@@ -173,7 +269,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -186,7 +282,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -196,7 +292,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog                         \
@@ -212,7 +308,7 @@ By default, TARGET_REGISTRY is `docker.io/ibmcom`. You could export the TARGET_R
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -223,7 +319,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native                 \
@@ -234,7 +330,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -245,7 +341,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -299,7 +395,7 @@ Create registry secret for source image registry (if the registry is public whic
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz    \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz    \
     --namespace <target namespace>                       \
     --inventory ucdaOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -310,7 +406,7 @@ cloudctl case launch                                     \
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz    \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz    \
     --namespace <target namespace>                       \
     --inventory ucdaOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -333,7 +429,7 @@ In this step image from saved CASE (images.csv) are copied to target registry in
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action mirror-images                             \
@@ -355,7 +451,7 @@ WARNING:
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-@caseversion@.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.0.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action configure-cluster-airgap                  \
@@ -419,7 +515,7 @@ The Helm chart and operator custom resource have the following values.
 | version |  | UrbanCode Deploy agent product version |  |
 | image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to Always |
 |       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
-| license | accept | Set to true to indicate you have read and agree to license agreements : http://ibm.biz/ucd-license | false |
+| license | accept | Set to true to indicate you have read and agree to license agreements : http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(urbancode+deploy) | false |
 | persistence | enabled | Determines if persistent storage will be used to hold the UCD agent conf directory contents. This should always be true to preserve agent data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "true" |
 |             | fsGroup | The group ID to use to access persistent volumes | Default value "1001" |
