@@ -1,0 +1,60 @@
+apiVersion: v1
+case:
+  appVersion: 7.2.0
+  catalogs:
+    container: {}
+    deploy: {}
+    devops: {}
+    ucd: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM UrbanCode Deploy agent
+  displayDescription: IBM UCD Agent
+  displayName: IBM UCD Agent
+  icons:
+  - base64: iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAACr1BMVEUAAAAiHR8ApOUMCgsAbpoSDxAAbJYiHR8iHR8iHR8AAAAAAAAAAAAApOUApOUApOUiHR8iHR8iHR8iHR8AAAAAAAAAAAAAAAAApOUApOUApOUApOUiHR8iHR8iHR8iHR8iHR8AAAAAAAAAAAAAAAAApOUApOUApOUApOUiHR8iHR8iHR8iHR8iHR8iHR8iHR8lICIAAAAAAAAAAAAAr/QApOUApOUApOUiHR8iHR8iHR8iHR8iHR8iHR8iHR8kHyEAAAAAAAAAAAAAAAAAAAAAqOsApOUApOUApOUApOUiHR8iHR8iHR8mISMAAAAAAAAAAAAAAAAAAAAAqewApOUApOUApOUApOUiHR8mISMAAAAAAAAAAAAAAAAAqu0ApOUApOUApOUiHR8iHR8nISMAAAAAAAAAAAAAAAAAq+4ApOUApOUApOUApOUiHR8iHR8mICIAAAAAAAAAAAAAAAAAqu4ApOUApOUApOU3LzIAAAAAAAAAp+kApOUApOUApOUiHR8yKi0AAAAAAAAAAAAApugApOUApOUiHR8mICMAAAAAAAAAqewApOUApOUiHR8iHR8AAAAAAAAAAAAAAAAAqesApOUApOUApOUiHR8iHR8jHiAAAAAAAAAAAAAAAAAAAAAAqOoApOUApOUApOUiHR8iHR8fGhwAAAAAAAAAAAAAAAAAAAAAp+kApOUApOUApOUiHR8iHR8iHR8iHR8iHR8oIiQAAAAAAAAAAAAApugApOUApOUApOUiHR8iHR8iHR8iHR8iHR8iHR8kHyEAAAAAAAAAAAAAAAAAAAAAsPUApOUApOUApOUiHR8iHR8iHR8AAAAAAAAAAAAApOUiHR8iHR8iHR8AAAAAAAAApOUApOUApOUiHR8iHR8AAAAAAAAApOUiHR8AAAAApOWMeYaWAAAA4nRSTlMAAAAAAAAADC4CBTIHCjEDHcNXAQu2dgYXwWACHN7sYgQKw/l/FtfwZSUpJ0Xm8XUHvZMQD8NsBOHq6e7+94EIR979oBM51PNzBvr4hwpB2f6lFTTP9XsIjQs61KsYLsn3gvuTDTXPsBspxPmKDPyZDzHVtR4l+pAQBbgRWPz7p/kEhqcNXv2jgwngoimLD/Z9Rt38nC3I+IX0dwZN4fuWDjLN9n7ycQZU5fqQDDjS9HbQ2djwawRY6Yo98W8FFRgXKtZfAwOs83wJCbruZxHPVgLyaQ0SsVSUYg6uXAYiHAQjXqmRRQAAAAd0SU1FB+ELFgUMAyAZh4gAAAABb3JOVAHPoneaAAABoklEQVQ4y2NgGFaAkZ2Dk5GBgYubh4GBiZePnwlDgYCgkDAjg4iomDgDk4SklDS6CkYZWTl5BWZFJWUVRRZVNXUNmBmaWhCgraP7SE/fQNHwsbKRsYnpE3Uzc4gKC0srCLC2efTI1s7ewfGxk7OLq9sTdw9PsAqvR8jA28fXz/9xQGBQcMiT0LBwJgwFj7wiIqOiHwfExMbFP0lI5GXCUPAoKTklNe3x4/SMzKwn2Tm5TBgKHuXlFxQWPX5cXFKa9aSsvAJTwSOb/EqVx48fV1XX1D6pq8eioMGnsenx44Dmlta2J2XtmApsOzr9uh47dbv0xD/J7u3DUNA/wWDipMeTp1RPnfZk+gxeDEfOnDV7ztzH8+YvWLjoyeIl4RjeXLps+YqVj1etXrN23ZP1G8BBuXETBGyWBSrdsnXb9h2PlXeK7FJ7snvPXnBQ79sPAQcOHnpkdfjI0WOPj584eer0kzNnzVEjnPHcecsLwqwXYy5d5mK7Mu0MRoJgvHrtOjDBHL1x8yID063bdzATzN17oCR38f4DYJLb+xAzyQ1pAAAkcyXZTn3NTAAAAABJRU5ErkJggg==
+    mediaType: image/png
+    url: https://developer.ibm.com/urbancode/wp-content/uploads/sites/16/2017/09/ucdicon.png
+  licenses:
+    licenseLaEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenseLaEn
+      ref: LA_en
+    licenseNonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: non_ibm_license
+        name: licenseNonIbmLicense
+      ref: non_ibm_license
+    licenseNotices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: notices
+        name: licenseNotices
+      ref: notices
+  name: ibm-ucda-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      iks: {}
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.4.0
+  webPage: https://www.ibm.com
+created: 2021-07-06T00:23:28.68790810+0000
+digest: sha256:3aa38f084d2c6ff68ae8c7461799777ecbd80dfb5340bf8ab322d3c00f8b544c
