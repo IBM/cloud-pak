@@ -1,0 +1,12 @@
+source: ibm-model-train-operator-bundle/case/ibm-model-train-operator/case.yaml
+description: "IBM cloudpak operator for training with Model Train"
+images:
+  - image: cp/modeltrain/coordinator
+  - image: cp/modeltrain/databroker-s3
+  - image: cp/modeltrain/jobmonitor
+  - image: cp/modeltrain/lifecycle-manager-service
+  - image: cp/modeltrain/ratelimiter
+  - image: cp/modeltrain/trainer-v2-service
+  - image: icr.io/cpopen/ibm-model-train-operator
+  - image: icr.io/cpopen/ibm-model-train-operator-bundle
+  - image: icr.io/cpopen/ibm-model-train-operator-catalog
