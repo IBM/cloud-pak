@@ -1,0 +1,54 @@
+apiVersion: v1
+case:
+  appVersion: 4.0.0
+  catalogs:
+    ai: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+  displayDescription: IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+  displayName: IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: https://wbi.mybluemix.net/icons/discovery.svg
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    discovery-license:
+      mediaType: application/text
+      metadata:
+        displayDescription: Licenses - IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+        displayName: Licenses - IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+      ref: LICENSE-discovery
+    discovery-notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: Notices - IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+        displayName: Notices - IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+      ref: NOTICES-discovery
+  name: ibm-watson-discovery
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      amazon: {}
+      google: {}
+      ibm: {}
+      microsoft: {}
+  version: 4.0.0
+  webPage: https://cloud.ibm.com/docs/discovery-data
+created: 2021-07-13T14:57:40.58045292+0000
+digest: sha256:5cb1badb302286cc7ec5eafd10b93ce0d709f7aa2083aff7ebf65130800b6824
