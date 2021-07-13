@@ -1,45 +1,56 @@
 # type will be either "assembly" or "module", mandatory
 type: assembly
-# mandatory - once this file uploaded, we will not delete any more, 
+# mandatory - once this file uploaded, we will not delete any more,
 # but if this version too old, the download/deploy will tell this product is not valid any more, and show the latest version
 # We can also add dev, candidate etc here and telling the user what is the state
 lifeCycle: live
 # This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
 license: http://icp4d.ibm.com
 # The name is for information only, download/deploy command will refer this product based on file name, mandatory
-name: wml
+name: Watson Studio Local Addon
 # Version is mandatory
-version: 3.5.6
-# Descriptioin is optional
-description: Watson Machine Learning add on module
+version: 3.5.4
+# Description is optional
+description: Watson Studio Addon for Cloud Pak for Data
 # architecture is optional
 # if this is missing, each module/subproduct has to specify architecture, if both specified, syntax error
 # sub product have to be homogerious architucture
 architecture: ppc64le
 # Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
 # To be discussed after Oct - consult with the install team to make sure this is implemented
-# overrideValues:
 installOverride: override.yaml
 upgradeOverride: override.yaml
-predefinedOverride:
-  - name: nfs
-    installOverride: nfs-override.yaml
-    upgradeOverride: nfs-override-ppc64le.yaml
 # bricks is mandatory, it could contains another "product"
-# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out, 
+# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
 # although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
 # We will have linter to check to make sure the rules
 #
 # Version is hardcoded for now, we will address the version compatiblities after Oct GA
+# need common-core-services 42
 bricks:
   - name: lite
     minVersion: 3.5.0
     type: assembly
   - name: common-core-services
-    minVersion: 3.5.0
-    type: assembly    
-  - name: wml 
-    version: 3.5.6
+    minVersion: 3.5.1
+    type: assembly
+  - name: notebooks
+    version: 3.5.4017
     type: module
+  - name: runtime-addon-py36
+    version: 3.5.4017
+    type: module
+  - name: runtime-addon-py37
+    minVersion: 3.5.0
+    type: assembly
+  - name: ws-ml
+    version: 3.5.7160
+    type: module
+  - name: ibm-0100-model-viewer-prod
+    version: 3.5.30
+    type: module
+  - name: data-refinery
+    minVersion: 3.5.1
+    type: assembly
 
-# currentVersion: 3.5.6-20
+# currentVersion: 3.5.4102
