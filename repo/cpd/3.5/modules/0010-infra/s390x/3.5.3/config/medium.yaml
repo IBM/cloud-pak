@@ -1,0 +1,13 @@
+toleratedCommands:
+  - command: scale --replicas=3 deployment usermgmt
+  - command: scale --replicas=3 statefulset zen-metastoredb
+  - command: scale --replicas=1 deployment dsx-influxdb
+  - command: set resources deployment usermgmt --requests=cpu=250m,memory=256Mi --limits=cpu=1000m,memory=500Mi
+    toleratedRegularExpressions:
+      - was not changed
+  - command: set resources statefulset zen-metastoredb --requests=cpu=100m,memory=1024Mi --limits=cpu=500m,memory=2560Mi
+    toleratedRegularExpressions:
+      - was not changed
+  - command: set resources deployment dsx-influxdb --requests=cpu=100m,memory=256Mi --limits=cpu=500m,memory=1024Mi
+    toleratedRegularExpressions:
+      - was not changed

@@ -1,0 +1,21 @@
+# This file is in fileserver
+type: module
+name: infra module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference: base-registry
+chart: 0015-setup-3.5.3.tgz
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+  - name: icp4data-nginx-repo
+    tag: 3.5.3-s390x-109
+# For download to verify the chart file is correct, optional
+#md5: 
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: 0015-setup
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+

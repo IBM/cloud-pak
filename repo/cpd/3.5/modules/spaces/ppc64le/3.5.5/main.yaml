@@ -1,0 +1,31 @@
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# # The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: spaces
+# The description is mandatory
+description: "Spaces add on module"
+# # Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: base-registry
+helmUpgradeForce: true
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure
+scale:
+- small.yaml
+- medium.yaml
+images:
+- name: spaces
+  tag:  v.1.0.124-ppc64le
+- name: wmlrepositoryv4
+  tag:  v.354.2.0.619.63.2-ppc64le
+- name: ailc-kubectl
+  tag: v.0.0.77-ppc64le
+chart:  ibm-spaces-prod-3.5.5.tgz
+# For download to verify the chart file is correct, optional
+md5: 595b15d12d866ac91d21221552b7dc26
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: spaces

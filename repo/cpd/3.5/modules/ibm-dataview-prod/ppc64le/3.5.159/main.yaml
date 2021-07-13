@@ -1,0 +1,32 @@
+#This file is in fileserver
+type: module
+# The module can be either "template" or "helm-chart"
+category: helm-chart
+name: ibm-dataview-prod # The name here just for information purpose, not for "product" reference, it should rely on file name
+description: "Dataview module for Data Common Core Services"
+# Registry information, this will map to a name in the server-info.yaml
+registry-reference: base-registry
+# Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct - consult with the install team to make sure this is implemented
+#overrideValues:
+#  install: install-override.yaml
+# Provide a list of the image tag here
+# If the image tag found in the helm chart but not in the list, cpd will fail
+images:
+  - name: wdp-dataview
+    tag: 3.5.5.215-ppc64le
+  - name: dataview-api-service
+    tag: 3.5.5.215-ppc64le
+  - name: dataview-secrets-job
+    tag: 3.5.5.215-ppc64le
+chart: ibm-dataview-prod-3.5.159.tgz
+# For download to verify the chart file is correct, optional
+md5: 20d1db50e55afa0cdd14088e9d233496
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: ibm-dataview-prod
+helmUpgradeForce: true
+scale:
+- small.yaml
+- medium.yaml
