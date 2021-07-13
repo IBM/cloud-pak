@@ -1,0 +1,74 @@
+- name: wkc-core
+  version: 3.5.6
+  images:
+- name: iis
+  version: 3.5.6
+  images:
+- name: 0073-ug
+  version: 13.5.1076
+  images:
+  - name: audit-trail-service
+    version: b130_f36d20b36bc4
+  - name: wkc-init-container
+    version: 1.0.156
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.156
+  - name: finley
+    version: b4660_21ed5d03e1add3ad1f30b753b4e475804dcbae3e
+  - name: gov-admin-ui
+    version: b1375_58fb9ae7fbc8
+    gitLog: https://github.ibm.com/InformationServer/gov-admin-ui/commits/58fb9ae7fbc8
+  - name: gov-app-config-service
+    version: b568_494fb7b7df7a
+    gitLog: https://github.ibm.com/InformationServer/gov-app-config-service/commits/494fb7b7df7a
+  - name: gov-catalog-search-index
+    version: b392_5da3f517b395
+  - name: gov-catalog-search-service
+    version: b1170_dab4b73e8e94
+    gitLog: https://github.ibm.com/InformationServer/gov-catalog-search-service/commits/dab4b73e8e94
+  - name: gov-enterprise-search-ui
+    version: b1440_375faacb5881
+    gitLog: https://github.ibm.com/InformationServer/gov-enterprise-search-ui/commits/375faacb5881
+  - name: gov-quality-ui
+    version: b9606_9d9d99fe4d8d
+    gitLog: https://github.ibm.com/InformationServer/gov-quality-ui/commits/9d9d99fe4d8d
+  - name: gov-ui-commons
+    version: b511_b586429e1bd6
+    gitLog: https://github.ibm.com/InformationServer/gov-ui-commons/commits/b586429e1bd6
+  - name: gov-user-prefs-service
+    version: b435_db0b747b8354
+    gitLog: https://github.ibm.com/InformationServer/gov-user-prefs-service/commits/db0b747b8354
+  - name: ia-analysis
+    version: b2183_4efe261396fb
+    gitLog: https://github.ibm.com/InformationServer/IALightweight/commits/4efe261396fb
+  - name: igc-ui-react
+    version: b9278_d9230a80569f
+    gitLog: https://github.ibm.com/InformationServer/igc-ui-react/commits/d9230a80569f
+  - name: odf-fast-analyzer-kube
+    version: bcp4d351_33_defb02682897
+    gitLog: https://github.ibm.com/InformationServer/odf-fastanalyzer/commits/defb02682897
+  - name: omag
+    version: b136_02cb2f8756511
+    gitLog: https://github.ibm.com/InformationServer/omrs-igc/commits/02cb2f8756511
+  - name: shop4info-rest
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: shop4info-scheduler
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: shop4info-type-registry-service
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: shop4info-event-consumer
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: shop4info-schema-init
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: shop4info-mappers-service
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: shop4info-mappers-wkc
+    version: b106_f1c47453db99
+    gitLog: https://github.ibm.com/Analytics/iig-labbook/commits/f1c47453db99
+  - name: kafka-ubi8-x86_64
+    version: 2.13-2.8.0_b889_25f6ca203a21
