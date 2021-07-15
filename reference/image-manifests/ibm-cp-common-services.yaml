@@ -1,4 +1,4 @@
-source: ibm-cp-common-services-bundle/case/ibm-cp-common-services/case.yaml
+source: ibm-cp-common-services-cdv3-bundle/case/ibm-cp-common-services/case.yaml
 description: "IBM Common Services CASE"
 images:
   - image: ibmcom/ibm-common-service-catalog
@@ -12,6 +12,7 @@ images:
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
   - image: quay.io/opencloudio/cp4d-tiller
+  - image: quay.io/opencloudio/cs-mongodb-br
   - image: quay.io/opencloudio/curl
   - image: quay.io/opencloudio/dashboard-controller
   - image: quay.io/opencloudio/default-http-backend
@@ -35,6 +36,8 @@ images:
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.1
+  - image: quay.io/opencloudio/ibm-events-kafka-2.7.0
   - image: quay.io/opencloudio/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
