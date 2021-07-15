@@ -1,0 +1,15 @@
+# This file contains the oc commands to apply to update the image on the pods and restart them. 
+# List the commands here, without the preceding "oc" command itself
+# Make sure to explicitely set the image tags - the tag is the Big SQL build number
+#
+# Some substitution variables are available:
+#   - InstanceID - the Id of the instance being patched
+#   - DockerRegistryPrefix - the pull prefix of the registry to retrieve the images from
+#
+# If the patch modify the engine image, it is highly recommended to include a command to scale 
+# down the workers to 1 to minimize the risks of applying the patch.
+
+patch deployment bigsql-{{ .InstanceID }}-hcat-db  --patch '{"spec": {"template": {"spec": {"initContainers": [{"name": "metastore-volume-init","image": "{{ .DockerRegistryPrefix }}/bigsql-init-volume-7_1_1_0:371"}],"containers": [{"name": "metastore-db","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-7_1_1_0:371"}]}}}}'
+patch deployment bigsql-{{ .InstanceID }}-head --patch '{"spec": {"template": {"spec": {"initContainers": [{"name": "bigsql-volume-init","image": "{{ .DockerRegistryPrefix }}/bigsql-init-volume-7_1_1_0:371"}],"containers": [{"name": "bigsql-engine","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-7_1_1_0:371"}]}}}}'
+scale statefulset bigsql-{{ .InstanceID }}-worker --replicas 1
+patch statefulset bigsql-{{ .InstanceID }}-worker --patch '{"spec": {"template": {"spec": {"initContainers": [{"name": "bigsql-volume-init","image": "{{ .DockerRegistryPrefix }}/bigsql-init-volume-7_1_1_0:371"}],"containers": [{"name": "bigsql-worker","image": "{{ .DockerRegistryPrefix }}/bigsql-engine-7_1_1_0:371"}]}}}}'

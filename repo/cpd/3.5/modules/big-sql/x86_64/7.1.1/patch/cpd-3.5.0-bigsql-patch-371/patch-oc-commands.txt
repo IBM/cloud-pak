@@ -1,0 +1,9 @@
+# This file contains the oc commands to apply to update the image on the pods and restart them. 
+# List the commands here, without the preceding "oc" command itself
+# Make sure to explicitely set the image tags - the tag is the Big SQL build number
+# Some substitution variables are available:
+#   - InstanceID - the Id of the instance being patched
+#   - DockerRegistryPrefix - the pull prefix of the registry to retrieve the images from
+
+patch deployment bigsql-addon  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bigsql-addon","image": "{{ .DockerRegistryPrefix }}/bigsql-addon-7_1_1_0:371"}]}}}}'
+patch deployment bigsql-service-provider  --patch '{"spec": {"template": {"spec": {"containers": [{"name": "bigsql-service-provider","image": "{{ .DockerRegistryPrefix }}/bigsql-service-provider-7_1_1_0:371"}]}}}}'
