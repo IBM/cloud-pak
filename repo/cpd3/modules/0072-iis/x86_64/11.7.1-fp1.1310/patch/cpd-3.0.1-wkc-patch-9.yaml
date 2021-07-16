@@ -1,0 +1,14 @@
+images:
+- is-en-compute-image:b124-CP4D-3_0_1-b69
+- is-db2xmeta-image:b124-CP4D-3_0_1-b69
+- is-services-image:b124-CP4D-3_0_1-b69
+- is-engine-image:b124-CP4D-3_0_1-b69
+- solr-ubi7-x86_64:8.8.2_b890_25f6ca203a21
+- cassandra-ubi7-x86_64:3.11.8_b890_25f6ca203a21
+- zookeeper-ubi7-x86_64:3.4.14_b890_25f6ca203a21
+- kafka-ubi7-x86_64:2.13-2.8.0_b890_25f6ca203a21
+- wkc-init-container:1.0.157
+- wkc-ugconfig:3.2.54
+
+patchFile: patchCommands.txt
+description: "WKC Patch "
