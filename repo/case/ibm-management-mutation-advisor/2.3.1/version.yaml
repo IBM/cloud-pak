@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 2.3.1
+  catalogs:
+    security: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: The IBM Mutation Advisor Service detect the file or process mutation issues
+  displayDescription: ""
+  displayName: IBM Mutation Advisor Service
+  icons: []
+  licenses:
+    apache2:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: apache2
+      ref: LICENSE
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-management-mutation-advisor
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.3.1
+  webPage: https://www.ibm.com/cloud/cloud-pak-for-management
+created: 2021-07-22T05:09:14.95404980+0000
+digest: sha256:c74bc4cbf49e4621c89d96509d74eb8e85c1647b62e21e2c874c81f15f88b906

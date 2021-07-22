@@ -1,0 +1,32 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.1
+  catalogs:
+    container: {}
+    network: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    limited: {}
+    opensource: {}
+  description: A CASE for an operator which manages the install of IBM Infrastructure Management on a OCP4 cluster
+  displayDescription: A CASE for an operator which manages the install of IBM Infrastructure Management on a OCP4 cluster
+  displayName: IBM Infrastructure Management Install Operator Case
+  icons:
+  - mediaType: image/png
+  name: ibm-management-im-install
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 2.3.1
+  webPage: https://www.ibm.com
+created: 2021-07-22T05:09:06.34204980+0000
+digest: sha256:92b7b5e4fe68381963351a7ddf50c85f5e95ace956d7e14e5b35d2bf15e2a7b7
