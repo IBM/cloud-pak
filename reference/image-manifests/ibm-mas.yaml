@@ -24,6 +24,7 @@ images:
   - image: cp/assist/ema-studio
   - image: cp/assist/ema-technician
   - image: cp/assist/hook-ca-assist
+  - image: cp/assist/ibm-mas-assist-ws
   - image: cp/health/healthadmin
   - image: cp/health/healthfinal
   - image: cp/health/health-usersyncagent
@@ -152,7 +153,11 @@ images:
   - image: cp/visualinspection/vision-dnn-ssd-deploy
   - image: cp/visualinspection/vision-dnn-yolov3
   - image: cp/visualinspection/vision-dnn-yolov3-deploy
+  - image: cp/visualinspection/vision-edge-cme
   - image: cp/visualinspection/vision-edge-connector
+  - image: cp/visualinspection/vision-edge-controller
+  - image: cp/visualinspection/vision-edge-dle
+  - image: cp/visualinspection/vision-edge-inception
   - image: cp/visualinspection/vision-edge-mqttbroker
   - image: cp/visualinspection/vision-elasticsearch
   - image: cp/visualinspection/vision-event-service
@@ -266,12 +271,18 @@ images:
   - image: ibmcom/ibm-sls-operator-bundle
   - image: ibmcom/ibm-sls-operator-catalog
   - image: icr.io/cpopen/ibm-mas
+  - image: icr.io/cpopen/ibm-mas-assist
+  - image: icr.io/cpopen/ibm-mas-assist-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-assist-operator-catalog
   - image: icr.io/cpopen/ibm-mas-manage
   - image: icr.io/cpopen/ibm-mas-manage-operator-bundle
   - image: icr.io/cpopen/ibm-mas-manage-operator-catalog
   - image: icr.io/cpopen/ibm-mas-manage-webhook
   - image: icr.io/cpopen/ibm-mas-operator-bundle
   - image: icr.io/cpopen/ibm-mas-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-visualinspection
+  - image: icr.io/cpopen/ibm-mas-visualinspection-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-visualinspection-operator-catalog
   - image: icr.io/cpopen/ibm-sls
   - image: icr.io/cpopen/ibm-sls-operator-bundle
   - image: icr.io/cpopen/ibm-sls-operator-catalog
