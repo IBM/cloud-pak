@@ -4,8 +4,10 @@ images:
   - image: cp/cp4s/foundations/busybox
   - image: cp/cp4s/foundations/couchdb3
   - image: cp/cp4s/foundations/cp4s-extension
+  - image: cp/cp4s/foundations/cp4s-helper-operator
   - image: cp/cp4s/foundations/cp4s-stolon
   - image: cp/cp4s/foundations/cp4s-toolbox
+  - image: cp/cp4s/foundations/cp4s-truststore-operator
   - image: cp/cp4s/foundations/elasticsearch
   - image: cp/cp4s/foundations/init
   - image: cp/cp4s/foundations/isc-ambassador
@@ -45,6 +47,7 @@ images:
   - image: cp/cp4s/solutions/cp4s-toolbox
   - image: cp/cp4s/solutions/crunchy-postgres10-ha
   - image: cp/cp4s/solutions/crunchy-postgres96-ha
+  - image: cp/cp4s/solutions/hasura
   - image: cp/cp4s/solutions/homer-qproxy
   - image: cp/cp4s/solutions/ibmjava11
   - image: cp/cp4s/solutions/idrmdashboard
@@ -54,6 +57,7 @@ images:
   - image: cp/cp4s/solutions/idrmpostgres
   - image: cp/cp4s/solutions/idrmrisk
   - image: cp/cp4s/solutions/isc-aitk-orchestrator
+  - image: cp/cp4s/solutions/isc-aitk-thaddeus
   - image: cp/cp4s/solutions/isc-aitk-webui
   - image: cp/cp4s/solutions/isc-authsvc
   - image: cp/cp4s/solutions/isc-car
@@ -69,6 +73,9 @@ images:
   - image: cp/cp4s/solutions/isc-cases-application
   - image: cp/cp4s/solutions/isc-cases-database-init
   - image: cp/cp4s/solutions/isc-cases-database-upgrade
+  - image: cp/cp4s/solutions/isc-cases-email
+  - image: cp/cp4s/solutions/isc-cases-event-adapter
+  - image: cp/cp4s/solutions/isc-cases-event-handler
   - image: cp/cp4s/solutions/isc-cases/isc-cases-activemq
   - image: cp/cp4s/solutions/isc-cases/isc-cases-activemq-logging-sidecar
   - image: cp/cp4s/solutions/isc-cases/isc-cases-application
@@ -106,6 +113,9 @@ images:
   - image: cp/cp4s/solutions/isc-postgresql-operator
   - image: cp/cp4s/solutions/isc-run-thl
   - image: cp/cp4s/solutions/isc-settings-datasources
+  - image: cp/cp4s/solutions/isc-settings-gateways
+  - image: cp/cp4s/solutions/isc-thl-suspicious-scoring
+  - image: cp/cp4s/solutions/isc-thl-tis-enrich
   - image: cp/cp4s/solutions/isc-threat-inv-api
   - image: cp/cp4s/solutions/isc-threat-inv-scheduler
   - image: cp/cp4s/solutions/isc-threat-inv-ui
@@ -121,11 +131,13 @@ images:
   - image: cp/cp4s/solutions/isc-tis-user-registration
   - image: cp/cp4s/solutions/isc-udi-analyzer
   - image: cp/cp4s/solutions/isc-udi-changelog-cronjob
+  - image: cp/cp4s/solutions/isc-udi-edge-service
   - image: cp/cp4s/solutions/isc-udi-encrypt-cronjob
   - image: cp/cp4s/solutions/isc-udi-endpoint
   - image: cp/cp4s/solutions/isc-udi-worker
   - image: cp/cp4s/solutions/isc-uds2file
   - image: cp/cp4s/solutions/isc-uds-deploy
+  - image: cp/cp4s/solutions/nginx
   - image: cp/cp4s/solutions/pgo-apiserver
   - image: cp/cp4s/solutions/pgo-backrest
   - image: cp/cp4s/solutions/pgo-backrest-repo
@@ -149,6 +161,7 @@ images:
   - image: cp/cp4s/solutions/stix_shifter_modules_security_advisor
   - image: cp/cp4s/solutions/stix_shifter_modules_splunk
   - image: cp/cp4s/solutions/stix_shifter_modules_stix_bundle
+  - image: cp/cp4s/solutions/thl-outliers
   - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/icp-foundation/alertmanager
   - image: cp/icp-foundation/audit-policy-controller
@@ -322,6 +335,41 @@ images:
   - image: ibmcom/ibm-cloud-databases-redis-operator
   - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: ibmcom/ibm-common-service-catalog
+  - image: icr.io/cpopen/couchdb-operator
+  - image: icr.io/cpopen/couchdb-operator-bundle
+  - image: icr.io/cpopen/couchdb-operator-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/ibm-cp-security/busybox
+  - image: icr.io/ibm-cp-security/cp-serviceability
+  - image: icr.io/ibm-cp-security/isc-car-connector-atp
+  - image: icr.io/ibm-cp-security/isc-car-connector-aws
+  - image: icr.io/ibm-cp-security/isc-car-connector-azure
+  - image: icr.io/ibm-cp-security/isc-car-connector-drm
+  - image: icr.io/ibm-cp-security/isc-car-connector-guardium
+  - image: icr.io/ibm-cp-security/isc-car-connector-iam
+  - image: icr.io/ibm-cp-security/isc-car-connector-qradar
+  - image: icr.io/ibm-cp-security/isc-car-connector-tenable
+  - image: icr.io/ibm-cp-security/isc-udi-edge-client
+  - image: icr.io/ibm-cp-security/openldap
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_arcsight
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_aws_athena
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_aws_cloud_watch_logs
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_azure_sentinel
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_bigfix
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_carbonblack
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_cbcloud
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_crowdstrike
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_elastic_ecs
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_guardium
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_msatp
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_proxy
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_qradar
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_security_advisor
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_splunk
+  - image: icr.io/ibm-cp-security/stix_shifter_modules_stix_bundle
   - image: library/busybox
   - image: osixia/openldap
   - image: quay.io/ibmcp4s/isc-ow-action-nodejs-v10
@@ -335,7 +383,10 @@ images:
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/couchdb3
+  - image: quay.io/opencloudio/couchdb-operator-mgmt
   - image: quay.io/opencloudio/cp4d-tiller
+  - image: quay.io/opencloudio/cs-mongodb-br
   - image: quay.io/opencloudio/dashboard-controller
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
@@ -359,6 +410,8 @@ images:
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-elastic-stack-operator-bundle
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.1
+  - image: quay.io/opencloudio/ibm-events-kafka-2.7.0
   - image: quay.io/opencloudio/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
