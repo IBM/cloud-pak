@@ -1,0 +1,33 @@
+apiVersion: v1
+case:
+  appVersion: 1.18.2
+  catalogs:
+    tools: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: A CASE for deploying Data Governor.
+  displayDescription: ""
+  displayName: Data Governor
+  icons: []
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-data-governor
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.0.26
+  webPage: https://www.ibm.com
+created: 2021-07-29T18:53:48.43122926+0000
+digest: sha256:7fcb29716ad394372dbefa2f36bdf8c57d8e67e880b7001f20eedab5cc767d3a
