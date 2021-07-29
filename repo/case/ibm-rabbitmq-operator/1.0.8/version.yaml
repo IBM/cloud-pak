@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 1.1.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: IBM cloudpak open operator for RabbitMQ
+  displayDescription: IBM cloudpak open operator for RabbitMQ
+  displayName: IBM operator for RabbitMQ
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-rabbitmq-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.8
+  webPage: https://www.ibm.com
+created: 2021-07-29T15:51:49.33258783+0000
+digest: sha256:30bc38ccc86b735cc5d668096c7a9b1575347162ee7a82c20e57b81ae7959df2
