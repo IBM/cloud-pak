@@ -5,8 +5,16 @@ images:
   - image: cp/modeltrain/databroker-s3
   - image: cp/modeltrain/jobmonitor
   - image: cp/modeltrain/lifecycle-manager-service
+  - image: cp/modeltrain/pod-coordinator
   - image: cp/modeltrain/ratelimiter
   - image: cp/modeltrain/trainer-v2-service
+  - image: cp/opencontent-rabbitmq-3
+  - image: cp/opencontent-rabbitmq-config-copy
+  - image: icr.io/cpopen/ibm-model-train-dwf-operator
+  - image: icr.io/cpopen/ibm-model-train-dwf-operator-bundle
   - image: icr.io/cpopen/ibm-model-train-operator
   - image: icr.io/cpopen/ibm-model-train-operator-bundle
   - image: icr.io/cpopen/ibm-model-train-operator-catalog
+  - image: icr.io/cpopen/opencontent-rabbitmq-operator
+  - image: icr.io/cpopen/opencontent-rabbitmq-operator-bundle
+  - image: icr.io/cpopen/opencontent-rabbitmq-operator-catalog
