@@ -1,6 +1,46 @@
 source: ibm-asm-operator-case-aiops31-bundle/case/ibm-asm-operator-case/case.yaml
 description: "IBM® Netcool® Agile Service Manager"
 images:
+  - image: cp/cp4waiops/event-gateway-messagebus
+  - image: cp/cp4waiops/event-probe-messagebus
+  - image: cp/cp4waiops/nasm-alm-observer
+  - image: cp/cp4waiops/nasm-ansibleawx-observer
+  - image: cp/cp4waiops/nasm-appdisco-observer
+  - image: cp/cp4waiops/nasm-appdynamics-observer
+  - image: cp/cp4waiops/nasm-aws-observer
+  - image: cp/cp4waiops/nasm-azure-observer
+  - image: cp/cp4waiops/nasm-bigfixinventory-observer
+  - image: cp/cp4waiops/nasm-cienablueplanet-observer
+  - image: cp/cp4waiops/nasm-ciscoaci-observer
+  - image: cp/cp4waiops/nasm-contrail-observer
+  - image: cp/cp4waiops/nasm-dns-observer
+  - image: cp/cp4waiops/nasm-docker-observer
+  - image: cp/cp4waiops/nasm-dynatrace-observer
+  - image: cp/cp4waiops/nasm-file-observer
+  - image: cp/cp4waiops/nasm-googlecloud-observer
+  - image: cp/cp4waiops/nasm-ibmcloud-observer
+  - image: cp/cp4waiops/nasm-itnm-observer
+  - image: cp/cp4waiops/nasm-jenkins-observer
+  - image: cp/cp4waiops/nasm-junipercso-observer
+  - image: cp/cp4waiops/nasm-kubernetes-observer
+  - image: cp/cp4waiops/nasm-layout-service
+  - image: cp/cp4waiops/nasm-merge-service
+  - image: cp/cp4waiops/nasm-netdisco-observer
+  - image: cp/cp4waiops/nasm-newrelic-observer
+  - image: cp/cp4waiops/nasm-observer-service
+  - image: cp/cp4waiops/nasm-openstack-observer
+  - image: cp/cp4waiops/nasm-rancher-observer
+  - image: cp/cp4waiops/nasm-rest-observer
+  - image: cp/cp4waiops/nasm-search-service
+  - image: cp/cp4waiops/nasm-servicenow-observer
+  - image: cp/cp4waiops/nasm-status-service
+  - image: cp/cp4waiops/nasm-taddm-observer
+  - image: cp/cp4waiops/nasm-topology-service
+  - image: cp/cp4waiops/nasm-ubi-base-layer
+  - image: cp/cp4waiops/nasm-ui-api
+  - image: cp/cp4waiops/nasm-vmvcenter-observer
+  - image: cp/cp4waiops/nasm-vmwarensx-observer
+  - image: cp/cp4waiops/nasm-zabbix-observer
   - image: cp/noi/cassandra
   - image: cp/noi/kafka
   - image: cp/noi/kafkarest

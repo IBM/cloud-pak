@@ -1,6 +1,9 @@
-source: ibm-netcool-integrations-aiops31-bundle/case/ibm-netcool-integrations/case.yaml
+source: ibm-netcool-integrations-bundle/case/ibm-netcool-integrations/case.yaml
 description: "IBM® Netcool® Operations Insight Integrations"
 images:
+  - image: cp/cp4waiops/event-gateway-cem
+  - image: cp/cp4waiops/event-integration-util
+  - image: cp/cp4waiops/event-probe-messagebus
   - image: cp/noi-int/netcool-gateway-cem
   - image: cp/noi-int/netcool-integration-util
   - image: cp/noi-int/netcool-probe-messagebus
@@ -8,3 +11,6 @@ images:
   - image: ibmcom/ibm-netcool-integrations-operator-bundle
   - image: ibmcom/ibm-netcool-integrations-operator-catalog
   - image: ibmcom/opencontent-common-utils
+  - image: icr.io/cpopen/ibm-netcool-integrations-operator
+  - image: icr.io/cpopen/ibm-netcool-integrations-operator-bundle
+  - image: icr.io/cpopen/ibm-netcool-integrations-operator-catalog

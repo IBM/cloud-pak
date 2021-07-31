@@ -9,6 +9,39 @@ images:
   - image: /chatops-slack-integrator
   - image: /chatops-teams-integrator
   - image: /connection-manager
+  - image: cp/cp4waiops/aiops-api
+  - image: cp/cp4waiops/ai-platform-api-server
+  - image: cp/cp4waiops/alert-localization
+  - image: cp/cp4waiops/change-risk
+  - image: cp/cp4waiops/chatops-orchestrator
+  - image: cp/cp4waiops/chatops-slack-integrator
+  - image: cp/cp4waiops/chatops-teams-integrator
+  - image: cp/cp4waiops/connection-manager
+  - image: cp/cp4waiops/coordinator
+  - image: cp/cp4waiops/databroker-s3
+  - image: cp/cp4waiops/elasticsearch-curator
+  - image: cp/cp4waiops/event-grouping
+  - image: cp/cp4waiops/event-grouping_modeltrain
+  - image: cp/cp4waiops/flink-core
+  - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-7.10.2
+  - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-operator
+  - image: cp/cp4waiops/jobmonitor
+  - image: cp/cp4waiops/lifecycle-manager-service
+  - image: cp/cp4waiops/log-anomaly
+  - image: cp/cp4waiops/log-anomaly-training
+  - image: cp/cp4waiops/model-train-controller
+  - image: cp/cp4waiops/netcool-gateway-messagebus
+  - image: cp/cp4waiops/opencontent-common-utils
+  - image: cp/cp4waiops/opencontent-icp-cert-gen-1
+  - image: cp/cp4waiops/opencontent-minio
+  - image: cp/cp4waiops/opencontent-minio-client
+  - image: cp/cp4waiops/opencontent-postgres-stolon
+  - image: cp/cp4waiops/persistence-service
+  - image: cp/cp4waiops/ratelimiter
+  - image: cp/cp4waiops/similar-incidents-service
+  - image: cp/cp4waiops/similar-incidents-training
+  - image: cp/cp4waiops/topology
+  - image: cp/cp4waiops/trainer-v2-service
   - image: cp/ibm-watson-ai-manager/aiops-api
   - image: cp/ibm-watson-ai-manager/alert-localization
   - image: cp/ibm-watson-ai-manager/chatops-orchestrator
@@ -63,6 +96,9 @@ images:
   - image: ibmcom/ibm-watson-ai-manager-operator
   - image: ibmcom/ibm-watson-ai-manager-operator-bundle
   - image: ibmcom/ibm-watson-ai-manager-operator-catalog
+  - image: icr.io/cpopen/ibm-watson-ai-manager-operator
+  - image: icr.io/cpopen/ibm-watson-ai-manager-operator-bundle
+  - image: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog
   - image: /log-anomaly
   - image: /log-anomaly-training
   - image: /persistence-service
