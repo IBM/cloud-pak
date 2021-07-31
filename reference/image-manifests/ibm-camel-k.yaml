@@ -1,0 +1,7 @@
+source: ibm-camel-k-bundle/case/ibm-camel-k/case.yaml
+description: "IBM Camel k CASE"
+images:
+  - image: cp/cp4waiops/openjdk-11
+  - image: icr.io/cpopen/camel-k
+  - image: icr.io/cpopen/camel-k-operator-bundle
+  - image: icr.io/cpopen/ibm-camelk-catalog

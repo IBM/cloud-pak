@@ -47,8 +47,12 @@ images:
   - image: cp/cp4waiops/ea-noigateway-ee
   - image: cp/cp4waiops/elasticindices
   - image: cp/cp4waiops/elasticsearch-curator
+  - image: cp/cp4waiops/event-gateway-cem
+  - image: cp/cp4waiops/event-gateway-messagebus
   - image: cp/cp4waiops/event-grouping
   - image: cp/cp4waiops/event-grouping_modeltrain
+  - image: cp/cp4waiops/event-integration-util
+  - image: cp/cp4waiops/event-probe-messagebus
   - image: cp/cp4waiops/event-processor
   - image: cp/cp4waiops/eventsquery-service
   - image: cp/cp4waiops/flink-core
@@ -172,6 +176,7 @@ images:
   - image: cp/cp4waiops/opencontent-minio-client
   - image: cp/cp4waiops/opencontent-postgres-stolon
   - image: cp/cp4waiops/opencontent-redis-5
+  - image: cp/cp4waiops/openjdk-11
   - image: cp/cp4waiops/persistence-service
   - image: cp/cp4waiops/policy-registry-service
   - image: cp/cp4waiops/ratelimiter
@@ -213,6 +218,7 @@ images:
   - image: ibmcom/ibm-cp-automation-foundation-catalog
   - image: icr.io/cpopen/aiops-orchestrator-catalog
   - image: icr.io/cpopen/camel-k
+  - image: icr.io/cpopen/camel-k-operator-bundle
   - image: icr.io/cpopen/connector-utilities-operator
   - image: icr.io/cpopen/iaf-ai-operator
   - image: icr.io/cpopen/iaf-ai-operator-bundle
@@ -228,6 +234,7 @@ images:
   - image: icr.io/cpopen/iaf-flink-operator-bundle
   - image: icr.io/cpopen/ibm-aiops-bundle
   - image: icr.io/cpopen/ibm-aiops-orchestrator
+  - image: icr.io/cpopen/ibm-aiops-orchestrator-bundle
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator-catalog
@@ -235,15 +242,29 @@ images:
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-camelk-catalog
   - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-connector-utilities-bundle
   - image: icr.io/cpopen/ibm-cp4waiops-watson-aiops-ui-operator-bundle
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog
   - image: icr.io/cpopen/ibm-etcd-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-catalog
   - image: icr.io/cpopen/ibm-kong-operator
+  - image: icr.io/cpopen/ibm-kong-operator-bundle-catalog
+  - image: icr.io/cpopen/ibm-management-kong-bundle
   - image: icr.io/cpopen/ibm-netcool-integrations-operator
+  - image: icr.io/cpopen/ibm-netcool-integrations-operator-bundle
+  - image: icr.io/cpopen/ibm-netcool-integrations-operator-catalog
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator
+  - image: icr.io/cpopen/ibm-watson-ai-manager-operator-bundle
+  - image: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog
+  - image: icr.io/cpopen/ibm-watson-aiops-ui-catalog
+  - image: icr.io/cpopen/ibm-watson-aiops-ui-operator-bundle
+  - image: icr.io/cpopen/ibm-watson-connector-utilities-catalog
   - image: icr.io/cpopen/noi-operator
+  - image: icr.io/cpopen/noi-operator-bundle
+  - image: icr.io/cpopen/noi-operator-catalog
   - image: icr.io/cpopen/opencontent-etcd-operator
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
@@ -379,3 +400,4 @@ images:
   - image: quay.io/opencloudio/zen-iam-config
   - image: quay.io/opencloudio/zen-metastoredb
   - image: quay.io/opencloudio/zen-watchdog
+  - image: registry.redhat.io/openshift4/ose-oauth-proxy
