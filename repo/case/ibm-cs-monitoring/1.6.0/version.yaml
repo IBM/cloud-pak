@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 1.14.0
+  catalogs:
+    operations: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: ibm-cs-monitoring CASE
+  displayDescription: ""
+  displayName: IBM CS Monitoring CASE
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-cs-monitoring
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.6.0
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2021-08-13T16:06:42.48508806+0000
+digest: sha256:0df5cf09dc198724637f218bf131ce40ad5f3714abab1f99bdbe5db7984fbf02
