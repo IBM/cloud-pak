@@ -1,5 +1,5 @@
-source: ibm-wsl-bundle/case/ibm-wsl/case.yaml
-description: "A CASE for helm charts related to Watson Studio Local"
+source: ibm-wsl-cp4dv4-bundle/case/ibm-wsl/case.yaml
+description: "Watson Studio Local"
 images:
   - image: asset-files-api
   - image: cp4d-ws-secrets-job
@@ -91,6 +91,11 @@ images:
   - image: cp/cpd/wml-main
   - image: cp/cpd/wml-main-ppc64le
   - image: cp/cpd/wmlrepositoryv4
+  - image: cp/cpd/wslocal-init-py37cuda
+  - image: cp/cpd/wslocal-init-py37main
+  - image: cp/cpd/wslocal-init-py38cuda
+  - image: cp/cpd/wslocal-init-py38main
+  - image: cp/cpd/wslocal-init-r36
   - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
   - image: cp/cpd/wslocal-ppc-runtime-py37ppc
@@ -100,6 +105,8 @@ images:
   - image: cp/cpd/wslocal-runtime-py37cuda
   - image: cp/cpd/wslocal-runtime-py37main
   - image: cp/cpd/wslocal-runtime-py37omain
+  - image: cp/cpd/wslocal-runtime-py38cuda
+  - image: cp/cpd/wslocal-runtime-py38main
   - image: cp/cpd/wslocal-runtime-r36
   - image: cp/cpd/wslocal-runtime-rstudio
   - image: cp/cpd/wslocal-runtime-shiny
@@ -125,6 +132,9 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ws-operator
   - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
   - image: jobs-api
   - image: jobs-ui
   - image: job-trigger

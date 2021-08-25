@@ -1,9 +1,16 @@
 source: ibm-wsl-runtimes-bundle/case/ibm-wsl-runtimes/case.yaml
-description: "CASE for Notebook Runtimes in Watson Studio Local"
+description: "CASE for Notebook Runtimes in Watson Studio"
 images:
   - image: cp/cpd/runtimes-init-job
+  - image: cp/cpd/wslocal-init-py37cuda
+  - image: cp/cpd/wslocal-init-py37main
+  - image: cp/cpd/wslocal-init-py38cuda
+  - image: cp/cpd/wslocal-init-py38main
+  - image: cp/cpd/wslocal-init-r36
   - image: cp/cpd/wslocal-runtime-py37cuda
   - image: cp/cpd/wslocal-runtime-py37main
+  - image: cp/cpd/wslocal-runtime-py38cuda
+  - image: cp/cpd/wslocal-runtime-py38main
   - image: cp/cpd/wslocal-runtime-r36
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
