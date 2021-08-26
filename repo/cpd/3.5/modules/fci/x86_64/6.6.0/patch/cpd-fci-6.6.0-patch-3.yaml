@@ -1,0 +1,45 @@
+images:
+- fci-cedm-integration:6.6.0-PATCH2
+- fci-graph-writer:6.6.0-PATCH1
+- fci-search-liberty:6.6.0-PATCH1
+- fci-security-audit-app:6.6.0-PATCH1
+- fci-analytics-runtime-liberty:6.6.0-PATCH1
+- fci-realtime-scoring:6.6.0-PATCH1
+- fci-messaging:6.6.0-PATCH2
+- fci-crypto-utils:6.6.0-PATCH2
+- fci-cedm-data-store-client:6.6.0-PATCH2
+- fci-investigative-ui-config:6.6.0-PATCH2
+- fci-graph-writer:6.6.0-PATCH2
+- fci-graph-writer-init-pv:6.6.0-PATCH2
+- fci-common-ui-web:6.6.0-PATCH3
+- fci-solution:6.6.0-PATCH3
+- fci-investigative-ui:6.6.0-PATCH3
+patchFile: patchCommands.txt
+resourcesChanged:
+- kind: Deployment
+  name: fci-cedm-integration
+- kind: Deployment
+  name: fci-case-manager-fci-solution 
+- kind: Deployment
+  name: fci-graph-writer-liberty
+- kind: Deployment
+  name: fci-search-liberty
+- kind: Deployment
+  name: fci-security-audit-app
+- kind: Deployment
+  name: fci-analytics-runtime-liberty
+- kind: Deployment
+  name: fci-realtime-scoring-liberty
+- kind: StatefulSet
+  name: fci-case-manager-fci-messaging
+- kind: Job
+  name: fci-crypto-utils-gencerts
+- kind: Deployment
+  name: fci-common-ui-iui
+- kind: Deployment
+  name: fci-common-ui-iui-config-service
+- kind: Deployment
+  name: fci-graph-writer-liberty
+- kind: Deployment
+  name: fci-common-ui-nginx
+description: "Patch 3 for FCI 6.6.0"
