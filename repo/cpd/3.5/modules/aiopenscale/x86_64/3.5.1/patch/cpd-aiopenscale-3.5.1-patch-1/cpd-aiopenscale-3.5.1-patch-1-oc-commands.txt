@@ -1,0 +1,5 @@
+patch deployment aiopenscale-ibm-aios-drift --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-drift","image": "{{.DockerRegistryPrefix}}/drift:3.5.1.915"}]}}}}'
+patch deployment aiopenscale-ibm-aios-explainability --patch '{"spec": {"template": {"spec": {"containers": [{"name": "explainability-service","image": "{{.DockerRegistryPrefix}}/explainability:3.5.1.1411"}]}}}}'
+patch deployment aiopenscale-ibm-aios-bias --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-bias","image": "{{.DockerRegistryPrefix}}/aios-bias-service:3.5.1.1623"}]}}}}'
+patch deployment aiopenscale-ibm-aios-payload-logging --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-payload-logging","image": "{{.DockerRegistryPrefix}}/aios-payload-logging-service:3.5.1.733"}]}}}}'
+patch deployment aiopenscale-ibm-aios-payload-logging-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "aios-payload-logging-api","image": "{{.DockerRegistryPrefix}}/aios-payload-logging-service-api:3.5.1.530"}]}}}}'
