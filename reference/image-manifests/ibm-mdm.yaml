@@ -1,17 +1,35 @@
 source: ibm-mdm-bundle/case/ibm-mdm/case.yaml
 description: "IBM Match360 with Watson"
 images:
+  - image: cp/cpd/ailc-kubectl
+  - image: cp/cpd/asset-files-api
+  - image: cp/cpd/catalog-api-aux_master
+  - image: cp/cpd/catalog_master
+  - image: cp/cpd/couchdb3
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/dap-base-job
+  - image: cp/cpd/dap-dashboards-api
+  - image: cp/cpd/dataview-api-service
+  - image: cp/cpd/dc-main
+  - image: cp/cpd/dsx-requisite
+  - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environments
+  - image: cp/cpd/environments-init-job
+  - image: cp/cpd/event-logger-api
   - image: cp/cpd/fdb-kubernetes-operator
   - image: cp/cpd/foundationdb
   - image: cp/cpd/foundationdb-kubernetes-sidecar
+  - image: cp/cpd/haproxy
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/jobs-api
+  - image: cp/cpd/jobs-ui
+  - image: cp/cpd/job-trigger
   - image: cp/cpd/mdm-aspera-server
   - image: cp/cpd/mdm-audit-rsyslog
   - image: cp/cpd/mdm-boarding
@@ -26,7 +44,28 @@ images:
   - image: cp/cpd/mdm-model
   - image: cp/cpd/mdm-spark-job
   - image: cp/cpd/mdm-spark-sample-job
+  - image: cp/cpd/ngp-projects-api
+  - image: cp/cpd/portal-catalog
+  - image: cp/cpd/portal-common-api
+  - image: cp/cpd/portal-dashboards
+  - image: cp/cpd/portal-job-manager
+  - image: cp/cpd/portal-main
+  - image: cp/cpd/portal-notifications
+  - image: cp/cpd/portal-projects
+  - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/rabbitmq
+  - image: cp/cpd/redis
+  - image: cp/cpd/spaces
+  - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/wdp-connect-connection
+  - image: cp/cpd/wdp-connect-connector
+  - image: cp/cpd/wdp-connect-flight
+  - image: cp/cpd/wdp-dataview
+  - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-search_master
+  - image: cp/cpd/wml-main
+  - image: cp/cpd/wmlrepositoryv4
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
@@ -62,6 +101,9 @@ images:
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
   - image: icr.io/cpopen/mdm-operator
   - image: icr.io/cpopen/mdm-operator-bundle
   - image: icr.io/cpopen/mdm-operator-catalog
