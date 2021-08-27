@@ -1,0 +1,60 @@
+apiVersion: v1
+case:
+  appVersion: 6.0.2.0.03
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+    ssp: {}
+  description: A CASE for Sterling Secure Proxy Configuration Manager on a containerized platform
+  displayDescription: A CASE for IBM Sterling Secure Proxy Configuration Manager
+  displayName: IBM Sterling Secure Proxy Configuration Manager CASE
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm_ssp.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenseEn
+      ref: LA_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+  name: ibm-ssp-cm
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.2
+  webPage: https://www.ibm.com/docs/en/secure-proxy/6.0.2
+created: 2021-08-27T00:22:53.25829901+0000
+digest: sha256:3e2e524459f1ddfb21c7098d4fb5c976b8db97d8021880b30b202a818578419a
