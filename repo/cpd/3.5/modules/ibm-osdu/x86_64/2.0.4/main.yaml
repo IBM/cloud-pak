@@ -1,0 +1,60 @@
+# This file is in fileserver
+type: module
+name: infra module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference: base-registry
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+  - name: os-delivery-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-indexer-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-indexer-queue-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-legal-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-search-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-storage-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-schema-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-registration-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-notification-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-unit-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-crs-catalog-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-dataset-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-file-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-workflow-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-crs-conversion-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-ingest-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-partition-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-seismic-store-service
+    tag: cp4d-aug-rel-1.0
+  - name: os-wellbore-domain-services
+    tag: cp4d-aug-rel-1.0
+  - name: os-policy-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-file-dms-ibm
+    tag: cp4d-aug-rel-1.0
+  - name: os-entitlements-ibm-v2
+    tag: cp4d-aug-rel-1.0
+chart: ibm-osdu-0.3.0.tgz
+# For download to verify the chart file is correct, optional
+#md5:
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: ibm-osdu

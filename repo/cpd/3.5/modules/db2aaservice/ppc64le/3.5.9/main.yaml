@@ -1,0 +1,24 @@
+chart: zen-databases-catalog-3.5.9.tgz
+helmUpgradeForce: true
+images:
+  - name: zen-databases-catalog-db2aaservice
+    tag: 3.5.9-4193-dev-ppc64le
+  - name: db2u.auxiliary.auth
+    tag: 11.5.5.1-cn3-4193-ppc64le
+  - name: db2u.instdb
+    tag: 11.5.5.1-cn3-4193-ppc64le
+  - name: db2u.tools
+    tag: 11.5.5.1-cn3-4193-ppc64le
+  - name: db2u
+    tag: 11.5.5.1-cn3-4193-ppc64le
+  - name: etcd
+    tag: 3.4.14-4193-ppc64le
+installOverride: install-override.yaml
+name: db2aaservice module
+registry-reference: base-registry
+releaseName: db2aaservice-catalog
+serviceInstanceType:
+  - db2aaservice
+timeout: 90
+type: module
+upgradeOverride: install-override.yaml

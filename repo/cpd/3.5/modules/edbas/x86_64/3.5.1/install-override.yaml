@@ -1,0 +1,25 @@
+# this file gets filled up at build time.
+dbType: edbas
+arch: "amd64"
+image:
+  tag: 3.5.1-737
+global:
+  dbType: edbas
+  arch: "amd64"
+  image:
+    tag: 3.5.1-737
+  docker_registry_prefix: #docker_registry_prefix#
+  use_external_prefix: true
+  persistence:
+    enabled: true
+    useDynamicProvisioning: true
+  ibmProduct: zen
+  databases: true
+  version: 3.5.1
+  viewer:
+    sa: cpd-viewer-sa
+zenProxy:
+  serviceType: ClusterIP
+namespace: #namespace#
+nginxRepo:
+  resolver: "kubernetes.default"
