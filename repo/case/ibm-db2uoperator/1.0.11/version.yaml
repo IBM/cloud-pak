@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 11.5.5.1-cn3
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: The IBM Db2 Operator bundle certifies and entitles the Db2 Operator
+  displayDescription: Case Bundle for the operator which deploys and manages the Db2 Database
+  displayName: IBM Db2 Operator Bundle for the Db2 Operator
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/db2logoicp-01.png
+  licenses:
+    standalone:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Db2 11.5 License
+        displayName: Db2 11.5 license
+      ref: LICENSE-EN
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-CONN-BRHPN7
+  name: ibm-db2uoperator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 1.0.11
+  webPage: https://www.ibm.com/analytics/db2
+created: 2021-08-31T22:07:43.43694321+0000
+digest: sha256:0a4e41eb73505980cc5ba28a18fa9272f3eea79037583e08dd4ec1f7331dcdf8
