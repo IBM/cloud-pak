@@ -1,6 +1,7 @@
 source: ibm-watson-discovery-case-bundle/case/ibm-watson-discovery-case/case.yaml
 description: "IBM Watson Discovery for IBM Cloud Pak for Data"
 images:
+  - image: cp/cpd/cloud-native-postgresql
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
@@ -13,6 +14,7 @@ images:
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/postgresql
   - image: cp/cpd/privatecloud-redis-repo
   - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/zen-admin
