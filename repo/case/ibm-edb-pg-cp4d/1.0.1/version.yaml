@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 3.5.1
+  catalogs:
+    database: {}
+    edb: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: EDB PostgreSQL
+  displayDescription: ""
+  displayName: IBM EDB PostgreSQL Bundle
+  icons: []
+  licenses:
+    license-en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: license-en
+      ref: LICENSE-en
+    licenseNonIBM:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+        name: licenseNonIBM
+      ref: LICENSE_NON_IBM
+  name: ibm-edb-pg-cp4d
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com
+created: 2021-08-31T22:36:51.45632455+0000
+digest: sha256:71ec6c45c8695fdd5e417414e9d043b5bb6c2c65a187dd306d14c2e8be04d649
