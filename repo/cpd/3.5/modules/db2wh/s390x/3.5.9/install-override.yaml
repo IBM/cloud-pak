@@ -1,0 +1,26 @@
+arch: s390x
+dbType: db2wh
+global:
+    arch: s390x
+    cloudpakInstanceId: null
+    databases: true
+    dbType: db2wh
+    docker_registry_prefix: null
+    editor:
+        sa: cpd-editor-sa
+    ibmProduct: zen
+    image:
+        tag: 3.5.9-4193-dev
+    persistence:
+        enabled: true
+        useDynamicProvisioning: true
+    use_external_prefix: true
+    viewer:
+        sa: cpd-viewer-sa
+image:
+    tag: 3.5.9-4193-dev
+namespace: null
+nginxRepo:
+    resolver: kubernetes.default
+zenProxy:
+    serviceType: ClusterIP

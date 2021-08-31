@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    productID: "aa273859f93a4a32887147700abb1e6a"
+    productName: "EDB Enterprise PostgreSQL Operator"
+    productMetric: "FREE"
+    cloudpakName: "EDB Enterprise PostgreSQL Operator"
+    cloudpakId: "aa273859f93a4a32887147700abb1e6a"
+    cloudpakInstanceId: {{ .cloudpakInstanceId }}
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }}
+    app.kubernetes.io/name: cloud-native-postgresql
+    icpsupport/addOnId: edb
+    icpsupport/app: operator
+  name: postgresql-operator-controller-manager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: cloud-native-postgresql
+  template:
+    metadata:
+      annotations:
+        productID: "aa273859f93a4a32887147700abb1e6a"
+        productName: "EDB Enterprise PostgreSQL Operator"
+        productMetric: "FREE"
+        cloudpakName: "EDB Enterprise PostgreSQL Operator"
+        cloudpakId: "aa273859f93a4a32887147700abb1e6a"
+        cloudpakInstanceId: {{ .cloudpakInstanceId }}
+      labels:
+        app.kubernetes.io/instance: {{ .releaseName }}
+        app.kubernetes.io/name: cloud-native-postgresql
+        icpsupport/addOnId: edb
+        icpsupport/app: operator
+    spec:
+      containers:
+      - args:
+        - controller
+        - --enable-leader-election
+        - --config-map-name=postgresql-operator-controller-manager-config
+        - --secret-name=postgresql-operator-controller-manager-config
+        command:
+        - /manager
+        env:
+        - name: OPERATOR_IMAGE_NAME
+          value: {{.registryPrefix}}/{{.global.image.repository}}:{{.global.image.tag}}
+        - name: OPERATOR_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        image: {{.registryPrefix}}/{{.global.image.repository}}:{{.global.image.tag}}
+        livenessProbe:
+          httpGet:
+            path: /readyz
+            port: 9443
+            scheme: HTTPS
+        name: manager
+        ports:
+        - containerPort: 8080
+          name: metrics
+          protocol: TCP
+        - containerPort: 9443
+          name: webhook-server
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 9443
+            scheme: HTTPS
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        securityContext:
+          readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /controller
+          name: scratch-data
+      # securityContext: (not supported in cp4d)
+      #   runAsUser: 1001
+      serviceAccountName: postgresql-operator-manager
+      terminationGracePeriodSeconds: 10
+      volumes:
+      - emptyDir: {}
+        name: scratch-data

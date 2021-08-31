@@ -1,0 +1,126 @@
+apiVersion: admissionregistration.k8s.io/v1beta1
+kind: MutatingWebhookConfiguration
+metadata:
+  creationTimestamp: null
+  name: postgresql-operator-mutating-webhook-configuration
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: postgresql-operator-webhook-service
+      namespace: <<namespace>>
+      path: /mutate-postgresql-k8s-enterprisedb-io-v1-backup
+  failurePolicy: Fail
+  name: mbackup.kb.io
+  rules:
+  - apiGroups:
+    - postgresql.k8s.enterprisedb.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - backups
+  sideEffects: None
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: postgresql-operator-webhook-service
+      namespace: <<namespace>>
+      path: /mutate-postgresql-k8s-enterprisedb-io-v1-cluster
+  failurePolicy: Fail
+  name: mcluster.kb.io
+  rules:
+  - apiGroups:
+    - postgresql.k8s.enterprisedb.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - clusters
+  sideEffects: None
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: postgresql-operator-webhook-service
+      namespace: <<namespace>>
+      path: /mutate-postgresql-k8s-enterprisedb-io-v1-scheduledbackup
+  failurePolicy: Fail
+  name: mscheduledbackup.kb.io
+  rules:
+  - apiGroups:
+    - postgresql.k8s.enterprisedb.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - scheduledbackups
+  sideEffects: None
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: postgresql-operator-webhook-service
+      namespace: <<namespace>>
+      path: /mutate-postgresql-k8s-enterprisedb-io-v1alpha1-backup
+  failurePolicy: Fail
+  name: mbackupv1alpha1.kb.io
+  rules:
+  - apiGroups:
+    - postgresql.k8s.enterprisedb.io
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - backups
+  sideEffects: None
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: postgresql-operator-webhook-service
+      namespace: <<namespace>>
+      path: /mutate-postgresql-k8s-enterprisedb-io-v1alpha1-cluster
+  failurePolicy: Fail
+  name: mclusterv1alpha1.kb.io
+  rules:
+  - apiGroups:
+    - postgresql.k8s.enterprisedb.io
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - clusters
+  sideEffects: None
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    service:
+      name: postgresql-operator-webhook-service
+      namespace: <<namespace>>
+      path: /mutate-postgresql-k8s-enterprisedb-io-v1alpha1-scheduledbackup
+  failurePolicy: Fail
+  name: mscheduledbackupv1alpha1.kb.io
+  rules:
+  - apiGroups:
+    - postgresql.k8s.enterprisedb.io
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - scheduledbackups
+  sideEffects: None

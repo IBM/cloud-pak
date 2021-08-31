@@ -1,0 +1,215 @@
+#___________________________________________________________
+#
+# Copyright IBM Corp. 2020. All rights reserved.
+# US Government Users Restricted Rights - Use, duplication or disclosure
+# restricted by GSA ADP Schedule Contract with IBM Corp.
+#___________________________________________________________
+#
+apiVersion: scheduler.spectrumcomputing.ibm.com/v1
+kind: Scheduling
+metadata:
+  name: ibm-cpd-scheduler
+  labels:
+    app.kubernetes.io/name: "ibm-cpd-scheduler"
+    app.kubernetes.io/managed-by: "ansible"
+    app.kubernetes.io/instance: "{{.releaseName}}"
+    release: "cpd-scheduler"
+
+spec:
+  # Indicate acceptance of the Licenses
+  # The licenses are available from this site:
+  #      http://www-03.ibm.com/software/sla/sladb.nsf
+  # Use the search option to find IBM Spectrum LSF CE
+  # Indicate acceptance of the Licenses
+  license:
+    accept: true
+
+  appVersion: "1.1.5-081708"
+  version: "1.1.5-081708"
+
+  # The release name becomes the app.kubernetes.io/instance value
+  # This is used for filtering
+  releasename: {{.releaseName}}
+
+  # This is the name of the registry to pull images from
+  registry: {{.registryPrefix}}
+
+  # Provide an imagePullSecret when pulling images from a private registry
+  #imagepullsecret: use-your-secret
+
+  cluster:
+    clustername: ibm-cpd-scheduler 
+
+    # PersistentVolumeClaim (Storage volume) prameters
+    pvc:
+      dynamicStorage: true
+      storageClass: "{{.storageclass}}"
+      selectorLabel: ""
+      selectorValue: ""
+      size: "10G"
+
+  scheduler:
+    image: "ibm-cpd-scheduler-amd64:1.1.5-081708"
+    imagePullPolicy: "Always"
+
+    # The placement variables control how the pods will be placed
+    placement:
+      # includeLabel  - Optional label to apply to hosts that
+      #                 should be allowed to run the compute pod
+      includeLabel: ""
+
+      # excludeLabel  - Is a label to apply to hosts to prevent
+      #                 them from being used to host the compute pod
+      excludeLabel: "excludelsf"
+
+      # Taints can be used to control which nodes are available
+      # to Scheduler and Kubernetes scheduler.  If used these
+      # parameters are used to allow the Scheduler pods to run on
+      # tainted nodes.
+      #
+      #  tolerateName  - Optional name of the taint that has been
+      #                  applied to a node
+      #  tolerateValue - The value given to the taint
+      #  tolerateEffect - The effect of the taint
+      #
+      tolerateName: ""
+      tolerateValue: ""
+      tolerateEffect: NoExecute
+
+    # Define the number of this type of pod you want to have running.
+    # Valid values for a scheduler are 0 or 1.
+    replicas: 1
+
+    # These are the Memory and CPU allocations for the pod.
+    # Set the memory and cpu requests and limits to the same values
+    # to get a guarenteed QoS.
+    resources:
+      requests:
+        cpu: "1"
+        memory: "4G"
+      limits:
+        cpu: "1"
+        memory: "4G"
+
+    # By default the Scheduler will comminicate with the IBM License
+    # metering pods using strict TLS certificate checking.
+    # To relax that restriction change this to:  "disabled"
+    strictCaCheck: "on"
+
+  # This is the controls for the Validating Webhook
+  vwebhook:
+    image: "ibm-cpd-scheduler-webhook-amd64:1.1.5-081708"
+    imagePullPolicy: "Always"
+
+    # Use the replicas to turn on/off the validating webhook.
+    # Valid values are 0 or 1.
+    replicas: 1
+
+    # These are the Memory and CPU allocations for the pod.
+    # Set the memory and cpu requests and limits to the same values
+    # to get a guarenteed QoS.
+    resources:
+      requests:
+        cpu: "200m"
+        memory: "1G"
+      limits:
+        cpu: "200m"
+        memory: "1G"
+  
+  # This is the controls for the Mutating Webhook
+  mwebhook:
+    image: "ibm-cpd-scheduler-mutate-webhook-amd64:1.1.5-081708"
+    imagePullPolicy: "Always"
+
+    # Use the replicas to turn on/off the validating webhook.
+    # Valid values are 0 or 1.
+    replicas: 1
+
+    # These are the Memory and CPU allocations for the pod.
+    # Set the memory and cpu requests and limits to the same values
+    # to get a guarenteed QoS.
+    resources:
+      requests:
+        cpu: "200m"
+        memory: "1G"
+      limits:
+        cpu: "200m"
+        memory: "1G"
+
+  # This is the scheduler agent without GPU
+  agent:
+    image: "ibm-cpd-scheduler-agent-amd64:1.1.5-081708"
+    imagePullPolicy: "Always"
+
+    # The placement variables control how the pods will be placed
+    placement:
+      # includeLabel  - Optional label to apply to hosts that
+      #                 should be allowed to run the compute pod
+      includeLabel: ""
+
+      # excludeLabel  - Is a label to apply to hosts to prevent
+      #                 them from being used to host the compute pod
+      excludeLabel: "excludelsf"
+
+      # Taints can be used to control which nodes are available
+      # to Scheduler and Kubernetes scheduler.  If used these
+      # parameters are used to allow the Scheduler pods to run on
+      # tainted nodes.
+      #
+      #  tolerateName  - Optional name of the taint that has been
+      #                  applied to a node
+      #  tolerateValue - The value given to the taint
+      #  tolerateEffect - The effect of the taint
+      #
+      tolerateName: ""
+      tolerateValue: ""
+      tolerateEffect: NoExecute
+
+    # These are the Memory and CPU allocations for the pod.
+    # Set the memory and cpu requests and limits to the same values
+    # to get a guarenteed QoS.
+    resources:
+      requests:
+        cpu: "200m"
+        memory: "250M"
+      limits:
+        cpu: "200m"
+        memory: "750M"
+
+  # This is the scheduler agent with GPU.  Note the higher memory
+  gpuagent:
+    image: "ibm-cpd-scheduler-agent-amd64:1.1.5-081708"
+    imagePullPolicy: "Always"
+
+    # The placement variables control how the pods will be placed
+    placement:
+      # includeLabel  - Optional label to apply to hosts that
+      #                 should be allowed to run the compute pod
+      includeLabel: ""
+
+      # excludeLabel  - Is a label to apply to hosts to prevent
+      #                 them from being used to host the compute pod
+      excludeLabel: "excludelsf"
+
+      # Taints can be used to control which nodes are available
+      # to Scheduler and Kubernetes scheduler.  If used these
+      # parameters are used to allow the scheduler pods to run on
+      # tainted nodes.
+      #
+      #  tolerateName  - Optional name of the taint that has been
+      #                  applied to a node
+      #  tolerateValue - The value given to the taint
+      #  tolerateEffect - The effect of the taint
+      #
+      tolerateName: ""
+      tolerateValue: ""
+      tolerateEffect: NoExecute
+
+    # These are the Memory and CPU allocations for the pod.
+    resources:
+      requests:
+        cpu: "200m"
+        memory: "1G"
+      limits:
+        cpu: "200m"
+        memory: "1G"

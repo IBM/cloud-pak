@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgresql-operator-webhook-service
+  annotations:
+    productID: "aa273859f93a4a32887147700abb1e6a"
+    productName: "EDB Enterprise PostgreSQL Operator Service"
+    productMetric: "FREE"
+    cloudpakName: "EDB Enterprise PostgreSQL Operator Service"
+    cloudpakId: "aa273859f93a4a32887147700abb1e6a"
+    cloudpakInstanceId: {{ .cloudpakInstanceId }}
+  labels:
+    app.kubernetes.io/instance: {{ .releaseName }}
+    app.kubernetes.io/name: cloud-native-postgresql
+    icpsupport/addOnId: edb
+    icpsupport/app: operator
+spec:
+  ports:
+  - port: 443
+    targetPort: 9443
+  selector:
+    app.kubernetes.io/name: cloud-native-postgresql
