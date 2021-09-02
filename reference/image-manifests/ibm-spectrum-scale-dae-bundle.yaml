@@ -1,10 +1,13 @@
 source: ibm-spectrum-scale-dae-bundle/case/ibm-spectrum-scale-dae-bundle/case.yaml
-description: "Represents a deployment of a container native IBM Spectrum Scale cluster"
+description: "Represents a deployment of a container native IBM Spectrum Scale cluster with the Data Access edition"
 images:
   - image: cp/spectrum/scale/data-access/ibm-spectrum-scale-daemon
   - image: cp/spectrum/scale/ibm-spectrum-scale-core-init
+  - image: cp/spectrum/scale/ibm-spectrum-scale-grafana-bridge
   - image: cp/spectrum/scale/ibm-spectrum-scale-gui
   - image: cp/spectrum/scale/ibm-spectrum-scale-monitor
   - image: cp/spectrum/scale/ibm-spectrum-scale-must-gather
   - image: cp/spectrum/scale/ibm-spectrum-scale-pmcollector
+  - image: cp/spectrum/scale/postgres
+  - image: cp/spectrum/scale/ubi-minimal
   - image: icr.io/cpopen/ibm-spectrum-scale-operator
