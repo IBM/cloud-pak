@@ -1,0 +1,8 @@
+source: ibm-ai-wmlrepo-case-bundle/case/ibm-ai-wmlrepo/case.yaml
+description: "CASE that deploys the AI WmlRepository Operator"
+images:
+  - image: cp/ai/ibm-ai-wmlrepo-service
+  - image: icr.io/cpopen/ibm-ai-wmlrepo-operator-bundle
+  - image: icr.io/cpopen/ibm-ai-wmlrepo-operator-catalog
+  - image: icr.io/cpopen/ibm-ai-wmlrepo-operator-manager
+  - image: icr.io/cpopen/ibm-ai-wmlrepo-operator-proxy
