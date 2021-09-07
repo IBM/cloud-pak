@@ -8,6 +8,7 @@
 This CASE contains two inventory items:
 - A helm chart that deploys a single server instance of IBM UrbanCode Deploy that may be scaled to multiple instances.
 - An operator that deploys a single server instance of IBM UrbanCode Deploy that may be scaled to multiple instances.
+- The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy server.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the server.
 
 ## Prerequisites
 
@@ -219,47 +220,44 @@ The predefined PodSecurityPolicy named [`ibm-restricted-psp`](https://ibm.biz/cp
 
 ### SecurityContextConstraints Requirements
 
-This chart requires a `SecurityContextConstraints` to be bound to the target namespace prior to installation.  The predefined `SecurityContextConstraints` name: [`ibm-restricted-scc`](https://ibm.biz/cpkspec-scc) has been verified for this chart, if your target namespace is bound to this `SecurityContextConstraints` resource you can proceed to install the chart.
+This chart requires a `SecurityContextConstraints` to be bound to the target namespace prior to installation.  The default `SecurityContextConstraints` named restricted has been verified for this chart, if your target namespace is bound to this `SecurityContextConstraints` resource you can proceed to install the chart.
 
   * Custom SecurityContextConstraints definition:
 
   ```yaml
   apiVersion: security.openshift.io/v1
   kind: SecurityContextConstraints
-  metadata:
-    annotations:
-    name: ibm-ucd-prod-scc
   allowHostDirVolumePlugin: false
   allowHostIPC: false
   allowHostNetwork: false
   allowHostPID: false
   allowHostPorts: false
+  allowPrivilegeEscalation: true
   allowPrivilegedContainer: false
-  allowedCapabilities: []
-  allowedFlexVolumes: []
-  defaultAddCapabilities: []
-  defaultPrivilegeEscalation: false
-  forbiddenSysctls:
-    - "*"
+  allowedCapabilities: null
+  defaultAddCapabilities: null
   fsGroup:
     type: MustRunAs
-    ranges:
-    - max: 65535
-      min: 1
+  metadata:
+    annotations:
+      kubernetes.io/description: restricted denies access to all host features and requires
+        pods to be run with a UID, and SELinux context that are allocated to the namespace.  This
+        is the most restrictive SCC and it is used by default for authenticated users.
+    name: restricted
+  priority: null
   readOnlyRootFilesystem: false
   requiredDropCapabilities:
-  - ALL
+  - KILL
+  - MKNOD
+  - SETUID
+  - SETGID
   runAsUser:
-    type: MustRunAsNonRoot
-  seccompProfiles:
-  - docker/default
+    type: MustRunAsRange
   seLinuxContext:
-    type: RunAsAny
-  supplementalGroups:
     type: MustRunAs
-    ranges:
-    - max: 65535
-      min: 1
+  supplementalGroups:
+    type: RunAsAny
+  users: []
   volumes:
   - configMap
   - downwardAPI
@@ -267,7 +265,6 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
   - persistentVolumeClaim
   - projected
   - secret
-  priority: 0
   ```
 
 ### Licensing Requirements
@@ -331,13 +328,13 @@ Verify the case has been downloaded under the
 
 1. Install the catalog(s) via OLM
 
-By default, TARGET_REGISTRY is `docker.io/ibmcom`. You could export the TARGET_REGISTRY based on your desired image registry.
+By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGISTRY based on your desired image registry.
 
 ```
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-catalog                           \
@@ -348,7 +345,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator
@@ -362,7 +359,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -376,7 +373,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator
@@ -386,7 +383,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-catalog                         \
@@ -397,13 +394,13 @@ cloudctl case launch                                   \
 
 1. Install the operator via command line
 
-By default, TARGET_REGISTRY is `docker.io/ibmcom`. You could export the TARGET_REGISTRY based on your desired image registry.
+By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGISTRY based on your desired image registry.
 
 ```
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator-native                   \
@@ -415,7 +412,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator-native                 \
@@ -426,7 +423,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action install-helm-chart                        \
@@ -437,7 +434,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action uninstall-helm-chart                      \
@@ -490,7 +487,7 @@ Create registry secret for source image registry (if the registry is public whic
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz             \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz             \
     --namespace <target namespace>                       \
     --inventory ucdsOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -501,7 +498,7 @@ cloudctl case launch                                     \
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz             \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz             \
     --namespace <target namespace>                       \
     --inventory ucdsOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -524,7 +521,7 @@ In this step image from saved CASE (images.csv) are copied to target registry in
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz           \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz           \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action mirror-images                             \
@@ -546,7 +543,7 @@ WARNING:
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.0.tgz           \
+    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz           \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action configure-cluster-airgap                  \
@@ -607,6 +604,8 @@ The Helm chart and operator Custom Resource have the following values.
 | Qualifier | Parameter  | Definition | Allowed Value |
 |---|---|---|---|
 | version |  | UrbanCode Deploy product version |  |
+| replicas | server | Number of UCD server replicas | Non-zero number of replicas.  Defaults to 1 |
+|          | dfe | Number of DFE replicas | Number of Distributed Front End replicas.  Defaults to 0 |
 | image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to Always |
 |       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
 | service | type | Specify type of service | Valid options are ClusterIP, NodePort and LoadBalancer (for clusters that support LoadBalancer). Default is ClusterIP |
