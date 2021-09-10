@@ -1,0 +1,33 @@
+apiVersion: v1
+case:
+  appVersion: 4.3.0
+  catalogs:
+    framework: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Edge Application Manager
+  displayDescription: IBM Edge Application Manager
+  displayName: IBM Edge Application Manager
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/icp-logo-box.svg
+  name: ibm-eamhub
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.1.0
+  webPage: https://www.ibm.com
+created: 2021-09-10T23:36:00.70657165+0000
+digest: sha256:8cf683252d47812407093f1615f381fb0bb7ada06261810e716accbb4686618b
