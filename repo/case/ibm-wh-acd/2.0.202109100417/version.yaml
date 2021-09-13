@@ -1,0 +1,66 @@
+apiVersion: v1
+case:
+  appVersion: 2.0.202109100417
+  catalogs:
+    ai: {}
+    analytics: {}
+    watson: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    opensource: {}
+  description: IBM Annotator for Clinical Data Container Edition CASE that deploys an Operator
+  displayDescription: IBM Annotator for Clinical Data Operator
+  displayName: IBM Annotator for Clinical Data Operator
+  icons:
+  - mediaType: image/svg
+    url: https://globalcatalog.cloud.ibm.com/api/v1/f3a6bad0-297a-11e9-8bc5-bf215cf01ef0/artifacts/cache/dcbd03111fc84a5fe71470185639b15d/ACD_Icon.svg
+  licenses:
+    LA_en:
+      mediaType: application/text
+      metadata:
+        description: License Acceptence
+      ref: LA_en
+    LI_en:
+      mediaType: application/text
+      metadata:
+        description: License Information
+      ref: LI_en
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: license
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    non_ibm_license:
+      mediaType: application/text
+      metadata:
+        description: non ibm license
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        description: notices
+      ref: notices
+  name: ibm-wh-acd
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      amazon: {}
+      google: {}
+      ibm: {}
+      microsoft: {}
+      redhat: {}
+  version: 2.0.202109100417
+  webPage: https://www.ibm.com
+created: 2021-09-13T16:57:13.17932462+0000
+digest: sha256:0cc3cf47773adda31f9ea165b5e5fc82934564f51e924b5a57b798687973a561
