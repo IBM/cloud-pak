@@ -1,0 +1,54 @@
+apiVersion: v1
+case:
+  appVersion: 10.2.1-202109140923-a65454145
+  catalogs:
+    container: {}
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Rational Test Automation Server
+  displayDescription: IBM RTAS
+  displayName: IBM RTAS
+  icons:
+  - mediaType: image/png
+    url: https://xxxx/ibm-rtas.png
+  licenses:
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenseEn
+      ref: LICENSE-en
+    licenseNonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_non_ibm_license
+        name: licenseNonIbmLicense
+      ref: LICENSE_non_ibm_license
+    licenseNotices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_notices
+        name: licenseNotices
+      ref: LICENSE_notices
+  name: ibm-rtas-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      redhat: {}
+  version: 6.1021.0
+  webPage: https://www.ibm.com
+created: 2021-09-20T14:25:24.46699129+0000
+digest: sha256:d455900fec2bdfa87039fdc6afd237a9456f39cb0903309ef3850552cfa01c1b
