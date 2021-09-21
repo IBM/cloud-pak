@@ -1,4 +1,4 @@
-source: ibm-cp-integration-eus-bundle/case/ibm-cp-integration/case.yaml
+source: ibm-cp-integration-bundle/case/ibm-cp-integration/case.yaml
 description: "A simplified solution to integration challenges, allowing the enterprise to modernize its processes while positioning itself for future innovation."
 images:
   - image: alpine
@@ -590,10 +590,6 @@ images:
   - image: icr.io/cpopen/ibm-cp-integration-catalog
   - image: icr.io/cpopen/ibm-cp-integration-operator
   - image: icr.io/cpopen/ibm-cp-integration-operator-bundle
-  - image: icr.io/cpopen/ibm-eventstreams-catalog
-  - image: icr.io/cpopen/ibm-eventstreams-operator
-  - image: icr.io/cpopen/ibm-eventstreams-operator-bundle
-  - image: icr.io/cpopen/ibm-eventstreams-operator-init
   - image: icr.io/cpopen/ibm-integration-asset-repository-bundle
   - image: icr.io/cpopen/ibm-integration-asset-repository-catalog
   - image: icr.io/cpopen/ibm-integration-asset-repository-operator
@@ -634,9 +630,6 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
-  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
-  - image: quay.io/opencloudio/ibm-crossplane-operator
-  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
