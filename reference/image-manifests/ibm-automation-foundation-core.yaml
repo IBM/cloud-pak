@@ -1,4 +1,4 @@
-source: ibm-automation-foundation-core-v11-bundle/case/ibm-automation-foundation-core/case.yaml
+source: ibm-automation-foundation-core-bundle/case/ibm-automation-foundation-core/case.yaml
 description: "IBM Automation Foundation Core"
 images:
   - image: cp/iaf-health-service
@@ -36,6 +36,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector

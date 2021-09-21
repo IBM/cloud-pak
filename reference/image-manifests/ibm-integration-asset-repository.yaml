@@ -1,5 +1,5 @@
-source: ibm-integration-asset-repository-cd-bundle/case/ibm-integration-asset-repository/case.yaml
-description: "IBM Automation Automation assets allows the user to store, manage, retrieve and search integration assets within CP4I and its capabilities."
+source: ibm-integration-asset-repository-bundle/case/ibm-integration-asset-repository/case.yaml
+description: "IBM Cloud Pak for Integration Asset Repository is an add-on to the IBM Cloud Pak for Integration (CP4I) that allows the user to store, manage, retrieve and search integration assets within CP4I and its capabilities."
 images:
   - image: cp/iaf-health-service
   - image: cp/iaf-ui-customization
@@ -58,6 +58,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector

@@ -1,4 +1,4 @@
-source: ibm-cp-automation-foundation-v11-bundle/case/ibm-cp-automation-foundation/case.yaml
+source: ibm-cp-automation-foundation-bundle/case/ibm-cp-automation-foundation/case.yaml
 description: "IBM Automation Foundation"
 images:
   - image: cp/ai/ibm-ai-wmltraining-controller
@@ -98,6 +98,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector

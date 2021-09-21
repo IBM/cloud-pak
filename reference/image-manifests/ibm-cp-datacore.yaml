@@ -1,4 +1,4 @@
-source: ibm-cp-datacore-cp4d40-bundle/case/ibm-cp-datacore/case.yaml
+source: ibm-cp-datacore-bundle/case/ibm-cp-datacore/case.yaml
 description: "A fully-integrated software platform to collect, organize, and analyze data to infuse AI throughout your organization."
 images:
   - image: cp/cpd/ailc-kubectl
@@ -687,6 +687,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.1

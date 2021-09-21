@@ -1,0 +1,25 @@
+source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
+description: "Management operator for IBM Spectrum Fusion"
+images:
+  - image: gcr.io/kubebuilder/kube-rbac-proxy
+  - image: icr.io/
+  - image: icr.io/cp/isf/callhomeclient
+  - image: icr.io/cp/isf/eventmanager
+  - image: icr.io/cp/isf/eventmanager-snmp3
+  - image: icr.io/cp/isf/isf-bkprstr-operator
+  - image: icr.io/cp/isf/isf-compute-operator
+  - image: icr.io/cp/isf/isf-ics-operator
+  - image: icr.io/cp/isf/isf-installer-operator
+  - image: icr.io/cp/isf/isf-management-ui
+  - image: icr.io/cp/isf/isf-network-operator
+  - image: icr.io/cp/isf/isf-node-exporter
+  - image: icr.io/cp/isf/isf-operator-bundle
+  - image: icr.io/cp/isf/isf-operator-index
+  - image: icr.io/cp/isf/isf-proxy
+  - image: icr.io/cp/isf/isf-serviceability-operator
+  - image: icr.io/cp/isf/isf-snmp-exporter
+  - image: icr.io/cp/isf/isf-storage-operator
+  - image: icr.io/cp/isf/isf-storage-services
+  - image: icr.io/cp/isf/isf-ui-operator
+  - image: icr.io/cp/isf/isf-update-operator
+  - image: icr.io/cp/isf/logcollector
