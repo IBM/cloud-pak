@@ -1,14 +1,16 @@
-source: ibm-datapower-operator-prod-bundle/case/ibm-datapower-operator-prod/case.yaml
+source: ibm-datapower-operator-bundle/case/ibm-datapower-operator/case.yaml
 description: "CASE containing the Operator for deploying and managing DataPower Gateways"
 images:
-  - image: cp/datapower/datapower
+  - image: cp/datapower/datapower-cp4i
+  - image: cp/datapower/datapower-deved
+  - image: cp/datapower/datapower-nonprod
   - image: cp/datapower/datapower-prod
   - image: ibmcom/datapower-monitor
   - image: ibmcom/datapower-operator
   - image: ibmcom/datapower-operator-bundle
-  - image: ibmcom/datapower-operator-catalog
   - image: ibmcom/datapower-operator-conversion-webhook
   - image: icr.io/cpopen/datapower-operator
   - image: icr.io/cpopen/datapower-operator-bundle
   - image: icr.io/cpopen/datapower-operator-catalog
   - image: icr.io/cpopen/datapower-operator-conversion-webhook
+  - image: icr.io/integration/datapower/datapower-limited

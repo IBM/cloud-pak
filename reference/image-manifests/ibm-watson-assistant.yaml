@@ -15,6 +15,7 @@ images:
   - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/edb-apimgmt
   - image: cp/cpd/edb-operator
+  - image: cp/cpd/edb-postgres-advanced
   - image: cp/cpd/edb-postgresql-12
   - image: cp/cpd/edb-stolon
   - image: cp/cpd/icp4data-nginx-repo
@@ -199,6 +200,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.1

@@ -1,4 +1,4 @@
-source: ibm-integration-platform-navigator-bundle/case/ibm-integration-platform-navigator/case.yaml
+source: ibm-integration-platform-navigator-eus-bundle/case/ibm-integration-platform-navigator/case.yaml
 description: "The CP4I Platform Navigator allows seamless access and management of any IBM Cloud Pak for Integration components you have running."
 images:
   - image: cp/iaf-health-service
@@ -46,6 +46,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
