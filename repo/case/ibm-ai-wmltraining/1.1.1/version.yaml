@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 1.1.0
+  catalogs:
+    ai: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    beta: {}
+  description: CASE that deploys the AI WmlTraining Operator
+  displayDescription: IBM AI WmlTraining Operator
+  displayName: IBM AI WmlTraining Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: license
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-ai-wmltraining
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.1.1
+  webPage: https://www.ibm.com
+created: 2021-09-22T18:09:33.92997947+0000
+digest: sha256:68147881a3db9131cee0a700ab781c08f7607fdb753b2eeb4bca7a839e870830
