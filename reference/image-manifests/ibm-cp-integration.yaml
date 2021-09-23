@@ -1,4 +1,4 @@
-source: ibm-cp-integration-eus-bundle/case/ibm-cp-integration/case.yaml
+source: ibm-cp-integration-bundle/case/ibm-cp-integration/case.yaml
 description: "A simplified solution to integration challenges, allowing the enterprise to modernize its processes while positioning itself for future innovation."
 images:
   - image: alpine
@@ -601,9 +601,13 @@ images:
   - image: icr.io/cpopen/ibm-integration-operations-dashboard-bundle
   - image: icr.io/cpopen/ibm-integration-operations-dashboard-catalog
   - image: icr.io/cpopen/ibm-integration-operations-dashboard-operator
+  - image: icr.io/cpopen/ibm-integration-operations-dashboard-operator-bundle
   - image: icr.io/cpopen/ibm-integration-platform-navigator-catalog
   - image: icr.io/cpopen/ibm-integration-platform-navigator-operator
   - image: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle
+  - image: icr.io/cpopen/ibm-mq-operator
+  - image: icr.io/cpopen/ibm-mq-operator-bundle
+  - image: icr.io/cpopen/ibm-mq-operator-catalog
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
