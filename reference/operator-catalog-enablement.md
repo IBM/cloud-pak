@@ -2,7 +2,7 @@
 
 IBM provides a catalog of product offerings in the form of a `catalog index image`.  The catalog image can be enabled on a Red Hat OpenShift 4.6 or later cluster via a `CatalogSource` resource, in order to show IBM offerings in the Red Hat OpenShift operator catalog. 
 
-On OpenShift clusters running 4.8 and prior, the catalog tag in the CatalogSource is set to `latest` in order to obtain the latest version of the catalog. On OpenShift clusters 4.9 and greater the `olm.catalogImageTemplate` annotation is used to switch the catalog tag from `latest` to different tag based on the Kubernetes version used by the cluster. This allows the catalog to be automatically switched to a catalog that is compatible with the cluster whenever the cluster is updated to a new Kubernetes version. For example for OpenShift 4.9, the tag will be updated to `v1.22` instead of `latest`.
+On OpenShift clusters running 4.8 and prior, the catalog tag in the CatalogSource is set to `latest` in order to obtain the latest version of the catalog. On OpenShift clusters 4.9 and greater the `olm.catalogImageTemplate` annotation is used to switch the catalog tag from `latest` to different tag based on the Kubernetes version used by the cluster. This allows the catalog to be automatically switched to a catalog that is compatible with the cluster whenever the cluster is updated to a new Kubernetes version. For example for OpenShift 4.9, the tag will be updated to `v1.22` instead of `latest`. On OpenShift clusters prior to 4.9, the `olm.catalogImageTemplate` annotation has no effect.
 
 ### Command Line Enablement
 
