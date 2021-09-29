@@ -1,0 +1,3 @@
+patch deployment dods-ibm-dods-prod-dd-scenario-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dd-scenario-api-container","image": "{{.DockerRegistryPrefix}}/dd-scenario-api:3.0.36-ppc64le"}]}}}}'
+patch deployment dods-ibm-dods-prod-dd-scenario-ui --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dd-scenario-ui-container","image": "{{.DockerRegistryPrefix}}/dd-scenario-ui:3.0.9-ppc64le"}]}}}}'
+patch deployment dods-ibm-dods-prod-dd-cognitive --patch '{"spec": {"template": {"spec": {"containers": [{"name": "dd-cognitive-container","image": "{{.DockerRegistryPrefix}}/dd-cognitive:3.0.13-ppc64le"}]}}}}'
