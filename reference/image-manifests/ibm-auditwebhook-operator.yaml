@@ -1,6 +1,9 @@
 source: ibm-auditwebhook-operator-case-bundle/case/ibm-auditwebhook-operator/case.yaml
 description: "IBM Cloudpak Open Operator for Audit Webhook"
 images:
+  - image: cp/opencontent-audit-webhook
+  - image: cp/opencontent-fluentd
+  - image: cp/opencontent-kube-rbac-proxy
   - image: icr.io/cpopen/ibm-auditwebhook-operator
   - image: icr.io/cpopen/ibm-auditwebhook-operator-bundle
   - image: icr.io/cpopen/ibm-auditwebhook-operator-catalog
