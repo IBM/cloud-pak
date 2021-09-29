@@ -1,6 +1,7 @@
 source: ibm-model-train-operator-bundle/case/ibm-model-train-operator/case.yaml
 description: "IBM cloudpak operator for training with Model Train"
 images:
+  - image: cp/cpd/postgresql
   - image: cp/modeltrain/coordinator
   - image: cp/modeltrain/databroker-s3
   - image: cp/modeltrain/jobmonitor
