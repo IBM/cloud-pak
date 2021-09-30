@@ -1,6 +1,26 @@
 source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
 description: "Management operator for IBM Spectrum Fusion"
 images:
+  - image: cp/isf/callhomeclient
+  - image: cp/isf/eventmanager
+  - image: cp/isf/eventmanager-snmp3
+  - image: cp/isf/isf-bkprstr-operator
+  - image: cp/isf/isf-compute-operator
+  - image: cp/isf/isf-ics-operator
+  - image: cp/isf/isf-installer-operator
+  - image: cp/isf/isf-management-ui
+  - image: cp/isf/isf-network-operator
+  - image: cp/isf/isf-node-exporter
+  - image: cp/isf/isf-operator-bundle
+  - image: cp/isf/isf-operator-index
+  - image: cp/isf/isf-proxy
+  - image: cp/isf/isf-serviceability-operator
+  - image: cp/isf/isf-snmp-exporter
+  - image: cp/isf/isf-storage-operator
+  - image: cp/isf/isf-storage-services
+  - image: cp/isf/isf-ui-operator
+  - image: cp/isf/isf-update-operator
+  - image: cp/isf/logcollector
   - image: gcr.io/kubebuilder/kube-rbac-proxy
   - image: icr.io/
   - image: icr.io/
@@ -24,23 +44,3 @@ images:
   - image: icr.io/cp/isf/isf-ui-operator
   - image: icr.io/cp/isf/isf-update-operator
   - image: icr.io/cp/isf/logcollector
-  - image: cp/isf/callhomeclient
-  - image: cp/isf/eventmanager
-  - image: cp/isf/eventmanager-snmp3
-  - image: cp/isf/isf-bkprstr-operator
-  - image: cp/isf/isf-compute-operator
-  - image: cp/isf/isf-ics-operator
-  - image: cp/isf/isf-installer-operator
-  - image: cp/isf/isf-management-ui
-  - image: cp/isf/isf-network-operator
-  - image: cp/isf/isf-node-exporter
-  - image: cp/isf/isf-operator-bundle
-  - image: cp/isf/isf-operator-index
-  - image: cp/isf/isf-proxy
-  - image: cp/isf/isf-serviceability-operator
-  - image: cp/isf/isf-snmp-exporter
-  - image: cp/isf/isf-storage-operator
-  - image: cp/isf/isf-storage-services
-  - image: cp/isf/isf-ui-operator
-  - image: cp/isf/isf-update-operator
-  - image: cp/isf/logcollector
