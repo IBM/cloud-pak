@@ -1,8 +1,13 @@
 source: ibm-fhir-server-case-bundle/case/ibm-fhir-server-case/case.yaml
 description: "IBM FHIR Server for CloudPak CASE that deploys an Operator"
 images:
+  - image: cp/ibm-fhir-server-app
+  - image: cp/ibm-fhir-server-init
   - image: ibmcom/ibm-fhir-schematool
   - image: ibmcom/ibm-fhir-server
   - image: ibmcom/ibm-fhir-server-operator
   - image: ibmcom/ibm-fhir-server-operator-bundle
   - image: ibmcom/ibm-fhir-server-operator-catalog
+  - image: icr.io/cpopen/ibm-fhir-server-operator
+  - image: icr.io/cpopen/ibm-fhir-server-operator-bundle
+  - image: icr.io/cpopen/ibm-fhir-server-operator-catalog
