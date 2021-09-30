@@ -1,0 +1,36 @@
+source: ibm-ftm-check-case-bundle/case/ibm-ftm-check/case.yaml
+description: "The case bundle for FTM Check"
+images:
+  - image: cp/ftm/base/ftm-ace-base
+  - image: cp/ftm/base/ftm-artifacts-base
+  - image: cp/ftm/base/ftm-j2ee-oac
+  - image: cp/ftm/base/ftm-mq
+  - image: cp/ftm/chk/ftm-artifacts-check
+  - image: cp/ftm/chk/ftm-j2ee-amountkeying-engine
+  - image: cp/ftm/chk/ftm-j2ee-autoadjust-engine
+  - image: cp/ftm/chk/ftm-j2ee-control-center-ui-check
+  - image: cp/ftm/chk/ftm-j2ee-dupdetect-engine
+  - image: cp/ftm/chk/ftm-j2ee-imagereview-engine
+  - image: cp/ftm/chk/ftm-j2ee-paymentrepair-engine
+  - image: cp/ftm/chk/ftm-j2ee-tcr-engine
+  - image: cp/ftm/chk/ftm-j2se-gateway-check
+  - image: cp/ftm/dp/ftm-j2ee-approvals-engine
+  - image: cp/ftm/dp/ftm-j2ee-business-rules-engine
+  - image: cp/ftm/dp/ftm-j2ee-distribution-engine
+  - image: cp/ftm/dp/ftm-j2ee-gateway-engine
+  - image: cp/ftm/dp/ftm-j2ee-services-engine
+  - image: cp/ftm/dp/ftm-j2ee-settlement-engine
+  - image: cp/ftm/dp/ftm-j2ee-webservices-businessrules
+  - image: cp/ftm/dp/ftm-j2ee-webservices-engine
+  - image: cp/ftm/dp/ftm-j2ee-webservices-gateway
+  - image: cp/ftm/dp/ftm-j2ee-webservices-pfs
+  - image: cp/ftm/dp/ftm-j2ee-webservices-pfs-txn
+  - image: cp/ftm/dp/ftm-j2se-brm
+  - image: cp/ftm/dp/ftm-j2se-brs
+  - image: cp/ftm/dp/ftm-j2se-its
+  - image: icr.io/cpopen/ibm-ftm-base-catalog
+  - image: icr.io/cpopen/ibm-ftm-base-operator
+  - image: icr.io/cpopen/ibm-ftm-base-operator-bundle
+  - image: icr.io/cpopen/ibm-ftm-check-catalog
+  - image: icr.io/cpopen/ibm-ftm-check-operator
+  - image: icr.io/cpopen/ibm-ftm-check-operator-bundle
