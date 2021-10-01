@@ -1,4 +1,4 @@
-source: ibm-apiconnect-v30-bundle/case/ibm-apiconnect/case.yaml
+source: ibm-apiconnect-bundle/case/ibm-apiconnect/case.yaml
 description: ""
 images:
   - image: cp/ai/ibm-ai-wmltraining-controller
@@ -59,6 +59,7 @@ images:
   - image: cp/apic/ibm-apiconnect-management-turnstile
   - image: cp/apic/ibm-apiconnect-management-ui
   - image: cp/apic/ibm-apiconnect-management-v10-upgrade
+  - image: cp/apic/ibm-apiconnect-management-websocket-proxy
   - image: cp/apic/ibm-apiconnect-management-ws-tunnel
   - image: cp/apic/ibm-apiconnect-portal-k8s-init
   - image: cp/apic/ibm-apiconnect-portal-openresty
@@ -66,6 +67,7 @@ images:
   - image: cp/apic/ibm-apiconnect-portal-portal-db
   - image: cp/apic/ibm-apiconnect-portal-portal-dbproxy
   - image: cp/apic/ibm-apiconnect-portal-portal-nginx
+  - image: cp/apic/ibm-apiconnect-portal-portal-remote
   - image: cp/apic/ibm-apiconnect-portal-portal-web
   - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
   - image: cp/datapower/datapower-prod
