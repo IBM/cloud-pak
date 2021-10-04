@@ -1,6 +1,14 @@
 source: ibm-informix-cp4d-operator-bundle/case/ibm-informix-cp4d-operator/case.yaml
 description: "Used to deploy Informix into IBM Cloud Pak for Data"
 images:
+  - image: cp/cpd/informix-api
+  - image: cp/cpd/informix-cm
+  - image: cp/cpd/informix-eng
+  - image: cp/cpd/informix-hq
+  - image: cp/cpd/informix-wl
   - image: icr.io/cpopen/ibm-informix-cp4d-operator
   - image: icr.io/cpopen/ibm-informix-cp4d-operator-bundle
   - image: icr.io/cpopen/ibm-informix-cp4d-operator-catalog
+  - image: icr.io/cpopen/ibm-informix-operator
+  - image: icr.io/cpopen/ibm-informix-operator-bundle
+  - image: icr.io/cpopen/ibm-informix-operator-catalog
