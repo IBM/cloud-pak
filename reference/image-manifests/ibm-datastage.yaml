@@ -1,15 +1,42 @@
 source: ibm-datastage-bundle/case/ibm-datastage/case.yaml
 description: "IBM InfoSphere Information Server for DataStage V11.7"
 images:
+  - image: cp/cpd/asset-files-api
   - image: cp/cpd/cassandra-ubi8-x86_64
   - image: cp/cpd/cassandra-x86_64
+  - image: cp/cpd/catalog-api-aux_master
+  - image: cp/cpd/catalog_master
+  - image: cp/cpd/couchdb3
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/dap-base-job
+  - image: cp/cpd/dap-dashboards-api
+  - image: cp/cpd/dataview-api-service
+  - image: cp/cpd/dc-main
+  - image: cp/cpd/ds-api-doc
+  - image: cp/cpd/ds-canvas
+  - image: cp/cpd/ds-cas-lite
+  - image: cp/cpd/ds-codegen
   - image: cp/cpd/ds-entitlement-image
+  - image: cp/cpd/ds-flows
+  - image: cp/cpd/ds-migration
   - image: cp/cpd/ds-nginx-proxy
+  - image: cp/cpd/ds-paramsets
+  - image: cp/cpd/ds-px-compute
+  - image: cp/cpd/ds-px-runtime
+  - image: cp/cpd/ds-runtime
+  - image: cp/cpd/ds-xml-schema-library
+  - image: cp/cpd/dsx-requisite
+  - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environments-api
+  - image: cp/cpd/environments-init-job
+  - image: cp/cpd/environment-specifications-sync
+  - image: cp/cpd/environments-ui
+  - image: cp/cpd/event-logger-api
+  - image: cp/cpd/haproxy
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
@@ -18,13 +45,37 @@ images:
   - image: cp/cpd/is-en-compute-image
   - image: cp/cpd/is-engine-image
   - image: cp/cpd/is-services-image
+  - image: cp/cpd/jobs-api
+  - image: cp/cpd/jobs-ui
+  - image: cp/cpd/job-trigger
   - image: cp/cpd/kafka-ubi8-x86_64
   - image: cp/cpd/kafka-x86_64
+  - image: cp/cpd/ngp-projects-api
+  - image: cp/cpd/portal-catalog
+  - image: cp/cpd/portal-common-api
+  - image: cp/cpd/portal-dashboards
+  - image: cp/cpd/portal-job-manager
+  - image: cp/cpd/portal-main
+  - image: cp/cpd/portal-notifications
+  - image: cp/cpd/portal-projects
+  - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/privatecloud-usermgmt
+  - image: cp/cpd/qs-ruleset
+  - image: cp/cpd/rabbitmq
+  - image: cp/cpd/redis
   - image: cp/cpd/solr-ubi8-x86_64
   - image: cp/cpd/solr-x86_64
+  - image: cp/cpd/spaces
+  - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/wdp-connect-connection
+  - image: cp/cpd/wdp-connect-connector
+  - image: cp/cpd/wdp-connect-flight
+  - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wkc-ugconfig
+  - image: cp/cpd/wml-main
+  - image: cp/cpd/wmlrepositoryv4
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
@@ -59,6 +110,9 @@ images:
   - image: icr.io/cpopen/ds-operator
   - image: icr.io/cpopen/ds-operator-bundle
   - image: icr.io/cpopen/ds-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-iis-operator
   - image: icr.io/cpopen/ibm-cpd-iis-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-iis-operator-catalog
