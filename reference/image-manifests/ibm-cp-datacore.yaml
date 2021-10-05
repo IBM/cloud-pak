@@ -27,6 +27,7 @@ images:
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/asset-files-api-ppc64le
   - image: cp/cpd/audit-trail-service
+  - image: cp/cpd/backupdeployment
   - image: cp/cpd/bigsql-addon-7_1_1_0
   - image: cp/cpd/bigsql-engine-6_0_1_0
   - image: cp/cpd/bigsql-engine-7_1_1_0
@@ -105,7 +106,10 @@ images:
   - image: cp/cpd/dv-unifiedconsole
   - image: cp/cpd/elasticsearch
   - image: cp/cpd/environments
+  - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
+  - image: cp/cpd/environment-specifications-sync
+  - image: cp/cpd/environments-ui
   - image: cp/cpd/etcd
   - image: cp/cpd/etcd-db-3.2.7
   - image: cp/cpd/etcd-mgmt-3.2.7
@@ -125,7 +129,9 @@ images:
   - image: cp/cpd/eventstore-ci-ui-console
   - image: cp/cpd/eventstore-ci-zookeeper
   - image: cp/cpd/explainability
+  - image: cp/cpd/fdbcontroller
   - image: cp/cpd/fdb-kubernetes-operator
+  - image: cp/cpd/fdbrestore
   - image: cp/cpd/finley
   - image: cp/cpd/flow-api
   - image: cp/cpd/flow-session
@@ -259,6 +265,7 @@ images:
   - image: cp/cpd/nlq-search-extractor
   - image: cp/cpd/norootsquash
   - image: cp/cpd/notebooks
+  - image: cp/cpd/notebooks-job-manager
   - image: cp/cpd/odf-fast-analyzer-kube
   - image: cp/cpd/omag
   - image: cp/cpd/opencontent-common-utils
@@ -359,6 +366,7 @@ images:
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-db2
   - image: cp/cpd/wdp-lineage
+  - image: cp/cpd/wdp-notebooks-api
   - image: cp/cpd/wdp-policy-service
   - image: cp/cpd/wdp-profiling
   - image: cp/cpd/wdp-profiling-messaging
@@ -464,6 +472,7 @@ images:
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms
   - image: cp/cpd/wml-rt-mllib2.3
   - image: cp/cpd/wml-rt-mllib2.4
+  - image: cp/cpd/wml-rt-mllib3.0
   - image: cp/cpd/wml-rt-od-spss18.1
   - image: cp/cpd/wml-rt-rshiny0.1
   - image: cp/cpd/wmltrainingservicehydra
@@ -508,6 +517,7 @@ images:
   - image: cp/cpd/wslocal-x86-runtime-python36
   - image: cp/cpd/wslocal-x86-runtime-r36
   - image: cp/cpd/wslocal-x86-runtime-rstudio
+  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/zen-admin
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-content

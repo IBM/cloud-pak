@@ -27,7 +27,10 @@ images:
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
   - image: cp/cpd/environments
+  - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
+  - image: cp/cpd/environment-specifications-sync
+  - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/event-logger-api-ppc64le
   - image: cp/cpd/haproxy
@@ -45,6 +48,7 @@ images:
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/ngp-projects-api-ppc64le
   - image: cp/cpd/notebooks
+  - image: cp/cpd/notebooks-job-manager
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
   - image: cp/cpd/portal-common-api-ppc64le
@@ -85,6 +89,7 @@ images:
   - image: cp/cpd/wdp-connect-flight
   - image: cp/cpd/wdp-dataprep
   - image: cp/cpd/wdp-dataview
+  - image: cp/cpd/wdp-notebooks-api
   - image: cp/cpd/wdp-shaper
   - image: cp/cpd/wkc-init-container
   - image: cp/cpd/wkc-search_master
@@ -115,6 +120,7 @@ images:
   - image: cp/cpd/wslocal-x86-runtime-py37cuda
   - image: cp/cpd/wslocal-x86-runtime-py37main
   - image: cp/cpd/wslocal-x86-runtime-r36
+  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api

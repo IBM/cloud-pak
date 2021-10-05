@@ -1,6 +1,8 @@
 source: ibm-mongodb-enterprise-operator-bundle/case/ibm-mongodb-enterprise/case.yaml
 description: "IBM Mongodb Enterprise Operator"
 images:
+  - image: cp/cpd/ibm-cpd-mongodb-agent-ubi
+  - image: cp/cpd/ibm-cpd-mongodb-enterprise-appdb-database-ubi
   - image: cp/cpd/ibm-cpd-mongodb-enterprise-appdb-ubi
   - image: cp/cpd/ibm-cpd-mongodb-enterprise-database-ubi
   - image: cp/cpd/ibm-cpd-mongodb-enterprise-init-appdb-ubi
