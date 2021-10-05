@@ -2,10 +2,12 @@ source: ibm-watson-discovery-bundle/case/ibm-watson-discovery/case.yaml
 description: "IBM Watson Discovery Cartridge for IBM Cloud Pak for Data"
 images:
   - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
   - image: cp/modeltrain/coordinator
   - image: cp/modeltrain/databroker-s3
   - image: cp/modeltrain/jobmonitor
   - image: cp/modeltrain/lifecycle-manager-service
+  - image: cp/modeltrain/pod-coordinator
   - image: cp/modeltrain/ratelimiter
   - image: cp/modeltrain/trainer-v2-service
   - image: cp/opencontent-elasticsearch-6.8.14
@@ -84,6 +86,8 @@ images:
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
   - image: icr.io/cpopen/ibm-etcd-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-catalog
+  - image: icr.io/cpopen/ibm-model-train-dwf-operator
+  - image: icr.io/cpopen/ibm-model-train-dwf-operator-bundle
   - image: icr.io/cpopen/ibm-model-train-operator
   - image: icr.io/cpopen/ibm-model-train-operator-bundle
   - image: icr.io/cpopen/ibm-model-train-operator-catalog
