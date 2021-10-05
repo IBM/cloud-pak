@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 11.5.6.0-cn3
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: The IBM Db2 db2aaservice operator provides the Db2U Operator integration within Cloud Pak for Data
+  displayDescription: Case Bundle for the operator which deploys and manages the Db2 db2aaservice Database
+  displayName: IBM Db2 db2aaservice Operator Bundle for the Db2 Operator
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/db2logoicp-01.png
+  licenses:
+    cp4data:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License
+        displayName: Cloud Pak for Data License
+      ref: license-cp4d
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?la_formnum=&li_formnum=L-DNAA-BFX675
+  name: ibm-db2aaservice
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 4.0.3
+  webPage: https://www.ibm.com/analytics/db2
+created: 2021-10-05T16:31:20.10921431+0000
+digest: sha256:2ed095f3f8570b6c2ba331dba3c7b3d06d8175ef65a0aa1d465bc3f2d1fc812d
