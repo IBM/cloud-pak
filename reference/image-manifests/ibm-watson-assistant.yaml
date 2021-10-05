@@ -47,6 +47,7 @@ images:
   - image: cp/modeltrain/pod-coordinator
   - image: cp/modeltrain/ratelimiter
   - image: cp/modeltrain/trainer-v2-service
+  - image: cp/opencontent-audit-webhook
   - image: cp/opencontent-elasticsearch-6.8.13
   - image: cp/opencontent-elasticsearch-6.8.14
   - image: cp/opencontent-elasticsearch-7.10.2
@@ -62,7 +63,9 @@ images:
   - image: cp/opencontent-elasticsearch-operator
   - image: cp/opencontent-etcd-3
   - image: cp/opencontent-etcd-operator
+  - image: cp/opencontent-fluentd
   - image: cp/opencontent-icp-cert-gen-1
+  - image: cp/opencontent-kube-rbac-proxy
   - image: cp/opencontent-minio
   - image: cp/opencontent-minio-client
   - image: cp/opencontent-minio-operator
@@ -139,6 +142,9 @@ images:
   - image: ibmcom/ibm-cloud-databases-redis-operator
   - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/ibm-auditwebhook-operator
+  - image: icr.io/cpopen/ibm-auditwebhook-operator-bundle
+  - image: icr.io/cpopen/ibm-auditwebhook-operator-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
