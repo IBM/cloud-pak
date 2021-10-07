@@ -1,0 +1,32 @@
+source: ibm-uds-bundle/case/ibm-uds/case.yaml
+description: "User Data Services Operator is a service that collects, transforms and transmits product usage data."
+images:
+  - image: cp/uds/airgap-service
+  - image: cp/uds/airgap-uploader
+  - image: cp/uds/event-api
+  - image: cp/uds/event-reader
+  - image: cp/uds/event-scheduler
+  - image: cp/uds/prometheus-scheduler
+  - image: cp/uds/reverse-proxy
+  - image: cp/uds/store-api
+  - image: cp/uds/uds-dashboard
+  - image: cp/uds/uds-growth-stack-base
+  - image: cp/uds/uds-submodule
+  - image: icr.io/cpopen/ibm-user-data-services-catalog
+  - image: icr.io/cpopen/ibm-user-data-services-operator
+  - image: icr.io/cpopen/ibm-user-data-services-operator-bundle
+  - image: registry.connect.redhat.com/crunchydata/crunchy-pgbackrest
+  - image: registry.connect.redhat.com/crunchydata/crunchy-pgbouncer
+  - image: registry.connect.redhat.com/crunchydata/crunchy-postgres-exporter
+  - image: registry.connect.redhat.com/crunchydata/crunchy-postgres-gis-ha
+  - image: registry.connect.redhat.com/crunchydata/crunchy-postgres-ha
+  - image: registry.connect.redhat.com/crunchydata/postgres-operator
+  - image: registry.connect.redhat.com/crunchydata/postgres-operator-bundle
+  - image: registry.redhat.io/openshift3/ose-kube-state-metrics
+  - image: registry.redhat.io/openshift4/ose-cli
+  - image: registry.redhat.io/openshift4/ose-grafana
+  - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
+  - image: registry.redhat.io/openshift4/ose-oauth-proxy
+  - image: registry.redhat.io/rhel8/postgresql-12
+  - image: registry.redhat.io/ubi8/nodejs-12
+  - image: registry.redhat.io/ubi8/ubi
