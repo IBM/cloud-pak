@@ -1,0 +1,17 @@
+source: ibm-apicatalog-bundle/case/ibm-apicatalog/case.yaml
+description: "IBM® API Catalog operator"
+images:
+  - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-catalog
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: quay.io/opencloudio/ibm-apicatalog-management-apidiscovery-controller
+  - image: quay.io/opencloudio/ibm-apicatalog-management-apim
+  - image: quay.io/opencloudio/ibm-apicatalog-management-bedrock-consumer-ui
+  - image: quay.io/opencloudio/ibm-apicatalog-management-juhu
+  - image: quay.io/opencloudio/ibm-apicatalog-management-k8s-init
+  - image: quay.io/opencloudio/ibm-apicatalog-management-lur
+  - image: quay.io/opencloudio/ibm-apicatalog-operator
+  - image: quay.io/opencloudio/ibm-apicatalog-operator-bundle
+  - image: quay.io/opencloudio/ibm-apicatalog-operator-catalog
