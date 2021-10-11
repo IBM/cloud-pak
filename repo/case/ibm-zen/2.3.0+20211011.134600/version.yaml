@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 3.11.0
+  catalogs:
+    ai: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: An all-in-one cloud-native Data and AI platform in a box, providing a preconfigured, governed, and secure environment to collect, organize and analyze data.
+  displayDescription: ""
+  displayName: Cloud Pak for Data lite module
+  icons:
+  - mediaType: image/svg
+    url: https://globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/icp4data.svg
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4data:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License
+        displayName: Cloud Pak for Data License
+      ref: license-en
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?la_formnum=&li_formnum=L-DNAA-BFX675
+  name: ibm-zen
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 2.3.0+20211011.134600
+  webPage: https://docs-icpdata.mybluemix.net/home
+created: 2021-10-11T23:07:39.18569483+0000
+digest: sha256:6e1d5d2253b5bba7fbc52a5ea0f21f1d90ffd6841f13dc24efaab2190e2caaaa
