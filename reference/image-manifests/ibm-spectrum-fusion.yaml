@@ -1,6 +1,7 @@
 source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
 description: "Management operator for IBM Spectrum Fusion"
 images:
+  - image: 
   - image: cp/isf/callhomeclient
   - image: cp/isf/eventmanager
   - image: cp/isf/eventmanager-snmp3
@@ -22,7 +23,6 @@ images:
   - image: cp/isf/isf-update-operator
   - image: cp/isf/logcollector
   - image: gcr.io/kubebuilder/kube-rbac-proxy
-  - image: icr.io/
   - image: icr.io/
   - image: icr.io/cp/isf/callhomeclient
   - image: icr.io/cp/isf/eventmanager
