@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 2.1.0
+  catalogs:
+    deploy: {}
+    tools: {}
+  certifications:
+    ibmmc: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: The IBM Operator Catalog is an index of operators available to automate deployment and maintenance of IBM products into Red Hat® OpenShift® clusters.  Operators within this catalog have been built following Kubernetes best practices and IBM standards to provide a consistent integrated set of capabilities.
+  displayDescription: IBM Operator Catalog to automate deployment and maintenance of IBM Products into Red Hat® OpenShift® clusters.
+  displayName: IBM Operator Catalog
+  icons: []
+  licenses:
+    apache:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: License for CASE artifacts
+        displayName: Apache
+        name: apache
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0
+  name: ibm-operator-catalog-enablement
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        semver: '>=4.4'
+  version: 1.2.2
+  webPage: https://github.com/IBM/cloud-pak/blob/master/reference/operator-catalog-enablement.md#red-hat-catalog-enablement-for-the-ibm-operator-catalog
+created: 2021-10-19T04:37:38.62964384+0000
+digest: sha256:482bc5bdaadf68f087732ecfcd712d0eea6df87465d59e0907b733b02acec71d
