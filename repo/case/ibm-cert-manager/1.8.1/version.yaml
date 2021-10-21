@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 3.14.1
+  catalogs:
+    security: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: A CASE for IBM certified cert-manager operator
+  displayDescription: ""
+  displayName: IBM Cert Manager CASE
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-cert-manager
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.8.1
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2021-10-21T20:03:13.13626665+0000
+digest: sha256:9c42a9b3879562bb81531042edc7a2547d5e1d90dddb478ef9d9fdd176c7c95f
