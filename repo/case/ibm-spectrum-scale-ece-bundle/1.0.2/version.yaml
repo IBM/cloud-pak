@@ -1,0 +1,34 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.1.4
+  catalogs:
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Represents a deployment of a container native IBM Spectrum Scale cluster with the Erasure Code Edition
+  displayDescription: Represents a deployment of a container native IBM Spectrum Scale cluster
+  displayName: IBM Spectrum Scale Container Native Storage Version
+  icons: []
+  licenses:
+    spectrumscale:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Spectrum Scale Container Native Erasure Code Edition, version 5.1.1.4
+        displayName: IBM Spectrum Scale Container Native Erasure Code Edition
+      ref: license
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?l=en&popup=y&li_formnum=L-CPES-C5HT84&title=IBM%20License%20Agreement
+  name: ibm-spectrum-scale-ece-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.2
+  webPage: https://www.ibm.com/docs/en/scalecontainernative
+created: 2021-10-22T21:11:23.50053482+0000
+digest: sha256:3889620f84a2be8b28b89bd3dc90116984a159d13d55c44faeff8ef54f7cec3a
