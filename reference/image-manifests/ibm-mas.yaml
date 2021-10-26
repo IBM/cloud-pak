@@ -131,16 +131,20 @@ images:
   - image: cp/monitor/rest-master
   - image: cp/monitor/rest-meta
   - image: cp/predict/hook-ca-predict
+  - image: cp/predict/ibm-mas-predict-ws
   - image: cp/predict/predict-api
   - image: cp/predict/predict-workspaceagent
   - image: cp/safety/hook-ca-safety
+  - image: cp/safety/ibm-mas-safety-ws
   - image: cp/safety/safety-api
   - image: cp/safety/safety-ui
   - image: cp/safety/safety-usersyncagent
   - image: cp/safety/safety-workspaceagent
   - image: cp/sls/api-licensing
   - image: cp/sls/rlks
+  - image: cp/visualinspection/vision-dle
   - image: cp/visualinspection/vision-dnn-actiondetect
+  - image: cp/visualinspection/vision-dnn-anomaly
   - image: cp/visualinspection/vision-dnn-custom
   - image: cp/visualinspection/vision-dnn-custom-deploy
   - image: cp/visualinspection/vision-dnn-deploy
@@ -216,6 +220,22 @@ images:
   - image: cp/wiotp/historian-configuration-manager
   - image: cp/wiotp/historian-connector
   - image: cp/wiotp/hook-ca-iot
+  - image: cp/wiotp/ibm-iot-actions
+  - image: cp/wiotp/ibm-iot-auth
+  - image: cp/wiotp/ibm-iot-datapower
+  - image: cp/wiotp/ibm-iot-devops
+  - image: cp/wiotp/ibm-iot-dm
+  - image: cp/wiotp/ibm-iot-dsc
+  - image: cp/wiotp/ibm-iot-guardian
+  - image: cp/wiotp/ibm-iot-mbgx
+  - image: cp/wiotp/ibm-iot-mfgx
+  - image: cp/wiotp/ibm-iot-monitor
+  - image: cp/wiotp/ibm-iot-orgmgmt
+  - image: cp/wiotp/ibm-iot-provision
+  - image: cp/wiotp/ibm-iot-registry
+  - image: cp/wiotp/ibm-iot-state
+  - image: cp/wiotp/ibm-iot-webui
+  - image: cp/wiotp/ibm-iot-workspace
   - image: cp/wiotp/iot-actions-operator
   - image: cp/wiotp/iot-auth-operator
   - image: cp/wiotp/iot-datapower-operator
@@ -274,12 +294,21 @@ images:
   - image: icr.io/cpopen/ibm-mas-assist
   - image: icr.io/cpopen/ibm-mas-assist-operator-bundle
   - image: icr.io/cpopen/ibm-mas-assist-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-iot
+  - image: icr.io/cpopen/ibm-mas-iot-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-iot-operator-catalog
   - image: icr.io/cpopen/ibm-mas-manage
   - image: icr.io/cpopen/ibm-mas-manage-operator-bundle
   - image: icr.io/cpopen/ibm-mas-manage-operator-catalog
   - image: icr.io/cpopen/ibm-mas-manage-webhook
   - image: icr.io/cpopen/ibm-mas-operator-bundle
   - image: icr.io/cpopen/ibm-mas-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-predict
+  - image: icr.io/cpopen/ibm-mas-predict-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-predict-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-safety
+  - image: icr.io/cpopen/ibm-mas-safety-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-safety-operator-catalog
   - image: icr.io/cpopen/ibm-mas-visualinspection
   - image: icr.io/cpopen/ibm-mas-visualinspection-operator-bundle
   - image: icr.io/cpopen/ibm-mas-visualinspection-operator-catalog
