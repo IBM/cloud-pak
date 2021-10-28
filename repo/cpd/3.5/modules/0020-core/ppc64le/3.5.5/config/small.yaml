@@ -1,0 +1,25 @@
+toleratedCommands:
+  - command: scale --replicas=2 deployment zen-core
+  - command: scale --replicas=2 deployment zen-core-api
+  - command: scale --replicas=1 deployment zen-watchdog
+  - command: scale --replicas=1 deployment zen-watcher
+  - command: scale --replicas=1 deployment zen-data-sorcerer
+  - command: scale --replicas=1 deployment zen-audit
+  - command: set resources deployment zen-core --requests=cpu=100m,memory=256Mi --limits=cpu=500m,memory=512Mi
+    toleratedRegularExpressions:
+      -  was not changed
+  - command: set resources deployment zen-core-api --requests=cpu=100m,memory=256Mi --limits=cpu=500m,memory=1024Mi
+    toleratedRegularExpressions:
+      -  was not changed
+  - command: set resources deployment zen-watchdog --requests=cpu=100m,memory=128Mi --limits=cpu=500m,memory=512Mi
+    toleratedRegularExpressions:
+      -  was not changed
+  - command: set resources deployment zen-watcher --requests=cpu=100m,memory=256Mi --limits=cpu=1000m,memory=2048Mi
+    toleratedRegularExpressions:
+      -  was not changed
+  - command: set resources deployment zen-data-sorcerer --requests=cpu=30m,memory=128Mi --limits=cpu=100m,memory=256Mi
+    toleratedRegularExpressions:
+      -  was not changed
+  - command: set resources deployment zen-audit --requests=cpu=50m,memory=128Mi --limits=cpu=50m,memory=256Mi
+    toleratedRegularExpressions:
+      -  was not changed

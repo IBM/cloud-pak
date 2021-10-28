@@ -1,0 +1,20 @@
+type: module
+category: helm-chart
+name: Watson Studio Local RStudio module
+description: "This is the RStudio module for Watson Studio Local"
+registry-reference: base-registry
+images:
+- name: wslocal-rstudio-init
+  tag: cpd350-113-amd64
+- name: wslocal-runtime-rstudio
+  tag: cpd350-519-amd64
+- name: wslocal-runtime-shiny
+  tag: cpd350-271-amd64
+chart: ibm-ws-rstudio-3.5.6.tgz
+md5: 7d7960c5d036c5f16db09d56c81b6686
+timeout: 60
+releaseName: ibm-ws-rstudio
+scale:
+- small.yaml
+- medium.yaml
+helmUpgradeForce: true
