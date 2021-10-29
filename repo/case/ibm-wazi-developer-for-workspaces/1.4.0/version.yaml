@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 1.4.0
+  catalogs:
+    development: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Personal z/OS cloud IDE for development and testing.
+  displayDescription: ""
+  displayName: IBM Wazi Developer for Workspaces
+  icons: []
+  licenses:
+    ipla:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+  name: ibm-wazi-developer-for-workspaces
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.4.0
+  webPage: https://ibm.biz/wazi-crw-doc
+created: 2021-10-29T13:41:29.70387187+0000
+digest: sha256:09a9b9d3a33bc089190052e76a53d3515d0269b46a8cf28574d2d148a130d508
