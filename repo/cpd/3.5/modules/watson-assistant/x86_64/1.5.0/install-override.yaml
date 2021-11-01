@@ -89,7 +89,7 @@ watsonAssistant:
   analytics:
     crossInstanceQueryScope:
       enabled: "false"
-  appConfigOverrides: |-4
+  appConfigOverrides: |
     # Preserve this line and the the |-4 specifier above, also note that contraintuitively all the entries MUST BE INDENTED by 6 initial spaces.
     # The above is required, becase the cpd-cli have very,very limited templating support.
     #   We have to use this "specified as multiline string" work-arround/hack to be able to provide arbitrary override data.
@@ -98,3 +98,71 @@ watsonAssistant:
     #container_images:
     #  store:
     #    tag: 20201028-111825-43892a
+      etcd:
+        resources:
+          limits:
+            cpu: 4000m
+            memory: 512Mi
+          requests:
+            cpu: 15m
+            memory: 512Mi
+      redis:
+        resources:
+          member:
+            db:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 4000m
+                memory: 256Mi
+            mgmt:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
+            proxy:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
+            proxylog:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
+          sentinel:
+            db:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
+            mgmt:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
+            proxy:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
+            proxylog:
+              requests:
+                cpu: 50m
+                memory: 256Mi
+              limits:
+                cpu: 2000m
+                memory: 256Mi
