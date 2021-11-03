@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 1.8.1-0
+  catalogs:
+    cloudpak: {}
+    middleware: {}
+    operators: {}
+    security: {}
+  certifications:
+    ibmccp: {}
+  classifications:
+    commercial: {}
+  description: Integrate existing security tools to gain deeper insights into threats and risks, orchestrate actions and automate responses
+  displayDescription: ""
+  displayName: Cloud Pak for Security
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: https://raw.githubusercontent.com/IBM/charts/master/entitled/ibm-security-foundations-prod/ibm_cloud_pak/pak_extensions/logo/IBM-Security-icon.png
+  licenses:
+    licenses:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenses
+      ref: LICENSE-en
+  name: ibm-cp-security
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      amazon: {}
+      ibm-roks: {}
+      ibm-satellite: {}
+      microsoft: {}
+      redhat: {}
+      vmware: {}
+  version: 1.0.21
+  webPage: https://www.ibm.com
+created: 2021-11-03T15:23:10.31336356+0000
+digest: sha256:a14c4882fcd3efe7fd778e80996b0acffd3ffce1a2ff0b7bec3334f767feebbd
