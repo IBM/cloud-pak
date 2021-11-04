@@ -45,6 +45,7 @@ images:
   - image: cp/cp4waiops/ea-events-tooling
   - image: cp/cp4waiops/ea-mime-classification-service
   - image: cp/cp4waiops/ea-noigateway-ee
+  - image: cp/cp4waiops/elastic-archiving-service
   - image: cp/cp4waiops/elasticindices
   - image: cp/cp4waiops/elasticsearch-curator
   - image: cp/cp4waiops/event-gateway-cem
@@ -73,6 +74,11 @@ images:
   - image: cp/cp4waiops/hdm-scheduling-ui
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-7.10.2
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-operator
+  - image: cp/cp4waiops/ibm-consul
+  - image: cp/cp4waiops/ibm-model-train-operator
+  - image: cp/cp4waiops/ibm-stolon
+  - image: cp/cp4waiops/ibm-vault
+  - image: cp/cp4waiops/ibm-vault-k8s
   - image: cp/cp4waiops/inference-service
   - image: cp/cp4waiops/ingestion-service
   - image: cp/cp4waiops/jobmonitor
@@ -82,6 +88,8 @@ images:
   - image: cp/cp4waiops/kong-ingress-controller
   - image: cp/cp4waiops/kubectl
   - image: cp/cp4waiops/lifecycle-manager-service
+  - image: cp/cp4waiops/lifecycle-policy
+  - image: cp/cp4waiops/lifecycle-trigger
   - image: cp/cp4waiops/log-anomaly
   - image: cp/cp4waiops/log-anomaly-training
   - image: cp/cp4waiops/logstash
@@ -110,6 +118,7 @@ images:
   - image: cp/cp4waiops/nasm-dynatrace-observer
   - image: cp/cp4waiops/nasm-elasticsearch
   - image: cp/cp4waiops/nasm-file-observer
+  - image: cp/cp4waiops/nasm-github-observer
   - image: cp/cp4waiops/nasm-googlecloud-observer
   - image: cp/cp4waiops/nasm-ibmcloud-observer
   - image: cp/cp4waiops/nasm-itnm-observer
@@ -179,7 +188,10 @@ images:
   - image: cp/cp4waiops/openjdk-11
   - image: cp/cp4waiops/persistence-service
   - image: cp/cp4waiops/policy-registry-service
+  - image: cp/cp4waiops/probable-cause
   - image: cp/cp4waiops/ratelimiter
+  - image: cp/cp4waiops/secure-tunnel
+  - image: cp/cp4waiops/secure-tunnel-ui
   - image: cp/cp4waiops/servicemonitor
   - image: cp/cp4waiops/similar-incidents-service
   - image: cp/cp4waiops/similar-incidents-training
@@ -200,7 +212,20 @@ images:
   - image: cp/iaf-flink
   - image: cp/iaf-health-service
   - image: cp/iaf-ui-customization
+  - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/opencontent-etcd-3
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
+  - image: ibmcom/couchdb2
+  - image: ibmcom/couchdb3
+  - image: ibmcom/couchdb-operator
+  - image: ibmcom/couchdb-operator-mgmt
   - image: ibmcom/iaf-ai-operator
   - image: ibmcom/iaf-ai-operator-bundle
   - image: ibmcom/iaf-base-operator
@@ -214,12 +239,20 @@ images:
   - image: ibmcom/iaf-flink-operator
   - image: ibmcom/iaf-flink-operator-bundle
   - image: ibmcom/ibm-automation-foundation-core-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-cp-automation-foundation-catalog
   - image: icr.io/cpopen/aiops-orchestrator-catalog
+  - image: icr.io/cpopen/asm-operator
+  - image: icr.io/cpopen/asm-operator-bundle
+  - image: icr.io/cpopen/asm-operator-catalog
   - image: icr.io/cpopen/camel-k
   - image: icr.io/cpopen/camel-k-operator-bundle
   - image: icr.io/cpopen/connector-utilities-operator
+  - image: icr.io/cpopen/couchdb-operator
+  - image: icr.io/cpopen/couchdb-operator-bundle
+  - image: icr.io/cpopen/couchdb-operator-catalog
   - image: icr.io/cpopen/iaf-ai-operator
   - image: icr.io/cpopen/iaf-ai-operator-bundle
   - image: icr.io/cpopen/iaf-base-operator
@@ -232,7 +265,17 @@ images:
   - image: icr.io/cpopen/iaf-eventprocessing-operator-bundle
   - image: icr.io/cpopen/iaf-flink-operator
   - image: icr.io/cpopen/iaf-flink-operator-bundle
+  - image: icr.io/cpopen/ibm-aiops-analytics-operator-bundle
+  - image: icr.io/cpopen/ibm-aiops-analytics-operator-catalog
   - image: icr.io/cpopen/ibm-aiops-bundle
+  - image: icr.io/cpopen/ibm-aiopsedge-operator
+  - image: icr.io/cpopen/ibm-aiopsedge-operator-bundle
+  - image: icr.io/cpopen/ibm-aiopsedge-operator-catalog
+  - image: icr.io/cpopen/ibm-aiops-ir-core-operator
+  - image: icr.io/cpopen/ibm-aiops-ir-core-operator-bundle
+  - image: icr.io/cpopen/ibm-aiops-ir-core-operator-catalog
+  - image: icr.io/cpopen/ibm-aiops-lifecycle-operator-bundle
+  - image: icr.io/cpopen/ibm-aiops-lifecycle-operator-catalog
   - image: icr.io/cpopen/ibm-aiops-orchestrator
   - image: icr.io/cpopen/ibm-aiops-orchestrator-bundle
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator
@@ -243,8 +286,12 @@ images:
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
   - image: icr.io/cpopen/ibm-camelk-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
   - image: icr.io/cpopen/ibm-connector-utilities-bundle
+  - image: icr.io/cpopen/ibm-cp4waiops-watson-aiops-ui-operator
   - image: icr.io/cpopen/ibm-cp4waiops-watson-aiops-ui-operator-bundle
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
   - image: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog
@@ -253,19 +300,33 @@ images:
   - image: icr.io/cpopen/ibm-kong-operator
   - image: icr.io/cpopen/ibm-kong-operator-bundle-catalog
   - image: icr.io/cpopen/ibm-management-kong-bundle
+  - image: icr.io/cpopen/ibm-management-kong-catalog
+  - image: icr.io/cpopen/ibm-management-kong-operator-bundle
   - image: icr.io/cpopen/ibm-netcool-integrations-operator
   - image: icr.io/cpopen/ibm-netcool-integrations-operator-bundle
   - image: icr.io/cpopen/ibm-netcool-integrations-operator-catalog
+  - image: icr.io/cpopen/ibm-postgreservice-operator
+  - image: icr.io/cpopen/ibm-postgreservice-operator-bundle
+  - image: icr.io/cpopen/ibm-postgreservice-operator-catalog
+  - image: icr.io/cpopen/ibm-secure-tunnel-operator
+  - image: icr.io/cpopen/ibm-secure-tunnel-operator-bundle
+  - image: icr.io/cpopen/ibm-secure-tunnel-operator-catalog
+  - image: icr.io/cpopen/ibm-vault-operator
+  - image: icr.io/cpopen/ibm-vault-operator-bundle
+  - image: icr.io/cpopen/ibm-vault-operator-catalog
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator-bundle
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog
   - image: icr.io/cpopen/ibm-watson-aiops-ui-catalog
   - image: icr.io/cpopen/ibm-watson-aiops-ui-operator-bundle
   - image: icr.io/cpopen/ibm-watson-connector-utilities-catalog
+  - image: icr.io/cpopen/ir-ai-operator
+  - image: icr.io/cpopen/lifecycle-operator
   - image: icr.io/cpopen/noi-operator
   - image: icr.io/cpopen/noi-operator-bundle
   - image: icr.io/cpopen/noi-operator-catalog
   - image: icr.io/cpopen/opencontent-etcd-operator
+  - image: icr.io/cpopen/openjdk-11
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
@@ -274,6 +335,8 @@ images:
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
+  - image: quay.io/opencloudio/couchdb3
+  - image: quay.io/opencloudio/couchdb-operator-mgmt
   - image: quay.io/opencloudio/cp4d-tiller
   - image: quay.io/opencloudio/cs-mongodb-br
   - image: quay.io/opencloudio/curl
