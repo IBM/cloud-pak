@@ -1,0 +1,9 @@
+source: ibm-vault-operator-case-bundle/case/ibm-vault-operator/case.yaml
+description: "This case is used to install Hashicorp Vault into Kubernetes cluster."
+images:
+  - image: cp/cp4waiops/ibm-consul
+  - image: cp/cp4waiops/ibm-vault
+  - image: cp/cp4waiops/ibm-vault-k8s
+  - image: icr.io/cpopen/ibm-vault-operator
+  - image: icr.io/cpopen/ibm-vault-operator-bundle
+  - image: icr.io/cpopen/ibm-vault-operator-catalog
