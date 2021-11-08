@@ -1,0 +1,59 @@
+apiVersion: v1
+case:
+  appVersion: 6.2.1.0
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+    sccm: {}
+  description: Helm Chart for deploying IBM Sterling Control Center Monitor on a containerized platform
+  displayDescription: Helm Chart for deploying IBM Sterling Control Center Monitor on a containerized platform
+  displayName: IBM Sterling Control Center Monitor CASE
+  icons:
+  - url: https://www.ibm.com/support/knowledgecenter/SS4Q96_6.1.3/com.ibm.help.scc.doc/com.ibm.help.scc.overview.doc/accent_graphics/L1_Product-Overview.gif
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenseEn
+      ref: LA_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+  name: ibm-sccm
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.3
+  webPage: https://www.ibm.com/support/knowledgecenter/en/SS4Q96_6.2.0/ccm_6.2_welcome.html
+created: 2021-11-08T22:15:01.00143632+0000
+digest: sha256:9ec2b856e35c6eaadbe9a8120fffa9462eed7d211cdd4ee678690f93bb5f8cf4
