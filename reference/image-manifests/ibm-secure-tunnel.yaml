@@ -1,6 +1,7 @@
 source: ibm-secure-tunnel-case-bundle/case/ibm-secure-tunnel/case.yaml
 description: "This case is used to install ibm-management-secure-tunnel into k8s cluster."
 images:
+  - image: cp/cp4mcm/cp4mcm-operator-catalog
   - image: cp/cp4mcm/ibm-secure-tunnel-operator
   - image: cp/cp4mcm/secure-tunnel
   - image: cp/cp4mcm/tunnel-ui
