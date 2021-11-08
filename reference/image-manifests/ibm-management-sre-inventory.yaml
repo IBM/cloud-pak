@@ -1,6 +1,7 @@
 source: ibm-sre-inventory-case-bundle/case/ibm-management-sre-inventory/case.yaml
 description: "A CASE for an operator which deploy SRE Inventory"
 images:
+  - image: cp/cp4mcm/cp4mcm-operator-catalog
   - image: cp/cp4mcm/ibm-sre-inventory-operator
   - image: cp/cp4mcm/kubectl
   - image: cp/cp4mcm/sre-aggregator
