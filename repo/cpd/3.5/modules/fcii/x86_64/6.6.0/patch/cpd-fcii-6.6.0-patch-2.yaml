@@ -1,0 +1,10 @@
+images:
+- fcii-common-scripts:6.6.0-PATCH1
+- fcii-ui:6.6.0-PATCH2
+patchFile: patchCommands.txt
+resourcesChanged:
+- kind: Job
+  name: fcii-ibm-fci-claims-fraud-prod-post-upgrade
+- kind: Deploy
+  name: fcii-ibm-fci-claims-fraud-prod-liberty
+description: "Patch 2 for FCII 6.6.0"
