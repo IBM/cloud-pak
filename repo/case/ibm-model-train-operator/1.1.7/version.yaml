@@ -1,0 +1,36 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.13
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    beta: {}
+  description: IBM cloudpak operator for training with Model Train
+  displayDescription: IBM cloudpak operator for training with Model Train
+  displayName: IBM operator for Model Train
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-model-train-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.1.7
+  webPage: ""
+created: 2021-11-16T16:55:43.26805819+0000
+digest: sha256:fddd13fb3c5aab103d5885e7ee8e192a04a618952f43fd8f102ec482b539d52f
