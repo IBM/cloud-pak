@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 100.3.23+2.3.21
+  category: catalog
+  digest: sha256:ade48d02ad7432ee89b7d041a300b9239d342d962f99de19d39675a17652a221
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.3-latest
+- caseVersions:
+  - 100.3.23+2.3.21
+  category: catalog
+  digest: sha256:b57a5088fabaa63d6bef301c9e728ce6bf50de4eefc5dd0ea333a667da595018
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.21-ibm-management-orchestrator-amd64
+- caseVersions:
+  - 100.3.23+2.3.21
+  category: catalog
+  digest: sha256:4f44c1ae3cc0add6f6c4aab06db3bb326823441b1815c6617f17f315beadab1f
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.21-ibm-management-orchestrator-ppc64le
+- caseVersions:
+  - 100.3.23+2.3.21
+  category: catalog
+  digest: sha256:f4c71a607e38a21a9f21c523f24a60830401f7d71def3d27beb6ed072717de32
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.3.21-ibm-management-orchestrator
