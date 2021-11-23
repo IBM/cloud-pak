@@ -1,0 +1,60 @@
+apiVersion: v1
+case:
+  appVersion: 6.2.0.0
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+    sccm: {}
+  description: Helm Chart for deploying IBM Sterling Control Center Director on a containerized platform
+  displayDescription: Helm Chart for deploying IBM Sterling Control Center Director on a containerized platform
+  displayName: IBM Sterling Control Center Director CASE
+  icons:
+  - url: https://www.ibm.com/support/knowledgecenter/SS4Q96_6.1.3/com.ibm.help.scc.doc/com.ibm.help.scc.overview.doc/accent_graphics/L1_Product-Overview.gif
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenseEn
+      ref: LA_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+  name: ibm-sccd
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com/support/knowledgecenter/en/SS4Q96_6.2.0/ccd_6.2_welcome.html
+created: 2021-11-23T21:09:28.06511585+0000
+digest: sha256:8cb5da376888cff4f0792abac2b886f3675c17e461bf122dcd0ce7d88edf3362
