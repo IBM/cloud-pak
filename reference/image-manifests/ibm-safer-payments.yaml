@@ -1,0 +1,8 @@
+source: ibm-safer-payments-bundle/case/ibm-safer-payments/case.yaml
+description: "CASE that deploys the IBM Safer Payments Operator"
+images:
+  - image: cp/saferpayments/safer-payments-app
+  - image: cp/saferpayments/safer-payments-nginx-openresty
+  - image: icr.io/cpopen/safer-payments-operator
+  - image: icr.io/cpopen/safer-payments-operator-bundle
+  - image: icr.io/cpopen/safer-payments-operator-catalog
