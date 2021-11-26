@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.3.2
+  category: catalog
+  digest: sha256:2e4518d6daad97ff6335c682dd81f397bd60a907b1fb96599e650cb6bf7e6247
+  image: cpopen/ibm-mq-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.3.2-amd64
+- caseVersions:
+  - 1.3.2
+  category: catalog
+  digest: sha256:2f9fd92082e7acce1b30c1eb83c352318324551ad7148741dfef8cb96d7fab04
+  image: cpopen/ibm-mq-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.3.2-s390x
+- caseVersions:
+  - 1.3.2
+  category: catalog
+  digest: sha256:7e883a780cc49f0e0195a67a348fce5c94fd9b156a16e97627ddc55b7eb0a1cb
+  image: cpopen/ibm-mq-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.3.2
