@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:ca3a34b0cb1ea13c58159e118ea9e7f384c7150cdfc6f36da9fb5c21fc94e07e
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0-20211116.211955-amd64
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:4db85c66ec116f4f499444ab1d4ba15fa41941aed579ab53e7f6a4ad2a6f64a8
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.0-20211116.211955-ppc64le
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:9eb1c68491c6348f973eb0cc82fdde857cac2e3f11ab60b8de003fc51c44ff97
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0-20211116.211955-s390x
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:a84fa89079c95b426275df66cdadff657595e6079c7e1215d195a4ae0333852a
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0-20211116.211955
