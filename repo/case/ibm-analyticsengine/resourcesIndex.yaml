@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:0e5dc29bdf5efa3f87ec5a40d3f7de1d3e4f8b35210f11d873ef76944b24413a
+  image: cpopen/ibm-cpd-analyticsengine-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.399-amd64
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:2ec4ca0361c003e7d92239f659654ee133608ac866463e651bee56fb5f4e54e6
+  image: cpopen/ibm-cpd-analyticsengine-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.399-ppc64le
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:b8e4d211b5195a371d0efc8d879e6c64294a5c48ff9905a368beb8edff82dc1a
+  image: cpopen/ibm-cpd-analyticsengine-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.399-s390x
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:fae5a69ec42eb42dce6dc656d70e37fa5a013912cce655e3c43ad294b3f2ae45
+  image: cpopen/ibm-cpd-analyticsengine-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.399

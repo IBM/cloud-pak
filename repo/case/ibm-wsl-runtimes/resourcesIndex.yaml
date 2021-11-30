@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:7a56e54d643179dd2de502bbd00eb30c17b1d3016785bbbc3e117ee410822d57
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.30020-amd64
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:6a474c242ca8992d13759a109ea9194e77d2e2b44dece8695f6c6775c8fc806f
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.30020-ppc64le
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:1a73b1aeecb4391e497e9145f2a707fbae27ee4312eb9df44a6ded8f6e01da49
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.30020-s390x
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:a7369ae8d2ca4b65c547d268dbfa0e0411591c99908017902dc30b434dcabd9d
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.30020

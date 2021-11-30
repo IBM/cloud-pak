@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 2.0.3
+  category: catalog
+  digest: sha256:4b03152e7a5765c94466eb8251103c9b1069bf655ea62b587f6859d1612a6809
+  image: cpopen/ibm-cpd-ws-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.0-20211104.134034-amd64
+- caseVersions:
+  - 2.0.3
+  category: catalog
+  digest: sha256:1b0e985a192a714fcfd9626b6daea7d2995a859440027e99ca13ac023e5b1c37
+  image: cpopen/ibm-cpd-ws-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 2.0-20211104.134034-s390x
+- caseVersions:
+  - 2.0.3
+  category: catalog
+  digest: sha256:275475271693f5625b064dc7d24599c07cb57da12707f598fff1799a9fbc2fff
+  image: cpopen/ibm-cpd-ws-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.0-20211104.134034
