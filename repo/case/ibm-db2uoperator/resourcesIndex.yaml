@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:d1ce36038469388c2b3690b56cc6b3fbfad2fd9d3c68a7dbd5a79b967b61af1c
+  image: ibmcom/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 3156-dev-s390x
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:24e901eeca8719f9590d2112225d4f95f10c43fa6cd983979245b8667e2bee76
+  image: ibmcom/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 3156-dev-ppc64le
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:526d8ec0d4c4e07c33462984e03fa4a6890ae65cca0562936ebeed30bb2fa1cb
+  image: ibmcom/ibm-db2uoperator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: manifestList
+    os: linux
+  tag: 3156-dev-x86_64
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:4f8df219d530aa6a47c81ca655d859c1c53530842a75b3daddfa33ffa7e0e0db
+  image: ibmcom/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 3156-dev

@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:45918db24dcf6b60bc905e824f6ce9196a8c4688eb4e929b7dbe612dba9eeedf
+  image: cpopen/ibm-db2aaservice-cp4d-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-ppc64le
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:a730a377e5adcf0808311d36045f18a3e8b9db32097238103fb7290e68bbd552
+  image: cpopen/ibm-db2aaservice-cp4d-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-s390x
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:f5c7997acddb6472c1078abad733f75cf8105536055e4de5060b1c9a616ed012
+  image: cpopen/ibm-db2aaservice-cp4d-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-x86_64
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:ce1b8b6f3bb58dce03895c1effc33efe37cbd56551d03755e24d3c73601461e2
+  image: cpopen/ibm-db2aaservice-cp4d-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.5-1669

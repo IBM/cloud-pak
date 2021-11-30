@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:99293232e49c751b1ef0f73af66a82bb1a2628d1ee92cc40abaf130ac4a3696b
+  image: cpopen/ibm-db2oltp-cp4d-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-ppc64le
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:31a580b7195f7ace9d2883de5e143f58d7111e7af873b9cc79edc18c14ea40c8
+  image: cpopen/ibm-db2oltp-cp4d-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-s390x
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:63ca921e9987cc33871a68b0e748cc9789784f26766eea6dbd28caffd98a3c72
+  image: cpopen/ibm-db2oltp-cp4d-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-x86_64
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:a64cce94b45db45168e83efa8ca2e191c523b8ee53ffebc95aa1c0055fd49261
+  image: cpopen/ibm-db2oltp-cp4d-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.5-1669

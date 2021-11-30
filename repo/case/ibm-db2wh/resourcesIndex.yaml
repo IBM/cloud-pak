@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:e89da736a1cdbad85db8882586623b1239fce9a6508ad1529a39cc151f0e168d
+  image: cpopen/ibm-db2wh-cp4d-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-ppc64le
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:113c5112844eeb0d1c73b1d5ef80b3bfc43ef01a4d166cfdcdf466bc377887ae
+  image: cpopen/ibm-db2wh-cp4d-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-s390x
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:90bfad75b120d19e96f0f220a71fdb67960f1a56eaf353dfb24048d584cd8095
+  image: cpopen/ibm-db2wh-cp4d-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.5-1669-x86_64
+- caseVersions:
+  - 4.0.5
+  category: catalog
+  digest: sha256:25f5c95230fb38311ef6f4df8ba55ddc05cbd74d26e99daad03189aceae88bd5
+  image: cpopen/ibm-db2wh-cp4d-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.5-1669
