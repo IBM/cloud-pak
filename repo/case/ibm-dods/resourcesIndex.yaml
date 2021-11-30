@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:3facf168b206a4e49ee224e9ab265d2fcb88a00fda2523de4e87f24f749bdd51
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v4.0.3-20211029.031902-282-linux.amd64
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:e07afe4f74b6c015a6fac86ac41cb23ed38bc1bbf3426ffe9ec269af0614765a
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v4.0.3-20211029.031902-282-linux.ppc64le
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:56e9ee630f4427b507e54eace3ea051639e480aeccb51cc07d571f25aaa932d9
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v4.0.3-20211029.031902-282
