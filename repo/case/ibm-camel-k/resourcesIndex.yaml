@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:ef5dd4d65c7abede176164e79ed4e39d65dfa0d41601822b90dfe0818b95a4fb
+  image: cpopen/ibm-camelk-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.1.1-20210715.2159-53f5cb57a
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:de8df853b4284e44f6181ff996e0487e5d1981e53015cfedcea51e755da7675a
+  image: cpopen/ibm-camelk-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.2.0-20211029.0822-de8df853b

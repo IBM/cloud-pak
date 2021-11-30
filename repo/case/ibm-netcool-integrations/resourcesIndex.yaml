@@ -1,0 +1,23 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.2.0
+  - 2.0.0
+  category: catalog
+  digest: sha256:ef969d6c253ca190911fad179ca4d812d8f859ca0add661e9e66434882b0ccda
+  image: ibmcom/ibm-netcool-integrations-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 2.1.0
+  category: catalog
+  digest: sha256:042e8a957faca6e0eab781748d7fd054b82a30a98410ce4b4b82512ce44f66ca
+  image: cpopen/ibm-netcool-integrations-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.1.1-20210724.0401-042e8a957

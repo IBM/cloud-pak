@@ -1,0 +1,42 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:4bc12e5917940571467213c3a6e6aa1f683d589b679cef7cc68a8e220b3c751d
+  image: ibm-watson-ai-manager-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.0-20201208135850
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:bef3d01a10447a920759177e0dbe920c7c8d5a8e90cd29bce61e5009019008b4
+  image: ibm-watson-ai-manager-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.0-20210326115100
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:6ed3724b7806e8cf5aac286a4227587ef1aefb45477af0e1c4be51b941dfce03
+  image: cpopen/ibm-watson-ai-manager-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.1.1-20210724.0401-6ed3724b7
+- caseVersions:
+  - 1.2.2
+  category: catalog
+  digest: sha256:c3d91c5962b13fb8794da886efc74bbe843e3615ebfe74cdcb9b81f79ab6f73c
+  image: cpopen/ibm-watson-ai-manager-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.2.0-20211029.0822-c3d91c596

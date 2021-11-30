@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:bba2e0cb63cfd690fa7b1b4a2d4f56f0b4846c1e162b1c97ae51da1df831e192
+  image: ibmcom/ibm-mcm-spp-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 10.18.1
+  category: catalog
+  digest: sha256:f6dd6676599e6290fe1ac5ffe4a53675f952b07ffb66e4970b96d7f1e692aeb1
+  image: ibmcom/ibm-mcm-spp-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 10.18.782

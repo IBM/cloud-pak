@@ -1,0 +1,24 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:b5b82702d2c8ba654f1563b8772a68447f3b416047bd05e9020b3f294007cd9c
+  image: ibmcom/ibm-eamhub-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.2.1-20210319-155152
+- caseVersions:
+  - 1.1.0
+  - 1.1.1
+  - 1.1.2
+  category: catalog
+  digest: sha256:2ebc5e83c8e3a9ce7f96ad448b2a9d1f1263a2597ab2ea29072761d7bff167c5
+  image: cpopen/ibm-eamhub-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.3.0-20210907-135803

@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:143df95b52e29d85b0900ca85cc8da9c264e1970df32b96bff778b7e940c2e07
+  image: opencloudio/ibm-bts-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 3.14.0-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:7e80e02b044813747b14e56dc83d0a43f3509baf3454ecfb93c1141efb70a143
+  image: opencloudio/ibm-bts-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 3.14.0-s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:5d37fb5a49858abfaa043f36c86cf308e4b1060dc8a4a9800304e81720b66824
+  image: opencloudio/ibm-bts-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 3.14.0

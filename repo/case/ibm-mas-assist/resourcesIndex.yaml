@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 8.2.0
+  category: catalog
+  digest: sha256:cb083f97110327aae40ab431127db698c4a5b1b585c4ad04258a4447067ad19a
+  image: cpopen/ibm-mas-assist-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 8.3.0
+  category: catalog
+  digest: sha256:487c651d7b841cc14c394cde5349b3dd29cf9f8a328e308cf4e5dd9c7931ca2d
+  image: cpopen/ibm-mas-assist-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

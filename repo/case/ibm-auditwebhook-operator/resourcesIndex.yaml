@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:dcd7eff59c091382e76aaabdaea3f4cb3775abacd14dcf00ef8172ed1687f958
+  image: cpopen/ibm-auditwebhook-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v0.1.4
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:c0c937b5ee2325197d2f02894f097971435fba9b80923ef1d2c997183348ee56
+  image: cpopen/ibm-auditwebhook-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v0.1.5
+- caseVersions:
+  - 1.0.4
+  category: catalog
+  digest: sha256:b1606c9363a87c6fa5dd6043cd0bc8de63b1592ec2567c5a25ff47c353953d31
+  image: cpopen/ibm-auditwebhook-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v0.1.8
