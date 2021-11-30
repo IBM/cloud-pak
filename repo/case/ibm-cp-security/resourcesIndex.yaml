@@ -1,0 +1,104 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.10
+  - 1.0.11
+  - 1.0.12
+  - 1.0.13
+  category: catalog
+  digest: sha256:c0d268b01b22c9f659582a4202134a18cae5014c023d7d38ef1f26e2560365b1
+  image: ibmcom/ibm-common-service-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.5.6-20201102.165625-54A56C270-linux.amd64
+- caseVersions:
+  - 1.0.10
+  - 1.0.11
+  - 1.0.12
+  - 1.0.13
+  category: catalog
+  digest: sha256:6e1816b1fdee287bf54033ecb1a3f4c096f24ffc8e84de4a96240a3f1d62c37e
+  image: ibmcom/ibm-common-service-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.5.6-20201102.165625-54A56C270
+- caseVersions:
+  - 1.0.14
+  - 1.0.15
+  category: catalog
+  digest: sha256:b658899f84ecf0735151d1e52cf27d92c0c2f0e451af27a56ade3a1e1ba94c39
+  image: ibmcom/ibm-common-service-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.6.3-20201210.043250-0D04601CB-linux.amd64
+- caseVersions:
+  - 1.0.14
+  - 1.0.15
+  category: catalog
+  digest: sha256:08f75f90597518bfb0b25dd292f61c0327d98d71379af05c34117fb8046c01a4
+  image: ibmcom/ibm-common-service-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.6.3-20201210.043250-0D04601CB-linux.ppc64le
+- caseVersions:
+  - 1.0.14
+  - 1.0.15
+  category: catalog
+  digest: sha256:ef586826b2b0163b83cc118e312222fdf609d486aca66be63fe912fc097c5509
+  image: ibmcom/ibm-common-service-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v3.6.3-20201210.043250-0D04601CB-linux.s390x
+- caseVersions:
+  - 1.0.14
+  - 1.0.15
+  category: catalog
+  digest: sha256:001223d5824213051ee51e847dacc791efb23a810bff8620b84645917d0f235f
+  image: ibmcom/ibm-common-service-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.6.3-20201210.043250-0D04601CB
+- caseVersions:
+  - 1.0.21
+  category: catalog
+  digest: sha256:c8b0fd7c91b36b6becf2f896bd1e121938a3f1f626d9ce68713c06238d9e49e7
+  image: cpopen/ibm-cp-security-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.0.21
+  category: catalog
+  digest: sha256:d7d78a6a1dc3eb4de35fdd122db7c15f0551dde6a01ec39a831a5ff9f278a6a7
+  image: cpopen/ibm-cp-security-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.0.20
+  category: catalog
+  digest: sha256:7d4e08582ef0f336e41731199a9b4b468ef4e94dc0602fff169c85e76af62840
+  image: cpopen/ibm-cp-security-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.0.20
+  category: catalog
+  digest: sha256:a420e495a5060bee25501b652bb5b602befe7631977ff6c125b2c9e722ee92fb
+  image: cpopen/ibm-cp-security-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest

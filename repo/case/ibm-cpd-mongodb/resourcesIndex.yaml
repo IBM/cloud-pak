@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.1
+  category: catalog
+  digest: sha256:da77420d07763aeabe14cfc667f23e2685ac8894f0e2aeee87da64b5b41bdfd4
+  image: cpopen/ibm-cpd-mongodb-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: "154"
+- caseVersions:
+  - 4.0.2
+  category: catalog
+  digest: sha256:6a6ef9f27f67292d0edbf6ad17a63004758b22b18e932094e2934105b739cccc
+  image: cpopen/ibm-cpd-mongodb-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: "185"
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:fbdfc1ae940be89d6ef2bb421b1bac3932798c20a23fb350134c54ef2be8730d
+  image: cpopen/ibm-cpd-mongodb-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: "121"

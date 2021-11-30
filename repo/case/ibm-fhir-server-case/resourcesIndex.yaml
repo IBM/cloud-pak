@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:834bd6c73e288526d58be36065d4081b60f4e72c53fe48294917d2fe0d9917da
+  image: ibmcom/ibm-fhir-server-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:7686dcbaef3c3c3a89207816e104173d5485b5eb044c2fde0c70a1aab7887d29
+  image: ibmcom/ibm-fhir-server-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:3b9917ed6c494c6213a5c0006011e11479ca29e3fd0d7e14d780b62924e951e9
+  image: cpopen/ibm-fhir-server-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

@@ -1,0 +1,42 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:acfee766ea9b3c7b1a69046d483fbe5f44ba9f87cecba83461971582f236a3cc
+  image: ibmcom/cfmr-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:a5c3e17fab9d17a128a24642db626c0a89a4fc6ad70074df1fed3dc1f7d3d1a3
+  image: ibmcom/cfmr-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.1.0
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:2b89b706f7a2ab66c7503374f4e71d852cd613660a06d4a83e33136cd46e3cc2
+  image: cpopen/cfmr-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.1.1
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:6982c20df19776b04dad7a7d62856ddfe25ee98a3ec92bfa8e2c5986e066d7ea
+  image: ibmcom/cfmr-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

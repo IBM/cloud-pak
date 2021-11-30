@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:6d384c3baf6fabf826d5bde034c278f075794614badf4d1d711f7662fa180b60
+  image: cp/spp-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:705a928f39fbae2b473d6f0288b5baf547776a797694044d996169421bac11cd
+  image: ibmcom/spp-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 10.18.1
+  category: catalog
+  digest: sha256:e1f822534302e756b5ab6e99b6d904265d348e34361700df09e19ee93a83c847
+  image: ibmcom/spp-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 10.18.782

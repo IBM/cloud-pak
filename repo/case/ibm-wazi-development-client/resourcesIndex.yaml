@@ -1,0 +1,14 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.1.1
+  - 1.1.2
+  - 1.2.0
+  category: catalog
+  digest: sha256:a354479562f9a3673ebbc033c0ba2d0ab98007c16d6f69f340611bb789eafe4a
+  image: ibmcom/operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

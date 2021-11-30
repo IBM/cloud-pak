@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:3025828d25a0ec4a978eec588f0b39e1edc90482deac5af93b86d950c4acb750
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:a1038f2f158791e5f881cfc4571477db8666245dfe10c0627cc2d579edd75a81
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0-20210810.101541
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:fe0d51ed7f2c79da5ceec15f2b01637707f1f01a2153757e8bc141a2d95b082e
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-630-amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:23f967a670128a8d245178791919fa691c6ad259d5fd8eb08f22868c199c0124
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0-630

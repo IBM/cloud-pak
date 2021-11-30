@@ -1,0 +1,357 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.2.2
+  - 1.2.3
+  category: catalog
+  digest: sha256:7a0c6fa36b9106bc1eed2a730a835ae3130f1759bae06979ecdeefee47f6f4be
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.2.2
+  - 1.2.3
+  category: catalog
+  digest: sha256:467e945c26f72c0e34ae272217c9015fbb3c654294b874c6db23bdc52417ea59
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.2.2
+  - 1.2.3
+  category: catalog
+  digest: sha256:91b8cc988ba36bdba8f898b9c3bb852ff3f61f9e41a141d40fc902d24fa06c9f
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  category: catalog
+  digest: sha256:378c4088ea322037dd289f36a9df747d1d76a6b34823ef5be20df1e36483cd3a
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.0
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  category: catalog
+  digest: sha256:b2404a72f918678c307f3c98d81d5f76772447994c657d36f0b3d00bb85ffbf8
+  image: ibmcom/aspera-hsts-operator
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.0-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:ef13931506b05a6339c294afac3633e5f5ff409a1aa5e43ab9614a153fdd9747
+  image: cp/icp4i/aspera/aspera-hsts-tcp-proxy
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:c56d923d7ac19707cffef31b58a77820ab320224b3c6f0c7d13d00237e9c4ab8
+  image: cp/icp4i/aspera/aspera-hsts-http-proxy
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:36c7769ce3418782de2d4623ec5fe8267553208c5e3838413dc76ac3c234e5c2
+  image: cp/icp4i/aspera/aspera-hsts-scheduler
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:debcd3b59a8033374e14e701526e3fe7a3c54cbc768674a4ab4891b7f27f7261
+  image: cp/icp4i/aspera/aspera-hsts-engine
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:a87e6d1f6f99290b772fa177cd3f0234fb1d069c604203ea6d63b4542c588370
+  image: cp/icp4i/aspera/aspera-hsts-configurator
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:fe1d40aea13c8368e555e55d847f68ba917e6ba2a89268267d6031ea96e11965
+  image: cp/icp4i/aspera/aspera-hsts-ascp-server
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:2f513667752758a07471ec4a0af08e97d4ef1b726560a4074f911fcdaa00b7e1
+  image: cp/icp4i/aspera/aspera-hsts-asperanode
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:4f3ef30e3ce943882f7da41bdc6b22e27f60db8c00f041eb4bebadc8791c5d80
+  image: cp/icp4i/aspera/aspera-hsts-aej
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:131d477a067fce601c61645071b5c83ce6fa5af1d6d9d29283549cd417795d12
+  image: cp/icp4i/aspera/aspera-hsts-election
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:e71904164a669d35c2b56b90d8e51172b3830373d679a8455ab26afca37c7649
+  image: cp/icp4i/aspera/aspera-hsts-prometheus-endpoint
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  category: catalog
+  digest: sha256:35e1afab10fced36b39eeb03b96df49d0b327402e6b4503c0f670e09c2c8a942
+  image: ibmcom/aspera-hsts-utils
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.9.10-r1-rhel-amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:b31201b7156d397a3948f53739f1709823f8be516cb9c3697815faedb47eb09f
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.1
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:ba56be63b07094e204add469ec3122d669e6b6d9458b71269925f7472a8d4315
+  image: ibmcom/aspera-hsts-operator
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.1-rhel-amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:1931f03cd6c837c56d8fa9faf943b55c5a449610b082c483c6e492d96beaf588
+  image: ibmcom/aspera-hsts-operator
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.0-rhel-amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:4a4202a877871261f90a63405babd75f7b071e18251e390dd91b4f5d7558b230
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:56fa4cf37feb2f3d661f9e32610eb091ca95238b794f5e86bcf3469aeb1c7c08
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:89f044e714b8579330b17652e6f1a16fdf4d2021decbdbe3f7560b8ea631c1c0
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:3e924283e01569c6a521d7e120f255b22ba2fef7985602fcbd0ea1b80968d2b5
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:85b8a85f4374533f7b6a9260153c272e388f0cd062b6c68471274464f9125d56
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:a84179081008cc47b43b29a196781882b4601e78490be42e8e1c4f5f3fc42ade
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:3ada193cc000c49cb15c5f31d6ce775cd1dfa1b5e5094794b119fe2721856da5
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:a074a71e2bbff845d20641c7861e061d5a218f41d073fc728250ebb761feb044
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:12a44d4491f0fe2ab4eb3acce906a969e837b56cd23585191fc474ac354119c8
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:f5f762c94f54185b1d3ccd5d7864286771191f26570aaddebc8f563aeacca0a4
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:b86a8708a07b394830416d5584fbc79d3632e4926c7bcc316e8fcba854f248ca
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:a21468cf36f81ea3d8680bfe9480da979f57f5a1818d72c6e7adcaa66e429b15
+  image: ibmcom/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:6c89a1833e5078b8c59a72b2cf5798a1254bf2ed00272bba543b01f1b8fd4c67
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:0ef918cdbf13449b7f1072ecc8d4876ff7f2b19b0e19e5aba3ca535fbc49328a
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:60be8a4a39df11f2cdb1beb576f6dd6c53d0b6db05278039b27a69208a68b904
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest

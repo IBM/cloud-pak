@@ -1,0 +1,33 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.0
+  - 4.0.1
+  category: catalog
+  digest: sha256:e607397b67809f2ae8f61c002952a0e2b84f1101c3ee65415634431ab1e111b5
+  image: cpopen/ds-ent-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.523-ent
+- caseVersions:
+  - 4.0.2
+  category: catalog
+  digest: sha256:7e78a9eff7b2ebedfed92ea726a9243233412804afd4f66a32925f478584d94a
+  image: cpopen/ds-ent-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.562-ent
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:b919399e6e9d2a3283c628445589e9334263e014633bdf24e63735f26f571217
+  image: cpopen/ds-ent-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.2-328-ent

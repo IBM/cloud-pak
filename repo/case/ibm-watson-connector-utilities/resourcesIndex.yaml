@@ -1,0 +1,23 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  category: catalog
+  digest: sha256:5056217790de5e79fda907edecd1e224d5603f7bf9963ed47a4e4d299274c771
+  image: cp/cp4waiops/aiops-operators-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.1.0-ibm-aiops-orchestrator
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:700f339d844d480d3874727c6b95e2171d975c90004b05394840f29f20820717
+  image: cpopen/ibm-watson-connector-utilities-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.1.1-20210724.0401-700f339d8

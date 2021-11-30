@@ -1,0 +1,23 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.1
+  - 4.0.2
+  category: catalog
+  digest: sha256:7afcdb4cddfda825fc4c45e719af570a17dcdc3d355122cac463e7db976b1d46
+  image: cpopen/ibm-informix-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.0-0000-x86_64
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:6e64575f7f288697288ff1fba1c86d08715f0f7da605240cf4a8fe7720664ace
+  image: cpopen/ibm-informix-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.0-0000-x86_64

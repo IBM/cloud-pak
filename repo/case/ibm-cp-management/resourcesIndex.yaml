@@ -1,6 +1,7 @@
 apiVersion: v1
 containerImages:
 - caseVersions:
+  - 100.3.22+2.3.21
   - 100.3.23+2.3.21
   category: catalog
   digest: sha256:ade48d02ad7432ee89b7d041a300b9239d342d962f99de19d39675a17652a221
@@ -11,6 +12,7 @@ containerImages:
     os: linux
   tag: 2.3-latest
 - caseVersions:
+  - 100.3.22+2.3.21
   - 100.3.23+2.3.21
   category: catalog
   digest: sha256:b57a5088fabaa63d6bef301c9e728ce6bf50de4eefc5dd0ea333a667da595018
@@ -21,6 +23,7 @@ containerImages:
     os: linux
   tag: 2.3.21-ibm-management-orchestrator-amd64
 - caseVersions:
+  - 100.3.22+2.3.21
   - 100.3.23+2.3.21
   category: catalog
   digest: sha256:4f44c1ae3cc0add6f6c4aab06db3bb326823441b1815c6617f17f315beadab1f
@@ -31,6 +34,7 @@ containerImages:
     os: linux
   tag: 2.3.21-ibm-management-orchestrator-ppc64le
 - caseVersions:
+  - 100.3.22+2.3.21
   - 100.3.23+2.3.21
   category: catalog
   digest: sha256:f4c71a607e38a21a9f21c523f24a60830401f7d71def3d27beb6ed072717de32
@@ -38,3 +42,123 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 2.3.21-ibm-management-orchestrator
+- caseVersions:
+  - 2.1.5-cs356-enforced
+  - 2.1.5-roks
+  - 2.1.5-rokslicense
+  - 2.1.5
+  category: catalog
+  digest: sha256:bede16112b4a176b79e51fa4977ff0b440a724a3a8feb97298dd590afa8c95a2
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 2.2.8
+  - 2.2.9
+  - 100.2.0+2.2.7
+  category: catalog
+  digest: sha256:71f624e55b9e19e51f8cbabcdfb77115af6c85d3b12783d60fc4ec0f9eb6777e
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.2-latest
+- caseVersions:
+  - 100.3.0+2.3.2
+  - 100.3.5+2.3.2
+  - 100.3.6+2.3.2
+  category: catalog
+  digest: sha256:b1454da70c57c5318dfb8fdb340496c983da15a86517c4d16dfdc2aed2544c7d
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.3-latest
+- caseVersions:
+  - 2.0.0-patch-12562
+  - 2.0.0-roks
+  - 2.0.0-roks-upgrade
+  - 2.0.0
+  category: catalog
+  digest: sha256:b74b3dd94df9e20a0f697dae216f9a227ad87dd2c02fe3d91471942cf79efdc7
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 100.3.10+2.3.10
+  category: catalog
+  digest: sha256:7243ce649fa40e4af7115dafe77b9806bfad2f2594f04c2af38dd95d64053a66
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.3-latest
+- caseVersions:
+  - 100.3.10+2.3.10
+  category: catalog
+  digest: sha256:238b4ae490c60b59a93e1913b7e92886b8a15a6cbae2e504c497f6c4db79e57a
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.10-ibm-management-orchestrator-amd64
+- caseVersions:
+  - 100.3.10+2.3.10
+  category: catalog
+  digest: sha256:5e605c5323987b500e859e2bb5d6dd5cf7db0729567f49f2b35d5357b03b5aeb
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.10-ibm-management-orchestrator-ppc64le
+- caseVersions:
+  - 100.3.10+2.3.10
+  category: catalog
+  digest: sha256:49e9cf752c864e7a5cd733bf0f2600876faf47da0dc7e82108ccfc7da1d3e433
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.3.10-ibm-management-orchestrator
+- caseVersions:
+  - 2.2.5-replacesfix
+  - 2.2.5
+  - 2.2.6
+  category: catalog
+  digest: sha256:245b92317087085c06273de43fc60bebdedd01ba44b2cb96bf9403fc23791a24
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.2-latest
+- caseVersions:
+  - 100.1.0+2.1.7
+  category: catalog
+  digest: sha256:bd5f5102b854b156d98e7b909e5aee7673529e1832375670d73d4304562843a4
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.1-latest
+- caseVersions:
+  - 2.1.6
+  category: catalog
+  digest: sha256:bffbd5180d04e7d19a72efee37079d0bde2a5057a992d2a4928e7c977ff331e1
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.1-latest

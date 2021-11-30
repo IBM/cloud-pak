@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:9c514c374aef78aa70a8e2e5be372fc49738bb1fa136731c8362148c16e18637
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v1.0.0-20210618.160001-linux.amd64
+- caseVersions:
+  - 2.0.1
+  category: catalog
+  digest: sha256:b3a714411bf15f0120409f7d78342f55ab20c5fff629b5fb15dd6ed02429594f
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v1.0.1-20210807.180001-linux.amd64
+- caseVersions:
+  - 2.0.2
+  category: catalog
+  digest: sha256:f04e1d45f8d6c7be3a585b42d60d2eb7eeb2cb26471e0243ec16919d7e754ff9
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.2-20210924.190531-linux.amd64
+- caseVersions:
+  - 2.0.2
+  category: catalog
+  digest: sha256:0a4a67bc8916e6e2a1063d249544668fea2e5e29829d63ad04f50fa7e58fe8d0
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.2-20210924.190531-linux.ppc64le
+- caseVersions:
+  - 2.0.2
+  category: catalog
+  digest: sha256:6a6151e578f64ce53334754a14acc40bdea9dd5134ef68494f55733573734d5e
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.2-20210924.190531

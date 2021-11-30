@@ -1,0 +1,24 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.1.0
+  - 1.1.1
+  category: catalog
+  digest: sha256:9e71956f212bbebf007263bd0d0c06a95e32a9fd0c1cc80798480f6e263d6a49
+  image: ibm-watson-aiops-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  category: catalog
+  digest: sha256:26bff2a744fda21aa6d933a60905cd77cfc65f6bbfa64db52a59fd5a707086e0
+  image: ibmcom/ibm-watson-aiops-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

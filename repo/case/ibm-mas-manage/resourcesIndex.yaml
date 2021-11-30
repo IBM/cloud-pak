@@ -10,3 +10,34 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: latest
+- caseVersions:
+  - 8.0.0
+  category: catalog
+  digest: sha256:7182d37f9269b62a5dbc68981bb112e590c65c80f9e8f0d31326afea9e6383f2
+  image: cpopen/ibm-mas-manage-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:46f6e8ed41c64f9f3307dcc60bf13b0800095e7fc16cfc80c0336f0e346115c1
+  image: cpopen/ibm-mas-manage-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 8.2.0-pre.dev82
+  - 8.2.0
+  category: catalog
+  digest: sha256:b663edca609b25e54f10514b7c6f6b237e1cde11007e46a4761fb0d7fafe37ef
+  image: cpopen/ibm-mas-manage-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

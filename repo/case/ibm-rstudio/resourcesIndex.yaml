@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:7551fcf93c063ebdb4d1491e4a59f0ee09384560e7a09efae2d65a4d53877dd2
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0-20210607.161133
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:2efe2c43624b402345ff4a9f061b661e6700b953fc0d78f2b6ca6b18c466cc18
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0-20210809.202806
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:ae128615ed46330b56f2ebc644098ab45d6ecf7e464eb9f26718338f004fbde7
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-20210922.144042-amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:60fbca7f0da287a5f2567f7b54f234cdcc8d6dbb49802c36a395ebb56821f561
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-20210922.144042-ppc64le
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:71d21d66f3b63c629bcfbe3ca9eb202a58c2061935c78c37ae6b188dda64e497
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0-20210922.144042

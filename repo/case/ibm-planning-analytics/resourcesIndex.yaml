@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:d4522e7cab3d37f85c80968ec9cf6089139fd5b002f43cd5d93b3f60744a75e3
+  image: ibm-planning-analytics-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.0
+- caseVersions:
+  - 4.0.1
+  category: catalog
+  digest: sha256:15cb3b8ce91917882f4476ceeffdb3da95b77cd0225d11e9561d034cb594fb24
+  image: cpopen/ibm-planning-analytics-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.1-217
+- caseVersions:
+  - 4.0.20270
+  category: catalog
+  digest: sha256:6fbd763da1b504b1d248b7e4a662de82135bd37e0744f439d681ba65e5cacb01
+  image: cpopen/ibm-planning-analytics-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.2-270

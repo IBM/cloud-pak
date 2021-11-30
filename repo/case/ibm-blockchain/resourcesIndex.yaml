@@ -1,0 +1,42 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 2.4.0
+  category: catalog
+  digest: sha256:6dc52f7d940d834ececa0858db066dcaf8533cd61aa1fc88f060061841fe2bc4
+  image: ibmcom/ibm-blockchain-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 2.3.0
+  category: catalog
+  digest: sha256:3bd47bc8d93de57b71b806c7b7f9de50ecd2eec6d7128127cc06ded10ac1b473
+  image: ibmcom/ibm-blockchain-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 2.5.1
+  category: catalog
+  digest: sha256:fdf9adb3336bbfdf6f9eb8592f8280fb757d630288e8b32715f1b0ccfe20a13f
+  image: ibmcom/ibm-blockchain-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 2.5.2
+  category: catalog
+  digest: sha256:32a7a4277bec8dce79833d02939bdff77b41a266e1d27732cbc615883db1c1c3
+  image: cpopen/ibm-blockchain-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
