@@ -2,6 +2,7 @@ source: ibm-watson-speech-case-bundle/case/ibm-watson-speech/case.yaml
 description: "IBM Watson Speech Services"
 images:
   - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
   - image: cp/opencontent-icp-cert-gen-1
   - image: cp/opencontent-minio
   - image: cp/opencontent-minio-client
@@ -12,6 +13,7 @@ images:
   - image: cp/watson-speech/ar-ms-telephony
   - image: cp/watson-speech/chuck
   - image: cp/watson-speech/chuck-haproxy
+  - image: cp/watson-speech/cs-cz-telephony
   - image: cp/watson-speech/de-de-birgitv3voice
   - image: cp/watson-speech/de-de-broadbandmodel
   - image: cp/watson-speech/de-de-dieterv3voice
@@ -27,6 +29,7 @@ images:
   - image: cp/watson-speech/en-gb-katev3voice
   - image: cp/watson-speech/en-gb-narrowbandmodel
   - image: cp/watson-speech/en-gb-telephony
+  - image: cp/watson-speech/en-in-telephony
   - image: cp/watson-speech/en-us-allisonv3voice
   - image: cp/watson-speech/en-us-broadbandmodel
   - image: cp/watson-speech/en-us-emilyv3voice
@@ -51,27 +54,35 @@ images:
   - image: cp/watson-speech/fr-ca-narrowbandmodel
   - image: cp/watson-speech/fr-ca-telephony
   - image: cp/watson-speech/fr-fr-broadbandmodel
+  - image: cp/watson-speech/fr-fr-multimedia
   - image: cp/watson-speech/fr-fr-narrowbandmodel
   - image: cp/watson-speech/fr-fr-nicolasv3voice
   - image: cp/watson-speech/fr-fr-reneev3voice
   - image: cp/watson-speech/fr-fr-telephony
   - image: cp/watson-speech/gdpr-data-deletion
   - image: cp/watson-speech/generic-models
+  - image: cp/watson-speech/hi-in-telephony
   - image: cp/watson-speech/it-it-broadbandmodel
   - image: cp/watson-speech/it-it-francescav3voice
   - image: cp/watson-speech/it-it-narrowbandmodel
   - image: cp/watson-speech/it-it-telephony
   - image: cp/watson-speech/ja-jp-broadbandmodel
   - image: cp/watson-speech/ja-jp-emiv3voice
+  - image: cp/watson-speech/ja-jp-multimedia
   - image: cp/watson-speech/ja-jp-narrowbandmodel
   - image: cp/watson-speech/ko-kr-broadbandmodel
+  - image: cp/watson-speech/ko-kr-multimedia
   - image: cp/watson-speech/ko-kr-narrowbandmodel
+  - image: cp/watson-speech/ko-kr-telephony
+  - image: cp/watson-speech/nl-be-telephony
   - image: cp/watson-speech/nl-nl-broadbandmodel
   - image: cp/watson-speech/nl-nl-narrowbandmodel
+  - image: cp/watson-speech/nl-nl-telephony
   - image: cp/watson-speech/pt-br-broadbandmodel
   - image: cp/watson-speech/pt-br-isabelav3voice
   - image: cp/watson-speech/pt-br-narrowbandmodel
   - image: cp/watson-speech/pt-br-telephony
+  - image: cp/watson-speech/speechhub
   - image: cp/watson-speech/speech-utils-rhubi8
   - image: cp/watson-speech/stt-async
   - image: cp/watson-speech/stt-customization
@@ -82,6 +93,8 @@ images:
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-bundle
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-catalog
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-watson-speech-catalog
   - image: icr.io/cpopen/ibm-watson-speech-operator
   - image: icr.io/cpopen/ibm-watson-speech-operator-bundle
