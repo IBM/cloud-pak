@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.4
+  category: catalog
+  digest: sha256:9f64439e4d68519ed80c15e6546f897d9b0f206e236b949d37cdd22396bdb33f
+  image: cpopen/ibm-cpd-wml-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.2415-amd64
+- caseVersions:
+  - 4.0.4
+  category: catalog
+  digest: sha256:e490ca6aa1d094b8aaf8a0b87e288e12cc7a5a7a78e7495a5f17d004e8850936
+  image: cpopen/ibm-cpd-wml-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.2415-s390x
+- caseVersions:
+  - 4.0.4
+  category: catalog
+  digest: sha256:bef89a99849d1356145fb221a9c975be46d7d87d4e15a58e8875df64c3ee1e37
+  image: cpopen/ibm-cpd-wml-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.2415
