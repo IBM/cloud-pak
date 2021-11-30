@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:3cfaca34cd737454a3070de598699c1ff11ab921d0acdee6f7b515bb6c1c5a91
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v4.3.202-amd64
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:8b68c21f4c2a616fed8abaebcf7c2f378f080874dcb3a2d1615357d8ba557037
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v4.3.202-ppc64le
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:361f22a21effe7a81505ccd1629d343eac0b8a399f91499cb40a9129398825c3
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v4.3.202-s390x
+- caseVersions:
+  - 4.0.3
+  category: catalog
+  digest: sha256:f1b04e94ca5bb1538c2b68219220a5039eb2da7f934c58b872cf7b9572149866
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v4.3.202
