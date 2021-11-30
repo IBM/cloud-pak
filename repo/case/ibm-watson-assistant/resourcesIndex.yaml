@@ -1,0 +1,23 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.0
+  - 4.0.2
+  category: catalog
+  digest: sha256:55c6d02b5a4a58658035b57037540fc1ebfd4c96a5959196b04c3f91f282f4b1
+  image: cpopen/ibm-watson-assistant-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.0
+- caseVersions:
+  - 4.0.2
+  category: catalog
+  digest: sha256:76e56437fe306610ea8c9136d02ad4a1a331f8dc3ff1a0daf27850b226990d23
+  image: cpopen/ibm-watson-assistant-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: singleArch
+    os: linux
+  tag: 4.0.2

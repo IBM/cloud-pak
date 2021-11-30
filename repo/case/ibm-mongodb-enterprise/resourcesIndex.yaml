@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.0.2
+  category: catalog
+  digest: sha256:c5a1b16b72261a6248d6f933b865fd2540c4cd9a69e9a583382baa8113439800
+  image: cpopen/ibm-cpd-mongodb-enterprise-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: "185"
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:023b3e680bd584e33ec2dc840330939984bb6846c1234beda78bfcfbb69d97cf
+  image: cpopen/ibm-cpd-mongodb-enterprise-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: "121"

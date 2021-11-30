@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:9e88c1a50a1f9e420a3d261d88d0e1a1e49cbafe043b3a80a7be7fb97879b9a5
+  image: cpopen/aiops-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 3.1.0
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:83b4d174e1d85f93a55bff58e9915eecb9f3708e99b38f61c04a1f68bf9bffb9
+  image: cpopen/ibm-cp-waiops-case-bundle-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.1.1-20210724.0401-83b4d174e
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:c7497c06246109b34f9deea26614044becef5d114c8c18a4066ae6404a233b52
+  image: cpopen/ibm-cp-waiops-case-bundle-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.2.0-20211029.0822-c7497c062

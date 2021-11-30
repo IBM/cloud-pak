@@ -1,0 +1,119 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:95084e15ecc30e0770e104249f08bb409a5b3e47e8007850eaf07dc73f2bb4c6
+  image: ibmcom/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:c51ba5dd579d269d1ec40b1fe92291549d89514f8bcaa1d80ef4a01dc4b0d234
+  image: ibmcom/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.0.2
+  - 1.0.3
+  category: catalog
+  digest: sha256:9ba90ab0682e81d1620fdfac00fdc635c6cb327f33ed184e43ebd6826806bd5f
+  image: ibmcom/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:27625a524f3b7d0b83b62de8d14457271ca4dfab48d9d5951028ea64ad4c1934
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.0
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:f010cd22140d000d19975a98e82edd28891746380f971931448922b41e522c83
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.0-amd64
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:ae48f15f7b77e9720621d911437ea749a1a5d89106d5da498d2194e86ae3f5c2
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.0-s390x
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:c06d0ed92064dcf6994a0900c20cda377325706d486a97cd4897ccade9a44c56
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.0-ppc64le
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:57262cfd81ffad6c3ddb9e3fa2c7518b9fbb5deedfd5ba0f3eb6d6f103ef6582
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.2.0
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:d6d483efe48d5333149447dc36734116422e2164743a9ec8ef16e0da3f5c998c
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.1-amd64
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:c88355d239422c28be8c9b2916b45a84ab116e8296eff368121e5b0229d73d83
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.1-s390x
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:10c2ea9a19a9480c13c4c26a015f30fb080ed418e1261f9de358854b540822ce
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.1-ppc64le
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:1c21a3f64252569633c6ba7daf74d47358b9f3b52546d9a716808b0ae62d187a
+  image: cpopen/ibm-cp-automation-foundation-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.2.1

@@ -1,0 +1,43 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:0839c8e6209310c6c1402bce0adae4f215ce429a66b2c1960313fb0ff2f71ce6
+  image: asm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.2.0-release-v1.1.10-228
+- caseVersions:
+  - 2.0.0
+  - 2.0.1
+  category: catalog
+  digest: sha256:0839c8e6209310c6c1402bce0adae4f215ce429a66b2c1960313fb0ff2f71ce6
+  image: ibmcom/asm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.2.0-release-v1.1.10-228
+- caseVersions:
+  - 2.1.0
+  category: catalog
+  digest: sha256:2b4dd7a4c958a99848ff32916b578b2187b1184ee6a40643a484039c5dc822de
+  image: cpopen/asm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.1.0-release-v1.1.11-375
+- caseVersions:
+  - 2.2.0
+  category: catalog
+  digest: sha256:b125e3f8c6901e091803217a938b0b61eed7058deb442bb1a2e6eaa5f0eb0ee8
+  image: cpopen/asm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v3.2.0-20211029.0822-b125e3f8c

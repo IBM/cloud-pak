@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:0bcbbe6b855214fc060bd834d09948d58ec61c048e63b6bcb97754a9b9f6ab41
+  image: cpopen/ibm-cp-networkautomation-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:bd83692266b79b5d6eb172537ddd15e82bfe038573686e690c6a7832c56fbaae
+  image: cpopen/ibm-cp-networkautomation-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

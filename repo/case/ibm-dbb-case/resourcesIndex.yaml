@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:6acd6cde37a9a1722111822cbd52374f0e305348e47ffa5025e09228e44ef567
+  image: cpopen/dependency-based-build-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.1
+- caseVersions:
+  - 1.1.2
+  category: catalog
+  digest: sha256:e9a267c294bcfa16ef325b90b86265374c5fef985d4220ab9a92a208160345d9
+  image: cpopen/dependency-based-build-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.2

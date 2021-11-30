@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 8.3.0
+  category: catalog
+  digest: sha256:92a0b9fcd4151d6c43e3f3bbed636e45ae76dd4dd8bc4ad8ec04e6b4bb3108ca
+  image: cpopen/ibm-mas-visualinspection-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 8.3.0
+- caseVersions:
+  - 8.4.0
+  category: catalog
+  digest: sha256:fe88cbeb5a467276e7aa0db766a23308f188d341a13b8290b00dad0b9640d69f
+  image: cpopen/ibm-mas-visualinspection-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 8.4.0

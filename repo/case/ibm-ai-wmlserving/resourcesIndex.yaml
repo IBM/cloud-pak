@@ -1,0 +1,22 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:3f039c02b45d50610ae932e75ef0f07bafb121c729068e4a2f68a14b009cb2b2
+  image: cpopen/ibm-ai-wmlserving-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:4ecf7a358dadb5e9d6fb33b293883279fef9f458efb059446c2072dfce78490f
+  image: cpopen/ibm-ai-wmlserving-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest

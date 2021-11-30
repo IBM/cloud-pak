@@ -1,0 +1,234 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:5381e3a76bb02795a5005a56d03ab4f0acedb14b3ae1f4917269155a4d9f6614
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.0.0-linux-amd64
+- caseVersions:
+  - 1.0.0
+  - 1.0.1
+  category: catalog
+  digest: sha256:fcd1de5cebbf32fd4783fc1e5b831b239577f88435cd2a956333edd8cbf692a3
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: v2.0.0
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:4ba28526d2d8db60d9978297c0c3ec03a0fab55ec32148d8b2e8cfac2376cc1b
+  image: ibmcom/ibm-eventstreams-operator-bundle
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.0.0-linux-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:fb76e57ec955cf03a6ddab68c6511054484b9f40b1e7390a30fd96861ea7f619
+  image: ibmcom/ibm-eventstreams-operator-bundle
+  platform:
+    imagetype: manifestList
+  tag: v2.0.0
+- caseVersions:
+  - 1.0.2
+  - 1.0.3
+  category: catalog
+  digest: sha256:079f23c0594bf59300f08515e72ac7905742890fc8f9447bfa00753678bc3940
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v2.0.1
+- caseVersions:
+  - 1.0.4
+  category: catalog
+  digest: sha256:44fea3d21b9a9429400d0b82c30d3e57ef31a2675c769e5babcb9737a4e865c8
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
+- caseVersions:
+  - 1.1.0
+  - 1.1.1
+  - 1.1.2
+  category: catalog
+  digest: sha256:9a7e94302e76279699c8469ede547cf7ab9b95e7c458b59edd7506fe8926a124
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.1.0-amd64
+- caseVersions:
+  - 1.1.0
+  - 1.1.1
+  - 1.1.2
+  category: catalog
+  digest: sha256:77212750bd2e003723cafc8ee8a6776b9d220d150802a768ab4f2bb8472fec56
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.1.0-s390x
+- caseVersions:
+  - 1.1.0
+  - 1.1.1
+  - 1.1.2
+  category: catalog
+  digest: sha256:bb4533399b307e3b8f0843250d259876ef6609cf2264c5acac60fef1d3452db5
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:3ee33a30bdc813cc36369e81a3e15316b2ed548902901596f0209f4e9702d22e
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.2.0-amd64
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:1d93c34dbf3f337b8b12d2fbb43be27da116034bb153a97f2e4a6887f7194505
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.2.0-s390x
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:9fea926eef7d37c8ffed3881a031e642b8c8200ecae81e2e7cba1d5e5d0385f6
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.4.0
+  category: catalog
+  digest: sha256:0bd0f156639047731344c426c85abcf419a222a60cfc4a9e8b174563624acd17
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.4.0-amd64
+- caseVersions:
+  - 1.4.0
+  category: catalog
+  digest: sha256:f44eba4e5a4a315b1d3e51b2e824c03c7ead13eec4b26945c914904114b70e99
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.4.0-s390x
+- caseVersions:
+  - 1.4.0
+  category: catalog
+  digest: sha256:e2c0bfdf9a413d5ae0267f5268852542c6def0c798e30356694a0670282beac1
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:dd67e84b8bef7affe9efe4f3a1daa11f8698636a191359070fe2323c6dc988f1
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.2.1-amd64
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:0c99226a56f20a34f204255c01089a4d0eb835ae25619aa037759a8cbd9897cc
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.2.1-s390x
+- caseVersions:
+  - 1.2.1
+  category: catalog
+  digest: sha256:b3d03f8d7e70dd05375a9131778c851a5dab355edd9c1e2166d825f298b8e483
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:08b980e1ce9ae1ab1f80f8035c6e2de92a52b6f40476847cf7dea4b216409ca6
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.3.0-amd64
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:feb1273b4ec83f6d4ca7a21e726086b791b7de94cf92b023bf50b0cf84371ca4
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.3.0-s390x
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:4b23cf16bd97a0e8a27b1054935d97099609ecb53da5d6c3c20ecc1489d9fa5c
+  image: ibmcom/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
+- caseVersions:
+  - 1.3.1
+  category: catalog
+  digest: sha256:cf2f89e445f768a82aba040341737e7c0f82db15c0147d866c7d988aab0c8b56
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.3.1-amd64
+- caseVersions:
+  - 1.3.1
+  category: catalog
+  digest: sha256:5b6d2c24a13141f26685d38f436c0d1f880c6e2402d5f5408524cea416231de3
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.3.1-s390x
+- caseVersions:
+  - 1.3.1
+  category: catalog
+  digest: sha256:dbd5b25934efa5b4a8d95d675e1bb23f0751fb6b9fe9b2cd3245a314496778bf
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
