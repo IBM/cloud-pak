@@ -1,6 +1,7 @@
 source: ibm-cpd-edb-case-bundle/case/ibm-cpd-edb/case.yaml
 description: "Case bundle for the EDB Cluster Operator"
 images:
+  - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/postgresql
   - image: cp/cpd/wd-postgres-license
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-bundle
