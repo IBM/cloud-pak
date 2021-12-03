@@ -1,6 +1,11 @@
 source: ibm-bts-bundle/case/ibm-bts-bundle/case.yaml
 description: ""
 images:
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: quay.io/opencloudio/ibm-bts
   - image: quay.io/opencloudio/ibm-bts-operator
   - image: quay.io/opencloudio/ibm-bts-operator-bundle
