@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 3.16.0
+  catalogs:
+    operations: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: ibm-healthcheck-operator CASE
+  displayDescription: ""
+  displayName: IBM Health Check Operator CASE
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-cs-healthcheck
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.10.0
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2021-12-03T18:57:19.61620436+0000
+digest: sha256:cf1febdcd6591d851e321bcc962bc5482a90747893f3adb467a2005c0536de3e
