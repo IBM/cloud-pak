@@ -195,3 +195,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v1.0.0
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:a29ade7d2df331a69070f9c006afbf39080d59071e021e12ac80dfe45d460a3d
+  image: cpopen/ibm-mq-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.7.0-amd64
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:556e5077a1855012f1b7ddc3ca6dcc1a1f004fb8bfea2c27803a204c7af790de
+  image: cpopen/ibm-mq-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.7.0-s390x
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:763965e9abbd819f98706a4ee8055ed5ec1d8c633687c168ee7515cf28dd4e5a
+  image: cpopen/ibm-mq-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.7.0
