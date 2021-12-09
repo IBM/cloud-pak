@@ -6,6 +6,7 @@ containerImages:
   - 1.0.35
   - 1.0.36
   - 1.0.38
+  - 1.0.41
   category: catalog
   digest: sha256:4a8614a20f5df6c9958860cf8097d25a2094bde12a9aeb6ba7a674c4738f0c8b
   image: cpopen/ibm-data-governor-operator-catalog
@@ -19,6 +20,7 @@ containerImages:
   - 1.0.35
   - 1.0.36
   - 1.0.38
+  - 1.0.41
   category: catalog
   digest: sha256:df3d3f0fe2af9ec4f59e99e3f1736731c6bf3a983339996d6ff359766d0d1e29
   image: cpopen/ibm-data-governor-operator-catalog
@@ -31,6 +33,7 @@ containerImages:
   - 1.0.35
   - 1.0.36
   - 1.0.38
+  - 1.0.41
   category: catalog
   digest: sha256:c16ad2d58833363a9355525822c063b9962323c84f894de745234882408e666b
   image: cpopen/ibm-data-governor-operator-catalog
@@ -42,6 +45,7 @@ containerImages:
 - caseVersions:
   - 1.0.36
   - 1.0.38
+  - 1.0.41
   category: catalog
   digest: sha256:a38d1fb27ee4efac32d7109adafe2c3618796ccdaa9a2eec87bc0a65e0e511e1
   image: cpopen/ibm-data-governor-operator-catalog
@@ -52,6 +56,7 @@ containerImages:
   tag: v1.0.36
 - caseVersions:
   - 1.0.38
+  - 1.0.41
   category: catalog
   digest: sha256:4b02c6872ab2f62fbbba857700cc214fb198d87e50cfbf4892ad019923944888
   image: cpopen/ibm-data-governor-operator-catalog
@@ -80,3 +85,13 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: latest
+- caseVersions:
+  - 1.0.41
+  category: catalog
+  digest: sha256:e56a42b12366248ef173af502f77175a9041fe5798756c557f2f107d083942e6
+  image: cpopen/ibm-data-governor-operator-catalog
+  platform:
+    architecture: x86_64
+    imagetype: singleArch
+    os: linux
+  tag: v1.0.41
