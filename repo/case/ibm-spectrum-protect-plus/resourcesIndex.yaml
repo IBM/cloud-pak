@@ -1,2 +1,22 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:46498bd5091752574c079b35d800edd6614c0eef43808884d37dc60d48eb4cf8
+  image: cpopen/ibmsppc-operator-catalog-ocp
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 10.19.0-20211124c
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:3c39e2a8c1edc8ccf4111e5ccfa988a54f189e0d283ecc34edb1e091949098ac
+  image: cpopen/ibmsppc-operator-catalog-k8s
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 10.19.0-20211124c
