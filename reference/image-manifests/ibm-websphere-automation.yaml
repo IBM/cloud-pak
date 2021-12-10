@@ -14,12 +14,19 @@ images:
   - image: cp/iaf-ai-pipeline-ctrl
   - image: cp/iaf-ai-pipeline-step
   - image: cp/iaf-apicurio-registry
+  - image: cp/iaf-cockpit
   - image: cp/iaf-elasticsearch
   - image: cp/iaf-elasticsearch-metrics-exporter
   - image: cp/iaf-elasticsearch-proxy
   - image: cp/iaf-eventprocessing-proxy
   - image: cp/iaf-flink
   - image: cp/iaf-health-service
+  - image: cp/iaf-insights-engine-application-setup
+  - image: cp/iaf-insights-engine-event-forwarder
+  - image: cp/iaf-insights-engine-liberty
+  - image: cp/iaf-insights-engine-management
+  - image: cp/iaf-insights-engine-management-backend
+  - image: cp/iaf-minimal
   - image: cp/iaf-ui-customization
   - image: cp/opencontent-etcd-3
   - image: cp/websphere-automation-api-selfsecure
@@ -65,6 +72,8 @@ images:
   - image: icr.io/cpopen/iaf-eventprocessing-operator-bundle
   - image: icr.io/cpopen/iaf-flink-operator
   - image: icr.io/cpopen/iaf-flink-operator-bundle
+  - image: icr.io/cpopen/iaf-insights-engine-operator
+  - image: icr.io/cpopen/iaf-insights-engine-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator-catalog
