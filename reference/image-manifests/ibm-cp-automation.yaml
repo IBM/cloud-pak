@@ -114,6 +114,7 @@ images:
   - image: cp/cp4a/demo/phpldapadmin
   - image: cp/cp4a/fncm/cmis
   - image: cp/cp4a/fncm/cpe
+  - image: cp/cp4a/fncm/cpe-sso
   - image: cp/cp4a/fncm/crs
   - image: cp/cp4a/fncm/css
   - image: cp/cp4a/fncm/css-if002
@@ -149,7 +150,10 @@ images:
   - image: cp/cp4a/ums/dba-ums-secret-initcontainer
   - image: cp/cp4a/ums/ums
   - image: cp/cp4a/workflow-ps/workflow-ps-authoring
+  - image: cp/cp4a/workflow-ps/workflow-ps-operator
   - image: cp/cp4a/workflow-ps/workflow-ps-server
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
   - image: cp/db2u
   - image: cp/db2u.auxiliary.auth
   - image: cp/db2u.bigsql.cdh7
@@ -289,6 +293,9 @@ images:
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-etcd-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-catalog
   - image: icr.io/cpopen/ibm-mq-operator
@@ -302,6 +309,7 @@ images:
   - image: icr.io/cpopen/processmining-operator
   - image: icr.io/cpopen/processmining-operator-bundle
   - image: icr.io/cpopen/processmining-operator-catalog
+  - image: icr.io/cpopen/workflow-ps-operator-bundle
   - image: icr.io/db2u/db2u
   - image: icr.io/db2u/db2u.auxiliary.auth
   - image: icr.io/db2u/db2u.instdb
@@ -329,6 +337,11 @@ images:
   - image: quay.io/opencloudio/iam-policy-decision
   - image: quay.io/opencloudio/ibm-auditlogging-operator
   - image: quay.io/opencloudio/ibm-auditlogging-operator-bundle
+  - image: quay.io/opencloudio/ibm-bts
+  - image: quay.io/opencloudio/ibm-bts-operator
+  - image: quay.io/opencloudio/ibm-bts-operator-bundle
+  - image: quay.io/opencloudio/ibm-bts-operator-catalog
+  - image: quay.io/opencloudio/ibm-bts-tls-init
   - image: quay.io/opencloudio/ibm-cert-manager-operator
   - image: quay.io/opencloudio/ibm-cert-manager-operator-bundle
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
