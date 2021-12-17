@@ -16,6 +16,7 @@ images:
   - image: cp/db2u.rest
   - image: cp/db2u.restricted
   - image: cp/db2u.tools
+  - image: cp/db2u.update.image
   - image: cp/etcd
   - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/ibm-guardium-insights/analytics-events
@@ -24,6 +25,9 @@ images:
   - image: cp/ibm-guardium-insights/assets
   - image: cp/ibm-guardium-insights/audit
   - image: cp/ibm-guardium-insights/configuration
+  - image: cp/ibm-guardium-insights/connections
+  - image: cp/ibm-guardium-insights/cp-serviceability
+  - image: cp/ibm-guardium-insights/dashboards
   - image: cp/ibm-guardium-insights/datamart-processor
   - image: cp/ibm-guardium-insights/data-retention
   - image: cp/ibm-guardium-insights/db2-store
@@ -31,6 +35,7 @@ images:
   - image: cp/ibm-guardium-insights/db2u.auxiliary.auth
   - image: cp/ibm-guardium-insights/db2u.instdb
   - image: cp/ibm-guardium-insights/db2u.tools
+  - image: cp/ibm-guardium-insights/ecosystem
   - image: cp/ibm-guardium-insights/etcd
   - image: cp/ibm-guardium-insights/fetch
   - image: cp/ibm-guardium-insights/group-builder
@@ -67,6 +72,8 @@ images:
   - image: cp/ibm-guardium-insights/scheduler
   - image: cp/ibm-guardium-insights/settings-datasources
   - image: cp/ibm-guardium-insights/snif-assist
+  - image: cp/ibm-guardium-insights/snif-picker
+  - image: cp/ibm-guardium-insights/snif-sidecar
   - image: cp/ibm-guardium-insights/ssh-service
   - image: cp/ibm-guardium-insights/streams
   - image: cp/ibm-guardium-insights/templates
@@ -96,6 +103,7 @@ images:
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/guardium-insights/cp-serviceability
   - image: icr.io/guardium-insights/mongo
   - image: quay.io/mongodb/mongodb-agent
   - image: quay.io/mongodb/mongodb-kubernetes-operator
@@ -126,6 +134,9 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
