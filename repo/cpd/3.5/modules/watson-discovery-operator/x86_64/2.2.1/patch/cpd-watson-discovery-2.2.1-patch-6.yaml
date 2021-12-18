@@ -1,0 +1,60 @@
+description: Watson Discovery 2.2.1 operator patch for security updates
+patchFile: patchCommands.txt
+backupForRollback:
+- kind: Deployment
+  name: wd-discovery-operator
+  namespace: controlplane
+- kind: WatsonDiscovery
+  name: wd
+  namespace: controlplane
+images:
+- discovery-operator:2.2.1-patch-6-cdea1d6da
+- cnm-api:1.1.0.4-1-36c4ac1 
+- cnm-dbinit:1.1.0.4-1-36c4ac1 
+- cnm-seer:1.0.0.16-1-577a8c0 
+- configure-etcd:1.4.2 
+- configure-postgres:20211213-020929-6-82f6b358 
+- disco-ranker-server:20211212-014831-915-23ce5db 
+- discovery-ranker-rest-service:20211211-001935-993-57ddea5 
+- haywire:20211210-234231-972-a8c7688 
+- icp-jks-gen:1.0.34 
+- icp-util:1.0.34 
+- kg-gensim-nonroot-user:masterv1.0.29 
+- kg-induction:2.2.1v1.0.5 
+- kg-modelmesh:2.2.1v1.0.6 
+- logging-server:0.0.22.2 
+- model-mesh:main-20210817-45 
+- objectstore-toolbox:1.0.16 
+- po-box:0.3.24.3 
+- ranker-monitor-agent:20210901-012813-848-8f516664 
+- ranker-training:20211212-200229-961-05b5e1c 
+- sdu-spark:1.5.81 
+- sentence-classification:v1.1.7 
+- sentence-classification-gpu:v1.1.7 
+- tooling:node-release-2.2.1-patch-6-5 
+- training-agent:20210831-013212-1007-0f2a0740 
+- training-data-crud:20211213-020929-6-82f6b358 
+- training-master:20211212-023204-10-6152cf 
+- training-rest:20211211-025828-1024-54a38287-non-root 
+- watson-nlp-models:1.28.2-2-9b4d667 
+- wd-api:12.0.7-3034 
+- wd-elastic-plugins:12.0.7-3022 
+- wd-hdp:12.0.7-3087 
+- wd-indexer:0.3.4.8 
+- wd-ingestion:12.0.7-3084 
+- wd-ingestion-api:12.0.7-3084 
+- wd-management:12.0.7-3076 
+- wd-migrator:12.0.7-3119 
+- wd-minerapp:12.0.7-3039 
+- wd-nginx:12.0.7-3014 
+- wd-orchestrator:12.0.7-3174 
+- wd-rapi:12.0.7-3051 
+- wd-rcm:0.0.22.2 
+- wd-stateless-api-model-runtime:12.0.7-3094 
+- wd-stateless-api-rest-proxy:12.0.7-3094 
+- wd-utils:12.0.7-3064 
+- wd-webpagecleaner:12.0.7-3024 
+- wd-wksml:12.0.7-3051 
+- wks-ene-expand:release-1-0-23-20210317-0153-5 
+- wks-glimpse-ene-builder:release-1-0-23-20210317-0153-5 
+- wks-ibmjdk8-rhubi8:master-20211011-1826-575
