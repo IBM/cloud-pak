@@ -8,6 +8,7 @@ containerImages:
   - 1.1.5
   - 1.1.6
   - 1.1.7
+  - 1.1.9
   category: catalog
   digest: sha256:729ae1128c914ab918d446a308bc317ae00201f6d1e1091e0493d14b0e2a0f1a
   image: cpopen/ibm-model-train-operator-catalog
@@ -40,6 +41,7 @@ containerImages:
   - 1.1.5
   - 1.1.6
   - 1.1.7
+  - 1.1.9
   category: catalog
   digest: sha256:57432ef820f3cd51ed15814167103613dfc99d5442690a2cd33158364ff4fb62
   image: cpopen/ibm-model-train-operator-catalog
@@ -51,6 +53,7 @@ containerImages:
 - caseVersions:
   - 1.1.6
   - 1.1.7
+  - 1.1.9
   category: catalog
   digest: sha256:5472ef8e315cb0b01fca98b7533df687f57d85a9e2d52c0db33dce68c74c985c
   image: cpopen/ibm-model-train-operator-catalog
@@ -61,6 +64,7 @@ containerImages:
   tag: 1.0.9
 - caseVersions:
   - 1.1.7
+  - 1.1.9
   category: catalog
   digest: sha256:5a9439fbcdd3cd3c5d564c6878636826e2bda32cb8882550b60ac848923ca520
   image: cpopen/ibm-model-train-operator-catalog
@@ -79,3 +83,13 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.0.4
+- caseVersions:
+  - 1.1.9
+  category: catalog
+  digest: sha256:bb68d79913ba0b08ada482ae469dd5704de3dd2b4427a8558e239f1fbc3a2efe
+  image: cpopen/ibm-model-train-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.0.17

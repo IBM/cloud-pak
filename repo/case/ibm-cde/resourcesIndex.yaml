@@ -76,3 +76,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v1.0.0-20210618.160001-linux.amd64
+- caseVersions:
+  - 2.0.4
+  category: catalog
+  digest: sha256:6a290f416b115cbc89a6bc48d1fc1b670238c9e87e01c34cde593def0dcfee85
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.4-20211213.132244-linux.amd64
+- caseVersions:
+  - 2.0.4
+  category: catalog
+  digest: sha256:317cabc4178c8c83bf3e29316d3e4a7e5cbc2aed26d59c8bd04a5625bc6a070d
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.4-20211213.132244-linux.ppc64le
+- caseVersions:
+  - 2.0.4
+  category: catalog
+  digest: sha256:db7f0d7dd8e134f69b5dd3c6439dbe0d72283a962b5f60f258cf53bbb055ccdb
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.4-20211213.132244
