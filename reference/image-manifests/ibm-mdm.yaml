@@ -24,7 +24,11 @@ images:
   - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
+  - image: cp/cpd/fdb-apple-foundationdb
+  - image: cp/cpd/fdb-apple-foundationdb-sidecar
   - image: cp/cpd/fdbcontroller
+  - image: cp/cpd/fdb-ibm-backup-agent
+  - image: cp/cpd/fdb-ibm-restore-agent
   - image: cp/cpd/fdb-kubernetes-operator
   - image: cp/cpd/fdbrestore
   - image: cp/cpd/foundationdb
@@ -109,6 +113,10 @@ images:
   - image: ibmcom/ibm-cloud-databases-redis-operator
   - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/fdb-apple-operator
+  - image: icr.io/cpopen/fdb-apple-operator-bundle
+  - image: icr.io/cpopen/fdb-ibm-operator
+  - image: icr.io/cpopen/fdb-ibm-operator-bundle
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
