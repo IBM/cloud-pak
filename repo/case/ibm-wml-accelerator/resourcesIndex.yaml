@@ -58,3 +58,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v1.0.1-x86_64
+- caseVersions:
+  - 2.3.4
+  category: catalog
+  digest: sha256:efa91b459b71ffa57ecfe3900beec60410ce55fc5b570f06a9d840df19aee4b8
+  image: cpopen/ibm-cpd-wml-accelerator-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.4-amd64
+- caseVersions:
+  - 2.3.4
+  category: catalog
+  digest: sha256:13c08369fbc8d24a851dd25b9b5e1f404f3b0c4d305352bb310ccc199bec5053
+  image: cpopen/ibm-cpd-wml-accelerator-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.4-ppc64le
+- caseVersions:
+  - 2.3.4
+  category: catalog
+  digest: sha256:67edbe014f5b7044a88dabc3691bd92655c3f70a873bb0a5e2fd4e11f1001a78
+  image: cpopen/ibm-cpd-wml-accelerator-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.4
