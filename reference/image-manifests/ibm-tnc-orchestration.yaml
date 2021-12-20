@@ -11,6 +11,8 @@ images:
   - image: cp/ai/seldonio-mlserver
   - image: cp/ai/triton-inference-server
   - image: cp/ai/wmlserving-controller
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
   - image: cp/iaf-ai-pipeline-ctrl
   - image: cp/iaf-ai-pipeline-step
   - image: cp/iaf-apicurio-registry
@@ -57,6 +59,10 @@ images:
   - image: cp/tnc/siteplanner-nginx
   - image: cp/tnc/siteplanner-postgres
   - image: cp/tnc/talledega
+  - image: cp/tnc/tnc-siteplanner
+  - image: cp/tnc/tnc-vault-config
+  - image: cp/tnc/tnc-vault-initdb
+  - image: cp/tnc/tnc-vault-main
   - image: cp/tnc/watchtower
   - image: cp/tnc/zookeeper
   - image: ibmcom/iaf-ai-operator
@@ -103,6 +109,9 @@ images:
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-etcd-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-catalog
   - image: icr.io/cpopen/ibm-tnc-orchestration-catalog
