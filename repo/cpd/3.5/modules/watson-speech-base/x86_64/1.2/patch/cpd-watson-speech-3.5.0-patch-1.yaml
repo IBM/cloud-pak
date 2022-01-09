@@ -1,8 +1,0 @@
-images:
-  - stt-async:master-751
-patchFile: patchCommands.txt
-backupForRollback:
-  - kind: Deployment
-    name: {{ .ReleaseName }}-speech-to-text-stt-async
-    namespace: ""
-description: Patch for async service
