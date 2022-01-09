@@ -1,5 +1,0 @@
-commands:
-  - scale --replicas=1 deployment -l app.kubernetes.io/component=gdpr-data-deletion
-  - scale --replicas=1 deployment -l app.kubernetes.io/component=gw-deployment
-  - scale --replicas=1 deployment -l app.kubernetes.io/component=tts-customization
-  - scale --replicas=1 deployment -l app.kubernetes.io/component=tts-runtime
