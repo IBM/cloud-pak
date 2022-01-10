@@ -1,0 +1,36 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.1.1
+  catalogs:
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Represents a deployment of a container native IBM Spectrum Scale cluster
+  displayDescription: Represents a deployment of a container native IBM Spectrum Scale cluster
+  displayName: IBM Spectrum Scale Container Native Storage Version
+  icons: []
+  licenses:
+    spectrumscale:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Spectrum Scale Container Native Data Access Edition, version 5.1.1.1
+        displayName: IBM Spectrum Scale Container Native Data Access Edition
+      ref: license
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?l=en&popup=y&li_formnum=L-CPES-C3MSKL&title=IBM%20License%20Agreement
+  name: ibm-spectrum-scale-dae-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.0+20220104.100000.cve2021-45105
+  webPage: https://www.ibm.com/docs/en/scalecontainernative
+created: 2022-01-10T17:49:36.50157827+0000
+digest: sha256:f78e7e373755deb0f77082328324cb738b1bd63f32efff66c3fbf40ffada49e9
