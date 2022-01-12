@@ -6,7 +6,7 @@ metadata:
     release: {{ .releaseName }}
     app.kubernetes.io/instance: {{ .releaseName }}
   annotations:
-    oppy.ibm.com/disable-rollback: true
+    oppy.ibm.com/disable-rollback: "true"
 spec:
   version: 2.2.1
   shared:
