@@ -128,3 +128,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: latest
+- caseVersions:
+  - 2.2.1
+  category: catalog
+  digest: sha256:f513680d4fe1b686a86c090347e8120eb46aa8f407dff3cfdfa4bdac67cf16bf
+  image: cp/cp4a/ibm-cs-bawautomation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: baw-21032-linux.amd64
+- caseVersions:
+  - 2.2.1
+  category: catalog
+  digest: sha256:a647a3d96e9650e7b02513d9bae504ea0466a069fd0a373289784558638595bf
+  image: cp/cp4a/ibm-cs-bawautomation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: baw-21032-linux.s390x
+- caseVersions:
+  - 2.2.1
+  category: catalog
+  digest: sha256:76e1c5ae85734e58e7e1c6f76e990a740467625a4e79e055800c0f2742f3f6e6
+  image: cp/cp4a/ibm-cs-bawautomation-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2103-latest
