@@ -380,3 +380,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: latest
+- caseVersions:
+  - 1.4.5
+  category: catalog
+  digest: sha256:e216f3bc7158c15885dcef022b3ad245fa69618fe53c6c064a523766c863c992
+  image: cpopen/ucdr-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.4.5
+  category: catalog
+  digest: sha256:f6d4b06d8c6b526784028bd517a3310c8a6b248723bdee1385c36d518a2a56b9
+  image: cpopen/ucdr-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: latest-ppc64le
+- caseVersions:
+  - 1.4.5
+  category: catalog
+  digest: sha256:3101b43fa601a1dd78e4e65df709bc25060df58b1411b1fdc24e31c053cfc410
+  image: cpopen/ucdr-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.4.5
+  category: catalog
+  digest: sha256:33a0c48459cababf45185e200f251b4109e8095a2f4c5a79d5380264895f2d00
+  image: cpopen/ucdr-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
