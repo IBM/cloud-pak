@@ -8,7 +8,12 @@
 This CASE contains two inventory items:
 - A helm chart that deploys a single server instance of IBM UrbanCode Deploy that may be scaled to multiple instances.
 - An operator that deploys a single server instance of IBM UrbanCode Deploy that may be scaled to multiple instances.
-- The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy server.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the server.
+
+The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy server.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the server.
+
+## Kubernetes Roles and Personas
+- Operator - The Kubernetes cluster administrator role is required when working with the UCD server operator.  This role is required to add a new CustomResourceDefinition (CRD) named ucdservers.urbancode.ibm.com to the cluster.  Once the CRD has been added to the cluster, an instance of the operator can be installed into a namespace by a user with the namespace administrator role.  After the UCD server operator is running, users can create UcdServer resources.
+- Helm Chart - Users with the namespace administrator role can install the UCD server using the helm chart.
 
 ## Prerequisites
 
@@ -334,7 +339,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-catalog                           \
@@ -345,7 +350,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator
@@ -359,7 +364,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -373,7 +378,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator
@@ -383,7 +388,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-catalog                         \
@@ -400,7 +405,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator-native                   \
@@ -412,7 +417,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator-native                 \
@@ -423,7 +428,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action install-helm-chart                        \
@@ -434,7 +439,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action uninstall-helm-chart                      \
@@ -487,7 +492,7 @@ Create registry secret for source image registry (if the registry is public whic
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz             \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz             \
     --namespace <target namespace>                       \
     --inventory ucdsOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -498,7 +503,7 @@ cloudctl case launch                                     \
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz             \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz             \
     --namespace <target namespace>                       \
     --inventory ucdsOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -521,7 +526,7 @@ In this step image from saved CASE (images.csv) are copied to target registry in
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz           \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz           \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action mirror-images                             \
@@ -543,7 +548,7 @@ WARNING:
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.2.tgz           \
+    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz           \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action configure-cluster-airgap                  \
