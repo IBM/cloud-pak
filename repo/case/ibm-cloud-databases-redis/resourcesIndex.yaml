@@ -411,6 +411,7 @@ containerImages:
   tag: 1.4.1-amd64
 - caseVersions:
   - 1.4.3
+  - 1.4.4
   category: catalog
   digest: sha256:d46ba72ff42796e584065bd35bfc4a66c8944f023e6f11b8161fb83eb5f7ab84
   image: cpopen/ibm-cloud-databases-redis-catalog
@@ -437,3 +438,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.4.1
+- caseVersions:
+  - 1.4.4
+  category: catalog
+  digest: sha256:df3bb787b6a649477ef84bec3da4c325ff1ae836313a36d6fa29d818dcf98407
+  image: cpopen/ibm-cloud-databases-redis-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.4.2-amd64
+- caseVersions:
+  - 1.4.4
+  category: catalog
+  digest: sha256:02c8ad329ca41114ccd21a270ceea9e2c33344566171fd5ba37c33acfe155ffe
+  image: cpopen/ibm-cloud-databases-redis-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.4.2-ppc64le
+- caseVersions:
+  - 1.4.4
+  category: catalog
+  digest: sha256:d1652894fbeae92a3b904ab6b54f748291e12901510a874e8dec8248e867a960
+  image: cpopen/ibm-cloud-databases-redis-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.4.2
