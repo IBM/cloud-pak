@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: "{{.Values.global.zenControlPlaneNamespace}}"
+  name: {{.Values.global.zenServiceInstanceDisplayName}}-wml-accelerator-instance-cm
+  labels:
+    icpdata_addon: "true"
+    release: "{{.Release.Name}}"
+data:
+  instance.json: |
+    {
+      "id": "{{ .Values.global.zenServiceInstanceId | int64 }}",
+      "addon_type": "wml-accelerator",
+      "display_name": "{{.Values.global.zenServiceInstanceDisplayName}}",
+      "namespace": "{{.Values.global.zenControlPlaneNamespace}}",
+      "addon_version": "2.2.2",
+      "create_arguments": {
+        "resources": {
+          "cpu": "1Gi",
+          "memory": "1Gi",
+          "gpu": "1Gi"
+        },
+        "description": "Test service instance",
+        "metadata": {
+          "key": "value"
+        }
+      }
+    }

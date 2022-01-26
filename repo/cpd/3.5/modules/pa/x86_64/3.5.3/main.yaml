@@ -1,0 +1,89 @@
+category: helm-chart
+chart: ibm-planning-analytics-cpd-addon-3.5.3.tgz
+description: This module is for the Planning Analytics Add-on install
+images:
+- name: pa-async-service
+  tag: 0.0.217-1-ubi8
+- name: pa-atlas-service
+  tag: 69-ubi8
+- name: pa-bss
+  tag: 1.0.1273-ubi8
+- name: pa-bss-init
+  tag: 1.0.269-ubi8
+- name: pa-cdn
+  tag: 3.0.5242-ubi8
+- name: pa-content-service
+  tag: 1.0.234-1-ubi8
+- name: pa-couchdb
+  tag: 164-ubi8
+- name: pa-cp4d-addon
+  tag: 3.5.3-2534
+- name: pa-cp4d-post-upgrade-job
+  tag: 2.0.55-30
+- name: pa-cp4d-service-provider
+  tag: 2.0.55-264
+- name: pa-evalservice
+  tag: 11.0.70-21122011
+- name: pa-gateway
+  tag: 1.0.1034-ubi8
+- name: pa-glass
+  tag: 3.0.5242-ubi8
+- name: pa-k8s-config
+  tag: 1.0.81-1-ubi8
+- name: pa-mongo
+  tag: 1.0.151-ubi8
+- name: pa-monitor
+  tag: 2.0.72.2528-ubi8
+- name: pa-mysql-cluster
+  tag: 2.0.134-ubi8
+- name: pa-neo-idviz
+  tag: 9.0.493-ubi8
+- name: pa-neo-provision
+  tag: 1.0.315-ubi8
+- name: pa-palm-service
+  tag: 1.0.144-1-ubi8
+- name: pa-paw-ui-api
+  tag: 1.0.109-1-ubi8
+- name: pa-plan-service
+  tag: 1.0.2021112101-1-ubi8
+- name: pa-predict-svc
+  tag: 1.0.689-ubi8
+- name: pa-prism-app
+  tag: 3.0.5420-1-ubi8
+- name: pa-prism-platform
+  tag: 3.0.1991.4-ubi8
+- name: pa-prism-proxy
+  tag: 3.0.10101-ubi8
+- name: pa-redis
+  tag: 1.0.155-ubi8
+- name: pa-share-app
+  tag: 1.0.484-1-ubi8
+- name: pa-share-platform
+  tag: 1.0.353-1-ubi8
+- name: pa-share-proxy
+  tag: 1.0.484-ubi8
+- name: pa-tm1-cp4d
+  tag: b739CP4D
+- name: pa-tm1proxy
+  tag: 1.0.330-1-ubi8
+- name: pa-tm1web
+  tag: 11.0.70-21122011
+- name: pa-user-admin
+  tag: 1.0.609-ubi8
+- name: pa-wa-proxy
+  tag: 1.0.798-1-ubi8
+installOverride: icp4d-override.yaml
+name: Planning Analytics
+registry-reference: base-registry
+releaseName: planning-analytics
+scale:
+- pass-small.yaml
+- pass-medium.yaml
+- pass-large.yaml
+- pass-off.yaml
+- tm1-small.yaml
+- tm1-medium.yaml
+- tm1-large.yaml
+timeout: 20
+type: module
+version: 3.5.3

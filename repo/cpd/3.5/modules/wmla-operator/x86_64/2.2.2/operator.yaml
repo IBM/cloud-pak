@@ -1,0 +1,97 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wmla-operator-controller-manager
+  labels:
+    app.kubernetes.io/name: "ibm-spectrum-wmla"
+    app.kubernetes.io/managed-by: "wmlas.spectrumcomputing.ibm.com"
+    app.kubernetes.io/instance: "{{.releaseName}}"
+    release: "{{.releaseName}}"
+  annotations:
+    deployment.kubernetes.io/revision: "4"
+  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: wmla-operator
+  template:
+    metadata:
+      annotations:
+        productID: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        productName: "IBM Watson Machine Learning Accelerator"
+        productVersion: "2.2.2"
+        productCloudpakRatio: "1:1"
+        productMetric: "VIRTUAL_PROCESSOR_CORE"
+        productChargedContainers: "All"
+        cloudpakId: "eb9998dcc5d24e3eb5b6fb488f750fe2"
+        cloudpakName: "IBM Cloud Pak for Data"
+        cloudpakInstanceId: "{{ .cloudpakInstanceId }}"
+      labels:
+        name: wmla-operator
+        app.kubernetes.io/name: "ibm-spectrum-wmla"
+        app.kubernetes.io/managed-by: "wmlas.spectrumcomputing.ibm.com"
+        app.kubernetes.io/instance: "{{.releaseName}}"
+        icpdsupport/addOnType: "component"
+        icpdsupport/addOnName: "WML-Accelerator"
+        icpdsupport/addOnId: "wml-accelerator"
+        icpdsupport/app: "wml-accelerator"
+        icpdsupport/serviceInstanceId: "{{ .zenServiceInstanceId}}"
+        icpdsupport/controlPlaneNamespace: "{{.zenControlPlaneNamespace}}"
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - ppc64le
+                - amd64
+      serviceAccountName: cpd-viewer-sa
+      hostIPC: false
+      hostNetwork: false
+      hostPID: false
+      #imagePullSecrets:
+      #  - name: ibm-entitlement-key
+      containers:
+      - args:
+        - --metrics-addr=0.0.0.0:8080
+        #image: "cp.stg.icr.io/cp/wmla/wml-accelerator-operator:v1.0.1"
+        image: "{{.registryPrefix}}/wml-accelerator-operator:v2.2.2-x86_64"
+        imagePullPolicy: "Always"
+        resources:
+            limits:
+              cpu: 0.5
+              memory: 0.5Gi
+            requests:
+              cpu: 0.25
+              memory: 0.25Gi
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: true
+          capabilities:
+            drop:
+            - ALL
+          privileged: false
+          readOnlyRootFilesystem: false
+        livenessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 60
+        readinessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        name: manager
+        env:
+         - name: WATCH_NAMESPACE
+           valueFrom:
+             fieldRef:
+               fieldPath: metadata.namespace 
+         - name: ANSIBLE_DEBUG_LOGS
+           value: "True"
+      terminationGracePeriodSeconds: 10

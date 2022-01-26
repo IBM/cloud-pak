@@ -1,0 +1,65 @@
+- name: lite
+  version: 3.5.6
+- name: common-core-services
+  version: 3.5.7
+- name: data-refinery
+  version: 3.5.6
+- name: wkc-adm
+  version: 3.5.1402
+- name: 0071-wkc-prereqs
+  version: 3.5.1402
+  images:
+  - name: wdp-db2
+    version: 3.1.68
+    gitLog: https://github.ibm.com/wdp-gov/wdp-db2/commits/3.1.68
+  - name: wkc-init-container
+    version: 1.0.156
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.156
+- name: 0075-wkc-lite
+  version: 3.5.1413
+  images:
+  - name: dataconn-engine-opdiscovery
+    version: 3.0.157
+    gitLog: https://github.ibm.com/dataconnect/wdp-opdiscovery/commits/3.0.157
+  - name: dataconn-engine-service
+    version: 5.0.189
+    gitLog: https://github.ibm.com/dataconnect/dataconn-engine/commits/5.0.189
+  - name: dataconn-engine-spark-cluster
+    version: 5.0.189
+    gitLog: https://github.ibm.com/dataconnect/dataconn-engine/commits/5.0.189
+  - name: wdp-activities
+    version: 3.0.119
+    gitLog: https://github.ibm.com/dataconnect/wdp-activities/commits/3.0.119
+  - name: wkc-gov-ui
+    version: 3.5.1117
+    gitLog: https://github.ibm.com/wdp-gov/wkc-gov-ui/commits/3.5.1117
+  - name: wkc-glossary-service
+    version: 3.5.679
+    gitLog: https://github.ibm.com/wdp-gov/glossary-service/commits/3.5.679
+  - name: wdp-search
+    version: 1.0.538
+  - name: wdp-profiling
+    version: 3.5.601
+    gitLog: https://github.ibm.com/dataconnect/wdp-profiling/commits/3.5.601
+  - name: wdp-profiling-messaging
+    version: 3.5.603
+  - name: wdp-profiling-ui
+    version: 3.5.601
+  - name: wkc-init-container
+    version: 1.0.156
+    gitLog: https://github.ibm.com/wdp-gov/wkc-init-container/commits/1.0.156
+  - name: wkc-workflow-service
+    version: 3.6.261
+    gitLog: https://github.ibm.com/wdp-gov/wkc-workflow-service/commits/3.6.261
+  - name: metadata-discovery
+    version: 3.5.21
+    gitLog: https://github.ibm.com/wdp-gov/discovery/commits/3.5.21
+  - name: wkc-metadata-imports-ui
+    version: 3.5.222
+    gitLog: https://github.ibm.com/wdp-gov/wkc-metadata-imports-ui/commits/3.5.222
+  - name: wdp-policy-service
+    version: 3.5.770
+    gitLog: https://github.ibm.com/dataconnect/wdp-policy-service/commits/3.5.770
+  - name: wdp-lineage
+    version: 3.5.702
+    gitLog: https://github.ibm.com/wdp-gov/wdp-lineage/commits/3.5.702
