@@ -59,3 +59,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.4.0-192
+- caseVersions:
+  - 2.5.0
+  category: catalog
+  digest: sha256:2ea1eab3f3fadc81abc349f8a17c5ec7590f50fb1cf0bb33ae4df15b9891ba73
+  image: cpopen/ibm-watson-openscale-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.5.0-200-amd64
+- caseVersions:
+  - 2.5.0
+  category: catalog
+  digest: sha256:9d99be7c6df9b1ca0a7b5cc36cdf243916bd22c338a80c5c0ee17d21997c67f3
+  image: cpopen/ibm-watson-openscale-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.5.0-200-s390x
+- caseVersions:
+  - 2.5.0
+  category: catalog
+  digest: sha256:d8b96670d577bfb00ea072b3855aae997972865f23a6d0c9dc29deff8972f47b
+  image: cpopen/ibm-watson-openscale-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.5.0-200
