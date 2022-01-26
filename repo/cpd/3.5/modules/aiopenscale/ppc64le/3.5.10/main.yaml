@@ -1,0 +1,75 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Watson OpenScale
+version: 3.5.10
+# The description is mandatory
+description: "An open and scalable platform for machine learning"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: base-registry
+scale:
+- small.yaml
+- medium.yaml
+# Image list
+images:
+- name: aios-bias-service
+  tag: 3.5.10.1647-ppc64le
+- name: aios-bkpi-combined-services
+  tag: 3.5.10.110-ppc64le
+- name: drift
+  tag: 3.5.10.944-ppc64le
+- name: aios-common-api
+  tag: 3.5.10.71-ppc64le
+- name: aios-common-api-nlp
+  tag: 3.5.10.71-ppc64le
+- name: aios-configuration-service
+  tag: 3.5.10.914-ppc64le
+- name: aios-datamart-service-api
+  tag: 3.5.10.252-ppc64le
+- name: aios-dashboard
+  tag: 3.5.10.62-ppc64le
+- name: explainability
+  tag: 3.5.10.1444-ppc64le
+- name: aios-fast-path
+  tag: 3.5.10.504-ppc64le
+- name: aios-feedback-service
+  tag: 3.5.10.535-ppc64le
+- name: aios-payload-logging-service
+  tag: 3.5.10.754-ppc64le
+- name: aios-payload-logging-service-api
+  tag: 3.5.10.557-ppc64le
+- name: model-operation-service-scheduling
+  tag: 3.5.10.283-ppc64le
+- name: aios-ml-gateway-discovery
+  tag: 3.5.10.965-ppc64le
+- name: aios-ml-gateway-service
+  tag: 3.5.10.965-ppc64le
+- name: aios-orch-notifications-service
+  tag: 3.5.10.34-ppc64le
+- name: model-risk-management
+  tag: 3.5.10.663-ppc64le
+- name: aios-etcd
+  tag: 3.3.3-ubi8-r36-ppc64le
+- name: aios-redis
+  tag: 5.5.0-ubi8-r47-ppc64le
+- name: aios-nginx-local
+  tag: 1.15.5-ubi8-r51-ppc64le
+- name: aios-kubectl
+  tag: 1.0.61-ppc64le
+- name: aios-kafka
+  tag: 0.0.59-ppc64le
+- name: aios-zoo-keeper
+  tag: 0.0.57-ppc64le
+- name: aios-migration-tool
+  tag: 2.5.168-ppc64le
+chart: ibm-aiopenscale-prod-3.5.10.tgz
+# For download to verify the chart file is correct, optional
+md5: 45c4158db530e045d8f143db1972d43e
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 60
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: aiopenscale
+installOverride: install-override.yaml

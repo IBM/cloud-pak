@@ -1,0 +1,20 @@
+type: module
+category: helm-chart
+name: ibm-job-scheduler-prod
+description: "Job-scheduler module for Watson Studio Local"
+registry-reference: base-registry
+helmUpgradeForce: true
+images:
+- name: jobs-api
+  tag: v3.5.7_091221
+- name: jobs-ui
+  tag: v3.5.7_091221
+- name: job-trigger
+  tag: v3.5.7_091221
+chart: ibm-job-scheduler-prod-3.5.0.tgz
+md5: bab45382a6ba764769ba58a6b1aa24d9
+timeout: 20
+releaseName: ibm-job-scheduler-prod
+scale:
+- small.yaml
+- medium.yaml

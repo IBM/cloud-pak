@@ -1,0 +1,15 @@
+# Description of the patch
+#   Add a description for the patch - this will be visible to the customer. The APAR that the patch will fix should be noted also.
+#                                   - should be quoted to avoid special chars breaking yaml syntax
+description: "Patch log4j vulnerability. APAR : PH42765"
+
+# Image versions for the patch
+#  List the images that are modified by the patch and must be downloaded to apply it.
+#  Images are tagged with the Big SQL build number they contain
+#  Remember that patches are cumulative. If a previous patch modified another image, it must also be mentioned here.
+images:
+  - bigsql-addon-7_1_1_0:379
+  - bigsql-service-provider-7_1_1_0:379
+
+# File containing OC commands to execute as part of patch
+patchFile: patch-oc-commands.txt

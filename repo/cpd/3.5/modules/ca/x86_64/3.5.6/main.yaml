@@ -1,0 +1,50 @@
+# type is mandatory here
+type: module
+# The module category can be either "template" or "helm-chart"
+# For now, we only support "helm-chart", "template will NOT support yet
+category: helm-chart
+# The name here just for display purpose, not necessary to be the same as the name in the directory. Optional
+name: Cognos Analytics
+version: 3.5.6
+# The description is mandatory
+description: "This module is for the Cognos Analytics Add-on install"
+# Registry name reference maps to the name in the server-info.yaml, mandatory
+registry-reference: base-registry
+# Optional. The override yaml that will override the helm chart, the file need to be same directory as the helm chart
+installOverride: icp4d-override.yaml
+upgradeOverride: icp4d-override.yaml
+# Provide a list of the image tag here, mandatory
+# If the image tag found in the helm chart but not in the list, cpd will fail
+# So make sure
+images:
+  - name: zen-addon-cognos-analytics
+    tag: 3.5.6-2073
+  - name: ibm-cognos-addon-sp
+    tag: 2.0.3
+  - name: biapp-no-rsvp
+    tag: 1.8.311
+  - name: ca-base
+    tag: 1.8.7
+  - name: ca-java-base
+    tag: 1.8.310
+  - name: cgs
+    tag: 1.8.315
+  - name: cm
+    tag: 1.8.310
+  - name: ds
+    tag: 1.8.314
+  - name: filebeat-secure
+    tag: 6.6.304
+  - name: rsvp
+    tag: 1.8.313
+  - name: artifacts
+    tag: 2.1.8
+chart: ibm-cognos-analytics-cpd-addon-prod-3.5.6.tgz
+# For download to verify the chart file is correct, optional
+#md5: c3bc1546450deceafbc8bd31e178d722
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 20 minutes
+timeout: 20
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-moduleName>
+releaseName: cognos-analytics
+serviceInstanceType:
+  - cognos-analytics-app
