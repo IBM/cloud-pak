@@ -94,3 +94,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.0-898
+- caseVersions:
+  - 1.0.5
+  category: catalog
+  digest: sha256:fd6806913e2f5e7fa6877bf8dc7c90bd73cc46b40a28c3ae8a57cda29f9c0afe
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-917-amd64
+- caseVersions:
+  - 1.0.5
+  category: catalog
+  digest: sha256:7e3bf369fc1e283de340b63d2f8b7c99c7c985d67be85e1cd25419b09f0f9d8d
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-917-ppc64le
+- caseVersions:
+  - 1.0.5
+  category: catalog
+  digest: sha256:1750f9fdb0e65ec0f7b808730575bfc3bb8295b2e17f2b38c13b18a7fe543d3c
+  image: cpopen/ibm-cpd-spss-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0-917
