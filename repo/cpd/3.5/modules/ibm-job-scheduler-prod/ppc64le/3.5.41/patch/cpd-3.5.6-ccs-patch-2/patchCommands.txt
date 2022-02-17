@@ -1,0 +1,1 @@
+patch deployment jobs-api --patch '{"spec": {"template": {"spec": {"containers": [{"name": "jobs-api","image": "{{.DockerRegistryPrefix}}/jobs-api-ppc64le:v3.5.9_100222"}]}}}}'
