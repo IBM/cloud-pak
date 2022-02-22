@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Asset Data Dictionary
+  displayDescription: IBM Asset Data Dictionary is a program that offers to integrate meta-data across the various applications in MAS.
+  displayName: IBM Asset Data Dictionary
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-data-dictionary
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 1.0.0+20220222.114420
+  webPage: http://ibm.com
+created: 2022-02-22T19:33:57.65751810+0000
+digest: sha256:07e93b0113b04e48359b9e0600573b170da0836ff2c25b769854f258b9601a9a
