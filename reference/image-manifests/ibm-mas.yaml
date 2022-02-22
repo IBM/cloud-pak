@@ -3,6 +3,9 @@ description: "IBM Maximo Application Suite"
 images:
   - image: cp/assist/assist-db-job
   - image: cp/assist/assist-useragent
+  - image: cp/assist/assist-voice-gateway
+  - image: cp/assist/assist-voice-management
+  - image: cp/assist/assist-voice-session-mxinspect
   - image: cp/assist/assist-workspaceagent
   - image: cp/assist/ema-admin-console
   - image: cp/assist/ema-anti-virus
@@ -46,6 +49,8 @@ images:
   - image: cp/manage/extension-spatial
   - image: cp/manage/extension-transportation
   - image: cp/manage/extension-utilities
+  - image: cp/manage/extension-workday
+  - image: cp/manage/health-aio
   - image: cp/manage/ibm-mas-manage-appstatus
   - image: cp/manage/ibm-mas-manage-bdi
   - image: cp/manage/ibm-mas-manage-ws
@@ -55,6 +60,7 @@ images:
   - image: cp/manage/manage-usersyncagent
   - image: cp/manage/maxloader
   - image: cp/manage/monitoragent
+  - image: cp/manage/ubi-wlp-jms-manage
   - image: cp/manage/ubi-wlp-manage
   - image: cp/mas/accapppoints
   - image: cp/mas/admin-dashboard
@@ -82,6 +88,7 @@ images:
   - image: cp/mas/hook-trackdeploy
   - image: cp/mas-hputilities/hook-ca-hputilities
   - image: cp/mas-hputilities/hputilities-model-engine
+  - image: cp/mas-hputilities/hputilities-model-engines
   - image: cp/mas-hputilities/hputilities-workspaceagent
   - image: cp/mas-hputilities/ibm-mas-hputilities-ws
   - image: cp/mas/hputilities-operator
@@ -134,12 +141,18 @@ images:
   - image: cp/monitor/rest-kpi
   - image: cp/monitor/rest-master
   - image: cp/monitor/rest-meta
+  - image: cp/monitor/v2-core-api
+  - image: cp/monitor/v2-core-scheduler
+  - image: cp/monitor/v2-datadictionary-scheduler
+  - image: cp/monitor/v2-datalake-api
+  - image: cp/monitor/v2-deviceidpopulation-scheduler
   - image: cp/mso/admin-ui
   - image: cp/mso/ibm-mas-mso-ws
   - image: cp/mso/mso-api
   - image: cp/mso/mso-execution-service
   - image: cp/mso/mso-usersyncagent
   - image: cp/mso/mso-workspace-init
+  - image: cp/predict/explainability
   - image: cp/predict/hook-ca-predict
   - image: cp/predict/ibm-mas-predict-ws
   - image: cp/predict/predict-api
@@ -155,6 +168,7 @@ images:
   - image: cp/visualinspection/vision-dle
   - image: cp/visualinspection/vision-dnn-actiondetect
   - image: cp/visualinspection/vision-dnn-anomaly
+  - image: cp/visualinspection/vision-dnn-caffe
   - image: cp/visualinspection/vision-dnn-custom
   - image: cp/visualinspection/vision-dnn-custom-deploy
   - image: cp/visualinspection/vision-dnn-deploy
@@ -177,6 +191,7 @@ images:
   - image: cp/visualinspection/vision-event-service
   - image: cp/visualinspection/vision-keycloak
   - image: cp/visualinspection/vision-logstash
+  - image: cp/visualinspection/vision-model-conversion
   - image: cp/visualinspection/vision-models
   - image: cp/visualinspection/vision-mongodb
   - image: cp/visualinspection/vision-postgres
