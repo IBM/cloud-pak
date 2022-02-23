@@ -256,6 +256,7 @@ images:
   - image: cp/cpd/mdm-model
   - image: cp/cpd/mdm-spark-job
   - image: cp/cpd/mdm-spark-sample-job
+  - image: cp/cpd/mdm-tuning-job
   - image: cp/cpd/metadata-api-server-x86_64
   - image: cp/cpd/metadata-discovery
   - image: cp/cpd/metadata-engine-x86_64
@@ -505,6 +506,8 @@ images:
   - image: cp/cpd/wslocal-init-py37main
   - image: cp/cpd/wslocal-init-py38cuda
   - image: cp/cpd/wslocal-init-py38main
+  - image: cp/cpd/wslocal-init-py39cuda
+  - image: cp/cpd/wslocal-init-py39main
   - image: cp/cpd/wslocal-init-r36
   - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
@@ -517,6 +520,8 @@ images:
   - image: cp/cpd/wslocal-runtime-py37omain
   - image: cp/cpd/wslocal-runtime-py38cuda
   - image: cp/cpd/wslocal-runtime-py38main
+  - image: cp/cpd/wslocal-runtime-py39cuda
+  - image: cp/cpd/wslocal-runtime-py39main
   - image: cp/cpd/wslocal-runtime-r36
   - image: cp/cpd/wslocal-runtime-rstudio
   - image: cp/cpd/wslocal-runtime-shiny
@@ -705,10 +710,22 @@ images:
   - image: icr.io/cpopen/opencontent-rabbitmq-operator-catalog
   - image: icr.io/db2u/db2u
   - image: icr.io/db2u/db2u.auxiliary.auth
+  - image: icr.io/db2u/db2u.bigsql.cdh7
+  - image: icr.io/db2u/db2u.bigsql.mariadb
+  - image: icr.io/db2u/db2u.dv
+  - image: icr.io/db2u/db2u.dv.api
+  - image: icr.io/db2u/db2u.dv.caching
+  - image: icr.io/db2u/db2u.dv.utils
+  - image: icr.io/db2u/db2u.graph
+  - image: icr.io/db2u/db2u.hurricane
   - image: icr.io/db2u/db2u.instdb
   - image: icr.io/db2u/db2u.instdb.restricted
+  - image: icr.io/db2u/db2u.mustgather
+  - image: icr.io/db2u/db2u.qrep
+  - image: icr.io/db2u/db2u.rest
   - image: icr.io/db2u/db2u.restricted
   - image: icr.io/db2u/db2u.tools
+  - image: icr.io/db2u/db2u.update.image
   - image: icr.io/db2u/etcd
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
