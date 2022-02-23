@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 3.2.1-rc1-202202071001
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: This operator manages the AIOps Lifecycle component of the IBM Watson for AIOps v3.x product.
+  displayDescription: ""
+  displayName: AIOps Lifecycle Operator
+  icons: []
+  licenses:
+    cp4aiops:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps License
+        displayName: Cloud Pak for Watson AIOps
+      ref: license
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiops-lifecycle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com
+created: 2022-02-23T12:02:58.49319093+0000
+digest: sha256:24f69bed9e5a316c50a6c9b2759887a617308bc60978d96cb6b2d22c8f0db2bd
