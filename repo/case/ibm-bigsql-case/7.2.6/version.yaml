@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 7.2.6
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Db2 Big SQL
+  displayDescription: Db2 Big SQL is a distributed SQL query engine that is optimized for data on decoupled storage, such as object storage or HDFS.
+  displayName: Db2 Big SQL
+  icons: []
+  licenses:
+    cp4data-EE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Enterprise Edition
+        displayName: Cloud Pak for Data License
+      ref: CloudPakforData_EnterpriseEd4.0_LI.pdf
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DNAA-C6XMNX
+    cp4data-SE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Standard Edition
+        displayName: Cloud Pak for Data License
+      ref: CloudPakforData_StandardEd4.0_LI.pdf
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DNAA-C72L7Z
+  name: ibm-bigsql-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 7.2.6
+  webPage: https://www.ibm.com
+created: 2022-02-23T17:57:36.09275247+0000
+digest: sha256:fade8b0d3aa3899d2312749c7a6890785c1fd9c11ee8d6c4d3509f5440a66d6d
