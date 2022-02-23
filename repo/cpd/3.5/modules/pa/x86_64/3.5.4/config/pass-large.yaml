@@ -1,0 +1,9 @@
+commands:
+  - scale --replicas=1 deployment tm1web
+  - set resources deployment tm1web --limits=cpu=10000m,memory=16Gi
+  - set resources deployment tm1web --requests=cpu=5000m,memory=16Gi
+  - set env deployment tm1web MEMORY=16Gi
+  - scale --replicas=1 deployment evalservice
+  - set resources deployment evalservice --limits=cpu=10000m,memory=8Gi
+  - set resources deployment evalservice --requests=cpu=5000m,memory=8Gi
+  - set env deployment evalservice MEMORY=8Gi

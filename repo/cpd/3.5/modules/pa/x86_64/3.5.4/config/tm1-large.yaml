@@ -1,0 +1,4 @@
+commands:
+  - set resources deployment tm1 --limits=cpu=32000m,memory=128Gi
+  - set resources deployment tm1 --requests=cpu=32000m,memory=128Gi
+  - set env deployment tm1 MAX_MEMORY_GB=128

@@ -1,0 +1,60 @@
+type: module
+category: helm-chart
+name: 0073-ug module
+description: this is the 0073-ug module to install
+registry-reference: base-registry
+installOverride: installOverride.yaml
+upgradeOverride: upgradeOverride.yaml
+helmUpgradeForce: false
+forceUpgradeOnFailedRelease: true
+images:
+- name: audit-trail-service
+  tag: b161_c513870d9446
+- name: wkc-init-container
+  tag: 1.0.216
+- name: finley
+  tag: b5020_c5b5b28
+- name: gov-admin-ui
+  tag: b1450_5a0570e9497a
+- name: gov-app-config-service
+  tag: b633_4f50151b4871
+- name: gov-catalog-search-index
+  tag: b431_23e1abc5aaa6
+- name: gov-catalog-search-service
+  tag: b1244_b014485b5496
+- name: gov-enterprise-search-ui
+  tag: b1506_e52400aafdff
+- name: gov-quality-ui
+  tag: b9860_643e50a4cd53
+- name: gov-ui-commons
+  tag: b610_991b4b7438a1
+- name: gov-user-prefs-service
+  tag: b512_9c97c0321f2a
+- name: ia-analysis
+  tag: b2421_1c4573e34499
+- name: igc-ui-react
+  tag: b9447_9ba4464f97e0
+- name: odf-fast-analyzer-kube
+  tag: bcp4d358_52_0d89709128a0
+- name: omag
+  tag: b234_80aa380083690
+- name: shop4info-rest
+  tag: b150_05ff90db89f3
+- name: shop4info-scheduler
+  tag: b150_05ff90db89f3
+- name: shop4info-type-registry-service
+  tag: b150_05ff90db89f3
+- name: shop4info-event-consumer
+  tag: b150_05ff90db89f3
+- name: shop4info-schema-init
+  tag: b150_05ff90db89f3
+- name: shop4info-mappers-service
+  tag: b150_05ff90db89f3
+- name: shop4info-mappers-wkc
+  tag: b150_05ff90db89f3
+- name: kafka-ubi8-x86_64
+  tag: 2.13-2.8.1_b1019_e10202e92a61
+chart: ug-3.5.1420.tgz
+md5: 3da792c3e50c8e5493e1a7a0ace24ef9
+timeout: 90
+releaseName: 0073-ug
