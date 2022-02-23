@@ -1,7 +1,9 @@
 source: ibm-model-train-operator-bundle/case/ibm-model-train-operator/case.yaml
 description: "IBM cloudpak operator for training with Model Train"
 images:
+  - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
   - image: cp/modeltrain/coordinator
   - image: cp/modeltrain/databroker-s3
   - image: cp/modeltrain/jobmonitor
@@ -11,6 +13,9 @@ images:
   - image: cp/modeltrain/trainer-v2-service
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-model-train-dwf-operator
   - image: icr.io/cpopen/ibm-model-train-dwf-operator-bundle
   - image: icr.io/cpopen/ibm-model-train-operator
