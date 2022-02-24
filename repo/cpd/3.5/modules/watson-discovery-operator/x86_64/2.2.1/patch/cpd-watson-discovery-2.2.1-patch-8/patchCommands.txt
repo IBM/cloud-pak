@@ -1,0 +1,2 @@
+patch deployment wd-discovery-operator --patch '{"spec": {"template": {"spec": {"containers": [{"name": "manager","image": "{{.DockerRegistryPrefix}}/discovery-operator:2.2.1-patch-8-24c7c66e4"}]}}}}'
+patch WatsonDiscovery wd --type=merge --patch '{"spec": {"version": "2.2.1-patch-8"}}'
