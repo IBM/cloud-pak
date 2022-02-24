@@ -1,0 +1,62 @@
+description: Watson Discovery 2.2.1 operator patch for security updates
+patchFile: patchCommands.txt
+backupForRollback:
+- kind: Deployment
+  name: wd-discovery-operator
+  namespace: controlplane
+- kind: WatsonDiscovery
+  name: wd
+  namespace: controlplane
+images:
+- discovery-operator:2.2.1-patch-8-24c7c66e4
+- cnm-api:1.1.0.5-1-c0cdaa5 
+- cnm-dbinit:1.1.0.5-1-c0cdaa5 
+- cnm-seer:1.1.0.0-1-a2ed72b 
+- configure-etcd:1.4.7 
+- configure-postgres:20220211-144601-17-1f0909e8 
+- disco-ranker-server:20220202-211435-2-9ab6257 
+- discovery-ranker-rest-service:20220203-012908-1054-5be61c4 
+- haywire:20220203-012909-1031-8fec27a 
+- icp-jks-gen:1.0.34 
+- icp-util:1.0.34 
+- icp-util:1.0.39 
+- kg-gensim-nonroot-user:masterv1.0.29 
+- kg-induction:masterv1.0.96 
+- kg-modelmesh:masterv1.0.46 
+- logging-server:0.0.22.4 
+- model-mesh:main-20211222-64 
+- model-mesh:main-20220204-70 
+- objectstore-toolbox:1.0.24 
+- po-box:0.3.24.5 
+- ranker-monitor-agent:20220203-185945-995-762a4f4d 
+- ranker-training:20220201-165445-1021-03b7006 
+- sdu-spark:1.5.83 
+- sentence-classification:v1.1.9 
+- sentence-classification-gpu:v1.1.9 
+- tooling:node-release-2.2.1-patch-6-5 
+- training-agent:20220203-155148-1156-4681661d 
+- training-data-crud:20220211-144601-17-1f0909e8 
+- training-master:20220203-203816-6-ff876c 
+- training-rest:20220203-002813-1084-29117a40-non-root 
+- watson-nlp-models:1.28.3-3-25ab7fd 
+- wd-api:12.0.7-3050 
+- wd-elastic-plugins:12.0.7-3038 
+- wd-hdp:12.0.7-3123 
+- wd-indexer:0.3.4.10 
+- wd-ingestion:12.0.7-3100 
+- wd-ingestion-api:12.0.7-3100 
+- wd-management:12.0.7-3097 
+- wd-migrator:12.0.7-3151 
+- wd-minerapp:12.0.7-3042 
+- wd-nginx:12.0.7-3016 
+- wd-orchestrator:12.0.7-3231 
+- wd-rapi:12.0.7-3066 
+- wd-rcm:0.0.22.7 
+- wd-stateless-api-model-runtime:12.0.7-3129 
+- wd-stateless-api-rest-proxy:12.0.7-3129 
+- wd-utils:12.0.7-3085 
+- wd-webpagecleaner:12.0.7-3027 
+- wd-wksml:12.0.7-3066 
+- wks-ene-expand:release-1-0-23-20210317-0153-5 
+- wks-glimpse-ene-builder:release-1-0-23-20210317-0153-5 
+- wks-ibmjdk8-rhubi8:master-20211202-1926-627
