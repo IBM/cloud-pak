@@ -1,0 +1,10 @@
+# Description of the patch
+description: "Security issue with CTAS. APAR : PH40808"
+
+# Image versions for the patch
+images:
+  - bigsql-addon-7_1_1_0:390
+  - bigsql-service-provider-7_1_1_0:390
+
+# File containing OC commands to execute as part of patch
+patchFile: patch-oc-commands.txt
