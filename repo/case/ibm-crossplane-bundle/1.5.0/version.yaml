@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 1.5.0
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: IBM Crossplane
+  displayDescription: ""
+  displayName: IBM Crossplane
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-crossplane-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.5.0
+  webPage: https://www.ibm.com
+created: 2022-03-08T19:04:37.93928116+0000
+digest: sha256:1e5b873da0158aa8f65c25a02669f2d9e9fe9818d203f25cad4912788d3f6ae5
