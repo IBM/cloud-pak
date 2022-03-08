@@ -115,3 +115,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 3.16.1
+- caseVersions:
+  - 1.0.5
+  category: catalog
+  digest: sha256:64dbcc870b4aa9ec1a1f6c766cc357e1c6c5a86008949232b44b63fe5b70b89c
+  image: opencloudio/ibm-bts-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 3.16.2-amd64
+- caseVersions:
+  - 1.0.5
+  category: catalog
+  digest: sha256:4ced0f19e879146816678cc729b171c09f5ad6c368ee583758d8dd103cfae842
+  image: opencloudio/ibm-bts-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 3.16.2-s390x
+- caseVersions:
+  - 1.0.5
+  category: catalog
+  digest: sha256:d0222ec8ee0fce39353f0ec6d27bf8dbe9f803f784e8423dca562547af19ce76
+  image: opencloudio/ibm-bts-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 3.16.2
