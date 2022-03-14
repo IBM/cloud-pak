@@ -1,0 +1,12 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:f295fce4ed26a8d7287aaeae9fe4524b9a92705ffd819768b050eddcc55c39aa
+  image: cpopen/ibm-zcon-zosconnect-catalog
+  platform:
+    architecture: s390x
+    imagetype: singleArch
+    os: linux
+  tag: v1.0.0-20220302.150000-linux.s390x
