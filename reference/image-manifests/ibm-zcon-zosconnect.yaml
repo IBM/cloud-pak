@@ -1,0 +1,7 @@
+source: ibm-zcon-zosconnect-bundle/case/ibm-zcon-zosconnect/case.yaml
+description: "IBM z/OS Connect CASE that deploys an operator"
+images:
+  - image: gcr.io/kubebuilder/kube-rbac-proxy
+  - image: icr.io/cpopen/ibm-zcon-zosconnect-catalog
+  - image: icr.io/cpopen/ibm-zcon-zosconnect-operator
+  - image: icr.io/cpopen/ibm-zcon-zosconnect-operator-bundle
