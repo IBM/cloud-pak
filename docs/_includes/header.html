@@ -1,0 +1,53 @@
+<header>
+    <style>
+    table, th, td {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    .td {
+      padding: .5%;
+    }
+    .header {
+      padding: 30px;
+      text-align: left;
+      background: #0E3EDA;
+      color: white;
+      font-size: 10px;
+      margin-bottom: 25px;
+    }
+      
+    details:hover {
+      cursor: pointer;
+    }
+      
+    body {
+      background: #f3f3f3;
+      width: 98%;
+    }
+    
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      color: #ed4314;
+      background-color: rgba(220, 220, 220, .5);
+      padding: 2px;
+    }
+      
+    </style>
+    </header>
+    
+    <div class="header">
+      <h1>IBM: Product CASE to Application Version</h1>
+    </div>
+    
+    <p>This page describes a summary of what CASE version contains what Application version. </p>
+    
+    <h2>Common Airgap Environmental Variables:</H2>
+    
+    <div><code>export OFFLINEDIR=\$HOME/offline </code></div> <br />
+    <div><code>export CASE_REPO_PATH=https://github.com/IBM/cloud-pak/raw/master/repo/case </div></code><br />
+    <div><code>export CASE_LOCAL_PATH=$OFFLINEDIR/$CASE_ARCHIVE" </div></code><br />
+    <div><code>export CASE_ARCHIVE=$CASE_NAME-$CASEVERSION.tgz </div></code><br />
+    
+    <h2>CASE to Application reference</h2>
+    
+    <table>

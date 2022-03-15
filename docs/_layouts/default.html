@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include header.html %}
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {% include table_header.html %}
+        {% include case-application-version-map.html %}
+      </div>
+      {% include footer.html %}
+    </main>
+
+  </body>
+
+</html>
