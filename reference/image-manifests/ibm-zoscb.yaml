@@ -1,0 +1,11 @@
+source: ibm-zoscb-bundle/case/ibm-zoscb/case.yaml
+description: "A CASE that deploys IBM® z/OS® Cloud Broker Operator"
+images:
+  - image: icr.io/cpopen/ibm-zoscb-catalog
+  - image: icr.io/cpopen/ibm-zoscb-operator
+  - image: icr.io/cpopen/ibm-zoscb-operator-bundle
+  - image: icr.io/cp/zoscb/ansible-suboperator
+  - image: icr.io/cp/zoscb/manager
+  - image: icr.io/cp/zoscb/oauth-proxy
+  - image: icr.io/cp/zoscb/suboperator-registry
+  - image: icr.io/cp/zoscb/ui
