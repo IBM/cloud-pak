@@ -66,3 +66,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: latest
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:2c4538062ba4784b7fabc3239ad39e71aec6a250ae794dcb9e978ad3046156e7
+  image: cpopen/ibm-wazi-developer-for-workspaces-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.0.0-amd64
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:46a63fafb9079b041f183d82753c670f3871536ad0b8770c60b483dc2c85fb7b
+  image: cpopen/ibm-wazi-developer-for-workspaces-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 2.0.0-s390x
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:02f1cb4ea404d20cf80ad08d7ce6ab93c2fc7906fe53679ee7e37ad2719f2864
+  image: cpopen/ibm-wazi-developer-for-workspaces-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.0.0
