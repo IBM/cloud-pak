@@ -7,15 +7,18 @@ images:
   - image: ibmcom/wazi-code-plugin
   - image: icr.io/cpopen/ibm-developer-zos-enterprise-edition-operator-bundle
   - image: icr.io/cpopen/ibm-wazi-developer-for-workspaces-catalog
+  - image: icr.io/cpopen/ibm-wazi-developer-for-workspaces-operator
   - image: icr.io/cpopen/ibm-wazi-developer-for-workspaces-operator-bundle
   - image: icr.io/wazi-code/ibm-wazi-developer-for-workspaces-codeready
   - image: icr.io/wazi-code/ibm-wazi-developer-for-workspaces-dev-file
   - image: icr.io/wazi-code/ibm-wazi-developer-for-workspaces-plugin
+  - image: registry.redhat.io/codeready-workspaces/backup-rhel8
   - image: registry.redhat.io/codeready-workspaces/configbump-rhel8
   - image: registry.redhat.io/codeready-workspaces/crw-2-rhel8-operator
   - image: registry.redhat.io/codeready-workspaces/dashboard-rhel8
   - image: registry.redhat.io/codeready-workspaces/devworkspace-controller-rhel8
   - image: registry.redhat.io/codeready-workspaces/devworkspace-rhel8
+  - image: registry.redhat.io/codeready-workspaces/idea-rhel8
   - image: registry.redhat.io/codeready-workspaces/jwtproxy-rhel8
   - image: registry.redhat.io/codeready-workspaces/machineexec-rhel8
   - image: registry.redhat.io/codeready-workspaces/pluginbroker-artifacts-rhel8
@@ -34,9 +37,16 @@ images:
   - image: registry.redhat.io/codeready-workspaces/theia-endpoint-rhel8
   - image: registry.redhat.io/codeready-workspaces/theia-rhel8
   - image: registry.redhat.io/codeready-workspaces/traefik-rhel8
+  - image: registry.redhat.io/devworkspace/devworkspace-rhel8-operator
   - image: registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7
+  - image: registry.redhat.io/jboss-eap-7/eap74-openjdk8-openshift-rhel7
   - image: registry.redhat.io/jboss-eap-7/eap-xp2-openj9-11-openshift-rhel8
   - image: registry.redhat.io/jboss-eap-7/eap-xp2-openjdk11-openshift-rhel8
+  - image: registry.redhat.io/jboss-eap-7/eap-xp3-openj9-11-openshift-rhel8
+  - image: registry.redhat.io/jboss-eap-7/eap-xp3-openjdk11-openshift-rhel8
+  - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
+  - image: registry.redhat.io/openshift4/ose-oauth-proxy
+  - image: registry.redhat.io/rhel8/postgresql-13
   - image: registry.redhat.io/rhel8/postgresql-96
   - image: registry.redhat.io/rhscl/mongodb-36-rhel7
   - image: registry.redhat.io/rh-sso-7/sso74-openj9-openshift-rhel8
