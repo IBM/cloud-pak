@@ -402,3 +402,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: latest
+- caseVersions:
+  - 1.2.4
+  category: catalog
+  digest: sha256:35f6347102ff6da98b15af41fe7e88ff0c8ca628c4599c60b1960d370bf621f6
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.2.4-amd64
+- caseVersions:
+  - 1.2.4
+  category: catalog
+  digest: sha256:fa24d19429a862ce97f1eb5df45cb116fd6b79a917e8827b7d2399fd5c060a28
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.2.4-s390x
+- caseVersions:
+  - 1.2.4
+  category: catalog
+  digest: sha256:726af20caec85f9bd5169c40cfb9191a15849d506a3ca7f0fda8cf3b37124bbe
+  image: cpopen/ibm-eventstreams-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
