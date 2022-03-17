@@ -150,6 +150,7 @@ containerImages:
   tag: "298"
 - caseVersions:
   - 4.0.7
+  - 4.0.7+20220317.095520
   category: catalog
   digest: sha256:09d7d9535238ca6fe3b80a66e7c1a33dca45c4c9af3631bad2336ed86dd3e26c
   image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
@@ -160,6 +161,7 @@ containerImages:
   tag: 325-amd64
 - caseVersions:
   - 4.0.7
+  - 4.0.7+20220317.095520
   category: catalog
   digest: sha256:fde5e5494b9a6abf24803d152ec104fb3dae52363f60a96769b7eb810aa7e1d3
   image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
@@ -170,6 +172,7 @@ containerImages:
   tag: 325-ppc64le
 - caseVersions:
   - 4.0.7
+  - 4.0.7+20220317.095520
   category: catalog
   digest: sha256:3aec6cd8ee1b4c6af070cdc4d3df94b10d3dd1445b4b12b7f89667a9e092da94
   image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
@@ -186,3 +189,11 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: "325"
+- caseVersions:
+  - 4.0.7+20220317.095520
+  category: catalog
+  digest: sha256:9ebba325a897fa1604e65a47cb12cf172ed59db3a872cc37b1a01e04d29e5ece
+  image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 325-nexus
