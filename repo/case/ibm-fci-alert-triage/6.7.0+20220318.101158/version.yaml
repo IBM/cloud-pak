@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 6.6.1
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Financial Crimes Insight for Alert Triage Software
+  displayDescription: IBM FCI Transaction List Screening
+  displayName: CASE that deploys IBM FCI Transaction List Screening Operator
+  icons: []
+  licenses:
+    LA_en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Financial Crimes Insight for Alert Triage Software - Transaction List Screening
+        displayName: IBM Financial Crimes Insight for Alert Triage Software
+        name: LA_en
+      ref: LICENSE
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Financial Crimes Insight for Alert Triage Software - Transaction List Screening
+        displayName: IBM Financial Crimes Insight for Alert Triage Software
+        name: notices
+      ref: non_ibm_license
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-fci-alert-triage
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 6.7.0+20220318.101158
+  webPage: https://www.ibm.com
+created: 2022-03-18T15:00:12.62227637+0000
+digest: sha256:3004b84ff9de3609ea2ac1375d0524df0cc6508bc314102d14b91e0c12d2e65b
