@@ -9,6 +9,8 @@ This CASE contains two inventory items:
 - A helm chart that deploys a single server instance of IBM UrbanCode Deploy that may be scaled to multiple instances.
 - An operator that deploys a single server instance of IBM UrbanCode Deploy that may be scaled to multiple instances.
 
+Support has been validated on OpenShift clusters running onPrem, in IBM Satellite, and IBM ROKS.
+
 The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy server.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the server.
 
 ## Kubernetes Roles and Personas
@@ -28,10 +30,10 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
 
   * Log in to [MyIBM Container Software Library](https://myibm.ibm.com/products-services/containerlibrary) with the IBMid and password that are associated with the entitled software.
   * In the Entitlement keys section, select Copy key to copy the entitlement key to the clipboard.
-  * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdServer custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install UrbanCode Deploy server into.  Following is an example command to create an imagePullSecret named 'entitledregistry-secret'.
+  * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  If the secret is named ibm-entitlement-key it will be used as the default pull secret, no value needs to be specified in the image.secret field.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdServer custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install UrbanCode Deploy server into.  Following is an example command to create an imagePullSecret named 'ibm-entitlement-key'.
 
 ```
-oc create secret docker-registry entitledregistry-secret --docker-username=cp --docker-password=<EntitlementKey> --docker-server=cp.icr.io
+oc create secret docker-registry ibm-entitlement-key --docker-username=cp --docker-password=<EntitlementKey> --docker-server=cp.icr.io
 ```
 
 3. Database - UrbanCode Deploy requires a database.  The database may be running in your cluster or on hardware that resides outside of your cluster.  This database  must be configured as described in [Installing the server database](https://www.ibm.com/support/knowledgecenter/SS4GSP_7.1.1/com.ibm.udeploy.install.doc/topics/DBinstall.html) before installing the containerized UrbanCode Deploy server.  The values used to connect to the database are required when installing the UrbanCode Deploy server.  The Apache Derby database type is not supported when running the UrbanCode Deploy server in a Kubernetes cluster.
@@ -170,7 +172,7 @@ spec:
 
 * IBM UrbanCode Deploy requires non-root access to persistent storage. When using IBM File Storage you need to either use the IBM provided “gid” File storage class with default group ID 65531 or create your own customized storage class to specify a different group ID. Please follow the instructions at https://cloud.ibm.com/docs/containers?topic=containers-cs_troubleshoot_storage#cs_storage_nonroot for more details.
 
-7.  If a route or ingress is used to access the WSS or JMS port of the UrbanCode Deploy server from an UrbanCode Deploy agent, then port 443 should be specified along with the configured URL to access the proper service port defined for the UrbanCode Deploy Server.
+7.  If a route or ingress is used to access the WSS port of the UrbanCode Deploy server from an UrbanCode Deploy agent, then port 443 should be specified along with the configured URL to access the proper service port defined for the UrbanCode Deploy Server.
 
 ### PodSecurityPolicy Requirements
 
@@ -248,7 +250,7 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
       kubernetes.io/description: restricted denies access to all host features and requires
         pods to be run with a UID, and SELinux context that are allocated to the namespace.  This
         is the most restrictive SCC and it is used by default for authenticated users.
-    name: restricted
+    name: ucd-restricted
   priority: null
   readOnlyRootFilesystem: false
   requiredDropCapabilities:
@@ -339,7 +341,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-catalog                           \
@@ -350,7 +352,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator
@@ -364,7 +366,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -378,7 +380,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator
@@ -388,7 +390,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-catalog                         \
@@ -405,7 +407,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator-native                   \
@@ -417,7 +419,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator-native                 \
@@ -428,7 +430,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action install-helm-chart                        \
@@ -439,7 +441,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz   \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz   \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action uninstall-helm-chart                      \
@@ -492,7 +494,7 @@ Create registry secret for source image registry (if the registry is public whic
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz             \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz             \
     --namespace <target namespace>                       \
     --inventory ucdsOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -503,7 +505,7 @@ cloudctl case launch                                     \
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz             \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz             \
     --namespace <target namespace>                       \
     --inventory ucdsOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -526,7 +528,7 @@ In this step image from saved CASE (images.csv) are copied to target registry in
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz           \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz           \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action mirror-images                             \
@@ -548,7 +550,7 @@ WARNING:
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.5.tgz           \
+    --case /tmp/cases/ibm-ucd-prod-1.5.6.tgz           \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action configure-cluster-airgap                  \
