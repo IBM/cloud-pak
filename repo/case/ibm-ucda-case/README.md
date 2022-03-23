@@ -7,8 +7,14 @@
 This CASE contains two inventory items:
 - A helm chart that deploys a single instance of IBM UrbanCode Deploy agent that may be scaled to multiple instances.
 - An operator that deploys a single instance of IBM UrbanCode Deploy agent that may be scaled to multiple instances.
-- The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy agent.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the agent.
 
+Support has been validated on OpenShift clusters running onPrem, in IBM Satellite, and IBM ROKS.
+
+The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy agent.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the agent.
+
+## Kubernetes Roles and Personas
+- Operator - The Kubernetes cluster administrator role is required when working with the UCD agent operator.  This role is required to add a new CustomResourceDefinition (CRD) named ucdagents.urbancode.ibm.com to the cluster.  Once the CRD has been added to the cluster, an instance of the operator can be installed into a namespace by a user with the namespace administrator role.  After the UCD agent operator is running, users can create UcdAgent resources.
+- Helm Chart - Users with the namespace administrator role can install the UCD agent using the helm chart.
 
 ## Prerequisites
 1. Kubernetes 1.16.0+; kubectl and oc CLI; Helm 3;
@@ -22,10 +28,10 @@ This CASE contains two inventory items:
 
     * Log in to [MyIBM Container Software Library](https://myibm.ibm.com/products-services/containerlibrary) with the IBMid and password that are associated with the entitled software.
     * In the Entitlement keys section, select Copy key to copy the entitlement key to the clipboard.
-    * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdAgent custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install UrbanCode Deploy agent into.  Following is an example command to create an imagePullSecret named 'entitledregistry-secret'.
+    * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  If the secret is named ibm-entitlement-key it will be used as the default pull secret, no value needs to be specified in the image.secret field.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdAgent custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install UrbanCode Deploy agent into.  Following is an example command to create an imagePullSecret named 'ibm-entitlement-key'.
 
   ```
-  oc create secret docker-registry entitledregistry-secret --docker-username=cp --docker-password=<EntitlementKey> --docker-server=cp.icr.io
+  oc create secret docker-registry ibm-entitlement-key --docker-username=cp --docker-password=<EntitlementKey> --docker-server=cp.icr.io
   ```
 
 3. The agent must have an UrbanCode Deploy server or relay to connect to.
@@ -179,7 +185,7 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
       kubernetes.io/description: restricted denies access to all host features and requires
         pods to be run with a UID, and SELinux context that are allocated to the namespace.  This
         is the most restrictive SCC and it is used by default for authenticated users.
-    name: restricted
+    name: ucda-restricted
   priority: null
   readOnlyRootFilesystem: false
   requiredDropCapabilities:
@@ -242,7 +248,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-catalog                           \
@@ -253,7 +259,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator
@@ -267,7 +273,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -280,7 +286,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -290,7 +296,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog                         \
@@ -306,7 +312,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -317,7 +323,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native                 \
@@ -328,7 +334,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -339,7 +345,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -393,7 +399,7 @@ Create registry secret for source image registry (if the registry is public whic
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz    \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz    \
     --namespace <target namespace>                       \
     --inventory ucdaOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -404,7 +410,7 @@ cloudctl case launch                                     \
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz    \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz    \
     --namespace <target namespace>                       \
     --inventory ucdaOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -427,7 +433,7 @@ In this step image from saved CASE (images.csv) are copied to target registry in
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action mirror-images                             \
@@ -449,7 +455,7 @@ WARNING:
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.2.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action configure-cluster-airgap                  \
