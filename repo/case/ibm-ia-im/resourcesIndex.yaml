@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:b6b4f90b4acbd3a35432e9c747c600e4810e93b1e167ebf52c236ee0dc82ec27
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220316.1626-958c2eb55-linux.amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:a40b1e095be4b54e0690465373ea2227e2704156c2e15fb1cb0a062db5ebb4ea
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220316.1626-958c2eb55-linux.ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:958c2eb55cb31ed820c27a10af7170afc54a46db1cd59803b859df6066772915
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220316.1626-958c2eb55

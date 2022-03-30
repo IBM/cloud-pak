@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:266b865e30346a70c421c81e6efa52bb9ddf19f27ca2658df7a7e73aee605e1d
+  image: cpopen/ibm-infrastructure-automation-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220316.1626-e382d79a6-linux.amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:80c4f758531acd70332ec2f16101e6387d1fef236e47918a0f2b9127552d462d
+  image: cpopen/ibm-infrastructure-automation-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220316.1626-e382d79a6-linux.ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:e382d79a68fca045cc9b65794d20273dcffd126b5203a7266e2645cd17d4c30b
+  image: cpopen/ibm-infrastructure-automation-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220316.1626-e382d79a6
