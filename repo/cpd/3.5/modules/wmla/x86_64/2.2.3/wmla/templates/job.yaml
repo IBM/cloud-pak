@@ -1,0 +1,44 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  namespace: "{{.Values.global.zenControlPlaneNamespace}}"
+  name: {{.Values.global.zenServiceInstanceDisplayName}}-import-addon-job
+  labels:
+    # The next 2 lines to be removed
+    icpdsupport/serviceInstanceId: "{{ .Values.global.zenServiceInstanceId | int64 }}"
+    icpd-addon/status: "{{ .Values.global.zenServiceInstanceId | int64 }}"
+    release: "{{.Release.Name}}"
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  template:
+    spec:
+      serviceAccountName:  default
+      containers:
+      - name: "test-container"
+        command: ["/bin/sh","/entrypoint.sh"]
+        args: ["ls -lah"]
+        image: "{{.Values.global.docker_registry_prefix}}/wml-instance:v2.2.3-x86_64"
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: "2"
+            memory: 1Gi
+          requests:
+            cpu: 300m
+            memory: 256Mi
+        env:
+        - name: ICPD_CONTROLPLANE_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        volumeMounts:
+        - mountPath: /var/run/sharedsecrets
+          name: zen-service-broker-secret
+      volumes:
+      - name: zen-service-broker-secret
+        secret:
+          defaultMode: 420
+          secretName: zen-service-broker-secret
+      restartPolicy: OnFailure

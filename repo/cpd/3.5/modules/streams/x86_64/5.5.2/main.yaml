@@ -1,0 +1,43 @@
+type: module
+category: helm-chart
+name: IBM Streams addon
+description: This is the IBM Streams addon.
+registry-reference: base-registry
+images:
+- name: streams-addon
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-anaconda-install-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-spss-install-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-application-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-rest-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-build-compile-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-build-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-management-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-notebook-template
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-operations-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-security-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-service-provider
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-sws-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-build-image-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-base-edge-application-el7
+  tag: v5_r_5.5.1.0_latest-27
+- name: streams-base-edge-python-el7
+  tag: v5_r_5.5.1.0_latest-27
+chart: ibm-streams-addon-1.5.2.tgz
+timeout: 10
+releaseName: streams-addon
+serviceInstanceType:
+- streams

@@ -1,0 +1,82 @@
+
+type: module
+category: cr-yamls
+
+# Images related
+registry-reference: base-registry
+images:
+- name: wml-accelerator
+  tag: 2.2.3-x86_64
+- name: wml-accelerator-auth
+  tag: v2.2.3-x86_64
+- name: wml-accelerator-conda
+  tag: 2.2.3-x86_64
+- name: wml-accelerator-infoservice
+  tag: 2.2.3-x86_64
+- name: wml-accelerator-msd
+  tag: 2.2.3-x86_64
+- name: wml-accelerator-ui
+  tag: v2.2.3-x86_64
+- name: wml-accelerator-worker
+  tag: 2.2.3-x86_64
+- name: wml-configurable-http-proxy
+  tag: 2.0.1-v2.2.3-x86_64
+- name: wml-edi-imd
+  tag: 2.2.3-x86_64
+- name: wml-edi-isd
+  tag: 2.2.3-x86_64
+- name: wml-edi-kernel
+  tag: 2.2.3-x86_64
+- name: wml-edi-lbd
+  tag: 2.2.3-x86_64
+- name: wml-enterprise-gateway
+  tag: 2.0.0-v2.2.3-x86_64
+- name: wml-grafana
+  tag: v2.2.3-x86_64
+- name: wml-jupyterhub
+  tag: 1.5.0-v2.2.3-x86_64
+- name: wml-logstash
+  tag: 7.16.2-v2.2.3-x86_64
+- name: wml-notebook
+  tag: 6.4.1-v2.2.3-x86_64
+- name: wml-accelerator-etcd
+  tag: v3.2.24-v2.2.3-x86_64
+- name: wml-accelerator-nginx
+  tag: 1.14.1-v2.2.3-x86_64
+- name: wml-accelerator-prometheus
+  tag: v2.2.3-x86_64
+- name: wml-accelerator-kubectl
+  tag: 1.16-v2.2.3-x86_64
+
+# Timeout to monitor all CR status, <= 0 means forever
+timeout: 180 #minutes
+
+# Override file to update the crContent before creation
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+
+# Note that this is not the same content as helm module, it will be override value files
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+
+releaseName: wmla-cr
+
+# This is important for cpd to understand how to monitor, other options "ansible", "helm"
+operatorType: ansible
+
+# The list of the CR to be created (rendered by override files before apply)
+crFiles:
+- file: ibm.com_v1_wmla_cr.yaml
+
+#uninstall:
+#  before: pre-uninstall-job.yaml # Optional: Only executed before delete all resources from the module
+#  after: post-uninstall-job.yaml # Optional: Only executed after all resources from the module deleted
+#  uninstallLabels:
+#    job:
+#      product: watson
+#      InstanceId: {{ .instanceId }}
+#    deployment:
+#      InstanceId: {{ .instanceId }}
+

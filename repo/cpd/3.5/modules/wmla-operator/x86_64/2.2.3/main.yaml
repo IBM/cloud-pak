@@ -1,0 +1,38 @@
+# This file is in fileserver
+type: module
+category: template-yamls
+
+# Images related
+registry-reference: base-registry
+images:
+- name: wml-accelerator-operator
+  tag: v2.2.3-x86_64
+
+# Timeout to wait for all resources up and running
+timeout: 180 #minutes
+
+# Similar to the helm, we will inject this name as the label to the resources so we can query status
+releaseName: wmla-operator
+
+# The override values to update the yamls before install and upgrade
+#installOverride: module_install.yaml
+#upgradeOverride: 123.yaml
+
+#scale:
+#- small.yaml
+#- medium.yaml
+#- large.yaml
+
+templateModuleFiles:
+- name: operator.yaml
+  case: ""  # Optional: Default is for both install and upgrade
+  wait: false # Optional: Default is false
+#- name: deployment1.yaml
+#  case: both
+#  wait: false
+
+# Optional, only specify when you need a job to run before/after the uninstall module
+#uninstall:
+#  before: pre-uninstall-job.yaml # Optional: Only executed before delete all resources from the module
+#  after: post-uninstall-job.yaml # Optional: Only executed after all resources from the module deleted
+

@@ -1,0 +1,205 @@
+
+
+# this file gets filled up at build time.
+# At install time, user can specify --override with cpd command to override these values
+# The values in this file are the values in the original CR
+wmlaCPDOverride:
+   managedBy: Ansible
+   useDynamicProvisioning: true
+   podSchedulerNamespace: aks
+   caSecretName: ""
+
+   # Set enableNameSpaceNetworkPolicy to true if you want to create wmla namespace
+   # network policy to disable pods from other namespaces to be able to directly
+   # connect to pods in wmla namespace. If you set to true, you will also need to 
+   # add this label to the wmla namespace enableWMLANameSpaceNetworkPolicy=true
+   enableNameSpaceNetworkPolicy: false
+
+   common:
+    imagePullPolicy: Always
+    etcd:
+      image:
+        name: wml-accelerator-etcd
+        tag: v3.2.24-v2.2.3-x86_64
+      resources:
+        limits:
+          cpu: 0.25
+          memory: 0.5Gi
+    ingress:
+      image:
+        name: wml-accelerator-nginx
+        tag: 1.14.1-v2.2.3-x86_64
+      resources:
+        limits:
+          cpu: 0.125
+          memory: 0.5Gi
+
+   gui:
+     image:
+       name: wml-accelerator-ui
+       tag: v2.2.3-x86_64
+     resources:
+       limits:
+         cpu: 0.5
+         memory: 0.5Gi
+
+   auth:
+     image:
+       name: wml-accelerator-auth
+       tag: v2.2.3-x86_64
+     resources:
+       limits:
+         cpu: 0.125
+         memory: 0.25Gi
+
+   core:
+     dlpd:
+       image:
+         name: wml-accelerator
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.5
+           memory: 2Gi
+     worker:
+       image:
+         name: wml-accelerator-worker
+         tag: 2.2.3-x86_64
+     conda:
+       image:
+         name: wml-accelerator-conda
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.125
+           memory: 1Gi
+     grafana:
+       image:
+         name: wml-grafana
+         tag: v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.125
+           memory: 2Gi
+     prometheus:
+       image:
+         name: wml-accelerator-prometheus
+         tag: v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.5
+           memory: 1Gi
+     kubectl:
+       image:
+         name: wml-accelerator-kubectl
+         tag: 1.16-v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.125
+           memory: 0.5Gi
+
+   mss:
+     msd:
+       image:
+         name: wml-accelerator-msd
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.5
+           memory: 1Gi
+     infoservice:
+       image:
+         name: wml-accelerator-infoservice
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.5
+           memory: 1Gi
+     nginx:
+       resources:
+         limits:
+           cpu: 0.125
+           memory: 0.5Gi
+   edi:
+     lbd:
+       image:
+         name: wml-edi-lbd
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.25
+           memory: 0.5Gi
+     imd:
+       image:
+         name: wml-edi-imd
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.3
+           memory: 0.5Gi
+     nginx:
+       resources:
+         limits:
+           cpu: 0.125
+           memory: 0.5Gi
+     isd:
+       image:
+         name: wml-edi-isd
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.3
+           memory: 0.5Gi
+
+     kernel:
+       image:
+         name: wml-edi-kernel
+         tag: 2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 2
+           memory: 4096
+
+   notebook:
+     hub:
+       image:
+         name: wml-jupyterhub
+         tag: 1.5.0-v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.25
+           memory: 0.5Gi
+     singleuser:
+       image:
+         name: wml-notebook
+         tag: 6.4.1-v2.2.3-x86_64
+     proxy:
+       image:
+         name: wml-configurable-http-proxy
+         tag: 2.0.1-v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.25
+           memory: 0.5Gi
+     gateway:
+       image:
+         name: wml-enterprise-gateway
+         tag: 2.0.0-v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.25
+           memory: 1Gi
+       worker:
+         name: wml-accelerator-worker
+         tag: 2.2.3-x86_64
+
+   elasticstack:
+     logstash:
+       image: 
+         name: wml-logstash
+         tag: 7.16.2-v2.2.3-x86_64
+       resources:
+         limits:
+           cpu: 0.5
+           memory: 2Gi
+
