@@ -40,3 +40,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-ea8eae813
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:7ea2d63aac6cabe71624bf7989eb50c3cb0114768548c6a8c9d62825b27e4614
+  image: cpopen/ibm-cp-waiops-case-bundle-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-bcc8a6aa2-linux.amd64
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:bcc8a6aa20358f03efefaf0ae2c52329fdce2b9ce0e8915fa31424b8cf8672b9
+  image: cpopen/ibm-cp-waiops-case-bundle-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-bcc8a6aa2

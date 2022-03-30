@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-4f595707a
+- caseVersions:
+  - 3.3.0
+  category: catalog
+  digest: sha256:802a557b292f1bde5711c5249f1bffaaadb5e9366b07816ebff5e0f35fe02725
+  image: cpopen/ibm-secure-tunnel-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-dae4b7b01-linux.amd64
+- caseVersions:
+  - 3.3.0
+  category: catalog
+  digest: sha256:dae4b7b016d26b1f5085c0cad816bd16a8d86a567577ac778b6106393e3e5ba7
+  image: cpopen/ibm-secure-tunnel-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-dae4b7b01
