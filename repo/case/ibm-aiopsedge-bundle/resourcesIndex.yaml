@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-02814e8a9
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:666cc5dba12abffd4c337879ffb4439c6d7c689ec5e89ee6cb9cbdee0c73c90a
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-8d9af64f2-linux.amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:8d9af64f2499928a22f84e36d8afba61fd68ad590e815f0727cd4f62abec962d
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-8d9af64f2
