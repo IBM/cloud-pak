@@ -1,0 +1,20 @@
+type: module
+category: helm-chart
+name: ccs-post-install
+version: 3.5.1611
+description: this is the ccs-post-install to install
+registry-reference: base-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+helmUpgradeForce: true
+forceUpgradeOnFailedRelease: true
+scale: null
+images:
+- name: wkc-init-container
+  tag: 1.0.222
+- name: portal-catalog
+  tag: 0.4.977
+chart: ccs-post-install-3.5.1611.tgz
+md5: 104a28e2d8ae7c3c684a64657bffc79a
+timeout: 60
+releaseName: ccs-post-install

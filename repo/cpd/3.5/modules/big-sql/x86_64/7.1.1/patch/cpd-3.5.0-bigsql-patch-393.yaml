@@ -1,0 +1,15 @@
+# Description of the patch
+description: "Patch log4j vulnerability. APAR : PH42765"
+
+# Image versions for the patch
+images:
+  - bigsql-addon-7_1_1_0:393
+  - bigsql-service-provider-7_1_1_0:393
+
+# This is for the undo option to backup before the patch
+# resourcesChanged:  
+#   - Type: Deployment
+#     Name: abcde-{{.Values}}
+
+# File containing OC commands to execute as part of patch
+patchFile: patch-oc-commands.txt
