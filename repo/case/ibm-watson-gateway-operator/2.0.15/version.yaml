@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 3.9.19
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: A CASE for IBM Watson Gateway Operator
+  displayDescription: ""
+  displayName: IBM Watson Gateway Operator for IBM Cloud Pak for Data
+  icons:
+  - mediaType: image/png
+    url: https://avatars1.githubusercontent.com/u/17691144?s=200&v=4
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watson-gateway-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 2.0.15
+  webPage: ""
+created: 2022-03-30T17:29:10.86459753+0000
+digest: sha256:b5cd3c75a5981b357426f7e71d0dfd6c448597e273531b54b61fe4e9228185bf
