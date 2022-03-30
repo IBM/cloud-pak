@@ -35,9 +35,11 @@ images:
   - image: cp/cp4waiops/chatops-teams-integrator
   - image: cp/cp4waiops/common-elastic-curator
   - image: cp/cp4waiops/connection-manager
+  - image: cp/cp4waiops/connector-manager
   - image: cp/cp4waiops/connector-ui
   - image: cp/cp4waiops/coordinator
   - image: cp/cp4waiops/couchdb
+  - image: cp/cp4waiops/cp4waiops-connectors
   - image: cp/cp4waiops/databroker-s3
   - image: cp/cp4waiops/datalayer-cem-service
   - image: cp/cp4waiops/ea-asm-mime
@@ -72,15 +74,22 @@ images:
   - image: cp/cp4waiops/hdm-normalizer
   - image: cp/cp4waiops/hdm-notificationprocessor
   - image: cp/cp4waiops/hdm-scheduling-ui
+  - image: cp/cp4waiops/http-wait-initcontainer
+  - image: cp/cp4waiops/ibm-aiops-bridge
+  - image: cp/cp4waiops/ibm-aiops-connector-orchestrator
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-7.10.2
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-operator
   - image: cp/cp4waiops/ibm-consul
+  - image: cp/cp4waiops/ibm-grpc-github-connector
+  - image: cp/cp4waiops/ibm-grpc-instana-connector
+  - image: cp/cp4waiops/ibm-grpc-snow-connector
   - image: cp/cp4waiops/ibm-model-train-operator
   - image: cp/cp4waiops/ibm-stolon
   - image: cp/cp4waiops/ibm-vault
   - image: cp/cp4waiops/ibm-vault-k8s
   - image: cp/cp4waiops/inference-service
   - image: cp/cp4waiops/ingestion-service
+  - image: cp/cp4waiops/instana-topology
   - image: cp/cp4waiops/jobmonitor
   - image: cp/cp4waiops/kafka
   - image: cp/cp4waiops/kafkarest
@@ -260,6 +269,7 @@ images:
   - image: icr.io/cpopen/couchdb-operator
   - image: icr.io/cpopen/couchdb-operator-bundle
   - image: icr.io/cpopen/couchdb-operator-catalog
+  - image: icr.io/cpopen/cp4waiops/secure-tunnel-connector
   - image: icr.io/cpopen/iaf-ai-operator
   - image: icr.io/cpopen/iaf-ai-operator-bundle
   - image: icr.io/cpopen/iaf-base-operator
