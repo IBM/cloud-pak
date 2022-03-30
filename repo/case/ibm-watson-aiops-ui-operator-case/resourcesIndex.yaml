@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-2fd2b6702
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:801a93e606680ec556d6c79d70937caebaac32feae80d9f6017059d2124a76f1
+  image: cpopen/ibm-watson-aiops-ui-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-bf4420e8b-linux.amd64
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:bf4420e8bb192e7aebcc2dacef294edfc15d516b8489d22e90698a6386c839ac
+  image: cpopen/ibm-watson-aiops-ui-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-bf4420e8b

@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-a0f96aeef
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:23a5a03884318d3f581876386856f3d4f7b4db1296d5e69510999746a598c11d
+  image: cpopen/ibm-aiops-lifecycle-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-e8a8b7970-linux.amd64
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:e8a8b797048c8da2cb0d736a5fc7adfd4fe0e38950863c04293de76e11890fb9
+  image: cpopen/ibm-aiops-lifecycle-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-e8a8b7970

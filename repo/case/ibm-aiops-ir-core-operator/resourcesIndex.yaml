@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-18d2996c6
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:20635bdf741440dd2b8e7288268919d8d43e08c8902ed46a5aab5e19613cfae6
+  image: cpopen/ibm-aiops-ir-core-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-1467b7bf1-linux.amd64
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:1467b7bf1fad16b9815c02000bef731c0c7dc4573e0c2cae409f5100627f1832
+  image: cpopen/ibm-aiops-ir-core-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-1467b7bf1

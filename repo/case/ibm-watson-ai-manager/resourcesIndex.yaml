@@ -50,3 +50,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-67cf564b2
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:8b038354c1fa119c459c874745899808a29f5e2ea6ff9c268ee1d247fb7eb0e9
+  image: cpopen/ibm-watson-ai-manager-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-dcfae2ee4-linux.amd64
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:dcfae2ee4c103fe23c2c26a732f68152f484652d05caa152356a552eb991b749
+  image: cpopen/ibm-watson-ai-manager-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-dcfae2ee4

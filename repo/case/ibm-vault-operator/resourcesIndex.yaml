@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-3aefa00f3
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:6231012a3a76c0682996d5c45c5c6c1476a13562f784794af1bd839c667adfaf
+  image: cpopen/ibm-vault-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-c59f952cb-linux.amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:c59f952cbf6f85a426209c0e98dc0374bb51ed336ac11a1dba5ef9f01feae40a
+  image: cpopen/ibm-vault-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-c59f952cb
