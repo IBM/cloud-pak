@@ -1,0 +1,14 @@
+source: ibm-ia-im-bundle/case/ibm-ia-im/case.yaml
+description: "IBM Cloud PakxAE for Watson AIOps Infrastructure Automation management v3.3.0"
+images:
+  - image: cp/cp4waiops/httpd
+  - image: cp/cp4waiops/infra-mgmt-application
+  - image: cp/cp4waiops/infra-mgmt-base-worker
+  - image: cp/cp4waiops/infra-mgmt-orchestrator
+  - image: cp/cp4waiops/infra-mgmt-ui-worker
+  - image: cp/cp4waiops/infra-mgmt-webserver-worker
+  - image: cp/cp4waiops/memcached
+  - image: cp/cp4waiops/postgresql
+  - image: icr.io/cpopen/ibm-infra-management-install-operator
+  - image: icr.io/cpopen/ibm-infra-management-install-operator-bundle
+  - image: icr.io/cpopen/ibm-infra-management-install-operator-catalog
