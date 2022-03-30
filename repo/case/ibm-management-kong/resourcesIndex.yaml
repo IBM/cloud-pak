@@ -20,3 +20,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v3.2.1-20220207.1001-cdc0862c4
+- caseVersions:
+  - 3.3.0
+  category: catalog
+  digest: sha256:bf5cd898019e3ab5ba3df375c9294aa1f7c19d4a862995c41e2c88473f8b14cd
+  image: cpopen/ibm-management-kong-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.0-20220318.1607-d2e50f82b-linux.amd64
+- caseVersions:
+  - 3.3.0
+  category: catalog
+  digest: sha256:d2e50f82b1992654c19f3810ce1bbf8c3362cf6206f06a7c2b68203ffade2ac4
+  image: cpopen/ibm-management-kong-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.0-20220318.1607-d2e50f82b
