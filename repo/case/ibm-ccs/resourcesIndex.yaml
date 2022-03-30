@@ -238,3 +238,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.0-20220204.210909
+- caseVersions:
+  - 1.0.7
+  category: catalog
+  digest: sha256:7a1256b6314bc1577dbe9fe5b265f9c06a736953bff648ef0b94d69b831c81e5
+  image: cpopen/ibm-cpd-ccs-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-20220308.173231-amd64
+- caseVersions:
+  - 1.0.7
+  category: catalog
+  digest: sha256:4d5f1663a56c9d4a30a8150d819cdc572015c3248c1944457cbc211e6414403c
+  image: cpopen/ibm-cpd-ccs-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.0-20220308.173231-s390x
+- caseVersions:
+  - 1.0.7
+  category: catalog
+  digest: sha256:87fabe8f9b09e89d8c70b34f013963e95c28149d51bc19482ae5ff3e21972dd5
+  image: cpopen/ibm-cpd-ccs-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0-20220308.173231
