@@ -1,0 +1,18 @@
+source: ibm-spectrum-fusion-sds-bundle/case/ibm-spectrum-fusion-sds/case.yaml
+description: "Management operator for IBM Spectrum Fusion SDS"
+images:
+  - image: cp/isf-sds/callhomeclient
+  - image: cp/isf-sds/fusion-ui-app
+  - image: cp/isf-sds/isf-application-operator
+  - image: cp/isf-sds/isf-bkprstr-operator
+  - image: cp/isf-sds/isf-cns-operator
+  - image: cp/isf-sds/isf-data-protection-operator
+  - image: cp/isf-sds/isf-prereq-operator
+  - image: cp/isf-sds/isf-proxy
+  - image: cp/isf-sds/isf-serviceability-operator
+  - image: cp/isf-sds/isf-ui-operator
+  - image: cp/isf-sds/logcollector
+  - image: cp/isf-sds/spp-dp-operator
+  - image: icr.io/cpopen/isf-operator-bundle
+  - image: icr.io/cpopen/isf-operator-index
+  - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
