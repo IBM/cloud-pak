@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.1
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: IBM Cloudpak Open Operator for Audit Webhook
+  displayDescription: ibm cloudpak open operator for audit webhook
+  displayName: ibm operator for audit webhook
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-auditwebhook-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.1
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+  version: 1.1.0
+  webPage: https://www.ibm.com
+created: 2022-04-05T16:28:10.07796287+0000
+digest: sha256:8779444000ae5789bec459b7349605b0987e3bd0c6ffd87a259fad8326f203e0
