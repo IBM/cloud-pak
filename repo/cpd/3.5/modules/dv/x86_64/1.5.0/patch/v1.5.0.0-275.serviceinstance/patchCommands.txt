@@ -1,0 +1,22 @@
+# List of patching commands
+#caching
+patch deployment dv-caching -p '{"spec": {"template": {"spec":{"containers": [{"env": [{"name": "JWT_PUBLICKEY_URL", "value": "https://internal-nginx-svc:12443/auth/jwtpublic"}], "name": "dv-caching"}]}}}}'
+patch deployment dv-caching -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "init-caching", "image":"{{.DockerRegistryPrefix }}/dv-caching:v1.5.0.0-275"}]}}}}'
+patch deployment dv-caching -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-caching", "image":"{{.DockerRegistryPrefix }}/dv-caching:v1.5.0.0-275"}]}}}}'
+#metastore
+patch statefulset dv-metastore -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-metastore-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-275"}]}}}}'
+patch statefulset dv-metastore -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-metastore", "image":"{{.DockerRegistryPrefix }}/dv-metastore:v1.5.0.0-275"}]}}}}'
+#utils
+patch statefulset dv-utils -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-utils-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-275"}]}}}}'
+patch statefulset dv-utils -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-utils", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.5.0.0-275"}]}}}}'
+#engine
+patch statefulset dv-engine -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-engine-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-275"}]}}}}'
+patch statefulset dv-engine -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-engine", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.5.0.0-275"}]}}}}'
+#worker
+patch statefulset dv-worker -p '{"spec": {"template": {"spec":{"initContainers": [{"name": "dv-worker-init", "image":"{{.DockerRegistryPrefix }}/dv-init-volume:v1.5.0.0-275"}]}}}}'
+patch statefulset dv-worker -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-worker", "image":"{{.DockerRegistryPrefix }}/dv-engine:v1.5.0.0-275"}]}}}}'
+#api
+patch deployment dv-api -p '{"spec": {"template": {"spec":{"containers": [{"name": "dv-api", "image":"{{.DockerRegistryPrefix }}/dv-api:v1.5.0.0-275"}]}}}}'
+patch deployment dv-api -p '{"spec": {"template": {"spec":{"containers": [{"env": [{"name": "NGINX_SVC_HOST_NAME", "value": "https://internal-nginx-svc"},{"name": "NGINX_SVC_PORT", "value": "12443"}, {"name": "JWT_URL_ENDPOINT", "value": "/auth/jwtpublic"}], "name": "dv-api"}]}}}}'
+#console
+patch deployment dv-unified-console -p '{"spec": {"template": {"spec":{"containers": [{"name": "uc", "image":"{{.DockerRegistryPrefix }}/dv-unifiedconsole:v1.5.0.0-275"}]}}}}'
