@@ -1,0 +1,58 @@
+apiVersion: v1
+case:
+  appVersion: 2.1.14
+  catalogs:
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: A Helm chart for installing ibmcloud object storage plugin
+  displayDescription: Persistent,highly available storage that you can mount to apps that run in a Kubernetes cluster
+  displayName: ibm-object-storage-plugin
+  icons:
+  - mediaType: image/png
+    url: https://cache.globalcatalog.cloud.ibm.com/static/cache/2461-acb0d10a1725d783/images/uploaded/icons/object-storage.png
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    ibm-cos-sdk-go-LICENSE:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: ibm-cos-sdk-go-LICENSE
+        name: ibm-cos-sdk-go-LICENSE
+      ref: ibm-cos-sdk-go-LICENSE
+    ubi-image-LICENSE:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: ubi-image-LICENSE
+        name: ubi-image-LICENSE
+      ref: ubi-image-LICENSE
+      url: https://www.redhat.com/licenses/EULA_Red_Hat_Universal_Base_Image_English_20190422.pdf?extIdCarryOver=true&sc_cid=701f2000001OH7TAAW
+  name: ibm-object-storage-plugin
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      iks: {}
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.1.14
+  webPage: https://www.ibm.com
+created: 2022-04-11T00:24:15.30498053+0000
+digest: sha256:13f6f896f8c7680cbe42a10d608073c666b17fefec6633e163c6a74c6ba48c26
