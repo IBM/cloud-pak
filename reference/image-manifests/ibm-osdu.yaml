@@ -1,6 +1,7 @@
 source: ibm-osdu-bundle/case/ibm-osdu/case.yaml
 description: ""
 images:
+  - image: cp/cpd/busybox
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
@@ -9,13 +10,30 @@ images:
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/os-crs-catalog-ibm
+  - image: cp/cpd/os-crs-conversion-ibm
+  - image: cp/cpd/os-dataset-ibm
   - image: cp/cpd/os-delivery-ibm
   - image: cp/cpd/os-entitlements-ibm
+  - image: cp/cpd/os-entitlements-ibm-v2
+  - image: cp/cpd/os-file-ibm
   - image: cp/cpd/os-indexer-ibm
   - image: cp/cpd/os-indexer-queue-ibm
   - image: cp/cpd/os-legal-ibm
+  - image: cp/cpd/os-notification-ibm
+  - image: cp/cpd/os-notification-router-ibm
+  - image: cp/cpd/os-partition-ibm
+  - image: cp/cpd/os-policy-ibm
+  - image: cp/cpd/os-registration-ibm
+  - image: cp/cpd/os-schema-bootstrap
+  - image: cp/cpd/os-schema-ibm
   - image: cp/cpd/os-search-ibm
+  - image: cp/cpd/os-seismic-store-service
   - image: cp/cpd/os-storage-ibm
+  - image: cp/cpd/os-unit-ibm
+  - image: cp/cpd/os-wellbore-domain-services
+  - image: cp/cpd/os-welldelivery-ibm
+  - image: cp/cpd/os-workflow-ibm
   - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
@@ -24,3 +42,6 @@ images:
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
   - image: icp4data-nginx-repo
+  - image: icr.io/cpopen/ibm-osdu-operator
+  - image: icr.io/cpopen/ibm-osdu-operator-bundle
+  - image: icr.io/cpopen/ibm-osdu-operator-catalog
