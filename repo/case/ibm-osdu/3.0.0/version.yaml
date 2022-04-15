@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 3.0.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Open Data for Industries Cartridge for IBM Cloud Pak for Data
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://github.com/IBMDSM/ci.docker.dsm-enterprise/blob/master/dsmcharticon.png
+  licenses:
+    license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Open Data for Industries Cartridge for IBM Cloud Pak for Data
+        displayName: License
+      ref: LICENSE
+      url: http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(5900-AEB)
+    nonIbmLicense:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Open Data for Industries Cartridge for IBM Cloud Pak for Data Terms and Conditions
+        displayName: Terms and Conditions
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Open Data for Industries Cartridge for IBM Cloud Pak for Data Notices and Information
+        displayName: Notices and Information
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-osdu
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 3.0.0
+  webPage: https://www.ibm.com
+created: 2022-04-15T14:55:33.14082214+0000
+digest: sha256:d478c8855024e54ccd0e6edb469432669d8247ab2460b59959ffe6723621e304
