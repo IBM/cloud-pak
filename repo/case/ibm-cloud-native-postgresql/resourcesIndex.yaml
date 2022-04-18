@@ -197,3 +197,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 325-nexus
+- caseVersions:
+  - 4.0.8
+  category: catalog
+  digest: sha256:82148a8ade3925b1ceb4acdc249337c2db34015d151433a26ab00401c9d62e8f
+  image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 388-amd64
+- caseVersions:
+  - 4.0.8
+  category: catalog
+  digest: sha256:42391eeb88ed13a30e3af16b62f6ace5b2ab4f14ba7644e0a5e2c6344f5c93d1
+  image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 388-ppc64le
+- caseVersions:
+  - 4.0.8
+  category: catalog
+  digest: sha256:9b7ca6e77f69489f5180225804ab7c9241c76c4d0b113b4df795d979ec18b5d0
+  image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 388-s390x
+- caseVersions:
+  - 4.0.8
+  category: catalog
+  digest: sha256:f3feb39b0dfb444a46d99a9cd160c616f8548d84d452cbc89e4985f0a2574486
+  image: cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: "388"
