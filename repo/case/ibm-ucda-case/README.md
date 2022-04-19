@@ -248,7 +248,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-catalog                           \
@@ -259,7 +259,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator
@@ -273,7 +273,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -286,7 +286,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -296,7 +296,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog                         \
@@ -312,7 +312,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -323,7 +323,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native                 \
@@ -334,7 +334,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -345,7 +345,7 @@ cloudctl case launch                                   \
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -399,7 +399,7 @@ Create registry secret for source image registry (if the registry is public whic
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz    \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz    \
     --namespace <target namespace>                       \
     --inventory ucdaOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -410,7 +410,7 @@ cloudctl case launch                                     \
 
 ```
 cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz    \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz    \
     --namespace <target namespace>                       \
     --inventory ucdaOperatorSetup                        \
     --action configure-creds-airgap                      \
@@ -433,7 +433,7 @@ In this step image from saved CASE (images.csv) are copied to target registry in
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action mirror-images                             \
@@ -455,7 +455,7 @@ WARNING:
 
 ```
 cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucda-case-1.4.6.tgz  \
+    --case /tmp/cases/ibm-ucda-case-1.4.7.tgz  \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action configure-cluster-airgap                  \
