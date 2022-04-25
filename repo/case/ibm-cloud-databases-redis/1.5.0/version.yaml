@@ -1,0 +1,32 @@
+apiVersion: v1
+case:
+  appVersion: 1.5.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: IBM Operator for Redis
+  displayDescription: An operator to run Redis Sentinels
+  displayName: IBM Operator for Redis
+  icons: []
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-cloud-databases-redis
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.5.0
+  webPage: https://www.ibm.com
+created: 2022-04-25T08:05:59.74129367+0000
+digest: sha256:a5b6b44f3ad9c0c513366167cc86d33ba3d999a885f9f9a1e80ca97b41ebc696
