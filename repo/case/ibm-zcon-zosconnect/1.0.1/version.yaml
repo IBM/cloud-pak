@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: "3.0"
+  catalogs:
+    deploy: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM z/OS Connect CASE that deploys an operator
+  displayDescription: IBM z/OS Connect Operator
+  displayName: IBM z/OS Connect Operartor
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-zcon-zosconnect
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com/products/zos-connect
+created: 2022-04-25T11:39:39.80241686+0000
+digest: sha256:11a78f8be341c451c7a85fdc502a14773eb8c964013057f497dd709e739e829d
