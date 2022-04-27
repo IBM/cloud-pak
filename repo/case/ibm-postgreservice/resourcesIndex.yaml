@@ -38,3 +38,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.3.0-20220318.1607-4d5827484
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:50d964a9a19e51a17736e6b53813f167cb99d7599488061d8b92592f2c5a66e7
+  image: cpopen/ibm-postgreservice-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.1-20220411.1001-c14a82157-linux.amd64
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:c14a821576347db18b83bbe6e02efc0e72fdc970ac1546b8f1d84b87029ddd1f
+  image: cpopen/ibm-postgreservice-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.1-20220411.1001-c14a82157
