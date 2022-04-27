@@ -1,0 +1,55 @@
+apiVersion: v1
+case:
+  appVersion: 4.0.8
+  catalogs:
+    ai: {}
+    cloudpak: {}
+  certifications:
+    ibmccp: {}
+  classifications:
+    commercial: {}
+  description: A fully-integrated software platform to collect, organize, and analyze data to infuse AI throughout your organization.
+  displayDescription: A fully-integrated software platform to collect, organize, and analyze data to infuse AI throughout your organization.
+  displayName: Cloud Pak for Data
+  icons:
+  - mediaType: image/svg
+    url: https://globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/icp4data.svg
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4data-EE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Enterprise Edition
+        displayName: Cloud Pak for Data License
+      ref: license-en-EE
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DNAA-CAE23Z
+    cp4data-SE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Standard Edition
+        displayName: Cloud Pak for Data License
+      ref: license-en-SE
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DNAA-CAE29R
+  name: ibm-cp-datacore
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 2.0.13
+  webPage: https://docs-icpdata.mybluemix.net/home
+created: 2022-04-27T21:25:44.92013792+0000
+digest: sha256:dc23530af8504ef2751ddd708ca2341f6a7d1059d470a64b292b723ebc7b9599
