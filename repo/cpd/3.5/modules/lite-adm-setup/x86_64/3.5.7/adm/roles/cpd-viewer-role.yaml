@@ -1,0 +1,31 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: cpd-viewer-role
+rules:
+- apiGroups:
+  - ""
+  - batch
+  - extensions
+  - apps
+  - policy
+  resources:
+  - pods
+  - pods/log
+  - secrets
+  - jobs
+  - configmaps
+  - deployments
+  - endpoints
+  - statefulsets
+  - replicasets
+  - services
+  - persistentvolumeclaims
+  - cronjobs
+  - pods/exec
+  - serviceaccounts
+  - namespaces
+  verbs:
+  - get
+  - watch
+  - list

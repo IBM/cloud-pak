@@ -1,0 +1,62 @@
+description: Watson Discovery 2.2.1 operator patch for security updates
+patchFile: patchCommands.txt
+backupForRollback:
+- kind: Deployment
+  name: wd-discovery-operator
+  namespace: controlplane
+- kind: WatsonDiscovery
+  name: wd
+  namespace: controlplane
+images:
+- discovery-operator:2.2.1-patch-10-2d7b38ddf
+- cnm-api:1.1.0.7-3-eb6164a 
+- cnm-dbinit:1.1.0.7-3-eb6164a 
+- cnm-seer:1.1.5.0-2-08220f1 
+- configure-etcd:1.4.14 
+- configure-postgres:20220404-180919-16-03066e2f 
+- disco-ranker-server:20220330-022621-1034-48b1af1 
+- discovery-ranker-rest-service:20220404-005102-20-8052e83 
+- haywire:20220330-012936-1094-f36c8fe 
+- icp-jks-gen:1.0.46 
+- icp-util:1.0.46 
+- kg-gensim-nonroot-user:masterv1.0.29 
+- kg-induction:masterv1.0.111 
+- kg-modelmesh:masterv1.0.61 
+- logging-server:0.0.22.5 
+- model-mesh:main-20220329-79 
+- objectstore-toolbox:1.0.24 
+- po-box:0.3.24.7 
+- ranker-monitor-agent:20220331-010411-1010-530ac9d0 
+- ranker-training:20220330-190956-1081-84560a9 
+- rhubi-statsd-exporter:2.1.30 
+- sdu-spark:1.5.89 
+- sdu-spark-db-init:1.2.21 
+- sentence-classification:v1.1.9 
+- sentence-classification-gpu:v1.1.9 
+- tooling:node-release-2.2.1-patch-10-6 
+- training-agent:20220331-010748-1176-46cf102b 
+- training-data-crud:20220418-043725-24-698927fb 
+- training-master:20220418-024446-15-9e9be6 
+- training-rest:20220330-002827-1141-b8f039cf-non-root 
+- watson-nlp-models:2.5.0-4-4f224e8 
+- wd-api:12.0.7-3056 
+- wd-elastic-plugins:12.0.7-3039 
+- wd-hdp:12.0.7-3155 
+- wd-indexer:0.3.4.12 
+- wd-ingestion:12.0.7-3116 
+- wd-ingestion-api:12.0.7-3116 
+- wd-management:12.0.7-3117 
+- wd-migrator:12.0.7-3179 
+- wd-minerapp:12.0.7-3047 
+- wd-nginx:12.0.7-3019 
+- wd-orchestrator:12.0.7-3286 
+- wd-rapi:12.0.7-3076 
+- wd-rcm:0.0.22.10 
+- wd-stateless-api-model-runtime:12.0.7-3154 
+- wd-stateless-api-rest-proxy:12.0.7-3154 
+- wd-utils:12.0.7-3100 
+- wd-webpagecleaner:12.0.7-3029 
+- wd-wksml:12.0.7-3079 
+- wks-ene-expand:release-1-1-3-20220330-0417-1 
+- wks-glimpse-ene-builder:release-1-1-3-20220330-0417-1 
+- wks-ibmjdk8-rhubi8:master-20220328-1826-745

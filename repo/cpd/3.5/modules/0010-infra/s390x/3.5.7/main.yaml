@@ -1,0 +1,26 @@
+# This file is in fileserver
+type: module
+name: infra module # The name here just for information purpose, not for "product" reference, it should rely on file name
+registry-reference: base-registry
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+  - name: privatecloud-usermgmt
+    tag: 3.5.7-s390x-191
+  - name: zen-metastoredb
+    tag: 3.5.7-s390x-191
+  - name: influxdb
+    tag: 3.5.7-s390x-191
+chart: 0010-infra-3.5.7.tgz
+# For download to verify the chart file is correct, optional
+#md5:
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 90
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: 0010-infra
+installOverride: install-override.yaml
+upgradeOverride: upgrade-override.yaml
+UpgradeStatefulsetScaleDown:
+  - zen-metastoredb

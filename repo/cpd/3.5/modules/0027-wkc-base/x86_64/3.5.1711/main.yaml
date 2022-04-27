@@ -1,0 +1,33 @@
+type: module
+category: helm-chart
+name: 0027-wkc-base
+version: 3.5.1711
+description: this is the wkc-base to install
+registry-reference: base-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+helmUpgradeForce: true
+forceUpgradeOnFailedRelease: true
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+- name: portal-catalog
+  tag: 0.4.978
+- name: dc-main
+  tag: 0.2.811
+- name: wdp-connect-connection
+  tag: 3.0.407
+- name: wdp-connect-connector
+  tag: 3.0.407
+- name: catalog_master
+  tag: 2.0.0-20220401192445-b60e064
+- name: wkc-search_master
+  tag: 4.0.89
+- name: wkc-init-container
+  tag: 1.0.241
+chart: wkc-base-3.5.1711.tgz
+md5: 24a05ddcc3b1576f60c3157026d1e6a9
+timeout: 120
+releaseName: 0027-wkc-base

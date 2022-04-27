@@ -1,0 +1,49 @@
+# type will be either "assembly" or "module", mandatory
+# mandatory - once this file uploaded, we will not delete any more,
+# but if this version too old, the download/deploy will tell this product is not valid any more, and show the latest version
+# We can also add dev, candidate etc here and telling the user what is the state
+# This license will show at the download time and the install time, optional. If specified, then will ask user to explicitly accept
+# The name is for information only, download/deploy command will refer this product based on file name, mandatory
+# Descriptioin is optional
+# architecture is optional
+# if this is missing, each module/sub-assembly has to specify architecture, if both specified, syntax error
+# sub assembly have to be homogerious architucture
+# Do NOT use for now - Optional, this will be the final override yaml to override all values in the chart, including those defined in module yaml
+# To be discussed after Oct - consult with the install team to make sure this is implemented
+#overrideValues:
+# install: override.yaml
+# upgrade: override.yaml
+# installOverride: override.yaml
+# bricks is mandatory, it could contains another "product"
+# When all the modules are obtained, it has to check if there is duplicate of names, if so, error out,
+# although we allow include the sub "assembly", but the sub-assembly can ONLY allow modules, but not another assembly
+# We will have linter to check to make sure the rules
+#
+# Version is hardcoded for now, we will address the version compatiblities after Oct GA
+name: wkc
+version: 3.5.10
+description: wkc-3.5.10
+type: assembly
+lifeCycle: live
+license: http://icp4d.ibm.com
+architecture: x86_64
+installOverride: override.yaml
+upgradeOverride: override.yaml
+predefinedOverride:
+- name: portworx
+  installOverride: portworx-override.yaml
+  upgradeOverride: portworx-override.yaml
+- name: ocs
+  installOverride: ocs-override.yaml
+  upgradeOverride: ocs-override.yaml
+bricks:
+  - name: wkc-core
+    minVersion: 3.5.10
+    type: assembly
+  - name: iis
+    minVersion: 3.5.10
+    type: assembly
+  - name: 0073-ug
+    version: 13.5.1619
+    type: module
+#wkc build 1431

@@ -1,0 +1,89 @@
+category: helm-chart
+chart: ibm-planning-analytics-cpd-addon-3.5.6.tgz
+description: This module is for the Planning Analytics Add-on install
+installOverride: icp4d-override.yaml
+name: Planning Analytics
+registry-reference: base-registry
+releaseName: planning-analytics
+scale:
+  - pass-small.yaml
+  - pass-medium.yaml
+  - pass-large.yaml
+  - pass-off.yaml
+  - tm1-small.yaml
+  - tm1-medium.yaml
+  - tm1-large.yaml
+timeout: 20
+type: module
+version: 3.5.6
+images:
+- name: pa-async-service
+  tag: 0.0.244-ubi8
+- name: pa-atlas-service
+  tag: 86-ubi8
+- name: pa-bss
+  tag: 1.0.1310-ubi8
+- name: pa-bss-init
+  tag: 1.0.278-ubi8
+- name: pa-cdn
+  tag: 3.0.5856-ubi8
+- name: pa-content-service
+  tag: 1.0.257-ubi8
+- name: pa-couchdb
+  tag: 187-ubi8
+- name: pa-cp4d-addon
+  tag: 3.5.6-2744
+- name: pa-cp4d-post-upgrade-job
+  tag: 2.0.55-30
+- name: pa-cp4d-service-provider
+  tag: 2.0.55-270
+- name: pa-evalservice
+  tag: 11.0.74-22030111-234
+- name: pa-gateway
+  tag: 1.0.1045-ubi8
+- name: pa-glass
+  tag: 3.0.5856-ubi8
+- name: pa-k8s-config
+  tag: 1.0.95-ubi8
+- name: pa-mongo
+  tag: 1.0.165-ubi8
+- name: pa-monitor
+  tag: 2.0.74.2556-ubi8
+- name: pa-mysql-cluster
+  tag: 2.0.161-ubi8
+- name: pa-neo-idviz
+  tag: 9.0.511-ubi8
+- name: pa-neo-provision
+  tag: 1.0.336-ubi8
+- name: pa-palm-service
+  tag: 1.0.168-ubi8
+- name: pa-paw-ui-api
+  tag: 1.0.133-ubi8
+- name: pa-plan-service
+  tag: 1.0.2022021701-ubi8
+- name: pa-predict-svc
+  tag: 1.0.724-ubi8
+- name: pa-prism-app
+  tag: 3.0.5447-ubi8
+- name: pa-prism-platform
+  tag: 3.0.2046-ubi8
+- name: pa-prism-proxy
+  tag: 3.0.10291-ubi8
+- name: pa-redis
+  tag: 1.0.169-ubi8
+- name: pa-share-app
+  tag: 1.0.507-ubi8
+- name: pa-share-platform
+  tag: 1.0.368-ubi8
+- name: pa-share-proxy
+  tag: 1.0.507-ubi8
+- name: pa-tm1-cp4d
+  tag: b739CP4D
+- name: pa-tm1proxy
+  tag: 1.0.350-ubi8
+- name: pa-tm1web
+  tag: 11.0.74-22030111-234
+- name: pa-user-admin
+  tag: 1.0.629-ubi8
+- name: pa-wa-proxy
+  tag: 1.0.827-ubi8
