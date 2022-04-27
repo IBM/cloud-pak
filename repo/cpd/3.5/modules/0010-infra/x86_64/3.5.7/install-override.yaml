@@ -1,0 +1,23 @@
+# this file gets filled up at build time.
+global:
+  image:
+    tag: 3.5.7-x86_64-191
+  use_external_prefix: true
+  upgradelite: false
+  docker_registry_prefix: #docker_registry_prefix#
+  persistence:
+    enabled: true
+    storageClassName: #storageclass#
+    useDynamicProvisioning: true
+  ibmProduct: zen
+  databases: false
+  generateAdminPassword: false
+zenProxy:
+  serviceType: ClusterIP
+namespace: #namespace#
+nginxRepo:
+  resolver: "kubernetes.default"
+zenCoreApi:
+  tillerNamespace: #namespace#
+  tillerPort: 44134
+  noTls: false
