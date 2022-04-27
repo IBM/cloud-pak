@@ -304,3 +304,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: latest
+- caseVersions:
+  - 3.1.0
+  category: catalog
+  digest: sha256:d8292ff8e0dd84047f60942490f272c82b14dcf5d941ec6c3dd8a2e0f7c40e7e
+  image: cpopen/ibm-transformation-advisor-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 3.1.0
+  category: catalog
+  digest: sha256:d7c951ba084d7e1516ec58134ac3f4287677f3b416604cce85b13ab690d1e830
+  image: cpopen/ibm-transformation-advisor-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: latest-ppc64le
+- caseVersions:
+  - 3.1.0
+  category: catalog
+  digest: sha256:a54012d7c848c2d4050ea835b2b66f53f8ae16b9eacf6bbdc73d369ddc428a3e
+  image: cpopen/ibm-transformation-advisor-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 3.1.0
+  category: catalog
+  digest: sha256:cfb272d9b5f43adb4a70aa3c35e82c926d6e7ce974a59bb6e99f84d012de04b7
+  image: cpopen/ibm-transformation-advisor-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
