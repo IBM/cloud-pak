@@ -120,3 +120,23 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 10.110.0-20220228d
+- caseVersions:
+  - 1.4.1
+  category: catalog
+  digest: sha256:af12adf8467ddbc6bcb0e890850ad59c3840ae1f822e43eea8ed0da32e06f99b
+  image: cpopen/ibmsppc-operator-catalog-ocp
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 10.110.2-20220425e
+- caseVersions:
+  - 1.4.1
+  category: catalog
+  digest: sha256:9892ec2b0399054a92b330490d4b80512de4bded335daee807675396620ddc77
+  image: cpopen/ibmsppc-operator-catalog-k8s
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 10.110.2-20220425e
