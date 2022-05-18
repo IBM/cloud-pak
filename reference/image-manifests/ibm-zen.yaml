@@ -1,6 +1,19 @@
 source: ibm-zen-bundle/case/ibm-zen/case.yaml
 description: "An all-in-one cloud-native Data and AI platform in a box, providing a preconfigured, governed, and secure environment to collect, organize and analyze data."
 images:
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
+  - image: icr.io/cpopen/cpfs/icpd-requisite
+  - image: icr.io/cpopen/cpfs/influxdb
+  - image: icr.io/cpopen/cpfs/privatecloud-usermgmt
+  - image: icr.io/cpopen/cpfs/zen-audit
+  - image: icr.io/cpopen/cpfs/zen-core
+  - image: icr.io/cpopen/cpfs/zen-core-api
+  - image: icr.io/cpopen/cpfs/zen-data-sorcerer
+  - image: icr.io/cpopen/cpfs/zen-iam-config
+  - image: icr.io/cpopen/cpfs/zen-influxdb-relay
+  - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/ibm-zen-operator
   - image: quay.io/opencloudio/cp4d-tiller
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/icp4data-nginx-repo

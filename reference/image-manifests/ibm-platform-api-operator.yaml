@@ -1,6 +1,10 @@
 source: ibm-platform-api-operator-bundle/case/ibm-platform-api-operator/case.yaml
 description: "ICP Platform API Service"
 images:
+  - image: icr.io/cpopen/cpfs/audit-syslog-service
+  - image: icr.io/cpopen/cpfs/icp-platform-api
+  - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/ibm-platform-api-operator
   - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/ibm-platform-api-operator
   - image: quay.io/opencloudio/icp-audit-service

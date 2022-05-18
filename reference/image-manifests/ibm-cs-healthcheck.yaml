@@ -1,6 +1,11 @@
 source: ibm-cs-healthcheck-case-bundle/case/ibm-cs-healthcheck/case.yaml
 description: "ibm-healthcheck-operator CASE"
 images:
+  - image: icr.io/cpopen/cpfs/icp-memcached
+  - image: icr.io/cpopen/cpfs/must-gather
+  - image: icr.io/cpopen/cpfs/must-gather-service
+  - image: icr.io/cpopen/cpfs/system-healthcheck-service
+  - image: icr.io/cpopen/ibm-healthcheck-operator
   - image: quay.io/opencloudio/ibm-healthcheck-operator
   - image: quay.io/opencloudio/icp-memcached
   - image: quay.io/opencloudio/must-gather

@@ -1,6 +1,17 @@
 source: ibm-cs-iam-case-bundle/case/ibm-cs-iam/case.yaml
 description: ""
 images:
+  - image: icr.io/cpopen/cpfs/audit-syslog-service
+  - image: icr.io/cpopen/cpfs/iam-policy-administration
+  - image: icr.io/cpopen/cpfs/iam-policy-controller
+  - image: icr.io/cpopen/cpfs/iam-policy-decision
+  - image: icr.io/cpopen/cpfs/icp-iam-onboarding
+  - image: icr.io/cpopen/cpfs/icp-identity-manager
+  - image: icr.io/cpopen/cpfs/icp-identity-provider
+  - image: icr.io/cpopen/cpfs/icp-oidcclient-watcher
+  - image: icr.io/cpopen/cpfs/icp-platform-auth
+  - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/ibm-iam-operator
   - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/iam-policy-administration
   - image: quay.io/opencloudio/iam-policy-controller
