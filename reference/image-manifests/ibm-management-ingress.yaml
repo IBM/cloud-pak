@@ -1,6 +1,13 @@
 source: ibm-management-ingress-case-bundle/case/ibm-management-ingress/case.yaml
 description: "A CASE for an operator which deploy ibm-managment-ingress"
 images:
+  - image: icr.io/cpopen/cpfs/default-http-backend
+  - image: icr.io/cpopen/cpfs/icp-initcontainer
+  - image: icr.io/cpopen/cpfs/icp-management-ingress
+  - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/nginx-ingress-controller
+  - image: icr.io/cpopen/ibm-ingress-nginx-operator
+  - image: icr.io/cpopen/ibm-management-ingress-operator
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/ibm-ingress-nginx-operator
   - image: quay.io/opencloudio/ibm-management-ingress-operator
