@@ -1,6 +1,10 @@
 source: ibm-cs-mongodb-bundle/case/ibm-cs-mongodb/case.yaml
 description: "Used to deploy Common Services MongoDB microservice in a k8s cluster"
 images:
+  - image: icr.io/cpopen/cpfs/ibm-mongodb
+  - image: icr.io/cpopen/cpfs/ibm-mongodb-exporter
+  - image: icr.io/cpopen/cpfs/ibm-mongodb-install
+  - image: icr.io/cpopen/ibm-mongodb-operator
   - image: quay.io/opencloudio/ibm-mongodb
   - image: quay.io/opencloudio/ibm-mongodb-exporter
   - image: quay.io/opencloudio/ibm-mongodb-install

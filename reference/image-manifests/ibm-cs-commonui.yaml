@@ -1,6 +1,8 @@
 source: ibm-cs-commonui-case-bundle/case/ibm-cs-commonui/case.yaml
 description: "A CASE for an operator which deploys Common Services UI"
 images:
+  - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/ibm-commonui-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-dashboard-data-collector

@@ -1,6 +1,12 @@
 source: ibm-cs-monitoring-case-bundle/case/ibm-cs-monitoring/case.yaml
 description: "ibm-cs-monitoring CASE"
 images:
+  - image: icr.io/cpopen/cpfs/dashboard-controller
+  - image: icr.io/cpopen/cpfs/grafana
+  - image: icr.io/cpopen/cpfs/grafana-ocpthanos-proxy
+  - image: icr.io/cpopen/cpfs/icp-initcontainer
+  - image: icr.io/cpopen/cpfs/icp-management-ingress
+  - image: icr.io/cpopen/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/collectd-exporter
   - image: quay.io/opencloudio/configmap-reload

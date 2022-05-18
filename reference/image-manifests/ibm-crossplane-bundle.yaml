@@ -1,6 +1,10 @@
 source: ibm-crossplane-bundle/case/ibm-crossplane-bundle/case.yaml
 description: "IBM Crossplane"
 images:
+  - image: icr.io/cpopen/cpfs/ibm-crossplane-bedrock-shim-config
+  - image: icr.io/cpopen/ibm-crossplane-operator
+  - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
+  - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator
   - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
   - image: quay.io/opencloudio/ibm-crossplane-operator
   - image: quay.io/opencloudio/ibm-crossplane-provider-ibm-cloud-operator
