@@ -1,6 +1,9 @@
 source: ibm-events-operator-case-bundle/case/ibm-events-operator/case.yaml
 description: "This case provides an IBM Events Operator and example custom resource which can be used to install instances of IBM Events Operator"
 images:
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.0.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
+  - image: icr.io/cpopen/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.1
   - image: quay.io/opencloudio/ibm-events-kafka-2.7.0
