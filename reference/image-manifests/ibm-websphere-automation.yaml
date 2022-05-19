@@ -62,6 +62,64 @@ images:
   - image: ibmcom/ibm-automation-foundation-core-catalog
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/common-service-operator
+  - image: icr.io/cpopen/cpfs/audit-garbage-collector
+  - image: icr.io/cpopen/cpfs/audit-policy-controller
+  - image: icr.io/cpopen/cpfs/audit-syslog-service
+  - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/cpfs/dashboard-controller
+  - image: icr.io/cpopen/cpfs/default-http-backend
+  - image: icr.io/cpopen/cpfs/fluentd
+  - image: icr.io/cpopen/cpfs/grafana
+  - image: icr.io/cpopen/cpfs/grafana-ocpthanos-proxy
+  - image: icr.io/cpopen/cpfs/iam-policy-administration
+  - image: icr.io/cpopen/cpfs/iam-policy-controller
+  - image: icr.io/cpopen/cpfs/iam-policy-decision
+  - image: icr.io/cpopen/cpfs/ibm-crossplane-bedrock-shim-config
+  - image: icr.io/cpopen/cpfs/ibm-cs-webhook
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.0.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
+  - image: icr.io/cpopen/cpfs/ibm-licensing
+  - image: icr.io/cpopen/cpfs/ibm-licensing-usage
+  - image: icr.io/cpopen/cpfs/ibm-mongodb
+  - image: icr.io/cpopen/cpfs/ibm-mongodb-exporter
+  - image: icr.io/cpopen/cpfs/ibm-mongodb-install
+  - image: icr.io/cpopen/cpfs/ibm-postgresql
+  - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
+  - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
+  - image: icr.io/cpopen/cpfs/icp-iam-onboarding
+  - image: icr.io/cpopen/cpfs/icp-identity-manager
+  - image: icr.io/cpopen/cpfs/icp-identity-provider
+  - image: icr.io/cpopen/cpfs/icp-initcontainer
+  - image: icr.io/cpopen/cpfs/icp-management-ingress
+  - image: icr.io/cpopen/cpfs/icp-memcached
+  - image: icr.io/cpopen/cpfs/icp-oidcclient-watcher
+  - image: icr.io/cpopen/cpfs/icp-platform-api
+  - image: icr.io/cpopen/cpfs/icp-platform-auth
+  - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/cpfs/influxdb
+  - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/must-gather
+  - image: icr.io/cpopen/cpfs/must-gather-service
+  - image: icr.io/cpopen/cpfs/nginx-ingress-controller
+  - image: icr.io/cpopen/cpfs/privatecloud-usermgmt
+  - image: icr.io/cpopen/cpfs/system-healthcheck-service
+  - image: icr.io/cpopen/cpfs/zen-audit
+  - image: icr.io/cpopen/cpfs/zen-core
+  - image: icr.io/cpopen/cpfs/zen-core-api
+  - image: icr.io/cpopen/cpfs/zen-data-sorcerer
+  - image: icr.io/cpopen/cpfs/zen-iam-config
+  - image: icr.io/cpopen/cpfs/zen-influxdb-relay
+  - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-watchdog
   - image: icr.io/cpopen/iaf-ai-operator
   - image: icr.io/cpopen/iaf-ai-operator-bundle
   - image: icr.io/cpopen/iaf-base-operator
@@ -82,12 +140,52 @@ images:
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
+  - image: icr.io/cpopen/ibm-auditlogging-operator
+  - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  - image: icr.io/cpopen/ibm-cert-manager-operator
+  - image: icr.io/cpopen/ibm-cert-manager-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-common-service-operator-bundle
+  - image: icr.io/cpopen/ibm-commonui-operator
+  - image: icr.io/cpopen/ibm-commonui-operator-bundle
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-crossplane-operator
+  - image: icr.io/cpopen/ibm-crossplane-operator-bundle
+  - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
+  - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator-bundle
+  - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator
+  - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-catalog
+  - image: icr.io/cpopen/ibm-events-operator
+  - image: icr.io/cpopen/ibm-events-operator-bundle
+  - image: icr.io/cpopen/ibm-healthcheck-operator
+  - image: icr.io/cpopen/ibm-healthcheck-operator-bundle
+  - image: icr.io/cpopen/ibm-iam-operator
+  - image: icr.io/cpopen/ibm-iam-operator-bundle
+  - image: icr.io/cpopen/ibm-ingress-nginx-operator
+  - image: icr.io/cpopen/ibm-ingress-nginx-operator-bundle
+  - image: icr.io/cpopen/ibm-licensing-operator
+  - image: icr.io/cpopen/ibm-licensing-operator-bundle
+  - image: icr.io/cpopen/ibm-management-ingress-operator
+  - image: icr.io/cpopen/ibm-management-ingress-operator-bundle
+  - image: icr.io/cpopen/ibm-mongodb-operator
+  - image: icr.io/cpopen/ibm-mongodb-operator-bundle
+  - image: icr.io/cpopen/ibm-monitoring-grafana-operator
+  - image: icr.io/cpopen/ibm-monitoring-grafana-operator-bundle
+  - image: icr.io/cpopen/ibm-namespace-scope-operator
+  - image: icr.io/cpopen/ibm-namespace-scope-operator-bundle
+  - image: icr.io/cpopen/ibm-namespace-scope-operator-restricted-bundle
+  - image: icr.io/cpopen/ibm-platform-api-operator
+  - image: icr.io/cpopen/ibm-platform-api-operator-bundle
+  - image: icr.io/cpopen/ibm-zen-cpp-operator
+  - image: icr.io/cpopen/ibm-zen-cpp-operator-bundle
+  - image: icr.io/cpopen/ibm-zen-operator
+  - image: icr.io/cpopen/ibm-zen-operator-bundle
+  - image: icr.io/cpopen/odlm
   - image: icr.io/cpopen/opencontent-etcd-operator
+  - image: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle
   - image: icr.io/cpopen/websphere-automation-operator
   - image: icr.io/cpopen/websphere-automation-operator-bundle
   - image: icr.io/cpopen/websphere-automation-operator-catalog
