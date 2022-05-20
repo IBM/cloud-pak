@@ -1,0 +1,7 @@
+source: ibm-merlin-cicd-case-bundle/case/ibm-merlin-cicd/case.yaml
+description: "IBM CI/CD Tool."
+images:
+  - image: cp/ibmi-merlin/ibmi-merlin-cicd-gui
+  - image: icr.io/cpopen/ibmi-merlin-cicd-operator
+  - image: icr.io/cpopen/ibmi-merlin-cicd-operator-bundle
+  - image: icr.io/cpopen/ibmi-merlin-cicd-operator-catalog
