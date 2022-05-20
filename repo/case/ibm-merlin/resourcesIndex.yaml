@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:e287157e4a2f672c40e2e3bf4c4a23b59552214d2b259eb991ac993b6e98eb61
+  image: cpopen/ibmi-merlin-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.0-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:f705775457d59688258e37a97a02e83bedaf975e6d7d37e6c7b31bdaa72371c2
+  image: cpopen/ibmi-merlin-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.0-ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:62390693cbfaa0e69252b1ee41969c35e00ed7594434c60ec565c0c19c14f781
+  image: cpopen/ibmi-merlin-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.0
