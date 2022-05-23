@@ -1,0 +1,63 @@
+apiVersion: v1
+case:
+  appVersion: 6.1.0.5
+  catalogs:
+    automation: {}
+    mft: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    automation: {}
+    b2b: {}
+    b2bi: {}
+    commercial: {}
+    mft: {}
+    rhocp: {}
+    sterling: {}
+  description: A CASE to deploy IBM Sterling File Gateway helm charts on a container
+    platform
+  displayDescription: A CASE to deploy IBM Sterling File Gateway
+  displayName: IBM Sterling File Gateway CASE
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-sfg-icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_LI_en
+        name: licenseEn
+      ref: LA_LI_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+  name: ibm-sfg
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.6
+  webPage: https://www.ibm.com/docs/en/b2b-integrator/6.1.0
+created: 2022-05-23T15:43:00.26144676+0000
+digest: sha256:d7dd2c9841856edfb48fd898b52617c98fd3ff1c9a25246057661781662566b9
