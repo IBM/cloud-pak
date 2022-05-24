@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 6.6.2
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: CASE that deploys IBM Financial Crimes Insight Operator
+  displayDescription: IBM Financial Crimes Insight
+  displayName: IBM Financial Crimes Insight Operator
+  icons: []
+  licenses:
+    LA_en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Financial Crimes Insight
+        displayName: IBM Financial Crimes Insight
+        name: LA_en
+      ref: LICENSE
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Financial Crimes Insight
+        displayName: IBM Financial Crimes Insight
+        name: notices
+      ref: non_ibm_license
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-fci-platform-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 6.7.1
+  webPage: https://www.ibm.com
+created: 2022-05-24T13:25:37.52565266+0000
+digest: sha256:0f156c7ff592247161a349223e8ec1e0698cbba1c5cdaaa73b63a8cb91db6041
