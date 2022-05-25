@@ -56,3 +56,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.3.1-20220411.1732-ef8e44bdf
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:7204f26fdca019840516972627b079348e2295bfbb02dfddf0e6d8698246ef27
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.2-20220509.1845-14aa7e03c-linux.amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:742aba8a11f59c3010b0ac3eef1c41014c95bae6b968b63b8ee5389cf3cc6405
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.2-20220509.1845-14aa7e03c-linux.ppc64le
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:14aa7e03c226bdbeedb36829c55529cdc2effd9afa4a9d603e2883808756336d
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.2-20220509.1845-14aa7e03c

@@ -56,3 +56,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.3.1-20220411.1732-4a69e4ae9
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:c543b8a201bbae25eb30bd9b709026a525572216b956f663fe47d6a09bfc6a7d
+  image: cpopen/ibm-infrastructure-automation-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.2-20220509.1845-2bd0b3ec8-linux.amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:76e06385ad5725ef95a47f66f73b078c41e5f8fd4ffc54e8f6f0093acd3f8f85
+  image: cpopen/ibm-infrastructure-automation-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.2-20220509.1845-2bd0b3ec8-linux.ppc64le
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:2bd0b3ec84bf618a33eabe118cdc7255baaf77290cd5ce8953c8da3eccc04024
+  image: cpopen/ibm-infrastructure-automation-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.2-20220509.1845-2bd0b3ec8

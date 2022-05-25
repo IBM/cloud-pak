@@ -56,3 +56,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.3.1-20220411.1732-b0bd1599a
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:1a3bdb5f202e60aaacd0cd2fd68b12f62dc62f1cebcb6677f23a6ab491cc35f1
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.2-20220509.1845-ae9fd8f3d-linux.amd64
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:f5b4f669ce09857b05b3fc03b7aa6319c1dae6bcd12c67c0e33b264b19da034a
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.3.2-20220509.1845-ae9fd8f3d-linux.ppc64le
+- caseVersions:
+  - 1.0.2
+  category: catalog
+  digest: sha256:ae9fd8f3df7146a558a401ce5dc3136c1fff04115b4919268423dd443b9c071d
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.3.2-20220509.1845-ae9fd8f3d
