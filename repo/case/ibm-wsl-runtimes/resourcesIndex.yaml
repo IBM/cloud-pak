@@ -234,3 +234,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 4.0.80024
+- caseVersions:
+  - 1.0.9
+  category: catalog
+  digest: sha256:b2a5bf1557c62b3d73b3ba624c53ac7f38c0764ecfc053e03a8d6326d1f02c65
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.90006-amd64
+- caseVersions:
+  - 1.0.9
+  category: catalog
+  digest: sha256:fbdb05669f87294c789720f48d8120709a254f6b8d68edd51ff388d9b4b75871
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.90006-s390x
+- caseVersions:
+  - 1.0.9
+  category: catalog
+  digest: sha256:0f2554186e19bd86556dba29397d73826cc3651b9326e53de0ebd50f59361ec8
+  image: cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.90006
