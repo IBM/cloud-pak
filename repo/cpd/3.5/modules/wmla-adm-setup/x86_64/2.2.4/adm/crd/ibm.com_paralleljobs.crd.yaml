@@ -1,0 +1,131 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  generation: 2
+  name: paralleljobs.ibm.com
+  labels:
+    app.kubernetes.io/name: "ibm-spectrum-paralleljob"
+    app.kubernetes.io/managed-by: "paralleljobs.ibm.com"
+    app.kubernetes.io/instance: "paralleljob"
+spec:
+  group: ibm.com
+  names:
+    kind: ParallelJob
+    listKind: ParallelJobList
+    plural: paralleljobs
+    shortNames:
+    - pj
+    singular: paralleljob
+  scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
+  validation:
+    openAPIV3Schema:
+      properties:
+        spec:
+          properties:
+            description:
+              type: string
+            headerTask:
+              type: string
+            mpiOptions:
+              properties:
+                containedUser:
+                  type: boolean
+                dnsDisable:
+                  type: boolean
+                enable:
+                  type: boolean
+                hostfileDisable:
+                  type: boolean
+                kubexecDisable:
+                  type: boolean
+                serviceDisable:
+                  type: boolean
+                waiterImage:
+                  type: string
+              type: object
+            name:
+              type: string
+            placement:
+              properties:
+                sameTerm:
+                  properties:
+                    topologyKey:
+                      type: string
+                    topologyName:
+                      type: string
+                  type: object
+                spanTerms:
+                  items:
+                    properties:
+                      taskTile:
+                        type: integer
+                      topologyKey:
+                        type: string
+                    type: object
+                  type: array
+              type: object
+            priority:
+              type: integer
+            resizable:
+              type: boolean
+            schedulerName:
+              type: string
+            taskGroups:
+              items:
+                properties:
+                  metadata:
+                    properties:
+                      name:
+                        type: string
+                    type: object
+                  spec:
+                    properties:
+                      minReplica:
+                        type: integer
+                      placement:
+                        properties:
+                          sameTerm:
+                            properties:
+                              topologyKey:
+                                type: string
+                              topologyName:
+                                type: string
+                            type: object
+                          spanTerms:
+                            items:
+                              properties:
+                                taskTile:
+                                  type: integer
+                                topologyKey:
+                                  type: string
+                              type: object
+                            type: array
+                        type: object
+                      replica:
+                        type: integer
+                      template:
+                        properties:
+                          spec:
+                            properties:
+                              containers:
+                                items:
+                                  type: object
+                                type: array
+                              nodeSelector:
+                                properties:
+                                  beta.kubernetes.io:
+                                    type: string
+                                  beta.kubernetes.io/os:
+                                    type: string
+                                type: object
+                            type: object
+                        type: object
+                    type: object
+                type: object
+              type: array
+          type: object
+      type: object
