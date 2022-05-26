@@ -264,3 +264,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 4.0.8-488
+- caseVersions:
+  - 1.0.9
+  category: catalog
+  digest: sha256:6d12a9068ca86864ddac8befe144747edc34156ce084f7902c3efd5ef618eca0
+  image: cpopen/ibm-cpd-datarefinery-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.9-513-amd64
+- caseVersions:
+  - 1.0.9
+  category: catalog
+  digest: sha256:acdd17c1faf7bd294b93e26d7876e47e877508363ce44e2e7d3a2af22107085c
+  image: cpopen/ibm-cpd-datarefinery-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.9-513-s390x
+- caseVersions:
+  - 1.0.9
+  category: catalog
+  digest: sha256:7790c141e93d830057372f85047b283776642fd898e653f7e397f98658c857a1
+  image: cpopen/ibm-cpd-datarefinery-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.9-513
