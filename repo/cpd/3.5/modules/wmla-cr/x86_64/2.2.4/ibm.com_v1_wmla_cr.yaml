@@ -1,0 +1,426 @@
+apiVersion: spectrumcomputing.ibm.com/v1
+kind: Wmla
+metadata:
+  name: wmla
+  labels:
+    app.kubernetes.io/name: "ibm-spectrum-wmla"
+
+    # The following 2 labels are needed for CPD to obtain status of the Wmla resource.
+    # {{.releaseName}} is defined in the main.yaml. To track status, we must define these
+    # 2 labels for all resources created for this Wmla resource, and their values are
+    # defined as cpdReleaseName and cpdMangedBy variables below
+    app.kubernetes.io/instance: "{{.releaseName}}"
+    app.kubernetes.io/managed-by: "{{.wmlaCPDOverride.managedBy}}"
+
+    # These 2 labels are needed for CPD to show WMLA instance status in CPD GUI
+    icpdsupport/serviceInstanceId: "{{ .zenServiceInstanceId }}"
+    icpd-addon/status: "{{ .zenServiceInstanceId }}"
+
+annotations:
+  #ansible.sdk.operatorframework.io/reconcile-period: "0s"
+  ansible.sdk.operatorframework.io/verbosity: "4"
+spec:
+  # For every new instance of wmla, you need to change the following values.
+  # For 'arch' the value can be either 'x86_64' or 'ppc64le'. Run uname -m to find which one.
+  arch: "x86_64"
+
+  license:
+      accept: true
+  # WMLA version"
+  version: "2.2.4"
+  global:
+    dliVersion: "2.2.0"
+    # {{.registryPrefix}} will be inserted by CPD CR module
+    imageRegistry: "{{.registryPrefix}}"
+    #imagePullSecret: must be empty for CPD
+    imagePullSecret: ""
+    imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+    selfSignedCertEncryption: "RSA"
+    selfSignedCertNbits: 4096
+    selfSignedMd: "sha512"
+    defaultRunAsUser: ""
+    defaultRunAsGroup: ""
+    defaultFsGroup: ""
+    loggingRootPath: "/wmla-logging"
+    serviceAccountName: "cpd-editor-sa"
+    workloadServiceAccountName: "cpd-norbac-sa"
+    viewerServiceAccountName: "cpd-viewer-sa"
+    podSchedulerNamespace: {{.wmlaCPDOverride.podSchedulerNamespace}}
+    persistence:
+      useDynamicProvisioning: {{.wmlaCPDOverride.useDynamicProvisioning}}
+      storageClassName: "{{.storageclass}}"
+    pod:
+      tolerationKey: ""
+      tolerationValue: ""
+      tolerationEffect: NoExecute
+    security:
+        caSecretName: "{{.wmlaCPDOverride.caSecretName}}"
+
+  isOcp: true
+  #options for CP4D deployment , set isCp4dAddon to true and provide namespace of cp4d as input.
+  isCpdaddon: true
+
+  cpdReleaseName: "{{.releaseName}}"
+  cpdNamespace: "{{.zenControlPlaneNamespace}}"
+  cpdInstanceId: "{{.cloudpakInstanceId}}"
+  cpdManagedBy: "{{.wmlaCPDOverride.managedBy}}"
+
+  # These 2 labels are needed for all PODs created from this CR in order for CPD to show WMLA instance
+  # status in CPD GUI
+  CpdServiceInstanceId:  "{{ .zenServiceInstanceId }}"
+  CpdAddonStatus: "{{ .zenServiceInstanceId }}"
+
+  # These 3 labels are used for CPD serviceability. All pods must have these labels from
+  # addon.json. These values are available via the following variables
+  # icpdsupport/addOnType: "component"
+  # icpdsupport/addOnName: "WML-Accelerator"
+  # icpdsupport/app: "wml-accelerator"
+  CpdAddOnType: "component"
+  CpdAddOnName: "WML-Accelerator"
+  CpdApp: "wml-accelerator"
+  CpdAddOnId: "wml-accelerator"
+
+  createResourcePlan: true
+
+  # Enable/disable components, all enabled by default
+  components:
+  #  core: false
+  #  mss: false
+  #  notebook: false
+  #  edi: false
+  #  elk: false
+    podscheduler: false
+
+  common:
+    etcd:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.common.etcd.image.name}}:{{.wmlaCPDOverride.common.etcd.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.common.etcd.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.common.etcd.resources.limits.memory}}
+        requests:
+          cpu: 0.25
+          memory: 0.5Gi
+    ingress:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.common.ingress.image.name}}:{{.wmlaCPDOverride.common.ingress.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.common.ingress.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.common.ingress.resources.limits.memory}}
+  gui:
+    image: "{{.registryPrefix}}/{{.wmlaCPDOverride.gui.image.name}}:{{.wmlaCPDOverride.gui.image.tag}}"
+    resources:
+      requests:
+        cpu: 0.1
+        memory: 0.25Gi
+      limits:
+        cpu: {{.wmlaCPDOverride.gui.resources.limits.cpu}}
+        memory: {{.wmlaCPDOverride.gui.resources.limits.memory}}
+
+  core:
+    cluster:
+      type: cp4d
+      # Set enableNameSpaceNetworkPolicy to true if you want to create wmla namespace
+      # network policy. But you will also need to add this label to the wmla namespace
+      # enableWMLANameSpaceNetworkPolicy =true
+      enableNameSpaceNetworkPolicy: {{.wmlaCPDOverride.enableNameSpaceNetworkPolicy}}
+
+      # nodeport is not available for OCP
+      basePort: 30746
+      ascdDebugPort: 31311
+      # config an external etcd, the secret should have username and password
+      externalEtcd: false
+      externalEtcdEndpoint: ""
+      externalEtcdSecret: etcd-secret
+      mgmtNodesLabelKey: ""
+      securityContextConstraint: wmla-scc
+
+    # You can leave the rest of the values default, only change if needed
+    dli:
+      jwtPublicKey: ""
+
+    dlpd:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.core.dlpd.image.name}}:{{.wmlaCPDOverride.core.dlpd.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.core.dlpd.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.core.dlpd.resources.limits.memory}}
+        requests: 
+          cpu: 0.5
+          memory: 2Gi
+      existingcondapvc: ""
+
+    worker:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.core.worker.image.name}}:{{.wmlaCPDOverride.core.worker.image.tag}}"
+      imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+
+    conda:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.core.conda.image.name}}:{{.wmlaCPDOverride.core.conda.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.core.conda.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.core.conda.resources.limits.memory}}
+
+    grafana:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.core.grafana.image.name}}:{{.wmlaCPDOverride.core.grafana.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.core.grafana.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.core.grafana.resources.limits.memory}}
+
+    prometheus:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.core.prometheus.image.name}}:{{.wmlaCPDOverride.core.prometheus.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.core.prometheus.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.core.prometheus.resources.limits.memory}}
+        requests:
+          cpu: 10m
+          memory: 50Mi
+    
+    kubectlImage: "{{.registryPrefix}}/{{.wmlaCPDOverride.core.kubectl.image.name}}:{{.wmlaCPDOverride.core.kubectl.image.tag}}"
+    kube_proxy:
+      resources:
+        requests:
+          cpu: 0.125
+          memory: 0.2Gi
+        limits:
+          cpu: {{.wmlaCPDOverride.core.kubectl.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.core.kubectl.resources.limits.memory}}
+
+  #====================section for notebook ==================#
+  #===========================================================#
+  notebook:
+    # defaults file for jupyterhub
+    hub:
+      image:
+        name: "{{.registryPrefix}}/{{.wmlaCPDOverride.notebook.hub.image.name}}"
+        tag: {{.wmlaCPDOverride.notebook.hub.image.tag}}
+      imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+      resources:
+        requests:
+          cpu: 0.2
+          memory: 0.5Gi
+        limits:
+          cpu: {{.wmlaCPDOverride.notebook.hub.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.notebook.hub.resources.limits.memory}}
+
+    singleuser:
+      image:
+        name: "{{.registryPrefix}}/{{.wmlaCPDOverride.notebook.singleuser.image.name}}"
+        tag: {{.wmlaCPDOverride.notebook.singleuser.image.tag}}
+      imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+      resources:
+        requests:
+          cpu: 0.1
+          memory: 256M
+        limits:
+          cpu: 0.5
+          memory: 1024M
+
+    proxy:
+      chp:
+        image:
+          name: "{{.registryPrefix}}/{{.wmlaCPDOverride.notebook.proxy.image.name}}"
+          tag: {{.wmlaCPDOverride.notebook.proxy.image.tag}}
+        imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+        resources:
+          requests:
+            cpu: 0.25
+            memory: 0.5Gi
+          limits:
+            cpu: {{.wmlaCPDOverride.notebook.proxy.resources.limits.cpu}}
+            memory: {{.wmlaCPDOverride.notebook.proxy.resources.limits.memory}}
+
+    gateway:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.notebook.gateway.image.name}}:{{.wmlaCPDOverride.notebook.gateway.image.tag}}"
+      imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+      resources:
+        requests:
+          cpu: 0.25
+          memory: 1Gi
+        limits:
+          cpu: {{.wmlaCPDOverride.notebook.gateway.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.notebook.gateway.resources.limits.memory}}
+      kernel:
+          # The time (in seconds) the enterprise gateway will wait on its connection
+          # file socket waiting on return from a remote kernel launcher. Upon timeout,
+          # the operation will be retried immediately, until the overall time limit
+          # has been exceeded (poll_interval*max_poll_attempts).
+          socketTimeout: 10
+          pollInterval: 0.5
+          maxPollAttempts: 12
+          # Timeout for kernel launching in seconds.
+          launchTimeout: 120
+          # Timeout for an idle kernel before its culled in seconds.
+          cullIdleTimeout: 300
+
+      worker:
+        defaultImage: "{{.registryPrefix}}/{{.wmlaCPDOverride.notebook.gateway.worker.name}}:{{.wmlaCPDOverride.notebook.gateway.worker.tag}}"
+        imagePullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+
+  #=======================section for mss =============================#
+  #====================================================================#
+  mss:
+    msd:
+      nodePort: null
+      policy: "hpac"
+      logLevel: INFO
+      maxConcurrence: 10000
+      replicaCount: 1
+      msdkernel:
+        resourceNodeSelector: ""
+        scheduler: lsf
+      image:
+        repository: {{.wmlaCPDOverride.mss.msd.image.name}}
+        tag: {{.wmlaCPDOverride.mss.msd.image.tag}}
+        pullPolicy: {{.wmlaCPDOverride.common.imagePullPolicy}}
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.mss.msd.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.mss.msd.resources.limits.memory}}
+        requests:
+          cpu: 0.5
+          memory: 1Gi
+
+    infoservice:
+      fullname: wmla-infoservice
+      enabled: true
+      endpoint: "wmla-infoservice:8892"
+      image:
+        repository: {{.wmlaCPDOverride.mss.infoservice.image.name}}
+        tag: {{.wmlaCPDOverride.mss.infoservice.image.tag}}
+        pullPolicy: IfNotPresent
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.mss.infoservice.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.mss.infoservice.resources.limits.memory}}
+        requests:
+          cpu: 0.25
+          memory: 0.5Gi
+      service:
+        nodePort: null
+      persistence:
+        enabled: true
+      pvc:
+        accessMode: ReadWriteMany
+        existingClaimName: ""
+        storageCapacity: 4Gi
+
+    nginx:
+      endpoint: wmla-mss:9080
+      fullname: "wmla-mss"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.mss.nginx.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.mss.nginx.resources.limits.memory}}
+        requests:
+          cpu: 0.125
+          memory: 256Mi
+
+
+  #=====================section for elasticstack ========================#
+  #======================================================================#
+  elasticstack:
+    logstash:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.elasticstack.logstash.image.name}}:{{.wmlaCPDOverride.elasticstack.logstash.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.elasticstack.logstash.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.elasticstack.logstash.resources.limits.memory}}
+        requests:
+          cpu: 0.5
+          memory: 2Gi
+
+  #=======================section for edi =============================#
+  #====================================================================#
+
+  inference:
+    image:
+      repository: {{.wmlaCPDOverride.edi.imd.image.name}}
+      tag: {{.wmlaCPDOverride.edi.imd.image.tag}}
+    resources:
+      limits:
+        cpu: {{.wmlaCPDOverride.edi.imd.resources.limits.cpu}}
+        memory: {{.wmlaCPDOverride.edi.imd.resources.limits.memory}}
+      requests:
+        cpu: 0.2
+        memory: 256Mi
+    nginx:
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.edi.nginx.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.edi.nginx.resources.limits.memory}}
+        requests:
+          cpu: 0.125
+          memory: 256Mi
+    # [Dev] Uncommnet below when no EDI model repositor PV avaialbe
+    #persistence:
+    #  enabled: false
+
+    # Using wmla-etcd which created by wmla
+    etcd:
+      enabled: false
+
+    lbd:
+      image:
+        repository: {{.wmlaCPDOverride.edi.lbd.image.name}}
+        tag: {{.wmlaCPDOverride.edi.lbd.image.tag}}
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.edi.lbd.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.edi.lbd.resources.limits.memory}}
+        requests:
+          cpu: 0.2
+          memory: 256Mi
+    isd:
+      default_image: "{{.wmlaCPDOverride.edi.isd.image.name}}:{{.wmlaCPDOverride.edi.isd.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.edi.isd.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.edi.isd.resources.limits.memory}}
+        requests:
+          cpu: 0.2
+          memory: 256Mi
+    kernel:
+      default_image: "{{.wmlaCPDOverride.edi.kernel.image.name}}:{{.wmlaCPDOverride.edi.kernel.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.edi.kernel.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.edi.kernel.resources.limits.memory}}
+        requests:
+          cpu: 0.5
+          memory: 1024
+
+    # To disable edi submit jod through msd
+    # msd:
+    #  enabled: false
+
+  #=======================section for  auth ===========================#
+  #====================================================================#
+  keycloak:
+    core:
+      image: "{{.registryPrefix}}/wml-accelerator-keycloak:10.0.2-x86_64"
+      resources:
+        limits:
+          cpu: 0.5
+          memory: 1000Mi
+    rest:
+      image: "{{.registryPrefix}}/{{.wmlaCPDOverride.auth.image.name}}:{{.wmlaCPDOverride.auth.image.tag}}"
+      resources:
+        limits:
+          cpu: {{.wmlaCPDOverride.auth.resources.limits.cpu}}
+          memory: {{.wmlaCPDOverride.auth.resources.limits.memory}}
+
+  #=======================section for pod scheduler ===================#
+  #====================================================================#
+  podscheduler:
+   dynamicstorage: false
+   storageclass: "spectrum-pod-scheduler-ibm-lsf-project"
+   pvcsize: "10G"
+   placementincludelabel: ""
+   placementexcludelabel: "excludelsf"
+   placementtolerationname: ""
+   placementtolerationvalue: ""
+   placementtolerationeffect: NoExecute
+

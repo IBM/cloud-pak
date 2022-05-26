@@ -1,0 +1,19 @@
+# This file is in fileserver
+type: module
+category: helm-chart
+name: 002-wmla-instance-metadata # The name here just for information purpose, not for "product" reference, it should rely on file name
+version: 2.2.4
+registry-reference: base-registry
+chart: wmla-2.2.4.tgz
+images:
+- name: wml-instance
+  tag: v2.2.4-x86_64
+
+# For download to verify the chart file is correct, optional
+#md5:
+# in minutes, optional, this will wait the pods to all running from the installer, optional, default is 60 minutes
+timeout: 180
+# The name will be used for helm release name as <namespace-releaseName>, optional, default will be <namespace-name>
+releaseName: wmla
+installOverride: module_install.yaml
+upgradeOverride: module_upgrade.yaml

@@ -1,0 +1,31 @@
+type: module
+category: helm-chart
+name: 0022-wkc-base-prereqs
+version: 3.5.1816
+description: this is the wkc-base-prereqs to install
+registry-reference: base-registry
+installOverride: override.yaml
+upgradeOverride: override.yaml
+helmUpgradeForce: true
+forceUpgradeOnFailedRelease: true
+scale:
+- small.yaml
+- medium.yaml
+- large.yaml
+images:
+- name: rabbitmq
+  tag: 3.9.13-25-ppc64le
+- name: wkc-init-container
+  tag: 1.0.253-ppc64le
+- name: elasticsearch
+  tag: 7.10.2-220-ppc64le
+- name: couchdb3
+  tag: 3.2.1-156-ppc64le
+- name: redis
+  tag: 6.0.16-173-ppc64le
+- name: haproxy
+  tag: 2.2.22-84-ppc64le
+chart: wkc-base-prereqs-3.5.1816.tgz
+md5: 58f009387e31801f5794c27deb0a2042
+timeout: 60
+releaseName: 0022-wkc-base-prereqs

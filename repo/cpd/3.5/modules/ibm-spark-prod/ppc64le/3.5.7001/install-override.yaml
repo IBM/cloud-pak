@@ -1,0 +1,48 @@
+# Define override config
+global:
+  architecture: ppc64le
+spark:
+  image:
+    tag: "3.5.7001-ppc64le"
+    tag24: "2.4.8.v1.4-3.5.7-ppc64le"
+    tag30: "3.0.3.v1.4-3.5.7-ppc64le"
+dbSpec:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+cleanupCron:
+  requests:
+    cpu: 300m
+    memory: 512Mi
+  limits:
+    cpu: 300m
+    memory: 512Mi
+nginx:
+  requestCpu: "300m"
+  requestMemory: "512Mi"
+  limitCpu: "300m"
+  limitMemory: "512Mi"
+createSecretJob:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+helmRepo:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+dataplaneReg:
+  requests:
+    cpu: 500m
+    memory: 512Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
