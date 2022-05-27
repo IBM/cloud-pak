@@ -424,3 +424,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v21.2.11-20220525.044741-749018BD8
+- caseVersions:
+  - 3.2.9
+  category: catalog
+  digest: sha256:414b42e5869ef55ffd4b77ea061c865c8108baa6a81792369725e8f97e1eb5bc
+  image: cpopen/ibm-cp-automation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v21.3.9-20220525.023449-7F4231536-linux.amd64
+- caseVersions:
+  - 3.2.9
+  category: catalog
+  digest: sha256:f9f12cf81d0b569a371bbf94708561c269721c4f420ddba7cb1a21ad5d746f72
+  image: cpopen/ibm-cp-automation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v21.3.9-20220525.023449-7F4231536-linux.s390x
+- caseVersions:
+  - 3.2.9
+  category: catalog
+  digest: sha256:783a771ae289790cb8d5cc00d817c4b30d4b432939c619097b203ec13d144239
+  image: cpopen/ibm-cp-automation-catalog
+  platform:
+    imagetype: manifestList
+  tag: v21.3.9-20220525.023449-7F4231536
