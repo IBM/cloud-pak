@@ -19,6 +19,7 @@ images:
   - image: cp/etcd
   - image: cp/iaf-health-service
   - image: cp/iaf-ui-customization
+  - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/processmining-analytics
   - image: cp/processmining-bpa
   - image: cp/processmining-connectors
@@ -33,10 +34,20 @@ images:
   - image: cp/processmining-tm-taskprocessor
   - image: cp/processmining-tm-webapp
   - image: cp/processmining-usermanagement
+  - image: cp/redis-db-5.0.5
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-mgmt-5.0.5
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-proxy-5.0.5
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxylog-5.0.5
+  - image: cp/redis-proxylog-5.0.9
   - image: ibmcom/db2u-operator
   - image: ibmcom/iaf-core-operator
   - image: ibmcom/iaf-core-operator-bundle
   - image: ibmcom/ibm-automation-foundation-core-catalog
+  - image: ibmcom/ibm-cloud-databases-redis-operator
+  - image: ibmcom/ibm-cloud-databases-redis-operator-bundle
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-db2uoperator-bundle
   - image: ibmcom/ibm-db2uoperator-catalog
@@ -101,6 +112,7 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/iaf-core-operator
   - image: icr.io/cpopen/iaf-core-operator-bundle
   - image: icr.io/cpopen/ibm-auditlogging-operator
@@ -108,6 +120,9 @@ images:
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
   - image: icr.io/cpopen/ibm-cert-manager-operator
   - image: icr.io/cpopen/ibm-cert-manager-operator-bundle
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
@@ -118,6 +133,8 @@ images:
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator
   - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator-bundle
+  - image: icr.io/cpopen/ibm-db2uoperator-bundle
+  - image: icr.io/cpopen/ibm-db2uoperator-catalog
   - image: icr.io/cpopen/ibm-events-operator
   - image: icr.io/cpopen/ibm-events-operator-bundle
   - image: icr.io/cpopen/ibm-healthcheck-operator
@@ -148,6 +165,25 @@ images:
   - image: icr.io/cpopen/processmining-operator
   - image: icr.io/cpopen/processmining-operator-bundle
   - image: icr.io/cpopen/processmining-operator-catalog
+  - image: icr.io/db2u/db2u
+  - image: icr.io/db2u/db2u.auxiliary.auth
+  - image: icr.io/db2u/db2u.bigsql.cdh7
+  - image: icr.io/db2u/db2u.bigsql.mariadb
+  - image: icr.io/db2u/db2u.dv
+  - image: icr.io/db2u/db2u.dv.api
+  - image: icr.io/db2u/db2u.dv.caching
+  - image: icr.io/db2u/db2u.dv.utils
+  - image: icr.io/db2u/db2u.graph
+  - image: icr.io/db2u/db2u.hurricane
+  - image: icr.io/db2u/db2u.instdb
+  - image: icr.io/db2u/db2u.instdb.restricted
+  - image: icr.io/db2u/db2u.mustgather
+  - image: icr.io/db2u/db2u.qrep
+  - image: icr.io/db2u/db2u.rest
+  - image: icr.io/db2u/db2u.restricted
+  - image: icr.io/db2u/db2u.tools
+  - image: icr.io/db2u/db2u.update.image
+  - image: icr.io/db2u/etcd
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
   - image: quay.io/opencloudio/audit-policy-controller
