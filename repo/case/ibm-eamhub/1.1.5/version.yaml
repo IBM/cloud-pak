@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 4.3.3
+  catalogs:
+    framework: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Edge Application Manager
+  displayDescription: IBM Edge Application Manager
+  displayName: IBM Edge Application Manager
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/icp-logo-box.svg
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+      relatedImages: true
+  name: ibm-eamhub
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.1.5
+  webPage: https://www.ibm.com
+created: 2022-06-01T17:40:27.50062156+0000
+digest: sha256:06dfea14b95a098e79747c030f666a15ed94141d7f22435a8b1650d3979f56f6
