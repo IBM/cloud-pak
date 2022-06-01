@@ -24,6 +24,7 @@ images:
   - image: ibmcom/ibm-eamhub-operator
   - image: ibmcom/ibm-eamhub-operator-bundle
   - image: ibmcom/ibm-eamhub-operator-catalog
+  - image: icr.io/cpopen/ibm-common-service-catalog
   - image: icr.io/cpopen/ibm-eamhub-operator
   - image: icr.io/cpopen/ibm-eamhub-operator-bundle
   - image: icr.io/cpopen/ibm-eamhub-operator-catalog
@@ -51,10 +52,19 @@ images:
   - image: quay.io/opencloudio/ibm-common-service-operator-bundle
   - image: quay.io/opencloudio/ibm-commonui-operator
   - image: quay.io/opencloudio/ibm-commonui-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-bedrock-shim-config
+  - image: quay.io/opencloudio/ibm-crossplane-operator
+  - image: quay.io/opencloudio/ibm-crossplane-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-provider-ibm-cloud-operator
+  - image: quay.io/opencloudio/ibm-crossplane-provider-ibm-cloud-operator-bundle
+  - image: quay.io/opencloudio/ibm-crossplane-provider-kubernetes-operator
+  - image: quay.io/opencloudio/ibm-crossplane-provider-kubernetes-operator-bundle
   - image: quay.io/opencloudio/ibm-cs-upgrade-to3.4
   - image: quay.io/opencloudio/ibm-cs-webhook
   - image: quay.io/opencloudio/ibm-dashboard-data-collector
   - image: quay.io/opencloudio/ibm-events-kafka-2.6.0
+  - image: quay.io/opencloudio/ibm-events-kafka-2.6.1
+  - image: quay.io/opencloudio/ibm-events-kafka-2.7.0
   - image: quay.io/opencloudio/ibm-events-operator
   - image: quay.io/opencloudio/ibm-events-operator-bundle
   - image: quay.io/opencloudio/ibm-healthcheck-operator
@@ -89,6 +99,8 @@ images:
   - image: quay.io/opencloudio/ibm-platform-api-operator-bundle
   - image: quay.io/opencloudio/ibm-postgresql
   - image: quay.io/opencloudio/ibm-secretshare-operator
+  - image: quay.io/opencloudio/ibm-zen-cpp-operator
+  - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
   - image: quay.io/opencloudio/icp4data-nginx-repo
@@ -130,5 +142,6 @@ images:
   - image: quay.io/opencloudio/zen-core-api
   - image: quay.io/opencloudio/zen-data-sorcerer
   - image: quay.io/opencloudio/zen-iam-config
+  - image: quay.io/opencloudio/zen-influxdb-relay
   - image: quay.io/opencloudio/zen-metastoredb
   - image: quay.io/opencloudio/zen-watchdog
