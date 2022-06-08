@@ -1,0 +1,67 @@
+apiVersion: v1
+case:
+  appVersion: 6.0.3.0.02plus
+  catalogs:
+    deploy: {}
+    devops: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    mft: {}
+    rhocp: {}
+    ssp: {}
+  description: A CASE for Sterling Secure Proxy Engine on a containerized platform
+  displayDescription: A CASE for IBM Sterling Secure Proxy Engine
+  displayName: IBM Sterling Secure Proxy Engine CASE
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm_ssp.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: licenseEn
+      ref: LA_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+        name: notices
+      ref: notices
+  name: ibm-ssp-engine
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.2.4
+  webPage: https://www.ibm.com/docs/en/secure-proxy/6.0.3
+created: 2022-06-08T04:29:08.21148739+0000
+digest: sha256:63ffd58b778ffc12cce1da38dc729fac4a5069e3f07fd0b0258b0116e57f2bf7
