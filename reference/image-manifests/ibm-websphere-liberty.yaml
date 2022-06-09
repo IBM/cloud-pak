@@ -1,6 +1,10 @@
-source: ibm-websphere-liberty/ibm_cloud_pak/manifest.yaml
-description: WebSphere Liberty is a fast, dynamic, and easy-to-use Java application server.
+source: ibm-websphere-liberty-bundle/case/ibm-websphere-liberty/case.yaml
+description: "Deploy and manage applications running on Websphere Liberty"
 images:
   - image: alpine
   - image: ibmcom/websphere-liberty
+  - image: icr.io/appcafe/open-liberty/samples/getting-started
+  - image: icr.io/cpopen/websphere-liberty-operator
+  - image: icr.io/cpopen/websphere-liberty-operator-bundle
+  - image: icr.io/cpopen/websphere-liberty-operator-catalog
   - image: websphere-liberty
