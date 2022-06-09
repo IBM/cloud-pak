@@ -1,0 +1,40 @@
+apiVersion: v1
+case:
+  appVersion: 4.0.3.1
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: The case bundle for FTM IP
+  displayDescription: The case bundle for Financial Transaction Manager for Immediate
+    Payments
+  displayName: Financial Transaction Manager for Immediate Payments
+  icons: []
+  licenses:
+    ftmip:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Financial Transaction Manager for Immediate Payments
+          for Red Hat OpenShift v4.0.3
+        displayName: IBM Financial Transaction Manager for Immediate Payments for
+          Red Hat OpenShift v4.0.3
+      ref: LICENSE
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-FMGN-BNYLW9
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-ftm-ip
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 4.0.8
+  webPage: https://www.ibm.com
+created: 2022-06-09T15:13:54.92526829+0000
+digest: sha256:8200263df574733d01371ff33b6e0bed706ef089ff7617db33bb56d3f693efd1
