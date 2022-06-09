@@ -70,3 +70,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 2.0.7
+- caseVersions:
+  - 2.0.8
+  category: catalog
+  digest: sha256:8e0d455841960b1a3cd6363d2f4a4489d97e07a12fe9f905d3fe52a6321d410e
+  image: cpopen/ibm-user-data-services-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.0.8-amd64
+- caseVersions:
+  - 2.0.8
+  category: catalog
+  digest: sha256:d6ad3c1d759e181c8f33d64b7eb5875d7b96e9cb0cadcb0c8da0bd994bf91b79
+  image: cpopen/ibm-user-data-services-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 2.0.8-ppc64le
+- caseVersions:
+  - 2.0.8
+  category: catalog
+  digest: sha256:22d3fcbf6aa45cc14e194f66d042468c401667b6a35d141a75f9248c97c51c5a
+  image: cpopen/ibm-user-data-services-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.0.8
