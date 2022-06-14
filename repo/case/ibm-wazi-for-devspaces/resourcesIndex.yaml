@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:3ee33aa2c5d16738484be4986070e1f4307955af671c23c1d9e632ac11380397
+  image: cpopen/ibm-wazi-for-devspaces-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.1.0-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:9d6129a9f1c5e980cf75ca549eae159a0b8fa4affe976698c0af2109b70bb302
+  image: cpopen/ibm-wazi-for-devspaces-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 2.1.0-s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:93ad2466cb4315310be5766128cef744980ea0c7158ff0dc7356eb51e56e66a4
+  image: cpopen/ibm-wazi-for-devspaces-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.1.0
