@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 0.20.0
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This case provides an IBM Events Operator and example custom resource
+    which can be used to install instances of IBM Events Operator
+  displayDescription: ""
+  displayName: This case provides an IBM Events Operator and example custom resources
+    which can be used to install instances of IBM Events Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-events-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 4.2.0
+  webPage: https://github.ibm.com/IBMPrivateCloud/BedrockServices/blob/master/AdopterGuides/EventsAdoptionGuide.md
+created: 2022-06-22T19:50:40.38568237+0000
+digest: sha256:7dc846de35bde4f8062afc41d5d9390d0eda43d58525e94f5ee12bed65de6da5
