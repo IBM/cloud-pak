@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 5.5.9
+  catalogs:
+    cloudpak: {}
+    framework: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    opensource: {}
+  description: A CASE for an operator which deploys fncm
+  displayDescription: A CASE for an operator which deploys fncm
+  displayName: FNCM CASE
+  icons:
+  - mediaType: image/svg
+    url: https://cache.globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/cache/4658fae917a5b2597c29bdb896465773-public/icp4automation.svg
+  licenses:
+    fncm:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM FileNet Content Manager License
+        displayName: IBM FileNet Content Manager
+      ref: fncm_License_en
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-cp-fncm-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.5.0
+  webPage: https://www.ibm.com
+created: 2022-06-24T14:16:13.81608323+0000
+digest: sha256:1874fb54c53b0d199b393d41c22572019498959b64bcada60358ce9435ef6047
