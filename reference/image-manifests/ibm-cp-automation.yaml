@@ -130,6 +130,7 @@ images:
   - image: cp/cp4a/iadp/extraction
   - image: cp/cp4a/iadp/gitgateway
   - image: cp/cp4a/iadp/mongo
+  - image: cp/cp4a/iadp/mongo_adp
   - image: cp/cp4a/iadp/natural_language_extractor
   - image: cp/cp4a/iadp/processing
   - image: cp/cp4a/iadp/rabbitmq
@@ -416,7 +417,15 @@ images:
   - image: icr.io/cpopen/ibm-zen-cpp-operator-bundle
   - image: icr.io/cpopen/ibm-zen-operator
   - image: icr.io/cpopen/ibm-zen-operator-bundle
+  - image: icr.io/cpopen/icp4a-content-operator
+  - image: icr.io/cpopen/icp4a-content-operator-bundle
+  - image: icr.io/cpopen/icp4a-foundation-operator-bundle
+  - image: icr.io/cpopen/icp4a-operator
   - image: icr.io/cpopen/icp4a-operator-bundle
+  - image: icr.io/cpopen/icp4a-pfs-operator
+  - image: icr.io/cpopen/icp4a-pfs-operator-bundle
+  - image: icr.io/cpopen/icp4a-workflow-ps-operator
+  - image: icr.io/cpopen/icp4a-workflow-ps-operator-bundle
   - image: icr.io/cpopen/odlm
   - image: icr.io/cpopen/opencontent-etcd-operator
   - image: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle
