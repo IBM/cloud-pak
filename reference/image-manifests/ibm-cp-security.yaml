@@ -9,6 +9,7 @@ images:
   - image: cp/cp4s/cp4s-backup-restore
   - image: cp/cp4s/cp4s-car-connector-config
   - image: cp/cp4s/cp4s-car-frontend-ui
+  - image: cp/cp4s/cp4s-couch-init
   - image: cp/cp4s/cp4s-extension
   - image: cp/cp4s/cp4s-stolon
   - image: cp/cp4s/foundations/busybox
@@ -65,6 +66,7 @@ images:
   - image: cp/cp4s/isc-cases-activemq
   - image: cp/cp4s/isc-cases-activemq-logging-sidecar
   - image: cp/cp4s/isc-cases-application
+  - image: cp/cp4s/isc-cases-co3postgres-orchestrator
   - image: cp/cp4s/isc-cases-database-init
   - image: cp/cp4s/isc-cases-database-upgrade
   - image: cp/cp4s/isc-cases-data-migration
@@ -72,8 +74,10 @@ images:
   - image: cp/cp4s/isc-cases-event-adapter
   - image: cp/cp4s/isc-cases-event-handler
   - image: cp/cp4s/isc-cases-globalcases
+  - image: cp/cp4s/isc-cases-jvm-dump-manager
   - image: cp/cp4s/isc-cases-logging-sidecar
   - image: cp/cp4s/isc-cases-operator
+  - image: cp/cp4s/isc-cases-orchestrator
   - image: cp/cp4s/isc-cases-python3-scripting
   - image: cp/cp4s/isc-cases-resutil
   - image: cp/cp4s/isc-cases-scripting
@@ -114,6 +118,7 @@ images:
   - image: cp/cp4s/isc-tis-rfi
   - image: cp/cp4s/isc-tis-score-controller
   - image: cp/cp4s/isc-udi-changelog-cronjob
+  - image: cp/cp4s/isc-udi-cleanup-cronjob
   - image: cp/cp4s/isc-udi-edge-service
   - image: cp/cp4s/isc-udi-encrypt-cronjob
   - image: cp/cp4s/isc-udi-endpoint
@@ -602,6 +607,7 @@ images:
   - image: icr.io/ibm-cp-security/apicurio-registry-mem
   - image: icr.io/ibm-cp-security/apicurio-registry-sql
   - image: icr.io/ibm-cp-security/busybox
+  - image: icr.io/ibm-cp-security/cp4saas-iam-bridge
   - image: icr.io/ibm-cp-security/cp-serviceability
   - image: icr.io/ibm-cp-security/isc-car-connector-atp
   - image: icr.io/ibm-cp-security/isc-car-connector-aws
