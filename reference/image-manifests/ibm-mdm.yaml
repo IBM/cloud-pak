@@ -52,6 +52,8 @@ images:
   - image: cp/cpd/mdm-job
   - image: cp/cpd/mdm-matching
   - image: cp/cpd/mdm-model
+  - image: cp/cpd/mdm-post-restore-job
+  - image: cp/cpd/mdm-shutdown-job
   - image: cp/cpd/mdm-spark-job
   - image: cp/cpd/mdm-spark-sample-job
   - image: cp/cpd/mdm-tuning-job
@@ -76,6 +78,7 @@ images:
   - image: cp/cpd/wdp-connect-flight
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wkc-init-container
+  - image: cp/cpd/wkc-init-container-ccs
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-main
@@ -126,6 +129,7 @@ images:
   - image: icr.io/cpopen/fdb-apple-operator-bundle
   - image: icr.io/cpopen/fdb-ibm-operator
   - image: icr.io/cpopen/fdb-ibm-operator-bundle
+  - image: icr.io/cpopen/fdb-operator-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
