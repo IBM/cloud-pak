@@ -1,0 +1,88 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Informix microservice into K8s cluster
+  displayDescription: ""
+  displayName: IBM Informix Operator Bundle
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
+  licenses:
+    li_en_aee:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Advanced Enterprise Edition Cartridge for
+          IBM Cloud Pak for Data v14.10
+        displayName: LI_en_AEE
+        name: li_en_aee
+      ref: LI_en_AEE
+    li_en_aee_modernization:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Advanced Enterprise Edition Modernization
+          v14.10
+        displayName: LI_en_AEE_Modernization
+        name: li_en_aee_modernization
+      ref: LI_en_AEE_Modernization
+    li_en_ee:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Enterprise Edition Cartridge for IBM Cloud
+          Pak for Data v14.10
+        displayName: LI_en_EE
+        name: li_en_ee
+      ref: LI_en_EE
+    li_en_ee_modernization:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Enterprise Edition Modernization v14.10
+        displayName: LI_en_EE_Modernization
+        name: li_en_ee_modernization
+      ref: LI_en_EE_Modernization
+    li_en_we:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Workgroup Edition Cartridge for IBM Cloud
+          Pak for Data v14.10
+        displayName: LI_en_WE
+        name: li_en_we
+      ref: LI_en_WE
+    li_en_we_modernization:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Workgroup Edition Modernization v14.10
+        displayName: LI_en_WE_Modernization
+        name: li_en_we_modernization
+      ref: LI_en_WE_Modernization
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-informix-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 4.5.0
+  webPage: https://www.ibm.com
+created: 2022-06-29T16:29:30.05793066+0000
+digest: sha256:ecf42a179f1544867308d45dfc04703c52178c2250a3bac2c9095a10a341a4c5
