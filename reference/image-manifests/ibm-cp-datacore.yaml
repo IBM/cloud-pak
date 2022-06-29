@@ -95,9 +95,21 @@ images:
   - image: cp/cpd/dp-api
   - image: cp/cpd/dp-privacyprocessor
   - image: cp/cpd/dp-subset
+  - image: cp/cpd/dp-transform
   - image: cp/cpd/dp-ui
   - image: cp/cpd/drift
+  - image: cp/cpd/ds-api-doc
+  - image: cp/cpd/ds-assets
+  - image: cp/cpd/ds-canvas
+  - image: cp/cpd/ds-cas-lite
+  - image: cp/cpd/ds-codegen
   - image: cp/cpd/ds-ent-entitlement-image
+  - image: cp/cpd/ds-flows
+  - image: cp/cpd/ds-migration
+  - image: cp/cpd/ds-nginx-proxy
+  - image: cp/cpd/ds-px-compute
+  - image: cp/cpd/ds-px-runtime
+  - image: cp/cpd/ds-runtime
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/dv-addon
   - image: cp/cpd/dv-api
@@ -238,9 +250,16 @@ images:
   - image: cp/cpd/kafka-ubi8-x86_64
   - image: cp/cpd/kafka-x86_64
   - image: cp/cpd/knol
+  - image: cp/cpd/knowledge-accelerators
   - image: cp/cpd/kubectlclient
   - image: cp/cpd/kubectlclient-ppc-ubi
   - image: cp/cpd/kubectlclient-ubi
+  - image: cp/cpd/manta-dataflow
+  - image: cp/cpd/manta-dataflow-init-auth
+  - image: cp/cpd/manta-dataflow-init-base
+  - image: cp/cpd/manta-dataflow-init-conf
+  - image: cp/cpd/manta-dataflow-init-encryption
+  - image: cp/cpd/manta-keycloak
   - image: cp/cpd/mdc-addon-install
   - image: cp/cpd/mdc-aspera-server
   - image: cp/cpd/mdc-cassandra
@@ -260,6 +279,8 @@ images:
   - image: cp/cpd/mdm-job
   - image: cp/cpd/mdm-matching
   - image: cp/cpd/mdm-model
+  - image: cp/cpd/mdm-post-restore-job
+  - image: cp/cpd/mdm-shutdown-job
   - image: cp/cpd/mdm-spark-job
   - image: cp/cpd/mdm-spark-sample-job
   - image: cp/cpd/mdm-tuning-job
@@ -371,6 +392,7 @@ images:
   - image: cp/cpd/streams-service-provider
   - image: cp/cpd/streams-spss-install-el7
   - image: cp/cpd/streams-sws-el7
+  - image: cp/cpd/term-assignment-service
   - image: cp/cpd/unified-console
   - image: cp/cpd/unified-console-influxdb
   - image: cp/cpd/unified-console-utils-api
@@ -382,6 +404,7 @@ images:
   - image: cp/cpd/wdp-dataprep
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-db2
+  - image: cp/cpd/wdp-kg-ingestion-rest
   - image: cp/cpd/wdp-lineage
   - image: cp/cpd/wdp-notebooks-api
   - image: cp/cpd/wdp-policy-service
@@ -391,10 +414,18 @@ images:
   - image: cp/cpd/wdp-search
   - image: cp/cpd/wdp-shaper
   - image: cp/cpd/wkc-bi-data-service
+  - image: cp/cpd/wkc-data-lineage-rest
+  - image: cp/cpd/wkc-data-quality-ui
+  - image: cp/cpd/wkc-data-rules
+  - image: cp/cpd/wkc-factsheet-service
+  - image: cp/cpd/wkc-factsheets-ui
   - image: cp/cpd/wkc-glossary-service
   - image: cp/cpd/wkc-gov-ui
   - image: cp/cpd/wkc-init-container
   - image: cp/cpd/wkc-init-container-ccs
+  - image: cp/cpd/wkc-init-container-iis
+  - image: cp/cpd/wkc-init-container-wkc
+  - image: cp/cpd/wkc-mde-service-manager
   - image: cp/cpd/wkc-metadata-imports-ui
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wkc-ugconfig
@@ -695,10 +726,14 @@ images:
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
   - image: icr.io/cpopen/db2u-operator
+  - image: icr.io/cpopen/ds-ent-operator
+  - image: icr.io/cpopen/ds-ent-operator-bundle
+  - image: icr.io/cpopen/ds-ent-operator-catalog
   - image: icr.io/cpopen/fdb-apple-operator
   - image: icr.io/cpopen/fdb-apple-operator-bundle
   - image: icr.io/cpopen/fdb-ibm-operator
   - image: icr.io/cpopen/fdb-ibm-operator-bundle
+  - image: icr.io/cpopen/fdb-operator-catalog
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator
@@ -820,6 +855,9 @@ images:
   - image: icr.io/cpopen/ibm-zen-cpp-operator-bundle
   - image: icr.io/cpopen/ibm-zen-operator
   - image: icr.io/cpopen/ibm-zen-operator-bundle
+  - image: icr.io/cpopen/manta-adl-operator
+  - image: icr.io/cpopen/manta-adl-operator-bundle
+  - image: icr.io/cpopen/manta-adl-operator-catalog
   - image: icr.io/cpopen/mdm-operator
   - image: icr.io/cpopen/mdm-operator-bundle
   - image: icr.io/cpopen/mdm-operator-catalog
@@ -849,6 +887,7 @@ images:
   - image: icr.io/db2u/db2u.restricted
   - image: icr.io/db2u/db2u.tools
   - image: icr.io/db2u/db2u.update.image
+  - image: icr.io/db2u/db2u.watsonquery
   - image: icr.io/db2u/etcd
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector

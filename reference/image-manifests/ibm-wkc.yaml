@@ -17,6 +17,18 @@ images:
   - image: cp/cpd/dataconn-engine-spark-cluster
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dc-main
+  - image: cp/cpd/dp-transform
+  - image: cp/cpd/ds-api-doc
+  - image: cp/cpd/ds-assets
+  - image: cp/cpd/ds-canvas
+  - image: cp/cpd/ds-cas-lite
+  - image: cp/cpd/ds-codegen
+  - image: cp/cpd/ds-flows
+  - image: cp/cpd/ds-migration
+  - image: cp/cpd/ds-nginx-proxy
+  - image: cp/cpd/ds-px-compute
+  - image: cp/cpd/ds-px-runtime
+  - image: cp/cpd/ds-runtime
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
   - image: cp/cpd/environments
@@ -25,6 +37,10 @@ images:
   - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
+  - image: cp/cpd/fdb-apple-foundationdb
+  - image: cp/cpd/fdb-apple-foundationdb-sidecar
+  - image: cp/cpd/fdb-ibm-backup-agent
+  - image: cp/cpd/fdb-ibm-restore-agent
   - image: cp/cpd/finley
   - image: cp/cpd/finley-public
   - image: cp/cpd/gov-admin-ui
@@ -53,6 +69,13 @@ images:
   - image: cp/cpd/kafka-ubi8-x86_64
   - image: cp/cpd/kafka-x86_64
   - image: cp/cpd/knol
+  - image: cp/cpd/knowledge-accelerators
+  - image: cp/cpd/manta-dataflow
+  - image: cp/cpd/manta-dataflow-init-auth
+  - image: cp/cpd/manta-dataflow-init-base
+  - image: cp/cpd/manta-dataflow-init-conf
+  - image: cp/cpd/manta-dataflow-init-encryption
+  - image: cp/cpd/manta-keycloak
   - image: cp/cpd/metadata-api-server-x86_64
   - image: cp/cpd/metadata-discovery
   - image: cp/cpd/metadata-engine-x86_64
@@ -85,6 +108,15 @@ images:
   - image: cp/cpd/solr-x86_64
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/spark-hb-control-plane
+  - image: cp/cpd/spark-hb-deployer-agent
+  - image: cp/cpd/spark-hb-helm-repo
+  - image: cp/cpd/spark-hb-jkg
+  - image: cp/cpd/spark-hb-nginx
+  - image: cp/cpd/spark-hb-python
+  - image: cp/cpd/spark-hb-rsyslog-sidecar
+  - image: cp/cpd/spark-hb-truststore-util
+  - image: cp/cpd/term-assignment-service
   - image: cp/cpd/wdp-activities
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
@@ -92,6 +124,7 @@ images:
   - image: cp/cpd/wdp-dataprep
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-db2
+  - image: cp/cpd/wdp-kg-ingestion-rest
   - image: cp/cpd/wdp-lineage
   - image: cp/cpd/wdp-policy-service
   - image: cp/cpd/wdp-profiling
@@ -100,10 +133,18 @@ images:
   - image: cp/cpd/wdp-search
   - image: cp/cpd/wdp-shaper
   - image: cp/cpd/wkc-bi-data-service
+  - image: cp/cpd/wkc-data-lineage-rest
+  - image: cp/cpd/wkc-data-quality-ui
+  - image: cp/cpd/wkc-data-rules
+  - image: cp/cpd/wkc-factsheet-service
+  - image: cp/cpd/wkc-factsheets-ui
   - image: cp/cpd/wkc-glossary-service
   - image: cp/cpd/wkc-gov-ui
   - image: cp/cpd/wkc-init-container
   - image: cp/cpd/wkc-init-container-ccs
+  - image: cp/cpd/wkc-init-container-iis
+  - image: cp/cpd/wkc-init-container-wkc
+  - image: cp/cpd/wkc-mde-service-manager
   - image: cp/cpd/wkc-metadata-imports-ui
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wkc-ugconfig
@@ -139,6 +180,17 @@ images:
   - image: ibmcom/ibm-db2uoperator-bundle
   - image: ibmcom/ibm-db2uoperator-catalog
   - image: icr.io/cpopen/db2u-operator
+  - image: icr.io/cpopen/ds-ent-operator
+  - image: icr.io/cpopen/ds-ent-operator-bundle
+  - image: icr.io/cpopen/ds-ent-operator-catalog
+  - image: icr.io/cpopen/fdb-apple-operator
+  - image: icr.io/cpopen/fdb-apple-operator-bundle
+  - image: icr.io/cpopen/fdb-ibm-operator
+  - image: icr.io/cpopen/fdb-ibm-operator-bundle
+  - image: icr.io/cpopen/fdb-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator
+  - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
@@ -156,6 +208,9 @@ images:
   - image: icr.io/cpopen/ibm-db2aaservice-cp4d-operator-catalog
   - image: icr.io/cpopen/ibm-db2uoperator-bundle
   - image: icr.io/cpopen/ibm-db2uoperator-catalog
+  - image: icr.io/cpopen/manta-adl-operator
+  - image: icr.io/cpopen/manta-adl-operator-bundle
+  - image: icr.io/cpopen/manta-adl-operator-catalog
   - image: icr.io/db2u/db2u
   - image: icr.io/db2u/db2u.auxiliary.auth
   - image: icr.io/db2u/db2u.bigsql.cdh7
