@@ -4,6 +4,8 @@ images:
   - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/postgresql
   - image: cp/cpd/wd-postgres-license
+  - image: cp/opencontent-audit-webhook
+  - image: cp/opencontent-fluentd
   - image: cp/opencontent-icp-cert-gen-1
   - image: cp/opencontent-minio
   - image: cp/opencontent-minio-client
@@ -99,6 +101,9 @@ images:
   - image: cp/watson-speech/zh-cn-broadbandmodel
   - image: cp/watson-speech/zh-cn-narrowbandmodel
   - image: cp/watson-speech/zh-cn-telephony
+  - image: icr.io/cpopen/ibm-auditwebhook-operator
+  - image: icr.io/cpopen/ibm-auditwebhook-operator-bundle
+  - image: icr.io/cpopen/ibm-auditwebhook-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-bundle
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-catalog
   - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
