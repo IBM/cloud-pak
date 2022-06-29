@@ -18,6 +18,7 @@ images:
   - image: cp/cp4waiops/aiops-api
   - image: cp/cp4waiops/aiops-application-details-ui
   - image: cp/cp4waiops/aiops-base-ui
+  - image: cp/cp4waiops/aiops-dashboard-ui
   - image: cp/cp4waiops/aiops-operators-catalog
   - image: cp/cp4waiops/ai-platform-api-server
   - image: cp/cp4waiops/alert-details-service
@@ -33,6 +34,7 @@ images:
   - image: cp/cp4waiops/chatops-orchestrator
   - image: cp/cp4waiops/chatops-slack-integrator
   - image: cp/cp4waiops/chatops-teams-integrator
+  - image: cp/cp4waiops/common-datarouting
   - image: cp/cp4waiops/common-elastic-curator
   - image: cp/cp4waiops/connection-manager
   - image: cp/cp4waiops/connector-manager
@@ -77,9 +79,12 @@ images:
   - image: cp/cp4waiops/http-wait-initcontainer
   - image: cp/cp4waiops/ibm-aiops-bridge
   - image: cp/cp4waiops/ibm-aiops-connector-orchestrator
+  - image: cp/cp4waiops/ibm-aiops-cr-api
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-7.10.2
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-operator
   - image: cp/cp4waiops/ibm-consul
+  - image: cp/cp4waiops/ibm-grpc-appd-connector
+  - image: cp/cp4waiops/ibm-grpc-dyna-connector
   - image: cp/cp4waiops/ibm-grpc-github-connector
   - image: cp/cp4waiops/ibm-grpc-instana-connector
   - image: cp/cp4waiops/ibm-grpc-snow-connector
@@ -118,6 +123,7 @@ images:
   - image: cp/cp4waiops/nasm-appdynamics-observer
   - image: cp/cp4waiops/nasm-aws-observer
   - image: cp/cp4waiops/nasm-azure-observer
+  - image: cp/cp4waiops/nasm-bigcloudfabric-observer
   - image: cp/cp4waiops/nasm-bigfixinventory-observer
   - image: cp/cp4waiops/nasm-cienablueplanet-observer
   - image: cp/cp4waiops/nasm-ciscoaci-observer
@@ -129,6 +135,7 @@ images:
   - image: cp/cp4waiops/nasm-file-observer
   - image: cp/cp4waiops/nasm-github-observer
   - image: cp/cp4waiops/nasm-googlecloud-observer
+  - image: cp/cp4waiops/nasm-hpnfvd-observer
   - image: cp/cp4waiops/nasm-ibmcloud-observer
   - image: cp/cp4waiops/nasm-itnm-observer
   - image: cp/cp4waiops/nasm-jenkins-observer
@@ -156,6 +163,7 @@ images:
   - image: cp/cp4waiops/nasm-openstack-observer
   - image: cp/cp4waiops/nasm-rancher-observer
   - image: cp/cp4waiops/nasm-rest-observer
+  - image: cp/cp4waiops/nasm-sdconap-observer
   - image: cp/cp4waiops/nasm-search-service
   - image: cp/cp4waiops/nasm-servicenow-observer
   - image: cp/cp4waiops/nasm-status-service
@@ -163,10 +171,12 @@ images:
   - image: cp/cp4waiops/nasm-topology-service
   - image: cp/cp4waiops/nasm-ubi-base-layer
   - image: cp/cp4waiops/nasm-ui-api
+  - image: cp/cp4waiops/nasm-viptela-observer
   - image: cp/cp4waiops/nasm-vmvcenter-observer
   - image: cp/cp4waiops/nasm-vmwarensx-observer
   - image: cp/cp4waiops/nasm-zabbix-observer
   - image: cp/cp4waiops/netcool-configuration-share-ee
+  - image: cp/cp4waiops/netcool-connector
   - image: cp/cp4waiops/netcool-db2ese-ee
   - image: cp/cp4waiops/netcool-db2rtcl-ee
   - image: cp/cp4waiops/netcool-gateway-cem
@@ -188,6 +198,7 @@ images:
   - image: cp/cp4waiops/noi-backuprestore-service
   - image: cp/cp4waiops/noi-metric-action-service
   - image: cp/cp4waiops/noi-metric-trigger-service
+  - image: cp/cp4waiops/oob-recommended-actions
   - image: cp/cp4waiops/opencontent-common-utils
   - image: cp/cp4waiops/opencontent-icp-cert-gen-1
   - image: cp/cp4waiops/opencontent-minio
@@ -211,6 +222,9 @@ images:
   - image: cp/cp4waiops/ui-api
   - image: cp/cp4waiops/ui-content
   - image: cp/cp4waiops/zookeeper
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
   - image: cp/iaf-ai-pipeline-ctrl
   - image: cp/iaf-ai-pipeline-step
   - image: cp/iaf-apicurio-registry
@@ -383,6 +397,9 @@ images:
   - image: icr.io/cpopen/ibm-cp4waiops-watson-aiops-ui-operator
   - image: icr.io/cpopen/ibm-cp4waiops-watson-aiops-ui-operator-bundle
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
