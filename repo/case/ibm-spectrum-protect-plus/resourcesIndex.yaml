@@ -140,3 +140,49 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 10.110.2-20220425e
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:7faf7ec5dac6241c014817b2060a445b9de01f08b3795e4da2e0b83c81631578
+  image: cpopen/ibmsppc-operator-catalog-ocp
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 10.111.0-20220616a-amd64
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:d4e837c36657ed0f07731a27373e82d6a3dd251d3e1b2ce68dd6862b9098c0f1
+  image: cpopen/ibmsppc-operator-catalog-ocp
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 10.111.0-20220616a-s390x
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:6eee69eae0485c25232b7b2c149ed270149f0e017f41549c7a47e4edfabe38d4
+  image: cpopen/ibmsppc-operator-catalog-ocp
+  platform:
+    imagetype: manifestList
+  tag: 10.111.0-20220616a
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:9c36e5ddfb2265f621d3bdd3306b15f307787c73d996b5de066b55d85439f695
+  image: cpopen/ibmsppc-operator-catalog-k8s
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 10.111.0-20220616a-amd64
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:3f8f11c2517fd5ef1230c6cb2c3db86c19db23a748edbd68936636b66592b7f5
+  image: cpopen/ibmsppc-operator-catalog-k8s
+  platform:
+    imagetype: manifestList
+  tag: 10.111.0-20220616a

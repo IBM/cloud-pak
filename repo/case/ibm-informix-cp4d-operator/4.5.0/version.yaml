@@ -1,0 +1,33 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Informix into IBM Cloud Pak for Data
+  displayDescription: ""
+  displayName: IBM Informix CP4D Operator Bundle
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-informix-cp4d-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 4.5.0
+  webPage: https://www.ibm.com
+created: 2022-06-29T14:50:13.39120208+0000
+digest: sha256:540272b09efc73eeae30ee41e097146db933220950819454c8741412447cf0da

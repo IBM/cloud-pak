@@ -1,2 +1,12 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 1.8.0
+  category: catalog
+  digest: sha256:1aa67a4b3b8aa3fc124a5f2b45c69cda8ce819bdabf2e75cd073303777b51f0c
+  image: cpopen/ibm-cpd-dv-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v1.8.0-172

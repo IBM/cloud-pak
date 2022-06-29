@@ -1,2 +1,12 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 7.3.0
+  category: catalog
+  digest: sha256:3128c1f8bfac0096ee671b53c64deb5e7726dfe0d7c0274441bf6f11eff708f6
+  image: cpopen/ibm-cpd-bigsql-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v1.8.0-172
