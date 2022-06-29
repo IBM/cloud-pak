@@ -1,0 +1,77 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.0
+  catalogs:
+    ai: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+  displayDescription: IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+  displayName: IBM Watson Discovery Cartridge for IBM Cloud Pak for Data
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: https://wbi.mybluemix.net/icons/discovery.svg
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    discovery-license-agreement:
+      mediaType: application/text
+      metadata:
+        displayDescription: Licenses Agreement - IBM Watson Discovery Cartridge for
+          IBM Cloud Pak for Data
+        displayName: Licenses Agreement - IBM Watson Discovery Cartridge for IBM Cloud
+          Pak for Data
+      ref: LA_en
+    discovery-license-information:
+      mediaType: application/text
+      metadata:
+        displayDescription: Licenses Information - IBM Watson Discovery Cartridge
+          for IBM Cloud Pak for Data
+        displayName: Licenses Information - IBM Watson Discovery Cartridge for IBM
+          Cloud Pak for Data
+      ref: LI_en
+    discovery-non-ibm-license:
+      mediaType: application/text
+      metadata:
+        displayDescription: Non IBM License - IBM Watson Discovery Cartridge for IBM
+          Cloud Pak for Data
+        displayName: Non IBM License - IBM Watson Discovery Cartridge for IBM Cloud
+          Pak for Data
+      ref: NON_IBM_LICENSE
+    discovery-notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: NOTICES - IBM Watson Discovery Cartridge for IBM Cloud
+          Pak for Data
+        displayName: NOTICES - IBM Watson Discovery Cartridge for IBM Cloud Pak for
+          Data
+      ref: NOTICES
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watson-discovery
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      amazon: {}
+      google: {}
+      ibm: {}
+      microsoft: {}
+  version: 4.5.0
+  webPage: https://cloud.ibm.com/docs/discovery-data
+created: 2022-06-29T03:17:46.06222791+0000
+digest: sha256:b72f018bb013a93ca525de4225aea57ce1b31da2303925f2a0792cda96b5c3a3

@@ -1,0 +1,58 @@
+apiVersion: v1
+case:
+  appVersion: 2.5.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Db2 for z/OS Data Gate
+  displayDescription: The CASE of IBM Db2 for z/OS Data Gate
+  displayName: IBM Db2 for z/OS Data Gate
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/IBM-Datagate-icon.png
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.5License.txt
+    cp4data-standard:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.5License.txt
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-datagate-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 4.5.0+20220615.045418.1030
+  webPage: https://www.ibm.com
+created: 2022-06-29T03:06:36.86222791+0000
+digest: sha256:10296272ba7a08ad390fb65003beaf4b099563a39ef4f5aebe9912643f2e9010
