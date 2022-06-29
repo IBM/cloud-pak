@@ -74,3 +74,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.3.2-20220511.0601-bd9a1cff9
+- caseVersions:
+  - 2.1.0
+  category: catalog
+  digest: sha256:989cd1a235ffc523f2982c9c19e5d1cf8ff82f909392bf983acc19f604ae536a
+  image: cpopen/ibm-aiops-ir-core-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.0-20220617.1434-06db99c96-linux.amd64
+- caseVersions:
+  - 2.1.0
+  category: catalog
+  digest: sha256:06db99c96f69b65885769642f3b499c6232360f751e0ca88868a0aa3ea87398a
+  image: cpopen/ibm-aiops-ir-core-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.4.0-20220617.1434-06db99c96

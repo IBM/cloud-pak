@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 3.4.0-rc1-202206171434
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Postgres Service Case Bundle
+  displayDescription: IBM Postgres Service Case Bundle
+  displayName: IBM Postgres Service Case Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-postgreservice
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.2.0
+  webPage: https://www.ibm.com
+created: 2022-06-29T01:04:19.61175100+0000
+digest: sha256:ccbe08613f9ff3567d81a12c9c453558e9b2b9f71abfdb0570c83015f32175dd

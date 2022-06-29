@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    deploy: {}
+    operations: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Infrastructure Management GRC Operator
+  displayDescription: IBM Infrastructure Management GRC Operator
+  displayName: IBM Infrastructure Management GRC Operator
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-management-infra-grc
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 2.3.5
+  webPage: https://www.ibm.com
+created: 2022-06-29T01:01:25.21575100+0000
+digest: sha256:1f3f133ec1a5e441c1334f1299a8cff28c34ca626759ef0bfeec12406a688e3d

@@ -84,3 +84,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.3.2-20220509.1845-14aa7e03c
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:276fd00631b540a9773e2f0981fb5e4377bc25608feec720c887e7d620941f94
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.0-20220615.2001-be1b042bb-linux.amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:35840eb0e6900bc527d8798df0b64f3d65eba1de100d114c4486bb6924d36672
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.0-20220615.2001-be1b042bb-linux.ppc64le
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:5a2bbe9e7692d3733b0fac8f78d03bdb8a6316fc64300b230cbf78a4d8106e01
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.0-20220615.2001-be1b042bb-linux.s390x
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:be1b042bbe457454094767ee13c61649c2015dfe341dd64921c017c1c91e5140
+  image: cpopen/ibm-infra-management-install-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.4.0-20220615.2001-be1b042bb
