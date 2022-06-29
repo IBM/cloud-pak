@@ -1,0 +1,12 @@
+source: ibm-fdb-bundle/case/ibm-fdb/case.yaml
+description: "IBM FoundationDB"
+images:
+  - image: cp/cpd/fdb-apple-foundationdb
+  - image: cp/cpd/fdb-apple-foundationdb-sidecar
+  - image: cp/cpd/fdb-ibm-backup-agent
+  - image: cp/cpd/fdb-ibm-restore-agent
+  - image: icr.io/cpopen/fdb-apple-operator
+  - image: icr.io/cpopen/fdb-apple-operator-bundle
+  - image: icr.io/cpopen/fdb-ibm-operator
+  - image: icr.io/cpopen/fdb-ibm-operator-bundle
+  - image: icr.io/cpopen/fdb-operator-catalog
