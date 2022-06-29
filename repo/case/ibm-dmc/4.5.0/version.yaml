@@ -1,0 +1,66 @@
+apiVersion: v1
+case:
+  appVersion: 3.1.8
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Db2 Data Management Console
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://github.com/IBMDSM/ci.docker.dsm-enterprise/blob/master/dsmcharticon.png
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.5License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.5License.txt
+    license-en:
+      mediaType: text/plain
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+      ref: license-en
+      url: http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(5737-H76)
+    licenseNonIBM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+      ref: LICENSE_NON_IBM
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-dmc
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 4.5.0
+  webPage: https://www.ibm.com
+created: 2022-06-29T02:02:59.62377779+0000
+digest: sha256:4c1c0a840c1f5768dff100ec82b98ce38ed88a8595a2a42ea64641efd8abc01e
