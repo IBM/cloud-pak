@@ -28,3 +28,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.0.0
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:2f6e2d0a66ad6062faa383d75771f8f33ad59d5441a587c6df50aa5ef0265eca
+  image: cpopen/ibmi-merlin-cicd-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.1-amd64
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:b03b6ff64b52b2cac9cf57363174772420e7ad5ceb562816dc87f6a4f24ac5a8
+  image: cpopen/ibmi-merlin-cicd-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.1-ppc64le
+- caseVersions:
+  - 1.0.1
+  category: catalog
+  digest: sha256:ffa8c48911ba2ac5b9487ad94f7d80e8ec042251871f5a0270ffc32a5a735f23
+  image: cpopen/ibmi-merlin-cicd-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.1

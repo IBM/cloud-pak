@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.1
+  catalogs:
+    development: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM CI/CD Tool.
+  displayDescription: ""
+  displayName: IBM CI/CD Tool.
+  icons: []
+  licenses:
+    ipla:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+      ref: LI_en.txt
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+      ref: non_ibm_license.txt
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+      ref: notices.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-merlin-cicd
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com/docs/merlin/1.0
+created: 2022-06-30T09:26:26.59634968+0000
+digest: sha256:ae8e5e5544644d43e7f72569ae5158d313a1332f924c71b9a906fadac14ca2f3
