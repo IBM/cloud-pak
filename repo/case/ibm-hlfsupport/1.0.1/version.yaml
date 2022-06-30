@@ -1,0 +1,50 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    blockchain: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: A case for IBM Support for Hyperledger Fabric
+  displayDescription: ""
+  displayName: IBM Support for Hyperledger Fabric CASE
+  icons: []
+  licenses:
+    license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Support for Hyperledger Fabric 1.0.0 License
+        displayName: IBM Support for Hyperledger Fabric 1.0.0 License
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Support for Hyperledger Fabric 1.0.0 non IBM licenses
+        displayName: IBM Support for Hyperledger Fabric 1.0.0 non IBM licenses
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Support for Hyperledger Fabric 1.0.0 other notices
+          & info
+        displayName: IBM Support for Hyperledger Fabric 1.0.0 other notices & info
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-hlfsupport
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.1
+  webPage: https://www.ibm.com/blockchain
+created: 2022-06-30T20:54:30.31267908+0000
+digest: sha256:f1782531ce119dda858db9fd673fcd09af85ac815132f6ee76cb10cb7fbaed7d
