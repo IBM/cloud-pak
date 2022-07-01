@@ -16,22 +16,45 @@ images:
   - image: cp/apic/ibm-apiconnect-analytics-analytics-mq-zookeeper
   - image: cp/apic/ibm-apiconnect-analytics-analytics-mtls
   - image: cp/apic/ibm-apiconnect-analytics-analytics-storage
+  - image: cp/apic/ibm-apiconnect-analytics-director
+  - image: cp/apic/ibm-apiconnect-analytics-ingestion
   - image: cp/apic/ibm-apiconnect-analytics-k8s-init
+  - image: cp/apic/ibm-apiconnect-analytics-mtls
+  - image: cp/apic/ibm-apiconnect-analytics-osinit
+  - image: cp/apic/ibm-apiconnect-analytics-storage
   - image: cp/apic/ibm-apiconnect-apiconnect-configurator
+  - image: cp/apic/ibm-apiconnect-apiconnect-eem-integration-services
   - image: cp/apic/ibm-apiconnect-apiconnect-master
   - image: cp/apic/ibm-apiconnect-eventgateway-event-gateway
   - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
+  - image: cp/apic/ibm-apiconnect-gateway-datapower-operator
+  - image: cp/apic/ibm-apiconnect-gateway-datapower-operator-conversion-webhook
   - image: cp/apic/ibm-apiconnect-gateway-datapower-prod
   - image: cp/apic/ibm-apiconnect-gateway-haproxy
   - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
+  - image: cp/apic/ibm-apiconnect-gateway-v2018-to-v10-haproxy
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
   - image: cp/apic/ibm-apiconnect-management-apim
   - image: cp/apic/ibm-apiconnect-management-api-testgen-coordinator
   - image: cp/apic/ibm-apiconnect-management-api-testgen-data
   - image: cp/apic/ibm-apiconnect-management-api-testgen-discovery
   - image: cp/apic/ibm-apiconnect-management-api-testgen-generator
+  - image: cp/apic/ibm-apiconnect-management-api-testgen-runtime
+  - image: cp/apic/ibm-apiconnect-management-autotest-exerciser
+  - image: cp/apic/ibm-apiconnect-management-autotest-exerciser-db
+  - image: cp/apic/ibm-apiconnect-management-autotest-service
   - image: cp/apic/ibm-apiconnect-management-billing
   - image: cp/apic/ibm-apiconnect-management-client-downloads-server
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbackrest
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbackrest-repo
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbouncer
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgo-apiserver
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgo-client
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgo-event
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgo-rmdata
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-pgo-scheduler
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-postgres-ha
+  - image: cp/apic/ibm-apiconnect-management-crunchydata-postgres-operator
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbackrest
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbackrest-repo
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
@@ -48,6 +71,7 @@ images:
   - image: cp/apic/ibm-apiconnect-management-nats-streaming-operator
   - image: cp/apic/ibm-apiconnect-management-nats-streaming-server
   - image: cp/apic/ibm-apiconnect-management-openapi-analyser
+  - image: cp/apic/ibm-apiconnect-management-openapi-analyzer
   - image: cp/apic/ibm-apiconnect-management-pgo-apiserver
   - image: cp/apic/ibm-apiconnect-management-pgo-backrest
   - image: cp/apic/ibm-apiconnect-management-pgo-backrest-repo
@@ -59,17 +83,25 @@ images:
   - image: cp/apic/ibm-apiconnect-management-portal-proxy
   - image: cp/apic/ibm-apiconnect-management-postgres-operator
   - image: cp/apic/ibm-apiconnect-management-task-manager
+  - image: cp/apic/ibm-apiconnect-management-taskmanager
   - image: cp/apic/ibm-apiconnect-management-training-runtime
   - image: cp/apic/ibm-apiconnect-management-turnstile
   - image: cp/apic/ibm-apiconnect-management-ui
+  - image: cp/apic/ibm-apiconnect-management-ui-authentication
   - image: cp/apic/ibm-apiconnect-management-v10.0
   - image: cp/apic/ibm-apiconnect-management-v10.0.1
   - image: cp/apic/ibm-apiconnect-management-v10.0.4.0-ifix
   - image: cp/apic/ibm-apiconnect-management-v10.0.4.0-ifix3
   - image: cp/apic/ibm-apiconnect-management-v10-upgrade
+  - image: cp/apic/ibm-apiconnect-management-v2018-to-v10-extract
+  - image: cp/apic/ibm-apiconnect-management-v2018-to-v10-load
   - image: cp/apic/ibm-apiconnect-management-websocket-proxy
   - image: cp/apic/ibm-apiconnect-management-ws-tunnel
+  - image: cp/apic/ibm-apiconnect-portal-admin
+  - image: cp/apic/ibm-apiconnect-portal-db
+  - image: cp/apic/ibm-apiconnect-portal-dbproxy
   - image: cp/apic/ibm-apiconnect-portal-k8s-init
+  - image: cp/apic/ibm-apiconnect-portal-nginx
   - image: cp/apic/ibm-apiconnect-portal-openresty
   - image: cp/apic/ibm-apiconnect-portal-portal-admin
   - image: cp/apic/ibm-apiconnect-portal-portal-db
@@ -77,6 +109,8 @@ images:
   - image: cp/apic/ibm-apiconnect-portal-portal-nginx
   - image: cp/apic/ibm-apiconnect-portal-portal-remote
   - image: cp/apic/ibm-apiconnect-portal-portal-web
+  - image: cp/apic/ibm-apiconnect-portal-remote
+  - image: cp/apic/ibm-apiconnect-portal-web
   - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
   - image: cp/appc/acecc-connector-auth-service-prod
   - image: cp/appc/acecc-content-server-prod
@@ -94,6 +128,9 @@ images:
   - image: cp/appc/ace-server-prod
   - image: cp/appc/icp4i-od-agent-prod
   - image: cp/appc/icp4i-od-collector-prod
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
   - image: cp/datapower/datapower
   - image: cp/datapower/datapower-cp4i
   - image: cp/datapower/datapower-prod
@@ -680,6 +717,9 @@ images:
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-cp-integration-catalog
   - image: icr.io/cpopen/ibm-cp-integration-operator
   - image: icr.io/cpopen/ibm-cp-integration-operator-bundle
