@@ -1,2 +1,12 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 3.0.5
+  category: catalog
+  digest: sha256:40cf8354d666fb13879674f90de57e0fd15f47f1f00120782792f1daeecf9082
+  image: cpopen/ibm-oms-pro-case-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v1.0.0-220630-1240
