@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 3.21.1
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: The IBM AuditLogging Operator forwards service audit logs to a configured
+    SIEM.
+  displayDescription: ""
+  displayName: AuditLogging
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-auditlogging
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.16.1
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2022-07-14T14:59:41.55051692+0000
+digest: sha256:589bd4aebe1b0384c413fbbf5ab1ff62867dd1152d42efdd4f57baa61ea76951
