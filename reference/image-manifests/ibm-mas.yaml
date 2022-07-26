@@ -73,6 +73,7 @@ images:
   - image: cp/mas/accapppoints
   - image: cp/mas/admin-dashboard
   - image: cp/mas/adoptionusageapi
+  - image: cp/mas/adoptionusage-metering
   - image: cp/mas/adoptionusage-reporter
   - image: cp/mas/api-licensing
   - image: cp/mas/appsuite-operator
@@ -136,6 +137,8 @@ images:
   - image: cp/mas/workspace-coordinator
   - image: cp/monitor/as-library
   - image: cp/monitor/as-ui
+  - image: cp/monitor/db2-dataingest-inputerrorprocessor
+  - image: cp/monitor/db2-dataingest-inputprocessor
   - image: cp/monitor/db-base
   - image: cp/monitor/entityid-population
   - image: cp/monitor/ft-datamapping
@@ -153,6 +156,7 @@ images:
   - image: cp/monitor/v2-core-scheduler
   - image: cp/monitor/v2-datadictionary-scheduler
   - image: cp/monitor/v2-datalake-api
+  - image: cp/monitor/v2-db2partition-scheduler
   - image: cp/monitor/v2-deviceidpopulation-scheduler
   - image: cp/mso/admin-ui
   - image: cp/mso/ibm-mas-mso-ws
@@ -160,6 +164,12 @@ images:
   - image: cp/mso/mso-execution-service
   - image: cp/mso/mso-usersyncagent
   - image: cp/mso/mso-workspace-init
+  - image: cp/optimizer/admin-ui
+  - image: cp/optimizer/api
+  - image: cp/optimizer/execution-service
+  - image: cp/optimizer/ibm-mas-optimizer-ws
+  - image: cp/optimizer/usersyncagent
+  - image: cp/optimizer/workspace-init
   - image: cp/predict/explainability
   - image: cp/predict/hook-ca-predict
   - image: cp/predict/ibm-mas-predict-ws
@@ -185,6 +195,7 @@ images:
   - image: cp/visualinspection/vision-dnn-detectron-deploy
   - image: cp/visualinspection/vision-dnn-edge
   - image: cp/visualinspection/vision-dnn-microservices
+  - image: cp/visualinspection/vision-dnn-pytorch
   - image: cp/visualinspection/vision-dnn-ssd
   - image: cp/visualinspection/vision-dnn-ssd-deploy
   - image: cp/visualinspection/vision-dnn-yolov3
@@ -224,6 +235,7 @@ images:
   - image: cp/wiotp/api-messagesight
   - image: cp/wiotp/api-org
   - image: cp/wiotp/api-organizations
+  - image: cp/wiotp/api-pipeline
   - image: cp/wiotp/api-resourcecontroller
   - image: cp/wiotp/api-riskmgmt-secguardian
   - image: cp/wiotp/api-s2s
@@ -239,6 +251,7 @@ images:
   - image: cp/wiotp/deprovagent-actions
   - image: cp/wiotp/deprovagent-auth
   - image: cp/wiotp/deprovagent-dm
+  - image: cp/wiotp/deprovagent-fpl
   - image: cp/wiotp/deprovagent-guardian
   - image: cp/wiotp/deprovagent-orgmgmt
   - image: cp/wiotp/deprovagent-provision
@@ -249,6 +262,7 @@ images:
   - image: cp/wiotp/device-store
   - image: cp/wiotp/entity-connector
   - image: cp/wiotp/entity-manager
+  - image: cp/wiotp/functionsexecutor
   - image: cp/wiotp/graphite-exporter
   - image: cp/wiotp/historian-configuration-manager
   - image: cp/wiotp/historian-connector
@@ -259,6 +273,7 @@ images:
   - image: cp/wiotp/ibm-iot-devops
   - image: cp/wiotp/ibm-iot-dm
   - image: cp/wiotp/ibm-iot-dsc
+  - image: cp/wiotp/ibm-iot-fpl
   - image: cp/wiotp/ibm-iot-guardian
   - image: cp/wiotp/ibm-iot-mbgx
   - image: cp/wiotp/ibm-iot-mfgx
@@ -288,6 +303,7 @@ images:
   - image: cp/wiotp/iot-workspace-operator
   - image: cp/wiotp/kafkamodel-actions
   - image: cp/wiotp/kafkamodel-auth
+  - image: cp/wiotp/kafkamodel-fpl
   - image: cp/wiotp/kafkamodel-mfgx
   - image: cp/wiotp/kafkamodel-orgmgmt
   - image: cp/wiotp/kafkamodel-registry
@@ -314,9 +330,12 @@ images:
   - image: cp/wiotp/orgpoolmgr
   - image: cp/wiotp/orgprovmgr
   - image: cp/wiotp/org-store
+  - image: cp/wiotp/pipeline-monitorsync
+  - image: cp/wiotp/pipelinerouter
   - image: cp/wiotp/provagent-guardian
   - image: cp/wiotp/s2s-store
   - image: cp/wiotp/sqlmodel-auth
+  - image: cp/wiotp/sqlmodel-fpl
   - image: cp/wiotp/sqlmodel-state
   - image: cp/wiotp/state-updater
   - image: cp/wiotp/statsd
@@ -349,6 +368,10 @@ images:
   - image: icr.io/cpopen/ibm-mas-mso-operator-catalog
   - image: icr.io/cpopen/ibm-mas-operator-bundle
   - image: icr.io/cpopen/ibm-mas-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-optimizer
+  - image: icr.io/cpopen/ibm-mas-optimizer-operator-bundle
+  - image: icr.io/cpopen/ibm-mas-optimizer-operator-catalog
+  - image: icr.io/cpopen/ibm-mas-optimizer-webhook
   - image: icr.io/cpopen/ibm-mas-predict
   - image: icr.io/cpopen/ibm-mas-predict-operator-bundle
   - image: icr.io/cpopen/ibm-mas-predict-operator-catalog
