@@ -163,3 +163,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 2.6.0-release-v1.1.14-241
+- caseVersions:
+  - 2.7.1
+  category: catalog
+  digest: sha256:370f367b078a258d52691122a14119bee035295bcb12ad6bf461715b595ecd75
+  image: cpopen/asm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.1-20220715.0002-81bd23d4b-linux.amd64
+- caseVersions:
+  - 2.7.1
+  category: catalog
+  digest: sha256:81bd23d4b86e3a48285981353deff1a4d03ab9fadb5d4fba06fedb3702c3e7e2
+  image: cpopen/asm-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.4.1-20220715.0002-81bd23d4b

@@ -122,3 +122,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.4.0-20220615.2001-f499b2993
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:5e4536124d627c1c324343dbe21c4269fcd18012149eb95dfc4f66fc0ee00785
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.1-20220714.1804-9b592944b-linux.amd64
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:0801e12babbc58ea1bbeaeba72cb470e8a809ee6c79b475c722bbff8f6085403
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.1-20220714.1804-9b592944b-linux.ppc64le
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:93fd559fb4e0bd559a74dc9444548e64c10895a13803cec3677a6d71a0d060aa
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v3.4.1-20220714.1804-9b592944b-linux.s390x
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:9b592944b185c3b081cb927ea434292dc4a7aa57b69ef20b10a6edeb16de2df8
+  image: cpopen/cam-install-operator-controller-manager-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.4.1-20220714.1804-9b592944b
