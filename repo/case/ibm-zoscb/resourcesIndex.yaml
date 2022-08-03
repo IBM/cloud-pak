@@ -78,9 +78,30 @@ containerImages:
   tag: latest-linux.s390x
 - caseVersions:
   - 1.0.2
+  - 1.0.3
   category: catalog
   digest: sha256:8f936623416723361d1c129488063a5b08a00af1288329d6478f49b9bdd79730
   image: cpopen/ibm-zoscb-catalog
   platform:
     imagetype: manifestList
   tag: latest
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:19429dcea6d40e3993b2e46a2b2bcd632edb05a138bdad99bc62dbd1b0c342f5
+  image: cpopen/ibm-zoscb-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-linux.amd64
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:dce71cb21bbd653ba43ba59baea0b9302b8b040f1b50826cea021fee09937bb8
+  image: cpopen/ibm-zoscb-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-linux.s390x
