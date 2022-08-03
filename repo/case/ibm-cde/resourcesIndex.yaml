@@ -272,3 +272,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v2.0.0-20220613.155655
+- caseVersions:
+  - 2.6.0
+  category: catalog
+  digest: sha256:8dc6eaed9d500e7fb4e77979c0a213d7c7f355c5b8a8fe23df9f84e6633d4a7c
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.1.0-20220707.152134-linux.amd64
+- caseVersions:
+  - 2.6.0
+  category: catalog
+  digest: sha256:56425a24778adf29c6e0d19e473c23378bf46541c3be187dca8655fb768e2b1a
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v2.1.0-20220707.152134-linux.ppc64le
+- caseVersions:
+  - 2.6.0
+  category: catalog
+  digest: sha256:842435174593d00eae653e91a479e3670146c0b7889de4220de58e8b44971ac6
+  image: cpopen/ibm-cpd-cde-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v2.1.0-20220707.152134
