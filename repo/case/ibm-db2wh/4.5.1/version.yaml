@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 11.5.7.0-cn6
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: The IBM Db2 db2wh operator provides the Db2U Operator integration within
+    Cloud Pak for Data
+  displayDescription: Case Bundle for the operator which deploys and manages the Db2
+    db2wh Database
+  displayName: IBM Db2 db2wh Operator Bundle for the Db2 Operator
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/db2logoicp-01.png
+  licenses:
+    cp4data:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License
+        displayName: Cloud Pak for Data License
+      ref: license-cp4d
+      url: http://www14.software.ibm.com/cgi-bin/weblap/lap.pl?la_formnum=&li_formnum=L-DNAA-BFX675
+  name: ibm-db2wh
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 4.5.1
+  webPage: https://www.ibm.com/analytics/db2
+created: 2022-08-03T14:51:19.52106237+0000
+digest: sha256:0eab9831d54f6fe972067a8e66adf97f6ed22a03395bb95c8d058a9d5a0a3151
