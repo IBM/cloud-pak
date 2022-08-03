@@ -268,3 +268,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v5.0.0-20220609.011143-83
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:5f70064b744f3badaa67f466b1a2f72bf0b6dd4c8a3e9c909ba01c31a0a4dc3e
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.0-20220705.071938-99-linux.amd64
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:db4811633172a9e2a8014f9633a02460c8ba0ef9bf4869da5332a16e426ac90c
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.0-20220705.071938-99-linux.ppc64le
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:16c707c78bd5c0d368028a0be2407a8be724bcbc848673d92dd19a2911bcd8ff
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v5.1.0-20220705.071938-99
