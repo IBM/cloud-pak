@@ -9,8 +9,11 @@ images:
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/pa-async-handler
   - image: cp/cpd/pa-async-service
   - image: cp/cpd/pa-atlas-service
+  - image: cp/cpd/pa-authorization
+  - image: cp/cpd/pa-batch-handler
   - image: cp/cpd/pa-bss
   - image: cp/cpd/pa-bss-init
   - image: cp/cpd/pa-cdn
@@ -37,13 +40,18 @@ images:
   - image: cp/cpd/pa-prism-platform
   - image: cp/cpd/pa-prism-proxy
   - image: cp/cpd/pa-redis
+  - image: cp/cpd/pa-scalingjob
   - image: cp/cpd/pa-share-app
   - image: cp/cpd/pa-share-platform
   - image: cp/cpd/pa-share-proxy
   - image: cp/cpd/pa-social
+  - image: cp/cpd/pa-tm1
   - image: cp/cpd/pa-tm1-cp4d
+  - image: cp/cpd/pa-tm1-daemon
+  - image: cp/cpd/pa-tm1-gateway
   - image: cp/cpd/pa-tm1proxy
   - image: cp/cpd/pa-tm1web
+  - image: cp/cpd/pa-tm1webproxy
   - image: cp/cpd/pa-upgrade-job
   - image: cp/cpd/pa-user-admin
   - image: cp/cpd/pa-wa-proxy
@@ -63,3 +71,7 @@ images:
   - image: icr.io/cpopen/ibm-planning-analytics-operator
   - image: icr.io/cpopen/ibm-planning-analytics-operator-bundle
   - image: icr.io/cpopen/ibm-planning-analytics-operator-catalog
+  - image: icr.io/cpopen/ibm-planning-analytics-spreadsheet-operator
+  - image: icr.io/cpopen/ibm-planning-analytics-spreadsheet-operator-bundle
+  - image: icr.io/cpopen/ibm-planning-analytics-tm1-operator
+  - image: icr.io/cpopen/ibm-planning-analytics-tm1-operator-bundle
