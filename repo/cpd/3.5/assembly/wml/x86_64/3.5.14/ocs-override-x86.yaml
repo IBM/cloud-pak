@@ -1,0 +1,7 @@
+ibm-wml-prod:
+  wmlEtcd:
+    storageclass_name: "ocs-storagecluster-ceph-rbd"
+  wmlRuntimeManager:
+    storageclass_name: "ocs-storagecluster-cephfs"
+  securityContext:
+    fsGroup: "4000"

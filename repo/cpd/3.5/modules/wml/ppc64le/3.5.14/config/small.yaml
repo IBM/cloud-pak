@@ -1,0 +1,5 @@
+commands:
+  - scale --replicas=1 deployment wml-deployment-envoy
+  - scale --replicas=1 deployment wml-repositoryv4
+  - scale --replicas=1 deployment wmltraining
+  - scale --replicas=1 statefulset wml-deployment-agent

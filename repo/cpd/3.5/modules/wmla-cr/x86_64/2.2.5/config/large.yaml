@@ -1,0 +1,106 @@
+
+ibm.com_v1_wmla_cr.yaml:  # the first level key must point to the cr file name defined in the module's main.yaml
+  wmlaCPDOverride:
+    auth:
+      resources:
+        limits:
+          cpu: 0.5
+          memory: 1Gi
+    core:
+      conda:
+        resources:
+          limits:
+            cpu: 0.5
+            memory: 1Gi
+      grafana:
+        resources:
+          limits:
+            cpu: 0.5
+            memory: 2Gi
+      dlpd:
+        resources:
+          limits:
+            cpu: 1
+            memory: 4Gi
+      kubectl:
+        resources:
+          limits:
+            cpu: 0.5
+            memory: 0.5Gi
+      prometheus:
+        resources:
+          limits:
+            cpu: 2
+            memory: 4Gi
+    edi:
+      lbd:
+        resources:
+          limits:
+            cpu: 1
+            memory: 2Gi
+      imd:
+        resources:
+          limits:
+            cpu: 2
+            memory: 2Gi
+      nginx:
+        resources:
+          limits:
+            cpu: 0.25
+            memory: 0.5Gi
+    common:
+      etcd:
+        resources:
+          limits:
+            cpu: 1
+            memory: 2Gi
+      ingress:
+        resources:
+          limits:
+            cpu: 0.5
+            memory: 0.5Gi
+    gui:
+      resources:
+        limits:
+          cpu: 1
+          memory: 1Gi
+    mss:
+      msd:
+        resources:
+          limits:
+            cpu: 1
+            memory: 2Gi
+      infoservice:
+        resources:
+          limits:
+            cpu: 1
+            memory: 2Gi
+      nginx:
+        resources:
+          limits:
+            cpu: 0.25
+            memory: 0.5Gi
+    notebook:
+      hub:
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+      proxy:
+        resources:
+          limits:
+            cpu: 0.5
+            memory: 0.5Gi
+      gateway:
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+    elasticstack:
+      logstash:
+        resources:
+          limits:
+            cpu: 2
+            memory: 4Gi
+
+# more cr files' override values can be added
