@@ -1,0 +1,5 @@
+commands:
+- scale --replicas=1 deployment ax-cdsx-jupyter-notebooks-converter-deploy
+- scale --replicas=1 deployment ax-cdsx-notebooks-job-manager-deploy
+- scale --replicas=1 deployment ax-wdp-notebooks-api-deploy
+- scale --replicas=1 deployment ax-ws-notebooks-ui-deploy
