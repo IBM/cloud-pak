@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 1.7.8
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Db2 DV
+  displayDescription: Data Virtualization integrates data sources across multiple
+    types and locations and turns all this data into one logical data view. This virtual
+    data lake makes the job of getting value out of your data easy.
+  displayName: Db2 DV
+  icons: []
+  licenses:
+    cp4data-EE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Enterprise Edition
+        displayName: Cloud Pak for Data License
+      ref: CP4d_EnterpriseEdV4.0Update2_LI_en.pdf
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DNAA-CAE23Z
+    cp4data-SE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Standard Edition
+        displayName: Cloud Pak for Data License
+      ref: CP4d_StandardEdV4.0Update2_LI_en.pdf
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-DNAA-CAE29R
+  name: ibm-dv-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.7.8+20220726.154244
+  webPage: https://www.ibm.com
+created: 2022-08-05T01:18:16.69862851+0000
+digest: sha256:502ce20c6cb21db97db9cc4e4ae1c9893f17223bc447edc4c4efe0b106d1fa28
