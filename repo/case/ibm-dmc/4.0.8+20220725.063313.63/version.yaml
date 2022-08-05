@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 3.1.6.4
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Db2 Data Management Console
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: text/html; charset=utf-8
+    url: https://github.com/IBMDSM/ci.docker.dsm-enterprise/blob/master/dsmcharticon.png
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4d:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data Licens
+        displayName: Cloud Pak for Data License
+      ref: license-en
+      url: http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(5737-H76)
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-dmc
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 4.0.8+20220725.063313.63
+  webPage: https://www.ibm.com
+created: 2022-08-05T00:33:15.43678690+0000
+digest: sha256:edb4caf76af70c82c9c6c4a93c9da6f4db8a26b4471467bbfe4c0cc19b5a626e
