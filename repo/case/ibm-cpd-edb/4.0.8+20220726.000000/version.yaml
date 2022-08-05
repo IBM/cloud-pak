@@ -1,0 +1,63 @@
+apiVersion: v1
+case:
+  appVersion: 4.0.8
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: Case bundle for the EDB Cluster Operator
+  displayDescription: IBM EDB Cluster Operator
+  displayName: IBM EDB Cluster Operator
+  icons:
+  - mediaType: image/png
+    url: TODO
+  licenses:
+    license-en-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en-enterprise
+        name: license-en-enterprise
+      ref: LI_en_enterprise
+    license-en-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: license-en-standard
+      ref: LI_en_standard
+    licenseNonIBMEnterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM_ENTERPRISE
+        name: licenseNonIBMEnterprise
+      ref: non_ibm_license_enterprise
+    licenseNonIBMStandard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM_STANDARD
+        name: licenseNonIBMStandard
+      ref: non_ibm_license_standard
+  name: ibm-cpd-edb
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 4.0.8+20220726.000000
+  webPage: TODO
+created: 2022-08-05T07:03:31.06538090+0000
+digest: sha256:9329141f5ecf274a406d3361da2aa84d1f96540aae3dc0bdc9e4a056b8ca289f
