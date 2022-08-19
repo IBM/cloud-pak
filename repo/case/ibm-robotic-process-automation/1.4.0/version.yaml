@@ -1,0 +1,56 @@
+apiVersion: v1
+case:
+  appVersion: 1.4.0
+  catalogs:
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: CASE of IBM Robotic Process Automation
+  displayDescription: IBM Robotic Process Automation Operator
+  displayName: IBM Robotic Process Automation
+  icons: []
+  licenses:
+    LA_en:
+      mediaType: application/text
+      metadata:
+        description: License Acceptence
+      ref: LA_en
+      url: https://ibm.biz/RPA-License
+    LI_en:
+      mediaType: application/text
+      metadata:
+        description: License Information
+      ref: LI_en
+      url: https://ibm.biz/RPA-License
+    non_ibm_license:
+      mediaType: application/text
+      metadata:
+        description: non ibm license
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        description: notices
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-robotic-process-automation
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.4.0
+  webPage: https://www.ibm.com
+created: 2022-08-19T17:12:06.87198505+0000
+digest: sha256:cfb8785c12f60e922c9c1686a1a574a549ae7b4ff4188791ced6b533f85131b1
