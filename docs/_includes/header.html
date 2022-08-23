@@ -1,4 +1,5 @@
 <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     table, th, td {
       border: 2px solid black;
@@ -15,39 +16,108 @@
       font-size: 10px;
       margin-bottom: 25px;
     }
-      
+
     details:hover {
       cursor: pointer;
     }
-      
+
     body {
       background: #f3f3f3;
       width: 98%;
     }
-    
+
     code {
       font-family: 'Courier New', Courier, monospace;
       color: #ed4314;
       background-color: rgba(220, 220, 220, .5);
       padding: 2px;
     }
-      
+
+    * {
+    box-sizing: border-box;
+    }
+
+    #searchInput {
+      background-image: url('assets/searchpic.png');
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      width: 50%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #caseTable {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      font-size: 18px;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+
+    #caseTable th, #caseTable td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px;
+    }
+
+    #caseTable tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #caseTable tr.header, #caseTable tr:hover {
+      background-color: #f1f1f1;
+    }
     </style>
     </header>
-    
+
+<body>
+
+<script>
+function searchFunction(){
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("caseTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td") ;
+    for(j=0 ; j<td.length ; j++)
+    {
+      let tdata = td[j] ;
+      if (tdata) {
+        if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break ;
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+}
+</script>
+
+<link rel=stylesheet type=text/css href=https://ibm.github.io/cloud-pak/assets/css/style.scss>
+
     <div class="header">
       <h1>IBM: Product CASE to Application Version</h1>
     </div>
-    
+
     <p>This page describes a summary of what CASE version contains what Application version. </p>
-    
+
     <h2>Common Airgap Environmental Variables:</H2>
-    
+
     <div><code>export OFFLINEDIR=\$HOME/offline </code></div> <br />
     <div><code>export CASE_REPO_PATH=https://github.com/IBM/cloud-pak/raw/master/repo/case </div></code><br />
     <div><code>export CASE_LOCAL_PATH=$OFFLINEDIR/$CASE_ARCHIVE" </div></code><br />
     <div><code>export CASE_ARCHIVE=$CASE_NAME-$CASEVERSION.tgz </div></code><br />
-    
+
     <h2>CASE to Application reference</h2>
-    
-    <table>
+    <input size="50" type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for names.." title="Type in a name">
+    <table id="caseTable">
