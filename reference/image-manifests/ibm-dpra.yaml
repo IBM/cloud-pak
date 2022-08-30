@@ -1,0 +1,15 @@
+source: ibm-dpra-case-bundle/case/ibm-dpra/case.yaml
+description: "Case bundle for the DPRA"
+images:
+  - image: cp/cpd/ibm-cpd-calibrate/calibrate-ic-cp4d
+  - image: cp/cpd/ibm-cpd-calibrate/calibrate-jsu-cp4d
+  - image: cp/cpd/ibm-cpd-calibrate/calibrate_ui_backend
+  - image: cp/cpd/ibm-cpd-calibrate/calibrate_ui_frontend
+  - image: cp/cpd/ibm-cpd-calibrate/cp4d-calibrate-percona-server-mongodb
+  - image: cp/cpd/ibm-cpd-calibrate/cp4d-calibrate-sbe-fingerprint
+  - image: cp/cpd/ibm-cpd-calibrate/cp4d-calibrate-tls-manager
+  - image: cp/cpd/ibm-cpd-calibrate/cp4d-hashicorp-vault
+  - image: cp/cpd/ibm-cpd-calibrate/cp4d-integration
+  - image: icr.io/cpopen/ibm-cpd-dpra-operator
+  - image: icr.io/cpopen/ibm-cpd-dpra-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-dpra-operator-catalog
