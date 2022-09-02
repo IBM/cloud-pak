@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 1.17.3
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: A CASE for an operator which deploys Common Services UI
+  displayDescription: ""
+  displayName: Common Services UI CASE
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+      relatedImages: true
+  name: ibm-cs-commonui
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.17.3
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2022-09-02T19:06:22.51626106+0000
+digest: sha256:6665392948f875cfcf83cdad892bafd7023b244213bac9cfb630a48e0b73f592
