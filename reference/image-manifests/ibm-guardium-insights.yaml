@@ -35,8 +35,10 @@ images:
   - image: cp/ibm-guardium-insights/db2u.auxiliary.auth
   - image: cp/ibm-guardium-insights/db2u.instdb
   - image: cp/ibm-guardium-insights/db2u.tools
+  - image: cp/ibm-guardium-insights/dependency-postgres
   - image: cp/ibm-guardium-insights/ecosystem
   - image: cp/ibm-guardium-insights/etcd
+  - image: cp/ibm-guardium-insights/feature-flags
   - image: cp/ibm-guardium-insights/fetch
   - image: cp/ibm-guardium-insights/group-builder
   - image: cp/ibm-guardium-insights/guardium-agent-cert-generator
@@ -55,6 +57,7 @@ images:
   - image: cp/ibm-guardium-insights/opencontent-redis-3
   - image: cp/ibm-guardium-insights/outlier2
   - image: cp/ibm-guardium-insights/outlier2-aggregation
+  - image: cp/ibm-guardium-insights/outliers-engine
   - image: cp/ibm-guardium-insights/pa-alert
   - image: cp/ibm-guardium-insights/pa-core
   - image: cp/ibm-guardium-insights/pam-connector-thycotic
@@ -66,9 +69,17 @@ images:
   - image: cp/ibm-guardium-insights/reports
   - image: cp/ibm-guardium-insights/reports-runner
   - image: cp/ibm-guardium-insights/resource-controller-k8
+  - image: cp/ibm-guardium-insights/risk-analytics-classification
+  - image: cp/ibm-guardium-insights/risk-analytics-controller
+  - image: cp/ibm-guardium-insights/risk-analytics-engine
   - image: cp/ibm-guardium-insights/risk-engine
   - image: cp/ibm-guardium-insights/risk-register
   - image: cp/ibm-guardium-insights/risk-threats
+  - image: cp/ibm-guardium-insights/rm-data-collector
+  - image: cp/ibm-guardium-insights/rm-risk-controller
+  - image: cp/ibm-guardium-insights/rm-risk-engine
+  - image: cp/ibm-guardium-insights/rm-risk-engine-cron
+  - image: cp/ibm-guardium-insights/rm-risk-postgres-job
   - image: cp/ibm-guardium-insights/scheduler
   - image: cp/ibm-guardium-insights/settings-datasources
   - image: cp/ibm-guardium-insights/snif-assist
@@ -99,10 +110,128 @@ images:
   - image: ibmcom/ibm-common-service-catalog
   - image: ibmcom/ibm-db2uoperator-bundle
   - image: ibmcom/ibm-db2uoperator-catalog
+  - image: icr.io/cpopen/common-service-operator
+  - image: icr.io/cpopen/cpfs/audit-garbage-collector
+  - image: icr.io/cpopen/cpfs/audit-policy-controller
+  - image: icr.io/cpopen/cpfs/audit-syslog-service
+  - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/cpfs/dashboard-controller
+  - image: icr.io/cpopen/cpfs/default-http-backend
+  - image: icr.io/cpopen/cpfs/fluentd
+  - image: icr.io/cpopen/cpfs/grafana
+  - image: icr.io/cpopen/cpfs/grafana-ocpthanos-proxy
+  - image: icr.io/cpopen/cpfs/iam-policy-administration
+  - image: icr.io/cpopen/cpfs/iam-policy-controller
+  - image: icr.io/cpopen/cpfs/iam-policy-decision
+  - image: icr.io/cpopen/cpfs/ibm-crossplane-bedrock-shim-config
+  - image: icr.io/cpopen/cpfs/ibm-cs-webhook
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
+  - image: icr.io/cpopen/cpfs/ibm-licensing
+  - image: icr.io/cpopen/cpfs/ibm-licensing-usage
+  - image: icr.io/cpopen/cpfs/ibm-mongodb
+  - image: icr.io/cpopen/cpfs/ibm-mongodb-exporter
+  - image: icr.io/cpopen/cpfs/ibm-mongodb-install
+  - image: icr.io/cpopen/cpfs/ibm-postgresql
+  - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
+  - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
+  - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
+  - image: icr.io/cpopen/cpfs/icp-iam-onboarding
+  - image: icr.io/cpopen/cpfs/icp-identity-manager
+  - image: icr.io/cpopen/cpfs/icp-identity-provider
+  - image: icr.io/cpopen/cpfs/icp-initcontainer
+  - image: icr.io/cpopen/cpfs/icp-management-ingress
+  - image: icr.io/cpopen/cpfs/icp-memcached
+  - image: icr.io/cpopen/cpfs/icp-oidcclient-watcher
+  - image: icr.io/cpopen/cpfs/icp-platform-api
+  - image: icr.io/cpopen/cpfs/icp-platform-auth
+  - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/cpfs/influxdb
+  - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/must-gather
+  - image: icr.io/cpopen/cpfs/must-gather-service
+  - image: icr.io/cpopen/cpfs/nginx-ingress-controller
+  - image: icr.io/cpopen/cpfs/privatecloud-usermgmt
+  - image: icr.io/cpopen/cpfs/system-healthcheck-service
+  - image: icr.io/cpopen/cpfs/zen-audit
+  - image: icr.io/cpopen/cpfs/zen-core
+  - image: icr.io/cpopen/cpfs/zen-core-api
+  - image: icr.io/cpopen/cpfs/zen-data-sorcerer
+  - image: icr.io/cpopen/cpfs/zen-iam-config
+  - image: icr.io/cpopen/cpfs/zen-influxdb-relay
+  - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/db2u-operator
+  - image: icr.io/cpopen/ibm-auditlogging-operator
+  - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
+  - image: icr.io/cpopen/ibm-cert-manager-operator
+  - image: icr.io/cpopen/ibm-cert-manager-operator-bundle
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-common-service-catalog
+  - image: icr.io/cpopen/ibm-common-service-operator-bundle
+  - image: icr.io/cpopen/ibm-commonui-operator
+  - image: icr.io/cpopen/ibm-commonui-operator-bundle
+  - image: icr.io/cpopen/ibm-crossplane-operator
+  - image: icr.io/cpopen/ibm-crossplane-operator-bundle
+  - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
+  - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator-bundle
+  - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator
+  - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator-bundle
+  - image: icr.io/cpopen/ibm-db2uoperator-bundle
+  - image: icr.io/cpopen/ibm-db2uoperator-catalog
+  - image: icr.io/cpopen/ibm-events-operator
+  - image: icr.io/cpopen/ibm-events-operator-bundle
+  - image: icr.io/cpopen/ibm-healthcheck-operator
+  - image: icr.io/cpopen/ibm-healthcheck-operator-bundle
+  - image: icr.io/cpopen/ibm-iam-operator
+  - image: icr.io/cpopen/ibm-iam-operator-bundle
+  - image: icr.io/cpopen/ibm-ingress-nginx-operator
+  - image: icr.io/cpopen/ibm-ingress-nginx-operator-bundle
+  - image: icr.io/cpopen/ibm-licensing-operator
+  - image: icr.io/cpopen/ibm-licensing-operator-bundle
+  - image: icr.io/cpopen/ibm-management-ingress-operator
+  - image: icr.io/cpopen/ibm-management-ingress-operator-bundle
+  - image: icr.io/cpopen/ibm-mongodb-operator
+  - image: icr.io/cpopen/ibm-mongodb-operator-bundle
+  - image: icr.io/cpopen/ibm-monitoring-grafana-operator
+  - image: icr.io/cpopen/ibm-monitoring-grafana-operator-bundle
+  - image: icr.io/cpopen/ibm-namespace-scope-operator
+  - image: icr.io/cpopen/ibm-namespace-scope-operator-bundle
+  - image: icr.io/cpopen/ibm-namespace-scope-operator-restricted-bundle
+  - image: icr.io/cpopen/ibm-platform-api-operator
+  - image: icr.io/cpopen/ibm-platform-api-operator-bundle
+  - image: icr.io/cpopen/ibm-zen-cpp-operator
+  - image: icr.io/cpopen/ibm-zen-cpp-operator-bundle
+  - image: icr.io/cpopen/ibm-zen-operator
+  - image: icr.io/cpopen/ibm-zen-operator-bundle
+  - image: icr.io/cpopen/odlm
+  - image: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle
+  - image: icr.io/db2u/db2u
+  - image: icr.io/db2u/db2u.auxiliary.auth
+  - image: icr.io/db2u/db2u.bigsql.mariadb
+  - image: icr.io/db2u/db2u.dv
+  - image: icr.io/db2u/db2u.dv.api
+  - image: icr.io/db2u/db2u.dv.caching
+  - image: icr.io/db2u/db2u.dv.utils
+  - image: icr.io/db2u/db2u.graph
+  - image: icr.io/db2u/db2u.hurricane
+  - image: icr.io/db2u/db2u.instdb
+  - image: icr.io/db2u/db2u.instdb.restricted
+  - image: icr.io/db2u/db2u.mustgather
+  - image: icr.io/db2u/db2u.qrep
+  - image: icr.io/db2u/db2u.rest
+  - image: icr.io/db2u/db2u.restricted
+  - image: icr.io/db2u/db2u.tools
+  - image: icr.io/db2u/db2u.update.image
+  - image: icr.io/db2u/etcd
   - image: icr.io/guardium-insights/cp-serviceability
   - image: icr.io/guardium-insights/mongo
   - image: quay.io/mongodb/mongodb-agent
