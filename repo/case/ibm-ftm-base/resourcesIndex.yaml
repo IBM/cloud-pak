@@ -80,3 +80,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: latest
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:27e03462439b3e6d3180de4de305edecaaa748638e9f994c924455a38b253a02
+  image: cpopen/ibm-ftm-base-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.0-20220922-1111-99-linux-amd64
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:a358db359919cca31b03bfe0c9975d3f95780f732f45ea620008b6351ba25efd
+  image: cpopen/ibm-ftm-base-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.0-20220922-1111-99-linux-ppc64le
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:86f2a9647907a5f36f6b2977b0701891be302c45a2e32f56132783963672fe33
+  image: cpopen/ibm-ftm-base-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.2.0-20220922-1111-99
