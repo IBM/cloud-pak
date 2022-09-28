@@ -18,6 +18,7 @@ images:
   - image: cp/cp4waiops/aiops-api
   - image: cp/cp4waiops/aiops-application-details-ui
   - image: cp/cp4waiops/aiops-base-ui
+  - image: cp/cp4waiops/aiops-dashboard-api
   - image: cp/cp4waiops/aiops-dashboard-ui
   - image: cp/cp4waiops/aiops-operators-catalog
   - image: cp/cp4waiops/ai-platform-api-server
@@ -41,6 +42,8 @@ images:
   - image: cp/cp4waiops/connector-ui
   - image: cp/cp4waiops/coordinator
   - image: cp/cp4waiops/couchdb
+  - image: cp/cp4waiops/couchdb3
+  - image: cp/cp4waiops/couchdb-manager
   - image: cp/cp4waiops/cp4waiops-connectors
   - image: cp/cp4waiops/databroker-s3
   - image: cp/cp4waiops/datalayer-cem-service
@@ -61,6 +64,7 @@ images:
   - image: cp/cp4waiops/event-processor
   - image: cp/cp4waiops/eventsquery-service
   - image: cp/cp4waiops/flink-core
+  - image: cp/cp4waiops/generic-topology-processor
   - image: cp/cp4waiops/grafana
   - image: cp/cp4waiops/hdm-akora-app-cem
   - image: cp/cp4waiops/hdm-brokers
@@ -84,10 +88,13 @@ images:
   - image: cp/cp4waiops/ibm-cloudpakopen-elasticsearch-operator
   - image: cp/cp4waiops/ibm-consul
   - image: cp/cp4waiops/ibm-grpc-appd-connector
+  - image: cp/cp4waiops/ibm-grpc-awscw-connector
   - image: cp/cp4waiops/ibm-grpc-dyna-connector
   - image: cp/cp4waiops/ibm-grpc-github-connector
   - image: cp/cp4waiops/ibm-grpc-instana-connector
+  - image: cp/cp4waiops/ibm-grpc-nrelic-connector
   - image: cp/cp4waiops/ibm-grpc-snow-connector
+  - image: cp/cp4waiops/ibm-grpc-splunk-connector
   - image: cp/cp4waiops/ibm-model-train-operator
   - image: cp/cp4waiops/ibm-stolon
   - image: cp/cp4waiops/ibm-vault
@@ -107,6 +114,7 @@ images:
   - image: cp/cp4waiops/log-anomaly
   - image: cp/cp4waiops/log-anomaly-training
   - image: cp/cp4waiops/logstash
+  - image: cp/cp4waiops/luigi-scheduler-daemon
   - image: cp/cp4waiops/metric-api
   - image: cp/cp4waiops/metric-spark
   - image: cp/cp4waiops/model-train-controller
@@ -134,6 +142,7 @@ images:
   - image: cp/cp4waiops/nasm-elasticsearch
   - image: cp/cp4waiops/nasm-file-observer
   - image: cp/cp4waiops/nasm-github-observer
+  - image: cp/cp4waiops/nasm-gitlab-observer
   - image: cp/cp4waiops/nasm-googlecloud-observer
   - image: cp/cp4waiops/nasm-hpnfvd-observer
   - image: cp/cp4waiops/nasm-ibmcloud-observer
@@ -221,6 +230,7 @@ images:
   - image: cp/cp4waiops/training-service
   - image: cp/cp4waiops/ui-api
   - image: cp/cp4waiops/ui-content
+  - image: cp/cp4waiops/userconfig-service
   - image: cp/cp4waiops/zookeeper
   - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/postgresql
@@ -334,6 +344,7 @@ images:
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/multi-instance-conversion
   - image: icr.io/cpopen/cpfs/must-gather
   - image: icr.io/cpopen/cpfs/must-gather-service
   - image: icr.io/cpopen/cpfs/nginx-ingress-controller
