@@ -128,3 +128,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.4.2-rc1-20220822.0742-736a0db4c
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:61d9476bdcc24b24f32b6040f2f7646ebb3b8017751dfd2f777a69a52d9d1e3c
+  image: cpopen/ibm-vault-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.5.0-rc1-20220913.1524-715f3e02c-linux.amd64
+- caseVersions:
+  - 1.3.0
+  category: catalog
+  digest: sha256:715f3e02ce90ecf2452c774182f54e0fb44d7869cffef6ccae52d2339fcbbaac
+  image: cpopen/ibm-vault-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.5.0-rc1-20220913.1524-715f3e02c

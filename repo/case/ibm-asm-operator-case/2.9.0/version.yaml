@@ -1,0 +1,56 @@
+apiVersion: v1
+case:
+  appVersion: 3.5.0-rc1-202209131524
+  catalogs:
+    devops: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM® Netcool® Agile Service Manager
+  displayDescription: ""
+  displayName: IBM® Netcool® Agile Service Manager
+  icons:
+  - mediaType: image/svg+xml
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/asm_icon_color_big.svg
+  licenses:
+    license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak® for Watson AIOps AI Manager v3.5.0 License
+        displayName: License
+        name: license
+      ref: LICENSE
+      url: http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(L-LSAO-CGERW3)
+    nonIbmLicense:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak® for Watson AIOps AI Manager v3.5.0 Terms
+          and Conditions
+        displayName: Terms and Conditions
+        name: nonIbmLicense
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak® for Watson AIOps AI Manager v3.5.0 Notices
+          and Information
+        displayName: Notices and Information
+        name: notices
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-asm-operator-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.9.0
+  webPage: https://www.ibm.com
+created: 2022-09-28T00:35:35.01548701+0000
+digest: sha256:3ce90cf318e891357f62384e5ed9b11faa79d13c1cba9dfeb9940b26e9c1d097
