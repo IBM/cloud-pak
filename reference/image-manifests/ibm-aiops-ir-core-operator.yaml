@@ -13,6 +13,8 @@ images:
   - image: cp/ai/wmlserving-controller
   - image: cp/cp4waiops/archiving-service
   - image: cp/cp4waiops/common-datarouting
+  - image: cp/cp4waiops/couchdb3
+  - image: cp/cp4waiops/couchdb-manager
   - image: cp/cp4waiops/datalayer-cem-service
   - image: cp/cp4waiops/elastic-archiving-service
   - image: cp/cp4waiops/hdm-cem-users
@@ -22,6 +24,10 @@ images:
   - image: cp/cp4waiops/logstash
   - image: cp/cp4waiops/netcool-nco-g-objserv-bi-ee
   - image: cp/cp4waiops/netcool-nco-objserv-ee
+  - image: cp/cp4waiops/userconfig-service
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
+  - image: cp/cpd/wd-postgres-license
   - image: cp/iaf-ai-pipeline-ctrl
   - image: cp/iaf-ai-pipeline-step
   - image: cp/iaf-apicurio-registry
@@ -120,6 +126,7 @@ images:
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/multi-instance-conversion
   - image: icr.io/cpopen/cpfs/must-gather
   - image: icr.io/cpopen/cpfs/must-gather-service
   - image: icr.io/cpopen/cpfs/nginx-ingress-controller
@@ -169,6 +176,9 @@ images:
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator

@@ -4,14 +4,18 @@ images:
   - image: cp/cp4waiops/camel-integrations
   - image: cp/cp4waiops/connector-manager
   - image: cp/cp4waiops/cp4waiops-connectors
+  - image: cp/cp4waiops/generic-topology-processor
   - image: cp/cp4waiops/ibm-aiops-bridge
   - image: cp/cp4waiops/ibm-aiops-connector-orchestrator
   - image: cp/cp4waiops/ibm-consul
   - image: cp/cp4waiops/ibm-grpc-appd-connector
+  - image: cp/cp4waiops/ibm-grpc-awscw-connector
   - image: cp/cp4waiops/ibm-grpc-dyna-connector
   - image: cp/cp4waiops/ibm-grpc-github-connector
   - image: cp/cp4waiops/ibm-grpc-instana-connector
+  - image: cp/cp4waiops/ibm-grpc-nrelic-connector
   - image: cp/cp4waiops/ibm-grpc-snow-connector
+  - image: cp/cp4waiops/ibm-grpc-splunk-connector
   - image: cp/cp4waiops/ibm-vault
   - image: cp/cp4waiops/ibm-vault-k8s
   - image: cp/cp4waiops/instana-topology
@@ -65,6 +69,7 @@ images:
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/multi-instance-conversion
   - image: icr.io/cpopen/cpfs/must-gather
   - image: icr.io/cpopen/cpfs/must-gather-service
   - image: icr.io/cpopen/cpfs/nginx-ingress-controller
