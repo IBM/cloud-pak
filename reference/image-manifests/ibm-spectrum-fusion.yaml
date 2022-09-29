@@ -4,18 +4,23 @@ images:
   - image: cp/isf/callhomeclient
   - image: cp/isf/eventmanager
   - image: cp/isf/eventmanager-snmp3
+  - image: cp/isf/fusion-ui
   - image: cp/isf/fusion-ui-app
   - image: cp/isf/isf-application-operator
   - image: cp/isf/isf-bkprstr-operator
+  - image: cp/isf/isf-compute-fw-updater
   - image: cp/isf/isf-compute-operator
   - image: cp/isf/isf-data-protection-operator
   - image: cp/isf/isf-ics-operator
   - image: cp/isf/isf-installer-operator
   - image: cp/isf/isf-management-ui
+  - image: cp/isf/isf-metrodr-operator
+  - image: cp/isf/isf-network-fw-updater
   - image: cp/isf/isf-network-operator
   - image: cp/isf/isf-node-exporter
   - image: cp/isf/isf-operator-bundle
   - image: cp/isf/isf-operator-index
+  - image: cp/isf/isf-prereq-operator
   - image: cp/isf/isf-proxy
   - image: cp/isf/isf-serviceability-operator
   - image: cp/isf/isf-snmp-exporter
@@ -23,7 +28,9 @@ images:
   - image: cp/isf/isf-storage-services
   - image: cp/isf/isf-ui-operator
   - image: cp/isf/isf-update-operator
+  - image: cp/isf/isf-utils
   - image: cp/isf/logcollector
+  - image: cp/isf/ramen-operator
   - image: cp/isf/spp-dp-operator
   - image: gcr.io/kubebuilder/kube-rbac-proxy
   - image: icr.io/
@@ -47,4 +54,6 @@ images:
   - image: icr.io/cp/isf/isf-ui-operator
   - image: icr.io/cp/isf/isf-update-operator
   - image: icr.io/cp/isf/logcollector
+  - image: icr.io/cpopen/isf-operator-bundle
+  - image: icr.io/cpopen/isf-operator-catalog
   - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy

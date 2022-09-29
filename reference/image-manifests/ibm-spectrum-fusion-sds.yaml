@@ -2,6 +2,9 @@ source: ibm-spectrum-fusion-sds-bundle/case/ibm-spectrum-fusion-sds/case.yaml
 description: "Management operator for IBM Spectrum Fusion"
 images:
   - image: cp/isf-sds/callhomeclient
+  - image: cp/isf-sds/eventmanager
+  - image: cp/isf-sds/eventmanager-snmp3
+  - image: cp/isf-sds/fusion-ui
   - image: cp/isf-sds/fusion-ui-app
   - image: cp/isf-sds/isf-application-operator
   - image: cp/isf-sds/isf-bkprstr-operator
@@ -11,8 +14,11 @@ images:
   - image: cp/isf-sds/isf-proxy
   - image: cp/isf-sds/isf-serviceability-operator
   - image: cp/isf-sds/isf-ui-operator
+  - image: cp/isf-sds/isf-update-operator
   - image: cp/isf-sds/logcollector
   - image: cp/isf-sds/spp-dp-operator
   - image: icr.io/cpopen/isf-operator-bundle
   - image: icr.io/cpopen/isf-operator-index
+  - image: icr.io/cpopen/isf-operator-software-bundle
+  - image: icr.io/cpopen/isf-operator-software-catalog
   - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
