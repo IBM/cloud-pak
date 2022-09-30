@@ -1,6 +1,7 @@
 source: ibm-appconnect-bundle/case/ibm-appconnect/case.yaml
 description: "IBM AppConnect Operator"
 images:
+  - image: cp/appc/ace
   - image: cp/appc/acecc-connector-auth-service-prod
   - image: cp/appc/acecc-content-server-prod
   - image: cp/appc/acecc-couchdb3-prod
@@ -112,6 +113,7 @@ images:
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/multi-instance-conversion
   - image: icr.io/cpopen/cpfs/must-gather
   - image: icr.io/cpopen/cpfs/must-gather-service
   - image: icr.io/cpopen/cpfs/nginx-ingress-controller
