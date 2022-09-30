@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 22.0.1-IF003
+  catalogs:
+    containersoftware: {}
+    framework: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    limited: {}
+    opensource: {}
+  description: A CASE for an operator which deploys baw operator
+  displayDescription: A CASE for an operator which deploys baw operator
+  displayName: BAW CASE
+  icons:
+  - mediaType: image/svg
+    url: https://cache.globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/cache/4658fae917a5b2597c29bdb896465773-public/icp4automation.svg
+  licenses:
+    icp4a:
+      mediaType: text/plain
+      metadata:
+        displayDescription: BAW On Containers License
+        displayName: BAW On Containers
+      ref: baw_License_en
+  name: ibm-cs-bawautomation
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      openshift: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 2.3.3
+  webPage: https://www.ibm.com
+created: 2022-09-30T14:39:11.09440951+0000
+digest: sha256:a1cab8f68e24315ed2c8f68b54f0fd566e72fa0dc0cd4f42116775d4f04e82f4
