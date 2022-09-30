@@ -1,0 +1,50 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.3
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data RStudio addon
+  displayDescription: IBM Cloud Pak for Data RStudio addon
+  displayName: IBM Cloud Pak for Data RStudio addon
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.5License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.5License.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+    rstudioBuildNumber: 4.5.3
+  name: ibm-rstudio
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 2.3.0
+  webPage: https://www.ibm.com
+created: 2022-09-30T23:52:03.88141663+0000
+digest: sha256:50c8c6fbd84ced3f2707ab67fea29fc339895b789a44ecb41c93cb83ef13359b
