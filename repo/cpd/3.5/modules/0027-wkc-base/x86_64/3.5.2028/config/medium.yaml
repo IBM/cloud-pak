@@ -1,0 +1,22 @@
+toleratedCommands:
+- command: scale --replicas=3 deployment catalog-api
+  toleratedRegularExpressions:
+    - was not changed
+- command: scale --replicas=2 deployment dc-main
+  toleratedRegularExpressions:
+    - was not changed
+- command: scale --replicas=2 deployment portal-catalog
+  toleratedRegularExpressions:
+    - was not changed
+- command: scale --replicas=3 deployment wdp-connect-connection
+  toleratedRegularExpressions:
+    - was not changed
+- command: scale --replicas=3 deployment wdp-connect-connector
+  toleratedRegularExpressions:
+    - was not changed
+- command: scale --replicas=2 deployment wkc-search
+  toleratedRegularExpressions:
+    - was not changed
+- command: set resources deployment wdp-connect-connector --limits=cpu=1.1,memory=4Gi
+  toleratedRegularExpressions:
+    - was not changed

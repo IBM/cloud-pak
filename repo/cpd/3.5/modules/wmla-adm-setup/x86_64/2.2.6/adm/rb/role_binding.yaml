@@ -1,0 +1,17 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: wmla-operator
+  labels:
+    app.kubernetes.io/name: "ibm-spectrum-wmla"
+    app.kubernetes.io/managed-by: "wmlas.spectrumcomputing.ibm.com"
+    app.kubernetes.io/instance: "wmla"
+    release: "wmla-operator"
+
+subjects:
+- kind: ServiceAccount
+  name: wmla-operator
+roleRef:
+  kind: Role
+  name: wmla-operator
+  apiGroup: rbac.authorization.k8s.io

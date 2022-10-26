@@ -1,0 +1,39 @@
+type: module
+category: helm-chart
+name: 0072-iis module
+description: this is the 0072-iis module to install
+newParent: true
+registry-reference: base-registry
+installOverride: installOverride.yaml
+upgradeOverride: upgradeOverride.yaml
+helmUpgradeForce: false
+forceUpgradeOnFailedRelease: true
+scale:
+- large.yaml
+- medium.yaml
+- small.yaml
+images:
+- name: cassandra-ubi8-x86_64
+  tag: 3.11.13_b1210_48daa394147b
+- name: is-services-image
+  tag: b443-CP4D-3_5_0-b315
+- name: is-en-compute-image
+  tag: b443-CP4D-3_5_0-b315
+- name: is-db2xmeta-image
+  tag: b443-CP4D-3_5_0-b315
+- name: is-engine-image
+  tag: b443-CP4D-3_5_0-b315
+- name: wkc-ugconfig
+  tag: 3.5.204
+- name: wkc-init-container
+  tag: 1.0.506
+- name: kafka-ubi8-x86_64
+  tag: 2.13-3.2.0_b1210_48daa394147b
+- name: solr-ubi8-x86_64
+  tag: 8.11.2_b1210_48daa394147b
+- name: zookeeper-ubi8-x86_64
+  tag: 3.7.1_b1210_48daa394147b
+chart: iis-3.5.1664.tgz
+md5: 4a74ef95c7496eeea6244df7fa22fc24
+timeout: 150
+releaseName: 0072-iis
