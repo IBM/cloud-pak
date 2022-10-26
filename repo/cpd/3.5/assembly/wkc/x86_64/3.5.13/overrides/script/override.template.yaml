@@ -1,0 +1,81 @@
+#FSTYPE nfs
+#UPTYPE CPD_250_301_350
+iis-chart:
+  sampleData:
+    volumeClaim:
+      name: "sampledata-pvc"
+      size: OC_REPLACE|0072-iis-sampledata-pvc|NAME:.spec.resources.requests.storage
+
+omag:
+  omag:
+    volumeClaim:
+      accessMode: OC_REPLACE|0073-ug-omag-pvc|NAME:.status.accessModes[0]
+
+#UPTYPE CPD_300_301_350
+solr-chart:
+  solr:
+    volumeClaim:
+      accessMode: OC_REPLACE|solr-data-solr-0|NAME:.status.accessModes[0]
+
+iis-chart:
+  xmetarepoVolumeInfo:
+    volumeClaim:
+      accessMode: OC_REPLACE|0072-iis-xmeta-pvc|NAME:.status.accessModes[0]
+
+  serviceVolumeInfo:
+    volumeClaim:
+      accessMode: OC_REPLACE|0072-iis-dedicatedservices-pvc|NAME:.status.accessModes[0]
+
+
+#FSTYPE portworx
+#UPTYPE CPD_250_301_350,CPD_300_301_350,CPD_301_350,CPD_350
+solr-chart:
+  solr:
+    volumeClaim:
+      accessMode: OC_REPLACE|solr-data-solr-0|NAME:.status.accessModes[0]
+
+wdp-db2:
+  dataVolume:
+    storageClassName: OC_REPLACE|0071-wkc-p-data-stor-wdp-db2-0|NAME:.spec.storageClassName
+
+#FSTYPE portworx
+#UPTYPE CPD_250_301_350
+iis-chart:
+  sampleData:
+    volumeClaim:
+      name: "sampledata-pvc"
+      size: OC_REPLACE|0072-iis-sampledata-pvc|NAME:.spec.resources.requests.storage
+    
+  xmetarepoVolumeInfo:
+#UPTYPE CPD_250_301_350
+    volumeClaim:
+      storageClassName: OC_REPLACE|0072-iis-xmeta-pvc|NAME:.spec.storageClassName
+
+omag:
+  omag:
+    volumeClaim:
+      accessMode: OC_REPLACE|0073-ug-omag-pvc|NAME:.status.accessModes[0]
+
+#FSTYPE portworx
+#UPTYPE CPD_300_301_350
+iis-chart:
+  serviceVolumeInfo:
+    volumeClaim:
+      accessMode: OC_REPLACE|0072-iis-dedicatedservices-pvc|NAME:.status.accessModes[0]
+
+  xmetarepoVolumeInfo:
+    volumeClaim:
+      storageClassName: OC_REPLACE|0072-iis-xmeta-pvc|NAME:.spec.storageClassName
+
+#FSTYPE ocs
+#UPTYPE CPD_300_301_350
+solr-chart:
+  solr:
+    volumeClaim:
+      accessMode: OC_REPLACE|solr-data-solr-0|NAME:.status.accessModes[0]
+
+iis-chart:
+  serviceVolumeInfo:
+    volumeClaim:
+      accessMode: OC_REPLACE|0072-iis-dedicatedservices-pvc|NAME:.status.accessModes[0]
+      

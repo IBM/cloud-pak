@@ -1,0 +1,29 @@
+###############################################################################
+## IIS installation overrides for CP4D 3.5.0
+###############################################################################
+
+solr-chart:
+  solr:
+    volumeClaim:
+      storageClassName: "ocs-storagecluster-cephfs"
+      overrideStorageClass: true
+
+kafka-chart:
+  kafka:
+    volumeClaim:
+      storageClassName: "ocs-storagecluster-ceph-rbd"
+      overrideStorageClass: true
+
+cassandra-chart:
+  cassandra:
+    volumeClaim:
+      storageClassName: "ocs-storagecluster-ceph-rbd"
+      overrideStorageClass: true
+
+iis-chart:
+  xmetarepoVolumeInfo:
+    support4kDevice: true
+    volumeClaim:
+      storageClassName: "ocs-storagecluster-ceph-rbd"
+      overrideStorageClass: true
+
