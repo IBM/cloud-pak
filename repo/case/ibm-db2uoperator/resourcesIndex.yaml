@@ -1070,6 +1070,7 @@ containerImages:
   tag: 4903-dev
 - caseVersions:
   - 5.0.0
+  - 5.1.0
   category: catalog
   digest: sha256:e6555046b0974d2590015c5feda291332ef40ed25ae133e25cc177bd26da875d
   image: cpopen/ibm-db2uoperator-catalog
@@ -1080,6 +1081,7 @@ containerImages:
   tag: 5167-dev-s390x
 - caseVersions:
   - 5.0.0
+  - 5.1.0
   category: catalog
   digest: sha256:523dd4ac006b915b29be495cda1769053b023efb2e19b21eb089948abb881187
   image: cpopen/ibm-db2uoperator-catalog
@@ -1090,6 +1092,7 @@ containerImages:
   tag: 5167-dev-ppc64le
 - caseVersions:
   - 5.0.0
+  - 5.1.0
   category: catalog
   digest: sha256:a36efec552a732aa7e1be82ca4e507752c7931c32df9b0521eb9dfdab097246d
   image: cpopen/ibm-db2uoperator-catalog
@@ -1100,9 +1103,48 @@ containerImages:
   tag: 5167-dev-amd64
 - caseVersions:
   - 5.0.0
+  - 5.1.0
   category: catalog
   digest: sha256:d8b79c87951e3c6659a5901f8e85136cc803b8553e7c05e77a1031704906519b
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 5167-dev
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:d27062068a68c3fd2ae86005450a5c108cdffa3bc99ec9fd0fd170fc8b1f0433
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5238-dev-s390x
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:15e501a32e590814c7c09aaf92a855c8657a358e63b83d229a89ca29b5b95b7a
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5238-dev-ppc64le
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:9d7855488c1b039dc9501b213f6945e21bda48553e252e451382deb0858e6653
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5238-dev-amd64
+- caseVersions:
+  - 5.1.0
+  category: catalog
+  digest: sha256:aa60d3f1ed380e94b41e58c77b40275fb2e0f27c79e664fe4f71f8f93ab9059f
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5238-dev
