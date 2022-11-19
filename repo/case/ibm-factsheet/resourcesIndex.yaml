@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:a3a3003c13749573e75ac6ea163f486709bf075015487b687ea7bdc704d63494
+  image: cpopen/ibm-cpd-factsheet-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.594-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:8e454628911eaf93bc566247846ebb8b5b44a87a9f9c51fcdd6d861af479acf3
+  image: cpopen/ibm-cpd-factsheet-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.594-ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:3867966989e5abb10247ba81840bbfddf3164002023bf465e22c8ea09b9e9e55
+  image: cpopen/ibm-cpd-factsheet-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.594
