@@ -1,0 +1,49 @@
+apiVersion: v1
+case:
+  appVersion: 4.6.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data Watson Pipelines
+  displayDescription: ""
+  displayName: IBM Cloud Pak for Data Watson Pipelines
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.6license.txt
+      url: https://ibm.biz/BdP2QA
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.6license.txt
+      url: https://ibm.biz/BdP2Qu
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-ws-pipelines
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 6.0.0+20221114.171217.2087
+  webPage: https://www.ibm.com
+created: 2022-11-19T00:35:18.27204125+0000
+digest: sha256:809ac3e48059fa4d439944f9dc46f5710612401f91547bb48c552fdf51127476
