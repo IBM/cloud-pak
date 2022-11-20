@@ -23,6 +23,7 @@ images:
   - image: cp/cpd/ds-canvas
   - image: cp/cpd/ds-cas-lite
   - image: cp/cpd/ds-codegen
+  - image: cp/cpd/ds-dataservice
   - image: cp/cpd/ds-flows
   - image: cp/cpd/ds-migration
   - image: cp/cpd/ds-nginx-proxy
@@ -180,10 +181,31 @@ images:
   - image: ibmcom/db2u-operator
   - image: ibmcom/ibm-db2uoperator-bundle
   - image: ibmcom/ibm-db2uoperator-catalog
+  - image: icr.io/cpopen/db2u/db2u
+  - image: icr.io/cpopen/db2u/db2u.auxiliary.auth
+  - image: icr.io/cpopen/db2u/db2u.dv.api
+  - image: icr.io/cpopen/db2u/db2u.dv.caching
+  - image: icr.io/cpopen/db2u/db2u.dv.utils
+  - image: icr.io/cpopen/db2u/db2u.graph
+  - image: icr.io/cpopen/db2u/db2u.hurricane
+  - image: icr.io/cpopen/db2u/db2u.instdb
+  - image: icr.io/cpopen/db2u/db2u.instdb.restricted
+  - image: icr.io/cpopen/db2u/db2u.mustgather
+  - image: icr.io/cpopen/db2u/db2u.qrep
+  - image: icr.io/cpopen/db2u/db2u.rest
+  - image: icr.io/cpopen/db2u/db2u.restricted
+  - image: icr.io/cpopen/db2u/db2u.tools
+  - image: icr.io/cpopen/db2u/db2u.update.image
+  - image: icr.io/cpopen/db2u/db2u.veleroplugin
+  - image: icr.io/cpopen/db2u/db2u.watsonquery
+  - image: icr.io/cpopen/db2u/etcd
   - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/ds-ent-operator
   - image: icr.io/cpopen/ds-ent-operator-bundle
   - image: icr.io/cpopen/ds-ent-operator-catalog
+  - image: icr.io/cpopen/ds-operator
+  - image: icr.io/cpopen/ds-operator-bundle
+  - image: icr.io/cpopen/ds-operator-catalog
   - image: icr.io/cpopen/fdb-apple-operator
   - image: icr.io/cpopen/fdb-apple-operator-bundle
   - image: icr.io/cpopen/fdb-ibm-operator
