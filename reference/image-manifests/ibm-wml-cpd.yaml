@@ -37,6 +37,7 @@ images:
   - image: cp/cpd/redis
   - image: cp/cpd/runtime-assemblies-operator
   - image: cp/cpd/runtime-manager-api
+  - image: cp/cpd/serving-runtime-sidecar
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
   - image: cp/cpd/wdp-connect-connection
@@ -54,10 +55,12 @@ images:
   - image: cp/cpd/wml-deployment-agent
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
+  - image: cp/cpd/wml-deployment-runtime-py310-1
   - image: cp/cpd/wml-deployment-runtime-py37-1
   - image: cp/cpd/wml-deployment-runtime-py37-2
   - image: cp/cpd/wml-deployment-runtime-py38-1
   - image: cp/cpd/wml-deployment-runtime-py39-1
+  - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
   - image: cp/cpd/wml-federated-learning
   - image: cp/cpd/wml-main
@@ -76,16 +79,21 @@ images:
   - image: cp/cpd/wml-rt-bd-spss18.1
   - image: cp/cpd/wml-rt-hybrid
   - image: cp/cpd/wml-rt-init-dep-service-py
+  - image: cp/cpd/wml-rt-mc3-py310-g1-ms
   - image: cp/cpd/wml-rt-mc3-py37-g1-ms
   - image: cp/cpd/wml-rt-mc3-py37-g2-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms-shadow
   - image: cp/cpd/wml-rt-mc3-py39-g1-ms
+  - image: cp/cpd/wml-rt-mc3-py39-g2-ms
   - image: cp/cpd/wml-rt-mllib2.4
   - image: cp/cpd/wml-rt-mllib3.0
   - image: cp/cpd/wml-rt-mllib3.2
+  - image: cp/cpd/wml-rt-mllib3.3
   - image: cp/cpd/wml-rt-od-spss18.1
+  - image: cp/cpd/wml-rt-r42-py39-g1
   - image: cp/cpd/wml-rt-rshiny0.1
+  - image: cp/cpd/wml-rt-rshiny0.1-r4.2
   - image: cp/cpd/wmltrainingservicehydra
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle

@@ -77,6 +77,7 @@ images:
   - image: cp/cpd/runtime-assemblies-operator
   - image: cp/cpd/runtime-manager-api
   - image: cp/cpd/runtimes-init-job
+  - image: cp/cpd/serving-runtime-sidecar
   - image: cp/cpd/shaper-preinstall
   - image: cp/cpd/shaper-server
   - image: cp/cpd/spaces
@@ -110,10 +111,12 @@ images:
   - image: cp/cpd/wml-deployment-agent
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
+  - image: cp/cpd/wml-deployment-runtime-py310-1
   - image: cp/cpd/wml-deployment-runtime-py37-1
   - image: cp/cpd/wml-deployment-runtime-py37-2
   - image: cp/cpd/wml-deployment-runtime-py38-1
   - image: cp/cpd/wml-deployment-runtime-py39-1
+  - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
   - image: cp/cpd/wml-federated-learning
   - image: cp/cpd/wml-main
@@ -139,6 +142,7 @@ images:
   - image: cp/cpd/wml-rt-bd-spss18.1
   - image: cp/cpd/wml-rt-hybrid
   - image: cp/cpd/wml-rt-init-dep-service-py
+  - image: cp/cpd/wml-rt-mc3-py310-g1-ms
   - image: cp/cpd/wml-rt-mc3-py368-g2
   - image: cp/cpd/wml-rt-mc3-py379-g1
   - image: cp/cpd/wml-rt-mc3-py379-g2
@@ -147,12 +151,16 @@ images:
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms-shadow
   - image: cp/cpd/wml-rt-mc3-py39-g1-ms
+  - image: cp/cpd/wml-rt-mc3-py39-g2-ms
   - image: cp/cpd/wml-rt-mllib2.3
   - image: cp/cpd/wml-rt-mllib2.4
   - image: cp/cpd/wml-rt-mllib3.0
   - image: cp/cpd/wml-rt-mllib3.2
+  - image: cp/cpd/wml-rt-mllib3.3
   - image: cp/cpd/wml-rt-od-spss18.1
+  - image: cp/cpd/wml-rt-r42-py39-g1
   - image: cp/cpd/wml-rt-rshiny0.1
+  - image: cp/cpd/wml-rt-rshiny0.1-r4.2
   - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wml-ubi-ppc-autoai_kb_3.0-py3612-g1-rt
   - image: cp/cpd/wml-ubi-ppc-autoai_kb_3.1-py379-g1-rt
@@ -160,18 +168,25 @@ images:
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.0-py3612-g1-rt
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.1-py379-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py379-g1-rt
+  - image: cp/cpd/wslocal-init-nlp22.1
+  - image: cp/cpd/wslocal-init-py310gpu
+  - image: cp/cpd/wslocal-init-py310main
   - image: cp/cpd/wslocal-init-py37cuda
   - image: cp/cpd/wslocal-init-py37main
   - image: cp/cpd/wslocal-init-py38cuda
   - image: cp/cpd/wslocal-init-py38main
   - image: cp/cpd/wslocal-init-py39cuda
+  - image: cp/cpd/wslocal-init-py39gpu
   - image: cp/cpd/wslocal-init-py39main
   - image: cp/cpd/wslocal-init-r36
   - image: cp/cpd/wslocal-init-r36py39t1
+  - image: cp/cpd/wslocal-init-r42
   - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
   - image: cp/cpd/wslocal-ppc-runtime-py37ppc
   - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-py310gpu
+  - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py36cuda
   - image: cp/cpd/wslocal-runtime-py36main
   - image: cp/cpd/wslocal-runtime-py37cuda
@@ -180,9 +195,11 @@ images:
   - image: cp/cpd/wslocal-runtime-py38cuda
   - image: cp/cpd/wslocal-runtime-py38main
   - image: cp/cpd/wslocal-runtime-py39cuda
+  - image: cp/cpd/wslocal-runtime-py39gpu
   - image: cp/cpd/wslocal-runtime-py39main
   - image: cp/cpd/wslocal-runtime-r36
   - image: cp/cpd/wslocal-runtime-r36py39t1
+  - image: cp/cpd/wslocal-runtime-r42
   - image: cp/cpd/wslocal-runtime-rstudio
   - image: cp/cpd/wslocal-runtime-shiny
   - image: cp/cpd/wslocal-x86-runtime-py36ce162
