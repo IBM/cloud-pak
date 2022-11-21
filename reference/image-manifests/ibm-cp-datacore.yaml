@@ -23,6 +23,7 @@ images:
   - image: cp/cpd/aios-payload-logging-service-api
   - image: cp/cpd/aios-redis
   - image: cp/cpd/aios-zoo-keeper
+  - image: cp/cpd/any-sequencer
   - image: cp/cpd/apimgmt
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/asset-files-api-ppc64le
@@ -56,6 +57,7 @@ images:
   - image: cp/cpd/cp4d-ws-secrets-job
   - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
   - image: cp/cpd/cp/cpd/streams-operations-el7
+  - image: cp/cpd/cpdctl
   - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator-init
@@ -103,6 +105,7 @@ images:
   - image: cp/cpd/ds-canvas
   - image: cp/cpd/ds-cas-lite
   - image: cp/cpd/ds-codegen
+  - image: cp/cpd/ds-dataservice
   - image: cp/cpd/ds-ent-entitlement-image
   - image: cp/cpd/ds-flows
   - image: cp/cpd/ds-migration
@@ -305,6 +308,7 @@ images:
   - image: cp/cpd/notebooks-job-manager
   - image: cp/cpd/odf-fast-analyzer-kube
   - image: cp/cpd/omag
+  - image: cp/cpd/opa
   - image: cp/cpd/opencontent-common-utils
   - image: cp/cpd/opencontent-icp-cert-gen-1
   - image: cp/cpd/opencontent-postgres-stolon
@@ -313,12 +317,15 @@ images:
   - image: cp/cpd/osg-db
   - image: cp/cpd/osg-flaskapi
   - image: cp/cpd/osg-ui
+  - image: cp/cpd/pa
   - image: cp/cpd/palantir-cloudpak
+  - image: cp/cpd/pipelinecleaner
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
   - image: cp/cpd/portal-common-api-ppc64le
   - image: cp/cpd/portal-dashboards
   - image: cp/cpd/portal-dashboards-ppc64le
+  - image: cp/cpd/portal-hadoop
   - image: cp/cpd/portal-job-manager
   - image: cp/cpd/portal-job-manager-ppc64le
   - image: cp/cpd/portal-main
@@ -327,6 +334,7 @@ images:
   - image: cp/cpd/portal-ml-dl-ppc64le
   - image: cp/cpd/portal-notifications
   - image: cp/cpd/portal-notifications-ppc64le
+  - image: cp/cpd/portal-pipelines
   - image: cp/cpd/portal-projects
   - image: cp/cpd/postgresql-db-10.7
   - image: cp/cpd/postgresql-mgmt-10.7
@@ -344,9 +352,12 @@ images:
   - image: cp/cpd/privatecloud-utils-api
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
+  - image: cp/cpd/run-bash-script
   - image: cp/cpd/runtime-assemblies-operator
   - image: cp/cpd/runtime-manager-api
   - image: cp/cpd/runtimes-init-job
+  - image: cp/cpd/send-email
+  - image: cp/cpd/serving-runtime-sidecar
   - image: cp/cpd/shaper-preinstall
   - image: cp/cpd/shaper-server
   - image: cp/cpd/shop4info-event-consumer
@@ -393,7 +404,15 @@ images:
   - image: cp/cpd/streams-service-provider
   - image: cp/cpd/streams-spss-install-el7
   - image: cp/cpd/streams-sws-el7
+  - image: cp/cpd/taskresultcache
+  - image: cp/cpd/tekton-extensions-controller
+  - image: cp/cpd/tekton-extensions-webhook
+  - image: cp/cpd/tekton-pipelines-controller
+  - image: cp/cpd/tekton-pipelines-entrypoint
+  - image: cp/cpd/tekton-pipelines-nop
+  - image: cp/cpd/tekton-pipelines-webhook
   - image: cp/cpd/term-assignment-service
+  - image: cp/cpd/ubi-minimal-cpd
   - image: cp/cpd/unified-console
   - image: cp/cpd/unified-console-influxdb
   - image: cp/cpd/unified-console-utils-api
@@ -461,10 +480,12 @@ images:
   - image: cp/cpd/wml-deployment-agent
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
+  - image: cp/cpd/wml-deployment-runtime-py310-1
   - image: cp/cpd/wml-deployment-runtime-py37-1
   - image: cp/cpd/wml-deployment-runtime-py37-2
   - image: cp/cpd/wml-deployment-runtime-py38-1
   - image: cp/cpd/wml-deployment-runtime-py39-1
+  - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
   - image: cp/cpd/wml-edi-imd
   - image: cp/cpd/wml-edi-isd
@@ -520,6 +541,7 @@ images:
   - image: cp/cpd/wml-rt-bd-spss18.1
   - image: cp/cpd/wml-rt-hybrid
   - image: cp/cpd/wml-rt-init-dep-service-py
+  - image: cp/cpd/wml-rt-mc3-py310-g1-ms
   - image: cp/cpd/wml-rt-mc3-py368-g2
   - image: cp/cpd/wml-rt-mc3-py379-g1
   - image: cp/cpd/wml-rt-mc3-py379-g2
@@ -528,12 +550,16 @@ images:
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms-shadow
   - image: cp/cpd/wml-rt-mc3-py39-g1-ms
+  - image: cp/cpd/wml-rt-mc3-py39-g2-ms
   - image: cp/cpd/wml-rt-mllib2.3
   - image: cp/cpd/wml-rt-mllib2.4
   - image: cp/cpd/wml-rt-mllib3.0
   - image: cp/cpd/wml-rt-mllib3.2
+  - image: cp/cpd/wml-rt-mllib3.3
   - image: cp/cpd/wml-rt-od-spss18.1
+  - image: cp/cpd/wml-rt-r42-py39-g1
   - image: cp/cpd/wml-rt-rshiny0.1
+  - image: cp/cpd/wml-rt-rshiny0.1-r4.2
   - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wmltrainingservicehydra-ppc64le-ubi
   - image: cp/cpd/wml-ubi-ppc-ac201903-py368-g2-rt
@@ -549,18 +575,25 @@ images:
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.1-py379-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py368-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py379-g1-rt
+  - image: cp/cpd/wslocal-init-nlp22.1
+  - image: cp/cpd/wslocal-init-py310gpu
+  - image: cp/cpd/wslocal-init-py310main
   - image: cp/cpd/wslocal-init-py37cuda
   - image: cp/cpd/wslocal-init-py37main
   - image: cp/cpd/wslocal-init-py38cuda
   - image: cp/cpd/wslocal-init-py38main
   - image: cp/cpd/wslocal-init-py39cuda
+  - image: cp/cpd/wslocal-init-py39gpu
   - image: cp/cpd/wslocal-init-py39main
   - image: cp/cpd/wslocal-init-r36
   - image: cp/cpd/wslocal-init-r36py39t1
+  - image: cp/cpd/wslocal-init-r42
   - image: cp/cpd/wslocal-ppc-runtime-ppcpy36
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
   - image: cp/cpd/wslocal-ppc-runtime-py37ppc
   - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-py310gpu
+  - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py36cuda
   - image: cp/cpd/wslocal-runtime-py36main
   - image: cp/cpd/wslocal-runtime-py37cuda
@@ -569,11 +602,16 @@ images:
   - image: cp/cpd/wslocal-runtime-py38cuda
   - image: cp/cpd/wslocal-runtime-py38main
   - image: cp/cpd/wslocal-runtime-py39cuda
+  - image: cp/cpd/wslocal-runtime-py39gpu
   - image: cp/cpd/wslocal-runtime-py39main
   - image: cp/cpd/wslocal-runtime-r36
   - image: cp/cpd/wslocal-runtime-r36py39t1
+  - image: cp/cpd/wslocal-runtime-r42
   - image: cp/cpd/wslocal-runtime-rstudio
+  - image: cp/cpd/wslocal-runtime-rstudio-r36
+  - image: cp/cpd/wslocal-runtime-rstudio-r42
   - image: cp/cpd/wslocal-runtime-shiny
+  - image: cp/cpd/wslocal-runtime-shiny-r42
   - image: cp/cpd/wslocal-x86-runtime-cudapy36
   - image: cp/cpd/wslocal-x86-runtime-py36ce162
   - image: cp/cpd/wslocal-x86-runtime-py36ce162cuda
@@ -583,6 +621,8 @@ images:
   - image: cp/cpd/wslocal-x86-runtime-r36
   - image: cp/cpd/wslocal-x86-runtime-rstudio
   - image: cp/cpd/ws-notebooks-ui
+  - image: cp/cpd/wsp-kubectl
+  - image: cp/cpd/wsp-ts
   - image: cp/cpd/zen-admin
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-content
@@ -757,6 +797,9 @@ images:
   - image: icr.io/cpopen/ds-ent-operator
   - image: icr.io/cpopen/ds-ent-operator-bundle
   - image: icr.io/cpopen/ds-ent-operator-catalog
+  - image: icr.io/cpopen/ds-operator
+  - image: icr.io/cpopen/ds-operator-bundle
+  - image: icr.io/cpopen/ds-operator-catalog
   - image: icr.io/cpopen/fdb-apple-operator
   - image: icr.io/cpopen/fdb-apple-operator-bundle
   - image: icr.io/cpopen/fdb-ibm-operator
@@ -799,6 +842,9 @@ images:
   - image: icr.io/cpopen/ibm-cpd-dv-operator
   - image: icr.io/cpopen/ibm-cpd-dv-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-dv-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-factsheet-operator
+  - image: icr.io/cpopen/ibm-cpd-factsheet-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-factsheet-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-hadoop-operator
   - image: icr.io/cpopen/ibm-cpd-hadoop-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-hadoop-operator-catalog
@@ -829,6 +875,9 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ws-operator
   - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator
+  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
