@@ -96,6 +96,7 @@ images:
   - image: cp/mas/hook-sls-migration
   - image: cp/mas/hook-trackdeploy
   - image: cp/mas-hputilities/hook-ca-hputilities
+  - image: cp/mas-hputilities/hpu-monitor
   - image: cp/mas-hputilities/hputilities-model-engine
   - image: cp/mas-hputilities/hputilities-model-engines
   - image: cp/mas-hputilities/hputilities-workspaceagent
@@ -115,6 +116,7 @@ images:
   - image: cp/mas/ibm-mas-cfg-watsonstudio
   - image: cp/mas/ibm-mas-coreidp
   - image: cp/mas/ibm-mas-ws
+  - image: cp/mas/importuser
   - image: cp/mas/internalapi
   - image: cp/mas/iot-operator
   - image: cp/mas/kubectl
@@ -137,8 +139,12 @@ images:
   - image: cp/mas/workspace-coordinator
   - image: cp/monitor/as-library
   - image: cp/monitor/as-ui
+  - image: cp/monitor/db2-dataingest-datameter
   - image: cp/monitor/db2-dataingest-inputerrorprocessor
   - image: cp/monitor/db2-dataingest-inputprocessor
+  - image: cp/monitor/db2-dataingest-outputerrorprocessor
+  - image: cp/monitor/db2-dataingest-outputprocessor
+  - image: cp/monitor/db2-dataingest-usagereport
   - image: cp/monitor/db-base
   - image: cp/monitor/entityid-population
   - image: cp/monitor/ft-datamapping
@@ -146,6 +152,7 @@ images:
   - image: cp/monitor/hook-db-monitor
   - image: cp/monitor/ibm-mas-monitor-ws
   - image: cp/monitor/monitor-workspaceagent
+  - image: cp/monitor/pipeline2-sync-scheduler
   - image: cp/monitor/pipeline-engine
   - image: cp/monitor/rest-datalake
   - image: cp/monitor/rest-dscmanager
@@ -167,6 +174,7 @@ images:
   - image: cp/optimizer/admin-ui
   - image: cp/optimizer/api
   - image: cp/optimizer/execution-service
+  - image: cp/optimizer/ibm-mas-optimizer-appstatus
   - image: cp/optimizer/ibm-mas-optimizer-ws
   - image: cp/optimizer/usersyncagent
   - image: cp/optimizer/workspace-init
@@ -211,6 +219,7 @@ images:
   - image: cp/visualinspection/vision-event-service
   - image: cp/visualinspection/vision-keycloak
   - image: cp/visualinspection/vision-logstash
+  - image: cp/visualinspection/vision-migrate
   - image: cp/visualinspection/vision-model-conversion
   - image: cp/visualinspection/vision-models
   - image: cp/visualinspection/vision-mongodb
@@ -219,6 +228,7 @@ images:
   - image: cp/visualinspection/vision-service
   - image: cp/visualinspection/vision-taskanaly
   - image: cp/visualinspection/vision-ui
+  - image: cp/visualinspection/vision-usage-reporter
   - image: cp/visualinspection/vision-useragent
   - image: cp/visualinspection/vision-video-microservice
   - image: cp/visualinspection/vision-workspaceagent
