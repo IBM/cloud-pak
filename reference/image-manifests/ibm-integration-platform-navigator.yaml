@@ -1,5 +1,5 @@
 source: ibm-integration-platform-navigator-bundle/case/ibm-integration-platform-navigator/case.yaml
-description: "The CP4I Platform Navigator allows seamless access and management of any IBM Cloud Pak for Integration components you have running."
+description: "IBM Cloud Pak for Integration allows seamless access and management of any integration components you have running."
 images:
   - image: cp/iaf-health-service
   - image: cp/iaf-ui-customization
@@ -33,6 +33,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.0.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
@@ -103,6 +104,7 @@ images:
   - image: icr.io/cpopen/ibm-integration-platform-navigator-catalog
   - image: icr.io/cpopen/ibm-integration-platform-navigator-operator
   - image: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle
+  - image: icr.io/cpopen/ibm-integration-upgrade-must-gather
   - image: icr.io/cpopen/ibm-licensing-operator
   - image: icr.io/cpopen/ibm-licensing-operator-bundle
   - image: icr.io/cpopen/ibm-management-ingress-operator
