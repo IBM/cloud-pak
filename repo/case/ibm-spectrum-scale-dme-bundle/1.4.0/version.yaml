@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.6.0
+  catalogs:
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Represents a deployment of a container native IBM Spectrum Scale cluster
+    with the Data Management edition
+  displayDescription: Represents a deployment of a container native IBM Spectrum Scale
+    cluster
+  displayName: IBM Spectrum Scale Container Native Storage Version
+  icons: []
+  licenses:
+    spectrumscale:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Spectrum Scale Container Native Data Management Edition,
+          version 5.1.6.0
+        displayName: IBM Spectrum Scale Container Native Data Management Edition
+      ref: license
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?l=en&popup=y&li_formnum=L-YYMF-TT8UUJ&title=IBM%20License%20Agreement
+  name: ibm-spectrum-scale-dme-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.4.0
+  webPage: https://www.ibm.com/docs/en/scalecontainernative
+created: 2022-12-13T21:19:37.47416183+0000
+digest: sha256:3728d7b29d247dc5f8524635ec93cb19ada8350981c8954f75f895bb5a17ebd0
