@@ -1,6 +1,7 @@
 source: ibm-aiopsedge-bundle/case/ibm-aiopsedge-bundle/case.yaml
 description: "This operator manages the AIOpsEdge components of the IBM Watson for AIOps v3.x product."
 images:
+  - image: cp/cp4waiops/aiops-logs-connector
   - image: cp/cp4waiops/camel-integrations
   - image: cp/cp4waiops/connector-manager
   - image: cp/cp4waiops/cp4waiops-connectors
@@ -16,6 +17,7 @@ images:
   - image: cp/cp4waiops/ibm-grpc-nrelic-connector
   - image: cp/cp4waiops/ibm-grpc-snow-connector
   - image: cp/cp4waiops/ibm-grpc-splunk-connector
+  - image: cp/cp4waiops/ibm-grpc-zabbix-connector
   - image: cp/cp4waiops/ibm-vault
   - image: cp/cp4waiops/ibm-vault-k8s
   - image: cp/cp4waiops/instana-topology
@@ -41,6 +43,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.0.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
