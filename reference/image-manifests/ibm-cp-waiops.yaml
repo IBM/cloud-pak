@@ -20,6 +20,7 @@ images:
   - image: cp/cp4waiops/aiops-base-ui
   - image: cp/cp4waiops/aiops-dashboard-api
   - image: cp/cp4waiops/aiops-dashboard-ui
+  - image: cp/cp4waiops/aiops-logs-connector
   - image: cp/cp4waiops/aiops-operators-catalog
   - image: cp/cp4waiops/ai-platform-api-server
   - image: cp/cp4waiops/alert-details-service
@@ -47,6 +48,7 @@ images:
   - image: cp/cp4waiops/cp4waiops-connectors
   - image: cp/cp4waiops/databroker-s3
   - image: cp/cp4waiops/datalayer-cem-service
+  - image: cp/cp4waiops/data-quality-checker
   - image: cp/cp4waiops/ea-asm-mime
   - image: cp/cp4waiops/ea-dr-coordinator-service
   - image: cp/cp4waiops/ea-events-tooling
@@ -95,6 +97,7 @@ images:
   - image: cp/cp4waiops/ibm-grpc-nrelic-connector
   - image: cp/cp4waiops/ibm-grpc-snow-connector
   - image: cp/cp4waiops/ibm-grpc-splunk-connector
+  - image: cp/cp4waiops/ibm-grpc-zabbix-connector
   - image: cp/cp4waiops/ibm-model-train-operator
   - image: cp/cp4waiops/ibm-stolon
   - image: cp/cp4waiops/ibm-vault
@@ -175,6 +178,7 @@ images:
   - image: cp/cp4waiops/nasm-sdconap-observer
   - image: cp/cp4waiops/nasm-search-service
   - image: cp/cp4waiops/nasm-servicenow-observer
+  - image: cp/cp4waiops/nasm-sevone-observer
   - image: cp/cp4waiops/nasm-status-service
   - image: cp/cp4waiops/nasm-taddm-observer
   - image: cp/cp4waiops/nasm-topology-service
@@ -219,6 +223,7 @@ images:
   - image: cp/cp4waiops/policy-registry-service
   - image: cp/cp4waiops/probable-cause
   - image: cp/cp4waiops/ratelimiter
+  - image: cp/cp4waiops/schedule-service
   - image: cp/cp4waiops/secure-tunnel
   - image: cp/cp4waiops/secure-tunnel-ui
   - image: cp/cp4waiops/servicemonitor
@@ -316,6 +321,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.0.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
