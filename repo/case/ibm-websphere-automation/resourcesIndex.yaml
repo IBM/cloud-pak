@@ -130,3 +130,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.4.5
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:d9f43467be8872932b5d9ddfa6826f767b1226896b37961320616d0ac88fc654
+  image: cpopen/websphere-automation-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.5.0-amd64
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:f185b9817ebb582fd2960454141d1e0b2fd1cf8fa1ba859fe3b9f9ae32072aa8
+  image: cpopen/websphere-automation-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.5.0-s390x
+- caseVersions:
+  - 1.5.0
+  category: catalog
+  digest: sha256:b9fc753b1db0cc9d2df12a0b1be9b191dc61e8969273d2e88b94bd09276b160e
+  image: cpopen/websphere-automation-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.5.0
