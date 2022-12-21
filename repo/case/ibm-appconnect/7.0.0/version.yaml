@@ -1,0 +1,36 @@
+apiVersion: v1
+case:
+  appVersion: 12.0.7.0-r2
+  catalogs:
+    integration: {}
+  certifications:
+    ibmccscp: {}
+  description: IBM AppConnect Operator
+  displayDescription: IBM AppConnect Operator
+  displayName: IBM AppConnect Operator
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Integration License Agreement
+        displayName: Cloud Pak for Integration License Agreement
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    name: ibmAppConnect
+  name: ibm-appconnect
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 7.0.0
+  webPage: https://www.ibm.com
+created: 2022-12-21T14:22:59.89605225+0000
+digest: sha256:85ac28a726b14e8bb7861a30c03dfe913450d7421650a1fc5fce9f7268888139
