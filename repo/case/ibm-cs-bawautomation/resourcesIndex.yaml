@@ -839,3 +839,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: baw-22016
+- caseVersions:
+  - 2.2.12
+  category: catalog
+  digest: sha256:dd29fc77c25cc92e4f1c07ffa5095be944501ab6657ef55e3f7b88bc0b001b0c
+  image: cpopen/ibm-cs-bawautomation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: baw210316-linux.amd64
+- caseVersions:
+  - 2.2.12
+  category: catalog
+  digest: sha256:44a232feee159014439757b58725ded664e662284830694045a7808fa5be1da3
+  image: cpopen/ibm-cs-bawautomation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: baw210316-linux.s390x
+- caseVersions:
+  - 2.2.12
+  category: catalog
+  digest: sha256:d5ddf2a52a8f8154a471de0e4ac266160cb7fcfe1b21cf4c83f916a38008639a
+  image: cpopen/ibm-cs-bawautomation-catalog
+  platform:
+    imagetype: manifestList
+  tag: baw210316
