@@ -51,3 +51,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v1.0.2-20220731.150000
+- caseVersions:
+  - 1.0.4
+  category: catalog
+  digest: sha256:6672e188b9c3f7274b7ebf4498b34f951bc20ea86a8d72367eab363f1722d2ed
+  image: cpopen/ibm-zcon-zosconnect-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.3-20221831.150000-amd64
+- caseVersions:
+  - 1.0.4
+  category: catalog
+  digest: sha256:dc1b9846d7994450e74b9cde2e621f8c1d98cdf1debd591db291785dd3fc6446
+  image: cpopen/ibm-zcon-zosconnect-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.3-20221831.150000-s390x
+- caseVersions:
+  - 1.0.4
+  category: catalog
+  digest: sha256:6f02ecef46020bcd21bdd24a01f435023d5fc3943972ef0d9769d5276e178e76
+  image: cpopen/ibm-zcon-zosconnect-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.3-20221831.150000
