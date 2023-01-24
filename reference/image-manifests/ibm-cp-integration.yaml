@@ -112,6 +112,7 @@ images:
   - image: cp/apic/ibm-apiconnect-portal-remote
   - image: cp/apic/ibm-apiconnect-portal-web
   - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
+  - image: cp/appc/ace
   - image: cp/appc/acecc-connector-auth-service-prod
   - image: cp/appc/acecc-content-server-prod
   - image: cp/appc/acecc-couchdb3-prod
@@ -532,15 +533,19 @@ images:
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
+  - image: cp/redis-db-6.0.16
   - image: cp/redis-mgmt-5.0.14
   - image: cp/redis-mgmt-5.0.5
   - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-mgmt-6.0.16
   - image: cp/redis-proxy-5.0.14
   - image: cp/redis-proxy-5.0.5
   - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxy-6.0.16
   - image: cp/redis-proxylog-5.0.14
   - image: cp/redis-proxylog-5.0.5
   - image: cp/redis-proxylog-5.0.9
+  - image: cp/redis-proxylog-6.0.16
   - image: cp/redis-telemetry-5.0.5
   - image: ibmcom/acecc-content-server
   - image: ibmcom/acecc-dashboard
@@ -647,6 +652,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.0.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
@@ -675,6 +681,7 @@ images:
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
+  - image: icr.io/cpopen/cpfs/multi-instance-conversion
   - image: icr.io/cpopen/cpfs/must-gather
   - image: icr.io/cpopen/cpfs/must-gather-service
   - image: icr.io/cpopen/cpfs/nginx-ingress-controller
@@ -753,6 +760,7 @@ images:
   - image: icr.io/cpopen/ibm-integration-platform-navigator-catalog
   - image: icr.io/cpopen/ibm-integration-platform-navigator-operator
   - image: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle
+  - image: icr.io/cpopen/ibm-integration-upgrade-must-gather
   - image: icr.io/cpopen/ibm-licensing-operator
   - image: icr.io/cpopen/ibm-licensing-operator-bundle
   - image: icr.io/cpopen/ibm-management-ingress-operator
