@@ -182,3 +182,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v3.6.0-20221130.0002-db1e1a83e
+- caseVersions:
+  - 1.4.1
+  category: catalog
+  digest: sha256:c431eec70f8c067bf02633f9aaa989ddeab7c9ae72caa1ac1b7ce07e60d65c63
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v3.6.1-20230112.2202-2059a2cea-linux.amd64
+- caseVersions:
+  - 1.4.1
+  category: catalog
+  digest: sha256:2059a2cea628ed6934f2c7b6a84c79ec4d99e1bb5de076808990f73e9d6d5e7b
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v3.6.1-20230112.2202-2059a2cea

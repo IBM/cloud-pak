@@ -1,0 +1,54 @@
+apiVersion: v1
+case:
+  appVersion: 3.6.1-rc1-202301122202
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: This operator manages the AIOps Analytics component of the IBM Watson
+    for AIOps v3.x product.
+  displayDescription: ""
+  displayName: AIOps Analytics Operator
+  icons: []
+  licenses:
+    cp4aiops:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps License
+        displayName: Cloud Pak for Watson AIOps
+      ref: license
+    non_ibm_license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps Separately Licensed Code
+        displayName: Cloud Pak for Watson AIOps
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps Notices and Information
+        displayName: Cloud Pak for Watson AIOps
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiops-analytics
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.3.1
+  webPage: https://www.ibm.com
+created: 2023-01-25T00:31:32.34311162+0000
+digest: sha256:f29909d17c440995e4364ebb25fbf504f294be6939b1a1cdf84a44fa4ba359fb

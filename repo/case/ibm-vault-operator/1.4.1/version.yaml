@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 3.6.1-rc1-202301122202
+  catalogs:
+    container: {}
+    network: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    limited: {}
+    opensource: {}
+  description: This case is used to install Hashicorp Vault into Kubernetes cluster.
+  displayDescription: IBM Vault Operator
+  displayName: IBM Vault Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-vault-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.4.1
+  webPage: https://www.ibm.com
+created: 2023-01-25T00:48:00.58711162+0000
+digest: sha256:3aae626690e7c83009fa76eb9fa94054c78d75c02de4ffd44f7d59af8269d393
