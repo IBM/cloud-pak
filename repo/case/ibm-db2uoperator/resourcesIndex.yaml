@@ -1071,6 +1071,7 @@ containerImages:
 - caseVersions:
   - 5.0.0
   - 5.1.0
+  - 5.1.1
   category: catalog
   digest: sha256:e6555046b0974d2590015c5feda291332ef40ed25ae133e25cc177bd26da875d
   image: cpopen/ibm-db2uoperator-catalog
@@ -1082,6 +1083,7 @@ containerImages:
 - caseVersions:
   - 5.0.0
   - 5.1.0
+  - 5.1.1
   category: catalog
   digest: sha256:523dd4ac006b915b29be495cda1769053b023efb2e19b21eb089948abb881187
   image: cpopen/ibm-db2uoperator-catalog
@@ -1093,6 +1095,7 @@ containerImages:
 - caseVersions:
   - 5.0.0
   - 5.1.0
+  - 5.1.1
   category: catalog
   digest: sha256:a36efec552a732aa7e1be82ca4e507752c7931c32df9b0521eb9dfdab097246d
   image: cpopen/ibm-db2uoperator-catalog
@@ -1104,6 +1107,7 @@ containerImages:
 - caseVersions:
   - 5.0.0
   - 5.1.0
+  - 5.1.1
   category: catalog
   digest: sha256:d8b79c87951e3c6659a5901f8e85136cc803b8553e7c05e77a1031704906519b
   image: cpopen/ibm-db2uoperator-catalog
@@ -1148,3 +1152,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 5238-dev
+- caseVersions:
+  - 5.1.1
+  category: catalog
+  digest: sha256:1e986a74570dca7a21d0363e9355d2c8ab9f055e9a9d3d52a1c0375f99741938
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5506-dev-s390x
+- caseVersions:
+  - 5.1.1
+  category: catalog
+  digest: sha256:c71da14efc8bdccd2860c8ae03cfc8350a5db2fe63b290945dbd170fe9aa2f76
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5506-dev-ppc64le
+- caseVersions:
+  - 5.1.1
+  category: catalog
+  digest: sha256:c23d6bb29c9a7e84c996729093871f983ddc483576c1e9a135d33d05ebf8aa9e
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5506-dev-amd64
+- caseVersions:
+  - 5.1.1
+  category: catalog
+  digest: sha256:3727845846f2fe9be0b712abd3c9d0b89c243b603ca0b129553f6733df548b36
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5506-dev
