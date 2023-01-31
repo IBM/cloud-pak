@@ -1,0 +1,63 @@
+apiVersion: v1
+case:
+  appVersion: 1.17.2
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: Case bundle for the Cloud Native Postgresql Operator
+  displayDescription: EnterpriseDB Operator
+  displayName: EnterpriseDB Operator
+  icons:
+  - mediaType: image/png
+    url: TODO
+  licenses:
+    license-en-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en-enterprise
+        name: license-en-enterprise
+      ref: LI_en_enterprise
+    license-en-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: license-en-standard
+      ref: LI_en_standard
+    licenseNonIBMEnterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM_ENTERPRISE
+        name: licenseNonIBMEnterprise
+      ref: non_ibm_license_enterprise
+    licenseNonIBMStandard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM_STANDARD
+        name: licenseNonIBMStandard
+      ref: non_ibm_license_standard
+  name: ibm-cloud-native-postgresql
+  organization: EnterpriseDB
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 4.9.0+20230130.113620
+  webPage: TODO
+created: 2023-01-31T20:25:40.09751710+0000
+digest: sha256:89c95d88b14c6732f1fa2af6c56bcf1522522dd19ae9ae61e23808cc3bc978d3
