@@ -1,0 +1,1 @@
+patch deployment spark-hb-helm-repo --patch '{ "spec": { "template": { "spec": { "containers": [{ "name": "spark-hb-helm-repo", "image": "{{.DockerRegistryPrefix}}/spark-hb-helm-repo:3.5.8001.3-amd64"}] } } } }'
