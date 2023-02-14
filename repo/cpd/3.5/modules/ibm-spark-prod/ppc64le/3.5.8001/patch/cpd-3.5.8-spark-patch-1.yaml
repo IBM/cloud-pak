@@ -1,0 +1,7 @@
+images:
+  - spark-hb-helm-repo:3.5.8001.3-ppc64le
+patchFile: patchCommands.txt
+resourcesChanged:
+  - Kind: Deployment
+    Name: spark-hb-helm-repo
+description: "Patch to update to skip se linux labels on runtime pods"
