@@ -1096,6 +1096,7 @@ containerImages:
   - 5.0.0
   - 5.1.0
   - 5.1.1
+  - 5.1.2
   category: catalog
   digest: sha256:a36efec552a732aa7e1be82ca4e507752c7931c32df9b0521eb9dfdab097246d
   image: cpopen/ibm-db2uoperator-catalog
@@ -1154,6 +1155,7 @@ containerImages:
   tag: 5238-dev
 - caseVersions:
   - 5.1.1
+  - 5.1.2
   category: catalog
   digest: sha256:1e986a74570dca7a21d0363e9355d2c8ab9f055e9a9d3d52a1c0375f99741938
   image: cpopen/ibm-db2uoperator-catalog
@@ -1164,6 +1166,7 @@ containerImages:
   tag: 5506-dev-s390x
 - caseVersions:
   - 5.1.1
+  - 5.1.2
   category: catalog
   digest: sha256:c71da14efc8bdccd2860c8ae03cfc8350a5db2fe63b290945dbd170fe9aa2f76
   image: cpopen/ibm-db2uoperator-catalog
@@ -1174,6 +1177,7 @@ containerImages:
   tag: 5506-dev-ppc64le
 - caseVersions:
   - 5.1.1
+  - 5.1.2
   category: catalog
   digest: sha256:c23d6bb29c9a7e84c996729093871f983ddc483576c1e9a135d33d05ebf8aa9e
   image: cpopen/ibm-db2uoperator-catalog
@@ -1184,9 +1188,38 @@ containerImages:
   tag: 5506-dev-amd64
 - caseVersions:
   - 5.1.1
+  - 5.1.2
   category: catalog
   digest: sha256:3727845846f2fe9be0b712abd3c9d0b89c243b603ca0b129553f6733df548b36
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 5506-dev
+- caseVersions:
+  - 5.1.2
+  category: catalog
+  digest: sha256:94b099702349ffea25b8eb77f217abbabda7346f3b75eb7c0442b7fa2ccc185f
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5925-dev-s390x
+- caseVersions:
+  - 5.1.2
+  category: catalog
+  digest: sha256:796dc9336794bd1ebacb25e6805ea50cc3a8b9c14c7929cad68fb60ef34aadff
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5925-dev-ppc64le
+- caseVersions:
+  - 5.1.2
+  category: catalog
+  digest: sha256:3c6fdeae52dffa02809bc268ac8d494b129566c296ea805e2eefb8b9a3fa028e
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5925-dev
