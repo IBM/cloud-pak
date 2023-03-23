@@ -1,0 +1,56 @@
+apiVersion: v1
+case:
+  appVersion: 1.6.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: Case bundle for the DPRA
+  displayDescription: DPRA Operator
+  displayName: DPRA Operator
+  icons:
+  - mediaType: image/png
+    url: TODO
+  licenses:
+    license-en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: license-en
+      ref: LI_en
+    licenseNonIBM:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+        name: licenseNonIBM
+      ref: non_ibm_license
+    notice:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+        name: notice
+      ref: notices
+  name: ibm-dpra
+  organization: DPRA
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.6.0
+  webPage: TODO
+created: 2023-03-23T21:46:06.79446499+0000
+digest: sha256:3f25c442a4658dbcb631b8f7d641ce8728b77d8d4b847cfe0d36314a64ab0977

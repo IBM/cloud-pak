@@ -1097,6 +1097,7 @@ containerImages:
   - 5.1.0
   - 5.1.1
   - 5.1.2
+  - 5.1.3
   category: catalog
   digest: sha256:a36efec552a732aa7e1be82ca4e507752c7931c32df9b0521eb9dfdab097246d
   image: cpopen/ibm-db2uoperator-catalog
@@ -1197,6 +1198,7 @@ containerImages:
   tag: 5506-dev
 - caseVersions:
   - 5.1.2
+  - 5.1.3
   category: catalog
   digest: sha256:94b099702349ffea25b8eb77f217abbabda7346f3b75eb7c0442b7fa2ccc185f
   image: cpopen/ibm-db2uoperator-catalog
@@ -1207,6 +1209,7 @@ containerImages:
   tag: 5925-dev-s390x
 - caseVersions:
   - 5.1.2
+  - 5.1.3
   category: catalog
   digest: sha256:796dc9336794bd1ebacb25e6805ea50cc3a8b9c14c7929cad68fb60ef34aadff
   image: cpopen/ibm-db2uoperator-catalog
@@ -1217,9 +1220,48 @@ containerImages:
   tag: 5925-dev-ppc64le
 - caseVersions:
   - 5.1.2
+  - 5.1.3
   category: catalog
   digest: sha256:3c6fdeae52dffa02809bc268ac8d494b129566c296ea805e2eefb8b9a3fa028e
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 5925-dev
+- caseVersions:
+  - 5.1.3
+  category: catalog
+  digest: sha256:0fcde120f25c1d60a129fea60a8ff02e2380a87aea14c773e1054580103af011
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5929-dev-s390x
+- caseVersions:
+  - 5.1.3
+  category: catalog
+  digest: sha256:88da11bb0e7a20b8c50e2c03a70d87f75af65964f5eb3ad0448de0cccfa37245
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5506-dev-ppc64le
+- caseVersions:
+  - 5.1.3
+  category: catalog
+  digest: sha256:2264cd315ac93ca52154b2f5335a80a6eb20260a5b7765c13fe66080c357fd55
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5929-dev-amd64
+- caseVersions:
+  - 5.1.3
+  category: catalog
+  digest: sha256:269b92119828b09069df70f61f0032262eee7bae413e08935b2d0d68f65062d1
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5929-dev
