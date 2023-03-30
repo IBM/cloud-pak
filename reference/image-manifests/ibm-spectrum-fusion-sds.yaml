@@ -1,6 +1,60 @@
 source: ibm-spectrum-fusion-sds-bundle/case/ibm-spectrum-fusion-sds/case.yaml
 description: "Management operator for IBM Spectrum Fusion"
 images:
+  - image: cp/df/cephcsi-rhel8
+  - image: cp/df/mcg-core-rhel8
+  - image: cp/df/mcg-rhel8-operator
+  - image: cp/df/ocs-metrics-exporter-rhel8
+  - image: cp/df/ocs-must-gather-rhel8
+  - image: cp/df/ocs-rhel8-operator
+  - image: cp/df/odf-console-rhel8
+  - image: cp/df/odf-csi-addons-rhel8-operator
+  - image: cp/df/odf-csi-addons-sidecar-rhel8
+  - image: cp/df/odf-multicluster-console-rhel8
+  - image: cp/df/odf-multicluster-rhel8-operator
+  - image: cp/df/odf-rhel8-operator
+  - image: cp/df/odr-rhel8-operator
+  - image: cp/df/rook-ceph-rhel8-operator
+  - image: cp/fbr/guardian-application-service
+  - image: cp/fbr/guardian-backup-location
+  - image: cp/fbr/guardian-backup-policy
+  - image: cp/fbr/guardian-backup-service
+  - image: cp/fbr/guardian-datamover
+  - image: cp/fbr/guardian-dm-operator
+  - image: cp/fbr/guardian-dp-operator
+  - image: cp/fbr/guardian-job-manager
+  - image: cp/fbr/guardian-mongo-operator
+  - image: cp/fbr/guardian-redis-operator
+  - image: cp/fbr/guardian-transaction-manager
+  - image: cp/fbr/guardian-transaction-manager-minio
+  - image: cp/fbr/guardian-transaction-manager-redis
+  - image: cp/fbr/guardian-transaction-manager-worker
+  - image: cp/fbr/idp-agent-operator
+  - image: cp/ibm-spectrum-discover/auth
+  - image: cp/ibm-spectrum-discover/backup-restore
+  - image: cp/ibm-spectrum-discover/connmgr
+  - image: cp/ibm-spectrum-discover/connmgr-setup
+  - image: cp/ibm-spectrum-discover/content-search-setup
+  - image: cp/ibm-spectrum-discover/db2whrest
+  - image: cp/ibm-spectrum-discover/db-schema
+  - image: cp/ibm-spectrum-discover/import-tags-app
+  - image: cp/ibm-spectrum-discover/isd-proxy
+  - image: cp/ibm-spectrum-discover/keystone
+  - image: cp/ibm-spectrum-discover/licensing
+  - image: cp/ibm-spectrum-discover/metaocean-api
+  - image: cp/ibm-spectrum-discover/mo-agent-extract
+  - image: cp/ibm-spectrum-discover/moconsumer
+  - image: cp/ibm-spectrum-discover/moproducer
+  - image: cp/ibm-spectrum-discover/mo-ubi-init
+  - image: cp/ibm-spectrum-discover/policyengine
+  - image: cp/ibm-spectrum-discover/reports
+  - image: cp/ibm-spectrum-discover/scaleafmdatamover
+  - image: cp/ibm-spectrum-discover/scaleilmdatamover
+  - image: cp/ibm-spectrum-discover/sdmonitor
+  - image: cp/ibm-spectrum-discover/tikaserver
+  - image: cp/ibm-spectrum-discover/uibackend
+  - image: cp/ibm-spectrum-discover/uifrontend
+  - image: cp/ibm-spectrum-discover/wkc-connector
   - image: cp/isf-sds/callhomeclient
   - image: cp/isf-sds/eventmanager
   - image: cp/isf-sds/eventmanager-snmp3
@@ -17,6 +71,9 @@ images:
   - image: cp/isf-sds/isf-update-operator
   - image: cp/isf-sds/logcollector
   - image: cp/isf-sds/spp-dp-operator
+  - image: icr.io/cpopen/ibm-spectrum-discover-operator
+  - image: icr.io/cpopen/ibm-spectrum-discover-operator-bundle
+  - image: icr.io/cpopen/ibm-spectrum-discover-operator-catalog
   - image: icr.io/cpopen/isf-operator-bundle
   - image: icr.io/cpopen/isf-operator-index
   - image: icr.io/cpopen/isf-operator-software-bundle
