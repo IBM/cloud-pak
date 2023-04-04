@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[IBM UrbanCode Deploy](https://www.urbancode.com/product/deploy/) is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production.
+[IBM UrbanCode Deploy](https://www.ibm.com/cloud/urbancode/deploy) is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production.
 
 ## Details
 This CASE contains two inventory items:
@@ -19,7 +19,7 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
 
 ## Prerequisites
 
-1. Kubernetes 1.16.0+; kubectl and oc CLI; Helm 3;
+1. Kubernetes 1.19.0+; kubectl and oc CLI; Helm 3;
   * Install and setup oc/kubectl CLI depending on your architecture.
     * [ppc64le](https://mirror.openshift.com/pub/openshift-v4/ppc64le/clients/ocp/stable/openshift-client-linux.tar.gz)
     * [s390x](https://mirror.openshift.com/pub/openshift-v4/s390x/clients/ocp/stable/openshift-client-linux.tar.gz)
@@ -41,38 +41,14 @@ oc create secret docker-registry ibm-entitlement-key --docker-username=cp --dock
 4. Secret - A Kubernetes Secret object must be created to store the initial UrbanCode Deploy server administrator password, the password used to access the database mentioned above, and the password for all keystores used by the UrbanCode Deploy server.  The name of the secret you create must be specified in the property 'secret.name' in your values.yaml if installing via Helm chart or in the UcdServer custom resource if installing via operator.
 
 * Through the oc/kubectl CLI, create a Secret object in the target namespace.
-    Generate the base64 encoded values for the initial UCD admin password, database password, and the password for all keystores used by the product.
+
+```bash
+oc create secret generic ucd-secrets \
+  --from-literal=initpassword=admin \
+  --from-literal=dbpassword=MyDbpassword \
+  --from-literal=keystorepassword=MyKeystorePassword
 
 ```
-echo -n 'admin' | base64
-YWRtaW4=
-echo -n 'MyDbpassword' | base64
-TXlEYnBhc3N3b3Jk
-echo -n 'MyKeystorePassword' | base64
-TXlLZXlzdG9yZVBhc3N3b3Jk
-```
-
-  * Create a file named secret.yaml with the following contents, using your secret name and base64 encoded values.
-
-```
-apiVersion: v1
-kind: Secret
-metadata:
-  name: ucd-secrets
-type: Opaque
-data:
-  initpassword: YWRtaW4=
-  dbpassword: TXlEYnBhc3N3b3Jk
-  keystorepassword: TXlLZXlzdG9yZVBhc3N3b3Jk
-```
-
-  * Create the Secret using oc apply
-
-```
-oc apply -f ./secret.yaml
-```
-
-  * Delete or shred the secret.yaml file.
 
 5. JDBC drivers - A PersistentVolume (PV) that contains the JDBC driver(s) required to connect to the database configured above must be created.  You must either:
 
@@ -276,9 +252,9 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
 
 ### Licensing Requirements
 
-The UCD server image will attempt to upload UCD metrics(agent high-water mark) to the license service. Hence this case requires IBM Licensing operator which is part of IBM Common Services to be installed in the Openshift cluster. Please follow the instructions at https://www.ibm.com/support/knowledgecenter/SSHKN6/installer/landing_installer.html to install IBM Common services.
+The UCD server image will attempt to upload UCD license metrics(agent high-water mark) to the license service. For the upload to be successful, this chart needs IBM Licensing operator (a component of IBM Common Services) to be installed in the Openshift cluster. Please follow these [instructions](https://www.ibm.com/support/knowledgecenter/SSHKN6/installer/landing_installer.html) to install IBM Common services.
 
-Once the common services are installed, IBM Licensing service would be accessible by the UCD server by running OperandRequest to copy the license service secret(ibm-licensing-upload-token secret) and configmap(ibm-licensing-upload-config configmap). Please follow the instructions at https://www.ibm.com/support/knowledgecenter/SSHKN6/installer/3.x.x/bind_info.html to copy the secret and configmap into your desired namespace. It is required to run OperandRequest only for the ibm-licensing-operator. Following is an example OperandRequest yaml which was tested with IBM Common Services operator 3.6.3.
+Once the common services are installed, the IBM Licensing service can be made accessible to the UCD server by creating an OperandRequest resource to copy the license service secret(ibm-licensing-upload-token) and configmap(ibm-licensing-upload-config) to the namespace/project the UCD server will be installed in. Click [here](https://www.ibm.com/support/knowledgecenter/SSHKN6/installer/3.x.x/bind_info.html#license-bind) for more information.  It is only required to create an OperandRequest resource with the ibm-licensing-operator information. Following is an example yaml file contents that would create an OperandRequest which was tested with IBM Common services 3.23.0.  Add the following yaml to a file named operandrequest.yaml and then run `oc apply -f ./operandrequest.yaml` in the namespace/project where the UCD server will be installed.
 
 ```yaml
 apiVersion: operator.ibm.com/v1alpha1
@@ -297,13 +273,20 @@ spec:
     registryNamespace: ibm-common-services
     description: "Requesting the Licensing Service"
 ```
-
 To retrieve license usage data, please follow these [instructions](https://www.ibm.com/docs/en/cloud-paks/cp-integration/2021.1?topic=service-retrieving-license-usage-data).
 
 ## Resources Required
 
 * 4GB of RAM, plus 4MB of RAM for each agent
 * 2 CPU cores, plus 2 cores for each 500 agents
+
+## Client Data Storage Locations
+
+All client data is stored in either the user specified database or the appdata persistent volume.  UrbanCode Deploy does not do any active encryption of these data locations.  These locations should be included in whatever backup plans the user chooses to implement.
+
+# Mirroring images
+
+If your OpenShift cluster is unable to directly access the internet, you will need to mirror the UrbanCode Deploy images from the IBM Entitled Registry into a private container registry.  See instructions from [Mirroring images to a private container registry](#mirroring-images-to-a-private-container-registry)
 
 # Installing UrbanCode Deploy server operator
 
@@ -313,23 +296,11 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 
 ## Download the case and case dependencies
 
-Create a directory to save cases to a local directory
-
-```
-mkdir /tmp/cases
-```
-
 Run
 
 ```
-cloudctl case save                       \
-    --case ibm-ucd-prod                  \
-    --repo https://raw.githubusercontent.com/IBM/cloud-pak/master/repo/case \
-    --outputdir /tmp/cases
+oc ibm-pak get ibm-ucd-prod --version 2.0.5
 ```
-
-Verify the case has been downloaded under the
-`/tmp/cases` directory.
 
 ## To install operator using OpenShift Operator Catalog
 
@@ -340,21 +311,20 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 ```
 export TARGET_REGISTRY="Desired image registry"
 
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
-    --namespace <target namespace>                     \
-    --inventory ucdsOperatorSetup                      \
-    --action install-catalog                           \
-    --args "--recursive --inputDir /tmp/cases"
+oc ibm-pak launch ibm-ucd-prod        \
+    --version 2.0.5           \
+    --namespace <target namespace>    \
+    --inventory ucdsOperatorSetup     \
+    --action install-catalog
 ```
 
 2. Install the operator via OLM
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
-    --namespace <target namespace>                     \
-    --inventory ucdsOperatorSetup                      \
+oc ibm-pak launch ibm-ucd-prod        \
+    --version 2.0.5           \
+    --namespace <target namespace>    \
+    --inventory ucdsOperatorSetup     \
     --action install-operator
 ```
 
@@ -362,25 +332,29 @@ cloudctl case launch                                   \
 
 1. Once the operator is added to your cluster's OperatorHub and installed, you can create an instance of the UrbanCode Deploy server via the Operators->Installed Operators page in the OpenShift web console.  Click on the UrbanCode Deploy server tile in the list of installed operators.  Select the UcdServer CR tab and click Create UcdServer.  Fill in the form fields to provide the required information and click Create.
 
-2. Alternatively, if you already have a UcdServer resource yaml file, you can create an instance of the UrbanCode Deploy server using the cloudctl CLI.
+2. Alternatively, if you already have a UcdServer resource yaml file, you can create an instance of the UrbanCode Deploy server using the 'oc ibm-pak' CLI.
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
-    --inventory ucdsOperatorSetup                      \
+    --inventory ucdsOperator                           \
     --action apply_custom_resources                    \
     --args "--crFile <path-to-ucdserver_cr.yaml>"      \
     --tolerance 1
 ```
+
+## To upgrade UcdServer operand
+
+1. You can upgrade an instance of the UrbanCode Deploy server via the Operators->Installed Operators page in the OpenShift web console.  Click on the UrbanCode Deploy server tile in the list of installed operators.  Select the UcdServer CR tab and click on the UcdServer instance you want to upgrade.  Select the YAML tab for the UcdServer instance, change the spec.version field to the UCD version you want to upgrade to, then click Save.  The UcdServer operator will notice the change to the Custom Resource and begin the upgrade process.
 
 ## To uninstall operator using OpenShift Operator Catalog
 
 1. Uninstall the operator via OLM
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator
@@ -389,12 +363,11 @@ cloudctl case launch                                   \
 2. Uninstall the catalog via OLM
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
-    --action uninstall-catalog                         \
-    --args "--recursive --inputDir /tmp/cases"
+    --action uninstall-catalog
 ```
 
 ## To install operator using command-line (non-OLM)
@@ -406,31 +379,30 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 ```
 export TARGET_REGISTRY="Desired image registry"
 
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator-native                   \
-    --args "--registry $TARGET_REGISTRY --recursive --inputDir /tmp/cases"
+    --args "--registry $TARGET_REGISTRY"
 ```
 * Once the operator is installed you can create an instance of the UrbanCode Deploy server by creating a UcdServer resource.
 
 ## To uninstall operator using command-line (non-OLM)
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
-    --action uninstall-operator-native                 \
-    --args "--recursive --inputDir /tmp/cases"
+    --action uninstall-operator-native
 ```
 
 ## To install using helm chart
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action install-helm-chart                        \
@@ -440,165 +412,685 @@ cloudctl case launch                                   \
 ## To uninstall using helm chart
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz   \
+oc ibm-pak launch ibm-ucd-prod                         \
+    --version 2.0.5                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action uninstall-helm-chart                      \
     --args "--helmReleaseName <Name of the helm release>"
 ```
 
-### Configure Air-Gapped OpenShift Cluster With a Bastion Host
+# Disaster Recovery
 
-#### 1. Prepare Bastion Host
+See the sections [Backup Kubernetes Resources](#Backup-Kubernetes-Resources), [Backup Product Data](#Backup-Product-Data) and [Recover from a Disaster](#Recover-from-a-disaster) to learn how you can recover your UCD server instance after a disaster.
 
-* Logon to the bastion machine
+## Backup Kubernetes Resources
 
-* Verify that the bastion machine has access
-  * to public internet (to download CASE and images)
-  * a target image registry ( where the images will be mirrored)
-  * a target OpenShift cluster to install the operator
+Backup the Kubernetes resoures required to redeploy the UCD server after a disaster.  Follow these steps to save the configuration of essential Kubernetes resources.
 
-* Download and install dependent command line tools
-  * [oc](https://docs.openshift.com/container-platform/3.6/cli_reference/get_started_cli.html#installing-the-cli) - To interact with OpenShift Cluster
-  * [cloud-pak-cli](https://github.com/IBM/cloud-pak-cli) - To download and install CASE
+1. Save UcdServer Custom Resource
 
-All the following steps should be run from the bastion machine
-
-#### 2. Set the TARGET_REGISTRY variable
-
-The OpenShift image registry isn't recommended due to limitations such as lack of
-support for fat manifest. Quay.io enterprise is an opensource alternative. To use
-the image registry anyways:
-
-1. Expose the OpenShift image registry externally
-
-```
-oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
+   * Find the UcdServer Custom Resource name by running the following command.
+```bash
+oc get UcdServer --namespace <ucd_namespace>
 ```
 
-2. Set the environment variable of the target registry.
-
-```
-export TARGET_REGISTRY=$(oc get route default-route -n openshift-image-registry -o jsonpath='{.spec.host}')
-```
-
-Otherwise, export the TARGET_REGISTRY environment variable with the location of
-the registry.
-
-#### 3. Configure Registry Auth
-
-1. Create auth secret for the source image registry
-
-Create registry secret for source image registry (if the registry is public which doesn't require credentials, this step can be skipped)
-
-```
-cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz             \
-    --namespace <target namespace>                       \
-    --inventory ucdsOperatorSetup                        \
-    --action configure-creds-airgap                      \
-    --args "--registry cp.icr.io --user iamapikey --pass xyz"
+   * Create a local copy of the UcdServer Custom Resource by running the following command.  Replace **cr_name** with the name of the UcdServer Custom Resource listed above.
+```bash
+oc get UcdServer/<cr_name> --namespace <ucd_namespace> -o yaml > <cr_name>-cr.yaml
 ```
 
-2. Create auth secret for target image registry
+   * Edit the local copy of the UcdServer Custom Resource and remove all .metadata fields other than labels and name, and remove all .status fields.
 
+2. Save secret containing UCD server product passwords
+
+   a. Find the value for the secret.name property in the saved UcdServer Custom Resource file above.  This is the name of the secret we want to save a local copy of.  Run the following command, replacing **ucdsecrets_name** with the value from the secret.name property.
+```bash
+oc get secret <ucdsecrets_name> -n <ucd_namespace> -o yaml > <ucdsecrets_name>.yaml
 ```
-cloudctl case launch                                     \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz             \
-    --namespace <target namespace>                       \
-    --inventory ucdsOperatorSetup                        \
-    --action configure-creds-airgap                      \
-    --args "--registry $TARGET_REGISTRY --user USERNAME --pass PASSWORD"
+3. Save image pull secret
+
+   a. Find the value for the image.secret property in the saved UcdServer Custom Resource file above.  This is the name of the secret used to pull images from the IBM Entitled Registry.
+   Run the following command, replacing **ibm-entitlement-key** with the value from the image.secret property.
+```bash
+oc get secret <ibm-entitlement-key> -n <ucd_namespace> -o yaml > <ibm-entitlement-key>.yaml
 ```
+4. Save ext-lib configmap
 
-The credentials are now saved to `~/.airgap/secrets/<registry-name>.json`
-
-#### 4. (Optional) Set the path of the target registry
-
-If using OpenShift image registry, set the project to load the images to:
-
-```
-export TARGET_REGISTRY=$TARGET_REGISTRY/ucd
-```
-
-#### 5. Mirror Images
-
-In this step image from saved CASE (images.csv) are copied to target registry in the airgap environment.
-
-```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz           \
-    --namespace <target namespace>                     \
-    --inventory ucdsOperatorSetup                      \
-    --action mirror-images                             \
-    --args "--registry $TARGET_REGISTRY --inputDir /tmp/cases"
+   If a configmap was used to load the JDBC driver file into the ext-lib Persistent Volume, you will need to save a local copy of it.
+   Find the value for the extLibVolume.configMapName property in the saved UcdServer Custom Resource file above.
+   Run the following command, replacing **configMapName** with the value from the extLibVolume.configMapName property.
+```bash
+oc get secret <configMapName> -n <ucd_namespace> -o yaml > <configMapName>.yaml
 ```
 
-#### 6. Configure Cluster for Airgap
+## Backup Product Data
 
-This steps does the following
+Backup the database and appdata directory used by the UCD server.  To ensure the most accurate saving of data, no deployments should be active.  Follow these steps to take a backup of the server.
 
-* creates a global image pull secret for the target registry (skipped if target registry is unauthenticated)
-* creates a imagesourcecontentpolicy
+1. Scale the statefulset resource to 0 to shutdown the UCD server.
 
-WARNING:
+2. Create a full backup of the database.  For instructions on backing up the database, see the documentation from your database vendor.
 
-* Cluster resources must adjust to the new pull secret, which can temporarily limit the usability of the cluster. Authorization credentials are stored in $HOME/.airgap/secrets and /tmp/airgap* to support this action
+3. Backup the appdata Persistent Volume.
 
-* Applying imagesourcecontentpolicy causes cluster nodes to recycle.
+4. Backup the ext-lib Persistent Volume.
+
+5. Scale the statefulset resource to 1 to restart the UCD server.
+
+## Recover from a disaster
+
+If you have successfully backed up the resources and data as described in [Backup Kubernetes Resources](#backup-kubernetes-resources) and [Backup Product Data](#backup-product-data) you can recreate an instance of UCD server using that data.  Follow these steps to recreate your UCD server instance.
+
+1. Create a new project/namespace to hold the Kubernetes resources associated with the UCD server instance.
+
+2. Create the Kubernetes secret that contains the UCD server product passwords by running the following command.
+```bash
+oc apply -n <ucd_namespace> -f <ucdsecrets_name>.yaml
+```
+3. Create the image pull secret needed to access images in the IBM Entitled Registry by running the following command.
+```bash
+oc apply -n <ucd_namespace> -f <ibm-entitlement-key>.yaml
+```
+4. If your original UCD server instance used a configMap resource to load the JDBC driver file into the ext-lib Persistent Volume, then recreate that configMap resource by running the following command.
+```bash
+oc apply -n <ucd_namespace> -f <configMapName>.yaml
+```
+Create the ext-lib Persistent Volume that the JDBC driver file will be loaded into.  Also create a Persistent Volume Claim that references the ext-lib Persistent Volume.  If you are not using a configMap to load the JDBC driver file into the ext-lib Persistent Volume, you will need to manually copy the JDBC driver file into the Persistent Volume.
+
+5. Create the appdata Persistent Volume and associated Persistent Volume Claim and load the saved appdata directory contents into the Persistent Volume.
+
+6. Follow the directions from your database vendor to create a new database from the backup/clone.
+
+7. Create a UcdServer Custom Resource yaml file that contains the properties and values from your savedUcdServer-cr.yaml file.  Be sure that the extLibVolume.existingClaimName and appDataVolume.existingClaimName fields are set to the Persistent Volume Claims for the new ext-lib and appdata Persistent Volumes.  Also be sure that the database fields database.* refer to the new database instance created in the step above.
+
+8. If the UCD Server operator is not already installed in the OCP cluster, install it as described in [Installing UrbanCode Deploy server operator](#Installing-UrbanCode-Deploy-server-operator)
+
+9. To create the restored UCD server instance, see [To install UcdServer operand](#To-install-UcdServer-operand)
+
+
+## Mirroring images to a private container registry
+
+If your cluster is not connected to the internet, you can install the UrbanCode Deploy server in your cluster via connected or disconnected mirroring.
+
+If you have a host that can access both the internet and your mirror registry, but not your cluster nodes, you can directly mirror the content from that machine. This process is referred to as **connected mirroring**. If you have no such host, you must mirror the images to a file system and then bring that host or removable media into your restricted environment. This process is referred to as **disconnected mirroring**.
+
+### Before you begin
+
+You must complete the steps in the following sections before you begin generating mirror manifests:
+
+* [Prerequisites](#prerequisites)
+* [Prepare a host](#prepare-a-host)
+* [Set environment variables and download CASE files](#set-environment-variables-and-download-case-files)
+
+**Important:** If you intend on installing using a private container registry, your cluster must support ImageContentSourcePolicy (ICSP).
+
+#### Prerequisites
+
+Regardless of whether you plan to mirror the images with a bastion host or to the file system, you must satisfy the following prerequisites:
+
+- OpenShift requires you to have cluster admin access to run the `install-operator` command.
+
+- An OpenShift cluster must be installed.
+
+- Access to the following sites and ports:
+  - `icr.io:443` for IBM Cloud Container Registry, CASE OCI artifact, and UrbanCode Deploy catalog source
+
+**Tip:** With `ibm-pak` plug-in version 1.2.0, you can eliminate the port for `github.com` to retrieve CASES and tooling by configuring the plug-in to download CASEs as OCI artifacts from IBM Cloud Container Registry (ICCR): `oc ibm-pak config repo 'IBM Cloud-Pak OCI registry' -r oci:cp.icr.io/cpopen --enable`
+
+#### Prepare a host
+
+If you are in an air-gapped environment, you must be able to connect a host to the internet and mirror registry for connected mirroring or mirror images to file system which can be brought to a restricted environment for disconnected mirroring. For information on the latest supported operating systems, see [ibm-pak plugin install documentation](https://github.com/IBM/ibm-pak-plugin#overview).
+
+The following table explains the software requirements for mirroring the UrbanCode Deploy server images:
+
+|Software|Purpose|
+|---|---|
+|Docker|Container management|
+|Podman|Container management|
+|OpenShift CLI (oc)|Openshift administration|
+
+Complete the following steps on your host:
+
+1. Install Docker or Podman.
+
+   To install Docker (for example, on Red Hat&reg; Enterprise Linux&reg;), run the following commands:
+
+   **Note:** If you are installing as a non-root user you must use `sudo`. For more information, refer to the Podman or Docker documentation for installing as a non-root user.
+
+   ```
+   yum check-update
+   yum install docker
+   ```
+
+   To install Podman, see [Podman Installation Instructions](https://podman.io/getting-started/installation.html).
+
+2. Install the `oc` OpenShift CLI tool.
+
+3. Download and install the most recent version of `IBM Catalog Management Plug-in for IBM Cloud Paks` from the [IBM/ibm-pak-plugin](https://github.com/IBM/ibm-pak-plugin). Extract the binary file by entering the following command:
+
+   ```
+   tar -xf oc-ibm_pak-linux-amd64.tar.gz
+   ```
+
+   Run the following command to move the file to the `/usr/local/bin` directory:
+
+   **Note:** If you are installing as a non-root user you must use `sudo`. For more information, refer to the Podman or Docker documentation for installing as a non-root user.
+
+   ```
+   mv oc-ibm_pak-linux-amd64 /usr/local/bin/oc-ibm_pak
+   ```
+
+   **Note:** Download the plug-in based on the host operating system. You can confirm that `oc ibm-pak -h` is installed by running the following command:
+
+   ```
+   oc ibm-pak --help
+   ```
+
+   The plug-in usage is displayed.
+
+   The plug-in is also provided in a container image `cp.icr.io/cpopen/cpfs/ibm-pak:TAG` where TAG should be replaced with the corresponding plugin version, for example `cp.icr.io/cpopen/cpfs/ibm-pak:v1.2.0` will have v1.2.0 of the plugin.
+
+  The following command will create a container and copy the plug-ins for all the supported platforms in a directory, plugin-dir. You can specify any directory name and it will be created while copying. After copying, it will delete the temporary container. The plugin-dir will have all the binaries and other artifacts you find in a Github release and repo at [IBM/ibm-pak-plugin](https://github.com/IBM/ibm-pak-plugin).
+
+   ```
+   id=$(docker create cp.icr.io/cpopen/cpfs/ibm-pak:TAG - )
+   docker cp $id:/ibm-pak-plugin plugin-dir
+   docker rm -v $id
+   cd plugin-dir
+   ```
+
+#### Creating registry namespaces
+
+Top-level namespaces are the namespaces which appear at the root path of your private registry. For example, if your registry is hosted at `myregistry.com:5000`, then `mynamespace` in `myregistry.com:5000/mynamespace` is defined as a top-level namespace. There can be many top-level namespaces.
+
+When the images are mirrored to your private registry, it is required that the top-level namespace where images are getting mirrored already exists or can be automatically created during the image push. If your registry does not allow automatic creation of top-level namespaces, you must create them manually.
+
+When you generate mirror manifests, you can specify the top-level namespace where you want to mirror the images by setting `TARGET_REGISTRY` to `myregistry.com:5000/mynamespace` which has the benefit of needing to create only one namespace `mynamespace` in your registry if it does not allow automatic creation of namespaces.
+
+If you do not specify your own top-level namespace, the mirroring process will use the ones which are specified by the CASEs. For example, it will try to mirror the images at `myregistry.com:5000/cp`, `myregistry.com:5000/cpopen etc`.
+
+So if your registry does not allow automatic creation of top-level namespaces and you are not going to use your own during generation of mirror manifests, then you must create the following namespaces at the root of your registry.
+- cp
+- cpopen
+
+There can be more top-level namespaces that you might need to create. See section on [Generate mirror manifests](#1.-generate-mirror-manifests) for information on how to use the `oc ibm-pak describe command` to list all the top-level namespaces.
+
+#### Set environment variables and download CASE files
+
+If your host must connect to the internet via a proxy, you must set environment variables on the machine that accesses the internet via the proxy server.
+
+If you are mirroring via connected mirroring, set the following environment variables on the machine that accesses the internet via the proxy server:
 
 ```
-cloudctl case launch                                   \
-    --case /tmp/cases/ibm-ucd-prod-1.5.7.tgz           \
-    --namespace <target namespace>                     \
-    --inventory ucdsOperatorSetup                      \
-    --action configure-cluster-airgap                  \
-    --args "--registry $TARGET_REGISTRY --inputDir /tmp/cases"
+export https_proxy=http://proxy-server-hostname:port
+export http_proxy=http://proxy-server-hostname:port
+
+# Example:
+export https_proxy=http://server.proxy.xyz.com:5018
+export http_proxy=http://server.proxy.xyz.com:5018
 ```
 
-(Optional) If you are using an insecure registry, you must add the local registry to the cluster insecureRegistries list.
+Before mirroring your images, you can set the environment variables on your mirroring device, and connect to the internet so that you can download the corresponding CASE files. To finish preparing your host, complete the following steps:
+
+**Note**: Save a copy of your environment variable values to a text editor. You can use that file as a reference to cut and paste from when you finish mirroring images to your registry.
+
+1. Create the following environment variables with the installer image name and the version.
+
+   ```
+   export CASE_NAME=ibm-ucd-prod
+   export CASE_VERSION=2.0.5
+   ```
+
+2. Connect your host to the intranet.
+
+3. The plug-in can detect the locale of your environment and provide textual helps and messages accordingly. You can optionally set the locale by running the following command:
+
+   ```
+   oc ibm-pak config locale -l LOCALE
+   ```
+
+   where LOCALE can be one of `de_DE`, `en_US`, `es_ES`, `fr_FR`, `it_IT`, `ja_JP`, `ko_KR`, `pt_BR`, `zh_Hans`, `zh_Hant`.
+
+4. Configure the plug-in to download CASEs as OCI artifacts from IBM Cloud Container Registry (ICCR).
+
+   ```
+   oc ibm-pak config repo 'IBM Cloud-Pak OCI registry' -r oci:cp.icr.io/cpopen --enable
+   ```
+
+5. Enable color output (optional with v1.4.0 and later)
+
+   ```
+   oc ibm-pak config color --enable true
+   ```
+
+6. Download the image inventory for your UrbanCode Deploy server to your host.
+
+   **Tip:** If you do not specify the CASE version, it will download the latest CASE.
+
+   ```
+   oc ibm-pak get $CASE_NAME --version $CASE_VERSION
+   ```
+
+By default, the root directory used by plug-in is `~/.ibm-pak`. This means that the preceding command will download the CASE under `~/.ibm-pak/data/cases/$CASE_NAME/$CASE_VERSION`. You can configure this root directory by setting the `IBMPAK_HOME` environment variable. Assuming `IBMPAK_HOME` is set, the preceding command will download the CASE under `$IBMPAK_HOME/.ibm-pak/data/cases/$CASE_NAME/$CASE_VERSION`.
+
+The logs files will be available at `$IBMPAK_HOME/.ibm-pak/logs/oc-ibm_pak.log`.
+
+Your host is now configured and you are ready to mirror your images.
+
+**Notes:**
+
+* Starting with v1.4.0, the plug-in creates a file, `component-set-config.yaml`, in the directory `~/.ibm-pak/data/cases/$CASE_NAME/$CASE_VERSION` to download the CASEs with `oc ibm-pak get`. This file captures all the CASEs that were downloaded, pinning down their exact versions during this particular download. You can use this file later to download the same CASEs with same versions in another environemnt. You can check in this file to your source code repository and recreate the same environment each time you use this to download the CASEs. Run the following command:
+
+   ```
+   oc ibm-pak get -c file:///home/user/ibm-pak/data/cases/$CASE_NAME/$CASE_VERSION/component-set-config.yaml
+   ```
+
+   * Note that the path after `file://` should be an absolute path.
+
+* You can also edit this file defining the CASEs with pinned down versions which should include your product. The following is an example file, `my-csc.yaml`:
+
+   ```
+   name: "UrbanCode Deploy"                         # <required> defines the name for the "product"; this is NOT a CASE name, but follows IBM CASE name rules. For more information, see https://ibm.biz/case-yaml
+   version: "7.3.1"                                # <required> defines a version for the "product"
+   description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
+   cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
+  - name: ibm-ucd-prod
+    version: 2.0.5
+    launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
+   ```
+
+### Mirroring images to your private container registry
+
+The process of mirroring images takes the image from the internet to your host, then effectively copies that image to your private container registry. After you mirror your images, you can configure your cluster and complete air-gapped installation.
+
+Complete the following steps to mirror your images from your host to your private container registry:
+
+- [1. Generate mirror manifests](#1.-generate-mirror-manifests)
+- [2. Authenticating the registry](#2.-authenticating-the-registry)
+- [3. Mirror images to final location](#3.-mirror-images-to-final-location)
+- [4. Configure the cluster](#4.-configure-the-cluster)
+- [5. Install UrbanCode Deploy server by way of OpenShift](#5.-install-urbancode-deploy-server-by-way-of-openshift)
+
+#### 1. Generate mirror manifests
+
+**Notes**:
+
+* If you want to install subsequent updates to your air-gapped environment, you must do a `CASE get` to get the image list when performing those updates. A registry namespace suffix can optionally be specified on the target registry to group mirrored images.
+
+1. Define the environment variable `$TARGET_REGISTRY` by running the following command:
+
+   ```
+   export TARGET_REGISTRY=<target-registry>
+   ```
+
+   The `<target-registry>` refers to the registry (hostname and port) where your images will be mirrored to and accessed by the oc cluster. For example setting TARGET_REGISTRY to `myregistry.com:5000/mynamespace` will create manifests such that images will be mirrored to the top-level namespace `mynamespace`.
+
+2. Run the following command to generate mirror manifests to be used when mirroring the image to the target registry:
+
+   ```
+   oc ibm-pak generate mirror-manifests \
+      $CASE_NAME \
+      $TARGET_REGISTRY \
+      --version $CASE_VERSION
+   ```
+
+The preceding command will generate the files, `images-mapping.txt` and `image-content-source-policy.yaml`, at `~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION`.
+
+The `$TARGET_REGISTRY` refers to the registry where your images will be mirrored to and accessed by the `oc` cluster.
+
+**Notes:**
+
+- You can use the following command to list all the images that will be mirrored and the publicly accessible registries from where those images will be pulled from:
+
+   ```
+   oc ibm-pak describe $CASE_NAME --version $CASE_VERSION --list-mirror-images
+   ```
+
+   **Tip:** Note down the `Registries found` section at the end of output from the preceding command. You will need to log in to those registries so that the images can be pulled and mirrored to your local target registry. See the next steps on authentication. `Top-level namespaces found` section shows the list of namespaces under which the images will be mirrored. These namespaces should be created manually in your registry root path if your registry doesn't allow automatic creation of the namespaces.
+
+##### **Example `~/.ibm-pak` directory structure**
+
+The `~/.ibm-pak` directory structure is built over time as you save CASEs and mirror. The following tree shows an example of the `~/.ibm-pak` directory structure:
 
 ```
-oc patch image.config.openshift.io/cluster --type=merge -p '{"spec":{"registrySources":{"insecureRegistries":["'${TARGET_REGISTRY}'"]}}}'
+ tree ~/.ibm-pak
+/root/.ibm-pak
+├── config
+│   └── config.yaml
+├── data
+│   ├── cases
+│   │   └── YOUR-CASE-NAME
+│   │       └── YOUR-CASE-VERSION
+│   │           ├── XXXXX
+│   │           ├── XXXXX
+│   └── mirror
+│       └── YOUR-CASE-NAME
+│           └── YOUR-CASE-VERSION
+│               ├── catalog-sources.yaml
+│               ├── image-content-source-policy.yaml
+│               └── images-mapping.txt
+└── logs
+    └── oc-ibm_pak.log
 ```
 
-#### 7. Install Operator
+**Note:** A new directory `~/.ibm-pak/mirror` is created when you issue the `oc ibm-pak generate mirror-manifests` command. This directory holds the `image-content-source-policy.yaml`, `images-mapping.txt`, and `catalog-sources.yaml`.
 
-See instructions from [Installing UrbanCode Deploy sever](#installing-urbancode-deploy-server-operator) section
+If you are using a file system (disconnected mirroring), your `~/.ibm-pak` directory structure might look like the following:
 
-### In Air-Gapped OpenShift Cluster Without a Bastion
+```
+ tree ~/.ibm-pak
+/root/.ibm-pak
+├── config
+│   └── config.yaml
+├── data
+│   ├── cases
+│   │   └── YOUR-CASE-NAME
+│   │       └── YOUR-CASE-VERSION
+│   │           ├── XXXX
+│   │           ├── XXXX
+│   └── mirror
+│       └── YOUR-CASE-NAME
+│           └── YOUR-CASE-VERSION
+│               ├── catalog-sources.yaml
+│               ├── image-content-source-policy.yaml
+│               ├── images-mapping-to-filesystem.txt
+│               └── images-mapping-from-filesystem.txt
+└── logs
+    └── oc-ibm_pak.log
+```
 
-#### 1. Prepare a portable device
+A new directory `~/.ibm-pak/data/mirror` is created when you issue the `oc ibm-pak generate mirror-manifests` command. This directory holds the `image-content-source-policy.yaml`, `images-mapping-to-filesystem.txt`, `images-mapping-from-filesystem.txt`, and `catalog-sources.yaml`.
 
-Prepare a portable device (such as laptop) that be used to download the case and images can be carried into the air gapped environment
+#### 2. Authenticating the registry
 
-* Verify that the portable device has access
-  * to public internet (to download CASE and images)
-  * a target image registry ( where the images will be mirrored)
-  * a target OpenShift cluster to install the operator
+Complete the following steps to authenticate your registries:
 
-* Download and install dependent command line tools
-  * [oc](https://docs.openshift.com/container-platform/3.6/cli_reference/get_started_cli.html#installing-the-cli) - To interact with Openshift Cluster
-  * [cloud-pak-cli](https://github.com/IBM/cloud-pak-cli) - To download and install CASE
+1. Store authentication credentials for all source Docker registries.
 
-All the following steps should be run from the portable device
+   - `cp.icr.io`
 
-#### 2. Configure Registry Auth
+   You must run the following command to configure credentials for all target registries that require authentication. Run the command separately for each registry:
 
-See instructions from previous [Configure Registry Auth](#3-configure-registry-auth) section
+   **Note:** The `export REGISTRY_AUTH_FILE` command only needs to run once.
 
-#### 3. Mirror Images
+   ```
+   export REGISTRY_AUTH_FILE=<path to the file which will store the auth credentials generated on podman login>
+   podman login <TARGET_REGISTRY>
+   ```
 
-See instructions from previous [Mirror Images](#5-mirror-images) section
+   **Important:** When you log in to `cp.icr.io`, you must specify the user as `cp` and the password which is your Entitlement key from the [IBM Cloud Container Registry](https://myibm.ibm.com/products-services/containerlibrary). For example:
 
-#### 4. Configure Cluster for Airgap
+   ```
+   podman login cp.icr.io
+   Username: cp
+   Password:
+   Login Succeeded!
+   ```
 
-See instructions from previous [Configure Cluster for Airgap](#6-configure-cluster-for-airgap) section
+For example, if you export `REGISTRY_AUTH_FILE=~/.ibm-pak/auth.json`, then after performing `podman login`, you can see that the file is populated with registry credentials.
 
-#### 5. Install the operator
+If you use `docker login`, the authentication file is typically located at `$HOME/.docker/config.json` on Linux or `%USERPROFILE%/.docker/config.json` on Windows. After `docker login` you should export `REGISTRY_AUTH_FILE` to point to that location. For example in Linux you can issue the following command:
 
-See instructions from [Installing UrbanCode Deploy sever](#installing-urbancode-deploy-server-operator) section
+```
+export REGISTRY_AUTH_FILE=$HOME/.docker/config.json
+```
+
+|Directory|Description|
+|---|---|
+|`~/.ibm-pak/config`|Stores the default configuration of the plug-in and has information about the [public GitHub URL](https://github.com/IBM/cloud-pak/raw/master/repo/case/) from where the cases are downloaded.|
+|`~/.ibm-pak/data/cases`|This directory stores the CASE files when they are downloaded by issuing the `oc ibm-pak get` command.|
+|`~/.ibm-pak/data/mirror`|This directory stores the image-mapping files, ImageContentSourcePolicy manifest in `image-content-source-policy.yaml` and CatalogSource manifest in one or more `catalog-sourcesXXX.yaml`. The files  `images-mapping-to-filesystem.txt` and `images-mapping-from-filesystem.txt` are input to the `oc image mirror` command, which copies the images to the file system and from the file system to the registry respectively.|
+|`~/.ibm-pak/data/logs`|This directory contains the `oc-ibm_pak.log` file, which captures all the logs generated by the plug-in.|
+
+#### 3. Mirror images to final location
+
+Complete the steps in this section on your host that is connected to both the local Docker registry and the OpenShift cluster.
+
+1. Mirror images to the final location.
+
+   - **For mirroring from a bastion host (connected mirroring):**
+
+      Mirror images to the `TARGET_REGISTRY`:
+
+      ```
+      oc image mirror \
+        -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping.txt \
+        --filter-by-os '.*'  \
+        -a $REGISTRY_AUTH_FILE \
+        --insecure  \
+        --skip-multiple-scopes \
+        --max-per-registry=1 \
+        --continue-on-error=true
+      ```
+
+      ```
+      oc image mirror --help
+      ```
+
+      The above command can be used to see all the options available on the mirror command. Note that we use `continue-on-error` to indicate that command should try to mirror as much as possible and continue on errors.
+
+      **Note:** Sometimes based on the number and size of images to be mirrored, the `oc image mirror` might take longer. If you are issuing the command on a remote machine it is recommended that you run the command in the background with a nohup so even if network connection to your remote machine is lost or you close the terminal the mirroring will continue. For example, the below command will start the mirroring process in background and write the log to `my-mirror-progress.txt`.
+
+      ```
+      nohup oc image mirror \
+      -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping.txt \
+      -a $REGISTRY_AUTH_FILE \
+      --filter-by-os '.*' \
+      --insecure \
+      --skip-multiple-scopes \
+      --max-per-registry=1 \
+      --continue-on-error=true > my-mirror-progress.txt  2>&1 &
+      ```
+
+   You can view the progress of the mirror by issuing the following command on the remote machine:
+
+      ```
+      tail -f my-mirror-progress.txt
+      ```
+
+   - **For mirroring from a file system (disconnected mirroring):**
+
+      Mirror images to your file system:
+
+      ```
+      export IMAGE_PATH=<image-path>
+      oc image mirror \
+        -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping-to-filesystem.txt \
+        --filter-by-os '.*'  \
+        -a $REGISTRY_AUTH_FILE \
+        --insecure  \
+        --skip-multiple-scopes \
+        --max-per-registry=1 \
+        --continue-on-error=true \
+        --dir "$IMAGE_PATH"
+      ```
+
+      The `<image-path>` refers to the local path to store the images. For example, in the previous section if provided `file://local` as input during generate mirror-manifests, then the preceding command will create a subdirectory local under <image-path> and copy the images under it.
+
+The following command can be used to see all the options available on the mirror command. Note that `continue-on-error` is used to indicate that the command should try to mirror as much as possible and continue on errors.
+
+   ```
+   oc image mirror --help
+   ```
+
+**Note:** Sometimes based on the number and size of images to be mirrored, the `oc image mirror` might take longer. If you are issuing the command on a remote machine, it is recommended that you run the command in the background with `nohup` so that even if you lose network connection to your remote machine or you close the terminal, the mirroring will continue. For example, the following command will start the mirroring process in the background and write the log to `my-mirror-progress.txt`.
+
+   ```
+    export IMAGE_PATH=<image-path>
+    nohup oc image mirror \
+      -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping-to-filesystem.txt \
+      --filter-by-os '.*' \
+      -a $REGISTRY_AUTH_FILE \
+      --insecure \
+      --skip-multiple-scopes \
+      --max-per-registry=1 \
+      --continue-on-error=true \
+      --dir "$IMAGE_PATH" > my-mirror-progress.txt  2>&1 &
+   ```
+
+You can view the progress of the mirror by issuing the following command on the remote machine:
+
+   ```
+   tail -f my-mirror-progress.txt
+   ```
+
+2. **For disconnected mirroring only:** Continue to move the following items to your file system:
+
+   * The `<image-path>` directory you specified in the previous step
+   * The `auth` file referred by `$REGISTRY_AUTH_FILE`
+   * `~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping-from-filesystem.txt`
+
+3. **For disconnected mirroring only:** Mirror images to the target registry from file system
+
+   Complete the steps in this section on your file system to copy the images from the file system to the `$TARGET_REGISTRY`. Your file system must be connected to the target docker registry.
+
+   **Important:** If you used the placeholder value of `TARGET_REGISTRY` as a parameter to `--final-registry` at the time of generating mirror manifests, then before running the following command, find and replace the placeholder value of `TARGET_REGISTRY` in the file, `images-mapping-from-filesystem.txt`, with the actual registry where you want to mirror the images. For example, if you want to mirror images to `myregistry.com/mynamespace` then replace `TARGET_REGISTRY` with `myregistry.com/mynamespace`.
+
+   1. Run the following command to copy the images (referred in the `images-mapping-from-filesystem.txt` file) from the v2 directory to the final target registry:
+
+      ```
+      export IMAGE_PATH=<image-path>
+      oc image mirror \
+        -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping-from-filesystem.txt \
+        -a $REGISTRY_AUTH_FILE \
+        --from-dir "$IMAGE_PATH" \
+        --filter-by-os '.*' \
+        --insecure \
+        --skip-multiple-scopes \
+        --max-per-registry=1 \
+        --continue-on-error=true
+      ```
+
+#### 4. Configure the cluster
+
+1. Update the global image pull secret for your OpenShift cluster. Follow the steps in [Updating the global cluster pull secret](https://docs.openshift.com/container-platform/4.10/openshift_images/managing_images/using-image-pull-secrets.html#images-update-global-pull-secret_using-image-pull-secrets).
+
+The documented steps in the link enable your cluster to have proper authentication credentials in place to pull images from your `TARGET_REGISTRY` as specified in the `image-content-source-policy.yaml` which you will apply to your cluster in the next step.
+
+2. Create ImageContentSourcePolicy
+
+   **Important:**
+
+     * Before you run the command in this step, you must be logged into your OpenShift cluster. Using the `oc login` command, log in to the OpenShift cluster where your final location resides. You can identify your specific oc login by clicking the user drop-down menu in the OpenShift console, then clicking **Copy Login Command**.
+
+     * The recommended way to install the catalog is to run the following command:
+
+        ```
+        oc apply -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/catalog-sources.yaml
+        ```
+
+        The following command can also be used to install the catalog:
+
+           ```
+           oc ibm-pak launch \
+           $CASE_NAME \
+             --version $CASE_VERSION \
+             --action install-catalog \
+             --inventory $CASE_INVENTORY_SETUP \
+             --namespace $NAMESPACE \
+             --args "--registry $TARGET_REGISTRY/ --recursive \ --inputDir ~/.ibm-pak/data/cases/$CASE_NAME/$CASE_VERSION"
+           ```
+
+     * If you used the placeholder value of `TARGET_REGISTRY` as a parameter to `--final-registry` at the time of generating mirror manifests, then before running the following command, find and replace the placeholder value of `TARGET_REGISTRY` in file, `~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/image-content-source-policy.yaml` with the actual registry where you want to mirror the images. For example, replace `TARGET_REGISTRY` with `myregistry.com/mynamespace`.
+
+   Run the following command to create ImageContentSourcePolicy:
+
+      ```
+      oc apply -f  ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/image-content-source-policy.yaml
+      ```
+
+   If you are using OpenShift version 4.7 or earlier, this step might cause your cluster nodes to drain and restart sequentially to apply the configuration changes.
+
+3. Verify that the ImageContentSourcePolicy resource is created.
+
+   ```
+   oc get imageContentSourcePolicy
+   ```
+
+4. Verify your cluster node status and wait for all the nodes to be restarted before proceeding.
+
+   ```
+   oc get MachineConfigPool
+   ```
+
+   ```
+   $ oc get MachineConfigPool -w
+   NAME     CONFIG                                             UPDATED   UPDATING   DEGRADED   MACHINECOUNT   READYMACHINECOUNT   UPDATEDMACHINECOUNT   DEGRADEDMACHINECOUNT   AGE
+   master   rendered-master-53bda7041038b8007b038c08014626dc   True      False      False      3              3                   3                     0                      10d
+   worker   rendered-worker-b54afa4063414a9038958c766e8109f7   True      False      False      3              3                   3                     0                      10d
+   ```
+
+   After the `ImageContentsourcePolicy` and global image pull secret are applied, the configuration of your nodes will be updated sequentially. Wait until all `MachineConfigPools` are in the `UPDATED=True` status before proceeding.
+
+5. Create a new project for the CASE commands by running the following commands:
+
+   **Note:** You must be logged into a cluster before performing the following steps.
+
+   ```
+   export NAMESPACE=<YOUR_NAMESPACE>
+   ```
+
+   ```
+   oc new-project $NAMESPACE
+   ```
+
+6. **Optional:** If you use an insecure registry, you must add the target registry to the cluster insecureRegistries list.
+
+   ```
+   oc patch image.config.openshift.io/cluster --type=merge \
+   -p '{"spec":{"registrySources":{"insecureRegistries":["'${TARGET_REGISTRY}'"]}}}'
+   ```
+
+7. Verify your cluster node status and wait for all the nodes to be restarted before proceeding.
+
+   ```
+   oc get MachineConfigPool -w
+   ```
+
+   After the `ImageContentsourcePolicy` and global image pull secret are applied, the configuration of your nodes will be updated sequentially. Wait until all `MachineConfigPools` are updated.
+
+### 5. Install UrbanCode Deploy server by way of OpenShift
+
+Now that your images are mirrored to your air-gapped environment, you can deploy your UrbanCode Deploy server to that environment. See the instructions at [Install UrbanCode Deploy server](#installing-urbancode-deploy-server-operator).
+
+### Setting up a repeatable mirroring process
+
+Once you complete a `CASE` save, you can mirror the `CASE` as many times as you want to. This approach allows you to mirror a specific version of the UrbanCode Deploy server into development, test, and production stages using a private container registry.
+
+Follow the steps in this section if you want to save the `CASE` to multiple registries (per environment) once and be able to run the `CASE` in the future without repeating the `CASE` save process.
+
+1. Run the following command to save the `CASE` to ~/.ibm-pak/data/cases/$CASE_NAME/$CASE_VERSION which can be used as an input during the mirror manifest generation:
+
+   ```
+   oc ibm-pak get \
+   $CASE_NAME \
+   --version $CASE_VERSION
+   ```
+
+2. Run the `oc ibm-pak generate mirror-manifests` command to generate the `image-mapping.txt`:
+
+   ```
+   oc ibm-pak generate mirror-manifests \
+   $CASE_NAME \
+   $TARGET_REGISTRY \
+   --version $CASE_VERSION
+   ```
+
+   Then add the `image-mapping.txt` to the `oc image mirror` command:
+
+   ```
+   oc image mirror \
+     -f ~/.ibm-pak/data/mirror/$CASE_NAME/$CASE_VERSION/images-mapping.txt \
+     --filter-by-os '.*'  \
+     -a $REGISTRY_AUTH_FILE \
+     --insecure  \
+     --skip-multiple-scopes \
+     --max-per-registry=1 \
+     --continue-on-error=true
+   ```
+
+If you want to make this repeatable across environments, you can reuse the same saved `CASE` cache (~/.ibm-pak/$CASE_NAME/$CASE_VERSION) instead of executing a `CASE` save again in other environments. You do not have to worry about updated versions of dependencies being brought into the saved cache.
 
 ## Configuration
 
