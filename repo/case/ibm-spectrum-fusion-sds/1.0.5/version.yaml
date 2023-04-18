@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 2.5.1
+  catalogs:
+    database: {}
+    operations: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Management operator for IBM Spectrum Fusion
+  displayDescription: IBM Spectrum Fusion Management Operator
+  displayName: IBM Spectrum Fusion SDS Management Operator
+  icons: []
+  licenses:
+    isf:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Spectrum Fusion Managment Operator License
+        displayName: IBM Spectrum Fusion Management Operator
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-spectrum-fusion-sds
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.0.5
+  webPage: https://www.ibm.com/products/spectrum-fusion
+created: 2023-04-18T01:58:03.96019788+0000
+digest: sha256:c6061d0c0539cdc06df54eb5f0bd744fab81bee5f3cd5a7da5c4eff5997d1f83
