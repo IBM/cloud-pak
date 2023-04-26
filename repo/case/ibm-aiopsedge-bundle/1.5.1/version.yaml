@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 3.7.1-rc1-202304140006
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: This operator manages the AIOpsEdge components of the IBM Watson for
+    AIOps v3.x product.
+  displayDescription: ""
+  displayName: AIOpsEdge Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4aiops:
+      mediaType: application/text
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps License
+        displayName: Cloud Pak for Watson AIOps
+      ref: LICENSE
+      url: https://ibm.biz/cp4waiops-36-license
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiopsedge-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.5.1
+  webPage: https://www.ibm.com
+created: 2023-04-26T00:32:46.97696311+0000
+digest: sha256:48d4368e8addccef9808de9c63f30d1e49bfea0a80b8dccccdfeb7bff87c8d11
