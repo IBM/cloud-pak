@@ -40,3 +40,41 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.1.0
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:e4dafc43b1f99133217c42674b02d14fd98026771a3830922587f1971e0f9f50
+  image: cpopen/websphere-liberty-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.0-amd64
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:aa79d5b2974a3853b276db718df66314bd6a8df1bce75ebd7786dca22b314491
+  image: cpopen/websphere-liberty-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.0-ppc64le
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:98446ed8235f1cc44a272117be11ad67d5de24412b6d1c216cf83bb301481e28
+  image: cpopen/websphere-liberty-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.0-s390x
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:93b5f8bda2148e37b7135167130201efc5d85cc156124c0ecfd80ea59ed55d67
+  image: cpopen/websphere-liberty-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.2.0
