@@ -127,6 +127,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-cs-webhook
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.4.0
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
@@ -169,6 +170,24 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/db2u/db2u
+  - image: icr.io/cpopen/db2u/db2u.auxiliary.auth
+  - image: icr.io/cpopen/db2u/db2u.dv.api
+  - image: icr.io/cpopen/db2u/db2u.dv.caching
+  - image: icr.io/cpopen/db2u/db2u.dv.utils
+  - image: icr.io/cpopen/db2u/db2u.graph
+  - image: icr.io/cpopen/db2u/db2u.hurricane
+  - image: icr.io/cpopen/db2u/db2u.instdb
+  - image: icr.io/cpopen/db2u/db2u.instdb.restricted
+  - image: icr.io/cpopen/db2u/db2u.mustgather
+  - image: icr.io/cpopen/db2u/db2u.qrep
+  - image: icr.io/cpopen/db2u/db2u.rest
+  - image: icr.io/cpopen/db2u/db2u.restricted
+  - image: icr.io/cpopen/db2u/db2u.tools
+  - image: icr.io/cpopen/db2u/db2u.update.image
+  - image: icr.io/cpopen/db2u/db2u.veleroplugin
+  - image: icr.io/cpopen/db2u/db2u.watsonquery
+  - image: icr.io/cpopen/db2u/etcd
   - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
@@ -235,6 +254,7 @@ images:
   - image: icr.io/db2u/db2u.restricted
   - image: icr.io/db2u/db2u.tools
   - image: icr.io/db2u/db2u.update.image
+  - image: icr.io/db2u/db2u.watsonquery
   - image: icr.io/db2u/etcd
   - image: icr.io/guardium-insights/cp-serviceability
   - image: icr.io/guardium-insights/mongo
