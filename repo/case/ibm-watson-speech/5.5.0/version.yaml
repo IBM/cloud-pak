@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 4.6.5
+  catalogs:
+    cp4d: {}
+    rhocp: {}
+    speech: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Watson Speech Services
+  displayDescription: ""
+  displayName: ""
+  icons:
+  - mediaType: image/png
+    url: https://avatars1.githubusercontent.com/u/9221727?s=200&v=4
+  licenses:
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: Non_IBM_LA_LI
+        name: licenseNonIbm
+      ref: non_ibm_license
+    licenseNotices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: LA_LI_Notices
+        name: licenseNotices
+      ref: notices
+    licenseTxt:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayName: LICENSE
+        name: licenseTxt
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watson-speech
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 5.5.0
+  webPage: https://www.ibm.com
+created: 2023-04-29T19:49:49.56014370+0000
+digest: sha256:22ca19e86a6f7895e8a97b515a2071f4fc77e04c392806a30858a6d40a06308e
