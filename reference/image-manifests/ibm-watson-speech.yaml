@@ -4,6 +4,7 @@ images:
   - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/postgresql
   - image: cp/cpd/wd-postgres-license
+  - image: cp/edb/postgresql
   - image: cp/opencontent-audit-webhook
   - image: cp/opencontent-fluentd
   - image: cp/opencontent-icp-cert-gen-1
@@ -26,6 +27,8 @@ images:
   - image: cp/watson-speech/de-de-narrowbandmodel
   - image: cp/watson-speech/de-de-telephony
   - image: cp/watson-speech/en-au-broadbandmodel
+  - image: cp/watson-speech/en-au-heidiexpressive
+  - image: cp/watson-speech/en-au-jackexpressive
   - image: cp/watson-speech/en-au-multimedia
   - image: cp/watson-speech/en-au-narrowbandmodel
   - image: cp/watson-speech/en-au-telephony
@@ -79,18 +82,22 @@ images:
   - image: cp/watson-speech/hi-in-telephony
   - image: cp/watson-speech/it-it-broadbandmodel
   - image: cp/watson-speech/it-it-francescav3voice
+  - image: cp/watson-speech/it-it-multimedia
   - image: cp/watson-speech/it-it-narrowbandmodel
   - image: cp/watson-speech/it-it-telephony
   - image: cp/watson-speech/ja-jp-broadbandmodel
   - image: cp/watson-speech/ja-jp-emiv3voice
   - image: cp/watson-speech/ja-jp-multimedia
   - image: cp/watson-speech/ja-jp-narrowbandmodel
+  - image: cp/watson-speech/ja-jp-telephony
   - image: cp/watson-speech/ko-kr-broadbandmodel
+  - image: cp/watson-speech/ko-kr-jinv3voice
   - image: cp/watson-speech/ko-kr-multimedia
   - image: cp/watson-speech/ko-kr-narrowbandmodel
   - image: cp/watson-speech/ko-kr-telephony
   - image: cp/watson-speech/nl-be-telephony
   - image: cp/watson-speech/nl-nl-broadbandmodel
+  - image: cp/watson-speech/nl-nl-merelv3voice
   - image: cp/watson-speech/nl-nl-multimedia
   - image: cp/watson-speech/nl-nl-narrowbandmodel
   - image: cp/watson-speech/nl-nl-telephony
@@ -103,6 +110,7 @@ images:
   - image: cp/watson-speech/speech-utils-rhubi8
   - image: cp/watson-speech/stt-async
   - image: cp/watson-speech/stt-customization
+  - image: cp/watson-speech/sv-se-telephony
   - image: cp/watson-speech/tts-customization
   - image: cp/watson-speech/tunebyexamplemodel
   - image: cp/watson-speech/wd-postgres-license
