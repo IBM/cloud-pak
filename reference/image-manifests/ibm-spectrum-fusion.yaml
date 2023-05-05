@@ -1,6 +1,53 @@
 source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
 description: "Management operator for IBM Spectrum Fusion"
 images:
+  - image: cp/df/cephcsi-rhel8
+  - image: cp/df/mcg-core-rhel8
+  - image: cp/df/mcg-rhel8-operator
+  - image: cp/df/ocs-metrics-exporter-rhel8
+  - image: cp/df/ocs-must-gather-rhel8
+  - image: cp/df/ocs-rhel8-operator
+  - image: cp/df/odf-console-rhel8
+  - image: cp/df/odf-csi-addons-rhel8-operator
+  - image: cp/df/odf-csi-addons-sidecar-rhel8
+  - image: cp/df/odf-multicluster-console-rhel8
+  - image: cp/df/odf-multicluster-rhel8-operator
+  - image: cp/df/odf-rhel8-operator
+  - image: cp/df/odr-rhel8-operator
+  - image: cp/df/rook-ceph-rhel8-operator
+  - image: cp/fbr/guardian-application-service
+  - image: cp/fbr/guardian-backup-location
+  - image: cp/fbr/guardian-backup-policy
+  - image: cp/fbr/guardian-backup-service
+  - image: cp/fbr/guardian-job-manager
+  - image: cp/fbr/guardian-transaction-manager
+  - image: cp/fbr/guardian-transaction-manager-minio
+  - image: cp/fbr/guardian-transaction-manager-redis
+  - image: cp/ibm-spectrum-discover/auth
+  - image: cp/ibm-spectrum-discover/backup-restore
+  - image: cp/ibm-spectrum-discover/connmgr
+  - image: cp/ibm-spectrum-discover/connmgr-setup
+  - image: cp/ibm-spectrum-discover/content-search-setup
+  - image: cp/ibm-spectrum-discover/db2whrest
+  - image: cp/ibm-spectrum-discover/db-schema
+  - image: cp/ibm-spectrum-discover/import-tags-app
+  - image: cp/ibm-spectrum-discover/isd-proxy
+  - image: cp/ibm-spectrum-discover/keystone
+  - image: cp/ibm-spectrum-discover/licensing
+  - image: cp/ibm-spectrum-discover/metaocean-api
+  - image: cp/ibm-spectrum-discover/mo-agent-extract
+  - image: cp/ibm-spectrum-discover/moconsumer
+  - image: cp/ibm-spectrum-discover/moproducer
+  - image: cp/ibm-spectrum-discover/mo-ubi-init
+  - image: cp/ibm-spectrum-discover/policyengine
+  - image: cp/ibm-spectrum-discover/reports
+  - image: cp/ibm-spectrum-discover/scaleafmdatamover
+  - image: cp/ibm-spectrum-discover/scaleilmdatamover
+  - image: cp/ibm-spectrum-discover/sdmonitor
+  - image: cp/ibm-spectrum-discover/tikaserver
+  - image: cp/ibm-spectrum-discover/uibackend
+  - image: cp/ibm-spectrum-discover/uifrontend
+  - image: cp/ibm-spectrum-discover/wkc-connector
   - image: cp/isf/baas-minio
   - image: cp/isf/callhomeclient
   - image: cp/isf/eventmanager
@@ -30,6 +77,7 @@ images:
   - image: cp/isf/isf-ui-operator
   - image: cp/isf/isf-update-operator
   - image: cp/isf/isf-utils
+  - image: cp/isf/isf-validate-entitlement
   - image: cp/isf/logcollector
   - image: cp/isf/ramen-operator
   - image: cp/isf/spp-dp-operator
@@ -55,6 +103,16 @@ images:
   - image: icr.io/cp/isf/isf-ui-operator
   - image: icr.io/cp/isf/isf-update-operator
   - image: icr.io/cp/isf/logcollector
+  - image: icr.io/cpopen/guardian-datamover
+  - image: icr.io/cpopen/guardian-dm-operator
+  - image: icr.io/cpopen/guardian-dp-operator
+  - image: icr.io/cpopen/guardian-mongo-operator
+  - image: icr.io/cpopen/guardian-redis-operator
+  - image: icr.io/cpopen/ibm-spectrum-discover-operator
+  - image: icr.io/cpopen/ibm-spectrum-discover-operator-bundle
+  - image: icr.io/cpopen/ibm-spectrum-discover-operator-catalog
+  - image: icr.io/cpopen/idp-agent-operator
+  - image: icr.io/cpopen/idp-server-operator
   - image: icr.io/cpopen/isf-operator-bundle
   - image: icr.io/cpopen/isf-operator-catalog
   - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
