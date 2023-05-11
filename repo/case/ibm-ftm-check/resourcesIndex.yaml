@@ -49,3 +49,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 4.2.0-20220922-1111-98
+- caseVersions:
+  - 4.2.1
+  category: catalog
+  digest: sha256:857a1f237f0b5ebfda7b5bfe950e8b48ddbbf96ecd97b4c043b855a2e7036a9f
+  image: cpopen/ibm-ftm-check-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.1-20230504-2213-432-linux-amd64
+- caseVersions:
+  - 4.2.1
+  category: catalog
+  digest: sha256:def3a70b726f18e05ed6b8e789c71348828a2a4a28f6530051594eaf26b07146
+  image: cpopen/ibm-ftm-check-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.1-20230504-2213-432-linux-ppc64le
+- caseVersions:
+  - 4.2.1
+  category: catalog
+  digest: sha256:d5e832ad80cc953f7dad144fcf27c21b4a1352aeaf0434535fa79326519bd91a
+  image: cpopen/ibm-ftm-check-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.2.1
