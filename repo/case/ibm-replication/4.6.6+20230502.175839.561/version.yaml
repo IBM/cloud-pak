@@ -1,0 +1,79 @@
+apiVersion: v1
+case:
+  appVersion: 4.6.6
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data - Data Replication Services
+  displayDescription: IBM Cloud Pak for Data - Data Replication Services
+  displayName: IBM Data Replication
+  icons: []
+  licenses:
+    IDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication Cartridge
+        displayName: IBM Data Replication Cartridge
+      ref: IBM_Data_Replication_Crtg_for_CPD_EN_LI_4.6
+    IDRM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication Modernization
+        displayName: IBM Data Replication Modernization
+      ref: IBM_Data_Replication_Modernization_EN_LI_4.6
+    IIDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Infosphere Data Replication Cartridge
+        displayName: IBM Infosphere Data Replication Cartridge
+      ref: IBM_Infos_Data_Replication_Crtg_CPD_EN_LI_4.6
+    IIDRM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Infopshere Data Replication Modernization
+        displayName: IBM Infopshere Data Replication Modernization
+      ref: IBM_Infos_Data_Replication_Modernization_EN_LI_4.6
+    Non_IBM_IDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Non IBM License IBM Data Replication Cartridge
+        displayName: Non IBM License IBM Data Replication Cartridge
+      ref: non_ibm_license_IBM_Data_Replication_Crtg_for_CPD_4.6
+    Non_IBM_IIDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Non IBM License IBM Infosphere Data Replication Cartridge
+        displayName: Non IBM License IBM Infosphere Data Replication Cartridge
+      ref: non_ibm_license_IBM_Infos_Data_Replication_Crtg_CPD_4.6
+    Notices_IDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Notices IBM Data Replication Cartridge
+        displayName: Notices IBM Data Replication Cartridge
+      ref: notices_IBM_Data_Replication_Crtg_for_CPD_4.6
+    Notices_IIDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Notices IBM Infosphere Data Replication Cartridge
+        displayName: Notices IBM Infosphere Data Replication Cartridge
+      ref: notices_IBM_Infos_Data_Replication_Crtg_CPD_4.6
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-replication
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 4.6.6+20230502.175839.561
+  webPage: https://www.ibm.com
+created: 2023-05-17T18:33:57.68294729+0000
+digest: sha256:667523c1cbd851bcb0da12f89e84679ef427dd3ca96d88884306279bd9decaba
