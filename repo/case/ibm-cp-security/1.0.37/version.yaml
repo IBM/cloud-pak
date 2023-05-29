@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 1.10.12-0
+  catalogs:
+    cloudpak: {}
+    middleware: {}
+    operators: {}
+    security: {}
+  certifications:
+    ibmccp: {}
+  classifications:
+    commercial: {}
+  description: Integrate existing security tools to gain deeper insights into threats
+    and risks, orchestrate actions and automate responses
+  displayDescription: ""
+  displayName: Cloud Pak for Security
+  icons:
+  - mediaType: image/svg
+    url: https://ibm-docs-static-content.s3.us.cloud-object-storage.appdomain.cloud/cloudpak_icons/SSTDPP.svg
+  licenses:
+    licenses:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenses
+      ref: LICENSE-en
+  name: ibm-cp-security
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      amazon: {}
+      ibm-roks: {}
+      ibm-satellite: {}
+      microsoft: {}
+      redhat: {}
+      vmware: {}
+  version: 1.0.37
+  webPage: https://www.ibm.com/products/cloud-pak-for-security
+created: 2023-05-29T16:28:33.00093951+0000
+digest: sha256:bef525ce6f2d1088b450d38df2df6693d39e073dab776900ee05ecd1f8c9d47b
