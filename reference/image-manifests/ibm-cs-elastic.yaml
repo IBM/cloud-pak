@@ -1,0 +1,9 @@
+source: ibm-cs-elastic-bundle/case/ibm-cs-elastic/case.yaml
+description: "IBM Elastic Operator Case"
+images:
+  - image: cp/iaf-elasticsearch
+  - image: cp/iaf-elasticsearch-metrics-exporter
+  - image: cp/iaf-elasticsearch-proxy
+  - image: icr.io/cpopen/iaf-elastic-operator
+  - image: icr.io/cpopen/iaf-elastic-operator-bundle
+  - image: icr.io/cpopen/ibm-cs-elastic-operator-catalog
