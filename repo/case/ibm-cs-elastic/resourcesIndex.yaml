@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.3.13
+  category: catalog
+  digest: sha256:5816bdd4316467817d2e26baf3e5726ef7cad0b841f0032bc19d868980e0eef4
+  image: cpopen/ibm-cs-elastic-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.3.13-amd64
+- caseVersions:
+  - 1.3.13
+  category: catalog
+  digest: sha256:6b04eaf2ab28b761d59db2bfac4b5676bde2baff4cc336f4935406d7c40ae140
+  image: cpopen/ibm-cs-elastic-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.3.13-ppc64le
+- caseVersions:
+  - 1.3.13
+  category: catalog
+  digest: sha256:2d1458aaa41db0c32e006d703c5ef6006a9ca934dd55478fe443a78a261617bb
+  image: cpopen/ibm-cs-elastic-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.3.13-s390x
+- caseVersions:
+  - 1.3.13
+  category: catalog
+  digest: sha256:655128dbed1bdc2eb80921956638d97b9f8c28d87b59f7692254d56f55b08166
+  image: cpopen/ibm-cs-elastic-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.3.13
