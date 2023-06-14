@@ -16,6 +16,7 @@ images:
   - image: cp/apic/ibm-apiconnect-analytics-ingestion
   - image: cp/apic/ibm-apiconnect-analytics-k8s-init
   - image: cp/apic/ibm-apiconnect-analytics-mtls
+  - image: cp/apic/ibm-apiconnect-analytics-oscron
   - image: cp/apic/ibm-apiconnect-analytics-osinit
   - image: cp/apic/ibm-apiconnect-analytics-storage
   - image: cp/apic/ibm-apiconnect-apiconnect-configurator
@@ -41,6 +42,8 @@ images:
   - image: cp/apic/ibm-apiconnect-management-autotest-service
   - image: cp/apic/ibm-apiconnect-management-billing
   - image: cp/apic/ibm-apiconnect-management-client-downloads-server
+  - image: cp/apic/ibm-apiconnect-management-compliance-service
+  - image: cp/apic/ibm-apiconnect-management-compliance-ui
   - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbackrest
   - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbackrest-repo
   - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbouncer
@@ -188,6 +191,7 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/datapower-monitor
   - image: icr.io/cpopen/datapower-operator
   - image: icr.io/cpopen/datapower-operator-bundle
   - image: icr.io/cpopen/datapower-operator-catalog
