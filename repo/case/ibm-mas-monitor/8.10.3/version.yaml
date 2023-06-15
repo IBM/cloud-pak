@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: 8.10.3
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Maximo Monitor
+  displayDescription: IBM Maximo Monitor
+  displayName: IBM Maximo Monitor
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-mas-monitor
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 8.10.3
+  webPage: http://ibm.com
+created: 2023-06-15T17:20:20.81800213+0000
+digest: sha256:d6bff1d486c033db633ddffe328d1f4e61e7d7a13389ac3cde9d2406ff69bd6a
