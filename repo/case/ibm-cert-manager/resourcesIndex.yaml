@@ -1,2 +1,40 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:b0730171ee99a1b6c10feb664a20ca264b85b56c41d5fdd980d9e17f34315e8b
+  image: cpopen/ibm-cert-manager-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.0-amd64
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:c251b01f8a5d524ccf1a943a738f4b0ecf450a440300a9c6a80b2442db4d8a83
+  image: cpopen/ibm-cert-manager-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.0-ppc64le
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:a3213f9bdaf111845096dce2bd7abd7c3337ef979a206fb30da4411762823ec8
+  image: cpopen/ibm-cert-manager-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.0.0-s390x
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:9ecbd78444208da0e2981b7a9060d2df960e09b59ac9990a959df069864085c2
+  image: cpopen/ibm-cert-manager-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.0.0
