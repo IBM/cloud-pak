@@ -1,12 +1,15 @@
 source: ibm-cp-common-services-bundle/case/ibm-cp-common-services/case.yaml
 description: "IBM Common Services CASE"
 images:
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
   - image: ibmcom/ibm-common-service-catalog
   - image: icr.io/cpopen/common-service-operator
   - image: icr.io/cpopen/cpfs/audit-garbage-collector
   - image: icr.io/cpopen/cpfs/audit-policy-controller
   - image: icr.io/cpopen/cpfs/audit-syslog-service
   - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/cpfs/cpfs-utils
   - image: icr.io/cpopen/cpfs/dashboard-controller
   - image: icr.io/cpopen/cpfs/default-http-backend
   - image: icr.io/cpopen/cpfs/fluentd
@@ -63,7 +66,10 @@ images:
   - image: icr.io/cpopen/cpfs/zen-iam-config
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-minio
+  - image: icr.io/cpopen/cpfs/zen-utils
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator
@@ -72,6 +78,9 @@ images:
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator

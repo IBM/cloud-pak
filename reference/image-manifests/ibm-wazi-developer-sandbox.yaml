@@ -1,6 +1,8 @@
 source: ibm-wazi-developer-sandbox-case-bundle/case/ibm-wazi-developer-sandbox/case.yaml
 description: "The IBM Wazi Sandbox is a platform for z/OS® application development and testing on x86 Red Hat® OpenShift® or Kubernetes clusters without Z mainframe hardware."
 images:
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
   - image: cp/ibm-wazi-developer-sandbox-setup
   - image: cp/ibm-wazi-developer-sandbox-volume-copy
   - image: cp/ibm-wazi-developer-sandbox-zpdt
@@ -9,6 +11,7 @@ images:
   - image: icr.io/cpopen/cpfs/audit-policy-controller
   - image: icr.io/cpopen/cpfs/audit-syslog-service
   - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/cpfs/cpfs-utils
   - image: icr.io/cpopen/cpfs/dashboard-controller
   - image: icr.io/cpopen/cpfs/default-http-backend
   - image: icr.io/cpopen/cpfs/fluentd
@@ -63,7 +66,10 @@ images:
   - image: icr.io/cpopen/cpfs/zen-iam-config
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-minio
+  - image: icr.io/cpopen/cpfs/zen-utils
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator
@@ -72,6 +78,9 @@ images:
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
