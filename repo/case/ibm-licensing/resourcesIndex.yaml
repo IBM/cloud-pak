@@ -1,2 +1,40 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:666f2df7fa00aa6d219a98046f5128d21848f336794144046308b3667a1dd2c7
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: cd-amd64
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:d50ab3b91f46b29db01281358e057407877a2c1a9a0cd21a50fc83e924fac784
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: cd-ppc64le
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:83b489dada7c9eea4c1473159b4156de46c0d47fe39e1e0e2d50308ac5df8213
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: cd-s390x
+- caseVersions:
+  - 4.0.0
+  category: catalog
+  digest: sha256:81d170807fad802496814ef35ab5877684031c178117eb3c8dc9bdeddbb269a0
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    imagetype: manifestList
+  tag: cd
