@@ -41,3 +41,41 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v55.10.1-20230324.030503-04EF7959B
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:45b0e5e0c1a2f42cd063331a2bcd57714f515cafdae3a0f8c5aee31a8c0be68a
+  image: cpopen/ibm-fncm-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v55.11.0-20230614.181624-2DD698EBC-amd64
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:c624af9363289136be99a5939ce62d7cdcc1320c6f78ae0336aae89b8a19dd59
+  image: cpopen/ibm-fncm-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v55.11.0-20230614.181624-2DD698EBC-s390x
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:0d8d5f3c8b0f0ced2324c337e8d55c564aac79d6442f747c1603ffd1a8019590
+  image: cpopen/ibm-fncm-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v55.11.0-20230614.181624-2DD698EBC-ppc64le
+- caseVersions:
+  - 1.7.0
+  category: catalog
+  digest: sha256:2fd6f301b908d2385c0600554f74b35baa287f1e821ea7ea4cb14b133296a055
+  image: cpopen/ibm-fncm-catalog
+  platform:
+    imagetype: manifestList
+  tag: v55.11.0-20230614.181624-2DD698EBC
