@@ -1,18 +1,30 @@
-source: ibm-ccs-bundle/case/ibm-ccs/case.yaml
-description: "IBM Cloud Pak for Data Common Core Services"
+source: ibm-dashboard-case-bundle/case/ibm-dashboard/case.yaml
+description: "With the IBM Cognos Dashboards service, you can use sophisticated visualizations in an analytics project to identify patterns in your data so you can make timely and effective decisions. No coding needed. You can drag data onto the canvas and use various visualizations to communicate comparisons or understand relationships and trends in the data. With this service, you can quickly build visualizations to answer important questions or provide the foundation for more in-depth analysis. You can create analytics projects with IBM Cognos Dashboards."
 images:
-  - image: cp/cpd/ailc-kubectl
   - image: cp/cpd/asset-files-api
+  - image: cp/cpd/ca-sci-atlas-service
   - image: cp/cpd/catalog-api-aux_master
   - image: cp/cpd/catalog_master
   - image: cp/cpd/couchdb3
+  - image: cp/cpd/cp-daas-modeling-service
+  - image: cp/cpd/cpd-dashboards-rsyslog
+  - image: cp/cpd/cpd-onprem-smarts-kds
+  - image: cp/cpd/daas-auth-metering
+  - image: cp/cpd/daas-client-logger
+  - image: cp/cpd/daas-cpd-jobs
+  - image: cp/cpd/daas-pod-proxy
+  - image: cp/cpd/daas-query-service
+  - image: cp/cpd/daas-smarts-explore
+  - image: cp/cpd/daas-smarts-insights
+  - image: cp/cpd/daas-smarts-opensearch
+  - image: cp/cpd/daas-smarts-predict
+  - image: cp/cpd/daas-smarts-vis-rec
+  - image: cp/cpd/daas-temp-service
+  - image: cp/cpd/daas-ui-service
   - image: cp/cpd/dap-base-job
-  - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dc-main
   - image: cp/cpd/dsx-requisite
-  - image: cp/cpd/elasticsearch
-  - image: cp/cpd/environments
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
   - image: cp/cpd/environment-specifications-sync
@@ -25,12 +37,10 @@ images:
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
-  - image: cp/cpd/portal-dashboards
   - image: cp/cpd/portal-job-manager
   - image: cp/cpd/portal-main
   - image: cp/cpd/portal-notifications
   - image: cp/cpd/portal-projects
-  - image: cp/cpd/privatecloud-spawner-api-k8s
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
   - image: cp/cpd/runtime-assemblies-operator
@@ -41,12 +51,10 @@ images:
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight
   - image: cp/cpd/wdp-dataview
-  - image: cp/cpd/wkc-init-container
   - image: cp/cpd/wkc-init-container-ccs
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-main
-  - image: cp/cpd/wmlrepositoryv4
   - image: cp/opencontent-elasticsearch-6.8.22
   - image: cp/opencontent-elasticsearch-7.10.2
   - image: cp/opencontent-elasticsearch-7.8.0
@@ -63,9 +71,27 @@ images:
   - image: cp/opencontent-os-base-plugins-1.2
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.1
+  - image: cp/redis-db-5.0.14
+  - image: cp/redis-db-5.0.9
+  - image: cp/redis-db-6.0.16
+  - image: cp/redis-mgmt-5.0.14
+  - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-mgmt-6.0.16
+  - image: cp/redis-proxy-5.0.14
+  - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxy-6.0.16
+  - image: cp/redis-proxylog-5.0.14
+  - image: cp/redis-proxylog-5.0.9
+  - image: cp/redis-proxylog-6.0.16
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
+  - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-dashboard-operator
+  - image: icr.io/cpopen/ibm-cpd-dashboard-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-dashboard-operator-catalog
   - image: icr.io/cpopen/opencontent-elasticsearch-operator
   - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
   - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog
