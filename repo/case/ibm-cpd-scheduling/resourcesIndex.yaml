@@ -560,3 +560,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.12.0-20230427.000027.88408ec
+- caseVersions:
+  - 1.13.0+20230517.000055.16cc8b8
+  category: catalog
+  digest: sha256:49f6746725044e0d1763295e8c9c91d074ae94db1af479a65ac49e799ee9cc5d
+  image: cpopen/ibm-cpd-scheduler-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.13.0-20230517.000055.16cc8b8-amd64
+- caseVersions:
+  - 1.13.0+20230517.000055.16cc8b8
+  category: catalog
+  digest: sha256:fe2e8b6d29d821a6d0250aa184fb86af624808fffc4a073bfc40c589e5b6fd0c
+  image: cpopen/ibm-cpd-scheduler-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1.13.0-20230517.000055.16cc8b8-ppc64le
+- caseVersions:
+  - 1.13.0+20230517.000055.16cc8b8
+  category: catalog
+  digest: sha256:3d8b394fd4d08f38f3abbb08efca600db7182045f3cca7dce70bbd8c0ff8d480
+  image: cpopen/ibm-cpd-scheduler-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.13.0-20230517.000055.16cc8b8

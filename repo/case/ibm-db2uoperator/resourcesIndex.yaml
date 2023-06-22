@@ -1271,6 +1271,7 @@ containerImages:
   tag: 5929-dev
 - caseVersions:
   - 5.1.4
+  - 5.3.0
   category: catalog
   digest: sha256:02613f919d85c35fbd6d2172ec53862aab2602ef7e473446604e66c119e17b76
   image: cpopen/ibm-db2uoperator-catalog
@@ -1281,6 +1282,7 @@ containerImages:
   tag: 6325-dev-s390x
 - caseVersions:
   - 5.1.4
+  - 5.3.0
   category: catalog
   digest: sha256:147ecb8e5d8a11391b223d03b063588f40a9034bfcc629a37fe964894fab9be0
   image: cpopen/ibm-db2uoperator-catalog
@@ -1291,6 +1293,7 @@ containerImages:
   tag: 6325-dev-ppc64le
 - caseVersions:
   - 5.1.4
+  - 5.3.0
   category: catalog
   digest: sha256:6222ebcee56d12dfd9324daf1acb6c25ee986865e77003bbc285c144a7e83c0c
   image: cpopen/ibm-db2uoperator-catalog
@@ -1301,9 +1304,48 @@ containerImages:
   tag: 6325-dev-amd64
 - caseVersions:
   - 5.1.4
+  - 5.3.0
   category: catalog
   digest: sha256:b81bc9eac5be21c17d20fb5a5af8bc30a644889b18021d12164b7f2439f9fdb0
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 6325-dev
+- caseVersions:
+  - 5.3.0
+  category: catalog
+  digest: sha256:53dca874158aedbca4cb18def60bf79a670165d1243d7e15f195a594b8405c27
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 6636-dev-s390x
+- caseVersions:
+  - 5.3.0
+  category: catalog
+  digest: sha256:9ab885298225cf298a5374938d8e98159bfd77ba9f2d520bf7e694eec573e931
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 6636-dev-ppc64le
+- caseVersions:
+  - 5.3.0
+  category: catalog
+  digest: sha256:a8ff354bda0f3f660610ca1251c0322bd93b3f01ac71606a695242ceb7b8a407
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 6636-dev-amd64
+- caseVersions:
+  - 5.3.0
+  category: catalog
+  digest: sha256:a41d8e55eee803ce2e9cafc07184d5265a56ea14b75a41f814acc414d542d12d
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 6636-dev
