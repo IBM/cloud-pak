@@ -2,26 +2,41 @@ source: ibm-wsl-runtimes-bundle/case/ibm-wsl-runtimes/case.yaml
 description: "CASE for Notebook Runtimes in Watson Studio"
 images:
   - image: cp/cpd/runtimes-init-job
+  - image: cp/cpd/wslocal-init-222-py
+  - image: cp/cpd/wslocal-init-222-pygpu
+  - image: cp/cpd/wslocal-init-222-r
+  - image: cp/cpd/wslocal-init-231-py
+  - image: cp/cpd/wslocal-init-231-pygpu
+  - image: cp/cpd/wslocal-init-231-r
   - image: cp/cpd/wslocal-init-nlp22.1
   - image: cp/cpd/wslocal-init-nlp22.2
+  - image: cp/cpd/wslocal-init-nlp23.1
   - image: cp/cpd/wslocal-init-py310gpu
   - image: cp/cpd/wslocal-init-py310main
   - image: cp/cpd/wslocal-init-py37cuda
   - image: cp/cpd/wslocal-init-py37main
   - image: cp/cpd/wslocal-init-py38cuda
   - image: cp/cpd/wslocal-init-py38main
+  - image: cp/cpd/wslocal-init-py39
   - image: cp/cpd/wslocal-init-py39cuda
   - image: cp/cpd/wslocal-init-py39gpu
   - image: cp/cpd/wslocal-init-py39main
   - image: cp/cpd/wslocal-init-r36
   - image: cp/cpd/wslocal-init-r36py39t1
   - image: cp/cpd/wslocal-init-r42
+  - image: cp/cpd/wslocal-runtime-222-py
+  - image: cp/cpd/wslocal-runtime-222-pygpu
+  - image: cp/cpd/wslocal-runtime-222-r
+  - image: cp/cpd/wslocal-runtime-231-py
+  - image: cp/cpd/wslocal-runtime-231-pygpu
+  - image: cp/cpd/wslocal-runtime-231-r
   - image: cp/cpd/wslocal-runtime-py310gpu
   - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py37cuda
   - image: cp/cpd/wslocal-runtime-py37main
   - image: cp/cpd/wslocal-runtime-py38cuda
   - image: cp/cpd/wslocal-runtime-py38main
+  - image: cp/cpd/wslocal-runtime-py39
   - image: cp/cpd/wslocal-runtime-py39cuda
   - image: cp/cpd/wslocal-runtime-py39gpu
   - image: cp/cpd/wslocal-runtime-py39main
@@ -31,3 +46,4 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-fcc
