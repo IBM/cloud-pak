@@ -105,6 +105,7 @@ images:
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-autoai-kb
   - image: cp/cpd/wml-autoai-ts
+  - image: cp/cpd/wml-autoai-tsad
   - image: cp/cpd/wml-automl-obm-hybrid-pipeline
   - image: cp/cpd/wml-aux
   - image: cp/cpd/wml-cp4d-3.5-upgrade
@@ -112,13 +113,18 @@ images:
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
   - image: cp/cpd/wml-deployment-runtime-py310-1
+  - image: cp/cpd/wml-deployment-runtime-py310-2
   - image: cp/cpd/wml-deployment-runtime-py37-1
   - image: cp/cpd/wml-deployment-runtime-py37-2
   - image: cp/cpd/wml-deployment-runtime-py38-1
   - image: cp/cpd/wml-deployment-runtime-py39-1
   - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
+  - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
+  - image: cp/cpd/wml-dep-rt23-1-ms
+  - image: cp/cpd/wml-dep-rt23-1-r42-ms
   - image: cp/cpd/wml-federated-learning
+  - image: cp/cpd/wml-federated-learning-runtime-23.1-py3.10
   - image: cp/cpd/wml-main
   - image: cp/cpd/wml-main-ppc64le
   - image: cp/cpd/wml-os-runtimes-do
@@ -168,14 +174,22 @@ images:
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.0-py3612-g1-rt
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.1-py379-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py379-g1-rt
+  - image: cp/cpd/wslocal-init-222-py
+  - image: cp/cpd/wslocal-init-222-pygpu
+  - image: cp/cpd/wslocal-init-222-r
+  - image: cp/cpd/wslocal-init-231-py
+  - image: cp/cpd/wslocal-init-231-pygpu
+  - image: cp/cpd/wslocal-init-231-r
   - image: cp/cpd/wslocal-init-nlp22.1
   - image: cp/cpd/wslocal-init-nlp22.2
+  - image: cp/cpd/wslocal-init-nlp23.1
   - image: cp/cpd/wslocal-init-py310gpu
   - image: cp/cpd/wslocal-init-py310main
   - image: cp/cpd/wslocal-init-py37cuda
   - image: cp/cpd/wslocal-init-py37main
   - image: cp/cpd/wslocal-init-py38cuda
   - image: cp/cpd/wslocal-init-py38main
+  - image: cp/cpd/wslocal-init-py39
   - image: cp/cpd/wslocal-init-py39cuda
   - image: cp/cpd/wslocal-init-py39gpu
   - image: cp/cpd/wslocal-init-py39main
@@ -186,6 +200,12 @@ images:
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
   - image: cp/cpd/wslocal-ppc-runtime-py37ppc
   - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-222-py
+  - image: cp/cpd/wslocal-runtime-222-pygpu
+  - image: cp/cpd/wslocal-runtime-222-r
+  - image: cp/cpd/wslocal-runtime-231-py
+  - image: cp/cpd/wslocal-runtime-231-pygpu
+  - image: cp/cpd/wslocal-runtime-231-r
   - image: cp/cpd/wslocal-runtime-py310gpu
   - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py36cuda
@@ -195,6 +215,7 @@ images:
   - image: cp/cpd/wslocal-runtime-py37omain
   - image: cp/cpd/wslocal-runtime-py38cuda
   - image: cp/cpd/wslocal-runtime-py38main
+  - image: cp/cpd/wslocal-runtime-py39
   - image: cp/cpd/wslocal-runtime-py39cuda
   - image: cp/cpd/wslocal-runtime-py39gpu
   - image: cp/cpd/wslocal-runtime-py39main
@@ -215,6 +236,20 @@ images:
   - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
+  - image: cp/opencontent-elasticsearch-6.8.22
+  - image: cp/opencontent-elasticsearch-7.10.2
+  - image: cp/opencontent-elasticsearch-7.8.0
+  - image: cp/opencontent-elasticsearch-7.8.1
+  - image: cp/opencontent-elasticsearch-7.9.3
+  - image: cp/opencontent-elasticsearch-base-plugins-6.8.22
+  - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
+  - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
+  - image: cp/opencontent-opensearch-1.3
+  - image: cp/opencontent-opensearch-2.x
+  - image: cp/opencontent-os-base-plugins-1.3
+  - image: cp/opencontent-os-base-plugins-2.x
   - image: dd-cognitive
   - image: dd-init
   - image: dd-scenario-api
@@ -238,3 +273,7 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-fcc
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog

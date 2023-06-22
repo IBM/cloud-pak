@@ -100,14 +100,22 @@ images:
   - image: cp/cpd/wml-main
   - image: cp/cpd/wml-main-ppc64le
   - image: cp/cpd/wmlrepositoryv4
+  - image: cp/cpd/wslocal-init-222-py
+  - image: cp/cpd/wslocal-init-222-pygpu
+  - image: cp/cpd/wslocal-init-222-r
+  - image: cp/cpd/wslocal-init-231-py
+  - image: cp/cpd/wslocal-init-231-pygpu
+  - image: cp/cpd/wslocal-init-231-r
   - image: cp/cpd/wslocal-init-nlp22.1
   - image: cp/cpd/wslocal-init-nlp22.2
+  - image: cp/cpd/wslocal-init-nlp23.1
   - image: cp/cpd/wslocal-init-py310gpu
   - image: cp/cpd/wslocal-init-py310main
   - image: cp/cpd/wslocal-init-py37cuda
   - image: cp/cpd/wslocal-init-py37main
   - image: cp/cpd/wslocal-init-py38cuda
   - image: cp/cpd/wslocal-init-py38main
+  - image: cp/cpd/wslocal-init-py39
   - image: cp/cpd/wslocal-init-py39cuda
   - image: cp/cpd/wslocal-init-py39gpu
   - image: cp/cpd/wslocal-init-py39main
@@ -118,6 +126,12 @@ images:
   - image: cp/cpd/wslocal-ppc-runtime-ppcr36
   - image: cp/cpd/wslocal-ppc-runtime-py37ppc
   - image: cp/cpd/wslocal-rstudio-init
+  - image: cp/cpd/wslocal-runtime-222-py
+  - image: cp/cpd/wslocal-runtime-222-pygpu
+  - image: cp/cpd/wslocal-runtime-222-r
+  - image: cp/cpd/wslocal-runtime-231-py
+  - image: cp/cpd/wslocal-runtime-231-pygpu
+  - image: cp/cpd/wslocal-runtime-231-r
   - image: cp/cpd/wslocal-runtime-py310gpu
   - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py36cuda
@@ -127,6 +141,7 @@ images:
   - image: cp/cpd/wslocal-runtime-py37omain
   - image: cp/cpd/wslocal-runtime-py38cuda
   - image: cp/cpd/wslocal-runtime-py38main
+  - image: cp/cpd/wslocal-runtime-py39
   - image: cp/cpd/wslocal-runtime-py39cuda
   - image: cp/cpd/wslocal-runtime-py39gpu
   - image: cp/cpd/wslocal-runtime-py39main
@@ -147,6 +162,20 @@ images:
   - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
+  - image: cp/opencontent-elasticsearch-6.8.22
+  - image: cp/opencontent-elasticsearch-7.10.2
+  - image: cp/opencontent-elasticsearch-7.8.0
+  - image: cp/opencontent-elasticsearch-7.8.1
+  - image: cp/opencontent-elasticsearch-7.9.3
+  - image: cp/opencontent-elasticsearch-base-plugins-6.8.22
+  - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
+  - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
+  - image: cp/opencontent-opensearch-1.3
+  - image: cp/opencontent-opensearch-2.x
+  - image: cp/opencontent-os-base-plugins-1.3
+  - image: cp/opencontent-os-base-plugins-2.x
   - image: dap-dashboards-api
   - image: icp4data-nginx-repo
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
@@ -161,6 +190,10 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-fcc
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
+  - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog
   - image: jobs-api
   - image: jobs-ui
   - image: job-trigger
