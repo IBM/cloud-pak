@@ -1,11 +1,14 @@
 source: ibm-wazi-for-devspaces-case-bundle/case/ibm-wazi-for-devspaces/case.yaml
 description: "Personal z/OS cloud IDE for development and testing."
 images:
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
   - image: icr.io/cpopen/common-service-operator
   - image: icr.io/cpopen/cpfs/audit-garbage-collector
   - image: icr.io/cpopen/cpfs/audit-policy-controller
   - image: icr.io/cpopen/cpfs/audit-syslog-service
   - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/cpfs/cpfs-utils
   - image: icr.io/cpopen/cpfs/dashboard-controller
   - image: icr.io/cpopen/cpfs/default-http-backend
   - image: icr.io/cpopen/cpfs/fluentd
@@ -18,6 +21,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-cs-webhook
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.4.0
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
@@ -59,7 +63,10 @@ images:
   - image: icr.io/cpopen/cpfs/zen-iam-config
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-minio
+  - image: icr.io/cpopen/cpfs/zen-utils
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator
@@ -68,6 +75,9 @@ images:
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
@@ -107,8 +117,11 @@ images:
   - image: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle
   - image: icr.io/wazi-code/ibm-wazi-for-devspaces-analyze
   - image: icr.io/wazi-code/ibm-wazi-for-devspaces-codeready
+  - image: icr.io/wazi-code/ibm-wazi-for-devspaces-dashboard
   - image: icr.io/wazi-code/ibm-wazi-for-devspaces-dev-file
+  - image: icr.io/wazi-code/ibm-wazi-for-devspaces-devfile
   - image: icr.io/wazi-code/ibm-wazi-for-devspaces-plugin
+  - image: icr.io/wazi-code/ibm-wazi-for-devspaces-sidecar
   - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/ibm-platform-api-operator
   - image: quay.io/opencloudio/icp-platform-api
@@ -136,6 +149,12 @@ images:
   - image: registry.redhat.io/codeready-workspaces/theia-endpoint-rhel8
   - image: registry.redhat.io/codeready-workspaces/theia-rhel8
   - image: registry.redhat.io/codeready-workspaces/traefik-rhel8
+  - image: registry.redhat.io/devspaces/code-rhel8
+  - image: registry.redhat.io/devspaces/configbump-rhel8
+  - image: registry.redhat.io/devspaces/idea-rhel8
+  - image: registry.redhat.io/devspaces/server-rhel8
+  - image: registry.redhat.io/devspaces/traefik-rhel8
+  - image: registry.redhat.io/devspaces/udi-rhel8
   - image: registry.redhat.io/devworkspace/devworkspace-rhel8-operator
   - image: registry.redhat.io/jboss-eap-7/eap73-openjdk8-openshift-rhel7
   - image: registry.redhat.io/jboss-eap-7/eap74-openjdk8-openshift-rhel7
