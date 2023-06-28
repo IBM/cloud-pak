@@ -22,6 +22,7 @@ images:
   - image: cp/cp4waiops/aiops-dashboard-ui
   - image: cp/cp4waiops/aiops-logs-connector
   - image: cp/cp4waiops/aiops-operators-catalog
+  - image: cp/cp4waiops/aiops-policy-bundle
   - image: cp/cp4waiops/ai-platform-api-server
   - image: cp/cp4waiops/alert-details-service
   - image: cp/cp4waiops/alert-localization
@@ -94,10 +95,12 @@ images:
   - image: cp/cp4waiops/ibm-grpc-awscw-connector
   - image: cp/cp4waiops/ibm-grpc-dyna-connector
   - image: cp/cp4waiops/ibm-grpc-github-connector
+  - image: cp/cp4waiops/ibm-grpc-impact-connector
   - image: cp/cp4waiops/ibm-grpc-instana-connector
   - image: cp/cp4waiops/ibm-grpc-nrelic-connector
   - image: cp/cp4waiops/ibm-grpc-snow-connector
   - image: cp/cp4waiops/ibm-grpc-splunk-connector
+  - image: cp/cp4waiops/ibm-grpc-webhook-connector
   - image: cp/cp4waiops/ibm-grpc-zabbix-connector
   - image: cp/cp4waiops/ibm-model-train-operator
   - image: cp/cp4waiops/ibm-stolon
@@ -106,6 +109,10 @@ images:
   - image: cp/cp4waiops/inference-service
   - image: cp/cp4waiops/ingestion-service
   - image: cp/cp4waiops/instana-topology
+  - image: cp/cp4waiops/ir-api
+  - image: cp/cp4waiops/ir-ui-api
+  - image: cp/cp4waiops/ir-ui-content
+  - image: cp/cp4waiops/ir-ui-server
   - image: cp/cp4waiops/jobmonitor
   - image: cp/cp4waiops/kafka
   - image: cp/cp4waiops/kafkarest
@@ -117,12 +124,14 @@ images:
   - image: cp/cp4waiops/lifecycle-trigger
   - image: cp/cp4waiops/log-anomaly
   - image: cp/cp4waiops/log-anomaly-feedback-learning
+  - image: cp/cp4waiops/log-anomaly-golden-signals
   - image: cp/cp4waiops/log-anomaly-training
   - image: cp/cp4waiops/logstash
   - image: cp/cp4waiops/luigi-scheduler-daemon
   - image: cp/cp4waiops/metric-api
   - image: cp/cp4waiops/metric-spark
   - image: cp/cp4waiops/model-train-controller
+  - image: cp/cp4waiops/nasm-aaionap-service
   - image: cp/cp4waiops/nasm-alm-observer
   - image: cp/cp4waiops/nasm-ansibleawx-observer
   - image: cp/cp4waiops/nasm-app-disco-controller
@@ -141,6 +150,7 @@ images:
   - image: cp/cp4waiops/nasm-cienablueplanet-observer
   - image: cp/cp4waiops/nasm-ciscoaci-observer
   - image: cp/cp4waiops/nasm-contrail-observer
+  - image: cp/cp4waiops/nasm-datadog-observer
   - image: cp/cp4waiops/nasm-dns-observer
   - image: cp/cp4waiops/nasm-docker-observer
   - image: cp/cp4waiops/nasm-dynatrace-observer
@@ -372,6 +382,7 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/iaf-ai-operator
   - image: icr.io/cpopen/iaf-ai-operator-bundle
   - image: icr.io/cpopen/iaf-base-operator
@@ -432,6 +443,8 @@ images:
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator
   - image: icr.io/cpopen/ibm-crossplane-provider-kubernetes-operator-bundle
+  - image: icr.io/cpopen/ibm-cs-elastic-operator-catalog
+  - image: icr.io/cpopen/ibm-cs-flink-operator-catalog
   - image: icr.io/cpopen/ibm-etcd-operator-bundle
   - image: icr.io/cpopen/ibm-etcd-operator-catalog
   - image: icr.io/cpopen/ibm-events-operator
