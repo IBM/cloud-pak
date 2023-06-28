@@ -52,6 +52,7 @@ images:
   - image: cp/cp4s/foundations/redis
   - image: cp/cp4s/hasura
   - image: cp/cp4s/homer-drc
+  - image: cp/cp4s/homer-edgeclient
   - image: cp/cp4s/homer-qproxy
   - image: cp/cp4s/idrmdashboard
   - image: cp/cp4s/idrmingestion
@@ -434,9 +435,11 @@ images:
   - image: cp/opencontent-opensearch-1.2
   - image: cp/opencontent-opensearch-1.3
   - image: cp/opencontent-opensearch-2.1
+  - image: cp/opencontent-opensearch-2.x
   - image: cp/opencontent-os-base-plugins-1.2
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.1
+  - image: cp/opencontent-os-base-plugins-2.x
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
@@ -498,9 +501,15 @@ images:
   - image: icr.io/cpopen/cp4s/isc-car-connector-azure
   - image: icr.io/cpopen/cp4s/isc-car-connector-cybereason
   - image: icr.io/cpopen/cp4s/isc-car-connector-drm
+  - image: icr.io/cpopen/cp4s/isc-car-connector-gcp
   - image: icr.io/cpopen/cp4s/isc-car-connector-guardium
   - image: icr.io/cpopen/cp4s/isc-car-connector-iam
+  - image: icr.io/cpopen/cp4s/isc-car-connector-okta
+  - image: icr.io/cpopen/cp4s/isc-car-connector-proofpoint
   - image: icr.io/cpopen/cp4s/isc-car-connector-qradar
+  - image: icr.io/cpopen/cp4s/isc-car-connector-qualys
+  - image: icr.io/cpopen/cp4s/isc-car-connector-randori
+  - image: icr.io/cpopen/cp4s/isc-car-connector-rhacs
   - image: icr.io/cpopen/cp4s/isc-car-connector-tenable
   - image: icr.io/cpopen/cp4s/isc-udi-edge-client
   - image: icr.io/cpopen/cp4s-middleware-operator
@@ -525,16 +534,24 @@ images:
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_cybereason
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_darktrace
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_elastic_ecs
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_gcp_chronicle
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_guardium
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_ibm_security_verify
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_msatp
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_okta
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_onelogin
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_paloalto
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_proofpoint
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_proxy
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_qradar
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_reaqta
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_rhacs
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_secretserver
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_security_advisor
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_sentinelone
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_splunk
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_stix_bundle
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_sumologic
   - image: icr.io/cpopen/cp4s-threatinvestigator-operator
   - image: icr.io/cpopen/cp4s-threatinvestigator-operator-bundle
   - image: icr.io/cpopen/cp4s-tii-operator
