@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 4.1.0-rc3-202306210047
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This operator manages the Issue Resolution Core component of the IBM
+    Watson for AIOps v3.x product.
+  displayDescription: ""
+  displayName: IBM Watson AIOps Issue Resolution Core
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps License
+        displayName: Cloud Pak for Watson AIOps
+      ref: LA_en
+    nonIbmLicense:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps Terms and Conditions
+        displayName: Terms and Conditions
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Watson AIOps Notices and Information
+        displayName: Notices and Information
+      ref: notices
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiops-ir-core-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.5.0
+  webPage: https://www.ibm.com/uk-en/cloud/cloud-pak-for-watson-aiops
+created: 2023-06-28T00:42:05.72847099+0000
+digest: sha256:d68220a525e27cd8696fc0c4c3576e25b6cdc46e82d78e9b16d1ee8c09021c1c
