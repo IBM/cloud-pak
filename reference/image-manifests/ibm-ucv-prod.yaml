@@ -4,6 +4,7 @@ images:
   - image: alpine
   - image: argoproj/argoexec
   - image: argoproj/workflow-controller
+  - image: bitnami/kubectl
   - image: bitnami/nginx
   - image: bitnami/rabbitmq
   - image: cp/ibm-ucv-application-api
@@ -11,6 +12,7 @@ images:
   - image: cp/ibm-ucv-continuous-release-poller
   - image: cp/ibm-ucv-continuous-release-ui
   - image: cp/ibm-ucv-multi-app-pipeline-api
+  - image: cp/ibm-ucv-rcl-client
   - image: cp/ibm-ucv-rcl-web-client
   - image: cp/ibm-ucv-release-events-api
   - image: cp/ibm-ucv-release-events-ui
@@ -20,3 +22,4 @@ images:
   - image: ibmcom/opencontent-common-utils
   - image: library/alpine
   - image: registry.access.redhat.com/ubi7/ubi-minimal
+  - image: registry.access.redhat.com/ubi9/ubi-minimal
