@@ -1,6 +1,7 @@
 source: ibm-redhat-marketplace-bundle/case/ibm-redhat-marketplace/case.yaml
 description: "The Red Hat Marketplace Operator provides cluster management, metering and operator installation for Red Hat Marketplace customers."
 images:
+  - image: quay.io/rh-marketplace/ibm-data-reporter-operator
   - image: quay.io/rh-marketplace/ibm-metrics-operator
   - image: quay.io/rh-marketplace/redhat-marketplace-authcheck
   - image: quay.io/rh-marketplace/redhat-marketplace-data-service
@@ -14,3 +15,5 @@ images:
   - image: registry.redhat.io/openshift4/ose-prometheus
   - image: registry.redhat.io/openshift4/ose-prometheus-config-reloader
   - image: registry.redhat.io/openshift4/ose-prometheus-operator
+  - image: us.icr.io/armada-master/remoteresource
+  - image: us.icr.io/armada-master/watch-keeper
