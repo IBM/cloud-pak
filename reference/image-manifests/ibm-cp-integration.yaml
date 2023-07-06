@@ -20,6 +20,7 @@ images:
   - image: cp/apic/ibm-apiconnect-analytics-ingestion
   - image: cp/apic/ibm-apiconnect-analytics-k8s-init
   - image: cp/apic/ibm-apiconnect-analytics-mtls
+  - image: cp/apic/ibm-apiconnect-analytics-oscron
   - image: cp/apic/ibm-apiconnect-analytics-osinit
   - image: cp/apic/ibm-apiconnect-analytics-storage
   - image: cp/apic/ibm-apiconnect-apiconnect-configurator
@@ -45,6 +46,8 @@ images:
   - image: cp/apic/ibm-apiconnect-management-autotest-service
   - image: cp/apic/ibm-apiconnect-management-billing
   - image: cp/apic/ibm-apiconnect-management-client-downloads-server
+  - image: cp/apic/ibm-apiconnect-management-compliance-service
+  - image: cp/apic/ibm-apiconnect-management-compliance-ui
   - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbackrest
   - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbackrest-repo
   - image: cp/apic/ibm-apiconnect-management-crunchydata-pgbouncer
@@ -142,6 +145,7 @@ images:
   - image: cp/ibm-eventstreams-admin-ui
   - image: cp/ibm-eventstreams-apicurio-registry
   - image: cp/ibm-eventstreams-apicurio-registry-v2
+  - image: cp/ibm-eventstreams-apicurio-registry-v24
   - image: cp/ibm-eventstreams-jmxtrans
   - image: cp/ibm-eventstreams-kafka
   - image: cp/ibm-eventstreams-kafka-bridge
@@ -653,6 +657,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.1.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.4.0
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
@@ -695,6 +700,7 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/datapower-monitor
   - image: icr.io/cpopen/datapower-operator
   - image: icr.io/cpopen/datapower-operator-bundle
   - image: icr.io/cpopen/datapower-operator-catalog
