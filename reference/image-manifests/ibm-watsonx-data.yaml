@@ -1,0 +1,16 @@
+source: ibm-lakehouse-bundle/case/ibm-watsonx-data/case.yaml
+description: "IBM watsonx_data Service"
+images:
+  - image: cp/watsonx-data/ibm-lh-control-plane-prereq
+  - image: cp/watsonx-data/ibm-lh-hive-metastore
+  - image: cp/watsonx-data/ibm-lh-minio
+  - image: cp/watsonx-data/ibm-lh-postgres
+  - image: cp/watsonx-data/ibm-lh-presto
+  - image: cp/watsonx-data/ibm-lh-tools
+  - image: cp/watsonx-data/lhconsole-api
+  - image: cp/watsonx-data/lhconsole-javaapi
+  - image: cp/watsonx-data/lhconsole-nodeclient
+  - image: cp/watsonx-data/lhconsole-ui
+  - image: icr.io/cpopen/ibm-lakehouse-operator
+  - image: icr.io/cpopen/ibm-lakehouse-operator-bundle
+  - image: icr.io/cpopen/ibm-lakehouse-operator-catalog
