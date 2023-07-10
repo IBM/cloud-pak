@@ -1,0 +1,26 @@
+source: ibm-storage-fusion-df-case-bundle/case/ibm-storage-fusion-df-case-bundle/case.yaml
+description: "Operator for IBM Storage Fusion Data Foundation"
+images:
+  - image: cp/df/cephcsi-rhel8
+  - image: cp/df/mcg-core-rhel8
+  - image: cp/df/ocs-metrics-exporter-rhel8
+  - image: cp/df/odf-console-rhel8
+  - image: cp/df/odf-csi-addons-sidecar-rhel8
+  - image: cp/df/odf-multicluster-console-rhel8
+  - image: icr.io/cpopen/ics-client-operator-bundle
+  - image: icr.io/cpopen/ics-operator-bundle
+  - image: icr.io/cpopen/idf-operator-bundle
+  - image: icr.io/cpopen/idr-cluster-operator-bundle
+  - image: icr.io/cpopen/idr-hub-operator-bundle
+  - image: icr.io/cpopen/isf-csi-addons-operator-bundle
+  - image: icr.io/cpopen/isf-data-foundation-catalog
+  - image: icr.io/cpopen/isf-mcg-operator-bundle
+  - image: icr.io/cpopen/isf-multicluster-operator-bundle
+  - image: icr.io/cpopen/mcg-operator
+  - image: icr.io/cpopen/ocs-must-gather
+  - image: icr.io/cpopen/ocs-operator
+  - image: icr.io/cpopen/odf-csi-addons-operator
+  - image: icr.io/cpopen/odf-multicluster-operator
+  - image: icr.io/cpopen/odf-operator
+  - image: icr.io/cpopen/odr-operator
+  - image: icr.io/cpopen/rook-ceph-operator
