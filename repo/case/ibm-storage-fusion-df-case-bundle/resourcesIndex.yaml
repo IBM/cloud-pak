@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:1c45256e58e0ec9887e143ed2870789aceb98e8b195b3ed5b24db34866ac2f0e
+  image: cpopen/isf-data-foundation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v4.12.3-17-linux.amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:763dbbedfb40a94ab210027a2e42ecb4ff83194c252850a3cd91712547041ec0
+  image: cpopen/isf-data-foundation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v4.12.3-17-linux.s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:a7ba00c63d74603c452c192e8023de7115fdf082b9d9f73c67a0f6c842af3040
+  image: cpopen/isf-data-foundation-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v4.12.3-17-linux.ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:2d9e78d69a457b722cf6037968dae5f48eccd9e48ef4369a7fe661de0d96df95
+  image: cpopen/isf-data-foundation-catalog
+  platform:
+    imagetype: manifestList
+  tag: v4.12.3-17
