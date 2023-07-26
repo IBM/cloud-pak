@@ -1,0 +1,49 @@
+apiVersion: v1
+case:
+  appVersion: 4.1.1-rc1-202307162205
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: IBM Cloud Pak for Watson AIOps UI
+  displayDescription: IBM Cloud Pak for Watson AIOps UI
+  displayName: IBM Cloud Pak for Watson AIOps UI
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Main license text
+        displayName: license
+        name: license
+      ref: license
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: License text for included non-IBM licenses
+        displayName: non_ibm_license
+        name: non_ibm_license
+      ref: non_ibm_license
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-watson-aiops-ui-operator-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.7.1
+  webPage: https://www.ibm.com
+created: 2023-07-26T00:49:32.95808581+0000
+digest: sha256:bbb3dbb8271c6cc2b5c997afa5648569a79cefe131434fc3a0fba9d73aad7acb
