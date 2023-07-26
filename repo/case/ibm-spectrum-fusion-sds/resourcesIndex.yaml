@@ -142,3 +142,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 2.5.2
+- caseVersions:
+  - 1.0.7
+  category: catalog
+  digest: sha256:b5c5941a5f80851c72f5a43ebb19fce1dd7a61c3b195f2c20de067cc2e15609a
+  image: cpopen/isf-operator-software-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.6.0-linux.amd64
+- caseVersions:
+  - 1.0.7
+  category: catalog
+  digest: sha256:925466a574e5cd358b6fc540531a3ac8eb21c960b60a1d0a883e527065f537be
+  image: cpopen/isf-operator-software-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 2.6.0-linux.s390x
+- caseVersions:
+  - 1.0.7
+  category: catalog
+  digest: sha256:f8661c0706ba7907fb1d7dabe91c6a497f7657945f89f22472a3804cc938ffd7
+  image: cpopen/isf-operator-software-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.6.0
