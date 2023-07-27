@@ -190,3 +190,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 22.0.2-IF006
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:d0f5fadb1d457b2cf57930a76ead64f2c076ffe4d374bdc695d6d5a8d44badbd
+  image: cpopen/ibm-ads-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 23.0.1-IF001-amd64
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:221b4f58732ec30b86eca175e4743435759abd889e1fc2696e106989fa329e53
+  image: cpopen/ibm-ads-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 23.0.1-IF001-s390x
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:0a208e08fd5baa186f397cb3e4b58da955314cd0156b683488091a6a31fd2fd2
+  image: cpopen/ibm-ads-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 23.0.1-IF001-ppc64le
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:4d753c6d20a2afb1db97e50ef80662c2ff64630880dd424116d79a62a86df37b
+  image: cpopen/ibm-ads-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 23.0.1-IF001
