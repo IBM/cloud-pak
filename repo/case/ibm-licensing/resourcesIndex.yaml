@@ -38,3 +38,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: cd
+- caseVersions:
+  - 4.1.0
+  category: catalog
+  digest: sha256:a6df45ac362a0200cc0f2ab82bfea7297562bdb3b9f4fd6d152e0701c10faf22
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: cd-amd64
+- caseVersions:
+  - 4.1.0
+  category: catalog
+  digest: sha256:1c4253f0169ca1ea1b73291198ea03434f618b35d629f0ddb10b9cdb73a76cd2
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: cd-ppc64le
+- caseVersions:
+  - 4.1.0
+  category: catalog
+  digest: sha256:7c518a54f1bc1b979f8f9c50fee4c9b81219ff157f887dd1132301d5eeddc247
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: cd-s390x
+- caseVersions:
+  - 4.1.0
+  category: catalog
+  digest: sha256:3c5a9afce735053967b8458a9170fb99efff5cb442533db222c76d20e06295c8
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    imagetype: manifestList
+  tag: cd
