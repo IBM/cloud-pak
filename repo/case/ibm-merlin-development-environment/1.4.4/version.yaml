@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 1.4.4
+  catalogs:
+    development: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM i Developer Tool.
+  displayDescription: ""
+  displayName: IBM i Developer Tool.
+  icons: []
+  licenses:
+    ipla:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+      ref: LI_en.txt
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+      ref: non_ibm_license.txt
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+      ref: notices.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-merlin-development-environment
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.4.4
+  webPage: https://www.ibm.com/docs/merlin/1.0
+created: 2023-08-18T16:28:22.91037353+0000
+digest: sha256:a84dde05cb13190be05645cf8f59cd3121f767bfdcc06372c0cc258b9c943366
