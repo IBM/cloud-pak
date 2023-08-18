@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: 1.1.4
+  catalogs:
+    development: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Dependency Based Build is a tool for scripted pipeline builds for
+    z/OS® application
+  displayDescription: ""
+  displayName: IBM Dependency Based Build web application
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-dbb-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      redhat: {}
+  version: 1.1.42
+  webPage: https://www.ibm.com/docs/en/dbb/1.1.0
+created: 2023-08-18T18:15:48.13202462+0000
+digest: sha256:e17dc4e1f84b1137d315b63c6564fc9fa3abef092198037b1ee409bc0ab71d61
