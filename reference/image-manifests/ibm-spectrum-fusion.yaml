@@ -1,5 +1,5 @@
 source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
-description: "Management operator for IBM Spectrum Fusion"
+description: "Management operator for IBM Storage Fusion"
 images:
   - image: cp/df/cephcsi-rhel8
   - image: cp/df/mcg-core-rhel8
@@ -26,6 +26,7 @@ images:
   - image: cp/ibm-spectrum-discover/auth
   - image: cp/ibm-spectrum-discover/backup-restore
   - image: cp/ibm-spectrum-discover/connmgr
+  - image: cp/ibm-spectrum-discover/connmgr-scheduler
   - image: cp/ibm-spectrum-discover/connmgr-setup
   - image: cp/ibm-spectrum-discover/content-search-setup
   - image: cp/ibm-spectrum-discover/db2whrest
@@ -111,8 +112,25 @@ images:
   - image: icr.io/cpopen/ibm-spectrum-discover-operator
   - image: icr.io/cpopen/ibm-spectrum-discover-operator-bundle
   - image: icr.io/cpopen/ibm-spectrum-discover-operator-catalog
+  - image: icr.io/cpopen/ics-client-operator-bundle
+  - image: icr.io/cpopen/ics-operator-bundle
+  - image: icr.io/cpopen/idf-operator-bundle
   - image: icr.io/cpopen/idp-agent-operator
   - image: icr.io/cpopen/idp-server-operator
+  - image: icr.io/cpopen/idr-cluster-operator-bundle
+  - image: icr.io/cpopen/idr-hub-operator-bundle
+  - image: icr.io/cpopen/isf-csi-addons-operator-bundle
+  - image: icr.io/cpopen/isf-data-foundation-catalog
+  - image: icr.io/cpopen/isf-mcg-operator-bundle
+  - image: icr.io/cpopen/isf-multicluster-operator-bundle
   - image: icr.io/cpopen/isf-operator-bundle
   - image: icr.io/cpopen/isf-operator-catalog
+  - image: icr.io/cpopen/mcg-operator
+  - image: icr.io/cpopen/ocs-must-gather
+  - image: icr.io/cpopen/ocs-operator
+  - image: icr.io/cpopen/odf-csi-addons-operator
+  - image: icr.io/cpopen/odf-multicluster-operator
+  - image: icr.io/cpopen/odf-operator
+  - image: icr.io/cpopen/odr-operator
+  - image: icr.io/cpopen/rook-ceph-operator
   - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
