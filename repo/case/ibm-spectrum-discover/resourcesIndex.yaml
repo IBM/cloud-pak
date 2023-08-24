@@ -50,3 +50,41 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v211.0.0
+- caseVersions:
+  - 212.0.0
+  category: catalog
+  digest: sha256:ad185517cdd01d28c9bd2d37d8e98114b366b635e82ced3573b94ed72c174fb7
+  image: cpopen/ibm-spectrum-discover-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v212.0.0-amd64
+- caseVersions:
+  - 212.0.0
+  category: catalog
+  digest: sha256:35f5d9a5c7a1231d8952821172ae37a16c818f4dcc75e88395ebe7d99041247c
+  image: cpopen/ibm-spectrum-discover-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v212.0.0-ppc64le
+- caseVersions:
+  - 212.0.0
+  category: catalog
+  digest: sha256:36d578553e2eb5b88616e2a414d984b3241c6e48458dc2c257a12cf07a1a04bb
+  image: cpopen/ibm-spectrum-discover-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v212.0.0-s390x
+- caseVersions:
+  - 212.0.0
+  category: catalog
+  digest: sha256:d57053f13aa687fdd30e6858a31645ff8e80c3f03e02cf1ad2d42432b465e80f
+  image: cpopen/ibm-spectrum-discover-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v212.0.0
