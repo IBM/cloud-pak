@@ -442,6 +442,8 @@ images:
   - image: cp/cpd/tekton-pipelines-entrypoint
   - image: cp/cpd/tekton-pipelines-nop
   - image: cp/cpd/tekton-pipelines-webhook
+  - image: cp/cpd/tekton-runtime-controller
+  - image: cp/cpd/tekton-runtime-worker
   - image: cp/cpd/term-assignment-service
   - image: cp/cpd/ubi-minimal-cpd
   - image: cp/cpd/unified-console
@@ -723,6 +725,8 @@ images:
   - image: cp/db2u.update.image
   - image: cp/etcd
   - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/ibm-redis-cp-6.2.7
+  - image: cp/ibm-redis-cp-haproxy
   - image: cp/opencontent-common-utils
   - image: cp/opencontent-elasticsearch-6.8.14
   - image: cp/opencontent-elasticsearch-6.8.20
@@ -750,6 +754,8 @@ images:
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
   - image: cp/opencontent-rabbitmq-operator
+  - image: cp/opencontent-search-haproxy-fips1402
+  - image: cp/opencontent-search-haproxy-fips1403
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
@@ -1010,6 +1016,9 @@ images:
   - image: icr.io/cpopen/ibm-namespace-scope-operator-restricted-bundle
   - image: icr.io/cpopen/ibm-platform-api-operator
   - image: icr.io/cpopen/ibm-platform-api-operator-bundle
+  - image: icr.io/cpopen/ibm-redis-cp-operator
+  - image: icr.io/cpopen/ibm-redis-cp-operator-bundle
+  - image: icr.io/cpopen/ibm-redis-cp-operator-catalog
   - image: icr.io/cpopen/ibm-watson-openscale-operator
   - image: icr.io/cpopen/ibm-watson-openscale-operator-bundle
   - image: icr.io/cpopen/ibm-watson-openscale-operator-catalog
