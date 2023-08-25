@@ -42,6 +42,8 @@ images:
   - image: cp/data-exhaust-producer
   - image: cp/data-exhaust-proxy
   - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/ibm-redis-cp-6.2.7
+  - image: cp/ibm-redis-cp-haproxy
   - image: cp/modeltrain/coordinator
   - image: cp/modeltrain/databroker-s3
   - image: cp/modeltrain/jobmonitor
@@ -86,6 +88,8 @@ images:
   - image: cp/opencontent-os-base-plugins-2.x
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
+  - image: cp/opencontent-search-haproxy-fips1402
+  - image: cp/opencontent-search-haproxy-fips1403
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
@@ -155,6 +159,7 @@ images:
   - image: cp/watson-assistant/tensorflow-model-upload
   - image: cp/watson-assistant/tensorflow-serving
   - image: cp/watson-assistant/training-master
+  - image: cp/watson-assistant/triton-serving
   - image: cp/watson-assistant/ui
   - image: cp/watson-assistant/wa-postgres-license
   - image: cp/watson-assistant/watson-gateway
@@ -190,6 +195,9 @@ images:
   - image: icr.io/cpopen/ibm-model-train-operator
   - image: icr.io/cpopen/ibm-model-train-operator-bundle
   - image: icr.io/cpopen/ibm-model-train-operator-catalog
+  - image: icr.io/cpopen/ibm-redis-cp-operator
+  - image: icr.io/cpopen/ibm-redis-cp-operator-bundle
+  - image: icr.io/cpopen/ibm-redis-cp-operator-catalog
   - image: icr.io/cpopen/ibm-watson-assistant-operator
   - image: icr.io/cpopen/ibm-watson-assistant-operator-bundle
   - image: icr.io/cpopen/ibm-watson-assistant-operator-catalog
