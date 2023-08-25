@@ -1272,6 +1272,7 @@ containerImages:
 - caseVersions:
   - 5.1.4
   - 5.3.0
+  - 5.3.1
   category: catalog
   digest: sha256:02613f919d85c35fbd6d2172ec53862aab2602ef7e473446604e66c119e17b76
   image: cpopen/ibm-db2uoperator-catalog
@@ -1283,6 +1284,7 @@ containerImages:
 - caseVersions:
   - 5.1.4
   - 5.3.0
+  - 5.3.1
   category: catalog
   digest: sha256:147ecb8e5d8a11391b223d03b063588f40a9034bfcc629a37fe964894fab9be0
   image: cpopen/ibm-db2uoperator-catalog
@@ -1294,6 +1296,7 @@ containerImages:
 - caseVersions:
   - 5.1.4
   - 5.3.0
+  - 5.3.1
   category: catalog
   digest: sha256:6222ebcee56d12dfd9324daf1acb6c25ee986865e77003bbc285c144a7e83c0c
   image: cpopen/ibm-db2uoperator-catalog
@@ -1305,6 +1308,7 @@ containerImages:
 - caseVersions:
   - 5.1.4
   - 5.3.0
+  - 5.3.1
   category: catalog
   digest: sha256:b81bc9eac5be21c17d20fb5a5af8bc30a644889b18021d12164b7f2439f9fdb0
   image: cpopen/ibm-db2uoperator-catalog
@@ -1349,3 +1353,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 6636-dev
+- caseVersions:
+  - 5.3.1
+  category: catalog
+  digest: sha256:8117e8a87de16c3c4f02b4fb7840f8abcad713d33575a2d7f170ad5cf83071ae
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 6892-dev-s390x
+- caseVersions:
+  - 5.3.1
+  category: catalog
+  digest: sha256:ea5c652f004168ee322b271707320b42262add5adf1310db95612686624decf3
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 6892-dev-ppc64le
+- caseVersions:
+  - 5.3.1
+  category: catalog
+  digest: sha256:8cb369b890f7ef3ab0d9ffe6de4429e3b0b432918d2984f0594410874803c0a1
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 6892-dev-amd64
+- caseVersions:
+  - 5.3.1
+  category: catalog
+  digest: sha256:70fca35b70e64a5f0337d0749de07b8d6488fd524198b3d2cd6ccbfa44775c08
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 6892-dev
