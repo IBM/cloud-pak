@@ -384,3 +384,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 3.0.56
+- caseVersions:
+  - 6.1.0
+  category: catalog
+  digest: sha256:4818a129e2731ba7e40dc0798de9702e4abbef365b66eb717a44ea75ff138aa9
+  image: cpopen/ibm-datagate-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 3.0.85-amd64
+- caseVersions:
+  - 6.1.0
+  category: catalog
+  digest: sha256:ed00d29649761ef2b74ac649a84a63cdd9a3dedf9845ca5bfb0c3a3f6012d58b
+  image: cpopen/ibm-datagate-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 3.0.85-s390x
+- caseVersions:
+  - 6.1.0
+  category: catalog
+  digest: sha256:54e5f24423d3d5cef793d4f5ebc1824869d62e61a43f86b52f928640f88974b5
+  image: cpopen/ibm-datagate-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 3.0.85
