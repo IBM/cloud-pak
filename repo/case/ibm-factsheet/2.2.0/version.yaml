@@ -1,0 +1,45 @@
+apiVersion: v1
+case:
+  appVersion: 4.7.2
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data Factsheet
+  displayDescription: CASE for IBM Factsheet
+  displayName: IBM Factsheet
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.6License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.6License.txt
+  name: ibm-factsheet
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 2.2.0
+  webPage: https://www.ibm.com
+created: 2023-08-25T18:46:39.93607802+0000
+digest: sha256:6ac9cc1aaf81f4c379098a85a9cb9b03511cf09a45fd1618b7e56784a2fc5fd5
