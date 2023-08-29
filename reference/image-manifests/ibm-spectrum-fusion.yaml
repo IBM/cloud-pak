@@ -2,15 +2,22 @@ source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
 description: "Management operator for IBM Storage Fusion"
 images:
   - image: cp/df/cephcsi-rhel8
+  - image: cp/df/cephcsi-rhel9
+  - image: cp/df/mcg-cli-rhel9
   - image: cp/df/mcg-core-rhel8
+  - image: cp/df/mcg-core-rhel9
   - image: cp/df/mcg-rhel8-operator
   - image: cp/df/ocs-metrics-exporter-rhel8
+  - image: cp/df/ocs-metrics-exporter-rhel9
   - image: cp/df/ocs-must-gather-rhel8
   - image: cp/df/ocs-rhel8-operator
   - image: cp/df/odf-console-rhel8
+  - image: cp/df/odf-console-rhel9
   - image: cp/df/odf-csi-addons-rhel8-operator
   - image: cp/df/odf-csi-addons-sidecar-rhel8
+  - image: cp/df/odf-csi-addons-sidecar-rhel9
   - image: cp/df/odf-multicluster-console-rhel8
+  - image: cp/df/odf-multicluster-console-rhel9
   - image: cp/df/odf-multicluster-rhel8-operator
   - image: cp/df/odf-rhel8-operator
   - image: cp/df/odr-rhel8-operator
@@ -126,11 +133,21 @@ images:
   - image: icr.io/cpopen/isf-operator-bundle
   - image: icr.io/cpopen/isf-operator-catalog
   - image: icr.io/cpopen/mcg-operator
+  - image: icr.io/cpopen/mcg-operator-bundle
+  - image: icr.io/cpopen/ocs-client-operator
+  - image: icr.io/cpopen/ocs-client-operator-bundle
   - image: icr.io/cpopen/ocs-must-gather
   - image: icr.io/cpopen/ocs-operator
+  - image: icr.io/cpopen/ocs-operator-bundle
   - image: icr.io/cpopen/odf-csi-addons-operator
+  - image: icr.io/cpopen/odf-csi-addons-operator-bundle
   - image: icr.io/cpopen/odf-multicluster-operator
+  - image: icr.io/cpopen/odf-multicluster-operator-bundle
+  - image: icr.io/cpopen/odf-must-gather
   - image: icr.io/cpopen/odf-operator
+  - image: icr.io/cpopen/odf-operator-bundle
+  - image: icr.io/cpopen/odr-cluster-operator-bundle
+  - image: icr.io/cpopen/odr-hub-operator-bundle
   - image: icr.io/cpopen/odr-operator
   - image: icr.io/cpopen/rook-ceph-operator
   - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy
