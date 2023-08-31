@@ -4,6 +4,8 @@ images:
   - image: cp/cp4s/altinity-clickhouse-controller
   - image: cp/cp4s/altinity-clickhouse-controller-metrics
   - image: cp/cp4s/apps-manager
+  - image: cp/cp4s/apps-operator
+  - image: cp/cp4s/apps-synchronizer
   - image: cp/cp4s/busybox
   - image: cp/cp4s/cassandra
   - image: cp/cp4s/command-interpreter
@@ -15,6 +17,7 @@ images:
   - image: cp/cp4s/cp4s-extension
   - image: cp/cp4s/cp4s-init-mod
   - image: cp/cp4s/cp4s-stolon
+  - image: cp/cp4s/edge-gateway-stolon
   - image: cp/cp4s/foundations/busybox
   - image: cp/cp4s/foundations/couchdb3
   - image: cp/cp4s/foundations/cp4s-extension
@@ -52,6 +55,8 @@ images:
   - image: cp/cp4s/foundations/redis
   - image: cp/cp4s/hasura
   - image: cp/cp4s/homer-drc
+  - image: cp/cp4s/homer-drcapi
+  - image: cp/cp4s/homer-drcimporter
   - image: cp/cp4s/homer-edgeclient
   - image: cp/cp4s/homer-qproxy
   - image: cp/cp4s/idrmdashboard
@@ -66,6 +71,7 @@ images:
   - image: cp/cp4s/isc-aitk-orchestrator
   - image: cp/cp4s/isc-aitk-thaddeus
   - image: cp/cp4s/isc-ambassador
+  - image: cp/cp4s/isc-atk-bootstrap
   - image: cp/cp4s/isc-authsvc
   - image: cp/cp4s/isc-car
   - image: cp/cp4s/isc-cases-activemq
@@ -124,19 +130,27 @@ images:
   - image: cp/cp4s/isc-tis-enrich-queue
   - image: cp/cp4s/isc-tis-rfi
   - image: cp/cp4s/isc-tis-score-controller
+  - image: cp/cp4s/isc-tis-xfe-proxy
+  - image: cp/cp4s/isc-tis-xir
+  - image: cp/cp4s/isc-tis-xir-downloader
+  - image: cp/cp4s/isc-ucp
   - image: cp/cp4s/isc-udi-changelog-cronjob
   - image: cp/cp4s/isc-udi-cleanup-cronjob
+  - image: cp/cp4s/isc-udi-connector-config
   - image: cp/cp4s/isc-udi-edge-service
   - image: cp/cp4s/isc-udi-encrypt-cronjob
   - image: cp/cp4s/isc-udi-endpoint
   - image: cp/cp4s/isc-udi-worker
   - image: cp/cp4s/nginx
+  - image: cp/cp4s/noobaa-core
+  - image: cp/cp4s/noobaa-operator
   - image: cp/cp4s/opencontent-etcd-3
   - image: cp/cp4s/opencontent-icp-cert-gen-1
   - image: cp/cp4s/opencontent-minio
   - image: cp/cp4s/opencontent-minio-client
   - image: cp/cp4s/opencontent-rabbitmq-3
   - image: cp/cp4s/opencontent-rabbitmq-config-copy
+  - image: cp/cp4s/postgresql-12-centos7
   - image: cp/cp4s/pulse-dashboard
   - image: cp/cp4s/solutions/apps-manager
   - image: cp/cp4s/solutions/arangodb-community
@@ -264,7 +278,9 @@ images:
   - image: cp/cp4s/solutions/stix_shifter_modules_splunk
   - image: cp/cp4s/solutions/stix_shifter_modules_stix_bundle
   - image: cp/cp4s/solutions/thl-outliers
+  - image: cp/cp4s/thl-analytics
   - image: cp/cp4s/thl-outliers
+  - image: cp/cpd/edb-postgres-license-provider
   - image: cp/ibm-cloud-databases-redis-operator
   - image: cp/icp-foundation/alertmanager
   - image: cp/icp-foundation/audit-policy-controller
@@ -441,6 +457,10 @@ images:
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.1
   - image: cp/opencontent-os-base-plugins-2.x
+  - image: cp/opencontent-rabbitmq-3
+  - image: cp/opencontent-rabbitmq-config-copy
+  - image: cp/opencontent-search-haproxy-fips1402
+  - image: cp/opencontent-search-haproxy-fips1403
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
@@ -512,6 +532,7 @@ images:
   - image: icr.io/cpopen/cp4s/isc-car-connector-qualys
   - image: icr.io/cpopen/cp4s/isc-car-connector-randori
   - image: icr.io/cpopen/cp4s/isc-car-connector-rhacs
+  - image: icr.io/cpopen/cp4s/isc-car-connector-tanium
   - image: icr.io/cpopen/cp4s/isc-car-connector-tenable
   - image: icr.io/cpopen/cp4s/isc-udi-edge-client
   - image: icr.io/cpopen/cp4s-middleware-operator
