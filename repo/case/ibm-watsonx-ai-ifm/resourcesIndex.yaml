@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 7.3.0
+  category: catalog
+  digest: sha256:08024b93c967d960abc7f8f5c3ff27697617205d6eb32fdcea5cedc8f8a5614b
+  image: cpopen/ibm-cpd-watsonx-ai-ifm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 7.3-20230904.143105-amd64
+- caseVersions:
+  - 7.3.0
+  category: catalog
+  digest: sha256:cce4677a568c2b440240f78876ba093866f488b8c3e5ee1804d4443075b1ef1d
+  image: cpopen/ibm-cpd-watsonx-ai-ifm-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 7.3-20230904.143105-ppc64le
+- caseVersions:
+  - 7.3.0
+  category: catalog
+  digest: sha256:4906a23f91c7f8f5b4d23b7acbb550965b6abf85c091abe62efe4c14b9661d92
+  image: cpopen/ibm-cpd-watsonx-ai-ifm-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 7.3-20230904.143105-s390x
+- caseVersions:
+  - 7.3.0
+  category: catalog
+  digest: sha256:871ad1bde6d8c35b1076733f6ef178cae90d161e4b348438df9b0a592e9f7e57
+  image: cpopen/ibm-cpd-watsonx-ai-ifm-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 7.3-20230904.143105
