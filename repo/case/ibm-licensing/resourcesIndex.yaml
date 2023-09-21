@@ -76,3 +76,51 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: cd
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:090ced52b480c5846f64358aac1cd594033d328bee3c1b9c588de13115d6b7a9
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: cd-amd64
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:c0dc0c09a9c13c0d9629d92d2ac345cb764dcda56d69cf166420bf393205d64e
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: cd-arm64-v8
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:efce489518fc41b2395173896ec4a8506ed604febe470c840c2d798904a80db8
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: cd-ppc64le
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:65413a2b6de43c787893369414f410bd704b167d9ed0b28d58a84985cbb0246d
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: cd-s390x
+- caseVersions:
+  - 4.2.0
+  category: catalog
+  digest: sha256:210a452d30aa6f996fee80fb35fea0ca7d709fe3c589fb6eaa79ceb0b24a6a4c
+  image: cpopen/ibm-licensing-catalog
+  platform:
+    imagetype: manifestList
+  tag: cd
