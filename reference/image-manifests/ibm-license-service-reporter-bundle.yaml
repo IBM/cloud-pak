@@ -1,0 +1,10 @@
+source: ibm-license-service-reporter-bundle/case/ibm-license-service-reporter-bundle/case.yaml
+description: "Measure license use of IBM products deployed in the cluster"
+images:
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-oauth2-proxy
+  - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
+  - image: icr.io/cpopen/cpfs/ibm-postgresql
+  - image: icr.io/cpopen/ibm-license-service-reporter-operator
+  - image: icr.io/cpopen/ibm-license-service-reporter-operator-bundle
+  - image: icr.io/cpopen/ibm-license-service-reporter-operator-catalog
