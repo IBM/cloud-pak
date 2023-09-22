@@ -1273,6 +1273,7 @@ containerImages:
   - 5.1.4
   - 5.3.0
   - 5.3.1
+  - 5.4.1
   category: catalog
   digest: sha256:02613f919d85c35fbd6d2172ec53862aab2602ef7e473446604e66c119e17b76
   image: cpopen/ibm-db2uoperator-catalog
@@ -1285,6 +1286,7 @@ containerImages:
   - 5.1.4
   - 5.3.0
   - 5.3.1
+  - 5.4.1
   category: catalog
   digest: sha256:147ecb8e5d8a11391b223d03b063588f40a9034bfcc629a37fe964894fab9be0
   image: cpopen/ibm-db2uoperator-catalog
@@ -1297,6 +1299,7 @@ containerImages:
   - 5.1.4
   - 5.3.0
   - 5.3.1
+  - 5.4.1
   category: catalog
   digest: sha256:6222ebcee56d12dfd9324daf1acb6c25ee986865e77003bbc285c144a7e83c0c
   image: cpopen/ibm-db2uoperator-catalog
@@ -1309,6 +1312,7 @@ containerImages:
   - 5.1.4
   - 5.3.0
   - 5.3.1
+  - 5.4.1
   category: catalog
   digest: sha256:b81bc9eac5be21c17d20fb5a5af8bc30a644889b18021d12164b7f2439f9fdb0
   image: cpopen/ibm-db2uoperator-catalog
@@ -1391,3 +1395,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 6892-dev
+- caseVersions:
+  - 5.4.1
+  category: catalog
+  digest: sha256:6d7cac9020e2f5af452626702a4176a1b81d6ee601557fa6412ee1743ad78e54
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 7296-dev-s390x
+- caseVersions:
+  - 5.4.1
+  category: catalog
+  digest: sha256:bc41b191cfa5a5c5ff88a41a521487046cbf3c172fbb1f55fa870104ceb4b121
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 7296-dev-ppc64le
+- caseVersions:
+  - 5.4.1
+  category: catalog
+  digest: sha256:e50912d389e53c8d686a213c534f6fbd83b6aee9cc565ea53dff468089ace24d
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 7296-dev-amd64
+- caseVersions:
+  - 5.4.1
+  category: catalog
+  digest: sha256:588485997845004b794e7a7d6c782c33eec1ecf58995a6496c4f56e66280b1a7
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 7296-dev
