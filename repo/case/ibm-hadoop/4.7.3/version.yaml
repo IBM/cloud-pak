@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 4.7.3
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Hadoop
+  displayDescription: ""
+  displayName: Hadoop
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEnterpriseEd4.7.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dStandardEd4.7.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-hadoop
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 4.7.3
+  webPage: https://www.ibm.com
+created: 2023-09-22T01:22:03.34799152+0000
+digest: sha256:c8b871ef5f1cac87539268d48b78b4fd171dcc9d549450f05bb2cc178818a53d
