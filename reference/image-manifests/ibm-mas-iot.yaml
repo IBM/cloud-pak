@@ -4,6 +4,11 @@ images:
   - image: cp/mas/hook-trackdeploy
   - image: cp/mas/iot-operator
   - image: cp/mas/ltpakeys-generator
+  - image: cp/omnio/djangomodel-edgeconfig
+  - image: cp/omnio/ibm-iot-edgeconfig
+  - image: cp/omnio/omnio-configuration-ui
+  - image: cp/omnio/omnio-server
+  - image: cp/omnio/sqlmodel-edgeconfig
   - image: cp/wiotp/action-mgr
   - image: cp/wiotp/api-actions
   - image: cp/wiotp/api-authentication
@@ -136,6 +141,7 @@ images:
   - image: cp/wiotp/state-updater
   - image: cp/wiotp/statsd
   - image: cp/wiotp/ui-dashboard
+  - image: icr.io/cpopen/ibm-mas/edgedatacollector
   - image: icr.io/cpopen/ibm-mas-iot
   - image: icr.io/cpopen/ibm-mas-iot-operator-bundle
   - image: icr.io/cpopen/ibm-mas-iot-operator-catalog
