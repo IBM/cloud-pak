@@ -1,6 +1,8 @@
 source: ibm-process-mining-bundle/case/ibm-process-mining/case.yaml
 description: "IBM Process and Task Mining is a process mining and Digital Twin of an Organization solution that offers a fail-fast approach to analyze, constantly monitor, improve business processes, and drive digital transformation."
 images:
+  - image: cp/cpd/edb-postgres-license-provider
+  - image: cp/cpd/postgresql
   - image: cp/db2u
   - image: cp/db2u.auxiliary.auth
   - image: cp/db2u.bigsql.cdh7
@@ -72,11 +74,13 @@ images:
   - image: icr.io/cpopen/cpfs/audit-policy-controller
   - image: icr.io/cpopen/cpfs/audit-syslog-service
   - image: icr.io/cpopen/cpfs/common-web-ui
+  - image: icr.io/cpopen/cpfs/cpfs-utils
   - image: icr.io/cpopen/cpfs/dashboard-controller
   - image: icr.io/cpopen/cpfs/default-http-backend
   - image: icr.io/cpopen/cpfs/fluentd
   - image: icr.io/cpopen/cpfs/grafana
   - image: icr.io/cpopen/cpfs/grafana-ocpthanos-proxy
+  - image: icr.io/cpopen/cpfs/iam-custom-hostname
   - image: icr.io/cpopen/cpfs/iam-policy-administration
   - image: icr.io/cpopen/cpfs/iam-policy-controller
   - image: icr.io/cpopen/cpfs/iam-policy-decision
@@ -113,6 +117,7 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/cpfs/im-initcontainer
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/multi-instance-conversion
@@ -128,8 +133,12 @@ images:
   - image: icr.io/cpopen/cpfs/zen-iam-config
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
+  - image: icr.io/cpopen/cpfs/zen-minio
+  - image: icr.io/cpopen/cpfs/zen-utils
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/db2u-day2-operator
   - image: icr.io/cpopen/db2u-operator
+  - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/iaf-core-operator
   - image: icr.io/cpopen/iaf-core-operator-bundle
   - image: icr.io/cpopen/ibm-auditlogging-operator
@@ -137,6 +146,7 @@ images:
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
   - image: icr.io/cpopen/ibm-cert-manager-operator
   - image: icr.io/cpopen/ibm-cert-manager-operator-bundle
+  - image: icr.io/cpopen/ibm-cert-manager-operator-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-catalog
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator
   - image: icr.io/cpopen/ibm-cloud-databases-redis-operator-bundle
@@ -144,6 +154,9 @@ images:
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
@@ -160,6 +173,7 @@ images:
   - image: icr.io/cpopen/ibm-iam-operator-bundle
   - image: icr.io/cpopen/ibm-ingress-nginx-operator
   - image: icr.io/cpopen/ibm-ingress-nginx-operator-bundle
+  - image: icr.io/cpopen/ibm-licensing-catalog
   - image: icr.io/cpopen/ibm-licensing-operator
   - image: icr.io/cpopen/ibm-licensing-operator-bundle
   - image: icr.io/cpopen/ibm-management-ingress-operator
@@ -200,6 +214,8 @@ images:
   - image: icr.io/db2u/db2u.restricted
   - image: icr.io/db2u/db2u.tools
   - image: icr.io/db2u/db2u.update.image
+  - image: icr.io/db2u/db2u.veleroplugin
+  - image: icr.io/db2u/db2u.watsonquery
   - image: icr.io/db2u/etcd
   - image: quay.io/opencloudio/alertmanager
   - image: quay.io/opencloudio/audit-garbage-collector
