@@ -75,6 +75,7 @@ images:
   - image: cp/cpd/runtime-manager-api
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
+  - image: cp/cpd/task-credentials
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight
@@ -92,6 +93,9 @@ images:
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
   - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/ibm-redis-cp-6.2.13
+  - image: cp/ibm-redis-cp-6.2.7
+  - image: cp/ibm-redis-cp-haproxy
   - image: cp/opencontent-elasticsearch-6.8.14
   - image: cp/opencontent-elasticsearch-6.8.20
   - image: cp/opencontent-elasticsearch-6.8.22
@@ -118,6 +122,8 @@ images:
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
   - image: cp/opencontent-rabbitmq-operator
+  - image: cp/opencontent-search-haproxy-fips1402
+  - image: cp/opencontent-search-haproxy-fips1403
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
@@ -148,6 +154,9 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
+  - image: icr.io/cpopen/ibm-redis-cp-operator
+  - image: icr.io/cpopen/ibm-redis-cp-operator-bundle
+  - image: icr.io/cpopen/ibm-redis-cp-operator-catalog
   - image: icr.io/cpopen/mdm-operator
   - image: icr.io/cpopen/mdm-operator-bundle
   - image: icr.io/cpopen/mdm-operator-catalog
