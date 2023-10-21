@@ -492,3 +492,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 4.10-20230913.113725
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:1e97a3f1b9965881a46c92a627629ac6b9b84292de196825e89a65c0393abe25
+  image: cpopen/ibm-apiconnect-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.10-20231020.101120-amd64
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:f677553195540233dc55e31013cb7f68bc9276d1a74604b8cec8c6647a5c9b41
+  image: cpopen/ibm-apiconnect-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.10-20231020.101120-s390x
+- caseVersions:
+  - 4.0.6
+  category: catalog
+  digest: sha256:5724231cf498ca4e1f4b990be453def6af8bed499e8b9c7dadaa286fd85cff67
+  image: cpopen/ibm-apiconnect-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.10-20231020.101120
