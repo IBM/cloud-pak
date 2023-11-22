@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 8.0.0
+  category: catalog
+  digest: sha256:878bb1b7aa372e2e315794213355fd49a76399ce5b56485c96eec55a78879d72
+  image: cpopen/ibm-cpd-canvasbase-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8.0.0-145-amd64
+- caseVersions:
+  - 8.0.0
+  category: catalog
+  digest: sha256:c49400165a9022f72b476ec1ae7c2830569cbb6225ccc905677bdb678432041b
+  image: cpopen/ibm-cpd-canvasbase-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 8.0.0-145-ppc64le
+- caseVersions:
+  - 8.0.0
+  category: catalog
+  digest: sha256:9dcdd71b496e285228e434640f19ea012929059c920354500ea5a043cbbed85c
+  image: cpopen/ibm-cpd-canvasbase-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8.0.0-145

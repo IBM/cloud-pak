@@ -1,0 +1,20 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 8.0.0
+  category: catalog
+  digest: sha256:9833a96bdaf8efb93c0ed9b69145a26d08e51347f73197b6966d50e9b8068a43
+  image: cpopen/ibm-cpd-syntheticdata-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8.0.0-167-amd64
+- caseVersions:
+  - 8.0.0
+  category: catalog
+  digest: sha256:72dbcaaf4dea41d5d61abbd825817fb545cb1a6667ab9544d587f7f405e38e01
+  image: cpopen/ibm-cpd-syntheticdata-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8.0.0-167
