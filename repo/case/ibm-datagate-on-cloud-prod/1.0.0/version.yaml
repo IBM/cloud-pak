@@ -1,0 +1,44 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Data Gate on Cloud
+  displayDescription: The CASE of IBM Data Gate on Cloud
+  displayName: IBM Data Gate on Cloud
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/IBM-Datagate-icon.png
+  licenses:
+    datagate-on-cloud-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Data Gate on Cloud License
+        displayName: IBM Data Gate on Cloud License
+      ref: IBMDataGateOnCloudLicense1.0.txt
+    datagate-on-cloud-license-notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Data Gate on Cloud License Notices
+        displayName: IBM Data Gate on Cloud License Notices
+      ref: notices.txt
+  name: ibm-datagate-on-cloud-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2023-11-22T21:21:13.54954133+0000
+digest: sha256:b27f49020a16adb584cd9355c474ba099215c67f201c6949218adca9ec507251

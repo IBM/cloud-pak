@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 1.22.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: IBM Mongodb Enterprise Operator
+  displayDescription: ""
+  displayName: IBM MongoDB Enterprise Operator
+  icons: []
+  licenses:
+    license-en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: license-en
+      ref: LI_en
+    licenseNonIBM:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+        name: licenseNonIBM
+      ref: non_ibm_license
+  name: ibm-mongodb-enterprise
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 4.18.0
+  webPage: https://www.ibm.com
+created: 2023-11-22T21:27:25.45354133+0000
+digest: sha256:a1838d38bb5b8d233e49c08ff67323af41d75304542fe7c7bbbe7bec29197a56
