@@ -190,3 +190,21 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v6.3.0-20230913.011907-BB241C7BB-linux.amd64
+- caseVersions:
+  - 7.0.0
+  category: catalog
+  digest: sha256:ea087a9901220bc85cd2cb87c16d6a56d455d58de9c6f1681e6cd6c264ccdcf3
+  image: cpopen/ibm-watson-discovery-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v7.0.0-20231116.111642-F8040B5E8-fbc-linux.amd64
+- caseVersions:
+  - 7.0.0
+  category: catalog
+  digest: sha256:3f4912278960845880b4e5e9f7a8845922cf0c1151b4237f0160601ff1ae0a5b
+  image: cpopen/ibm-watson-discovery-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v7.0.0-20231116.111642-F8040B5E8-fbc
