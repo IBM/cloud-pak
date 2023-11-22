@@ -1,0 +1,49 @@
+apiVersion: v1
+case:
+  appVersion: 1.1.13
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    beta: {}
+  description: IBM cloudpak operator for training with Model Train
+  displayDescription: IBM cloudpak operator for training with Model Train
+  displayName: IBM operator for Model Train
+  icons: []
+  licenses:
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+        name: notices
+      ref: NOTICES
+    notices_slc:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES_SLC
+        name: notices_slc
+      ref: NOTICES_SLC
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-model-train-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 1.2.11
+  webPage: ""
+created: 2023-11-22T06:53:50.63507906+0000
+digest: sha256:21faed7900f3539ecba15e62c5cb5ee6bb0ddf5a751e8e5b0789aad8ea8ab509
