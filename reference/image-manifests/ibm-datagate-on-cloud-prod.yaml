@@ -1,0 +1,12 @@
+source: ibm-datagate-on-cloud-prod-bundle/case/ibm-datagate-on-cloud-prod/case.yaml
+description: "IBM Data Gate on Cloud"
+images:
+  - image: cp/datagate-on-cloud/container-stunnel
+  - image: cp/datagate-on-cloud/container-stunnel-init
+  - image: cp/datagate-on-cloud/datagate-api
+  - image: cp/datagate-on-cloud/datagate-apply
+  - image: cp/datagate-on-cloud/datagate-server
+  - image: cp/datagate-on-cloud/datagate-ui
+  - image: icr.io/cpopen/ibm-datagateoncloud-operator
+  - image: icr.io/cpopen/ibm-datagateoncloud-operator-bundle
+  - image: icr.io/cpopen/ibm-datagateoncloud-operator-catalog

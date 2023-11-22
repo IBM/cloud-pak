@@ -1,51 +1,60 @@
-source: ibm-hadoop-bundle/case/ibm-hadoop/case.yaml
-description: "Hadoop"
+source: ibm-watsonx-ai-bundle/case/ibm-watsonx-ai/case.yaml
+description: "IBM Cloud Pak for Data watsonx.ai"
 images:
-  - image: cp/cpd/ailc-kubectl
   - image: cp/cpd/asset-files-api
+  - image: cp/cpd/bigcode-starcoder-part1
+  - image: cp/cpd/bigcode-starcoder-part2
+  - image: cp/cpd/bigcode-starcoder-part3
+  - image: cp/cpd/bigcode-starcoder-part4
+  - image: cp/cpd/bigscience-mt0-xxl
   - image: cp/cpd/catalog-api-aux_master
   - image: cp/cpd/catalog_master
   - image: cp/cpd/couchdb3
   - image: cp/cpd/dap-base-job
-  - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dc-main
   - image: cp/cpd/dsx-requisite
-  - image: cp/cpd/elasticsearch
-  - image: cp/cpd/environments
+  - image: cp/cpd/eleutherai-gpt-neox-20b
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
   - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
+  - image: cp/cpd/etcd-ubi
   - image: cp/cpd/event-logger-api
-  - image: cp/cpd/hadoop-kubectl
+  - image: cp/cpd/fmaas-router
+  - image: cp/cpd/fmaas-runtime-wisdom-ansible
+  - image: cp/cpd/google-flan-t5-xxl
+  - image: cp/cpd/google-flan-ul2
   - image: cp/cpd/haproxy
+  - image: cp/cpd/ibm-granite-13b-chat-v1
+  - image: cp/cpd/ibm-granite-13b-instruct-v1
+  - image: cp/cpd/ibm-mpt-7b-instruct2
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/job-trigger
   - image: cp/cpd/jupyter-notebooks-converter
+  - image: cp/cpd/kubectlclient
+  - image: cp/cpd/meta-llama-llama-2-70b-chat-part1
+  - image: cp/cpd/meta-llama-llama-2-70b-chat-part2
+  - image: cp/cpd/meta-llama-llama-2-70b-chat-part3
+  - image: cp/cpd/meta-llama-llama-2-70b-chat-part4
+  - image: cp/cpd/meta-llama-llama-2-70b-chat-part5
   - image: cp/cpd/model_viewer
   - image: cp/cpd/ngp-projects-api
-  - image: cp/cpd/notebooks
   - image: cp/cpd/notebooks-job-manager
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
-  - image: cp/cpd/portal-dashboards
-  - image: cp/cpd/portal-hadoop
   - image: cp/cpd/portal-job-manager
   - image: cp/cpd/portal-main
   - image: cp/cpd/portal-ml-dl
   - image: cp/cpd/portal-notifications
   - image: cp/cpd/portal-projects
-  - image: cp/cpd/privatecloud-dsx-hi-proxy
-  - image: cp/cpd/privatecloud-haproxy
-  - image: cp/cpd/privatecloud-spawner-api-k8s
-  - image: cp/cpd/privatecloud-utils-api
+  - image: cp/cpd/portal-wx
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
   - image: cp/cpd/runtime-assemblies-operator
   - image: cp/cpd/runtime-manager-api
-  - image: cp/cpd/runtimes-init-job
+  - image: cp/cpd/serving-runtime-sidecar
   - image: cp/cpd/shaper-server
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
@@ -57,70 +66,55 @@ images:
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-notebooks-api
   - image: cp/cpd/wdp-shaper
-  - image: cp/cpd/wkc-init-container
   - image: cp/cpd/wkc-init-container-ccs
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-asset-registration
+  - image: cp/cpd/wml-autoai-kb
+  - image: cp/cpd/wml-autoai-ts
+  - image: cp/cpd/wml-autoai-tsad
+  - image: cp/cpd/wml-deployment-agent
+  - image: cp/cpd/wml-deployment-envoy
+  - image: cp/cpd/wml-deployment-manager
+  - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
+  - image: cp/cpd/wml-dep-rt23-1-ms
+  - image: cp/cpd/wml-dep-rt23-1-r42-ms
+  - image: cp/cpd/wml-federated-learning-runtime-23.1-py3.10
   - image: cp/cpd/wml-main
+  - image: cp/cpd/wml-os-runtimes-do
+  - image: cp/cpd/wml-post-upgrade-cleanup-deployments
+  - image: cp/cpd/wml-preinstall-secret
   - image: cp/cpd/wmlrepositoryv4
+  - image: cp/cpd/wml-rt-bd-spss18.1
+  - image: cp/cpd/wml-rt-init-dep-service-py
+  - image: cp/cpd/wml-rt-mc3-py310-g1-ms
+  - image: cp/cpd/wml-rt-mllib3.3
+  - image: cp/cpd/wml-rt-od-spss18.1
+  - image: cp/cpd/wml-rt-r42-py39-g1
+  - image: cp/cpd/wml-rt-rshiny0.1-r4.2
+  - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wslocal-init-222-py
   - image: cp/cpd/wslocal-init-222-pygpu
   - image: cp/cpd/wslocal-init-222-r
   - image: cp/cpd/wslocal-init-231-py
   - image: cp/cpd/wslocal-init-231-pygpu
   - image: cp/cpd/wslocal-init-231-r
-  - image: cp/cpd/wslocal-init-nlp22.1
   - image: cp/cpd/wslocal-init-nlp22.2
   - image: cp/cpd/wslocal-init-nlp23.1
-  - image: cp/cpd/wslocal-init-py310gpu
-  - image: cp/cpd/wslocal-init-py310main
-  - image: cp/cpd/wslocal-init-py37cuda
-  - image: cp/cpd/wslocal-init-py37main
-  - image: cp/cpd/wslocal-init-py38cuda
-  - image: cp/cpd/wslocal-init-py38main
-  - image: cp/cpd/wslocal-init-py39
-  - image: cp/cpd/wslocal-init-py39cuda
-  - image: cp/cpd/wslocal-init-py39gpu
-  - image: cp/cpd/wslocal-init-py39main
-  - image: cp/cpd/wslocal-init-r36
-  - image: cp/cpd/wslocal-init-r36py39t1
-  - image: cp/cpd/wslocal-init-r42
   - image: cp/cpd/wslocal-runtime-222-py
   - image: cp/cpd/wslocal-runtime-222-pygpu
   - image: cp/cpd/wslocal-runtime-222-r
   - image: cp/cpd/wslocal-runtime-231-py
   - image: cp/cpd/wslocal-runtime-231-pygpu
   - image: cp/cpd/wslocal-runtime-231-r
-  - image: cp/cpd/wslocal-runtime-py310gpu
-  - image: cp/cpd/wslocal-runtime-py310main
-  - image: cp/cpd/wslocal-runtime-py37cuda
-  - image: cp/cpd/wslocal-runtime-py37main
-  - image: cp/cpd/wslocal-runtime-py38cuda
-  - image: cp/cpd/wslocal-runtime-py38main
-  - image: cp/cpd/wslocal-runtime-py39
-  - image: cp/cpd/wslocal-runtime-py39cuda
-  - image: cp/cpd/wslocal-runtime-py39gpu
-  - image: cp/cpd/wslocal-runtime-py39main
-  - image: cp/cpd/wslocal-runtime-r36
-  - image: cp/cpd/wslocal-runtime-r36py39t1
-  - image: cp/cpd/wslocal-runtime-r42
   - image: cp/cpd/ws-notebooks-ui
-  - image: cp/opencontent-elasticsearch-6.8.22
+  - image: cp/cpd/wx-inference-proxy
+  - image: cp/cpd/wx-ui-job
   - image: cp/opencontent-elasticsearch-7.10.2
-  - image: cp/opencontent-elasticsearch-7.8.0
-  - image: cp/opencontent-elasticsearch-7.8.1
-  - image: cp/opencontent-elasticsearch-7.9.3
-  - image: cp/opencontent-elasticsearch-base-plugins-6.8.22
   - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
-  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
-  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
-  - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
   - image: cp/opencontent-opensearch-1.3
   - image: cp/opencontent-opensearch-2.10
-  - image: cp/opencontent-opensearch-2.x
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.10
-  - image: cp/opencontent-os-base-plugins-2.x
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
@@ -129,16 +123,21 @@ images:
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-catalog
-  - image: icr.io/cpopen/ibm-cpd-hadoop-operator
-  - image: icr.io/cpopen/ibm-cpd-hadoop-operator-bundle
-  - image: icr.io/cpopen/ibm-cpd-hadoop-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-watsonx-ai-ifm-operator
+  - image: icr.io/cpopen/ibm-cpd-watsonx-ai-ifm-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-watsonx-ai-ifm-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-watsonx-ai-operator
+  - image: icr.io/cpopen/ibm-cpd-watsonx-ai-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-watsonx-ai-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-wml-operator
+  - image: icr.io/cpopen/ibm-cpd-wml-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-wml-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ws-operator
   - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
-  - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-fcc
   - image: icr.io/cpopen/opencontent-elasticsearch-operator
   - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
   - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog
