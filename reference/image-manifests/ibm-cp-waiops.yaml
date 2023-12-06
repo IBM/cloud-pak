@@ -59,6 +59,7 @@ images:
   - image: cp/cp4waiops/elastic-archiving-service
   - image: cp/cp4waiops/elasticindices
   - image: cp/cp4waiops/elasticsearch-curator
+  - image: cp/cp4waiops/email-notifications
   - image: cp/cp4waiops/event-gateway-cem
   - image: cp/cp4waiops/event-gateway-messagebus
   - image: cp/cp4waiops/event-grouping
@@ -67,6 +68,7 @@ images:
   - image: cp/cp4waiops/event-probe-messagebus
   - image: cp/cp4waiops/event-processor
   - image: cp/cp4waiops/eventsquery-service
+  - image: cp/cp4waiops/flink
   - image: cp/cp4waiops/flink-core
   - image: cp/cp4waiops/generic-topology-processor
   - image: cp/cp4waiops/grafana
@@ -93,6 +95,7 @@ images:
   - image: cp/cp4waiops/ibm-consul
   - image: cp/cp4waiops/ibm-grpc-appd-connector
   - image: cp/cp4waiops/ibm-grpc-awscw-connector
+  - image: cp/cp4waiops/ibm-grpc-cdc-conn
   - image: cp/cp4waiops/ibm-grpc-dyna-connector
   - image: cp/cp4waiops/ibm-grpc-github-connector
   - image: cp/cp4waiops/ibm-grpc-impact-connector
@@ -103,6 +106,7 @@ images:
   - image: cp/cp4waiops/ibm-grpc-splunk-connector
   - image: cp/cp4waiops/ibm-grpc-webhook-connector
   - image: cp/cp4waiops/ibm-grpc-zabbix-connector
+  - image: cp/cp4waiops/ibm-mm-cdc-conn
   - image: cp/cp4waiops/ibm-model-train-operator
   - image: cp/cp4waiops/ibm-stolon
   - image: cp/cp4waiops/ibm-vault
@@ -333,6 +337,11 @@ images:
   - image: icr.io/cpopen/cpfs/fluentd
   - image: icr.io/cpopen/cpfs/grafana
   - image: icr.io/cpopen/cpfs/grafana-ocpthanos-proxy
+  - image: icr.io/cpopen/cpfs/iaf-elasticsearch
+  - image: icr.io/cpopen/cpfs/iaf-elasticsearch-metrics-exporter
+  - image: icr.io/cpopen/cpfs/iaf-elasticsearch-proxy
+  - image: icr.io/cpopen/cpfs/iaf-eventprocessing-proxy
+  - image: icr.io/cpopen/cpfs/iaf-flink
   - image: icr.io/cpopen/cpfs/iam-policy-administration
   - image: icr.io/cpopen/cpfs/iam-policy-controller
   - image: icr.io/cpopen/cpfs/iam-policy-decision
