@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 3.25.10
+  catalogs:
+    api: {}
+    development: {}
+    ibmCloudPrivate: {}
+    icpclusterresource: {}
+    kubernetes: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ICP Platform API Service
+  displayDescription: ""
+  displayName: IBM Platform API Operator CASE Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-platform-api-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.19.10
+  webPage: https://www.ibm.com
+created: 2023-12-12T11:28:14.83955218+0000
+digest: sha256:7234cf9d0253c6dcd3597a5904555f5563a5dd48a4e1a12907f78777c546c7a0
