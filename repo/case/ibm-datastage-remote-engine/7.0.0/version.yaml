@@ -1,0 +1,37 @@
+apiVersion: v1
+case:
+  appVersion: 4.8.0
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: 'IBM Cloud Pak for Data DataStage Services '
+  displayDescription: IBM Cloud Pak for Data DataStage Services
+  displayName: ""
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: DataStage License
+        displayName: DataStage License
+      ref: LICENSE-en
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-datastage-remote-engine
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 7.0.0
+  webPage: https://www.ibm.com
+created: 2023-12-12T19:14:00.32876856+0000
+digest: sha256:46828a254c806b0e7c8ee053dffe6f4ab70c22d3dd4acaf3cec3d67368cd85cc
