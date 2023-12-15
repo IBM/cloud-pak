@@ -7,12 +7,14 @@ images:
   - image: cp/df/mcg-core-rhel8
   - image: cp/df/mcg-core-rhel9
   - image: cp/df/mcg-rhel8-operator
+  - image: cp/df/ocs-client-console-rhel9
   - image: cp/df/ocs-metrics-exporter-rhel8
   - image: cp/df/ocs-metrics-exporter-rhel9
   - image: cp/df/ocs-must-gather-rhel8
   - image: cp/df/ocs-rhel8-operator
   - image: cp/df/odf-console-rhel8
   - image: cp/df/odf-console-rhel9
+  - image: cp/df/odf-cosi-sidecar-rhel9
   - image: cp/df/odf-csi-addons-rhel8-operator
   - image: cp/df/odf-csi-addons-sidecar-rhel8
   - image: cp/df/odf-csi-addons-sidecar-rhel9
@@ -27,6 +29,7 @@ images:
   - image: cp/fbr/guardian-backup-policy
   - image: cp/fbr/guardian-backup-service
   - image: cp/fbr/guardian-job-manager
+  - image: cp/fbr/guardian-kubevirt-velero-plugin
   - image: cp/fbr/guardian-transaction-manager
   - image: cp/fbr/guardian-transaction-manager-minio
   - image: cp/fbr/guardian-transaction-manager-redis
@@ -47,6 +50,7 @@ images:
   - image: cp/ibm-spectrum-discover/moconsumer
   - image: cp/ibm-spectrum-discover/moproducer
   - image: cp/ibm-spectrum-discover/mo-ubi-init
+  - image: cp/ibm-spectrum-discover/must-gather
   - image: cp/ibm-spectrum-discover/policyengine
   - image: cp/ibm-spectrum-discover/reports
   - image: cp/ibm-spectrum-discover/scaleafmdatamover
@@ -64,11 +68,13 @@ images:
   - image: cp/isf/fusion-ui-app
   - image: cp/isf/isf-application-operator
   - image: cp/isf/isf-bkprstr-operator
+  - image: cp/isf/isf-cns-operator
   - image: cp/isf/isf-compute-fw-updater
   - image: cp/isf/isf-compute-operator
   - image: cp/isf/isf-data-protection-operator
   - image: cp/isf/isf-ics-operator
   - image: cp/isf/isf-installer-operator
+  - image: cp/isf/isf-management-consoleplugin
   - image: cp/isf/isf-management-ui
   - image: cp/isf/isf-metrodr-operator
   - image: cp/isf/isf-network-fw-updater
@@ -111,6 +117,9 @@ images:
   - image: icr.io/cp/isf/isf-ui-operator
   - image: icr.io/cp/isf/isf-update-operator
   - image: icr.io/cp/isf/logcollector
+  - image: icr.io/cpopen/fbr-mongo
+  - image: icr.io/cpopen/fbr-mongo-exporter
+  - image: icr.io/cpopen/fbr-redis
   - image: icr.io/cpopen/guardian-datamover
   - image: icr.io/cpopen/guardian-dm-operator
   - image: icr.io/cpopen/guardian-dp-operator
