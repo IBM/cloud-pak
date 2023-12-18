@@ -7,6 +7,8 @@ images:
   - image: cp/cpd/bigcode-starcoder-part3
   - image: cp/cpd/bigcode-starcoder-part4
   - image: cp/cpd/bigscience-mt0-xxl
+  - image: cp/cpd/caikit-nlp-service-trainer
+  - image: cp/cpd/caikit-nlp-service-trainer-guardrails
   - image: cp/cpd/catalog-api-aux_master
   - image: cp/cpd/catalog_master
   - image: cp/cpd/couchdb3
@@ -14,6 +16,7 @@ images:
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dc-main
   - image: cp/cpd/dsx-requisite
+  - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/eleutherai-gpt-neox-20b
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
@@ -23,17 +26,23 @@ images:
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/fmaas-router
   - image: cp/cpd/fmaas-runtime-wisdom-ansible
+  - image: cp/cpd/google-flan-t5-xl
   - image: cp/cpd/google-flan-t5-xxl
   - image: cp/cpd/google-flan-ul2
+  - image: cp/cpd/hap-model
   - image: cp/cpd/haproxy
   - image: cp/cpd/ibm-granite-13b-chat-v1
+  - image: cp/cpd/ibm-granite-13b-chat-v2
   - image: cp/cpd/ibm-granite-13b-instruct-v1
+  - image: cp/cpd/ibm-granite-13b-instruct-v2
   - image: cp/cpd/ibm-mpt-7b-instruct2
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/job-trigger
   - image: cp/cpd/jupyter-notebooks-converter
   - image: cp/cpd/kubectlclient
+  - image: cp/cpd/lifecycle-manager-service
+  - image: cp/cpd/meta-llama-llama-2-13b-chat
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part1
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part2
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part3
@@ -42,6 +51,7 @@ images:
   - image: cp/cpd/model_viewer
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/notebooks-job-manager
+  - image: cp/cpd/pod-coordinator
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
   - image: cp/cpd/portal-job-manager
@@ -59,9 +69,12 @@ images:
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
   - image: cp/cpd/task-credentials
+  - image: cp/cpd/trainer-v2-service
+  - image: cp/cpd/ubi9-micro
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight
+  - image: cp/cpd/wdp-connect-flight-svc
   - image: cp/cpd/wdp-dataprep
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-notebooks-api
@@ -117,9 +130,14 @@ images:
   - image: cp/opencontent-os-base-plugins-2.10
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
+  - image: icr.io/cpopen/caikit-runtime-stack-operator
+  - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-datarefinery-operator-catalog
