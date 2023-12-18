@@ -1,0 +1,49 @@
+apiVersion: v1
+case:
+  appVersion: 8.1.0
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: CASE for RStudio Server Runtimes in Watson Studio
+  displayDescription: CASE for RStudio Server Runtimes in Watson Studio
+  displayName: IBM Watson Studio RStudio Server Runtimes
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEnterpriseEd4.8.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dStandardEd4.8.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-rstudio
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 8.1.0
+  webPage: https://www.ibm.com
+created: 2023-12-18T21:36:44.52935039+0000
+digest: sha256:363ad5a9b2dc21deaa08defa4a30eb2b7a52c915e1fc702ff1f27b242a9eafcf

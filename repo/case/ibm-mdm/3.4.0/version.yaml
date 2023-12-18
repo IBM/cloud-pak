@@ -1,0 +1,59 @@
+apiVersion: v1
+case:
+  appVersion: 3.4.0
+  catalogs:
+    analytics: {}
+    mdm: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Match360 with Watson
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    apache2.0:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: apache-2.0
+        name: apache2.0
+      ref: apache-2.0
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEeEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Cloud Pak for Data License for Enterprise Edition
+        displayName: Cloud Pak for Data License
+      ref: LICENSE-EE-en
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-ZCEB-KG3N8Q
+    licenseSeEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Cloud Pak for Data License for Standard Edition
+        displayName: Cloud Pak for Data License
+      ref: LICENSE-SE-en
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-CJCU-CWMFYW
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-mdm
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 3.4.0
+  webPage: https://www.ibm.com
+created: 2023-12-18T21:35:14.90535039+0000
+digest: sha256:5aa0602ebff177cc5c13e920dc961e3369996891dbe5bb73c7efdc35657892da

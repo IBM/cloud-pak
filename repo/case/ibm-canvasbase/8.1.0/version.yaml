@@ -1,0 +1,68 @@
+apiVersion: v1
+case:
+  appVersion: 8.1.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEnterpriseEd4.8.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dStandardEd4.8.txt
+    watsonxai-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.ai License
+        displayName: IBM watsonx.ai License
+      ref: IBM-watsonx-ai-v1.1-License.txt
+    watsonxai-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM watsonx.ai
+        displayName: Separately Licensed code
+      ref: non_ibm_license.txt
+    watsonxai-notice:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.ai notice
+        displayName: IBM watsonx.ai notice
+      ref: notices.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-canvasbase
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 8.1.0
+  webPage: https://www.ibm.com
+created: 2023-12-18T21:22:11.60535039+0000
+digest: sha256:a15fc97bf509fc3a04f8e33dd5085d788cb6563e5c90b714fdc4513659a083a4

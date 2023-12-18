@@ -28,3 +28,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 8.0.0-145
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:3d030dbe3222a9866644162583947ca37670e17ba9894f57bedaf949108209b6
+  image: cpopen/ibm-cpd-canvasbase-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8.1.0-162-amd64
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:c64042fd4423b737061df672bc3191f46542721f216ee813c59b834cd50a1f15
+  image: cpopen/ibm-cpd-canvasbase-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 8.1.0-162-ppc64le
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:01e5cfcdd7d1942aeb022c23b73a86c3a77ceceea98e7dc0a46738815488c740
+  image: cpopen/ibm-cpd-canvasbase-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8.1.0-162

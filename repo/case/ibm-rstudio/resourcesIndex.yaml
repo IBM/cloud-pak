@@ -496,3 +496,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 8.0-20231106.210408
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:cfd717a95f12b56e8c579eca41c16e222d30b320a64f32ea4dd8556a79c4d1d2
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8.1-20231205.173520-amd64
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:42ff4365d0a2b1fa11d2a35b27108fe397e677fa28cea350c519335a5095da9d
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 8.1-20231205.173520-ppc64le
+- caseVersions:
+  - 8.1.0
+  category: catalog
+  digest: sha256:084ffcb49083c0ac4e1d61b47381620fd466ef520aa1bde34bf17a14de074b34
+  image: cpopen/ibm-cpd-rstudio-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8.1-20231205.173520
