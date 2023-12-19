@@ -1,20 +1,20 @@
-# UrbanCode Deploy Agent Relay - Case Bundle
+# DevOps Deploy Agent Relay - Case Bundle
 
 ## Introduction
-[UrbanCode Deploy Agent Relay](https://www.ibm.com/cloud/urbancode/deploy) is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production.
+[DevOps Deploy Agent Relay](https://www.ibm.com/cloud/urbancode/deploy) is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production.
 
 ## Details
 This CASE contains two inventory items:
-- A helm chart that deploys a single instance of IBM UrbanCode Deploy relay that may be scaled to multiple instances.
-- An operator that deploys a single instance of IBM UrbanCode Deploy relay that may be scaled to multiple instances.
+- A helm chart that deploys a single instance of IBM DevOps Deploy relay that may be scaled to multiple instances.
+- An operator that deploys a single instance of IBM DevOps Deploy relay that may be scaled to multiple instances.
 
 Support has been validated on OpenShift clusters running onPrem, in IBM Satellite, and IBM ROKS.
 
-The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy agent relay.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the agent relay.
+The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM DevOps Deploy agent relay.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the agent relay.
 
 ## Kubernetes Roles and Personas
-- Operator - The Kubernetes cluster administrator role is required when working with the UCD relay operator.  This role is required to add a new CustomResourceDefinition (CRD) named ucdrelays.urbancode.ibm.com to the cluster.  Once the CRD has been added to the cluster, an instance of the operator can be installed into a namespace by a user with the namespace administrator role.  After the UCD relay operator is running, users can create UcdRelay resources.
-- Helm Chart - Users with the namespace administrator role can install the UCD relay using the helm chart.
+- Operator - The Kubernetes cluster administrator role is required when working with the DevOps Deploy relay operator.  This role is required to add a new CustomResourceDefinition (CRD) named ucdrelays.urbancode.ibm.com to the cluster.  Once the CRD has been added to the cluster, an instance of the operator can be installed into a namespace by a user with the namespace administrator role.  After the DevOps Deploy relay operator is running, users can create UcdRelay resources.
+- Helm Chart - Users with the namespace administrator role can install the DevOps Deploy relay using the helm chart.
 
 ## Prerequisites
 
@@ -25,18 +25,18 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
     * [x86_64](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz)
   * [Install and setup the Helm 3 CLI](https://helm.sh/docs/intro/install/).
 
-2. Accessing the container Image - The UrbanCode Deploy agent relay image is accessed via the IBM Entitled Registry.
+2. Accessing the container Image - The DevOps Deploy agent relay image is accessed via the IBM Entitled Registry.
 
     * Log in to [MyIBM Container Software Library](https://myibm.ibm.com/products-services/containerlibrary) with the IBMid and password that are associated with the entitled software.
     * In the Entitlement keys section, select Copy key to copy the entitlement key to the clipboard.
-    * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  If the secret is named ibm-entitlement-key it will be used as the default pull secret, no value needs to be specified in the image.secret field.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdRelay custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install UrbanCode Deploy agent relay into.  Following is an example command to create an imagePullSecret named 'ibm-entitlement-key'.
+    * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  If the secret is named ibm-entitlement-key it will be used as the default pull secret, no value needs to be specified in the image.secret field.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdRelay custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install DevOps Deploy agent relay into.  Following is an example command to create an imagePullSecret named 'ibm-entitlement-key'.
 
   ```
   oc create secret docker-registry ibm-entitlement-key --docker-username=cp --docker-password=<EntitlementKey> --docker-server=cp.icr.io
   ```
-3. The UrbanCode agent relay must have a UrbanCode Deploy server to connect to.
+3. The DevOps Deploy agent relay must have a DevOps Deploy server to connect to.
 
-4. Secret - A Kubernetes Secret object must be created to store the UrbanCode Deploy server's Codestation authentication token and the password for all keystores used by the product.  The name of the secret you create must be specified in the property 'secret.name' in your values.yaml if installing via Helm chart or in the UcdRelay custom resource if installing via operator.
+4. Secret - A Kubernetes Secret object must be created to store the DevOps Deploy server's Codestation authentication token and the password for all keystores used by the product.  The name of the secret you create must be specified in the property 'secret.name' in your values.yaml if installing via Helm chart or in the UcdRelay custom resource if installing via operator.
 
 * Through the oc/kubectl CLI, create a Secret object in the target namespace.
 
@@ -46,7 +46,7 @@ oc create secret generic ucd-secrets \
   --from-literal=keystorepassword=MyKeystorePassword
 ```
 
-5. A PersistentVolume that will hold the conf directory for the UrbanCode Deploy relay is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.
+5. A PersistentVolume that will hold the conf directory for the DevOps Deploy relay is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.
 
 ```
 apiVersion: v1
@@ -79,15 +79,15 @@ spec:
     matchLabels:
       volume: ucdr-conf-vol
 ```
-* The following storage options have been tested with IBM UrbanCode Deploy
+* The following storage options have been tested with IBM DevOps Deploy
 
   * IBM Block Storage supports the ReadWriteOnce access mode.  ReadWriteMany is not supported.
 
-  * IBM File Storage supports ReadWriteMany which is required for multiple instances of the UrbanCode Deploy agent.
+  * IBM File Storage supports ReadWriteMany which is required for multiple instances of the DevOps Deploy agent.
 
-* IBM UrbanCode Deploy requires non-root access to persistent storage. When using IBM File Storage you need to either use the IBM provided “gid” File storage class with default group ID 65531 or create your own customized storage class to specify a different group ID. Please follow the instructions at https://cloud.ibm.com/docs/containers?topic=containers-cs_troubleshoot_storage#cs_storage_nonroot for more details.
+* IBM DevOps Deploy requires non-root access to persistent storage. When using IBM File Storage you need to either use one of the IBM provided “gid” file storage classes (ie. ibmc-file-gold-gid) with default group ID 65531 or create your own customized storage class to specify a different group ID. See the information at https://cloud.ibm.com/docs/containers?topic=containers-cs_storage_nonroot for more details.  Once you know the correct group ID, set the persistence.fsGroup property in the values.yaml (or UcdRelay custom resource) to that group ID.
 
-6.  If a route or ingress is used to access the WSS port of the UrbanCode Deploy server from an UrbanCode Deploy relay, then port 443 should be specified along with the configured URL to access the proper service port defined for the UrbanCode Deploy Server.
+6.  If a route or ingress is used to access the WSS port of the DevOps Deploy server from an DevOps Deploy relay, then port 443 should be specified along with the configured URL to access the proper service port defined for the DevOps Deploy Server.
 
 
 ### PodSecurityPolicy Requirements
@@ -196,13 +196,13 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
 
 ## Client Data Storage Locations
 
-All client data is stored in the conf persistent volume.  UrbanCode Deploy does not do any active encryption of this data location.  This location should be included in whatever backup plans the user chooses to implement.
+All client data is stored in the conf persistent volume.  DevOps Deploy does not do any active encryption of this data location.  This location should be included in whatever backup plans the user chooses to implement.
 
 # Mirroring images
 
-If your OpenShift cluster is unable to directly access the internet, you will need to mirror the UrbanCode Deploy images from the IBM Entitled Registry into a private container registry.  See instructions from [Mirroring images to a private container registry](#mirroring-images-to-a-private-container-registry)
+If your OpenShift cluster is unable to directly access the internet, you will need to mirror the DevOps Deploy images from the IBM Entitled Registry into a private container registry.  See instructions from [Mirroring images to a private container registry](#mirroring-images-to-a-private-container-registry)
 
-# Installing UrbanCode Deploy relay operator
+# Installing DevOps Deploy relay operator
 
 This operator can be installed in an on-line or air-gapped cluster through either of the following install paths :
 1. Operator Lifecycle Manager (default)
@@ -213,7 +213,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucdr-case --version 1.4.12
+oc ibm-pak get ibm-ucdr-case --version @caseversion@
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -226,7 +226,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-catalog
@@ -236,7 +236,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator
@@ -244,13 +244,13 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ## To install UcdRelay operand
 
-1. Once the operator is added to your cluster's OperatorHub and installed, you can create an instance of the UrbanCode Deploy relay via the Operators->Installed Operators page in the OpenShift web console.  Click on the UrbanCode Deploy relay tile in the list of installed operators.  Select the UcdRelay CR tab and click Create UcdRelay.  Fill in the form fields to provide the required information and click Create.
+1. Once the operator is added to your cluster's OperatorHub and installed, you can create an instance of the DevOps Deploy relay via the Operators->Installed Operators page in the OpenShift web console.  Click on the DevOps Deploy relay tile in the list of installed operators.  Select the UcdRelay CR tab and click Create UcdRelay.  Fill in the form fields to provide the required information and click Create.
 
-2. Alternatively, if you already have a UcdRelay resource yaml file, you can create an instance of the UrbanCode Deploy relay using the 'oc ibm-pak' CLI.
+2. Alternatively, if you already have a UcdRelay resource yaml file, you can create an instance of the DevOps Deploy relay using the 'oc ibm-pak' CLI.
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -260,7 +260,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ## To upgrade UcdRelay operand
 
-1. You can upgrade an instance of the UrbanCode Deploy relay via the Operators->Installed Operators page in the OpenShift web console.  Click on the UrbanCode Deploy relay tile in the list of installed operators.  Select the UcdRelay CR tab and click on the UcdRelay instance you want to upgrade.  Select the YAML tab for the UcdRelay instance, change the spec.version field to the UCD version you want to upgrade to, then click Save.  The UcdRelay operator will notice the change to the Custom Resource and begin the upgrade process.
+1. You can upgrade an instance of the DevOps Deploy relay via the Operators->Installed Operators page in the OpenShift web console.  Click on the DevOps Deploy relay tile in the list of installed operators.  Select the UcdRelay CR tab and click on the UcdRelay instance you want to upgrade.  Select the YAML tab for the UcdRelay instance, change the spec.version field to the DevOps Deploy version you want to upgrade to, then click Save.  The UcdRelay operator will notice the change to the Custom Resource and begin the upgrade process.
 
 ## To uninstall operator using OpenShift Operator Catalog
 
@@ -268,7 +268,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator
@@ -278,7 +278,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-catalog
@@ -294,7 +294,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator-native                   \
@@ -305,7 +305,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator-native
@@ -315,7 +315,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action install-helm-chart                        \
@@ -326,7 +326,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action uninstall-helm-chart                      \
@@ -335,11 +335,11 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 # Disaster Recovery
 
-See the sections [Backup Kubernetes Resources](#Backup-Kubernetes-Resources), [Backup Product Data](#Backup-Product-Data) and [Recover from a Disaster](#Recover-from-a-disaster) to learn how you can recover your UCD relay instance after a disaster.
+See the sections [Backup Kubernetes Resources](#Backup-Kubernetes-Resources), [Backup Product Data](#Backup-Product-Data) and [Recover from a Disaster](#Recover-from-a-disaster) to learn how you can recover your DevOps Deploy relay instance after a disaster.
 
 ## Backup Kubernetes Resources
 
-Backup the Kubernetes resoures required to redeploy the UCD relay after a disaster.  Follow these steps to save the configuration of essential Kubernetes resources.
+Backup the Kubernetes resoures required to redeploy the DevOps Deploy relay after a disaster.  Follow these steps to save the configuration of essential Kubernetes resources.
 
 1. Save UcdRelay Custom Resource
 
@@ -355,7 +355,7 @@ oc get UcdRelay/<cr_name> --namespace <ucd_namespace> -o yaml > <cr_name>-cr.yam
 
    * Edit the local copy of the UcdRelay Custom Resource and remove all .metadata fields other than labels and name, and remove all .status fields.
 
-2. Save secret containing UCD relay keystore passwords
+2. Save secret containing DevOps Deploy relay keystore passwords
 
    a. Find the value for the secret.name property in the saved UcdRelay Custom Resource file above.  This is the name of the secret we want to save a local copy of.  Run the following command, replacing **ucdsecrets_name** with the value from the secret.name property.
 ```bash
@@ -371,21 +371,21 @@ oc get secret <ibm-entitlement-key> -n <ucd_namespace> -o yaml > <ibm-entitlemen
 
 ## Backup Product Data
 
-Backup the conf directory used by the UCD relay.  To ensure the most accurate saving of data, no deployments should be active.  Follow these steps to take a backup of the relay.
+Backup the conf directory used by the DevOps Deploy relay.  To ensure the most accurate saving of data, no deployments should be active.  Follow these steps to take a backup of the relay.
 
-1. Scale the statefulset resource to 0 to shutdown the UCD relay.
+1. Scale the statefulset resource to 0 to shutdown the DevOps Deploy relay.
 
 2. Backup the conf Persistent Volume.
 
-3. Scale the statefulset resource to 1 to restart the UCD relay.
+3. Scale the statefulset resource to 1 to restart the DevOps Deploy relay.
 
 ## Recover from a disaster
 
-If you have successfully backed up the resources and data as described in [Backup Kubernetes Resources](#backup-kubernetes-resources) and [Backup Product Data](#backup-product-data) you can recreate an instance of UCD relay using that data.  Follow these steps to recreate your UCD relay instance.
+If you have successfully backed up the resources and data as described in [Backup Kubernetes Resources](#backup-kubernetes-resources) and [Backup Product Data](#backup-product-data) you can recreate an instance of DevOps Deploy relay using that data.  Follow these steps to recreate your DevOps Deploy relay instance.
 
-1. Create a new project/namespace to hold the Kubernetes resources associated with the UCD relay instance.
+1. Create a new project/namespace to hold the Kubernetes resources associated with the DevOps Deploy relay instance.
 
-2. Create the Kubernetes secret that contains the UCD relay keystore password by running the following command.
+2. Create the Kubernetes secret that contains the DevOps Deploy relay keystore password by running the following command.
 ```bash
 oc apply -n <ucd_namespace> -f <ucdsecrets_name>.yaml
 ```
@@ -397,14 +397,14 @@ oc apply -n <ucd_namespace> -f <ibm-entitlement-key>.yaml
 
 7. Create a UcdRelay Custom Resource yaml file that contains the properties and values from your savedUcdRelay-cr.yaml file.  Be sure that the confVolume.existingClaimName field is set to the Persistent Volume Claims for the new conf Persistent Volumes.
 
-8. If the UCD Relay operator is not already installed in the OCP cluster, install it as described in [Installing UrbanCode Deploy relay operator](#Installing-UrbanCode-Deploy-relay-operator).
+8. If the DevOps Deploy Relay operator is not already installed in the OCP cluster, install it as described in [Installing DevOps Deploy relay operator](#Installing-DevOps-Deploy-relay-operator).
 
-9. To create the restored UCD relay instance, see [To install UcdRelay operand](#To-install-UcdRelay-operand).
+9. To create the restored DevOps Deploy relay instance, see [To install UcdRelay operand](#To-install-UcdRelay-operand).
 
 
 ## Mirroring images to a private container registry
 
-If your cluster is not connected to the internet, you can install the UrbanCode Deploy relay in your cluster via connected or disconnected mirroring.
+If your cluster is not connected to the internet, you can install the DevOps Deploy relay in your cluster via connected or disconnected mirroring.
 
 If you have a host that can access both the internet and your mirror registry, but not your cluster nodes, you can directly mirror the content from that machine. This process is referred to as **connected mirroring**. If you have no such host, you must mirror the images to a file system and then bring that host or removable media into your restricted environment. This process is referred to as **disconnected mirroring**.
 
@@ -427,7 +427,7 @@ Regardless of whether you plan to mirror the images with a bastion host or to th
 - An OpenShift cluster must be installed.
 
 - Access to the following sites and ports:
-  - `icr.io:443` for IBM Cloud Container Registry, CASE OCI artifact, and UrbanCode Deploy catalog source
+  - `icr.io:443` for IBM Cloud Container Registry, CASE OCI artifact, and DevOps Deploy catalog source
 
 **Tip:** With `ibm-pak` plug-in version 1.2.0, you can eliminate the port for `github.com` to retrieve CASES and tooling by configuring the plug-in to download CASEs as OCI artifacts from IBM Cloud Container Registry (ICCR): `oc ibm-pak config repo 'IBM Cloud-Pak OCI registry' -r oci:cp.icr.io/cpopen --enable`
 
@@ -435,7 +435,7 @@ Regardless of whether you plan to mirror the images with a bastion host or to th
 
 If you are in an air-gapped environment, you must be able to connect a host to the internet and mirror registry for connected mirroring or mirror images to file system which can be brought to a restricted environment for disconnected mirroring. For information on the latest supported operating systems, see [ibm-pak plugin install documentation](https://github.com/IBM/ibm-pak-plugin#overview).
 
-The following table explains the software requirements for mirroring the UrbanCode Deploy relay images:
+The following table explains the software requirements for mirroring the DevOps Deploy relay images:
 
 |Software|Purpose|
 |---|---|
@@ -532,7 +532,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucdr-case
-   export CASE_VERSION=1.4.12
+   export CASE_VERSION=@caseversion@
    ```
 
 2. Connect your host to the intranet.
@@ -557,7 +557,7 @@ Before mirroring your images, you can set the environment variables on your mirr
    oc ibm-pak config color --enable true
    ```
 
-6. Download the image inventory for your UrbanCode Deploy relay to your host.
+6. Download the image inventory for your DevOps Deploy relay to your host.
 
    **Tip:** If you do not specify the CASE version, it will download the latest CASE.
 
@@ -584,12 +584,12 @@ Your host is now configured and you are ready to mirror your images.
 * You can also edit this file defining the CASEs with pinned down versions which should include your product. The following is an example file, `my-csc.yaml`:
 
    ```
-   name: "UrbanCode Deploy"                         # <required> defines the name for the "product"; this is NOT a CASE name, but follows IBM CASE name rules. For more information, see https://ibm.biz/case-yaml
+   name: "DevOps Deploy"                         # <required> defines the name for the "product"; this is NOT a CASE name, but follows IBM CASE name rules. For more information, see https://ibm.biz/case-yaml
    version: "7.3.1"                                # <required> defines a version for the "product"
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.12
+    version: @caseversion@
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -603,7 +603,7 @@ Complete the following steps to mirror your images from your host to your privat
 - [2. Authenticating the registry](#2.-authenticating-the-registry)
 - [3. Mirror images to final location](#3.-mirror-images-to-final-location)
 - [4. Configure the cluster](#4.-configure-the-cluster)
-- [5. Install UrbanCode Deploy by way of OpenShift](#5.-install-urbancode-deploy-relay-by-way-of-openshift)
+- [5. Install DevOps Deploy by way of OpenShift](#5.-install-devops-deploy-relay-by-way-of-openshift)
 
 #### 1. Generate mirror manifests
 
@@ -943,13 +943,13 @@ The documented steps in the link enable your cluster to have proper authenticati
 
    After the `ImageContentsourcePolicy` and global image pull secret are applied, the configuration of your nodes will be updated sequentially. Wait until all `MachineConfigPools` are updated.
 
-### 5. Install UrbanCode Deploy relay by way of OpenShift
+### 5. Install DevOps Deploy relay by way of OpenShift
 
-Now that your images are mirrored to your air-gapped environment, you can deploy your UrbanCode Deploy relay to that environment. See the instructions at [Install UrbanCode Deploy relay](#installing-urbancode-deploy-relay-operator).
+Now that your images are mirrored to your air-gapped environment, you can deploy your DevOps Deploy relay to that environment. See the instructions at [Install DevOps Deploy relay](#installing-devops-deploy-relay-operator).
 
 ### Setting up a repeatable mirroring process
 
-Once you complete a `CASE` save, you can mirror the `CASE` as many times as you want to. This approach allows you to mirror a specific version of the UrbanCode Deploy relay into development, test, and production stages using a private container registry.
+Once you complete a `CASE` save, you can mirror the `CASE` as many times as you want to. This approach allows you to mirror a specific version of the DevOps Deploy relay into development, test, and production stages using a private container registry.
 
 Follow the steps in this section if you want to save the `CASE` to multiple registries (per environment) once and be able to run the `CASE` in the future without repeating the `CASE` save process.
 
@@ -995,29 +995,29 @@ The Helm chart and operator custom resource have the following values.
 
 | Qualifier | Parameter  | Definition | Allowed Value |
 |---|---|---|---|
-| version |  | UrbanCode Deploy relay product vesion |  |
-| replicas | relay | Number of UCD relay replicas | Non-zero number of replicas.  Defaults to 1 |
+| version |  | DevOps Deploy relay product vesion |  |
+| replicas | relay | Number of DevOps Deploy relay replicas | Non-zero number of replicas.  Defaults to 1 |
 | image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to Always |
 |       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
 | license | accept | Set to true to indicate you have read and agree to license agreements : http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(urbancode+deploy) | false |
 | service | type | Specify type of service | Valid options are ClusterIP, NodePort and LoadBalancer (for clusters that support LoadBalancer). Default is ClusterIP |
-| persistence | enabled | Determines if persistent storage will be used to hold the UCD server appdata directory contents. This should always be true to preserve server data on container restarts. | Default value "true" |
+| persistence | enabled | Determines if persistent storage will be used to hold the DevOps Deploy server appdata directory contents. This should always be true to preserve server data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "false" |
 |             | fsGroup | The group ID to use to access persistent volumes | Default value "1001" |
-| confVolume | name | The base name used when the Persistent Volume and/or Persistent Volume Claim for the UCD relay conf directory is created by the chart. | Default value is "conf" |
-|            | existingClaimName | The name of an existing Persistent Volume Claim that references the Persistent Volume that will be used to hold the UCD relay conf directory. |  |
+| confVolume | name | The base name used when the Persistent Volume and/or Persistent Volume Claim for the DevOps Deploy relay conf directory is created by the chart. | Default value is "conf" |
+|            | existingClaimName | The name of an existing Persistent Volume Claim that references the Persistent Volume that will be used to hold the DevOps Deploy relay conf directory. |  |
 |            | storageClassName | The name of the storage class to use when persistence.useDynamicProvisioning is set to "true". |  |
-|            | size | Size of the volume to hold the UCD relay conf directory |  |
+|            | size | Size of the volume to hold the DevOps Deploy relay conf directory |  |
 |              | accessMode | Persistent storage access mode for the ext-lib persistent volume. | ReadWriteOnce |
-| serverHostPort |  | UCD server hostname and WSS port in the form hostname:port. If specifying failover info, separate multiple hostname:port with a comma. For example, ucd1.example.com:7919,ucd2.example.com:7919) |  |
-| secret | name | Kubernetes secret which defines required UCD passwords. | You may leave this blank to use default name of HelmReleaseName-secrets where HelmReleaseName is the name of your Helm Release, otherwise specify the secret name here. |
+| serverHostPort |  | DevOps Deploy server hostname and WSS port in the form hostname:port. If specifying failover info, separate multiple hostname:port with a comma. For example, ucd1.example.com:7919,ucd2.example.com:7919) |  |
+| secret | name | Kubernetes secret which defines required DevOps Deploy passwords. | You may leave this blank to use default name of HelmReleaseName-secrets where HelmReleaseName is the name of your Helm Release, otherwise specify the secret name here. |
 | codeStationReplication | enabled | Specify true to enable artifact caching on the relay. | false |
 |                        | persisted | Specify true to persist the artifact cache when the relay container is restarted. | true |
 |                        | serverUrl | The full URL of the central server to connect to, such as https://myserver.example.com:8443. |  |
 |                        | maxCacheSize | The size to which to limit the artifact cache, such as 500M for 500 MB or 5G for 5 GB. To not put a limit on the cache, specify none. |  |
 |                        | geotags | If you choose to cache files on the relay, you can specify one or more component version statuses here, separated by semicolons. The agent relay automatically caches component versions with any of these statuses so that those versions are ready when they are needed for a deployment. A status can contain a space except in the first or last position. A status can contain commas. The special * status replicates all artifacts, but use this status with caution, because it can make the agent relay store a large amount of data. If no value is specified, no component versions are cached automatically. |  |
-| ingress | httpproxyhost | Host name used to access the UCD relay http proxy port. Leave blank on OpenShift to create default route. |  |
-|               | codestationhost | Host name used to access the UCD relay codestation port. Leave blank on OpenShift to create default route. |  |
+| ingress | httpproxyhost | Host name used to access the DevOps Deploy relay http proxy port. Leave blank on OpenShift to create default route. |  |
+|               | codestationhost | Host name used to access the DevOps Deploy relay codestation port. Leave blank on OpenShift to create default route. |  |
 | resources | constraints.enabled | Specifies whether the resource constraints specified in this helm chart are enabled.   | false (default) or true  |
 |           | limits.cpu  | Describes the maximum amount of CPU allowed | Default is 4000m. See Kubernetes - [meaning of CPU](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-cpu)  |
 |           | limits.memory | Describes the maximum amount of memory allowed | Default is 4Gi. See Kubernetes - [meaning of Memory](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-memory) |
