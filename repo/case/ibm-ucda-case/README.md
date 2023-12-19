@@ -1,20 +1,20 @@
-# UrbanCode Deploy Agent - Case Bundle
+# DevOps Deploy Agent - Case Bundle
 
 ## Introduction
-[UrbanCode Deploy Agent](https://www.ibm.com/cloud/urbancode/deploy) is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production.
+[DevOps Deploy Agent](https://www.ibm.com/cloud/urbancode/deploy) is a tool for automating application deployments through your environments. It is designed to facilitate rapid feedback and continuous delivery in agile development while providing the audit trails, versioning and approvals needed in production.
 
 ## Details
 This CASE contains two inventory items:
-- A helm chart that deploys a single instance of IBM UrbanCode Deploy agent that may be scaled to multiple instances.
-- An operator that deploys a single instance of IBM UrbanCode Deploy agent that may be scaled to multiple instances.
+- A helm chart that deploys a single instance of IBM DevOps Deploy agent that may be scaled to multiple instances.
+- An operator that deploys a single instance of IBM DevOps Deploy agent that may be scaled to multiple instances.
 
 Support has been validated on OpenShift clusters running onPrem, in IBM Satellite, and IBM ROKS.
 
-The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM UrbanCode Deploy agent.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the agent.
+The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) are both supported for use with IBM DevOps Deploy agent.  However, ReadWriteMany is required to successfully scale to more than one replica/instance of the agent.
 
 ## Kubernetes Roles and Personas
-- Operator - The Kubernetes cluster administrator role is required when working with the UCD agent operator.  This role is required to add a new CustomResourceDefinition (CRD) named ucdagents.urbancode.ibm.com to the cluster.  Once the CRD has been added to the cluster, an instance of the operator can be installed into a namespace by a user with the namespace administrator role.  After the UCD agent operator is running, users can create UcdAgent resources.
-- Helm Chart - Users with the namespace administrator role can install the UCD agent using the helm chart.
+- Operator - The Kubernetes cluster administrator role is required when working with the DevOps Deploy agent operator.  This role is required to add a new CustomResourceDefinition (CRD) named ucdagents.urbancode.ibm.com to the cluster.  Once the CRD has been added to the cluster, an instance of the operator can be installed into a namespace by a user with the namespace administrator role.  After the DevOps Deploy agent operator is running, users can create UcdAgent resources.
+- Helm Chart - Users with the namespace administrator role can install the DevOps Deploy agent using the helm chart.
 
 ## Prerequisites
 1. Kubernetes 1.19.0+; kubectl and oc CLI; Helm 3;
@@ -24,17 +24,17 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
     * [x86_64](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz)
   * [Install and setup the Helm 3 CLI](https://helm.sh/docs/intro/install/).
 
-2. Accessing the container Image - The UrbanCode Deploy agent image is accessed via the IBM Entitled Registry.
+2. Accessing the container Image - The DevOps Deploy agent image is accessed via the IBM Entitled Registry.
 
     * Log in to [MyIBM Container Software Library](https://myibm.ibm.com/products-services/containerlibrary) with the IBMid and password that are associated with the entitled software.
     * In the Entitlement keys section, select Copy key to copy the entitlement key to the clipboard.
-    * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  If the secret is named ibm-entitlement-key it will be used as the default pull secret, no value needs to be specified in the image.secret field.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdAgent custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install UrbanCode Deploy agent into.  Following is an example command to create an imagePullSecret named 'ibm-entitlement-key'.
+    * An imagePullSecret must be created to be able to authenticate and pull images from the Entitled Registry.  If the secret is named ibm-entitlement-key it will be used as the default pull secret, no value needs to be specified in the image.secret field.  Once this secret has been created you will specify the secret name as the value for the image.secret parameter in the values.yaml you provide to 'helm install ...', or the UcdAgent custom resource when installing via the operator.  Note that secrets are namespace scoped, so they must be created in every namespace you plan to install DevOps Deploy agent into.  Following is an example command to create an imagePullSecret named 'ibm-entitlement-key'.
 
   ```
   oc create secret docker-registry ibm-entitlement-key --docker-username=cp --docker-password=<EntitlementKey> --docker-server=cp.icr.io
   ```
 
-3. The agent must have an UrbanCode Deploy server or relay to connect to.
+3. The agent must have an DevOps Deploy server or relay to connect to.
 
 4. Secret - A Kubernetes Secret object must be created to store the password for all keystores used by the product.  The name of the secret you create must be specified in the property 'secret.name' in your values.yaml if installing via Helm chart or in the UcdAgent custom resource if installing via operator.
 
@@ -45,7 +45,7 @@ oc create secret generic ucd-secrets \
   --from-literal=keystorepassword=MyKeystorePassword
 ```
 
-5. A PersistentVolume that will hold the conf directory for the UrbanCode Deploy agent is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.
+5. A PersistentVolume that will hold the conf directory for the DevOps Deploy agent is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.
 
 ```
 apiVersion: v1
@@ -78,15 +78,15 @@ spec:
     matchLabels:
       volume: ucda-conf-vol
 ```
-* The following storage options have been tested with IBM UrbanCode Deploy
+* The following storage options have been tested with IBM DevOps Deploy
 
   * IBM Block Storage supports the ReadWriteOnce access mode.  ReadWriteMany is not supported.
 
-  * IBM File Storage supports ReadWriteMany which is required for multiple instances of the UrbanCode Deploy agent.
+  * IBM File Storage supports ReadWriteMany which is required for multiple instances of the DevOps Deploy agent.
 
-* IBM UrbanCode Deploy requires non-root access to persistent storage. When using IBM File Storage you need to either use the IBM provided “gid” File storage class with default group ID 65531 or create your own customized storage class to specify a different group ID. Please follow the instructions at https://cloud.ibm.com/docs/containers?topic=containers-cs_troubleshoot_storage#cs_storage_nonroot for more details.
+* IBM DevOps Deploy requires non-root access to persistent storage. When using IBM File Storage you need to either use one of the IBM provided “gid” file storage classes (ie. ibmc-file-gold-gid) with default group ID 65531 or create your own customized storage class to specify a different group ID. See the information at https://cloud.ibm.com/docs/containers?topic=containers-cs_storage_nonroot for more details.  Once you know the correct group ID, set the persistence.fsGroup property in the values.yaml (or UcdAgent custom resource) to that group ID.
 
-6.  If a route or ingress is used to access the WSS port of the UrbanCode Deploy server from an UrbanCode Deploy agent, then port 443 should be specified along with the configured URL to access the proper service port defined for the UrbanCode Deploy Server.
+6.  If a route or ingress is used to access the WSS port of the DevOps Deploy server from an DevOps Deploy agent, then port 443 should be specified along with the configured URL to access the proper service port defined for the DevOps Deploy Server.
 
 ### PodSecurityPolicy Requirements
 
@@ -195,13 +195,13 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
 
 ## Client Data Storage Locations
 
-All client data is stored in the conf persistent volume.  UrbanCode Deploy does not do any active encryption of this data location.  This location should be included in whatever backup plans the user chooses to implement.
+All client data is stored in the conf persistent volume.  DevOps Deploy does not do any active encryption of this data location.  This location should be included in whatever backup plans the user chooses to implement.
 
 # Mirroring images
 
-If your OpenShift cluster is unable to directly access the internet, you will need to mirror the UrbanCode Deploy images from the IBM Entitled Registry into a private container registry.  See instructions from [Mirroring images to a private container registry](#mirroring-images-to-a-private-container-registry)
+If your OpenShift cluster is unable to directly access the internet, you will need to mirror the DevOps Deploy images from the IBM Entitled Registry into a private container registry.  See instructions from [Mirroring images to a private container registry](#mirroring-images-to-a-private-container-registry)
 
-# Installing UrbanCode Deploy agent operator
+# Installing DevOps Deploy agent operator
 
 This operator can be installed in an on-line or air-gapped cluster through either of the following install paths :
 1. Operator Lifecycle Manager (default)
@@ -212,7 +212,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucda-case --version 1.4.12
+oc ibm-pak get ibm-ucda-case --version @caseversion@
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -225,7 +225,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case        \
-    --version 1.4.12           \
+    --version @caseversion@           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-catalog
@@ -235,7 +235,7 @@ oc ibm-pak launch ibm-ucda-case        \
 
 ```
 oc ibm-pak launch ibm-ucda-case       \
-    --version 1.4.12           \
+    --version @caseversion@           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-operator
@@ -243,13 +243,13 @@ oc ibm-pak launch ibm-ucda-case       \
 
 ## To install UcdAgent operand
 
-1. Once the operator is added to your cluster's OperatorHub and installed, you can create an instance of the UrbanCode Deploy agent via the Operators->Installed Operators page in the OpenShift web console.  Click on the UrbanCode Deploy agent tile in the list of installed operators.  Select the UcdAgent CR tab and click Create UcdAgent.  Fill in the form fields to provide the required information and click Create.
+1. Once the operator is added to your cluster's OperatorHub and installed, you can create an instance of the DevOps Deploy agent via the Operators->Installed Operators page in the OpenShift web console.  Click on the DevOps Deploy agent tile in the list of installed operators.  Select the UcdAgent CR tab and click Create UcdAgent.  Fill in the form fields to provide the required information and click Create.
 
-2. Alternatively, if you already have a UcdAgent resource yaml file, you can create an instance of the UrbanCode Deploy agent using the 'oc ibm-pak' CLI.
+2. Alternatively, if you already have a UcdAgent resource yaml file, you can create an instance of the DevOps Deploy agent using the 'oc ibm-pak' CLI.
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperator                           \
     --action apply_custom_resources                    \
@@ -259,14 +259,14 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ## To upgrade UcdAgent operand
 
-1. You can upgrade an instance of the UrbanCode Deploy agent via the Operators->Installed Operators page in the OpenShift web console.  Click on the UrbanCode Deploy agent tile in the list of installed operators.  Select the UcdAgent CR tab and click on the UcdAgent instance you want to upgrade.  Select the YAML tab for the UcdAgent instance, change the spec.version field to the UCD version you want to upgrade to, then click Save.  The UcdAgent operator will notice the change to the Custom Resource and begin the upgrade process.
+1. You can upgrade an instance of the DevOps Deploy agent via the Operators->Installed Operators page in the OpenShift web console.  Click on the DevOps Deploy agent tile in the list of installed operators.  Select the UcdAgent CR tab and click on the UcdAgent instance you want to upgrade.  Select the YAML tab for the UcdAgent instance, change the spec.version field to the DevOps Deploy version you want to upgrade to, then click Save.  The UcdAgent operator will notice the change to the Custom Resource and begin the upgrade process.
 
 ## To uninstall operator using OpenShift Operator Catalog
 1. Uninstall the operator via OLM
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -276,7 +276,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog
@@ -291,7 +291,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -302,7 +302,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native
@@ -312,7 +312,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -323,7 +323,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.12                            \
+    --version @caseversion@                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -332,11 +332,11 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 # Disaster Recovery
 
-See the sections [Backup Kubernetes Resources](#Backup-Kubernetes-Resources), [Backup Product Data](#Backup-Product-Data) and [Recover from a Disaster](#Recover-from-a-disaster) to learn how you can recover your UCD agent instance after a disaster.
+See the sections [Backup Kubernetes Resources](#Backup-Kubernetes-Resources), [Backup Product Data](#Backup-Product-Data) and [Recover from a Disaster](#Recover-from-a-disaster) to learn how you can recover your DevOps Deploy agent instance after a disaster.
 
 ## Backup Kubernetes Resources
 
-Backup the Kubernetes resoures required to redeploy the UCD agent after a disaster.  Follow these steps to save the configuration of essential Kubernetes resources.
+Backup the Kubernetes resoures required to redeploy the DevOps Deploy agent after a disaster.  Follow these steps to save the configuration of essential Kubernetes resources.
 
 1. Save UcdAgent Custom Resource
 
@@ -352,7 +352,7 @@ oc get UcdAgent/<cr_name> --namespace <ucd_namespace> -o yaml > <cr_name>-cr.yam
 
    * Edit the local copy of the UcdAgent Custom Resource and remove all .metadata fields other than labels and name, and remove all .status fields.
 
-2. Save secret containing UCD agent keystore passwords
+2. Save secret containing DevOps Deploy agent keystore passwords
 
    a. Find the value for the secret.name property in the saved UcdAgent Custom Resource file above.  This is the name of the secret we want to save a local copy of.  Run the following command, replacing **ucdsecrets_name** with the value from the secret.name property.
 ```bash
@@ -368,21 +368,21 @@ oc get secret <ibm-entitlement-key> -n <ucd_namespace> -o yaml > <ibm-entitlemen
 
 ## Backup Product Data
 
-Backup the conf directory used by the UCD agent.  To ensure the most accurate saving of data, no deployments should be active.  Follow these steps to take a backup of the agent.
+Backup the conf directory used by the DevOps Deploy agent.  To ensure the most accurate saving of data, no deployments should be active.  Follow these steps to take a backup of the agent.
 
-1. Scale the statefulset resource to 0 to shutdown the UCD agent.
+1. Scale the statefulset resource to 0 to shutdown the DevOps Deploy agent.
 
 2. Backup the conf Persistent Volume.
 
-3. Scale the statefulset resource to 1 to restart the UCD agent.
+3. Scale the statefulset resource to 1 to restart the DevOps Deploy agent.
 
 ## Recover from a disaster
 
-If you have successfully backed up the resources and data as described in [Backup Kubernetes Resources](#backup-kubernetes-resources) and [Backup Product Data](#backup-product-data) you can recreate an instance of UCD agent using that data.  Follow these steps to recreate your UCD agent instance.
+If you have successfully backed up the resources and data as described in [Backup Kubernetes Resources](#backup-kubernetes-resources) and [Backup Product Data](#backup-product-data) you can recreate an instance of DevOps Deploy agent using that data.  Follow these steps to recreate your DevOps Deploy agent instance.
 
-1. Create a new project/namespace to hold the Kubernetes resources associated with the UCD agent instance.
+1. Create a new project/namespace to hold the Kubernetes resources associated with the DevOps Deploy agent instance.
 
-2. Create the Kubernetes secret that contains the UCD agent keystore password by running the following command.
+2. Create the Kubernetes secret that contains the DevOps Deploy agent keystore password by running the following command.
 ```bash
 oc apply -n <ucd_namespace> -f <ucdsecrets_name>.yaml
 ```
@@ -394,14 +394,14 @@ oc apply -n <ucd_namespace> -f <ibm-entitlement-key>.yaml
 
 7. Create a UcdAgent Custom Resource yaml file that contains the properties and values from your savedUcdAgent-cr.yaml file.  Be sure that the confVolume.existingClaimName field is set to the Persistent Volume Claims for the new conf Persistent Volumes.
 
-8. If the UCD Agent operator is not already installed in the OCP cluster, install it as described in [Installing UrbanCode Deploy agent operator](#Installing-UrbanCode-Deploy-agent-operator).
+8. If the DevOps Deploy Agent operator is not already installed in the OCP cluster, install it as described in [Installing DevOps Deploy agent operator](#Installing-DevOps-Deploy-agent-operator).
 
-9. To create the restored UCD agent instance, see [To install UcdAgent operand](#To-install-UcdAgent-operand).
+9. To create the restored DevOps Deploy agent instance, see [To install UcdAgent operand](#To-install-UcdAgent-operand).
 
 
 ## Mirroring images to a private container registry
 
-If your cluster is not connected to the internet, you can install the UrbanCode Deploy agent in your cluster via connected or disconnected mirroring.
+If your cluster is not connected to the internet, you can install the DevOps Deploy agent in your cluster via connected or disconnected mirroring.
 
 If you have a host that can access both the internet and your mirror registry, but not your cluster nodes, you can directly mirror the content from that machine. This process is referred to as **connected mirroring**. If you have no such host, you must mirror the images to a file system and then bring that host or removable media into your restricted environment. This process is referred to as **disconnected mirroring**.
 
@@ -424,7 +424,7 @@ Regardless of whether you plan to mirror the images with a bastion host or to th
 - An OpenShift cluster must be installed.
 
 - Access to the following sites and ports:
-  - `icr.io:443` for IBM Cloud Container Registry, CASE OCI artifact, and UrbanCode Deploy catalog source
+  - `icr.io:443` for IBM Cloud Container Registry, CASE OCI artifact, and DevOps Deploy catalog source
 
 **Tip:** With `ibm-pak` plug-in version 1.2.0, you can eliminate the port for `github.com` to retrieve CASES and tooling by configuring the plug-in to download CASEs as OCI artifacts from IBM Cloud Container Registry (ICCR): `oc ibm-pak config repo 'IBM Cloud-Pak OCI registry' -r oci:cp.icr.io/cpopen --enable`
 
@@ -432,7 +432,7 @@ Regardless of whether you plan to mirror the images with a bastion host or to th
 
 If you are in an air-gapped environment, you must be able to connect a host to the internet and mirror registry for connected mirroring or mirror images to file system which can be brought to a restricted environment for disconnected mirroring. For information on the latest supported operating systems, see [ibm-pak plugin install documentation](https://github.com/IBM/ibm-pak-plugin#overview).
 
-The following table explains the software requirements for mirroring the UrbanCode Deploy agent images:
+The following table explains the software requirements for mirroring the DevOps Deploy agent images:
 
 |Software|Purpose|
 |---|---|
@@ -529,7 +529,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucda-case
-   export CASE_VERSION=1.4.12
+   export CASE_VERSION=@caseversion@
    ```
 
 2. Connect your host to the intranet.
@@ -554,7 +554,7 @@ Before mirroring your images, you can set the environment variables on your mirr
    oc ibm-pak config color --enable true
    ```
 
-6. Download the image inventory for your UrbanCode Deploy agent to your host.
+6. Download the image inventory for your DevOps Deploy agent to your host.
 
    **Tip:** If you do not specify the CASE version, it will download the latest CASE.
 
@@ -581,12 +581,12 @@ Your host is now configured and you are ready to mirror your images.
 * You can also edit this file defining the CASEs with pinned down versions which should include your product. The following is an example file, `my-csc.yaml`:
 
    ```
-   name: "UrbanCode Deploy"                         # <required> defines the name for the "product"; this is NOT a CASE name, but follows IBM CASE name rules. For more information, see https://ibm.biz/case-yaml
+   name: "DevOps Deploy"                         # <required> defines the name for the "product"; this is NOT a CASE name, but follows IBM CASE name rules. For more information, see https://ibm.biz/case-yaml
    version: "7.3.1"                                # <required> defines a version for the "product"
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.12
+    version: @caseversion@
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -600,7 +600,7 @@ Complete the following steps to mirror your images from your host to your privat
 - [2. Authenticating the registry](#2.-authenticating-the-registry)
 - [3. Mirror images to final location](#3.-mirror-images-to-final-location)
 - [4. Configure the cluster](#4.-configure-the-cluster)
-- [5. Install UrbanCode Deploy by way of OpenShift](#5.-install-urbancode-deploy-agent-by-way-of-openshift)
+- [5. Install DevOps Deploy by way of OpenShift](#5.-install-devops-deploy-agent-by-way-of-openshift)
 
 #### 1. Generate mirror manifests
 
@@ -940,13 +940,13 @@ The documented steps in the link enable your cluster to have proper authenticati
 
    After the `ImageContentsourcePolicy` and global image pull secret are applied, the configuration of your nodes will be updated sequentially. Wait until all `MachineConfigPools` are updated.
 
-### 5. Install UrbanCode Deploy agent by way of OpenShift
+### 5. Install DevOps Deploy agent by way of OpenShift
 
-Now that your images are mirrored to your air-gapped environment, you can deploy your UrbanCode Deploy agent to that environment. See the instructions at [Install UrbanCode Deploy agent](#installing-urbancode-deploy-agent-operator).
+Now that your images are mirrored to your air-gapped environment, you can deploy your DevOps Deploy agent to that environment. See the instructions at [Install DevOps Deploy agent](#installing-devops-deploy-agent-operator).
 
 ### Setting up a repeatable mirroring process
 
-Once you complete a `CASE` save, you can mirror the `CASE` as many times as you want to. This approach allows you to mirror a specific version of the UrbanCode Deploy agent into development, test, and production stages using a private container registry.
+Once you complete a `CASE` save, you can mirror the `CASE` as many times as you want to. This approach allows you to mirror a specific version of the DevOps Deploy agent into development, test, and production stages using a private container registry.
 
 Follow the steps in this section if you want to save the `CASE` to multiple registries (per environment) once and be able to run the `CASE` in the future without repeating the `CASE` save process.
 
@@ -992,24 +992,24 @@ The Helm chart and operator custom resource have the following values.
 
 | Qualifier | Parameter  | Definition | Allowed Value |
 |---|---|---|---|
-| version |  | UrbanCode Deploy agent product version |  |
-| replicas | agent | Number of UCD agent replicas | Non-zero number of replicas.  Defaults to 1 |
+| version |  | DevOps Deploy agent product version |  |
+| replicas | agent | Number of DevOps Deploy agent replicas | Non-zero number of replicas.  Defaults to 1 |
 | image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to Always |
 |       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
 | license | accept | Set to true to indicate you have read and agree to license agreements : http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(urbancode+deploy) | false |
-| persistence | enabled | Determines if persistent storage will be used to hold the UCD agent conf directory contents. This should always be true to preserve agent data on container restarts. | Default value "true" |
+| persistence | enabled | Determines if persistent storage will be used to hold the DevOps Deploy agent conf directory contents. This should always be true to preserve agent data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "true" |
 |             | fsGroup | The group ID to use to access persistent volumes | Default value "1001" |
-| confVolume | name | The base name used when the Persistent Volume and/or Persistent Volume Claim for the UCD agent conf directory is created by the chart. | Default value is "conf" |
-|               | existingClaimName | The name of an existing Persistent Volume Claim that references the Persistent Volume that will be used to hold the UCD agent conf directory. |  |
+| confVolume | name | The base name used when the Persistent Volume and/or Persistent Volume Claim for the DevOps Deploy agent conf directory is created by the chart. | Default value is "conf" |
+|               | existingClaimName | The name of an existing Persistent Volume Claim that references the Persistent Volume that will be used to hold the DevOps Deploy agent conf directory. |  |
 |               | storageClassName | The name of the storage class to use when persistence.useDynamicProvisioning is set to "true". |  |
-|               | size | Size of the volume to hold the UCD agent conf directory |  |
+|               | size | Size of the volume to hold the DevOps Deploy agent conf directory |  |
 |              | accessMode | Persistent storage access mode for the conf directory persistent volume. | ReadWriteOnce |
 | relayUri |  | Agent Relay Proxy URI if the agent is connecting to a relay. If multiple relays are specified, separate them with commas. For example, random:(http://relay1:20080,http://relay2:20080) |  |
 | codestationUrl |  | Agent Relay Codestation URL. If multiple relays are specified, separate them with commas. For example, random:(http://relay1:20081,http://relay2:20081) |  |
-| serverUri |  | UCD server URI. If multiple servers are specified, separate them with commas. For example, random:(wss://ucd1.example.com:7919,wss://ucd2.example.com:7919) |  |
+| serverUri |  | DevOps Deploy server URI. If multiple servers are specified, separate them with commas. For example, random:(wss://ucd1.example.com:7919,wss://ucd2.example.com:7919) |  |
 | secret | name | Kubernetes secret which defines password to use when creating keystores. | |
-| agentTeams |  | Teams to add this agent to when it connects to the UCD server.Format is <team>:<type>. Multiple team specifications are separated with a comma. |  |
+| agentTeams |  | Teams to add this agent to when it connects to the DevOps Deploy server.Format is <team>:<type>. Multiple team specifications are separated with a comma. |  |
 | userUtils | existingClaimName | Name of existing Persistent Volume Claim that refers to Persistent Volume that contains executables for the agent process to execute as part of deployment processes. | |
 |  | executablesPath | Relative pathname to the directory containing the user provided executable(s).  Comma separate multiple directory paths. | Default is '.', the top-level directory of the PV. |
 | resources | constraints.enabled | Specifies whether the resource constraints specified in this helm chart are enabled.   | false (default) or true  |
