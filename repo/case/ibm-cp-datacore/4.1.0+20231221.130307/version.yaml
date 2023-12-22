@@ -1,0 +1,81 @@
+apiVersion: v1
+case:
+  appVersion: 4.8.1
+  catalogs:
+    ai: {}
+    cloudpak: {}
+  certifications:
+    ibmccp: {}
+  classifications:
+    commercial: {}
+  description: A fully-integrated software platform to collect, organize, and analyze
+    data to infuse AI throughout your organization.
+  displayDescription: A fully-integrated software platform to collect, organize, and
+    analyze data to infuse AI throughout your organization.
+  displayName: Cloud Pak for Data
+  icons:
+  - mediaType: image/svg
+    url: https://globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/icp4data.svg
+  licenses:
+    CP4dEE4.8License:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data 4.8 License Enterprise Edition
+        displayName: Cloud Pak for Data 4.8 License Enterprise Edition
+      ref: CloudPakforData_4.8_SLC_Final.txt
+    CP4dSE4.8License:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data 4.8 License Standard Edition
+        displayName: Cloud Pak for Data 4.8 License Standard Edition
+      ref: CloudPakforData_4.8_SLC_Final.txt
+    CloudPakforData4.8NonIBMLic:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data Non IBM License
+        displayName: Cloud Pak for Data Non IBM License
+      ref: CloudPakforData_4.8_SLC_Final.txt
+    CloudPakforData4.8Notice:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data Notice
+        displayName: Cloud Pak for Data Notice
+      ref: CloudPakforData_4.8_NOTICE_Final.txt
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4data-EE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Enterprise Edition
+        displayName: Cloud Pak for Data License
+      ref: license-en-EE
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-EFNG-CDJ23Q
+    cp4data-SE:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for Data License for Standard Edition
+        displayName: Cloud Pak for Data License
+      ref: license-en-SE
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-XGDS-LGYPSB
+  name: ibm-cp-datacore
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 4.1.0+20231221.130307
+  webPage: https://docs-icpdata.mybluemix.net/home
+created: 2023-12-22T03:03:51.03274714+0000
+digest: sha256:d0cfcbcde1a723935bd7ea58989124e9eae1d56b2808be8ba398724977c02838
