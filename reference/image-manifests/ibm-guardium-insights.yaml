@@ -25,10 +25,14 @@ images:
   - image: cp/ibm-guardium-insights/apigateway
   - image: cp/ibm-guardium-insights/assets
   - image: cp/ibm-guardium-insights/audit
+  - image: cp/ibm-guardium-insights/auth-server
+  - image: cp/ibm-guardium-insights/compliance-accelerator
   - image: cp/ibm-guardium-insights/configuration
   - image: cp/ibm-guardium-insights/connections
+  - image: cp/ibm-guardium-insights/cp4s-stolon
   - image: cp/ibm-guardium-insights/cp-serviceability
   - image: cp/ibm-guardium-insights/dashboards
+  - image: cp/ibm-guardium-insights/data-bootstrapper
   - image: cp/ibm-guardium-insights/datamart-processor
   - image: cp/ibm-guardium-insights/data-retention
   - image: cp/ibm-guardium-insights/db2-store
@@ -54,6 +58,7 @@ images:
   - image: cp/ibm-guardium-insights/mongo
   - image: cp/ibm-guardium-insights/mongodb
   - image: cp/ibm-guardium-insights/mongodb-exporter
+  - image: cp/ibm-guardium-insights/noobaa-core
   - image: cp/ibm-guardium-insights/notifications
   - image: cp/ibm-guardium-insights/opencontent-common-utils
   - image: cp/ibm-guardium-insights/opencontent-redis-3
@@ -67,6 +72,7 @@ images:
   - image: cp/ibm-guardium-insights/parquet-store
   - image: cp/ibm-guardium-insights/pipeline-config
   - image: cp/ibm-guardium-insights/policy-builder
+  - image: cp/ibm-guardium-insights/postgresql-12-centos7
   - image: cp/ibm-guardium-insights/recommendation
   - image: cp/ibm-guardium-insights/reports
   - image: cp/ibm-guardium-insights/reports-runner
@@ -224,6 +230,9 @@ images:
   - image: icr.io/cpopen/ibm-events-operator-bundle
   - image: icr.io/cpopen/ibm-guardium-insights/cp-serviceability
   - image: icr.io/cpopen/ibm-guardium-insights/mongo
+  - image: icr.io/cpopen/ibm-guardium-insights-operator
+  - image: icr.io/cpopen/ibm-guardium-insights-operator-bundle
+  - image: icr.io/cpopen/ibm-guardium-insights-operator-catalog
   - image: icr.io/cpopen/ibm-healthcheck-operator
   - image: icr.io/cpopen/ibm-healthcheck-operator-bundle
   - image: icr.io/cpopen/ibm-iam-operator
@@ -273,6 +282,7 @@ images:
   - image: icr.io/db2u/etcd
   - image: icr.io/guardium-insights/cp-serviceability
   - image: icr.io/guardium-insights/mongo
+  - image: icr.io/guardium-insights/noobaa-operator
   - image: quay.io/mongodb/mongodb-agent
   - image: quay.io/mongodb/mongodb-kubernetes-operator
   - image: quay.io/mongodb/mongodb-kubernetes-operator-version-upgrade-post-start-hook
