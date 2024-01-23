@@ -1,0 +1,57 @@
+apiVersion: v1
+case:
+  appVersion: 3.5.1
+  catalogs:
+    analytics: {}
+    rhocp: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Content chart for Cognos Analytics addon
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    laEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_en
+        name: laEn
+      ref: LA_en
+    liEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LI_en
+        name: liEn
+      ref: LI_en
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: non_ibm_license
+        name: nonIbmLicense
+      ref: non_ibm_license
+  name: ibm-cognos-analytics-addon-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 0.1.4
+  webPage: https://www.ibm.com
+created: 2024-01-23T00:48:15.63934902+0000
+digest: sha256:f4d9b58a519e725a6750a5acaf5871d5d18b2f46b2181d8d33c9c34d604e6771
