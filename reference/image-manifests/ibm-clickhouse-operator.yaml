@@ -1,0 +1,6 @@
+source: ibm-clickhouse-operator-bundle/case/ibm-clickhouse-operator/case.yaml
+description: "This case is used to install ibm-clickhouse into k8s cluster."
+images:
+  - image: icr.io/cpopen/ibm-clickhouse-operator
+  - image: icr.io/cpopen/ibm-clickhouse-operator-bundle
+  - image: icr.io/cpopen/ibm-clickhouse-operator-catalog
