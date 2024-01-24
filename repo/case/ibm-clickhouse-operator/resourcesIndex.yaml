@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:481ff59d5041eeba6d629b8369a8206b8497b47b0154a87c2c12fb5da2e5c05b
+  image: cpopen/ibm-clickhouse-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v0.1.2-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:94f3b81dac116cd82235bf9555106831159f08894f10b04e5491a1283c540c55
+  image: cpopen/ibm-clickhouse-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: v0.1.2-arm64-v8
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:b9f656846a06b65b3c1bb22e2f5e9f1efc2ae7e04613c14776e6e08b27716037
+  image: cpopen/ibm-clickhouse-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v0.1.2-ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:d2215080f20c661d6636bbba7542a27fb21feacc2f17839008d1861d8fdba7f1
+  image: cpopen/ibm-clickhouse-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v0.1.2-s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:19099d3f0cf6450ae25518e1693e9533a9f62208584a887ebb686660d86e4e71
+  image: cpopen/ibm-clickhouse-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v0.1.2
