@@ -1523,6 +1523,7 @@ containerImages:
   tag: 7768-dev
 - caseVersions:
   - 5.6.0
+  - 5.6.1
   category: catalog
   digest: sha256:a3e5457ad661431c2f9c62bbd0ca439a022e9addc3007b704166279abc5eec0f
   image: cpopen/ibm-db2uoperator-catalog
@@ -1533,6 +1534,7 @@ containerImages:
   tag: 7857-dev-s390x
 - caseVersions:
   - 5.6.0
+  - 5.6.1
   category: catalog
   digest: sha256:2843981643554a8018478af856ec4635c8860304fb61f42557908d347c5e5ae0
   image: cpopen/ibm-db2uoperator-catalog
@@ -1543,6 +1545,7 @@ containerImages:
   tag: 7857-dev-ppc64le
 - caseVersions:
   - 5.6.0
+  - 5.6.1
   category: catalog
   digest: sha256:5bb97dbafdce93d5f7249701460defe4bc95e5fa3f3038574c776dc4e12e3757
   image: cpopen/ibm-db2uoperator-catalog
@@ -1553,9 +1556,48 @@ containerImages:
   tag: 7857-dev-amd64
 - caseVersions:
   - 5.6.0
+  - 5.6.1
   category: catalog
   digest: sha256:7d00366552d438c612716c1ce43f596eab9a0d97728a65130a0aee6d9640b60d
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 7857-dev
+- caseVersions:
+  - 5.6.1
+  category: catalog
+  digest: sha256:78f1d3f4a8009c6dc6e8abe39e334269f923e8cc098ffb5941233da33b053e2f
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 8110-dev-s390x
+- caseVersions:
+  - 5.6.1
+  category: catalog
+  digest: sha256:f235d9b593a49963c172113b9b6b42e039ac761d3ef959f4d081146fa3f59f9b
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 8110-dev-ppc64le
+- caseVersions:
+  - 5.6.1
+  category: catalog
+  digest: sha256:21657e0838d72f3aae73fef1ff9550e869ffc650435db2b1d37ec9bfc42d8195
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8110-dev-amd64
+- caseVersions:
+  - 5.6.1
+  category: catalog
+  digest: sha256:278fa6bbaa834faa4a0ec522cd85a301a088e610d8f5a74d7981f172d30cd5d4
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8110-dev
