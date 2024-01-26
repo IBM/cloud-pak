@@ -300,3 +300,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: "1405"
+- caseVersions:
+  - 4.20.0
+  category: catalog
+  digest: sha256:98de37fd7dd55b9db30ba81e72f9126045066a27b5bb444ac598b3d4133bc3e6
+  image: cpopen/ibm-cpd-edb-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1440-amd64
+- caseVersions:
+  - 4.20.0
+  category: catalog
+  digest: sha256:4439b2b1365a3fd56df1286eb7535bb42d6c67be6390f4beb9e4bac66a3d8fa2
+  image: cpopen/ibm-cpd-edb-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 1440-ppc64le
+- caseVersions:
+  - 4.20.0
+  category: catalog
+  digest: sha256:e004e592cefafd9bbcfeef4199625e40958ff362be7c6036df2c669f75fa097b
+  image: cpopen/ibm-cpd-edb-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1440-s390x
+- caseVersions:
+  - 4.20.0
+  category: catalog
+  digest: sha256:d12d9a61b2a0005ccd90b5b31e86d98b7217a5ec62c38f687ec74079975f5f19
+  image: cpopen/ibm-cpd-edb-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: "1440"
