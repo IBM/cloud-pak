@@ -35,6 +35,7 @@ images:
   - image: cp/apic/ibm-apiconnect-gateway-k8s-datapower-monitor
   - image: cp/apic/ibm-apiconnect-gateway-v2018-to-v10-haproxy
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
+  - image: cp/apic/ibm-apiconnect-management-analytics-ui
   - image: cp/apic/ibm-apiconnect-management-apim
   - image: cp/apic/ibm-apiconnect-management-api-testgen-coordinator
   - image: cp/apic/ibm-apiconnect-management-api-testgen-data
@@ -64,6 +65,7 @@ images:
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbouncer
   - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-exporter
   - image: cp/apic/ibm-apiconnect-management-crunchy-postgres-ha
+  - image: cp/apic/ibm-apiconnect-management-edb-licence
   - image: cp/apic/ibm-apiconnect-management-hub
   - image: cp/apic/ibm-apiconnect-management-juhu
   - image: cp/apic/ibm-apiconnect-management-k8s-init
@@ -129,6 +131,7 @@ images:
   - image: cp/appc/acecc-lcp-prod
   - image: cp/appc/acecc-mapping-assist-prod
   - image: cp/appc/acecc-proxy-prod
+  - image: cp/appc/acecc-velero-plugin-prod
   - image: cp/appc/ace-server-prod
   - image: cp/appc/icp4i-od-agent-prod
   - image: cp/appc/icp4i-od-collector-prod
@@ -216,6 +219,7 @@ images:
   - image: cp/icp4i/apic/portal-exec-job
   - image: cp/icp4i/apic/portal-web
   - image: cp/icp4i/apic/ui
+  - image: cp/icp4i/ar-velero-plugin
   - image: cp/icp4i/aspera/aspera-hsts-aej
   - image: cp/icp4i/aspera/aspera-hsts-ascp-server
   - image: cp/icp4i/aspera/aspera-hsts-asperanode
@@ -658,6 +662,7 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.0
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.2.3
   - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.4.0
+  - image: icr.io/cpopen/cpfs/ibm-events-kafka-3.5.1
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter
   - image: icr.io/cpopen/cpfs/ibm-license-service-reporter-ui
   - image: icr.io/cpopen/cpfs/ibm-licensing
