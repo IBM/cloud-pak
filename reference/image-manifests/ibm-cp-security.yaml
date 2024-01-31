@@ -3,6 +3,9 @@ description: "Integrate existing security tools to gain deeper insights into thr
 images:
   - image: cp/cp4s/altinity-clickhouse-controller
   - image: cp/cp4s/altinity-clickhouse-controller-metrics
+  - image: cp/cp4s/apicurio-registry-kafkasql
+  - image: cp/cp4s/apicurio-registry-mem
+  - image: cp/cp4s/apicurio-registry-sql
   - image: cp/cp4s/apps-manager
   - image: cp/cp4s/apps-operator
   - image: cp/cp4s/apps-synchronizer
@@ -455,11 +458,13 @@ images:
   - image: cp/opencontent-opensearch-1.3
   - image: cp/opencontent-opensearch-2.1
   - image: cp/opencontent-opensearch-2.10
+  - image: cp/opencontent-opensearch-2.11
   - image: cp/opencontent-opensearch-2.x
   - image: cp/opencontent-os-base-plugins-1.2
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.1
   - image: cp/opencontent-os-base-plugins-2.10
+  - image: cp/opencontent-os-base-plugins-2.11
   - image: cp/opencontent-os-base-plugins-2.x
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
@@ -556,10 +561,12 @@ images:
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_athena
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_cloud_watch_logs
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_guardduty
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_azure_log_analytics
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_azure_sentinel
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_bigfix
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_carbonblack
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_cbcloud
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_cisco_secure_email
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_crowdstrike
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_cybereason
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_darktrace
@@ -582,6 +589,7 @@ images:
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_splunk
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_stix_bundle
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_sumologic
+  - image: icr.io/cpopen/cp4s/stix_shifter_modules_vectra
   - image: icr.io/cpopen/cp4s-threatinvestigator-operator
   - image: icr.io/cpopen/cp4s-threatinvestigator-operator-bundle
   - image: icr.io/cpopen/cp4s-tii-operator
