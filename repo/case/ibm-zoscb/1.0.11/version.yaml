@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 2.2.5
+  catalogs:
+    devops: {}
+    integration: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: A CASE that deploys IBM® z/OS® Cloud Broker Operator
+  displayDescription: A CASE that deploys IBM® z/OS® Cloud Broker Operator
+  displayName: IBM® z/OS® Cloud Broker Operator
+  icons:
+  - mediaType: image/png
+    url: https://ibm.biz/ibm-zoscb-logo
+  licenses:
+    license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM® z/OS® Cloud Broker 2.2.5 License
+        displayName: IBM® z/OS® Cloud Broker 2.2.5 License
+      ref: license
+      url: https://ibm.biz/ibm-zoscb-license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM® z/OS® Cloud Broker 2.2.5 other notices and info
+        displayName: IBM® z/OS® Cloud Broker 2.2.5 other notices and info
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-zoscb
+  organization: IBM®
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.11
+  webPage: https://www.ibm.com/products/zos-cloud-broker
+created: 2024-02-02T16:54:05.30400939+0000
+digest: sha256:dc8e9d8194ec9e49c75723e42186ef90a0a0a2b7751a784f48360a4115b762f1
