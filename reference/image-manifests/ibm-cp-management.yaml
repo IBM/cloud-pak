@@ -41,13 +41,13 @@ images:
   - image: cp/app-mgmt/kafka
   - image: cp/app-mgmt/kafkarest
   - image: cp/app-mgmt/linking
-  - image: cp/app-mgmt/metricenrichment
-  - image: cp/app-mgmt/metricprovider
   - image: cp/app-mgmt/metric_service_api
   - image: cp/app-mgmt/metric_service_consumer
   - image: cp/app-mgmt/metric_service_db
-  - image: cp/app-mgmt/metricsummarycreation
   - image: cp/app-mgmt/metric_summary_policy
+  - image: cp/app-mgmt/metricenrichment
+  - image: cp/app-mgmt/metricprovider
+  - image: cp/app-mgmt/metricsummarycreation
   - image: cp/app-mgmt/nasm-elasticsearch
   - image: cp/app-mgmt/nasm-event-observer
   - image: cp/app-mgmt/nasm-layout-service
@@ -231,13 +231,13 @@ images:
   - image: cp/cp4mcm/mcm-topology
   - image: cp/cp4mcm/mcm-topology-api
   - image: cp/cp4mcm/memcached
-  - image: cp/cp4mcm/metricenrichment
-  - image: cp/cp4mcm/metricprovider
   - image: cp/cp4mcm/metric_service_api
   - image: cp/cp4mcm/metric_service_consumer
   - image: cp/cp4mcm/metric_service_db
-  - image: cp/cp4mcm/metricsummarycreation
   - image: cp/cp4mcm/metric_summary_policy
+  - image: cp/cp4mcm/metricenrichment
+  - image: cp/cp4mcm/metricprovider
+  - image: cp/cp4mcm/metricsummarycreation
   - image: cp/cp4mcm/metricsvc-api-ingress
   - image: cp/cp4mcm/metricsvc-api-query
   - image: cp/cp4mcm/metricsvc-collector-kafka
@@ -357,13 +357,11 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -374,6 +372,8 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/multi-instance-conversion
@@ -507,8 +507,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -520,7 +520,6 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
-  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-catalog-ui
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
@@ -528,7 +527,6 @@ images:
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-elasticsearch-oss
   - image: quay.io/opencloudio/icp-filebeat-oss
   - image: quay.io/opencloudio/icp-helm-api
@@ -547,10 +545,12 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/indices-cleaner
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/logging-pki-init
   - image: quay.io/opencloudio/metering-data-manager
   - image: quay.io/opencloudio/metering-mcmui

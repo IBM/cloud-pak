@@ -1,5 +1,5 @@
 source: ibm-dv-bundle/case/ibm-dv-case/case.yaml
-description: "Data Virtualization on IBM Cloud Private for Data"
+description: "Db2 DV"
 images:
   - image: cp/cpd/ailc-kubectl
   - image: cp/cpd/asset-files-api
@@ -21,10 +21,10 @@ images:
   - image: cp/cpd/dv-metastore
   - image: cp/cpd/dv-service-provider
   - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
-  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/haproxy
@@ -39,9 +39,9 @@ images:
   - image: cp/cpd/ibm-dmc-nginx
   - image: cp/cpd/ibm-dmc-registry-manager
   - image: cp/cpd/ibm-dmc-runsql
+  - image: cp/cpd/job-trigger
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
-  - image: cp/cpd/job-trigger
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/opencontent-common-utils
   - image: cp/cpd/portal-catalog

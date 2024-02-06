@@ -32,19 +32,39 @@ images:
   - image: cp/iaf-minimal
   - image: cp/iaf-ui-customization
   - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/opencontent-elasticsearch-6.8.22
+  - image: cp/opencontent-elasticsearch-7.10.2
+  - image: cp/opencontent-elasticsearch-7.8.0
+  - image: cp/opencontent-elasticsearch-7.8.1
+  - image: cp/opencontent-elasticsearch-7.9.3
+  - image: cp/opencontent-elasticsearch-base-plugins-6.8.22
+  - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
+  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
+  - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
   - image: cp/opencontent-etcd-3
+  - image: cp/opencontent-opensearch-1.2
+  - image: cp/opencontent-opensearch-1.3
+  - image: cp/opencontent-opensearch-2.1
+  - image: cp/opencontent-os-base-plugins-1.2
+  - image: cp/opencontent-os-base-plugins-1.3
+  - image: cp/opencontent-os-base-plugins-2.1
   - image: cp/redis-db-5.0.14
   - image: cp/redis-db-5.0.5
   - image: cp/redis-db-5.0.9
+  - image: cp/redis-db-6.0.16
   - image: cp/redis-mgmt-5.0.14
   - image: cp/redis-mgmt-5.0.5
   - image: cp/redis-mgmt-5.0.9
+  - image: cp/redis-mgmt-6.0.16
   - image: cp/redis-proxy-5.0.14
   - image: cp/redis-proxy-5.0.5
   - image: cp/redis-proxy-5.0.9
+  - image: cp/redis-proxy-6.0.16
   - image: cp/redis-proxylog-5.0.14
   - image: cp/redis-proxylog-5.0.5
   - image: cp/redis-proxylog-5.0.9
+  - image: cp/redis-proxylog-6.0.16
   - image: cp/tnc/alm-base-layer
   - image: cp/tnc/alm-ibmjava
   - image: cp/tnc/alm-vault
@@ -58,12 +78,14 @@ images:
   - image: cp/tnc/irpmanager
   - image: cp/tnc/ishtar
   - image: cp/tnc/lm-configurator
+  - image: cp/tnc/mcnp
   - image: cp/tnc/nimrod
   - image: cp/tnc/relay
   - image: cp/tnc/siteplanner
   - image: cp/tnc/siteplanner-nginx
   - image: cp/tnc/siteplanner-postgres
   - image: cp/tnc/talledega
+  - image: cp/tnc/tnc-fluentd
   - image: cp/tnc/tnc-siteplanner
   - image: cp/tnc/tnc-symmetricds
   - image: cp/tnc/tnc-vault-config
@@ -117,13 +139,11 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -134,6 +154,8 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/must-gather
@@ -182,12 +204,12 @@ images:
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
   - image: icr.io/cpopen/ibm-cp-automation-foundation-catalog
-  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
-  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
-  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-cp-networkautomation-catalog
   - image: icr.io/cpopen/ibm-cp-networkautomation-operator
   - image: icr.io/cpopen/ibm-cp-networkautomation-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
@@ -293,8 +315,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -306,14 +328,12 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
-  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
@@ -325,9 +345,11 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller

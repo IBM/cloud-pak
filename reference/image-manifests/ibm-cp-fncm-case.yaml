@@ -3,6 +3,8 @@ description: "A CASE for an operator which deploys fncm"
 images:
   - image: cp/cp4a/ban/navigator
   - image: cp/cp4a/ban/navigator-sso
+  - image: cp/cp4a/common/dba-keytool-initcontainer
+  - image: cp/cp4a/fncm-operator
   - image: cp/cp4a/fncm/cmis
   - image: cp/cp4a/fncm/cpe
   - image: cp/cp4a/fncm/cpe-sso
@@ -10,9 +12,17 @@ images:
   - image: cp/cp4a/fncm/css-if002
   - image: cp/cp4a/fncm/extshare
   - image: cp/cp4a/fncm/graphql
-  - image: cp/cp4a/fncm-operator
   - image: cp/cp4a/fncm/taskmgr
+  - image: cp/cp4a/iadp/cdra
+  - image: cp/cp4a/iadp/cds
+  - image: cp/cp4a/iadp/cpds
+  - image: cp/cp4a/iadp/dba-keytool-initcontainer
+  - image: cp/cp4a/iadp/gitgateway
+  - image: cp/cp4a/iadp/mongo_adp
+  - image: cp/cp4a/iadp/viewone
+  - image: cp/cp4a/iccsap/iccsap
   - image: cp/cp4a/icp4a-operator
+  - image: cp/cp4a/ier/ier
   - image: icr.io/cpopen/ibm-fncm-catalog
   - image: icr.io/cpopen/ibm-fncm-operator-bundle
   - image: icr.io/cpopen/icp4a-content-operator

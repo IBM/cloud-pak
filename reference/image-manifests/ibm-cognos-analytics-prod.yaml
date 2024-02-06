@@ -1,5 +1,5 @@
 source: ibm-cognos-analytics-prod-bundle/case/ibm-cognos-analytics-prod/case.yaml
-description: "Helm chart for Cognos Analytics"
+description: "Content for CP4D Cognos Analytics cartridge"
 images:
   - image: cp/cpd/ailc-kubectl
   - image: cp/cpd/artifacts
@@ -25,18 +25,18 @@ images:
   - image: cp/cpd/ds
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
-  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/filebeat-secure
   - image: cp/cpd/haproxy
   - image: cp/cpd/ibm-cognos-addon-sp
+  - image: cp/cpd/job-trigger
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
-  - image: cp/cpd/job-trigger
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api

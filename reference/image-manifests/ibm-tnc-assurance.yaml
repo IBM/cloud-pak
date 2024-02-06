@@ -9,10 +9,11 @@ images:
   - image: cp/cpd/core-tests
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cpd-addon
-  - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
-  - image: cp/cpd/databroker-s3
+  - image: cp/cpd/cpdoperator
   - image: cp/cpd/data-preprocessing-mtworkflow
+  - image: cp/cpd/databroker-s3
+  - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/elasticsearch-curator
   - image: cp/cpd/event-grouping
   - image: cp/cpd/event-grouping-mtworkflow
@@ -36,6 +37,7 @@ images:
   - image: cp/cpd/opencontent-postgres-stolon
   - image: cp/cpd/persistence-service
   - image: cp/cpd/pod-coordinator
+  - image: cp/cpd/postgresql
   - image: cp/cpd/privatecloud-redis-repo
   - image: cp/cpd/privatecloud-usermgmt
   - image: cp/cpd/ratelimiter
@@ -67,6 +69,7 @@ images:
   - image: cp/noi/ea-events-tooling
   - image: cp/noi/ea-mime-classification-service
   - image: cp/noi/ea-noigateway-ee
+  - image: cp/noi/edb-postgres-license-provider
   - image: cp/noi/eventsquery-service
   - image: cp/noi/geored-ui-health-service
   - image: cp/noi/grafana
@@ -100,11 +103,11 @@ images:
   - image: cp/noi/nasm-app-disco-discovery
   - image: cp/noi/nasm-app-disco-init
   - image: cp/noi/nasm-app-disco-log-collector
-  - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-app-disco-primarystorage
   - image: cp/noi/nasm-app-disco-secondarystorage
   - image: cp/noi/nasm-app-disco-services
   - image: cp/noi/nasm-app-disco-utils
+  - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-appdynamics-observer
   - image: cp/noi/nasm-aws-observer
   - image: cp/noi/nasm-azure-observer
@@ -113,15 +116,18 @@ images:
   - image: cp/noi/nasm-cienablueplanet-observer
   - image: cp/noi/nasm-ciscoaci-observer
   - image: cp/noi/nasm-contrail-observer
+  - image: cp/noi/nasm-datadog-observer
   - image: cp/noi/nasm-dns-observer
   - image: cp/noi/nasm-docker-observer
   - image: cp/noi/nasm-dynatrace-observer
   - image: cp/noi/nasm-elasticsearch
   - image: cp/noi/nasm-event-observer
   - image: cp/noi/nasm-file-observer
+  - image: cp/noi/nasm-gitlab-observer
   - image: cp/noi/nasm-googlecloud-observer
   - image: cp/noi/nasm-hpnfvd-observer
   - image: cp/noi/nasm-ibmcloud-observer
+  - image: cp/noi/nasm-inventory-service
   - image: cp/noi/nasm-itnm-observer
   - image: cp/noi/nasm-jenkins-observer
   - image: cp/noi/nasm-junipercso-observer
@@ -132,8 +138,8 @@ images:
   - image: cp/noi/nasm-net-disco-config
   - image: cp/noi/nasm-net-disco-control
   - image: cp/noi/nasm-net-disco-fluentd
-  - image: cp/noi/nasm-netdisco-observer
   - image: cp/noi/nasm-net-disco-schema-registry
+  - image: cp/noi/nasm-net-disco-schema-setup
   - image: cp/noi/nasm-net-disco-security
   - image: cp/noi/nasm-net-disco-sidecar
   - image: cp/noi/nasm-net-disco-status
@@ -142,6 +148,7 @@ images:
   - image: cp/noi/nasm-net-disco-topogram
   - image: cp/noi/nasm-net-disco-ubi-minimal
   - image: cp/noi/nasm-net-disco-worker
+  - image: cp/noi/nasm-netdisco-observer
   - image: cp/noi/nasm-newrelic-observer
   - image: cp/noi/nasm-nginx
   - image: cp/noi/nasm-observer-service
@@ -151,6 +158,7 @@ images:
   - image: cp/noi/nasm-sdconap-observer
   - image: cp/noi/nasm-search-service
   - image: cp/noi/nasm-servicenow-observer
+  - image: cp/noi/nasm-sevone-observer
   - image: cp/noi/nasm-status-service
   - image: cp/noi/nasm-taddm-observer
   - image: cp/noi/nasm-topology-service
@@ -175,19 +183,26 @@ images:
   - image: cp/noi/netcool-tls-proxy
   - image: cp/noi/netcool-webgui-asm-ee
   - image: cp/noi/node-server
-  - image: cp/noi/noiactions-service
   - image: cp/noi/noi-alert-action-service
   - image: cp/noi/noi-alert-trigger-service
   - image: cp/noi/noi-backuprestore-service
   - image: cp/noi/noi-metric-action-service
   - image: cp/noi/noi-metric-trigger-service
+  - image: cp/noi/noi-postgres-repl
+  - image: cp/noi/noi-postgres-repl-manager
+  - image: cp/noi/noiactions-service
+  - image: cp/noi/opencontent-minio
+  - image: cp/noi/opencontent-minio-client
   - image: cp/noi/opencontent-redis-5
+  - image: cp/noi/opencontent-redis-7
   - image: cp/noi/policy-registry-service
+  - image: cp/noi/postgresql
   - image: cp/noi/servicemonitor
   - image: cp/noi/spark
   - image: cp/noi/training-service
   - image: cp/noi/ui-api
   - image: cp/noi/ui-content
+  - image: cp/noi/userconfig-service
   - image: cp/noi/v3-policy-processor
   - image: cp/noi/zookeeper
   - image: ibmcom/asm-operator

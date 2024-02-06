@@ -1,5 +1,5 @@
 source: ibm-datastage-bundle/case/ibm-datastage/case.yaml
-description: "IBM InfoSphere Information Server for DataStage V11.7"
+description: "IBM Cloud Pak for Data DataStage Services"
 images:
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/cassandra-ubi8-x86_64
@@ -10,8 +10,8 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
-  - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/cpdoperator
   - image: cp/cpd/dap-base-job
   - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dataview-api-service
@@ -34,9 +34,9 @@ images:
   - image: cp/cpd/ds-xml-schema-library
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
-  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/haproxy
@@ -48,9 +48,9 @@ images:
   - image: cp/cpd/is-en-compute-image
   - image: cp/cpd/is-engine-image
   - image: cp/cpd/is-services-image
+  - image: cp/cpd/job-trigger
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
-  - image: cp/cpd/job-trigger
   - image: cp/cpd/kafka-ubi8-x86_64
   - image: cp/cpd/kafka-x86_64
   - image: cp/cpd/ngp-projects-api
@@ -88,9 +88,9 @@ images:
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-database-core
   - image: cp/cpd/zen-databases
-  - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
   - image: cp/cpd/zookeeper-ubi8-x86_64
