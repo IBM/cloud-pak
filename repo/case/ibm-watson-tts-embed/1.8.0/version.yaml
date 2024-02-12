@@ -1,0 +1,33 @@
+apiVersion: v1
+case:
+  appVersion: 1.8.0
+  catalogs: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    beta: {}
+    limited: {}
+    techpreview: {}
+  description: Containerized Text To Speech service and models
+  displayDescription: Containerized Text To Speech service and models
+  displayName: IBM Watson embedded AI [ TTS ]
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/icp-logo-box.svg
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-watson-tts-embed
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.8.0
+  webPage: https://www.ibm.com
+created: 2024-02-12T21:59:23.81070488+0000
+digest: sha256:8f73c1b24b7fa53e35ebcf12e8ff1fe557f06eefd0926734c9e41b4da7f01dba
