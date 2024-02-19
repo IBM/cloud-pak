@@ -1565,6 +1565,7 @@ containerImages:
   tag: 7857-dev
 - caseVersions:
   - 5.6.1
+  - 5.6.2
   category: catalog
   digest: sha256:78f1d3f4a8009c6dc6e8abe39e334269f923e8cc098ffb5941233da33b053e2f
   image: cpopen/ibm-db2uoperator-catalog
@@ -1575,6 +1576,7 @@ containerImages:
   tag: 8110-dev-s390x
 - caseVersions:
   - 5.6.1
+  - 5.6.2
   category: catalog
   digest: sha256:f235d9b593a49963c172113b9b6b42e039ac761d3ef959f4d081146fa3f59f9b
   image: cpopen/ibm-db2uoperator-catalog
@@ -1585,6 +1587,7 @@ containerImages:
   tag: 8110-dev-ppc64le
 - caseVersions:
   - 5.6.1
+  - 5.6.2
   category: catalog
   digest: sha256:21657e0838d72f3aae73fef1ff9550e869ffc650435db2b1d37ec9bfc42d8195
   image: cpopen/ibm-db2uoperator-catalog
@@ -1595,9 +1598,48 @@ containerImages:
   tag: 8110-dev-amd64
 - caseVersions:
   - 5.6.1
+  - 5.6.2
   category: catalog
   digest: sha256:278fa6bbaa834faa4a0ec522cd85a301a088e610d8f5a74d7981f172d30cd5d4
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 8110-dev
+- caseVersions:
+  - 5.6.2
+  category: catalog
+  digest: sha256:a7850504f39307a77bf41d11b094c12d8119a7a4a190f559c2c1bfe2ed15d185
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 8325-dev-s390x
+- caseVersions:
+  - 5.6.2
+  category: catalog
+  digest: sha256:58e8a7fbe5098b1964edd126098e2bc5fdfaa7e7df3805748e4dbcf80920b3ab
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 8325-dev-ppc64le
+- caseVersions:
+  - 5.6.2
+  category: catalog
+  digest: sha256:13d8219d19d6980224200699c4c423332e64de5644b5e5564389012e1a3ff9c1
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8325-dev-amd64
+- caseVersions:
+  - 5.6.2
+  category: catalog
+  digest: sha256:fd7242e7a42f9b952af4d1db2b67878820352a5c1ce946637c9b954170c412f2
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8325-dev
