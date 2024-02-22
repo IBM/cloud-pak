@@ -1,38 +1,61 @@
-source: ibm-replication-bundle/case/ibm-replication/case.yaml
-description: "IBM Cloud Pak for Data - Data Replication Services"
+source: ibm-watsonx-governance
+description: ""
 images:
+  - image: cp/cpd/aios-bias-service
+  - image: cp/cpd/aios-bkpi-combined-services
+  - image: cp/cpd/aios-common-api
+  - image: cp/cpd/aios-configuration-service
+  - image: cp/cpd/aios-dashboard
+  - image: cp/cpd/aios-datamart-service-api
+  - image: cp/cpd/aios-etcd
+  - image: cp/cpd/aios-fast-path
+  - image: cp/cpd/aios-feedback-service
+  - image: cp/cpd/aios-kafka
+  - image: cp/cpd/aios-kubectl
+  - image: cp/cpd/aios-ml-gateway-discovery
+  - image: cp/cpd/aios-ml-gateway-service
+  - image: cp/cpd/aios-nginx-local
+  - image: cp/cpd/aios-orch-notifications-service
+  - image: cp/cpd/aios-payload-logging-service
+  - image: cp/cpd/aios-payload-logging-service-api
+  - image: cp/cpd/aios-redis
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/catalog-api-aux_master
   - image: cp/cpd/catalog_master
   - image: cp/cpd/couchdb3
   - image: cp/cpd/dap-base-job
-  - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dc-main
+  - image: cp/cpd/drift
   - image: cp/cpd/dsx-requisite
-  - image: cp/cpd/elasticsearch
   - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
+  - image: cp/cpd/explainability
   - image: cp/cpd/haproxy
   - image: cp/cpd/job-trigger
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
+  - image: cp/cpd/metrics-compute-manager
+  - image: cp/cpd/model-operation-service-scheduling
+  - image: cp/cpd/model-risk-management
   - image: cp/cpd/ngp-projects-api
+  - image: cp/cpd/openpages-cpd-addon-translations
+  - image: cp/cpd/openpages-cpd-opapp
+  - image: cp/cpd/openpages-cpd-opappaudit
+  - image: cp/cpd/openpages-cpd-opappdata
+  - image: cp/cpd/openpages-cpd-provisioner
+  - image: cp/cpd/openpages-cpd-user-sync
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
-  - image: cp/cpd/portal-dashboards
   - image: cp/cpd/portal-job-manager
   - image: cp/cpd/portal-main
   - image: cp/cpd/portal-notifications
   - image: cp/cpd/portal-projects
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
-  - image: cp/cpd/replication-apiserver
-  - image: cp/cpd/replication-engine
-  - image: cp/cpd/replication-ui
   - image: cp/cpd/runtime-assemblies-operator
   - image: cp/cpd/runtime-manager-api
   - image: cp/cpd/spaces
@@ -40,44 +63,23 @@ images:
   - image: cp/cpd/task-credentials
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
-  - image: cp/cpd/wdp-connect-flight
   - image: cp/cpd/wdp-connect-flight-svc
   - image: cp/cpd/wdp-dataview
-  - image: cp/cpd/wkc-init-container-ccs
+  - image: cp/cpd/wkc-factsheet-service
+  - image: cp/cpd/wkc-factsheets-ui
   - image: cp/cpd/wkc-init-container-ccs-ubi9
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-main
-  - image: cp/opencontent-elasticsearch-6.8.22
+  - image: cp/cpd/zen-database-core
+  - image: cp/cpd/zen-databases
   - image: cp/opencontent-elasticsearch-7.10.2
-  - image: cp/opencontent-elasticsearch-7.8.0
-  - image: cp/opencontent-elasticsearch-7.8.1
-  - image: cp/opencontent-elasticsearch-7.9.3
-  - image: cp/opencontent-elasticsearch-base-plugins-6.8.22
   - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
-  - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
-  - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
-  - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
-  - image: cp/opencontent-opensearch-1.2
   - image: cp/opencontent-opensearch-1.3
-  - image: cp/opencontent-opensearch-2.1
-  - image: cp/opencontent-opensearch-2.10
   - image: cp/opencontent-opensearch-2.11
-  - image: cp/opencontent-opensearch-2.x
-  - image: cp/opencontent-os-base-plugins-1.2
   - image: cp/opencontent-os-base-plugins-1.3
-  - image: cp/opencontent-os-base-plugins-2.1
-  - image: cp/opencontent-os-base-plugins-2.10
   - image: cp/opencontent-os-base-plugins-2.11
-  - image: cp/opencontent-os-base-plugins-2.x
+  - image: cp/opencontent-rabbitmq-3
+  - image: cp/opencontent-rabbitmq-config-copy
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
-  - image: icr.io/cpopen/ibm-cpd-ccs-operator
-  - image: icr.io/cpopen/ibm-cpd-ccs-operator-bundle
-  - image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog
-  - image: icr.io/cpopen/ibm-replication-catalog
-  - image: icr.io/cpopen/ibm-replication-operator
-  - image: icr.io/cpopen/ibm-replication-operator-bundle
-  - image: icr.io/cpopen/opencontent-elasticsearch-operator
-  - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
-  - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog
