@@ -17,8 +17,8 @@ images:
   - image: cp/cp4s/cp4s-backup-restore
   - image: cp/cp4s/cp4s-car-connector-config
   - image: cp/cp4s/cp4s-car-frontend-ui
-  - image: cp/cp4s/cp4s-couch-init
   - image: cp/cp4s/cp4s-couchdb
+  - image: cp/cp4s/cp4s-couch-init
   - image: cp/cp4s/cp4s-extension
   - image: cp/cp4s/cp4s-init-mod
   - image: cp/cp4s/cp4s-stolon
@@ -84,9 +84,9 @@ images:
   - image: cp/cp4s/isc-cases-application
   - image: cp/cp4s/isc-cases-breach-content-controller
   - image: cp/cp4s/isc-cases-co3postgres-orchestrator
-  - image: cp/cp4s/isc-cases-data-migration
   - image: cp/cp4s/isc-cases-database-init
   - image: cp/cp4s/isc-cases-database-upgrade
+  - image: cp/cp4s/isc-cases-data-migration
   - image: cp/cp4s/isc-cases-email
   - image: cp/cp4s/isc-cases-event-adapter
   - image: cp/cp4s/isc-cases-event-handler
@@ -197,10 +197,6 @@ images:
   - image: cp/cp4s/solutions/isc-cases-email
   - image: cp/cp4s/solutions/isc-cases-event-adapter
   - image: cp/cp4s/solutions/isc-cases-event-handler
-  - image: cp/cp4s/solutions/isc-cases-logging-sidecar
-  - image: cp/cp4s/solutions/isc-cases-operator
-  - image: cp/cp4s/solutions/isc-cases-resutil
-  - image: cp/cp4s/solutions/isc-cases-scripting
   - image: cp/cp4s/solutions/isc-cases/isc-cases-activemq
   - image: cp/cp4s/solutions/isc-cases/isc-cases-activemq-logging-sidecar
   - image: cp/cp4s/solutions/isc-cases/isc-cases-application
@@ -209,6 +205,10 @@ images:
   - image: cp/cp4s/solutions/isc-cases/isc-cases-logging-sidecar
   - image: cp/cp4s/solutions/isc-cases/isc-cases-operator
   - image: cp/cp4s/solutions/isc-cases/isc-cases-scripting
+  - image: cp/cp4s/solutions/isc-cases-logging-sidecar
+  - image: cp/cp4s/solutions/isc-cases-operator
+  - image: cp/cp4s/solutions/isc-cases-resutil
+  - image: cp/cp4s/solutions/isc-cases-scripting
   - image: cp/cp4s/solutions/isc-common-auth
   - image: cp/cp4s/solutions/isc-common-configstore
   - image: cp/cp4s/solutions/isc-common-console
@@ -256,8 +256,8 @@ images:
   - image: cp/cp4s/solutions/isc-udi-encrypt-cronjob
   - image: cp/cp4s/solutions/isc-udi-endpoint
   - image: cp/cp4s/solutions/isc-udi-worker
-  - image: cp/cp4s/solutions/isc-uds-deploy
   - image: cp/cp4s/solutions/isc-uds2file
+  - image: cp/cp4s/solutions/isc-uds-deploy
   - image: cp/cp4s/solutions/nginx
   - image: cp/cp4s/solutions/pgo-apiserver
   - image: cp/cp4s/solutions/pgo-backrest
@@ -298,8 +298,8 @@ images:
   - image: cp/icp-foundation/cluster-api-provider-ocp
   - image: cp/icp-foundation/collectd-exporter
   - image: cp/icp-foundation/compliance-annotator
-  - image: cp/icp-foundation/config-parser
   - image: cp/icp-foundation/configmap-reload
+  - image: cp/icp-foundation/config-parser
   - image: cp/icp-foundation/consul
   - image: cp/icp-foundation/coredns
   - image: cp/icp-foundation/cos-indexer
@@ -372,8 +372,8 @@ images:
   - image: cp/icp-foundation/kms-pep
   - image: cp/icp-foundation/kms-persistence
   - image: cp/icp-foundation/kmsplugin
-  - image: cp/icp-foundation/kube-state-metrics
   - image: cp/icp-foundation/kubectl
+  - image: cp/icp-foundation/kube-state-metrics
   - image: cp/icp-foundation/legato
   - image: cp/icp-foundation/live-crawler
   - image: cp/icp-foundation/logging-pki-init
@@ -488,11 +488,11 @@ images:
   - image: cp/redis-proxylog-6.0.16
   - image: cp/redis-telemetry-5.0.5
   - image: docker.elastic.co/elasticsearch/elasticsearch-oss
+  - image: ibmcom/couchdb2
+  - image: ibmcom/couchdb3
   - image: ibmcom/couchdb-operator
   - image: ibmcom/couchdb-operator-catalog
   - image: ibmcom/couchdb-operator-mgmt
-  - image: ibmcom/couchdb2
-  - image: ibmcom/couchdb3
   - image: ibmcom/cp-serviceability
   - image: ibmcom/ibm-cloud-databases-redis-catalog
   - image: ibmcom/ibm-cloud-databases-redis-operator
@@ -504,12 +504,17 @@ images:
   - image: icr.io/cpopen/couchdb-operator
   - image: icr.io/cpopen/couchdb-operator-bundle
   - image: icr.io/cpopen/couchdb-operator-catalog
-  - image: icr.io/cpopen/cp-serviceability-operator
-  - image: icr.io/cpopen/cp-serviceability-operator-bundle
+  - image: icr.io/cpopen/cp4s/apicurio-registry-kafkasql
+  - image: icr.io/cpopen/cp4s/apicurio-registry-mem
+  - image: icr.io/cpopen/cp4s/apicurio-registry-sql
   - image: icr.io/cpopen/cp4s-backuprestore-operator
   - image: icr.io/cpopen/cp4s-backuprestore-operator-bundle
+  - image: icr.io/cpopen/cp4s/busybox
   - image: icr.io/cpopen/cp4s-clx-operator
   - image: icr.io/cpopen/cp4s-clx-operator-bundle
+  - image: icr.io/cpopen/cp4s/cp4saas-iam-bridge
+  - image: icr.io/cpopen/cp4s/cp4s-must-gather
+  - image: icr.io/cpopen/cp4s/cp-serviceability
   - image: icr.io/cpopen/cp4s-dashboard-operator
   - image: icr.io/cpopen/cp4s-dashboard-operator-bundle
   - image: icr.io/cpopen/cp4s-dataservices-operator
@@ -522,29 +527,6 @@ images:
   - image: icr.io/cpopen/cp4s-foundations-operator-bundle
   - image: icr.io/cpopen/cp4s-helper-operator
   - image: icr.io/cpopen/cp4s-helper-operator-bundle
-  - image: icr.io/cpopen/cp4s-middleware-operator
-  - image: icr.io/cpopen/cp4s-middleware-operator-bundle
-  - image: icr.io/cpopen/cp4s-platform-operator
-  - image: icr.io/cpopen/cp4s-platform-operator-bundle
-  - image: icr.io/cpopen/cp4s-riskmanager-operator
-  - image: icr.io/cpopen/cp4s-riskmanager-operator-bundle
-  - image: icr.io/cpopen/cp4s-sequences-operator
-  - image: icr.io/cpopen/cp4s-sequences-operator-bundle
-  - image: icr.io/cpopen/cp4s-soar-operator
-  - image: icr.io/cpopen/cp4s-soar-operator-bundle
-  - image: icr.io/cpopen/cp4s-threatinvestigator-operator
-  - image: icr.io/cpopen/cp4s-threatinvestigator-operator-bundle
-  - image: icr.io/cpopen/cp4s-tii-operator
-  - image: icr.io/cpopen/cp4s-tii-operator-bundle
-  - image: icr.io/cpopen/cp4s-truststore-operator
-  - image: icr.io/cpopen/cp4s-truststore-operator-bundle
-  - image: icr.io/cpopen/cp4s/apicurio-registry-kafkasql
-  - image: icr.io/cpopen/cp4s/apicurio-registry-mem
-  - image: icr.io/cpopen/cp4s/apicurio-registry-sql
-  - image: icr.io/cpopen/cp4s/busybox
-  - image: icr.io/cpopen/cp4s/cp-serviceability
-  - image: icr.io/cpopen/cp4s/cp4s-must-gather
-  - image: icr.io/cpopen/cp4s/cp4saas-iam-bridge
   - image: icr.io/cpopen/cp4s/homer-edgeclient
   - image: icr.io/cpopen/cp4s/isc-car-connector-atp
   - image: icr.io/cpopen/cp4s/isc-car-connector-aws
@@ -564,7 +546,17 @@ images:
   - image: icr.io/cpopen/cp4s/isc-car-connector-tanium
   - image: icr.io/cpopen/cp4s/isc-car-connector-tenable
   - image: icr.io/cpopen/cp4s/isc-udi-edge-client
+  - image: icr.io/cpopen/cp4s-middleware-operator
+  - image: icr.io/cpopen/cp4s-middleware-operator-bundle
   - image: icr.io/cpopen/cp4s/openldap
+  - image: icr.io/cpopen/cp4s-platform-operator
+  - image: icr.io/cpopen/cp4s-platform-operator-bundle
+  - image: icr.io/cpopen/cp4s-riskmanager-operator
+  - image: icr.io/cpopen/cp4s-riskmanager-operator-bundle
+  - image: icr.io/cpopen/cp4s-sequences-operator
+  - image: icr.io/cpopen/cp4s-sequences-operator-bundle
+  - image: icr.io/cpopen/cp4s-soar-operator
+  - image: icr.io/cpopen/cp4s-soar-operator-bundle
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_arcsight
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_athena
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_cloud_watch_logs
@@ -598,6 +590,10 @@ images:
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_stix_bundle
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_sumologic
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_vectra
+  - image: icr.io/cpopen/cp4s-threatinvestigator-operator
+  - image: icr.io/cpopen/cp4s-threatinvestigator-operator-bundle
+  - image: icr.io/cpopen/cp4s-tii-operator
+  - image: icr.io/cpopen/cp4s-tii-operator-bundle
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_abuseipdb
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_alienvault_otx
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_apivoid
@@ -611,6 +607,8 @@ images:
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_threat_grid
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_threat_q
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_virus_total
+  - image: icr.io/cpopen/cp4s-truststore-operator
+  - image: icr.io/cpopen/cp4s-truststore-operator-bundle
   - image: icr.io/cpopen/cpfs/audit-garbage-collector
   - image: icr.io/cpopen/cpfs/audit-policy-controller
   - image: icr.io/cpopen/cpfs/audit-syslog-service
@@ -640,11 +638,13 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -655,8 +655,6 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/multi-instance-conversion
@@ -673,6 +671,8 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/cp-serviceability-operator
+  - image: icr.io/cpopen/cp-serviceability-operator-bundle
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator
@@ -731,8 +731,8 @@ images:
   - image: icr.io/ibm-cp-security/apicurio-registry-mem
   - image: icr.io/ibm-cp-security/apicurio-registry-sql
   - image: icr.io/ibm-cp-security/busybox
-  - image: icr.io/ibm-cp-security/cp-serviceability
   - image: icr.io/ibm-cp-security/cp4saas-iam-bridge
+  - image: icr.io/ibm-cp-security/cp-serviceability
   - image: icr.io/ibm-cp-security/isc-car-connector-atp
   - image: icr.io/ibm-cp-security/isc-car-connector-aws
   - image: icr.io/ibm-cp-security/isc-car-connector-azure
@@ -788,8 +788,8 @@ images:
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
-  - image: quay.io/opencloudio/couchdb-operator-mgmt
   - image: quay.io/opencloudio/couchdb3
+  - image: quay.io/opencloudio/couchdb-operator-mgmt
   - image: quay.io/opencloudio/cp4d-tiller
   - image: quay.io/opencloudio/cs-mongodb-br
   - image: quay.io/opencloudio/dashboard-controller
@@ -856,8 +856,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -869,6 +869,7 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-catalog-ui
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
@@ -876,6 +877,7 @@ images:
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-helm-api
   - image: quay.io/opencloudio/icp-helm-repo
   - image: quay.io/opencloudio/icp-helm-rudder
@@ -890,11 +892,9 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/icp4data-nginx-repo
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/metering-data-manager
   - image: quay.io/opencloudio/metering-mcmui
   - image: quay.io/opencloudio/metering-report

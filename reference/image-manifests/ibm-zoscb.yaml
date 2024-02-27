@@ -8,11 +8,6 @@ images:
   - image: cp/zoscb/oauth-proxy
   - image: cp/zoscb/suboperator-catalog
   - image: cp/zoscb/ui
-  - image: icr.io/cp/zoscb/ansible-suboperator
-  - image: icr.io/cp/zoscb/manager
-  - image: icr.io/cp/zoscb/oauth-proxy
-  - image: icr.io/cp/zoscb/suboperator-registry
-  - image: icr.io/cp/zoscb/ui
   - image: icr.io/cpopen/common-service-operator
   - image: icr.io/cpopen/cpfs/audit-garbage-collector
   - image: icr.io/cpopen/cpfs/audit-policy-controller
@@ -43,11 +38,13 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -58,8 +55,6 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/im-initcontainer
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
@@ -128,6 +123,11 @@ images:
   - image: icr.io/cpopen/ibm-zoscb-operator-bundle
   - image: icr.io/cpopen/odlm
   - image: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle
+  - image: icr.io/cp/zoscb/ansible-suboperator
+  - image: icr.io/cp/zoscb/manager
+  - image: icr.io/cp/zoscb/oauth-proxy
+  - image: icr.io/cp/zoscb/suboperator-registry
+  - image: icr.io/cp/zoscb/ui
   - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/ibm-platform-api-operator
   - image: quay.io/opencloudio/icp-platform-api

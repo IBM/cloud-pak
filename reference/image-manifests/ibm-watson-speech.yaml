@@ -13,6 +13,7 @@ images:
   - image: cp/opencontent-minio-kes
   - image: cp/opencontent-rabbitmq-3
   - image: cp/opencontent-rabbitmq-config-copy
+  - image: cpopen/edb/postgresql
   - image: cp/watson-gateway
   - image: cp/watson-speech/ar-ms-broadbandmodel
   - image: cp/watson-speech/ar-ms-telephony
@@ -108,8 +109,8 @@ images:
   - image: cp/watson-speech/pt-br-multimedia
   - image: cp/watson-speech/pt-br-narrowbandmodel
   - image: cp/watson-speech/pt-br-telephony
-  - image: cp/watson-speech/speech-utils-rhubi8
   - image: cp/watson-speech/speechhub
+  - image: cp/watson-speech/speech-utils-rhubi8
   - image: cp/watson-speech/stt-async
   - image: cp/watson-speech/stt-customization
   - image: cp/watson-speech/sv-se-telephony
@@ -119,7 +120,6 @@ images:
   - image: cp/watson-speech/zh-cn-broadbandmodel
   - image: cp/watson-speech/zh-cn-narrowbandmodel
   - image: cp/watson-speech/zh-cn-telephony
-  - image: cpopen/edb/postgresql
   - image: icr.io/cpopen/ibm-auditwebhook-operator
   - image: icr.io/cpopen/ibm-auditwebhook-operator-bundle
   - image: icr.io/cpopen/ibm-auditwebhook-operator-catalog

@@ -48,11 +48,11 @@ images:
   - image: cp/cp4waiops/nasm-app-disco-controller
   - image: cp/cp4waiops/nasm-app-disco-discovery
   - image: cp/cp4waiops/nasm-app-disco-log-collector
+  - image: cp/cp4waiops/nasm-appdisco-observer
   - image: cp/cp4waiops/nasm-app-disco-primarystorage
   - image: cp/cp4waiops/nasm-app-disco-secondarystorage
   - image: cp/cp4waiops/nasm-app-disco-services
   - image: cp/cp4waiops/nasm-app-disco-utils
-  - image: cp/cp4waiops/nasm-appdisco-observer
   - image: cp/cp4waiops/nasm-appdynamics-observer
   - image: cp/cp4waiops/nasm-aws-observer
   - image: cp/cp4waiops/nasm-azure-observer
@@ -77,6 +77,7 @@ images:
   - image: cp/cp4waiops/nasm-net-disco-config
   - image: cp/cp4waiops/nasm-net-disco-control
   - image: cp/cp4waiops/nasm-net-disco-fluentd
+  - image: cp/cp4waiops/nasm-netdisco-observer
   - image: cp/cp4waiops/nasm-net-disco-schema-registry
   - image: cp/cp4waiops/nasm-net-disco-security
   - image: cp/cp4waiops/nasm-net-disco-sidecar
@@ -86,7 +87,6 @@ images:
   - image: cp/cp4waiops/nasm-net-disco-topogram
   - image: cp/cp4waiops/nasm-net-disco-ubi-minimal
   - image: cp/cp4waiops/nasm-net-disco-worker
-  - image: cp/cp4waiops/nasm-netdisco-observer
   - image: cp/cp4waiops/nasm-newrelic-observer
   - image: cp/cp4waiops/nasm-nginx
   - image: cp/cp4waiops/nasm-observer-service
@@ -113,12 +113,12 @@ images:
   - image: cp/cp4waiops/netcool-qp-proxy-ee
   - image: cp/cp4waiops/netcool-webgui-asm-ee
   - image: cp/cp4waiops/node-server
+  - image: cp/cp4waiops/noiactions-service
   - image: cp/cp4waiops/noi-alert-action-service
   - image: cp/cp4waiops/noi-alert-trigger-service
   - image: cp/cp4waiops/noi-backuprestore-service
   - image: cp/cp4waiops/noi-metric-action-service
   - image: cp/cp4waiops/noi-metric-trigger-service
-  - image: cp/cp4waiops/noiactions-service
   - image: cp/cp4waiops/opencontent-redis-5
   - image: cp/cp4waiops/policy-registry-service
   - image: cp/cp4waiops/servicemonitor
@@ -179,11 +179,11 @@ images:
   - image: cp/noi/nasm-app-disco-discovery
   - image: cp/noi/nasm-app-disco-init
   - image: cp/noi/nasm-app-disco-log-collector
+  - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-app-disco-primarystorage
   - image: cp/noi/nasm-app-disco-secondarystorage
   - image: cp/noi/nasm-app-disco-services
   - image: cp/noi/nasm-app-disco-utils
-  - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-appdynamics-observer
   - image: cp/noi/nasm-aws-observer
   - image: cp/noi/nasm-azure-observer
@@ -214,6 +214,7 @@ images:
   - image: cp/noi/nasm-net-disco-config
   - image: cp/noi/nasm-net-disco-control
   - image: cp/noi/nasm-net-disco-fluentd
+  - image: cp/noi/nasm-netdisco-observer
   - image: cp/noi/nasm-net-disco-schema-registry
   - image: cp/noi/nasm-net-disco-schema-setup
   - image: cp/noi/nasm-net-disco-security
@@ -224,7 +225,6 @@ images:
   - image: cp/noi/nasm-net-disco-topogram
   - image: cp/noi/nasm-net-disco-ubi-minimal
   - image: cp/noi/nasm-net-disco-worker
-  - image: cp/noi/nasm-netdisco-observer
   - image: cp/noi/nasm-newrelic-observer
   - image: cp/noi/nasm-nginx
   - image: cp/noi/nasm-observer-service
@@ -259,6 +259,7 @@ images:
   - image: cp/noi/netcool-tls-proxy
   - image: cp/noi/netcool-webgui-asm-ee
   - image: cp/noi/node-server
+  - image: cp/noi/noiactions-service
   - image: cp/noi/noi-alert-action-service
   - image: cp/noi/noi-alert-trigger-service
   - image: cp/noi/noi-backuprestore-service
@@ -266,7 +267,6 @@ images:
   - image: cp/noi/noi-metric-trigger-service
   - image: cp/noi/noi-postgres-repl
   - image: cp/noi/noi-postgres-repl-manager
-  - image: cp/noi/noiactions-service
   - image: cp/noi/opencontent-minio
   - image: cp/noi/opencontent-minio-client
   - image: cp/noi/opencontent-redis-5

@@ -5,8 +5,8 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
-  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/edb-apimgmt
   - image: cp/cpd/edb-operator
   - image: cp/cpd/edb-postgresql-12
@@ -44,9 +44,9 @@ images:
   - image: cp/knowledge-studio/opencontent-mongodb-install
   - image: cp/knowledge-studio/opencontent-postgres-stolon
   - image: cp/knowledge-studio/sbsep
+  - image: cp/knowledge-studio/sireg
   - image: cp/knowledge-studio/sire-train-facade
   - image: cp/knowledge-studio/sire-train-runtime
-  - image: cp/knowledge-studio/sireg
   - image: cp/knowledge-studio/watson-gateway
   - image: cp/knowledge-studio/wks-ene-expand
   - image: cp/knowledge-studio/wks-glimpse-ene-builder
@@ -79,18 +79,18 @@ images:
   - image: us.icr.io/icp-common-components/watson-gateway
   - image: us.icr.io/knowledge_studio/dispatcher
   - image: us.icr.io/knowledge_studio/frontend-icp
+  - image: us.icr.io/knowledge_studio_rbr/aql-web-tooling
+  - image: us.icr.io/knowledge_studio_rbr/aql-web-tooling-proxy
   - image: us.icr.io/knowledge_studio/sbsep
   - image: us.icr.io/knowledge_studio/wks-ene-expand
   - image: us.icr.io/knowledge_studio/wks-glimpse-ene-builder
   - image: us.icr.io/knowledge_studio/wks-ibmjdk8-rhubi8
   - image: us.icr.io/knowledge_studio/wkstoolbox
-  - image: us.icr.io/knowledge_studio_rbr/aql-web-tooling
-  - image: us.icr.io/knowledge_studio_rbr/aql-web-tooling-proxy
   - image: us.icr.io/model-mesh/model-mesh
   - image: us.icr.io/watson-mnlp/jobq
+  - image: us.icr.io/watson-mnlp/sireg
   - image: us.icr.io/watson-mnlp/sire-train-facade
   - image: us.icr.io/watson-mnlp/sire-train-runtime
-  - image: us.icr.io/watson-mnlp/sireg
   - image: us.icr.io/watson-nlu/model-management-api
   - image: wks-docker-local.artifactory.swg-devops.com/wks-nosql-3
   - image: wks-docker-local.artifactory.swg-devops.com/wks-nosql-bats

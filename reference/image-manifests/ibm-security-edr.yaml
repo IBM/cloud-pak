@@ -12,8 +12,8 @@ images:
   - image: cp/cp4s/cp4s-backup-restore
   - image: cp/cp4s/cp4s-car-connector-config
   - image: cp/cp4s/cp4s-car-frontend-ui
-  - image: cp/cp4s/cp4s-couch-init
   - image: cp/cp4s/cp4s-couchdb
+  - image: cp/cp4s/cp4s-couch-init
   - image: cp/cp4s/cp4s-init-mod
   - image: cp/cp4s/cp4s-stolon
   - image: cp/cp4s/edge-gateway-stolon
@@ -145,12 +145,16 @@ images:
   - image: icr.io/cpopen/apicurio-registry-operator
   - image: icr.io/cpopen/apicurio-registry-operator-bundle
   - image: icr.io/cpopen/common-service-operator
-  - image: icr.io/cpopen/cp-serviceability-operator
-  - image: icr.io/cpopen/cp-serviceability-operator-bundle
+  - image: icr.io/cpopen/cp4s/apicurio-registry-kafkasql
+  - image: icr.io/cpopen/cp4s/apicurio-registry-mem
+  - image: icr.io/cpopen/cp4s/apicurio-registry-sql
   - image: icr.io/cpopen/cp4s-backuprestore-operator
   - image: icr.io/cpopen/cp4s-backuprestore-operator-bundle
+  - image: icr.io/cpopen/cp4s/busybox
   - image: icr.io/cpopen/cp4s-clx-operator
   - image: icr.io/cpopen/cp4s-clx-operator-bundle
+  - image: icr.io/cpopen/cp4s/cp4s-must-gather
+  - image: icr.io/cpopen/cp4s/cp-serviceability
   - image: icr.io/cpopen/cp4s-dashboard-operator
   - image: icr.io/cpopen/cp4s-dashboard-operator-bundle
   - image: icr.io/cpopen/cp4s-dataservices-operator
@@ -163,30 +167,6 @@ images:
   - image: icr.io/cpopen/cp4s-foundations-operator-bundle
   - image: icr.io/cpopen/cp4s-helper-operator
   - image: icr.io/cpopen/cp4s-helper-operator-bundle
-  - image: icr.io/cpopen/cp4s-middleware-operator
-  - image: icr.io/cpopen/cp4s-middleware-operator-bundle
-  - image: icr.io/cpopen/cp4s-platform-operator
-  - image: icr.io/cpopen/cp4s-platform-operator-bundle
-  - image: icr.io/cpopen/cp4s-reaqta-operator
-  - image: icr.io/cpopen/cp4s-reaqta-operator-bundle
-  - image: icr.io/cpopen/cp4s-riskmanager-operator
-  - image: icr.io/cpopen/cp4s-riskmanager-operator-bundle
-  - image: icr.io/cpopen/cp4s-sequences-operator
-  - image: icr.io/cpopen/cp4s-sequences-operator-bundle
-  - image: icr.io/cpopen/cp4s-soar-operator
-  - image: icr.io/cpopen/cp4s-soar-operator-bundle
-  - image: icr.io/cpopen/cp4s-threatinvestigator-operator
-  - image: icr.io/cpopen/cp4s-threatinvestigator-operator-bundle
-  - image: icr.io/cpopen/cp4s-tii-operator
-  - image: icr.io/cpopen/cp4s-tii-operator-bundle
-  - image: icr.io/cpopen/cp4s-truststore-operator
-  - image: icr.io/cpopen/cp4s-truststore-operator-bundle
-  - image: icr.io/cpopen/cp4s/apicurio-registry-kafkasql
-  - image: icr.io/cpopen/cp4s/apicurio-registry-mem
-  - image: icr.io/cpopen/cp4s/apicurio-registry-sql
-  - image: icr.io/cpopen/cp4s/busybox
-  - image: icr.io/cpopen/cp4s/cp-serviceability
-  - image: icr.io/cpopen/cp4s/cp4s-must-gather
   - image: icr.io/cpopen/cp4s/homer-edgeclient
   - image: icr.io/cpopen/cp4s/isc-car-connector-atp
   - image: icr.io/cpopen/cp4s/isc-car-connector-aws
@@ -206,7 +186,19 @@ images:
   - image: icr.io/cpopen/cp4s/isc-car-connector-tanium
   - image: icr.io/cpopen/cp4s/isc-car-connector-tenable
   - image: icr.io/cpopen/cp4s/isc-udi-edge-client
+  - image: icr.io/cpopen/cp4s-middleware-operator
+  - image: icr.io/cpopen/cp4s-middleware-operator-bundle
   - image: icr.io/cpopen/cp4s/openldap
+  - image: icr.io/cpopen/cp4s-platform-operator
+  - image: icr.io/cpopen/cp4s-platform-operator-bundle
+  - image: icr.io/cpopen/cp4s-reaqta-operator
+  - image: icr.io/cpopen/cp4s-reaqta-operator-bundle
+  - image: icr.io/cpopen/cp4s-riskmanager-operator
+  - image: icr.io/cpopen/cp4s-riskmanager-operator-bundle
+  - image: icr.io/cpopen/cp4s-sequences-operator
+  - image: icr.io/cpopen/cp4s-sequences-operator-bundle
+  - image: icr.io/cpopen/cp4s-soar-operator
+  - image: icr.io/cpopen/cp4s-soar-operator-bundle
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_arcsight
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_athena
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_aws_cloud_watch_logs
@@ -237,6 +229,10 @@ images:
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_splunk
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_stix_bundle
   - image: icr.io/cpopen/cp4s/stix_shifter_modules_sumologic
+  - image: icr.io/cpopen/cp4s-threatinvestigator-operator
+  - image: icr.io/cpopen/cp4s-threatinvestigator-operator-bundle
+  - image: icr.io/cpopen/cp4s-tii-operator
+  - image: icr.io/cpopen/cp4s-tii-operator-bundle
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_abuseipdb
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_alienvault_otx
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_apivoid
@@ -250,6 +246,8 @@ images:
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_threat_grid
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_threat_q
   - image: icr.io/cpopen/cp4s/tis_stix_shifter_modules_virus_total
+  - image: icr.io/cpopen/cp4s-truststore-operator
+  - image: icr.io/cpopen/cp4s-truststore-operator-bundle
   - image: icr.io/cpopen/cpfs/audit-garbage-collector
   - image: icr.io/cpopen/cpfs/audit-policy-controller
   - image: icr.io/cpopen/cpfs/audit-syslog-service
@@ -274,10 +272,12 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -287,8 +287,6 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/multi-instance-conversion
@@ -305,6 +303,8 @@ images:
   - image: icr.io/cpopen/cpfs/zen-influxdb-relay
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
+  - image: icr.io/cpopen/cp-serviceability-operator
+  - image: icr.io/cpopen/cp-serviceability-operator-bundle
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator

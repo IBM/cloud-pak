@@ -13,8 +13,8 @@ images:
   - image: cp/ai/wmlserving-controller
   - image: cp/cp4waiops/archiving-service
   - image: cp/cp4waiops/common-datarouting
-  - image: cp/cp4waiops/couchdb-manager
   - image: cp/cp4waiops/couchdb3
+  - image: cp/cp4waiops/couchdb-manager
   - image: cp/cp4waiops/datalayer-cem-service
   - image: cp/cp4waiops/dbreconciler-service
   - image: cp/cp4waiops/elastic-archiving-service
@@ -68,10 +68,10 @@ images:
   - image: cp/redis-proxylog-5.0.5
   - image: cp/redis-proxylog-5.0.9
   - image: cp/redis-proxylog-6.0.16
-  - image: ibmcom/couchdb-operator
-  - image: ibmcom/couchdb-operator-mgmt
   - image: ibmcom/couchdb2
   - image: ibmcom/couchdb3
+  - image: ibmcom/couchdb-operator
+  - image: ibmcom/couchdb-operator-mgmt
   - image: ibmcom/iaf-ai-operator
   - image: ibmcom/iaf-ai-operator-bundle
   - image: ibmcom/iaf-base-operator
@@ -118,11 +118,13 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -133,8 +135,6 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/multi-instance-conversion
@@ -165,15 +165,15 @@ images:
   - image: icr.io/cpopen/iaf-flink-operator-bundle
   - image: icr.io/cpopen/iaf-insights-engine-operator
   - image: icr.io/cpopen/iaf-insights-engine-operator-bundle
+  - image: icr.io/cpopen/ibm-aiops-ir-core-operator
+  - image: icr.io/cpopen/ibm-aiops-ir-core-operator-bundle
+  - image: icr.io/cpopen/ibm-aiops-ir-core-operator-catalog
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmlserving-operator-catalog
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-bundle
   - image: icr.io/cpopen/ibm-ai-wmltraining-operator-catalog
-  - image: icr.io/cpopen/ibm-aiops-ir-core-operator
-  - image: icr.io/cpopen/ibm-aiops-ir-core-operator-bundle
-  - image: icr.io/cpopen/ibm-aiops-ir-core-operator-catalog
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-automation-foundation-core-catalog
@@ -231,8 +231,8 @@ images:
   - image: quay.io/opencloudio/audit-syslog-service
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
-  - image: quay.io/opencloudio/couchdb-operator-mgmt
   - image: quay.io/opencloudio/couchdb3
+  - image: quay.io/opencloudio/couchdb-operator-mgmt
   - image: quay.io/opencloudio/dashboard-controller
   - image: quay.io/opencloudio/default-http-backend
   - image: quay.io/opencloudio/fluentd
@@ -284,8 +284,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -297,12 +297,14 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
@@ -313,8 +315,6 @@ images:
   - image: quay.io/opencloudio/icp-platform-api
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/icp4data-nginx-repo
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/must-gather

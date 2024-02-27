@@ -52,21 +52,21 @@ images:
   - image: cp/cpd/container-stunnel
   - image: cp/cpd/container-stunnel-init
   - image: cp/cpd/couchdb3
-  - image: cp/cpd/cp-daas-modeling-service
-  - image: cp/cpd/cp/cpd/streams-operations-el7
   - image: cp/cpd/cp4d-installer
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cp4d-ws-secrets-job
   - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
+  - image: cp/cpd/cp/cpd/streams-operations-el7
+  - image: cp/cpd/cp-daas-modeling-service
+  - image: cp/cpd/cpdctl
   - image: cp/cpd/cpd-dashboards-rsyslog
   - image: cp/cpd/cpd-onprem-smarts-kds
-  - image: cp/cpd/cpd-operator-init
-  - image: cp/cpd/cpd-sizing
-  - image: cp/cpd/cpdctl
   - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator-init
+  - image: cp/cpd/cpd-sizing
   - image: cp/cpd/daas-auth-metering
   - image: cp/cpd/daas-client-logger
   - image: cp/cpd/daas-cpd-jobs
@@ -85,7 +85,6 @@ images:
   - image: cp/cpd/dap-base-job-ppc64le
   - image: cp/cpd/dap-dashboards-api
   - image: cp/cpd/dap-dashboards-api-ppc64le
-  - image: cp/cpd/data-privacy
   - image: cp/cpd/dataconn-engine-opdiscovery
   - image: cp/cpd/dataconn-engine-service
   - image: cp/cpd/dataconn-engine-spark-cluster
@@ -96,16 +95,17 @@ images:
   - image: cp/cpd/datagate-init
   - image: cp/cpd/datagate-server
   - image: cp/cpd/datagate-ui
+  - image: cp/cpd/data-privacy
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dataview-secrets-job
   - image: cp/cpd/db2u
-  - image: cp/cpd/db2u-operator
   - image: cp/cpd/db2u.auxiliary.auth
   - image: cp/cpd/db2u.bigsql.mariadb
   - image: cp/cpd/db2u.db2client.workload
   - image: cp/cpd/db2u.graph
   - image: cp/cpd/db2u.hurricane
   - image: cp/cpd/db2u.instdb
+  - image: cp/cpd/db2u-operator
   - image: cp/cpd/db2u.rest
   - image: cp/cpd/db2u.tools
   - image: cp/cpd/dc-main
@@ -147,10 +147,10 @@ images:
   - image: cp/cpd/dv-unifiedconsole
   - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/elasticsearch
-  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
+  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/etcd
   - image: cp/cpd/etcd-db-3.2.7
@@ -173,10 +173,10 @@ images:
   - image: cp/cpd/explainability
   - image: cp/cpd/fdb-apple-foundationdb
   - image: cp/cpd/fdb-apple-foundationdb-sidecar
+  - image: cp/cpd/fdbcontroller
   - image: cp/cpd/fdb-ibm-backup-agent
   - image: cp/cpd/fdb-ibm-restore-agent
   - image: cp/cpd/fdb-kubernetes-operator
-  - image: cp/cpd/fdbcontroller
   - image: cp/cpd/fdbrestore
   - image: cp/cpd/finley
   - image: cp/cpd/finley-public
@@ -251,9 +251,9 @@ images:
   - image: cp/cpd/influxdb
   - image: cp/cpd/influxdb_alpine
   - image: cp/cpd/instascan-ap-analysis-service
+  - image: cp/cpd/instascan-api-server
   - image: cp/cpd/instascan-ap-service
   - image: cp/cpd/instascan-ap-tika
-  - image: cp/cpd/instascan-api-server
   - image: cp/cpd/instascan-doc-preview-service
   - image: cp/cpd/instascan-ds-manager
   - image: cp/cpd/instascan-nginx
@@ -265,12 +265,12 @@ images:
   - image: cp/cpd/is-en-compute-image
   - image: cp/cpd/is-engine-image
   - image: cp/cpd/is-services-image
-  - image: cp/cpd/job-trigger
-  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-api-ppc64le
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/jobs-ui-ppc64le
+  - image: cp/cpd/job-trigger
+  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jupyter-notebooks-converter
   - image: cp/cpd/kafka-ubi
   - image: cp/cpd/kafka-ubi7-x86_64
@@ -327,10 +327,10 @@ images:
   - image: cp/cpd/metrics-compute-manager
   - image: cp/cpd/mlrepositoryservicehydra
   - image: cp/cpd/mlrepositoryservicehydra-ppc64le-ubi
+  - image: cp/cpd/modeler-flow-api
   - image: cp/cpd/model-operation-service-scheduling
   - image: cp/cpd/model-risk-management
   - image: cp/cpd/model_viewer
-  - image: cp/cpd/modeler-flow-api
   - image: cp/cpd/mongodb-enterprise-database
   - image: cp/cpd/mongodb-enterprise-operator
   - image: cp/cpd/ngp-projects-api
@@ -370,14 +370,14 @@ images:
   - image: cp/cpd/portal-notifications-ppc64le
   - image: cp/cpd/portal-pipelines
   - image: cp/cpd/portal-projects
-  - image: cp/cpd/post-install-repo-cams-assettype
-  - image: cp/cpd/post-install-repo-cams-assettype-ppc
   - image: cp/cpd/postgresql
   - image: cp/cpd/postgresql-db-10.7
   - image: cp/cpd/postgresql-mgmt-10.7
   - image: cp/cpd/postgresql-portal-10.7
   - image: cp/cpd/postgresql-portalmgmt-10.7
   - image: cp/cpd/postgresql-telemetry-10.7
+  - image: cp/cpd/post-install-repo-cams-assettype
+  - image: cp/cpd/post-install-repo-cams-assettype-ppc
   - image: cp/cpd/pre-upgrade-repo-cams-assets
   - image: cp/cpd/privatecloud-dsx-hi-proxy
   - image: cp/cpd/privatecloud-haproxy
@@ -523,9 +523,6 @@ images:
   - image: cp/cpd/wml-batch-runtimes-spss18.1-ppc64le-ubi
   - image: cp/cpd/wml-configurable-http-proxy
   - image: cp/cpd/wml-cp4d-3.5-upgrade
-  - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
-  - image: cp/cpd/wml-dep-rt23-1-ms
-  - image: cp/cpd/wml-dep-rt23-1-r42-ms
   - image: cp/cpd/wml-deployment-agent
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
@@ -537,6 +534,9 @@ images:
   - image: cp/cpd/wml-deployment-runtime-py39-1
   - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
+  - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
+  - image: cp/cpd/wml-dep-rt23-1-ms
+  - image: cp/cpd/wml-dep-rt23-1-r42-ms
   - image: cp/cpd/wml-edi-imd
   - image: cp/cpd/wml-edi-isd
   - image: cp/cpd/wml-edi-kernel
@@ -572,16 +572,18 @@ images:
   - image: cp/cpd/wml-post-upgrade-cleanup-deployments
   - image: cp/cpd/wml-preinstall-secret
   - image: cp/cpd/wml-preinstall-secret-ppc
+  - image: cp/cpd/wmlproxyservice-ubi
   - image: cp/cpd/wml-python-client
+  - image: cp/cpd/wmlrepositoryv4
   - image: cp/cpd/wml-rt-ac201903-py368-g1
   - image: cp/cpd/wml-rt-ac201903-py368-g2
   - image: cp/cpd/wml-rt-ac201903-py368-g3
   - image: cp/cpd/wml-rt-ac201903-r36-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.0-py3612-g1
-  - image: cp/cpd/wml-rt-autoai_kb_3.1-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.1-py379-g1
-  - image: cp/cpd/wml-rt-autoai_kb_3.2-py37-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.1-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.2-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.2-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.3-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.4-py38-g1
   - image: cp/cpd/wml-rt-autoai_ts_3.1-py37-g1
@@ -592,10 +594,10 @@ images:
   - image: cp/cpd/wml-rt-init-dep-service-py
   - image: cp/cpd/wml-rt-mc3-py310-g1-ms
   - image: cp/cpd/wml-rt-mc3-py368-g2
-  - image: cp/cpd/wml-rt-mc3-py37-g1-ms
-  - image: cp/cpd/wml-rt-mc3-py37-g2-ms
   - image: cp/cpd/wml-rt-mc3-py379-g1
   - image: cp/cpd/wml-rt-mc3-py379-g2
+  - image: cp/cpd/wml-rt-mc3-py37-g1-ms
+  - image: cp/cpd/wml-rt-mc3-py37-g2-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms-shadow
   - image: cp/cpd/wml-rt-mc3-py39-g1-ms
@@ -610,6 +612,8 @@ images:
   - image: cp/cpd/wml-rt-r42-py39-g1
   - image: cp/cpd/wml-rt-rshiny0.1
   - image: cp/cpd/wml-rt-rshiny0.1-r4.2
+  - image: cp/cpd/wmltrainingservicehydra
+  - image: cp/cpd/wmltrainingservicehydra-ppc64le-ubi
   - image: cp/cpd/wml-ubi-ppc-ac201903-py368-g2-rt
   - image: cp/cpd/wml-ubi-ppc-ac201903-py368-g3-rt
   - image: cp/cpd/wml-ubi-ppc-autoai_kb_3.0-py3612-g1-rt
@@ -623,11 +627,6 @@ images:
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.1-py379-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py368-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py379-g1-rt
-  - image: cp/cpd/wmlproxyservice-ubi
-  - image: cp/cpd/wmlrepositoryv4
-  - image: cp/cpd/wmltrainingservicehydra
-  - image: cp/cpd/wmltrainingservicehydra-ppc64le-ubi
-  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/wslocal-init-222-py
   - image: cp/cpd/wslocal-init-222-pygpu
   - image: cp/cpd/wslocal-init-222-r
@@ -692,6 +691,7 @@ images:
   - image: cp/cpd/wslocal-x86-runtime-python36
   - image: cp/cpd/wslocal-x86-runtime-r36
   - image: cp/cpd/wslocal-x86-runtime-rstudio
+  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/wsp-kubectl
   - image: cp/cpd/wsp-ts
   - image: cp/cpd/zen-admin
@@ -699,7 +699,6 @@ images:
   - image: cp/cpd/zen-content
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
-  - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-database-core
   - image: cp/cpd/zen-databases
   - image: cp/cpd/zen-databases-catalog-db2aaservice
@@ -708,9 +707,10 @@ images:
   - image: cp/cpd/zen-databases-catalog-db2wh
   - image: cp/cpd/zen-databases-catalog-mongodb
   - image: cp/cpd/zen-databases-catalog-postgresql
+  - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-meta-couchdb
-  - image: cp/cpd/zen-metastore-db
   - image: cp/cpd/zen-metastoredb
+  - image: cp/cpd/zen-metastore-db
   - image: cp/cpd/zen-watchdog
   - image: cp/cpd/zookeeper-ubi
   - image: cp/cpd/zookeeper-ubi7-x86_64
@@ -836,11 +836,13 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -851,8 +853,6 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/im-initcontainer
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
@@ -873,7 +873,6 @@ images:
   - image: icr.io/cpopen/cpfs/zen-utils
   - image: icr.io/cpopen/cpfs/zen-watchdog
   - image: icr.io/cpopen/db2u-day2-operator
-  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/db2u/db2u
   - image: icr.io/cpopen/db2u/db2u.auxiliary.auth
   - image: icr.io/cpopen/db2u/db2u.dv.api
@@ -892,6 +891,7 @@ images:
   - image: icr.io/cpopen/db2u/db2u.veleroplugin
   - image: icr.io/cpopen/db2u/db2u.watsonquery
   - image: icr.io/cpopen/db2u/etcd
+  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/ds-ent-operator
   - image: icr.io/cpopen/ds-ent-operator-bundle
   - image: icr.io/cpopen/ds-ent-operator-catalog
@@ -915,12 +915,12 @@ images:
   - image: icr.io/cpopen/ibm-common-service-operator-bundle
   - image: icr.io/cpopen/ibm-commonui-operator
   - image: icr.io/cpopen/ibm-commonui-operator-bundle
-  - image: icr.io/cpopen/ibm-cp-data-operator
-  - image: icr.io/cpopen/ibm-cp-data-operator-bundle
-  - image: icr.io/cpopen/ibm-cp-data-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator
   - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-catalog
+  - image: icr.io/cpopen/ibm-cp-data-operator
+  - image: icr.io/cpopen/ibm-cp-data-operator-bundle
+  - image: icr.io/cpopen/ibm-cp-data-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-bigsql-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-bigsql-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
@@ -982,13 +982,13 @@ images:
   - image: icr.io/cpopen/ibm-cpd-ws-operator
   - image: icr.io/cpopen/ibm-cpd-ws-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-operator-catalog
+  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator
+  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator-bundle
+  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-bundle
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-catalog
   - image: icr.io/cpopen/ibm-cpd-ws-runtimes-operator-fcc
-  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator
-  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator-bundle
-  - image: icr.io/cpopen/ibm-cpd-wspipelines-operator-catalog
   - image: icr.io/cpopen/ibm-crossplane-operator
   - image: icr.io/cpopen/ibm-crossplane-operator-bundle
   - image: icr.io/cpopen/ibm-crossplane-provider-ibm-cloud-operator
@@ -1140,8 +1140,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -1153,12 +1153,14 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
@@ -1169,11 +1171,9 @@ images:
   - image: quay.io/opencloudio/icp-platform-api
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/icp4data-nginx-repo
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller

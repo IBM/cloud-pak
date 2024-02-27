@@ -11,8 +11,8 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
-  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator
+  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/edb-apimgmt
   - image: cp/cpd/edb-operator
   - image: cp/cpd/edb-postgres-license-provider
@@ -116,9 +116,9 @@ images:
   - image: cp/watson-assistant/assistant-operator
   - image: cp/watson-assistant/clu-controller
   - image: cp/watson-assistant/clu-embedding-service
+  - image: cp/watson-assistant/clu_embedding_service
   - image: cp/watson-assistant/clu-serving
   - image: cp/watson-assistant/clu-training
-  - image: cp/watson-assistant/clu_embedding_service
   - image: cp/watson-assistant/conan-tools
   - image: cp/watson-assistant/dead-letter-sink
   - image: cp/watson-assistant/dialog
@@ -280,8 +280,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -291,12 +291,14 @@ images:
   - image: quay.io/opencloudio/ibm-secretshare-operator
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
@@ -307,8 +309,6 @@ images:
   - image: quay.io/opencloudio/icp-platform-api
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/icp4data-nginx-repo
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
   - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/must-gather

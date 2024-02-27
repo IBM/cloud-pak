@@ -9,10 +9,10 @@ images:
   - image: cp/cpd/core-tests
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cpd-addon
-  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/cpdoperator
-  - image: cp/cpd/data-preprocessing-mtworkflow
+  - image: cp/cpd/cpd-operator-init
   - image: cp/cpd/databroker-s3
+  - image: cp/cpd/data-preprocessing-mtworkflow
   - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/elasticsearch-curator
   - image: cp/cpd/event-grouping
@@ -103,11 +103,11 @@ images:
   - image: cp/noi/nasm-app-disco-discovery
   - image: cp/noi/nasm-app-disco-init
   - image: cp/noi/nasm-app-disco-log-collector
+  - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-app-disco-primarystorage
   - image: cp/noi/nasm-app-disco-secondarystorage
   - image: cp/noi/nasm-app-disco-services
   - image: cp/noi/nasm-app-disco-utils
-  - image: cp/noi/nasm-appdisco-observer
   - image: cp/noi/nasm-appdynamics-observer
   - image: cp/noi/nasm-aws-observer
   - image: cp/noi/nasm-azure-observer
@@ -138,6 +138,7 @@ images:
   - image: cp/noi/nasm-net-disco-config
   - image: cp/noi/nasm-net-disco-control
   - image: cp/noi/nasm-net-disco-fluentd
+  - image: cp/noi/nasm-netdisco-observer
   - image: cp/noi/nasm-net-disco-schema-registry
   - image: cp/noi/nasm-net-disco-schema-setup
   - image: cp/noi/nasm-net-disco-security
@@ -148,7 +149,6 @@ images:
   - image: cp/noi/nasm-net-disco-topogram
   - image: cp/noi/nasm-net-disco-ubi-minimal
   - image: cp/noi/nasm-net-disco-worker
-  - image: cp/noi/nasm-netdisco-observer
   - image: cp/noi/nasm-newrelic-observer
   - image: cp/noi/nasm-nginx
   - image: cp/noi/nasm-observer-service
@@ -183,6 +183,7 @@ images:
   - image: cp/noi/netcool-tls-proxy
   - image: cp/noi/netcool-webgui-asm-ee
   - image: cp/noi/node-server
+  - image: cp/noi/noiactions-service
   - image: cp/noi/noi-alert-action-service
   - image: cp/noi/noi-alert-trigger-service
   - image: cp/noi/noi-backuprestore-service
@@ -190,7 +191,6 @@ images:
   - image: cp/noi/noi-metric-trigger-service
   - image: cp/noi/noi-postgres-repl
   - image: cp/noi/noi-postgres-repl-manager
-  - image: cp/noi/noiactions-service
   - image: cp/noi/opencontent-minio
   - image: cp/noi/opencontent-minio-client
   - image: cp/noi/opencontent-redis-5

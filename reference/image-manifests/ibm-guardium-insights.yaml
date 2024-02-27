@@ -29,12 +29,12 @@ images:
   - image: cp/ibm-guardium-insights/compliance-accelerator
   - image: cp/ibm-guardium-insights/configuration
   - image: cp/ibm-guardium-insights/connections
-  - image: cp/ibm-guardium-insights/cp-serviceability
   - image: cp/ibm-guardium-insights/cp4s-stolon
+  - image: cp/ibm-guardium-insights/cp-serviceability
   - image: cp/ibm-guardium-insights/dashboards
   - image: cp/ibm-guardium-insights/data-bootstrapper
-  - image: cp/ibm-guardium-insights/data-retention
   - image: cp/ibm-guardium-insights/datamart-processor
+  - image: cp/ibm-guardium-insights/data-retention
   - image: cp/ibm-guardium-insights/db2-store
   - image: cp/ibm-guardium-insights/db2u
   - image: cp/ibm-guardium-insights/db2u.auxiliary.auth
@@ -154,11 +154,13 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -169,8 +171,6 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/multi-instance-conversion
@@ -188,7 +188,6 @@ images:
   - image: icr.io/cpopen/cpfs/zen-metastoredb
   - image: icr.io/cpopen/cpfs/zen-watchdog
   - image: icr.io/cpopen/db2u-day2-operator
-  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/db2u/db2u
   - image: icr.io/cpopen/db2u/db2u.auxiliary.auth
   - image: icr.io/cpopen/db2u/db2u.dv.api
@@ -207,6 +206,7 @@ images:
   - image: icr.io/cpopen/db2u/db2u.veleroplugin
   - image: icr.io/cpopen/db2u/db2u.watsonquery
   - image: icr.io/cpopen/db2u/etcd
+  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator
   - image: icr.io/cpopen/ibm-auditlogging-operator-bundle
   - image: icr.io/cpopen/ibm-cert-manager-operator
@@ -228,11 +228,11 @@ images:
   - image: icr.io/cpopen/ibm-db2uoperator-catalog
   - image: icr.io/cpopen/ibm-events-operator
   - image: icr.io/cpopen/ibm-events-operator-bundle
+  - image: icr.io/cpopen/ibm-guardium-insights/cp-serviceability
+  - image: icr.io/cpopen/ibm-guardium-insights/mongo
   - image: icr.io/cpopen/ibm-guardium-insights-operator
   - image: icr.io/cpopen/ibm-guardium-insights-operator-bundle
   - image: icr.io/cpopen/ibm-guardium-insights-operator-catalog
-  - image: icr.io/cpopen/ibm-guardium-insights/cp-serviceability
-  - image: icr.io/cpopen/ibm-guardium-insights/mongo
   - image: icr.io/cpopen/ibm-healthcheck-operator
   - image: icr.io/cpopen/ibm-healthcheck-operator-bundle
   - image: icr.io/cpopen/ibm-iam-operator
@@ -346,8 +346,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
+  - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -359,12 +359,14 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
+  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
@@ -376,11 +378,9 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
-  - image: quay.io/opencloudio/icp4data-nginx-repo
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/kubectl
+  - image: quay.io/opencloudio/kube-state-metrics
   - image: quay.io/opencloudio/must-gather
   - image: quay.io/opencloudio/must-gather-service
   - image: quay.io/opencloudio/nginx-ingress-controller

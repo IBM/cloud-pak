@@ -1,26 +1,16 @@
 source: ibm-watson-ai-manager-case-bundle/case/ibm-watson-ai-manager/case.yaml
 description: "AI Manager - IBM Cloud Pak for AIOps provides holistic insights that help prioritize issues and resolution efforts that take place in ever-evolving hybrid cloud and traditional IT environments. It identifies and gathers signals across a variety of structured and unstructured data channels, including alerts, logs, and tickets."
 images:
-  - image: /ai-platform-api-server
   - image: /aiops-api
+  - image: /ai-platform-api-server
   - image: /alert-localization
   - image: /change-risk
   - image: /chatops-orchestrator
   - image: /chatops-slack-integrator
   - image: /chatops-teams-integrator
   - image: /connection-manager
-  - image: /elasticsearch-curator
-  - image: /event-grouping
-  - image: /event-grouping_modeltrain
-  - image: /flink-core
-  - image: /log-anomaly
-  - image: /log-anomaly-training
-  - image: /persistence-service
-  - image: /similar-incidents-service
-  - image: /similar-incidents-training
-  - image: /topology
-  - image: cp/cp4waiops/ai-platform-api-server
   - image: cp/cp4waiops/aiops-api
+  - image: cp/cp4waiops/ai-platform-api-server
   - image: cp/cp4waiops/alert-localization
   - image: cp/cp4waiops/change-risk
   - image: cp/cp4waiops/chatops-orchestrator
@@ -28,8 +18,8 @@ images:
   - image: cp/cp4waiops/chatops-teams-integrator
   - image: cp/cp4waiops/connection-manager
   - image: cp/cp4waiops/coordinator
-  - image: cp/cp4waiops/data-quality-checker
   - image: cp/cp4waiops/databroker-s3
+  - image: cp/cp4waiops/data-quality-checker
   - image: cp/cp4waiops/elasticsearch-curator
   - image: cp/cp4waiops/event-gateway-messagebus
   - image: cp/cp4waiops/event-grouping
@@ -70,10 +60,10 @@ images:
   - image: cp/ibm-watson-ai-manager/coordinator
   - image: cp/ibm-watson-ai-manager/cp4d-tiller
   - image: cp/ibm-watson-ai-manager/cpd-addon
-  - image: cp/ibm-watson-ai-manager/cpd-operator-init
   - image: cp/ibm-watson-ai-manager/cpdoperator
-  - image: cp/ibm-watson-ai-manager/data-preprocessing-mtworkflow
+  - image: cp/ibm-watson-ai-manager/cpd-operator-init
   - image: cp/ibm-watson-ai-manager/databroker-s3
+  - image: cp/ibm-watson-ai-manager/data-preprocessing-mtworkflow
   - image: cp/ibm-watson-ai-manager/elasticsearch-curator
   - image: cp/ibm-watson-ai-manager/event-grouping
   - image: cp/ibm-watson-ai-manager/event-grouping_modeltrain
@@ -109,9 +99,19 @@ images:
   - image: cp/ibm-watson-ai-manager/zen-data-sorcerer
   - image: cp/ibm-watson-ai-manager/zen-metastoredb
   - image: cp/ibm-watson-ai-manager/zen-watchdog
+  - image: /elasticsearch-curator
+  - image: /event-grouping
+  - image: /event-grouping_modeltrain
+  - image: /flink-core
   - image: ibmcom/ibm-watson-ai-manager-operator
   - image: ibmcom/ibm-watson-ai-manager-operator-bundle
   - image: ibmcom/ibm-watson-ai-manager-operator-catalog
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator-bundle
   - image: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog
+  - image: /log-anomaly
+  - image: /log-anomaly-training
+  - image: /persistence-service
+  - image: /similar-incidents-service
+  - image: /similar-incidents-training
+  - image: /topology
