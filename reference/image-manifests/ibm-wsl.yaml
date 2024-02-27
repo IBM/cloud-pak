@@ -2,7 +2,6 @@ source: ibm-wsl-bundle/case/ibm-wsl/case.yaml
 description: "Watson Studio Local"
 images:
   - image: asset-files-api
-  - image: cp4d-ws-secrets-job
   - image: cp/cpd/ailc-kubectl
   - image: cp/cpd/aios-kubectl
   - image: cp/cpd/asset-files-api
@@ -15,8 +14,8 @@ images:
   - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cp4d-ws-secrets-job
   - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
-  - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/cpdoperator
   - image: cp/cpd/dap-base-job
   - image: cp/cpd/dap-base-job-ppc64le
   - image: cp/cpd/dap-dashboards-api
@@ -26,10 +25,10 @@ images:
   - image: cp/cpd/dc-main
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
-  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/event-logger-api-ppc64le
@@ -37,12 +36,12 @@ images:
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/job-trigger
+  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-api-ppc64le
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/jobs-ui-ppc64le
-  - image: cp/cpd/job-trigger
-  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jupyter-notebooks-converter
   - image: cp/cpd/model_viewer
   - image: cp/cpd/ngp-projects-api
@@ -103,6 +102,7 @@ images:
   - image: cp/cpd/wml-main
   - image: cp/cpd/wml-main-ppc64le
   - image: cp/cpd/wmlrepositoryv4
+  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/wslocal-init-222-py
   - image: cp/cpd/wslocal-init-222-pygpu
   - image: cp/cpd/wslocal-init-222-r
@@ -158,7 +158,6 @@ images:
   - image: cp/cpd/wslocal-x86-runtime-py37cuda
   - image: cp/cpd/wslocal-x86-runtime-py37main
   - image: cp/cpd/wslocal-x86-runtime-r36
-  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
@@ -185,6 +184,7 @@ images:
   - image: cp/opencontent-os-base-plugins-2.x
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
+  - image: cp4d-ws-secrets-job
   - image: dap-dashboards-api
   - image: icp4data-nginx-repo
   - image: icr.io/cpopen/ibm-cpd-ccs-operator
@@ -203,9 +203,9 @@ images:
   - image: icr.io/cpopen/opencontent-elasticsearch-operator
   - image: icr.io/cpopen/opencontent-elasticsearch-operator-bundle
   - image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog
+  - image: job-trigger
   - image: jobs-api
   - image: jobs-ui
-  - image: job-trigger
   - image: library/dsx-requisite
   - image: library/haproxy
   - image: library/model_viewer

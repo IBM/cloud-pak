@@ -51,6 +51,7 @@ images:
   - image: cp/cp4a/bas/solution-server
   - image: cp/cp4a/bas/solution-server-helmjob-db
   - image: cp/cp4a/bas/workflow-authoring
+  - image: cp/cp4a/baw-operator-bundle
   - image: cp/cp4a/baw/bui-task-prioritization
   - image: cp/cp4a/baw/dba-dbcompatibility-initcontainer
   - image: cp/cp4a/baw/dba-etcd
@@ -60,7 +61,6 @@ images:
   - image: cp/cp4a/baw/iaws-ibm-workplace
   - image: cp/cp4a/baw/iaws-ps-content-integration
   - image: cp/cp4a/baw/jms
-  - image: cp/cp4a/baw-operator-bundle
   - image: cp/cp4a/baw/pfs-bpd-database-init-prod
   - image: cp/cp4a/baw/pfs-elasticsearch-prod
   - image: cp/cp4a/baw/pfs-init-prod
@@ -279,8 +279,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -292,7 +292,6 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
-  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-catalog-ui
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
@@ -300,7 +299,6 @@ images:
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-elasticsearch-oss
   - image: quay.io/opencloudio/icp-filebeat-oss
   - image: quay.io/opencloudio/icp-helm-api
@@ -319,10 +317,12 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/indices-cleaner
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/logging-pki-init
   - image: quay.io/opencloudio/metering-data-manager
   - image: quay.io/opencloudio/metering-mcmui

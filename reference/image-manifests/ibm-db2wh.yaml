@@ -4,8 +4,8 @@ images:
   - image: cp/cpd/cp4d-tiller
   - image: cp/cpd/cp4d-tiller-3.5.4
   - image: cp/cpd/cp4d-tiller-ubi8
-  - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/cpdoperator
   - image: cp/cpd/db2u
   - image: cp/cpd/db2u.auxiliary.auth
   - image: cp/cpd/db2u.bigsql.mariadb
@@ -22,10 +22,10 @@ images:
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
+  - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-database-core
   - image: cp/cpd/zen-databases
   - image: cp/cpd/zen-databases-catalog-db2wh
-  - image: cp/cpd/zen-data-sorcerer
   - image: cp/cpd/zen-metastoredb
   - image: cp/cpd/zen-watchdog
   - image: cp/db2u
@@ -52,6 +52,7 @@ images:
   - image: ibmcom/ibm-db2uoperator-catalog
   - image: icp4data-nginx-repo
   - image: icr.io/cpopen/db2u-day2-operator
+  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/db2u/db2u
   - image: icr.io/cpopen/db2u/db2u.auxiliary.auth
   - image: icr.io/cpopen/db2u/db2u.dv.api
@@ -70,7 +71,6 @@ images:
   - image: icr.io/cpopen/db2u/db2u.veleroplugin
   - image: icr.io/cpopen/db2u/db2u.watsonquery
   - image: icr.io/cpopen/db2u/etcd
-  - image: icr.io/cpopen/db2u-operator
   - image: icr.io/cpopen/ibm-db2uoperator-bundle
   - image: icr.io/cpopen/ibm-db2uoperator-catalog
   - image: icr.io/cpopen/ibm-db2wh-cp4d-operator

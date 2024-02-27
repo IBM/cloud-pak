@@ -30,11 +30,11 @@ images:
   - image: cp/wiotp/api-state
   - image: cp/wiotp/api-status
   - image: cp/wiotp/auth-store
-  - image: cp/wiotp/cassandramodel-auth
-  - image: cp/wiotp/cassandramodel-state
   - image: cp/wiotp/cassandra-openshift
   - image: cp/wiotp/cassandra-operator
   - image: cp/wiotp/cassandra-user-setup
+  - image: cp/wiotp/cassandramodel-auth
+  - image: cp/wiotp/cassandramodel-state
   - image: cp/wiotp/config-store
   - image: cp/wiotp/connectors-store
   - image: cp/wiotp/data-import-connector
@@ -51,8 +51,8 @@ images:
   - image: cp/wiotp/deprovagent-registry
   - image: cp/wiotp/deprovagent-state
   - image: cp/wiotp/deprovagent-webui
-  - image: cp/wiotp/devicemgmt-server
   - image: cp/wiotp/device-store
+  - image: cp/wiotp/devicemgmt-server
   - image: cp/wiotp/entity-connector
   - image: cp/wiotp/entity-manager
   - image: cp/wiotp/functionsexecutor
@@ -96,8 +96,8 @@ images:
   - image: cp/wiotp/iot-registry-operator
   - image: cp/wiotp/iot-state-operator
   - image: cp/wiotp/iot-webui-operator
-  - image: cp/wiotp/iot-workspaceagent
   - image: cp/wiotp/iot-workspace-operator
+  - image: cp/wiotp/iot-workspaceagent
   - image: cp/wiotp/kafkamodel-actions
   - image: cp/wiotp/kafkamodel-auth
   - image: cp/wiotp/kafkamodel-fpl
@@ -127,10 +127,10 @@ images:
   - image: cp/wiotp/mqtt-connector
   - image: cp/wiotp/msproxy
   - image: cp/wiotp/msproxy-monitor
+  - image: cp/wiotp/org-store
   - image: cp/wiotp/orgdeprovmgr
   - image: cp/wiotp/orgpoolmgr
   - image: cp/wiotp/orgprovmgr
-  - image: cp/wiotp/org-store
   - image: cp/wiotp/pipeline-monitorsync
   - image: cp/wiotp/pipelinerouter
   - image: cp/wiotp/provagent-guardian
@@ -141,7 +141,7 @@ images:
   - image: cp/wiotp/state-updater
   - image: cp/wiotp/statsd
   - image: cp/wiotp/ui-dashboard
-  - image: icr.io/cpopen/ibm-mas/edgedatacollector
   - image: icr.io/cpopen/ibm-mas-iot
   - image: icr.io/cpopen/ibm-mas-iot-operator-bundle
   - image: icr.io/cpopen/ibm-mas-iot-operator-catalog
+  - image: icr.io/cpopen/ibm-mas/edgedatacollector

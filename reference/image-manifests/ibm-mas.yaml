@@ -36,10 +36,10 @@ images:
   - image: cp/datadictionary/kitt-v3-series-store
   - image: cp/datadictionary/kitt-v3-user-store
   - image: cp/datadictionary/kitt-v3-wiot-connector
-  - image: cp/health/healthadmin
-  - image: cp/health/healthfinal
   - image: cp/health/health-usersyncagent
   - image: cp/health/health-workspaceagent
+  - image: cp/health/healthadmin
+  - image: cp/health/healthfinal
   - image: cp/health/hook-ca-health
   - image: cp/health/hook-preinstall-health
   - image: cp/manage/bdi
@@ -71,18 +71,24 @@ images:
   - image: cp/manage/ibm-mas-manage-ws
   - image: cp/manage/image-stitching
   - image: cp/manage/maf-tools
-  - image: cp/manage/manageadmin
   - image: cp/manage/manage-groupsyncagent
   - image: cp/manage/manage-usersyncagent
+  - image: cp/manage/manageadmin
   - image: cp/manage/maxloader
   - image: cp/manage/monitoragent
   - image: cp/manage/ubi-wlp-jms-manage
   - image: cp/manage/ubi-wlp-manage
+  - image: cp/mas-hputilities/hook-ca-hputilities
+  - image: cp/mas-hputilities/hpu-monitor
+  - image: cp/mas-hputilities/hputilities-model-engine
+  - image: cp/mas-hputilities/hputilities-model-engines
+  - image: cp/mas-hputilities/hputilities-workspaceagent
+  - image: cp/mas-hputilities/ibm-mas-hputilities-ws
   - image: cp/mas/accapppoints
   - image: cp/mas/admin-dashboard
-  - image: cp/mas/adoptionusageapi
   - image: cp/mas/adoptionusage-metering
   - image: cp/mas/adoptionusage-reporter
+  - image: cp/mas/adoptionusageapi
   - image: cp/mas/api-licensing
   - image: cp/mas/appsuite-operator
   - image: cp/mas/assist-operator
@@ -104,12 +110,6 @@ images:
   - image: cp/mas/hook-routes
   - image: cp/mas/hook-sls-migration
   - image: cp/mas/hook-trackdeploy
-  - image: cp/mas-hputilities/hook-ca-hputilities
-  - image: cp/mas-hputilities/hpu-monitor
-  - image: cp/mas-hputilities/hputilities-model-engine
-  - image: cp/mas-hputilities/hputilities-model-engines
-  - image: cp/mas-hputilities/hputilities-workspaceagent
-  - image: cp/mas-hputilities/ibm-mas-hputilities-ws
   - image: cp/mas/hputilities-operator
   - image: cp/mas/ibm-mas-addons
   - image: cp/mas/ibm-mas-cfg-bas
@@ -152,21 +152,21 @@ images:
   - image: cp/mas/workspace-coordinator
   - image: cp/monitor/as-library
   - image: cp/monitor/as-ui
+  - image: cp/monitor/db-base
   - image: cp/monitor/db2-dataingest-datameter
   - image: cp/monitor/db2-dataingest-inputerrorprocessor
   - image: cp/monitor/db2-dataingest-inputprocessor
   - image: cp/monitor/db2-dataingest-outputerrorprocessor
   - image: cp/monitor/db2-dataingest-outputprocessor
   - image: cp/monitor/db2-dataingest-usagereport
-  - image: cp/monitor/db-base
   - image: cp/monitor/entityid-population
   - image: cp/monitor/ft-datamapping
   - image: cp/monitor/hook-ca-monitor
   - image: cp/monitor/hook-db-monitor
   - image: cp/monitor/ibm-mas-monitor-ws
   - image: cp/monitor/monitor-workspaceagent
-  - image: cp/monitor/pipeline2-sync-scheduler
   - image: cp/monitor/pipeline-engine
+  - image: cp/monitor/pipeline2-sync-scheduler
   - image: cp/monitor/rest-datalake
   - image: cp/monitor/rest-dscmanager
   - image: cp/monitor/rest-kpi
@@ -220,8 +220,8 @@ images:
   - image: cp/visualinspection/vision-dnn-custom-deploy
   - image: cp/visualinspection/vision-dnn-deploy
   - image: cp/visualinspection/vision-dnn-detectron
-  - image: cp/visualinspection/vision-dnn-detectron2
   - image: cp/visualinspection/vision-dnn-detectron-deploy
+  - image: cp/visualinspection/vision-dnn-detectron2
   - image: cp/visualinspection/vision-dnn-edge
   - image: cp/visualinspection/vision-dnn-microservices
   - image: cp/visualinspection/vision-dnn-pytorch
@@ -291,8 +291,8 @@ images:
   - image: cp/wiotp/deprovagent-registry
   - image: cp/wiotp/deprovagent-state
   - image: cp/wiotp/deprovagent-webui
-  - image: cp/wiotp/devicemgmt-server
   - image: cp/wiotp/device-store
+  - image: cp/wiotp/devicemgmt-server
   - image: cp/wiotp/entity-connector
   - image: cp/wiotp/entity-manager
   - image: cp/wiotp/functionsexecutor
@@ -332,8 +332,8 @@ images:
   - image: cp/wiotp/iot-registry-operator
   - image: cp/wiotp/iot-state-operator
   - image: cp/wiotp/iot-webui-operator
-  - image: cp/wiotp/iot-workspaceagent
   - image: cp/wiotp/iot-workspace-operator
+  - image: cp/wiotp/iot-workspaceagent
   - image: cp/wiotp/kafkamodel-actions
   - image: cp/wiotp/kafkamodel-auth
   - image: cp/wiotp/kafkamodel-fpl
@@ -361,10 +361,10 @@ images:
   - image: cp/wiotp/mqtt-connector
   - image: cp/wiotp/msproxy
   - image: cp/wiotp/msproxy-monitor
+  - image: cp/wiotp/org-store
   - image: cp/wiotp/orgdeprovmgr
   - image: cp/wiotp/orgpoolmgr
   - image: cp/wiotp/orgprovmgr
-  - image: cp/wiotp/org-store
   - image: cp/wiotp/pipeline-monitorsync
   - image: cp/wiotp/pipelinerouter
   - image: cp/wiotp/provagent-guardian
@@ -385,7 +385,6 @@ images:
   - image: icr.io/cpopen/ibm-mas-assist
   - image: icr.io/cpopen/ibm-mas-assist-operator-bundle
   - image: icr.io/cpopen/ibm-mas-assist-operator-catalog
-  - image: icr.io/cpopen/ibm-mas/edgedatacollector
   - image: icr.io/cpopen/ibm-mas-hputilities
   - image: icr.io/cpopen/ibm-mas-hputilities-operator-bundle
   - image: icr.io/cpopen/ibm-mas-hputilities-operator-catalog
@@ -417,16 +416,17 @@ images:
   - image: icr.io/cpopen/ibm-mas-visualinspection
   - image: icr.io/cpopen/ibm-mas-visualinspection-operator-bundle
   - image: icr.io/cpopen/ibm-mas-visualinspection-operator-catalog
+  - image: icr.io/cpopen/ibm-mas/edgedatacollector
   - image: icr.io/cpopen/ibm-sls
-  - image: icr.io/cpopen/ibm-sls/api-licensing
   - image: icr.io/cpopen/ibm-sls-operator-bundle
   - image: icr.io/cpopen/ibm-sls-operator-catalog
+  - image: icr.io/cpopen/ibm-sls/api-licensing
   - image: icr.io/cpopen/ibm-truststore-mgr
   - image: icr.io/cpopen/ibm-truststore-mgr-operator-bundle
   - image: icr.io/cpopen/ibm-truststore-mgr-operator-catalog
   - image: icr.io/cpopen/ibm-truststore-mgr/worker
   - image: icr.io/ibm-truststore-mgr/worker
+  - image: mas-hputilities/hputilities-model-engines
   - image: mas-hputilities/hputilities/hputilities-model-engines
   - image: mas-hputilities/hputilities/ibm-mas-hputilities-ws
-  - image: mas-hputilities/hputilities-model-engines
   - image: mas-hputilities/ibm-mas-hputilities-ws

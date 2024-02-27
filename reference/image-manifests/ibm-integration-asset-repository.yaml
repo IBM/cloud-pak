@@ -12,11 +12,11 @@ images:
   - image: cp/icp4i/ibm-gofa-ikg
   - image: cp/icp4i/icp4i-asset-repo-ui
   - image: cp/icp4i/nl-flow-generation
-  - image: ibmcom/couchdb2
-  - image: ibmcom/couchdb3
   - image: ibmcom/couchdb-operator
   - image: ibmcom/couchdb-operator-catalog
   - image: ibmcom/couchdb-operator-mgmt
+  - image: ibmcom/couchdb2
+  - image: ibmcom/couchdb3
   - image: ibmcom/iaf-core-operator
   - image: ibmcom/iaf-core-operator-bundle
   - image: ibmcom/ibm-automation-foundation-core-catalog
@@ -55,13 +55,11 @@ images:
   - image: icr.io/cpopen/cpfs/ibm-mongodb-install
   - image: icr.io/cpopen/cpfs/ibm-postgresql
   - image: icr.io/cpopen/cpfs/ibm-secretshare-operator
-  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
   - image: icr.io/cpopen/cpfs/icp-cert-manager-acmesolver
   - image: icr.io/cpopen/cpfs/icp-cert-manager-cainjector
   - image: icr.io/cpopen/cpfs/icp-cert-manager-controller
   - image: icr.io/cpopen/cpfs/icp-cert-manager-webhook
   - image: icr.io/cpopen/cpfs/icp-configmap-watcher
-  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/icp-iam-onboarding
   - image: icr.io/cpopen/cpfs/icp-identity-manager
   - image: icr.io/cpopen/cpfs/icp-identity-provider
@@ -72,6 +70,8 @@ images:
   - image: icr.io/cpopen/cpfs/icp-platform-api
   - image: icr.io/cpopen/cpfs/icp-platform-auth
   - image: icr.io/cpopen/cpfs/icp-secret-watcher
+  - image: icr.io/cpopen/cpfs/icp4data-nginx-repo
+  - image: icr.io/cpopen/cpfs/icpd-requisite
   - image: icr.io/cpopen/cpfs/influxdb
   - image: icr.io/cpopen/cpfs/kubectl
   - image: icr.io/cpopen/cpfs/must-gather
@@ -144,8 +144,8 @@ images:
   - image: quay.io/opencloudio/common-service-operator
   - image: quay.io/opencloudio/common-web-ui
   - image: quay.io/opencloudio/configmap-reload
-  - image: quay.io/opencloudio/couchdb3
   - image: quay.io/opencloudio/couchdb-operator-mgmt
+  - image: quay.io/opencloudio/couchdb3
   - image: quay.io/opencloudio/cp4d-tiller
   - image: quay.io/opencloudio/cs-mongodb-br
   - image: quay.io/opencloudio/curl
@@ -205,8 +205,8 @@ images:
   - image: quay.io/opencloudio/ibm-monitoring-exporters-operator-bundle
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator
   - image: quay.io/opencloudio/ibm-monitoring-grafana-operator-bundle
-  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-monitoring-prometheus-operator-ext-bundle
+  - image: quay.io/opencloudio/ibm-monitoring-prometheusext-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-bundle
   - image: quay.io/opencloudio/ibm-namespace-scope-operator-restricted-bundle
@@ -218,14 +218,12 @@ images:
   - image: quay.io/opencloudio/ibm-zen-cpp-operator-bundle
   - image: quay.io/opencloudio/ibm-zen-operator
   - image: quay.io/opencloudio/ibm-zen-operator-bundle
-  - image: quay.io/opencloudio/icp4data-nginx-repo
   - image: quay.io/opencloudio/icp-audit-service
   - image: quay.io/opencloudio/icp-cert-manager-acmesolver
   - image: quay.io/opencloudio/icp-cert-manager-cainjector
   - image: quay.io/opencloudio/icp-cert-manager-controller
   - image: quay.io/opencloudio/icp-cert-manager-webhook
   - image: quay.io/opencloudio/icp-configmap-watcher
-  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/icp-iam-onboarding
   - image: quay.io/opencloudio/icp-identity-manager
   - image: quay.io/opencloudio/icp-identity-provider
@@ -237,9 +235,11 @@ images:
   - image: quay.io/opencloudio/icp-platform-auth
   - image: quay.io/opencloudio/icp-platform-header
   - image: quay.io/opencloudio/icp-secret-watcher
+  - image: quay.io/opencloudio/icp4data-nginx-repo
+  - image: quay.io/opencloudio/icpd-requisite
   - image: quay.io/opencloudio/influxdb
-  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/kube-state-metrics
+  - image: quay.io/opencloudio/kubectl
   - image: quay.io/opencloudio/metering-data-manager
   - image: quay.io/opencloudio/metering-mcmui
   - image: quay.io/opencloudio/metering-report

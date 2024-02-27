@@ -13,8 +13,8 @@ images:
   - image: cp/cpd/cp4d-tiller-ubi8
   - image: cp/cpd/cp4d-ws-secrets-job
   - image: cp/cpd/cp4d-ws-secrets-job-ppc64le
-  - image: cp/cpd/cpdoperator
   - image: cp/cpd/cpd-operator-init
+  - image: cp/cpd/cpdoperator
   - image: cp/cpd/dap-base-job
   - image: cp/cpd/dap-base-job-ppc64le
   - image: cp/cpd/dap-dashboards-api
@@ -28,10 +28,10 @@ images:
   - image: cp/cpd/dd-scenario-ui
   - image: cp/cpd/dsx-requisite
   - image: cp/cpd/elasticsearch
+  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments
   - image: cp/cpd/environments-api
   - image: cp/cpd/environments-init-job
-  - image: cp/cpd/environment-specifications-sync
   - image: cp/cpd/environments-ui
   - image: cp/cpd/etcd-ubi
   - image: cp/cpd/event-logger-api
@@ -40,12 +40,12 @@ images:
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
   - image: cp/cpd/influxdb
+  - image: cp/cpd/job-trigger
+  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-api-ppc64le
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/jobs-ui-ppc64le
-  - image: cp/cpd/job-trigger
-  - image: cp/cpd/job-trigger-ppc64le
   - image: cp/cpd/jupyter-notebooks-converter
   - image: cp/cpd/kubectlclient
   - image: cp/cpd/mlrepositoryservicehydra
@@ -112,6 +112,9 @@ images:
   - image: cp/cpd/wml-automl-obm-hybrid-pipeline
   - image: cp/cpd/wml-aux
   - image: cp/cpd/wml-cp4d-3.5-upgrade
+  - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
+  - image: cp/cpd/wml-dep-rt23-1-ms
+  - image: cp/cpd/wml-dep-rt23-1-r42-ms
   - image: cp/cpd/wml-deployment-agent
   - image: cp/cpd/wml-deployment-envoy
   - image: cp/cpd/wml-deployment-manager
@@ -123,9 +126,6 @@ images:
   - image: cp/cpd/wml-deployment-runtime-py39-1
   - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
-  - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
-  - image: cp/cpd/wml-dep-rt23-1-ms
-  - image: cp/cpd/wml-dep-rt23-1-r42-ms
   - image: cp/cpd/wml-federated-learning
   - image: cp/cpd/wml-federated-learning-runtime-23.1-py3.10
   - image: cp/cpd/wml-main
@@ -133,16 +133,15 @@ images:
   - image: cp/cpd/wml-os-runtimes-do
   - image: cp/cpd/wml-post-upgrade-cleanup-deployments
   - image: cp/cpd/wml-preinstall-secret
-  - image: cp/cpd/wmlrepositoryv4
   - image: cp/cpd/wml-rt-ac201903-py368-g1
   - image: cp/cpd/wml-rt-ac201903-py368-g2
   - image: cp/cpd/wml-rt-ac201903-py368-g3
   - image: cp/cpd/wml-rt-ac201903-r36-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.0-py3612-g1
-  - image: cp/cpd/wml-rt-autoai_kb_3.1-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.1-py37-g1
-  - image: cp/cpd/wml-rt-autoai_kb_3.2-py379-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.1-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.2-py37-g1
+  - image: cp/cpd/wml-rt-autoai_kb_3.2-py379-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.3-py37-g1
   - image: cp/cpd/wml-rt-autoai_kb_3.4-py38-g1
   - image: cp/cpd/wml-rt-autoai_ts_3.1-py37-g1
@@ -153,10 +152,10 @@ images:
   - image: cp/cpd/wml-rt-init-dep-service-py
   - image: cp/cpd/wml-rt-mc3-py310-g1-ms
   - image: cp/cpd/wml-rt-mc3-py368-g2
-  - image: cp/cpd/wml-rt-mc3-py379-g1
-  - image: cp/cpd/wml-rt-mc3-py379-g2
   - image: cp/cpd/wml-rt-mc3-py37-g1-ms
   - image: cp/cpd/wml-rt-mc3-py37-g2-ms
+  - image: cp/cpd/wml-rt-mc3-py379-g1
+  - image: cp/cpd/wml-rt-mc3-py379-g2
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms
   - image: cp/cpd/wml-rt-mc3-py38-g1-ms-shadow
   - image: cp/cpd/wml-rt-mc3-py39-g1-ms
@@ -171,13 +170,15 @@ images:
   - image: cp/cpd/wml-rt-r42-py39-g1
   - image: cp/cpd/wml-rt-rshiny0.1
   - image: cp/cpd/wml-rt-rshiny0.1-r4.2
-  - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wml-ubi-ppc-autoai_kb_3.0-py3612-g1-rt
   - image: cp/cpd/wml-ubi-ppc-autoai_kb_3.1-py379-g1-rt
   - image: cp/cpd/wml-ubi-ppc-mc3-py379-g1-rt
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.0-py3612-g1-rt
   - image: cp/cpd/wml-ubi-x86-autoai_kb_3.1-py379-g1-rt
   - image: cp/cpd/wml-ubi-x86-mc3-py379-g1-rt
+  - image: cp/cpd/wmlrepositoryv4
+  - image: cp/cpd/wmltrainingservicehydra
+  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/wslocal-init-222-py
   - image: cp/cpd/wslocal-init-222-pygpu
   - image: cp/cpd/wslocal-init-222-r
@@ -233,7 +234,6 @@ images:
   - image: cp/cpd/wslocal-x86-runtime-py37cuda
   - image: cp/cpd/wslocal-x86-runtime-py37main
   - image: cp/cpd/wslocal-x86-runtime-r36
-  - image: cp/cpd/ws-notebooks-ui
   - image: cp/cpd/zen-audit
   - image: cp/cpd/zen-core
   - image: cp/cpd/zen-core-api
