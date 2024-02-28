@@ -91,3 +91,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 11.1.2
+- caseVersions:
+  - 11.1.3
+  category: catalog
+  digest: sha256:f4b3b4bd2e7ffbaad8764eb44a5a9cfcd68bcd63bd1999126767ecf8abcebb70
+  image: cpopen/ibm-eventendpointmanagement-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 11.1.3-amd64
+- caseVersions:
+  - 11.1.3
+  category: catalog
+  digest: sha256:5bcdebfeefd1192fc4ca268b9b2c37d899ab07ddc28d934197b652a328be2135
+  image: cpopen/ibm-eventendpointmanagement-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 11.1.3-s390x
+- caseVersions:
+  - 11.1.3
+  category: catalog
+  digest: sha256:a6f9d7a55ae4512e2421d629211c10950ef2070e0eff0d2870ca3417c60a1829
+  image: cpopen/ibm-eventendpointmanagement-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 11.1.3
