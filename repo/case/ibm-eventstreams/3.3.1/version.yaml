@@ -1,0 +1,58 @@
+apiVersion: v1
+case:
+  appVersion: 11.3.1
+  catalogs:
+    integration: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This case provides an IBM Event Streams Operator and example custom
+    resources which can be used to install instances of IBM Event Streams
+  displayDescription: This case provides an IBM Event Streams Operator and example
+    custom resources which can be used to install instances of IBM Event Streams
+  displayName: IBM Event Streams
+  icons:
+  - mediaType: image/svg
+    url: https://ibm.github.io/event-streams/assets/images/branding/es_pictogram_expressive_light.svg
+  licenses:
+    LA_en:
+      mediaType: application/text
+      metadata:
+        description: License Acceptance
+      ref: LA_en
+    LI_en:
+      mediaType: application/text
+      metadata:
+        description: License Information
+      ref: LI_en
+    non_ibm_license:
+      mediaType: application/text
+      metadata:
+        description: non ibm license
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        description: notices
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-eventstreams
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      redhat: {}
+  version: 3.3.1
+  webPage: https://ibm.github.io/event-streams/
+created: 2024-02-28T04:59:38.72517031+0000
+digest: sha256:5bf989dac15b249b94b4aad34c2f7088a0431ef5bc8429d891e8e16ecb28f795
