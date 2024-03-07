@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.6.20
+  category: catalog
+  digest: sha256:98caad06e3daa02fc8ba4484aa45af56321112ca42ca4a4a31394c86fb676625
+  image: cp/cloudpak-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.20-s390x
+- caseVersions:
+  - 1.6.20
+  category: catalog
+  digest: sha256:110d3d4a0fc9afa72f32802745fa2d09cbb82d1619921b5408e08bd90bb2fa06
+  image: cp/cloudpak-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.20-amd64
+- caseVersions:
+  - 1.6.20
+  category: catalog
+  digest: sha256:c22619a5f3f0f99ab41b96ed7f6e694933a0d77ed657dba0d395e11ea7970ee2
+  image: cp/cloudpak-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.20-arm64
+- caseVersions:
+  - 1.6.20
+  category: catalog
+  digest: sha256:e72437e74cc1590c37fd72f81ebe56ec976f7ebb8d34e878e1d483a5f0a83538
+  image: cp/cloudpak-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.20-ppc64le
+- caseVersions:
+  - 1.6.20
+  category: catalog
+  digest: sha256:b87ab8f174b602f225bf9a36840615185dc83ab9fa1a38b74630e83539a19abb
+  image: cp/cloudpak-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.6.20
