@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.9.1-1
+  catalogs:
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Represents a deployment of a container native IBM Storage scale cluster
+    with the Data Access edition
+  displayDescription: Represents a deployment of a container native IBM Storage scale
+    cluster
+  displayName: IBM Storage scale Container Native Storage Version
+  icons: []
+  licenses:
+    spectrumscale:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Storage scale Container Native Data Access Edition,
+          version 5.1.9.1-1
+        displayName: IBM Storage scale Container Native Data Access Edition
+      ref: license
+      url: https://www.ibm.com/support/customer/csol/terms/?id=L-UQMP-BY7W8H
+  name: ibm-spectrum-scale-dae-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.6.2
+  webPage: https://www.ibm.com/docs/en/scalecontainernative
+created: 2024-03-07T22:29:37.13029909+0000
+digest: sha256:cad3b7bb392d1e93ef0256a83ca2a0391d25d0b682cf0d1077db542d61e41b3c
