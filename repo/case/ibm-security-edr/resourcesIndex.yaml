@@ -54,3 +54,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: latest_uat
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:1269e52f971e26a1eccb5f51c6067fc650f8eadaf2496374fa358ba415441f3e
+  image: cpopen/ibm-security-edr-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 3.12.3.0-amd64
+- caseVersions:
+  - 1.0.3
+  category: catalog
+  digest: sha256:ab91b5250edb21ec11ce21f7c2760cabc8ac1c407c98ce90504264cd9771ca7e
+  image: cpopen/ibm-security-edr-catalog
+  platform:
+    imagetype: manifestList
+  tag: 3.12.3.0
