@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 4.8.4
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data Watson Openscale
+  displayDescription: CASE for IBM Watson OpenScale
+  displayName: IBM Watson OpenScale
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.8_1_license.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.8_1_license.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watson-openscale
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 6.4.0+20240304.172227.11
+  webPage: https://www.ibm.com
+created: 2024-03-25T20:29:54.15901217+0000
+digest: sha256:99ae10c0b8105e14d96d89349628045ff40ef6559f95f966124e01463ae8e59d

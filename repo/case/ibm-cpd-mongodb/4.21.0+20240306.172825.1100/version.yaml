@@ -1,0 +1,50 @@
+apiVersion: v1
+case:
+  appVersion: 4.21.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Mongodb for CPD
+  displayDescription: ""
+  displayName: IBM MongoDB
+  icons: []
+  licenses:
+    license-en:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: license-en
+      ref: LI_en
+    licenseNonIBM:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+        name: licenseNonIBM
+      ref: non_ibm_license
+    notice:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+        name: notice
+      ref: notices
+  name: ibm-cpd-mongodb
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 4.21.0+20240306.172825.1100
+  webPage: https://www.ibm.com
+created: 2024-03-25T20:29:53.81101217+0000
+digest: sha256:7ce92d7f6a3c86d16fb1108e5b50291896c8515f0656c16b8d6daec8448ba36b
