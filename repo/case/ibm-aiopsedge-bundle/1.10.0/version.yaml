@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.0-rc1-202403120045
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: This operator manages the AIOpsEdge components of the IBM Cloud Pak
+    for AIOps product.
+  displayDescription: ""
+  displayName: AIOpsEdge Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4aiops:
+      mediaType: application/text
+      metadata:
+        displayDescription: Cloud Pak for AIOps License
+        displayName: Cloud Pak for AIOps
+      ref: LICENSE
+      url: https://ibm.biz/cp4waiops-430-license
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiopsedge-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.10.0
+  webPage: https://www.ibm.com
+created: 2024-03-27T03:29:40.24344014+0000
+digest: sha256:545b99522ed6a3e82f6ffd52975ea37245468e6a1c3c387cce3a6cebc3779aed
