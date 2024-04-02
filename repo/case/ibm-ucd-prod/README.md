@@ -150,57 +150,6 @@ spec:
 
 7.  If a route or ingress is used to access the WSS port of the DevOps Deploy server from an DevOps Deploy agent, then port 443 should be specified along with the configured URL to access the proper service port defined for the DevOps Deploy Server.
 
-### PodSecurityPolicy Requirements
-
-If you are running on OpenShift, skip this section and continue to the [SecurityContextConstraints Requirements](#securitycontextconstraints-requirements) section below.
-
-This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose either a predefined PodSecurityPolicy or have your cluster administrator create a custom PodSecurityPolicy for you.
-
-The predefined PodSecurityPolicy named [`ibm-restricted-psp`](https://ibm.biz/cpkspec-psp) has been verified for this chart, if your target namespace is bound to this PodSecurityPolicy you can proceed to install the chart.
-
-  * Custom PodSecurityPolicy definition:
-    ```
-    apiVersion: extensions/v1beta1
-    kind: PodSecurityPolicy
-    metadata:
-      annotations:
-        kubernetes.io/description: "This policy is based on the most restrictive policy,
-        requiring pods to run with a non-root UID, and preventing pods from accessing the host."
-        seccomp.security.alpha.kubernetes.io/allowedProfileNames: docker/default
-        seccomp.security.alpha.kubernetes.io/defaultProfileName: docker/default
-      name: ibm-ucd-prod-psp
-    spec:
-      allowPrivilegeEscalation: false
-      forbiddenSysctls:
-      - '*'
-      fsGroup:
-        ranges:
-        - max: 65535
-          min: 1
-        rule: MustRunAs
-      hostNetwork: false
-      hostPID: false
-      hostIPC: false
-      requiredDropCapabilities:
-      - ALL
-      runAsUser:
-        rule: MustRunAsNonRoot
-      seLinux:
-        rule: RunAsAny
-      supplementalGroups:
-        ranges:
-        - max: 65535
-          min: 1
-        rule: MustRunAs
-      volumes:
-      - configMap
-      - emptyDir
-      - projected
-      - secret
-      - downwardAPI
-      - persistentVolumeClaim
-    ```
-
 ### SecurityContextConstraints Requirements
 
 This chart requires a `SecurityContextConstraints` to be bound to the target namespace prior to installation.  The default `SecurityContextConstraints` named restricted has been verified for this chart, if your target namespace is bound to this `SecurityContextConstraints` resource you can proceed to install the chart.
@@ -215,7 +164,7 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
   allowHostNetwork: false
   allowHostPID: false
   allowHostPorts: false
-  allowPrivilegeEscalation: true
+  allowPrivilegeEscalation: false
   allowPrivilegedContainer: false
   allowedCapabilities: null
   defaultAddCapabilities: null
@@ -230,10 +179,7 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
   priority: null
   readOnlyRootFilesystem: false
   requiredDropCapabilities:
-  - KILL
-  - MKNOD
-  - SETUID
-  - SETGID
+  - ALL
   runAsUser:
     type: MustRunAsRange
   seLinuxContext:
@@ -299,7 +245,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucd-prod --version @caseversion@
+oc ibm-pak get ibm-ucd-prod --version 2.0.12
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -312,7 +258,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucd-prod        \
-    --version @caseversion@           \
+    --version 2.0.12           \
     --namespace <target namespace>    \
     --inventory ucdsOperatorSetup     \
     --action install-catalog
@@ -322,7 +268,7 @@ oc ibm-pak launch ibm-ucd-prod        \
 
 ```
 oc ibm-pak launch ibm-ucd-prod        \
-    --version @caseversion@           \
+    --version 2.0.12           \
     --namespace <target namespace>    \
     --inventory ucdsOperatorSetup     \
     --action install-operator
@@ -336,7 +282,7 @@ oc ibm-pak launch ibm-ucd-prod        \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperator                           \
     --action apply_custom_resources                    \
@@ -354,7 +300,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator
@@ -364,7 +310,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-catalog
@@ -380,7 +326,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator-native                   \
@@ -392,7 +338,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator-native
@@ -402,7 +348,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action install-helm-chart                        \
@@ -413,7 +359,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version @caseversion@                            \
+    --version 2.0.12                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action uninstall-helm-chart                      \
@@ -639,7 +585,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucd-prod
-   export CASE_VERSION=@caseversion@
+   export CASE_VERSION=2.0.12
    ```
 
 2. Connect your host to the intranet.
@@ -696,7 +642,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: @caseversion@
+    version: 2.0.12
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -1105,7 +1051,7 @@ The Helm chart and operator Custom Resource have the following values.
 | version |  | DevOps Deploy product version |  |
 | replicas | server | Number of DevOps Deploy server replicas | Non-zero number of replicas.  Defaults to 1 |
 |          | dfe | Number of DFE replicas | Number of Distributed Front End replicas.  Defaults to 0 |
-| image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to Always |
+| image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to IfNotPresent |
 |       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
 | service | type | Specify type of service | Valid options are ClusterIP, NodePort and LoadBalancer (for clusters that support LoadBalancer). Default is ClusterIP |
 | database | type | The type of database DevOps Deploy will connect to | Valid values are db2, mysql, oracle, and sqlserver |
@@ -1116,7 +1062,7 @@ The Helm chart and operator Custom Resource have the following values.
 |          | jdbcConnUrl | The JDBC Connection URL used to connect to the database used by the DevOps Deploy server. This value is normally constructed using the database type and other database field values, but must be specified here when using Oracle RAC/ORAAS or SQL Server with Integrated Security. | |
 | secureConnections  | required | Specify whether DevOps Deploy server connections are required to be secure | Default value is "true" |
 | secret | name | Kubernetes secret which defines required DevOps Deploy passwords. | You may leave this blank to use default name of HelmReleaseName-secrets where HelmReleaseName is the name of your Helm Release, otherwise specify the secret name here. |
-| license | accept | Set to true to indicate you have read and agree to license agreements : http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(urbancode+deploy) | false |
+| license | accept | Set to true to indicate you have read and agree to license agreements : https://ibm.biz/devops-deploy-license | false |
 |  | serverURL | Information required to connect to the DevOps Deploy license server. | Empty (default) to begin a 60-day evaluation license period.|
 | persistence | enabled | Determines if persistent storage will be used to hold the DevOps Deploy server appdata directory contents. This should always be true to preserve server data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "false" |
