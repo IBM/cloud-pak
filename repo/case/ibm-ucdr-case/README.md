@@ -89,58 +89,6 @@ spec:
 
 6.  If a route or ingress is used to access the WSS port of the DevOps Deploy server from an DevOps Deploy relay, then port 443 should be specified along with the configured URL to access the proper service port defined for the DevOps Deploy Server.
 
-
-### PodSecurityPolicy Requirements
-
-If you are running on OpenShift, skip this section and continue to the [SecurityContextConstraints Requirements](#securitycontextconstraints-requirements) section below.
-
-This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose either a predefined PodSecurityPolicy or have your cluster administrator create a custom PodSecurityPolicy for you.
-
-The predefined PodSecurityPolicy named [`ibm-restricted-psp`](https://ibm.biz/cpkspec-psp) has been verified for this chart, if your target namespace is bound to this PodSecurityPolicy you can proceed to install the chart.
-
-  * Custom PodSecurityPolicy definition:
-```
-    apiVersion: extensions/v1beta1
-    kind: PodSecurityPolicy
-    metadata:
-      annotations:
-        kubernetes.io/description: "This policy is based on the most restrictive policy,
-        requiring pods to run with a non-root UID, and preventing pods from accessing the host."
-        seccomp.security.alpha.kubernetes.io/allowedProfileNames: docker/default
-        seccomp.security.alpha.kubernetes.io/defaultProfileName: docker/default
-      name: ibm-ucdr-prod-psp
-    spec:
-      allowPrivilegeEscalation: false
-      forbiddenSysctls:
-      - '*'
-      fsGroup:
-        ranges:
-        - max: 65535
-          min: 1
-        rule: MustRunAs
-      hostNetwork: false
-      hostPID: false
-      hostIPC: false
-      requiredDropCapabilities:
-      - ALL
-      runAsUser:
-        rule: MustRunAsNonRoot
-      seLinux:
-        rule: RunAsAny
-      supplementalGroups:
-        ranges:
-        - max: 65535
-          min: 1
-        rule: MustRunAs
-      volumes:
-      - configMap
-      - emptyDir
-      - projected
-      - secret
-      - downwardAPI
-      - persistentVolumeClaim
-```
-
 ### SecurityContextConstraints Requirements
 
 This chart requires a `SecurityContextConstraints` to be bound to the target namespace prior to installation. The default `SecurityContextConstraints` named restricted has been verified for this chart, if your target namespace is bound to this `SecurityContextConstraints` resource you can proceed to install the chart.
@@ -155,7 +103,7 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
   allowHostNetwork: false
   allowHostPID: false
   allowHostPorts: false
-  allowPrivilegeEscalation: true
+  allowPrivilegeEscalation: false
   allowPrivilegedContainer: false
   allowedCapabilities: null
   defaultAddCapabilities: null
@@ -170,10 +118,7 @@ This chart requires a `SecurityContextConstraints` to be bound to the target nam
   priority: null
   readOnlyRootFilesystem: false
   requiredDropCapabilities:
-  - KILL
-  - MKNOD
-  - SETUID
-  - SETGID
+  - ALL
   runAsUser:
     type: MustRunAsRange
   seLinuxContext:
@@ -213,7 +158,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucdr-case --version @caseversion@
+oc ibm-pak get ibm-ucdr-case --version 1.4.19
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -226,7 +171,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-catalog
@@ -236,7 +181,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator
@@ -250,7 +195,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -268,7 +213,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator
@@ -278,7 +223,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-catalog
@@ -294,7 +239,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator-native                   \
@@ -305,7 +250,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator-native
@@ -315,7 +260,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action install-helm-chart                        \
@@ -326,7 +271,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version @caseversion@                            \
+    --version 1.4.19                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action uninstall-helm-chart                      \
@@ -532,7 +477,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucdr-case
-   export CASE_VERSION=@caseversion@
+   export CASE_VERSION=1.4.19
    ```
 
 2. Connect your host to the intranet.
@@ -589,7 +534,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: @caseversion@
+    version: 1.4.19
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -997,9 +942,9 @@ The Helm chart and operator custom resource have the following values.
 |---|---|---|---|
 | version |  | DevOps Deploy relay product vesion |  |
 | replicas | relay | Number of DevOps Deploy relay replicas | Non-zero number of replicas.  Defaults to 1 |
-| image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to Always |
+| image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to IfNotPresent |
 |       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
-| license | accept | Set to true to indicate you have read and agree to license agreements : http://www-03.ibm.com/software/sla/sladb.nsf/searchlis/?searchview&searchorder=4&searchmax=0&query=(urbancode+deploy) | false |
+| license | accept | Set to true to indicate you have read and agree to license agreements : https://ibm.biz/devops-deploy-license | false |
 | service | type | Specify type of service | Valid options are ClusterIP, NodePort and LoadBalancer (for clusters that support LoadBalancer). Default is ClusterIP |
 | persistence | enabled | Determines if persistent storage will be used to hold the DevOps Deploy server appdata directory contents. This should always be true to preserve server data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "false" |
