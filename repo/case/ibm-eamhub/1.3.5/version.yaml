@@ -1,0 +1,61 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.5
+  catalogs:
+    framework: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Edge Application Manager
+  displayDescription: IBM Edge Application Manager
+  displayName: IBM Edge Application Manager
+  icons:
+  - mediaType: text/xml; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/icp-logo-box.svg
+  licenses:
+    ieam_notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Notices for licensed code used by IEAM or its dependencies.
+        displayName: IBMEdgeApplicationManager_Notices
+        name: ieam_notices
+      ref: IBMEdgeApplicationManager_Notices
+    ieam_notices_slc:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Notices for separately licensed code used by IEAM or its
+          dependencies.
+        displayName: IBMEdgeApplicationManager_SLC_Notices
+        name: ieam_notices_slc
+      ref: IBMEdgeApplicationManager_SLC_Notices
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      relatedImages: true
+  name: ibm-eamhub
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.3.5
+  webPage: https://www.ibm.com
+created: 2024-04-09T19:59:48.20614712+0000
+digest: sha256:0f0dbaf21b69588b80bf89c7e9d5c3452340d32b322746d3fe63ef8cca847a22
