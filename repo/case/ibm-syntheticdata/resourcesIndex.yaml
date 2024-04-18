@@ -72,3 +72,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 8.4.0-258
+- caseVersions:
+  - 8.5.0+20240408.220750.8
+  category: catalog
+  digest: sha256:a4576fba8b8bfc64f189f714052d15db4c1e2006d9d6bf0d5ae91d4dbd2c82a1
+  image: cpopen/ibm-cpd-syntheticdata-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 8.5.0-290-amd64
+- caseVersions:
+  - 8.5.0+20240408.220750.8
+  category: catalog
+  digest: sha256:0776f1c58bcacd4480984f22f624520bad04a0f9196bf15493d19f8da658305d
+  image: cpopen/ibm-cpd-syntheticdata-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 8.5.0-290
