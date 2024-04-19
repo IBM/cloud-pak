@@ -1,2 +1,50 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 5.0.0
+  category: catalog
+  digest: sha256:14285f6c98837957f0d5f4e483ddd5c4c5c38583b231370f3a96bed101ecac64
+  image: cpopen/ibm-events-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.0.0-amd64
+- caseVersions:
+  - 5.0.0
+  category: catalog
+  digest: sha256:d1adffe721e7feeeb6e7678c1a3579f3c3ffc20c2961d7d23cf022fe48ee081c
+  image: cpopen/ibm-events-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: 5.0.0-arm64-v8
+- caseVersions:
+  - 5.0.0
+  category: catalog
+  digest: sha256:f3a4a1c04706b54b4130a2e518ac523aab2cc054d25d23f7a059419b3e4c4477
+  image: cpopen/ibm-events-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5.0.0-ppc64le
+- caseVersions:
+  - 5.0.0
+  category: catalog
+  digest: sha256:2cdb11f8ad5c1c40ea5e9993895f2d4832f3efb1bfc69b0803f3c18554e232c5
+  image: cpopen/ibm-events-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.0.0-s390x
+- caseVersions:
+  - 5.0.0
+  category: catalog
+  digest: sha256:2267b5677e10a25aa6522d2d60ef85e8be5d65bb32b8c4b82afcf854440e6d34
+  image: cpopen/ibm-events-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.0.0
