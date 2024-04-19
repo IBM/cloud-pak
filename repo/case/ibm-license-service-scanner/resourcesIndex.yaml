@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.2.3
+  category: catalog
+  digest: sha256:e80d9d3e47b22c0b4350601badd3bef48c64fa92db00a4349f542a91b98c3bbb
+  image: cpopen/ibm-license-service-scanner-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.3-amd64
+- caseVersions:
+  - 4.2.3
+  category: catalog
+  digest: sha256:277d702f0932c36633b15394b94a22508254dcd4402eb83afe3bcd0029bfdaee
+  image: cpopen/ibm-license-service-scanner-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.3-arm64-v8
+- caseVersions:
+  - 4.2.3
+  category: catalog
+  digest: sha256:2c062a80324e86cf8d98492109208a1e74125e4fdc607d7e45844f0b1a9d7e46
+  image: cpopen/ibm-license-service-scanner-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.3-ppc64le
+- caseVersions:
+  - 4.2.3
+  category: catalog
+  digest: sha256:c4b14923aee9200d9d19ccac86735b50f27c99f85f85c5008f732070ded94d38
+  image: cpopen/ibm-license-service-scanner-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.2.3-s390x
+- caseVersions:
+  - 4.2.3
+  category: catalog
+  digest: sha256:ddac57189285d81e68e50fe62eca2a9b3a02394caf2b5c41109a3effc625f4fa
+  image: cpopen/ibm-license-service-scanner-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.2.3

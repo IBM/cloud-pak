@@ -1,2 +1,50 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:498c7687cfd0973ac05896acdadaf2056f7e440ebd59d5429482952c98ab0fbe
+  image: cpopen/ibm-iam-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.5.0-amd64
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:6a88cc7f45fd9a05b43691e57b534c61edeb4dceb5f2779442069a868f7ba716
+  image: cpopen/ibm-iam-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: 4.5.0-arm64-v8
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:34811fb6e5255b08db6ac4942e4575bb8458c3f0769ca04e6ea8979efc71e063
+  image: cpopen/ibm-iam-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.5.0-ppc64le
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:b21f5090639a4974e85b0c76399323a373c4806b2c903d076713f0688b7719f5
+  image: cpopen/ibm-iam-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.5.0-s390x
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:dd64034fb63a04cb380e81b25d54708bb96080a1b6417d9d068b6f4a1904bebc
+  image: cpopen/ibm-iam-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.5.0

@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.6.0
+  category: catalog
+  digest: sha256:c08392260c39fb10bade8bbdf1a70d1144501c3b08a3c4fc61512838c399bc23
+  image: cpopen/ibm-cs-install-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 4.6.0-amd64
+- caseVersions:
+  - 4.6.0
+  category: catalog
+  digest: sha256:1c1e603e28996bfaa9db4c73401e6f147ec185fb1b3a86542563b0ab0ae7b0fb
+  image: cpopen/ibm-cs-install-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: 4.6.0-arm64-v8
+- caseVersions:
+  - 4.6.0
+  category: catalog
+  digest: sha256:d0986b38de03e585148230f0e3c4873854abf5658732b073fc8a32f2b28d8fbe
+  image: cpopen/ibm-cs-install-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 4.6.0-ppc64le
+- caseVersions:
+  - 4.6.0
+  category: catalog
+  digest: sha256:ec4eb746b279df2148cd3e5fbe28d48694ae6236740ae458bfecd3a0d099ab2e
+  image: cpopen/ibm-cs-install-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 4.6.0-s390x
+- caseVersions:
+  - 4.6.0
+  category: catalog
+  digest: sha256:1eb2d3fe9fdbcf1c413de123cd62344e72b4034054b02f08e351839d3f1dda9c
+  image: cpopen/ibm-cs-install-catalog
+  platform:
+    imagetype: manifestList
+  tag: 4.6.0
