@@ -1,6 +1,13 @@
 source: ibm-spectrum-scale-dme-bundle/case/ibm-spectrum-scale-dme-bundle/case.yaml
 description: "Represents a deployment of a container native IBM Storage Scale cluster with the Data Management edition"
 images:
+  - image: cp/spectrum/scale/csi/csi-attacher
+  - image: cp/spectrum/scale/csi/csi-node-driver-registrar
+  - image: cp/spectrum/scale/csi/csi-provisioner
+  - image: cp/spectrum/scale/csi/csi-resizer
+  - image: cp/spectrum/scale/csi/csi-snapshotter
+  - image: cp/spectrum/scale/csi/ibm-spectrum-scale-csi-driver
+  - image: cp/spectrum/scale/csi/livenessprobe
   - image: cp/spectrum/scale/data-management/ibm-spectrum-scale-daemon
   - image: cp/spectrum/scale/ibm-spectrum-scale-core-init
   - image: cp/spectrum/scale/ibm-spectrum-scale-coredns
