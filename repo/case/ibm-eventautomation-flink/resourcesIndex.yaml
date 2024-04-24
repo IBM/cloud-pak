@@ -101,3 +101,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.1.4
+- caseVersions:
+  - 1.1.6
+  category: catalog
+  digest: sha256:08d04d04ade9419411d3f82ccb18de4395744c87b87b124ca697161cf9ada434
+  image: cpopen/ibm-eventautomation-flink-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.1.5-amd64
+- caseVersions:
+  - 1.1.6
+  category: catalog
+  digest: sha256:49db2a98b8434ae2e03e9fd9e05b79c6d5224326040dad0cb277d7b759154eeb
+  image: cpopen/ibm-eventautomation-flink-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.1.5-s390x
+- caseVersions:
+  - 1.1.6
+  category: catalog
+  digest: sha256:1915b920f436e0c4f67bc5177355240e3e36e5e5c654d7cdbbebbda492156615
+  image: cpopen/ibm-eventautomation-flink-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.1.5
