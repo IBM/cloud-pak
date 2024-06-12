@@ -1,0 +1,49 @@
+apiVersion: v1
+case:
+  appVersion: 2.0.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM watsonx_data Service
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    license-en:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data license for IBM Cloud Pak for Data
+        displayName: LICENSE
+      ref: LICENSE
+      url: https://ibm.biz/BdmbAW
+    licenseNonIBM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: non_ibm_license
+        displayName: non_ibm_license
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: notices
+        displayName: notices
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watsonx-data
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 3.0.0+20240529.181116.324
+  webPage: https://www.ibm.com
+created: 2024-06-12T19:30:51.16610159+0000
+digest: sha256:993e66ab72ca20a6605ebce73a29e4c3ce622d1f71360dd5a8d2e14cb7887a36
