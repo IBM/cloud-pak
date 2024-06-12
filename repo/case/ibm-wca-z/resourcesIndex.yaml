@@ -1,0 +1,20 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0+20240516.201046.44
+  category: catalog
+  digest: sha256:3fd5f296c3b03549b40ff5ae8598f6048b653c5a87cb650b2331cba5ccae7414
+  image: cpopen/ibm-wca-z-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.0.0-44-amd64
+- caseVersions:
+  - 1.0.0+20240516.201046.44
+  category: catalog
+  digest: sha256:dcd032ace2302a9f0fc773f0d48e1992d4172ccfa217b97d4a0ccb1dc9f94c05
+  image: cpopen/ibm-wca-z-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.0.0-44
