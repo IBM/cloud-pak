@@ -91,10 +91,16 @@ images:
   - image: cp/cpd/dataconn-engine-spark-cluster
   - image: cp/cpd/datagate-api
   - image: cp/cpd/datagate-apply
+  - image: cp/cpd/datagate-apply-wxd
   - image: cp/cpd/datagate-catalog
+  - image: cp/cpd/datagate-cdc-accessserver
+  - image: cp/cpd/datagate-cdc-agent-watsonx
+  - image: cp/cpd/datagate-cdc-api
   - image: cp/cpd/datagate-data-catalog-integration
   - image: cp/cpd/datagate-init
   - image: cp/cpd/datagate-server
+  - image: cp/cpd/datagate-server-wxd
+  - image: cp/cpd/datagate-tundra-lt-iceberg
   - image: cp/cpd/datagate-ui
   - image: cp/cpd/dataview-api-service
   - image: cp/cpd/dataview-secrets-job
@@ -214,6 +220,7 @@ images:
   - image: cp/cpd/ibm-cpd-scheduler-mutate-webhook-ppc64le
   - image: cp/cpd/ibm-cpd-scheduler-pjc
   - image: cp/cpd/ibm-cpd-scheduler-ppc64le
+  - image: cp/cpd/ibm-cpd-scheduler-spoke-resource-collector
   - image: cp/cpd/ibm-cpd-scheduler-webhook
   - image: cp/cpd/ibm-cpd-scheduler-webhook-amd64
   - image: cp/cpd/ibm-cpd-scheduler-webhook-ppc64le
@@ -244,6 +251,9 @@ images:
   - image: cp/cpd/ibm-iira-webapp-prod
   - image: cp/cpd/ibm-mc-scheduler-agent
   - image: cp/cpd/ibm-mc-scheduler-placement
+  - image: cp/cpd/ibm-mcs-placement
+  - image: cp/cpd/ibm-mcs-storage
+  - image: cp/cpd/ibm-mcs-work
   - image: cp/cpd/icp4d-api
   - image: cp/cpd/icp4data-nginx-repo
   - image: cp/cpd/icpd-requisite
@@ -339,6 +349,7 @@ images:
   - image: cp/cpd/nlq-search-extractor
   - image: cp/cpd/norootsquash
   - image: cp/cpd/notebooks
+  - image: cp/cpd/notebooks-init-job
   - image: cp/cpd/notebooks-job-manager
   - image: cp/cpd/odf-fast-analyzer-kube
   - image: cp/cpd/omag
@@ -524,7 +535,11 @@ images:
   - image: cp/cpd/wml-configurable-http-proxy
   - image: cp/cpd/wml-cp4d-3.5-upgrade
   - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
+  - image: cp/cpd/wml-dep-rshiny-24.1-r4.3-ms
   - image: cp/cpd/wml-dep-rt-231-pygpu
+  - image: cp/cpd/wml-dep-rt-241-py
+  - image: cp/cpd/wml-dep-rt-241-pygpu
+  - image: cp/cpd/wml-dep-rt-241-r43
   - image: cp/cpd/wml-dep-rt23-1-ms
   - image: cp/cpd/wml-dep-rt23-1-r42-ms
   - image: cp/cpd/wml-deployment-agent
@@ -635,9 +650,13 @@ images:
   - image: cp/cpd/wslocal-init-231-py
   - image: cp/cpd/wslocal-init-231-pygpu
   - image: cp/cpd/wslocal-init-231-r
+  - image: cp/cpd/wslocal-init-241-py
+  - image: cp/cpd/wslocal-init-241-pygpu
+  - image: cp/cpd/wslocal-init-241-r
   - image: cp/cpd/wslocal-init-nlp22.1
   - image: cp/cpd/wslocal-init-nlp22.2
   - image: cp/cpd/wslocal-init-nlp23.1
+  - image: cp/cpd/wslocal-init-nlp24.1
   - image: cp/cpd/wslocal-init-py310gpu
   - image: cp/cpd/wslocal-init-py310main
   - image: cp/cpd/wslocal-init-py37cuda
@@ -661,6 +680,9 @@ images:
   - image: cp/cpd/wslocal-runtime-231-py
   - image: cp/cpd/wslocal-runtime-231-pygpu
   - image: cp/cpd/wslocal-runtime-231-r
+  - image: cp/cpd/wslocal-runtime-241-py
+  - image: cp/cpd/wslocal-runtime-241-pygpu
+  - image: cp/cpd/wslocal-runtime-241-r
   - image: cp/cpd/wslocal-runtime-py310gpu
   - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py36cuda
@@ -678,11 +700,15 @@ images:
   - image: cp/cpd/wslocal-runtime-r36py39t1
   - image: cp/cpd/wslocal-runtime-r42
   - image: cp/cpd/wslocal-runtime-rstudio
+  - image: cp/cpd/wslocal-runtime-rstudio-231
+  - image: cp/cpd/wslocal-runtime-rstudio-241
   - image: cp/cpd/wslocal-runtime-rstudio-r36
   - image: cp/cpd/wslocal-runtime-rstudio-r42
   - image: cp/cpd/wslocal-runtime-rstudio-rt2
   - image: cp/cpd/wslocal-runtime-rstudio-rt3
   - image: cp/cpd/wslocal-runtime-shiny
+  - image: cp/cpd/wslocal-runtime-shiny-231
+  - image: cp/cpd/wslocal-runtime-shiny-241
   - image: cp/cpd/wslocal-runtime-shiny-r42
   - image: cp/cpd/wslocal-runtime-shiny-rt3
   - image: cp/cpd/wslocal-x86-runtime-cudapy36
