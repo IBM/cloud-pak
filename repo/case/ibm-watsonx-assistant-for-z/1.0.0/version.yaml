@@ -1,0 +1,41 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs:
+    development: {}
+    tools: {}
+    watson: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: The Z Rag image contains the snapshotted index data from our Z elasticsearch
+    index and also to be a repository of the ELSER and gte-small models, and to deploy
+    them into an ECK Elasticsearch instance
+  displayDescription: ""
+  displayName: IBM watsonx Assistant for Z
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  name: ibm-watsonx-assistant-for-z
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.0
+  webPage: http://ibm.com
+created: 2024-06-13T20:00:15.17569584+0000
+digest: sha256:a29bd80238b5dd8bcc56b1a502e4ae92364d63031aec6fe628b14f4a4b08dd6a
