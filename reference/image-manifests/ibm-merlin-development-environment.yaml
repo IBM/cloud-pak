@@ -1,6 +1,7 @@
 source: ibm-merlin-development-environment-case-bundle/case/ibm-merlin-development-environment/case.yaml
 description: "IBM i Developer Tool."
 images:
+  - image: cp/ibmi-merlin/code-rhel8
   - image: cp/ibmi-merlin/devfileregistry-rhel8
   - image: cp/ibmi-merlin/ibmi-developer-configbump
   - image: cp/ibmi-merlin/ibmi-developer-dashboard
@@ -21,6 +22,7 @@ images:
   - image: cp/ibmi-merlin/ibmi-merlin-keycloak
   - image: cp/ibmi-merlin/ibmi-merlin-postgresql
   - image: cp/ibmi-merlin/pluginregistry-rhel8
+  - image: cp/ibmi-merlin/udi-rhel8
   - image: icr.io/cpopen/ibmi-merlin-developer-operator
   - image: icr.io/cpopen/ibmi-merlin-developer-operator-bundle
   - image: icr.io/cpopen/ibmi-merlin-developer-operator-catalog
