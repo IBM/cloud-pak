@@ -17,15 +17,20 @@ images:
   - image: cp/apic/ibm-apiconnect-analytics-analytics-mtls
   - image: cp/apic/ibm-apiconnect-analytics-analytics-storage
   - image: cp/apic/ibm-apiconnect-analytics-director
+  - image: cp/apic/ibm-apiconnect-analytics-forklift
   - image: cp/apic/ibm-apiconnect-analytics-ingestion
   - image: cp/apic/ibm-apiconnect-analytics-k8s-init
   - image: cp/apic/ibm-apiconnect-analytics-mtls
   - image: cp/apic/ibm-apiconnect-analytics-oscron
   - image: cp/apic/ibm-apiconnect-analytics-osinit
+  - image: cp/apic/ibm-apiconnect-analytics-preupgrade
   - image: cp/apic/ibm-apiconnect-analytics-storage
+  - image: cp/apic/ibm-apiconnect-analytics-warehouse
   - image: cp/apic/ibm-apiconnect-apiconnect-configurator
   - image: cp/apic/ibm-apiconnect-apiconnect-eem-integration-services
   - image: cp/apic/ibm-apiconnect-apiconnect-master
+  - image: cp/apic/ibm-apiconnect-apiconnect-preupgrade
+  - image: cp/apic/ibm-apiconnect-apiconnect-velero-plugin
   - image: cp/apic/ibm-apiconnect-eventgateway-event-gateway
   - image: cp/apic/ibm-apiconnect-gateway-datapower-nonprod
   - image: cp/apic/ibm-apiconnect-gateway-datapower-operator
@@ -36,12 +41,17 @@ images:
   - image: cp/apic/ibm-apiconnect-gateway-v2018-to-v10-haproxy
   - image: cp/apic/ibm-apiconnect-management-analytics-proxy
   - image: cp/apic/ibm-apiconnect-management-analytics-ui
+  - image: cp/apic/ibm-apiconnect-management-api-discovery-gw-proxy-collector
+  - image: cp/apic/ibm-apiconnect-management-api-discovery-service
+  - image: cp/apic/ibm-apiconnect-management-api-discovery-ui
   - image: cp/apic/ibm-apiconnect-management-api-testgen-coordinator
   - image: cp/apic/ibm-apiconnect-management-api-testgen-data
   - image: cp/apic/ibm-apiconnect-management-api-testgen-discovery
   - image: cp/apic/ibm-apiconnect-management-api-testgen-generator
   - image: cp/apic/ibm-apiconnect-management-api-testgen-runtime
   - image: cp/apic/ibm-apiconnect-management-apim
+  - image: cp/apic/ibm-apiconnect-management-atm-api
+  - image: cp/apic/ibm-apiconnect-management-atm-ui
   - image: cp/apic/ibm-apiconnect-management-autotest-exerciser
   - image: cp/apic/ibm-apiconnect-management-autotest-exerciser-db
   - image: cp/apic/ibm-apiconnect-management-autotest-service
@@ -49,6 +59,7 @@ images:
   - image: cp/apic/ibm-apiconnect-management-client-downloads-server
   - image: cp/apic/ibm-apiconnect-management-compliance-service
   - image: cp/apic/ibm-apiconnect-management-compliance-ui
+  - image: cp/apic/ibm-apiconnect-management-consumer-catalog
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbackrest
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbackrest-repo
   - image: cp/apic/ibm-apiconnect-management-crunchy-pgbadger
@@ -87,6 +98,8 @@ images:
   - image: cp/apic/ibm-apiconnect-management-pgo-scheduler
   - image: cp/apic/ibm-apiconnect-management-portal-proxy
   - image: cp/apic/ibm-apiconnect-management-postgres-operator
+  - image: cp/apic/ibm-apiconnect-management-preupgrade
+  - image: cp/apic/ibm-apiconnect-management-s3proxy
   - image: cp/apic/ibm-apiconnect-management-task-manager
   - image: cp/apic/ibm-apiconnect-management-taskmanager
   - image: cp/apic/ibm-apiconnect-management-training-runtime
@@ -114,6 +127,7 @@ images:
   - image: cp/apic/ibm-apiconnect-portal-portal-nginx
   - image: cp/apic/ibm-apiconnect-portal-portal-remote
   - image: cp/apic/ibm-apiconnect-portal-portal-web
+  - image: cp/apic/ibm-apiconnect-portal-preupgrade
   - image: cp/apic/ibm-apiconnect-portal-remote
   - image: cp/apic/ibm-apiconnect-portal-web
   - image: cp/apic/ibm-apiconnect-portal-ws-tunnel
