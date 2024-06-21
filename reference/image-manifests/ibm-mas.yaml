@@ -1,6 +1,49 @@
 source: ibm-mas-bundle/case/ibm-mas/case.yaml
 description: "IBM Maximo Application Suite"
 images:
+  - image: cp/aibroker/aibroker
+  - image: cp/arcgis/apps
+  - image: cp/arcgis/arcgis-busybox
+  - image: cp/arcgis/arcgis-disaster-recovery
+  - image: cp/arcgis/arcgis-filebeat
+  - image: cp/arcgis/arcgis-ignite
+  - image: cp/arcgis/arcgis-ingress-controller
+  - image: cp/arcgis/arcgis-nginx-web
+  - image: cp/arcgis/arcgis-opensearch
+  - image: cp/arcgis/arcgis-ozone
+  - image: cp/arcgis/arcgis-postgresql
+  - image: cp/arcgis/arcgis-prometheus
+  - image: cp/arcgis/catalog-server
+  - image: cp/arcgis/config-factory-server
+  - image: cp/arcgis/distributed-server
+  - image: cp/arcgis/distributed-server-deeplearning
+  - image: cp/arcgis/enterprise-admin
+  - image: cp/arcgis/enterprise-admin-tools
+  - image: cp/arcgis/enterprise-rabbitmq
+  - image: cp/arcgis/geocode-runtime-server
+  - image: cp/arcgis/geocode-server
+  - image: cp/arcgis/geometry-server
+  - image: cp/arcgis/gp-proxy-server
+  - image: cp/arcgis/gp-server
+  - image: cp/arcgis/help
+  - image: cp/arcgis/home
+  - image: cp/arcgis/ibm-mas-arcgis-ws
+  - image: cp/arcgis/image-server
+  - image: cp/arcgis/jsapi
+  - image: cp/arcgis/manager
+  - image: cp/arcgis/map-server
+  - image: cp/arcgis/native-server
+  - image: cp/arcgis/object-store-migration-tools
+  - image: cp/arcgis/portal-content-template
+  - image: cp/arcgis/postgres-upgrade-tools
+  - image: cp/arcgis/raster-analytics-server-deeplearning
+  - image: cp/arcgis/relational-datastore
+  - image: cp/arcgis/sds-feature-server
+  - image: cp/arcgis/sharing
+  - image: cp/arcgis/symbol-server
+  - image: cp/arcgis/tile-server
+  - image: cp/arcgis/web-style
+  - image: cp/arcgis/webhook-processor
   - image: cp/assist/assist-db-job
   - image: cp/assist/assist-useragent
   - image: cp/assist/assist-voice-gateway
@@ -27,6 +70,7 @@ images:
   - image: cp/assist/ema-studio
   - image: cp/assist/ema-technician
   - image: cp/assist/hook-ca-assist
+  - image: cp/assist/ibm-mas-assist-primary-entity
   - image: cp/assist/ibm-mas-assist-ws
   - image: cp/datadictionary/kitt-v3-file-store
   - image: cp/datadictionary/kitt-v3-graph-service
@@ -62,13 +106,17 @@ images:
   - image: cp/manage/extension-utilities
   - image: cp/manage/extension-workday
   - image: cp/manage/health-aio
+  - image: cp/manage/health-utilities-accelerator
   - image: cp/manage/healthext-model-engine
   - image: cp/manage/ibm-mas-healthext-ws
   - image: cp/manage/ibm-mas-imagestitching
+  - image: cp/manage/ibm-mas-manage-acc
   - image: cp/manage/ibm-mas-manage-appstatus
   - image: cp/manage/ibm-mas-manage-bdi
   - image: cp/manage/ibm-mas-manage-primary-entity
   - image: cp/manage/ibm-mas-manage-ws
+  - image: cp/manage/ibm-mas-slackproxy
+  - image: cp/manage/icdslack
   - image: cp/manage/image-stitching
   - image: cp/manage/maf-tools
   - image: cp/manage/manage-groupsyncagent
@@ -153,6 +201,7 @@ images:
   - image: cp/monitor/as-library
   - image: cp/monitor/as-ui
   - image: cp/monitor/db-base
+  - image: cp/monitor/db2-dataingest-ciscodnaspaceinputprocessor
   - image: cp/monitor/db2-dataingest-datameter
   - image: cp/monitor/db2-dataingest-inputerrorprocessor
   - image: cp/monitor/db2-dataingest-inputprocessor
@@ -213,6 +262,7 @@ images:
   - image: cp/visualinspection/vision-dataset-feature
   - image: cp/visualinspection/vision-dataset-summarization
   - image: cp/visualinspection/vision-dle
+  - image: cp/visualinspection/vision-dlm-policy
   - image: cp/visualinspection/vision-dnn-actiondetect
   - image: cp/visualinspection/vision-dnn-anomaly
   - image: cp/visualinspection/vision-dnn-caffe
