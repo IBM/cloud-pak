@@ -18,7 +18,7 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
 
 ## Prerequisites
 
-1. Kubernetes 1.19.0+; kubectl and oc CLI; Helm 3;
+1. Kubernetes 1.19.0+/OpenShift 4.6.0+; kubectl and oc CLI; Helm 3;
   * Install and setup oc/kubectl CLI depending on your architecture.
     * [ppc64le](https://mirror.openshift.com/pub/openshift-v4/ppc64le/clients/ocp/stable/openshift-client-linux.tar.gz)
     * [s390x](https://mirror.openshift.com/pub/openshift-v4/s390x/clients/ocp/stable/openshift-client-linux.tar.gz)
@@ -46,7 +46,7 @@ oc create secret generic ucd-secrets \
   --from-literal=keystorepassword=MyKeystorePassword
 ```
 
-5. A PersistentVolume that will hold the conf directory for the DevOps Deploy relay is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.
+5. A PersistentVolume that will hold the conf directory for the DevOps Deploy relay is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.  Ensure that the spec.persistentVolumeReclaimPolicy parameter is set to Retain on the conf directory persistent volume. By default, the value is Delete for dynamically created persistent volumes. Setting the value to Retain ensures that the persistent volume is not freed or deleted if its associated persistent volume claim is deleted.
 
 ```
 apiVersion: v1
@@ -60,6 +60,7 @@ spec:
     storage: 10Mi
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.1.17
     path: /volume1/k8/ucdr-conf
@@ -158,7 +159,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucdr-case --version 1.4.19
+oc ibm-pak get ibm-ucdr-case --version 1.4.21
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -171,7 +172,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-catalog
@@ -181,7 +182,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator
@@ -195,7 +196,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -213,7 +214,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator
@@ -223,7 +224,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-catalog
@@ -239,7 +240,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator-native                   \
@@ -250,7 +251,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator-native
@@ -260,7 +261,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action install-helm-chart                        \
@@ -271,7 +272,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.19                            \
+    --version 1.4.21                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action uninstall-helm-chart                      \
@@ -477,7 +478,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucdr-case
-   export CASE_VERSION=1.4.19
+   export CASE_VERSION=1.4.21
    ```
 
 2. Connect your host to the intranet.
@@ -534,7 +535,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.19
+    version: 1.4.21
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -934,18 +935,18 @@ If you want to make this repeatable across environments, you can reuse the same 
 
 ### Parameters
 
-The Helm chart and operator custom resource have the following values.
+The Helm chart and operator custom resource (UcdRelay v4) have the following values.
 
 ##### Common Parameters
 
 | Qualifier | Parameter  | Definition | Allowed Value |
 |---|---|---|---|
-| version |  | DevOps Deploy relay product vesion |  |
+| version |  | DevOps Deploy relay product vesion | Defaults to latest product version |
 | replicas | relay | Number of DevOps Deploy relay replicas | Non-zero number of replicas.  Defaults to 1 |
 | image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to IfNotPresent |
-|       | secret |  An image pull secret used to authenticate with the image registry | Empty (default) if no authentication is required to access the image registry. |
+|       | secret |  An image pull secret used to authenticate with the image registry | If no value is specified we will look for a pull secret named ibm-entitlement-key. |
 | license | accept | Set to true to indicate you have read and agree to license agreements : https://ibm.biz/devops-deploy-license | false |
-| service | type | Specify type of service | Valid options are ClusterIP, NodePort and LoadBalancer (for clusters that support LoadBalancer). Default is ClusterIP |
+| service | type | Specify type of service | Valid options are ClusterIP, NodePort and LoadBalancer (for clusters that support LoadBalancer). Default is LoadBalancer |
 | persistence | enabled | Determines if persistent storage will be used to hold the DevOps Deploy server appdata directory contents. This should always be true to preserve server data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "false" |
 |             | fsGroup | The group ID to use to access persistent volumes | Default value "1001" |
@@ -963,11 +964,13 @@ The Helm chart and operator custom resource have the following values.
 |                        | geotags | If you choose to cache files on the relay, you can specify one or more component version statuses here, separated by semicolons. The agent relay automatically caches component versions with any of these statuses so that those versions are ready when they are needed for a deployment. A status can contain a space except in the first or last position. A status can contain commas. The special * status replicates all artifacts, but use this status with caution, because it can make the agent relay store a large amount of data. If no value is specified, no component versions are cached automatically. |  |
 | ingress | httpproxyhost | Host name used to access the DevOps Deploy relay http proxy port. Leave blank on OpenShift to create default route. |  |
 |               | codestationhost | Host name used to access the DevOps Deploy relay codestation port. Leave blank on OpenShift to create default route. |  |
-| resources | constraints.enabled | Specifies whether the resource constraints specified in this helm chart are enabled.   | false (default) or true  |
+| resources | constraints.enabled | Specifies whether the resource constraints specified in this helm chart are enabled.   | true (default) or false  |
 |           | limits.cpu  | Describes the maximum amount of CPU allowed | Default is 4000m. See Kubernetes - [meaning of CPU](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-cpu)  |
 |           | limits.memory | Describes the maximum amount of memory allowed | Default is 4Gi. See Kubernetes - [meaning of Memory](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-memory) |
+|           | limits.ephemeral-storage | Describes the maximum amount of ephemeral storage allowed | Default is 2Gi. See Kubernetes - [ephemeral storage](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#setting-requests-and-limits-for-local-ephemeral-storage) |
 |           | requests.cpu  | Describes the minimum amount of CPU required - if not specified will default to limit (if specified) or otherwise implementation-defined value. | Default is 100m. See Kubernetes - [meaning of CPU](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-cpu) |
-|           | requests.memory | Describes the minimum amount of memory required If not specified, the memory amount will default to the limit (if specified) or the implementation-defined value | Default is 200Mi. See Kubernetes - [meaning of Memory](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-memory) |
+|           | requests.memory | Describes the minimum amount of memory required. If not specified, the memory amount will default to the limit (if specified) or the implementation-defined value | Default is 200Mi. See Kubernetes - [meaning of Memory](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-memory) |
+|           | requests.ephemeral-storage | Describes the minimum amount of ephemeral storage required. If not specified, the amount will default to the limit (if specified) or the implementation-defined value  | Default is 500Mi. See Kubernetes - [ephemeral storage](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#setting-requests-and-limits-for-local-ephemeral-storage) |
 
 ## Storage
 See the Prerequisites section of this page for storage information.
