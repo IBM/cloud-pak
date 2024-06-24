@@ -17,7 +17,7 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
 - Helm Chart - Users with the namespace administrator role can install the DevOps Deploy agent using the helm chart.
 
 ## Prerequisites
-1. Kubernetes 1.19.0+; kubectl and oc CLI; Helm 3;
+1. Kubernetes 1.19.0+/OpenShift 4.6.0+; kubectl and oc CLI; Helm 3;
   * Install and setup oc/kubectl CLI depending on your architecture.
     * [ppc64le](https://mirror.openshift.com/pub/openshift-v4/ppc64le/clients/ocp/stable/openshift-client-linux.tar.gz)
     * [s390x](https://mirror.openshift.com/pub/openshift-v4/s390x/clients/ocp/stable/openshift-client-linux.tar.gz)
@@ -46,6 +46,7 @@ oc create secret generic ucd-secrets \
 ```
 
 5. A PersistentVolume that will hold the conf directory for the DevOps Deploy agent is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.
+Ensure that the spec.persistentVolumeReclaimPolicy parameter is set to Retain on the conf directory persistent volume. By default, the value is Delete for dynamically created persistent volumes. Setting the value to Retain ensures that the persistent volume is not freed or deleted if its associated persistent volume claim is deleted.
 
 ```
 apiVersion: v1
@@ -59,6 +60,7 @@ spec:
     storage: 10Mi
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.1.17
     path: /volume1/k8/ucda-conf
@@ -158,7 +160,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucda-case --version 1.4.19
+oc ibm-pak get ibm-ucda-case --version 1.4.20
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -171,7 +173,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case        \
-    --version 1.4.19           \
+    --version 1.4.20           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-catalog
@@ -181,7 +183,7 @@ oc ibm-pak launch ibm-ucda-case        \
 
 ```
 oc ibm-pak launch ibm-ucda-case       \
-    --version 1.4.19           \
+    --version 1.4.20           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-operator
@@ -195,7 +197,7 @@ oc ibm-pak launch ibm-ucda-case       \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperator                           \
     --action apply_custom_resources                    \
@@ -212,7 +214,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -222,7 +224,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog
@@ -237,7 +239,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -248,7 +250,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native
@@ -258,7 +260,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -269,7 +271,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.19                            \
+    --version 1.4.20                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -475,7 +477,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucda-case
-   export CASE_VERSION=1.4.19
+   export CASE_VERSION=1.4.20
    ```
 
 2. Connect your host to the intranet.
@@ -532,7 +534,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.19
+    version: 1.4.20
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
