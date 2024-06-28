@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 24.0.0
+  category: catalog
+  digest: sha256:3e21b7abc4a5ebc02872e54434b6034c0ec2fd8371a72061f57559efe775d706
+  image: cpopen/ibm-bai-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v24.0.0-fbc-20240614.043041-B7EE35965-amd64
+- caseVersions:
+  - 24.0.0
+  category: catalog
+  digest: sha256:192559b4937626ef63d7bf69367401402f6d0e8e7ea5f1760ad6a89ab75c736d
+  image: cpopen/ibm-bai-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v24.0.0-fbc-20240614.043041-B7EE35965-s390x
+- caseVersions:
+  - 24.0.0
+  category: catalog
+  digest: sha256:2c12253a3fa3b345d89d21be07242a3d75fa9f3f4dd1a230bf6db5b9c8105a7c
+  image: cpopen/ibm-bai-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v24.0.0-fbc-20240614.043041-B7EE35965-ppc64le
+- caseVersions:
+  - 24.0.0
+  category: catalog
+  digest: sha256:a54f7c1026f4b0904396a90619127ab0ffc46d182f8bf8a536a06121c47098b1
+  image: cpopen/ibm-bai-catalog
+  platform:
+    imagetype: manifestList
+  tag: v24.0.0-fbc-20240614.043041-B7EE35965
