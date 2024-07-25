@@ -1,0 +1,76 @@
+apiVersion: v1
+case:
+  appVersion: 5.0.1+20240628.083905.1
+  catalogs:
+    database: {}
+    fdb: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM FoundationDB
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-en
+        name: licenseEn
+      ref: LICENSE-en
+    licenseLaEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LA-en
+        name: licenseLaEn
+      ref: LICENSE-LA-en
+    licenseLiEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-LI-en
+        name: licenseLiEn
+      ref: LICENSE-LI-en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE_NON_IBM
+        name: licenseNonIbm
+      ref: LICENSE_NON_IBM
+    licenseNotices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE-notices
+        name: licenseNotices
+      ref: LICENSE-notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-fdb
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 5.0.1+20240628.083905.1
+  webPage: https://www.ibm.com
+created: 2024-07-25T23:30:27.12299200+0000
+digest: sha256:a2c8bddf8c5a37cf7936b769e7f77c3752a98925bd8894db79df98842bc7471d

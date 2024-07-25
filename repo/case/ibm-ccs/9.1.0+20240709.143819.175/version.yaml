@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 9.1.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data Common Core Services
+  displayDescription: IBM Cloud Pak for Data Common Core Services
+  displayName: IBM Cloud Pak for Data Common Core Services
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4D5.0_EnterpriseEdition_License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4D5.0_StandardEdition_License.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-ccs
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 9.1.0+20240709.143819.175
+  webPage: https://www.ibm.com
+created: 2024-07-25T23:30:25.65499200+0000
+digest: sha256:f69470bf8d058ed2b8aed2222a2c0b882e1320ef9c605bb954f2958625e82ed8
