@@ -1,6 +1,6 @@
 apiVersion: v1
 case:
-  appVersion: 5.1.0
+  appVersion: 1.18.12
   catalogs:
     database: {}
   certifications:
@@ -9,9 +9,9 @@ case:
     experimental: {}
     opensource: {}
     sample: {}
-  description: Case bundle for the EDB Cluster Operator
-  displayDescription: IBM EDB Cluster Operator
-  displayName: IBM EDB Cluster Operator
+  description: Case bundle for the Cloud Native Postgresql Operator
+  displayDescription: EnterpriseDB Operator
+  displayName: EnterpriseDB Operator
   icons:
   - mediaType: image/png
     url: TODO
@@ -44,10 +44,14 @@ case:
         displayName: LICENSE_NON_IBM_STANDARD
         name: licenseNonIBMStandard
       ref: non_ibm_license_standard
-  name: ibm-cpd-edb
-  organization: IBM
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-cloud-native-postgresql
+  organization: EnterpriseDB
   schemaversion: 1
-  specVersion: 1.0.0
+  specVersion: 1.1.0
   supports:
     architectures:
       amd64: {}
@@ -57,7 +61,7 @@ case:
     managedPlatforms:
       ibm: {}
       redhat: {}
-  version: 5.1.0+20240705.184547.1704
+  version: 4.25.1
   webPage: TODO
-created: 2024-07-26T16:23:11.33866629+0000
-digest: sha256:6fab1bd4420a8d43cde7d80b4cc40a9b93e208822096381bb646ce3c14ec855a
+created: 2024-07-26T16:23:10.62266629+0000
+digest: sha256:f4706e1ac42dcc12d026f862a082185e2688def1c4607240cf47d60de49e3898
