@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-baw-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-bawautomation-2.2.32
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cs-bawautomation-catalog@sha256:697301d7aab1b43c1665f2e0685e12dbe93c8d63eab1083edbf4c1f7761121e4
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
