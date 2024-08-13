@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-aaf-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-aaf-operator-1.0.1-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-aaf-operator-catalog@sha256:608c93f828a322c84e1596ba8321396a68ee366ca738a05354f1e420d3bcf7d0
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
