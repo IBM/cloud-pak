@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-integration-operations-dashboard-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-integration-operations-dashboard-2.6.26-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-integration-operations-dashboard-catalog@sha256:f73a20b08370d2ce06945824fe187c9f766f8a5e6c63e1b5df420f09cdef497f
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
