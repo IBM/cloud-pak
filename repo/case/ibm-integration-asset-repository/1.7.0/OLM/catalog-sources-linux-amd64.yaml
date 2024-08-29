@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-integration-asset-repository-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-integration-asset-repository-1.7.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-integration-asset-repository-catalog@sha256:cdfee2604f4c20f79668e6f7cadeec88d98ea45e8a1624cd520d48794e4c391a
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
