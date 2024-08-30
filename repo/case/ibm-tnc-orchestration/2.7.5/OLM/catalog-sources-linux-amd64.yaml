@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-tnc-orchestration-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-tnc-orchestration-2.7.5-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-tnc-orchestration-catalog@sha256:bf6cb865ff2da88f956a3d39734ab577d68348bbfb97ca7386fa8738d16b82f6
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
