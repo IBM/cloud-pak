@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-tas-gis-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-tas-gis-11.6.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-tas-gis-operator-catalog@sha256:c85a5fc69136028a6af25683a6474e4e07c9774687bf0c50748a84d8be676e76
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
