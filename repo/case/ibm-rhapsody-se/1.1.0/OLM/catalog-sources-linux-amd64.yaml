@@ -1,0 +1,50 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-rhapsody-se-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rhapsody-se-1.1.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-rse-operator-catalog@sha256:6f78bb5e40205f75bb93321c27b5426bb92310bbec0056cfa5fbf09182b438c3
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-rhapsody-se-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rhapsody-se-1.1.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-rse-operator-bundle@sha256:ef7903e2d8334df39b55c75ec7453e35035d8a7320128915ff6ac9d5170677dd
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-rhapsody-se-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rhapsody-se-1.1.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-rse-operator@sha256:ffd12fb84b96e51d4ad8068dead370384d1e7500ba84e36564b7e409f6213c3c
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

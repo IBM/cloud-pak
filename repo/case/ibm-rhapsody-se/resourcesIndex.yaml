@@ -1,0 +1,32 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:6f78bb5e40205f75bb93321c27b5426bb92310bbec0056cfa5fbf09182b438c3
+  image: cpopen/ibm-rse-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.0-I20240917-042851
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:ef7903e2d8334df39b55c75ec7453e35035d8a7320128915ff6ac9d5170677dd
+  image: cpopen/ibm-rse-operator-bundle
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.0-I20240917-042851
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:ffd12fb84b96e51d4ad8068dead370384d1e7500ba84e36564b7e409f6213c3c
+  image: cpopen/ibm-rse-operator
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 1.1.0-I20240917-042851
