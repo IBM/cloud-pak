@@ -1,0 +1,45 @@
+apiVersion: v1
+case:
+  appVersion: 4.15.6
+  catalogs:
+    database: {}
+    operations: {}
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+    opensource: {}
+  description: Operator for IBM Storage Fusion Data Foundation
+  displayDescription: Operator for IBM Storage Fusion Data Foundation
+  displayName: IBM Storage Fusion Data Foundation Operator
+  icons: []
+  licenses:
+    isf-df:
+      mediaType: text/plain
+      metadata:
+        displayDescription: License for IBM Storage Fusion Data Foundation Operator
+        displayName: IBM Storage Fusion Data Foundation Operator
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-storage-fusion-df-case-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 6.5.0
+  webPage: https://www.ibm.com/products/spectrum-fusion
+created: 2024-09-17T12:00:32.49732042+0000
+digest: sha256:3c418a9c138f5c1b59346decc3863ff9348ccd183d83627480b36a99799a230a
