@@ -1,2 +1,12 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 2.0.0
+  category: catalog
+  digest: sha256:96c4c4af37f96717e4af3550cb59acae49d28799459c7de579fcd523377c11d3
+  image: cpopen/ibm-wxa4z-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v2.0.0-20241809.131850-linux.amd64
