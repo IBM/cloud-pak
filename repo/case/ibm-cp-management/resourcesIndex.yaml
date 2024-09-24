@@ -402,3 +402,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 2.3.32-ibm-management-orchestrator
+- caseVersions:
+  - 100.3.38+2.3.35
+  category: catalog
+  digest: sha256:0ce86e4e87fe8b7fbf8e638e6070438debb250a2749ffbdca0648055d02562a6
+  image: cp4mcm/cp4mcm-orchestrator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 2.3-latest
+- caseVersions:
+  - 100.3.38+2.3.35
+  category: catalog
+  digest: sha256:9efa3be3ab3dd08e2c3552b00dc2c65854bc98a1ae57b753a08a1e6759f02e1f
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.35-ibm-management-orchestrator-amd64
+- caseVersions:
+  - 100.3.38+2.3.35
+  category: catalog
+  digest: sha256:80381d5430a4d32f72f961043ca1720899cb29deb16ca1d7661382c53171d732
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.35-ibm-management-orchestrator-ppc64le
+- caseVersions:
+  - 100.3.38+2.3.35
+  category: catalog
+  digest: sha256:934766d40f48157077b55a6bdf40bcd7abec1e54562aaaba41b3f5ba335827b3
+  image: cp/cp4mcm/cp4mcm-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.3.35-ibm-management-orchestrator

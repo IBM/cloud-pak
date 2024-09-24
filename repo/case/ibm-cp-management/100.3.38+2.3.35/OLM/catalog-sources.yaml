@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-management-orchestrator
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-management-100.3.38+2.3.35
+  publisher: IBM
+  image: cp.icr.io/cp/cp4mcm/cp4mcm-operator-catalog@sha256:934766d40f48157077b55a6bdf40bcd7abec1e54562aaaba41b3f5ba335827b3
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
