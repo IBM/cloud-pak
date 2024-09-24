@@ -2,6 +2,7 @@ source: ibm-devops-bundle/case/ibm-devops-prod/case.yaml
 description: "IBM DevOps"
 images:
   - image: cp/ibm-devops-test-codesweep
+  - image: cp/ibm-devops-test-emissary
   - image: cp/ibm-devops-test-jdk17
   - image: cp/ibm-devops-test-jmeter
   - image: cp/ibm-devops-test-junit
@@ -11,6 +12,8 @@ images:
   - image: cp/ibm-devops-test-postman
   - image: cp/ibm-devops-test-rabbitmq
   - image: cp/ibm-devops-test-runtime
+  - image: cp/ibm-devops-test-runtime-chrome
+  - image: cp/ibm-devops-test-runtime-edge
   - image: cp/ibm-devops-test-virtualization
   - image: cp/ibm-devops-test-workbench
   - image: cp/ibm-devops-testhub-core
