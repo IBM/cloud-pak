@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0+20240916.183750.19
+  category: catalog
+  digest: sha256:0e9a851a915b35a311d7be7405051b9c385e1cbc4b17fcbfa758adae325336f7
+  image: cpopen/ibm-wca-z-code-explanation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.0-amd64
+- caseVersions:
+  - 1.0.0+20240916.183750.19
+  category: catalog
+  digest: sha256:95777af79e41dcc8524a5d5c95893bb1f0ccc584c6a52c160a25ded39b1ed945
+  image: cpopen/ibm-wca-z-code-explanation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.0-s390x
+- caseVersions:
+  - 1.0.0+20240916.183750.19
+  category: catalog
+  digest: sha256:1001cadbc58ccd18de6f41c419b3e8f9a0ede58f5d5d0d91fe547a50ef7cfed6
+  image: cpopen/ibm-wca-z-code-explanation-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.0
