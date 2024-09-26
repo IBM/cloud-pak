@@ -802,3 +802,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v8.6.0-20240802.005106-169
+- caseVersions:
+  - 9.3.0+20240905.235910.55
+  category: catalog
+  digest: sha256:cf4a1085ec10c543c4ecdf242261c2ea2a7966714e9a99025af242d0607889d9
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v9.3.0-20240905.235910-55-linux.amd64
+- caseVersions:
+  - 9.3.0+20240905.235910.55
+  category: catalog
+  digest: sha256:44660f81e3b6dd302add8100084a451d32352a6e0524d104fc5d9ec340705825
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v9.3.0-20240905.235910-55-linux.ppc64le
+- caseVersions:
+  - 9.3.0+20240905.235910.55
+  category: catalog
+  digest: sha256:ccc577476b98380849c045b4131318d1aa89eccf41e936b84520ee6f88ee2b2d
+  image: cpopen/ibm-cpd-dods-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v9.3.0-20240905.235910-55
