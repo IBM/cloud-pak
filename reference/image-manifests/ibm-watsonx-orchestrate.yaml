@@ -15,6 +15,7 @@ images:
   - image: cp/appc/acecc-mapping-assist-prod
   - image: cp/appc/acecc-proxy-prod
   - image: cp/appc/acecc-velero-plugin-prod
+  - image: cp/cpd/all-minilm-l6-v2
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/bigcode-starcoder-part1
   - image: cp/cpd/bigcode-starcoder-part2
@@ -42,6 +43,8 @@ images:
   - image: cp/cpd/environments-ui
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/fmaas-router
+  - image: cp/cpd/fms-hf-tuning
+  - image: cp/cpd/fms-hf-tuning-sidecar
   - image: cp/cpd/google-flan-t5-xl
   - image: cp/cpd/google-flan-t5-xxl
   - image: cp/cpd/google-flan-ul2
@@ -75,6 +78,25 @@ images:
   - image: cp/cpd/job-trigger
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
+  - image: cp/cpd/llama-3-1-70b-instruct-part1
+  - image: cp/cpd/llama-3-1-70b-instruct-part2
+  - image: cp/cpd/llama-3-1-70b-instruct-part3
+  - image: cp/cpd/llama-3-1-70b-instruct-part4
+  - image: cp/cpd/llama-3-1-8b-instruct
+  - image: cp/cpd/llama-3-405b-instruct-part1
+  - image: cp/cpd/llama-3-405b-instruct-part10
+  - image: cp/cpd/llama-3-405b-instruct-part11
+  - image: cp/cpd/llama-3-405b-instruct-part12
+  - image: cp/cpd/llama-3-405b-instruct-part13
+  - image: cp/cpd/llama-3-405b-instruct-part14
+  - image: cp/cpd/llama-3-405b-instruct-part2
+  - image: cp/cpd/llama-3-405b-instruct-part3
+  - image: cp/cpd/llama-3-405b-instruct-part4
+  - image: cp/cpd/llama-3-405b-instruct-part5
+  - image: cp/cpd/llama-3-405b-instruct-part6
+  - image: cp/cpd/llama-3-405b-instruct-part7
+  - image: cp/cpd/llama-3-405b-instruct-part8
+  - image: cp/cpd/llama-3-405b-instruct-part9
   - image: cp/cpd/meta-llama-llama-2-13b-chat
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part1
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part2
@@ -91,6 +113,7 @@ images:
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part3
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part4
   - image: cp/cpd/mncai-llama2-13b-dpo-v7
+  - image: cp/cpd/multilingual-e5-large
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
@@ -107,8 +130,10 @@ images:
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
   - image: cp/cpd/task-credentials
+  - image: cp/cpd/text-generation-inference
   - image: cp/cpd/tgis-vllm
   - image: cp/cpd/ubi9-micro
+  - image: cp/cpd/vllm
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
@@ -182,6 +207,7 @@ images:
   - image: cp/watson-gateway
   - image: cp/watsonx-orchestrate/ai-cognitive-mapper
   - image: cp/watsonx-orchestrate/appconnect-skill-provider
+  - image: cp/watsonx-orchestrate/ba-saas-skill-studio
   - image: cp/watsonx-orchestrate/build-tenant-management
   - image: cp/watsonx-orchestrate/connection-manager
   - image: cp/watsonx-orchestrate/connector-service-ui
@@ -211,6 +237,7 @@ images:
   - image: cp/watsonx-orchestrate/platformui
   - image: cp/watsonx-orchestrate/platformuiproxy
   - image: cp/watsonx-orchestrate/skill-doc-bootstrap
+  - image: cp/watsonx-orchestrate/skill-server
   - image: cp/watsonx-orchestrate/skillsequencingservice
   - image: cp/watsonx-orchestrate/teams-backend
   - image: cp/watsonx-orchestrate/teams-ui
@@ -219,4 +246,5 @@ images:
   - image: cp/watsonx-orchestrate/tenantregistry
   - image: cp/watsonx-orchestrate/wo-appconnect-provisioner
   - image: cp/watsonx-orchestrate/wo-ootb-bundle
+  - image: cp/watsonx-orchestrate/wo-skill-bootstrap-job
   - image: cp/watsonx-orchestrate/wo-skill-catalog-ui

@@ -19,6 +19,7 @@ images:
   - image: cp/cpd/aios-payload-logging-service
   - image: cp/cpd/aios-payload-logging-service-api
   - image: cp/cpd/aios-redis
+  - image: cp/cpd/all-minilm-l6-v2
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/bigcode-starcoder-part1
   - image: cp/cpd/bigcode-starcoder-part2
@@ -48,6 +49,8 @@ images:
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/explainability
   - image: cp/cpd/fmaas-router
+  - image: cp/cpd/fms-hf-tuning
+  - image: cp/cpd/fms-hf-tuning-sidecar
   - image: cp/cpd/google-flan-t5-xl
   - image: cp/cpd/google-flan-t5-xxl
   - image: cp/cpd/google-flan-ul2
@@ -74,6 +77,25 @@ images:
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
   - image: cp/cpd/kubectlclient
+  - image: cp/cpd/llama-3-1-70b-instruct-part1
+  - image: cp/cpd/llama-3-1-70b-instruct-part2
+  - image: cp/cpd/llama-3-1-70b-instruct-part3
+  - image: cp/cpd/llama-3-1-70b-instruct-part4
+  - image: cp/cpd/llama-3-1-8b-instruct
+  - image: cp/cpd/llama-3-405b-instruct-part1
+  - image: cp/cpd/llama-3-405b-instruct-part10
+  - image: cp/cpd/llama-3-405b-instruct-part11
+  - image: cp/cpd/llama-3-405b-instruct-part12
+  - image: cp/cpd/llama-3-405b-instruct-part13
+  - image: cp/cpd/llama-3-405b-instruct-part14
+  - image: cp/cpd/llama-3-405b-instruct-part2
+  - image: cp/cpd/llama-3-405b-instruct-part3
+  - image: cp/cpd/llama-3-405b-instruct-part4
+  - image: cp/cpd/llama-3-405b-instruct-part5
+  - image: cp/cpd/llama-3-405b-instruct-part6
+  - image: cp/cpd/llama-3-405b-instruct-part7
+  - image: cp/cpd/llama-3-405b-instruct-part8
+  - image: cp/cpd/llama-3-405b-instruct-part9
   - image: cp/cpd/meta-llama-llama-2-13b-chat
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part1
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part2
@@ -93,11 +115,13 @@ images:
   - image: cp/cpd/mncai-llama2-13b-dpo-v7
   - image: cp/cpd/model-operation-service-scheduling
   - image: cp/cpd/model-risk-management
+  - image: cp/cpd/multilingual-e5-large
   - image: cp/cpd/ngp-projects-api
   - image: cp/cpd/openpages-cpd-addon-translations
   - image: cp/cpd/openpages-cpd-opapp
   - image: cp/cpd/openpages-cpd-opappaudit
   - image: cp/cpd/openpages-cpd-opappdata
+  - image: cp/cpd/openpages-cpd-opsearch
   - image: cp/cpd/openpages-cpd-provisioner
   - image: cp/cpd/openpages-cpd-provisioner-oracle
   - image: cp/cpd/openpages-cpd-user-sync
@@ -117,8 +141,10 @@ images:
   - image: cp/cpd/spaces
   - image: cp/cpd/spaces-ui-job
   - image: cp/cpd/task-credentials
+  - image: cp/cpd/text-generation-inference
   - image: cp/cpd/tgis-vllm
   - image: cp/cpd/ubi9-micro
+  - image: cp/cpd/vllm
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
@@ -132,6 +158,7 @@ images:
   - image: cp/cpd/wml-autoai-kb
   - image: cp/cpd/wml-autoai-ts
   - image: cp/cpd/wml-autoai-tsad
+  - image: cp/cpd/wml-dep-init-utils
   - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
   - image: cp/cpd/wml-dep-rshiny-24.1-r4.3-ms
   - image: cp/cpd/wml-dep-rt-231-pygpu
