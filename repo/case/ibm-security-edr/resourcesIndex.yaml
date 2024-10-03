@@ -200,3 +200,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: latest
+- caseVersions:
+  - 1.0.12
+  category: catalog
+  digest: sha256:e8b138227ba5136085a4d49b1c4ae9b3221075d5e043b7268646d97616562463
+  image: cpopen/ibm-security-edr-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.0.12
+  category: catalog
+  digest: sha256:5cd4c2e0a1c6b7fc03f37170eaaa47238cf3f8f29123de851d2aedb2d814eb88
+  image: cpopen/ibm-security-edr-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest

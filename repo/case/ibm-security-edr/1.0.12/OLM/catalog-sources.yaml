@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-security-edr-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-security-edr-1.0.12
+  publisher: IBM
+  image: icr.io/cpopen/ibm-security-edr-catalog@sha256:5cd4c2e0a1c6b7fc03f37170eaaa47238cf3f8f29123de851d2aedb2d814eb88
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
