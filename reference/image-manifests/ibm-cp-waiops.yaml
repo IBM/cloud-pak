@@ -11,6 +11,18 @@ images:
   - image: cp/ai/seldonio-mlserver
   - image: cp/ai/triton-inference-server
   - image: cp/ai/wmlserving-controller
+  - image: cp/appc/ace-server-prod
+  - image: cp/appc/acecc-connector-auth-service-prod
+  - image: cp/appc/acecc-content-server-prod
+  - image: cp/appc/acecc-couchdb3-prod
+  - image: cp/appc/acecc-dashboard-prod
+  - image: cp/appc/acecc-designer-runtime-prod
+  - image: cp/appc/acecc-designer-ui-prod
+  - image: cp/appc/acecc-designerflows-prod
+  - image: cp/appc/acecc-ecp-prod
+  - image: cp/appc/acecc-mapping-assist-prod
+  - image: cp/appc/acecc-proxy-prod
+  - image: cp/appc/acecc-velero-plugin-prod
   - image: cp/cp4waiops/aggregation-collater-java-service
   - image: cp/cp4waiops/aggregation-dedup-service
   - image: cp/cp4waiops/aggregation-normalizer-service
@@ -46,7 +58,9 @@ images:
   - image: cp/cp4waiops/couchdb
   - image: cp/cp4waiops/couchdb-manager
   - image: cp/cp4waiops/couchdb3
+  - image: cp/cp4waiops/cp4aiops-application-integrator
   - image: cp/cp4waiops/cp4aiops-github-integration
+  - image: cp/cp4waiops/cp4aiops-jira-integration
   - image: cp/cp4waiops/cp4waiops-connectors
   - image: cp/cp4waiops/cp4waiops-metricsprocessor
   - image: cp/cp4waiops/data-quality-checker
@@ -112,6 +126,7 @@ images:
   - image: cp/cp4waiops/ibm-infra-mgmt-topology-processor
   - image: cp/cp4waiops/ibm-mm-cdc-conn
   - image: cp/cp4waiops/ibm-model-train-operator
+  - image: cp/cp4waiops/ibm-nginx-proxy
   - image: cp/cp4waiops/ibm-stolon
   - image: cp/cp4waiops/ibm-vault
   - image: cp/cp4waiops/ibm-vault-k8s
@@ -236,6 +251,7 @@ images:
   - image: cp/cp4waiops/noi-postgres-repl-manager
   - image: cp/cp4waiops/noiactions-service
   - image: cp/cp4waiops/oob-recommended-actions
+  - image: cp/cp4waiops/opa
   - image: cp/cp4waiops/opencontent-common-utils
   - image: cp/cp4waiops/opencontent-icp-cert-gen-1
   - image: cp/cp4waiops/opencontent-minio
@@ -255,6 +271,7 @@ images:
   - image: cp/cp4waiops/similar-incidents-service
   - image: cp/cp4waiops/similar-incidents-training
   - image: cp/cp4waiops/spark
+  - image: cp/cp4waiops/storage-benchmark
   - image: cp/cp4waiops/topology
   - image: cp/cp4waiops/trainer-v2-service
   - image: cp/cp4waiops/training-service
@@ -292,8 +309,10 @@ images:
   - image: cp/opencontent-etcd-3
   - image: cp/opencontent-opensearch-1.3
   - image: cp/opencontent-opensearch-2.13.0
+  - image: cp/opencontent-opensearch-2.16.0
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.13.0
+  - image: cp/opencontent-os-base-plugins-2.16.0
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
   - image: cp/redis-db-5.0.14

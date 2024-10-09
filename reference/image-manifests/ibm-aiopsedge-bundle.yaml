@@ -1,10 +1,13 @@
 source: ibm-aiopsedge-bundle/case/ibm-aiopsedge-bundle/case.yaml
 description: "This operator manages the AIOpsEdge components of the IBM Cloud Pak for AIOps product."
 images:
+  - image: cp/appc/acecc-designerflows-prod
   - image: cp/cp4waiops/aiops-logs-connector
   - image: cp/cp4waiops/camel-integrations
   - image: cp/cp4waiops/connector-manager
+  - image: cp/cp4waiops/cp4aiops-application-integrator
   - image: cp/cp4waiops/cp4aiops-github-integration
+  - image: cp/cp4waiops/cp4aiops-jira-integration
   - image: cp/cp4waiops/cp4waiops-connectors
   - image: cp/cp4waiops/cp4waiops-metricsprocessor
   - image: cp/cp4waiops/email-notifications
