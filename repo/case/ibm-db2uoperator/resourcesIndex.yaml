@@ -1825,6 +1825,7 @@ containerImages:
   tag: 9960-dev
 - caseVersions:
   - 6.0.2+20240912.064810.10861
+  - 6.0.3+20241012.145531.11278
   category: catalog
   digest: sha256:d946db57137caafeb96f1d90677a5c1b1fdd39642c99f34c2d51b25dfe211ad7
   image: cpopen/ibm-db2uoperator-catalog
@@ -1835,6 +1836,7 @@ containerImages:
   tag: 10861-dev-amd64
 - caseVersions:
   - 6.0.2+20240912.064810.10861
+  - 6.0.3+20241012.145531.11278
   category: catalog
   digest: sha256:2c44166ba0f4ff5ffc7c76287cf029949fc828df6e027588b4f009cb4990d723
   image: cpopen/ibm-db2uoperator-catalog
@@ -1845,6 +1847,7 @@ containerImages:
   tag: 10861-dev-ppc64le
 - caseVersions:
   - 6.0.2+20240912.064810.10861
+  - 6.0.3+20241012.145531.11278
   category: catalog
   digest: sha256:c307f94e47f35bf00220d670bc1fb9577022901ff5e7d3abe87398531bdee6a4
   image: cpopen/ibm-db2uoperator-catalog
@@ -1855,9 +1858,48 @@ containerImages:
   tag: 10861-dev-s390x
 - caseVersions:
   - 6.0.2+20240912.064810.10861
+  - 6.0.3+20241012.145531.11278
   category: catalog
   digest: sha256:3325c4e4ec118c186f80b8336e5a3a5d8e2c2d7a1f06d97c9fee1cc4c90d68dc
   image: cpopen/ibm-db2uoperator-catalog
   platform:
     imagetype: manifestList
   tag: 10861-dev
+- caseVersions:
+  - 6.0.3+20241012.145531.11278
+  category: catalog
+  digest: sha256:c01c12ece36b7c1be76edc0281558e3e77bc1cce24b9fd9e2e99308a03a505ff
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 11278-dev-amd64
+- caseVersions:
+  - 6.0.3+20241012.145531.11278
+  category: catalog
+  digest: sha256:00dc8a8b0c75cff1c8f7307a72017b3b7ad607dfff7fdcfa380ca400ec6c0d26
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 11278-dev-ppc64le
+- caseVersions:
+  - 6.0.3+20241012.145531.11278
+  category: catalog
+  digest: sha256:7600ee8b534314f23911caf4ef5870eceb2cb008631bea194427346696825455
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 11278-dev-s390x
+- caseVersions:
+  - 6.0.3+20241012.145531.11278
+  category: catalog
+  digest: sha256:3d8a379ecc97328eee2e4d5c83f380c87f1b5a32c4097112116f24f287226830
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 11278-dev
