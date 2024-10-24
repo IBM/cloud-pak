@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-speech-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-speech-7.7.0+20241009.194319.728
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-speech-catalog@sha256:959bffde86dad6b2d27e88c98574cfd9ffb25801bbb77d9c6ae41d9c9ffdaf1d
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
