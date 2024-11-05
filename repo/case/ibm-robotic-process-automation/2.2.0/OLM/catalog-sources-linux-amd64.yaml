@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-robotic-process-automation-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-robotic-process-automation-2.2.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-rpa-operator-catalog@sha256:5c74b2b61997fdfb63201a2be068e8ff04d858adeccd8c72325b2c520d3fe513
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
