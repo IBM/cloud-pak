@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-apiconnect-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-apiconnect-5.3.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-apiconnect-catalog@sha256:0561d5722a2173f1fba662a11b34707fe217b2fe105f56f370e6f2b7a5f43c14
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
