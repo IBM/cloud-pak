@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 4.7.1-rc1-202411040945
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This operator manages the Issue Resolution Core component of the IBM
+    Cloud Pak for AIOps product.
+  displayDescription: ""
+  displayName: IBM Cloud Pak for AIOps Issue Resolution Core
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for AIOps License
+        displayName: Cloud Pak for AIOps
+      ref: LA_en.txt
+    nonIbmLicense:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for AIOps Terms and Conditions
+        displayName: Terms and Conditions
+      ref: non_ibm_license.txt
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for AIOps Notices and Information
+        displayName: Notices and Information
+      ref: notices.txt
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiops-ir-core-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.11.1
+  webPage: https://www.ibm.com/uk-en/cloud/cloud-pak-for-aiops
+created: 2024-11-13T08:00:39.79187384+0000
+digest: sha256:58e44d5bb4747d08e90ad1e685030e5e6d42979fe2d63bfcbe7903533aee210e
