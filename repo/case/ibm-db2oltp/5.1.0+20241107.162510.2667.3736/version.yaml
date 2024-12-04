@@ -1,0 +1,61 @@
+apiVersion: v1
+case:
+  appVersion: 11.5.9.0-cn3
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: The IBM Db2 db2oltp operator provides the Db2U Operator integration
+    within Cloud Pak for Data
+  displayDescription: Case Bundle for the operator which deploys and manages the Db2
+    db2oltp Database
+  displayName: IBM Db2 db2oltp Operator Bundle for the Db2 Operator
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/db2logoicp-01.png
+  licenses:
+    db2oltpAdvanced:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Db2 Extension for IBM Cloud Pak for Data Advanced
+          Edition License
+        displayName: IBM Db2 Extension for IBM Cloud Pak for Data Advanced Edition
+          License
+      ref: db2ae.txt
+      url: https://ibm.biz/BdPqhq
+    db2oltpCommunity:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Db2 Extension for IBM Cloud Pak for Data Community
+          Edition License
+        displayName: IBM Db2 Extension for IBM Cloud Pak for Data Community Edition
+          License
+      ref: db2ce.txt
+      url: https://ibm.biz/BdPqMR
+    db2oltpStandard:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Db2 Extension for IBM Cloud Pak for Data Standard
+          Edition License
+        displayName: IBM Db2 Extension for IBM Cloud Pak for Data Standard Edition
+          License
+      ref: db2se.txt
+      url: https://ibm.biz/BdPqhz
+  name: ibm-db2oltp
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 5.1.0+20241107.162510.2667.3736
+  webPage: https://www.ibm.com/analytics/db2
+created: 2024-12-04T23:30:55.70285475+0000
+digest: sha256:d1fac84399c5093afbe95a3ddb1802f4855d1ec4958c4a85b62f2019fb6d719b

@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-dashboard-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-dashboard-3.3.0+20241108.210643.2EE91FCEF
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-dashboard-operator-catalog@sha256:1dbde1e40f379e499a9bcd2b8c88dd3801d3529fa1dada68b83bc1285ddeb466
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
