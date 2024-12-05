@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 5.1.0+20241118.185503.510.47
+  category: catalog
+  digest: sha256:3af903a3cb3f6180ecc2ba3a8f1b192bdf8577872923094f890f47763044c247
+  image: cpopen/ibm-software-hub-control-center-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.1.0-47-amd64
+- caseVersions:
+  - 5.1.0+20241118.185503.510.47
+  category: catalog
+  digest: sha256:daf30943a61f239effb32c2ce9059490a538bc4e4f585a67a5faae7c4706ad36
+  image: cpopen/ibm-software-hub-control-center-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5.1.0-47-ppc64le
+- caseVersions:
+  - 5.1.0+20241118.185503.510.47
+  category: catalog
+  digest: sha256:07c05d4738ad52a528723db6a0fa088f412e184b9389d40de886d1be044b501e
+  image: cpopen/ibm-software-hub-control-center-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.1.0-47-s390x
+- caseVersions:
+  - 5.1.0+20241118.185503.510.47
+  category: catalog
+  digest: sha256:73b3dda4accc671ba9bbfe9dbc37d9522cf7f65f1d332682daa2a1da60018c85
+  image: cpopen/ibm-software-hub-control-center-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.1.0-47
