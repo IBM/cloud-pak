@@ -25,6 +25,7 @@ images:
   - image: cp/cpd/aios-zoo-keeper
   - image: cp/cpd/any-sequencer
   - image: cp/cpd/apimgmt
+  - image: cp/cpd/artifact-store
   - image: cp/cpd/asset-files-api
   - image: cp/cpd/asset-files-api-ppc64le
   - image: cp/cpd/audit-trail-service
@@ -145,6 +146,7 @@ images:
   - image: cp/cpd/dv-api
   - image: cp/cpd/dv-caching
   - image: cp/cpd/dv-engine
+  - image: cp/cpd/dv-exportimport
   - image: cp/cpd/dv-extension-translations
   - image: cp/cpd/dv-init-volume
   - image: cp/cpd/dv-mariadb
@@ -331,6 +333,7 @@ images:
   - image: cp/cpd/mdm-spark-job
   - image: cp/cpd/mdm-spark-sample-job
   - image: cp/cpd/mdm-tuning-job
+  - image: cp/cpd/mdmx-neo4j-migration-image
   - image: cp/cpd/metadata-api-server-x86_64
   - image: cp/cpd/metadata-discovery
   - image: cp/cpd/metadata-engine-x86_64
@@ -398,6 +401,7 @@ images:
   - image: cp/cpd/privatecloud-utils-api
   - image: cp/cpd/profiling-template
   - image: cp/cpd/rabbitmq
+  - image: cp/cpd/rbs-ext
   - image: cp/cpd/redis
   - image: cp/cpd/run-bash-script
   - image: cp/cpd/runtime-assemblies-operator
@@ -481,6 +485,7 @@ images:
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdp-db2
   - image: cp/cpd/wdp-kg-ingestion-rest
+  - image: cp/cpd/wdp-kg-ingestion-rest-fdb
   - image: cp/cpd/wdp-lineage
   - image: cp/cpd/wdp-notebooks-api
   - image: cp/cpd/wdp-policy-service
@@ -491,6 +496,7 @@ images:
   - image: cp/cpd/wdp-shaper
   - image: cp/cpd/wkc-bi-data-service
   - image: cp/cpd/wkc-data-lineage-rest
+  - image: cp/cpd/wkc-data-lineage-rest-fdb
   - image: cp/cpd/wkc-data-quality-ui
   - image: cp/cpd/wkc-data-rules
   - image: cp/cpd/wkc-factsheet-service
@@ -531,6 +537,7 @@ images:
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-autoai-kb
   - image: cp/cpd/wml-autoai-kb-ppc64le
+  - image: cp/cpd/wml-autoai-rag
   - image: cp/cpd/wml-autoai-ts
   - image: cp/cpd/wml-autoai-tsad
   - image: cp/cpd/wml-automl-obm-hybrid-pipeline
@@ -559,6 +566,9 @@ images:
   - image: cp/cpd/wml-deployment-runtime-py39-1
   - image: cp/cpd/wml-deployment-runtime-py39-nnpa
   - image: cp/cpd/wml-deployment-runtime-spss
+  - image: cp/cpd/wml-dl-coordinator
+  - image: cp/cpd/wml-dl-hyperopt
+  - image: cp/cpd/wml-dl-job-monitor
   - image: cp/cpd/wml-edi-imd
   - image: cp/cpd/wml-edi-isd
   - image: cp/cpd/wml-edi-kernel
