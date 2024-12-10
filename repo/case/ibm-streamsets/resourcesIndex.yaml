@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0+20241205.192237.15
+  category: catalog
+  digest: sha256:6a2699895988cfc19933f7ab3634fa436d5c662e530ce2143fb3d45b2d13bd1e
+  image: cpopen/ibm-streamsets-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.0-amd64
+- caseVersions:
+  - 1.0.0+20241205.192237.15
+  category: catalog
+  digest: sha256:d869b68eedd324d5380538eb71f643a22b4cd6ee1976c17ac6b57a7595cfa0e6
+  image: cpopen/ibm-streamsets-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.0-s390x
+- caseVersions:
+  - 1.0.0+20241205.192237.15
+  category: catalog
+  digest: sha256:e5440b4b838ced7c46b60dee3582376cdad6c591e139eb4903c77f00dbf2446b
+  image: cpopen/ibm-streamsets-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.0-ppc64le
+- caseVersions:
+  - 1.0.0+20241205.192237.15
+  category: catalog
+  digest: sha256:244d30bee638fdfd845a1f792ec33c8ddd888b804fa19c08f5f25f9df3504a1d
+  image: cpopen/ibm-streamsets-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v5.1.0
