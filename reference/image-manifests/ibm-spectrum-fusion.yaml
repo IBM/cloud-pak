@@ -1,6 +1,14 @@
 source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
 description: "Management operator for IBM Storage Fusion"
 images:
+  - image: cp/bnr/fbr-velero
+  - image: cp/bnr/guardian-application-service
+  - image: cp/bnr/guardian-backup-location
+  - image: cp/bnr/guardian-backup-policy
+  - image: cp/bnr/guardian-backup-service
+  - image: cp/bnr/guardian-job-manager
+  - image: cp/bnr/guardian-kubevirt-velero-plugin
+  - image: cp/bnr/guardian-transaction-manager
   - image: cp/dcs/auth
   - image: cp/dcs/backup-restore
   - image: cp/dcs/connmgr
@@ -59,6 +67,34 @@ images:
   - image: cp/fbr/guardian-transaction-manager
   - image: cp/fbr/guardian-transaction-manager-minio
   - image: cp/fbr/guardian-transaction-manager-redis
+  - image: cp/fusion-hci/baas-minio
+  - image: cp/fusion-hci/callhomeclient
+  - image: cp/fusion-hci/eventmanager
+  - image: cp/fusion-hci/eventmanager-snmp3
+  - image: cp/fusion-hci/fusion-ui
+  - image: cp/fusion-hci/isf-application-operator
+  - image: cp/fusion-hci/isf-cns-operator
+  - image: cp/fusion-hci/isf-compute-fw-updater
+  - image: cp/fusion-hci/isf-compute-operator
+  - image: cp/fusion-hci/isf-data-protection-operator
+  - image: cp/fusion-hci/isf-hcp-manager
+  - image: cp/fusion-hci/isf-ics-operator
+  - image: cp/fusion-hci/isf-management-consoleplugin
+  - image: cp/fusion-hci/isf-metrodr-operator
+  - image: cp/fusion-hci/isf-network-fw-updater
+  - image: cp/fusion-hci/isf-network-operator
+  - image: cp/fusion-hci/isf-node-exporter
+  - image: cp/fusion-hci/isf-prereq-operator
+  - image: cp/fusion-hci/isf-proxy
+  - image: cp/fusion-hci/isf-serviceability-operator
+  - image: cp/fusion-hci/isf-snmp-exporter
+  - image: cp/fusion-hci/isf-storage-operator
+  - image: cp/fusion-hci/isf-storage-services
+  - image: cp/fusion-hci/isf-ui-operator
+  - image: cp/fusion-hci/isf-update-operator
+  - image: cp/fusion-hci/isf-utils
+  - image: cp/fusion-hci/logcollector
+  - image: cp/fusion-hci/ramen-operator
   - image: cp/ibm-spectrum-discover/auth
   - image: cp/ibm-spectrum-discover/backup-restore
   - image: cp/ibm-spectrum-discover/connmgr

@@ -1,6 +1,14 @@
 source: ibm-spectrum-fusion-sds-bundle/case/ibm-spectrum-fusion-sds/case.yaml
 description: "Management operator for IBM Storage Fusion"
 images:
+  - image: cp/bnr/fbr-velero
+  - image: cp/bnr/guardian-application-service
+  - image: cp/bnr/guardian-backup-location
+  - image: cp/bnr/guardian-backup-policy
+  - image: cp/bnr/guardian-backup-service
+  - image: cp/bnr/guardian-job-manager
+  - image: cp/bnr/guardian-kubevirt-velero-plugin
+  - image: cp/bnr/guardian-transaction-manager
   - image: cp/dcs/auth
   - image: cp/dcs/backup-restore
   - image: cp/dcs/connmgr
@@ -66,6 +74,21 @@ images:
   - image: cp/fbr/guardian-transaction-manager-redis
   - image: cp/fbr/guardian-transaction-manager-worker
   - image: cp/fbr/idp-agent-operator
+  - image: cp/fusion-sds/callhomeclient
+  - image: cp/fusion-sds/eventmanager
+  - image: cp/fusion-sds/eventmanager-snmp3
+  - image: cp/fusion-sds/fusion-ui
+  - image: cp/fusion-sds/isf-application-operator
+  - image: cp/fusion-sds/isf-cns-operator
+  - image: cp/fusion-sds/isf-data-protection-operator
+  - image: cp/fusion-sds/isf-hcp-manager
+  - image: cp/fusion-sds/isf-management-consoleplugin
+  - image: cp/fusion-sds/isf-prereq-operator
+  - image: cp/fusion-sds/isf-proxy
+  - image: cp/fusion-sds/isf-serviceability-operator
+  - image: cp/fusion-sds/isf-ui-operator
+  - image: cp/fusion-sds/isf-update-operator
+  - image: cp/fusion-sds/logcollector
   - image: cp/ibm-spectrum-discover/auth
   - image: cp/ibm-spectrum-discover/backup-restore
   - image: cp/ibm-spectrum-discover/connmgr
