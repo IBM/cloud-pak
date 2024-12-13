@@ -76,3 +76,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: vBAIS-24.0.0-IF001-fbc-20241024.094129-8B60C78EA
+- caseVersions:
+  - 24.1.0
+  category: catalog
+  digest: sha256:90f25e86f4e2bf6bc7b2925c0dde610679183fbbb5559589d760e052e02b1a93
+  image: cpopen/ibm-bai-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v24.0.1-fbc-20241211.004359-D3B4015A9-amd64
+- caseVersions:
+  - 24.1.0
+  category: catalog
+  digest: sha256:cdbac5942d0c6bf05da251d78cc544a0bd3f9cdce0b723316179f60bf160a09c
+  image: cpopen/ibm-bai-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v24.0.1-fbc-20241211.004359-D3B4015A9-s390x
+- caseVersions:
+  - 24.1.0
+  category: catalog
+  digest: sha256:d2c257b4e510ccc9d6e9ed30fc9a749c0771d37b855e3d2f45b7d1c7fe531087
+  image: cpopen/ibm-bai-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v24.0.1-fbc-20241211.004359-D3B4015A9-ppc64le
+- caseVersions:
+  - 24.1.0
+  category: catalog
+  digest: sha256:df5fe3e6d9bb708472d6a46f28e24173b347845a68a9db159c33156c6225c3cd
+  image: cpopen/ibm-bai-catalog
+  platform:
+    imagetype: manifestList
+  tag: v24.0.1-fbc-20241211.004359-D3B4015A9
