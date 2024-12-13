@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 2.9.0+20241211.000000
+  catalogs:
+    database: {}
+    operations: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Management operator for IBM Storage Fusion
+  displayDescription: IBM Storage Fusion Management Operator
+  displayName: IBM Storage Fusion SDS Management Operator
+  icons: []
+  licenses:
+    isf:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Storage Fusion Managment Operator License
+        displayName: IBM Storage Fusion Management Operator
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-spectrum-fusion-sds
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 2.9.0+20241211.000000
+  webPage: https://www.ibm.com/products/spectrum-fusion
+created: 2024-12-13T06:31:13.00506186+0000
+digest: sha256:08f2c93a7f54a7fc54ed67effd1327bf2f73ecac70fb913580a84a11937e798c
