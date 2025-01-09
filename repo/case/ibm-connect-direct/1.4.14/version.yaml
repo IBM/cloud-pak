@@ -1,25 +1,25 @@
 apiVersion: v1
 case:
-  appVersion: 6.3.0.11_ifix002
+  appVersion: 6.3.0.4_iFix003
   catalogs:
     deploy: {}
     devops: {}
+  certifications:
+    ibmccs: {}
   classifications:
     c:d: {}
-    cdws: {}
-    ci/cd: {}
+    cdu: {}
     commercial: {}
     connectDirect: {}
-    devops: {}
-    ibmConnectDirectWebServices: {}
     limited: {}
     mft: {}
     rhocp: {}
-    webservices: {}
-  description: IBM Connect:Direct Web Services Case Bundle
-  displayDescription: IBM Connect:Direct Web Services Case Bundle
-  displayName: IBM Connect:Direct Web Services Case Bundle
-  icons: []
+  description: IBM Connect:Direct for Unix Case bundle
+  displayDescription: IBM Connect:Direct for UNIX Case bundle
+  displayName: IBM Connect:Direct for Unix Case bundle
+  icons:
+  - mediaType: image/png
+    url: https://ibm.biz/Bdfgn2
   licenses:
     license:
       mediaType: text/plain; charset=utf-8
@@ -44,17 +44,21 @@ case:
         displayName: IBM Connect:Direct for Unix Certified Container 6.3 non-IBM licenses
         name: licenseNonIbm
       ref: LICENSE_NON_IBM
-  name: ibm-cdws
+  name: ibm-connect-direct
   organization: IBM
   schemaversion: 1
-  specVersion: 1.1.0
+  specVersion: 1.0.0
   supports:
     architectures:
       amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
     managedPlatforms:
       ibm: {}
       redhat: {}
-  version: 1.0.6
-  webPage: https://www.ibm.com
-created: 2025-01-09T09:34:43.04780943+0000
-digest: sha256:06fecbdf337b510e5e60f6ed8fdc5e7ddd52497688d5e625ec1220b0ec6514b8
+  version: 1.4.14
+  webPage: https://ibm.biz/BdfgnY
+created: 2025-01-09T09:34:43.10781298+0000
+digest: sha256:886fbce2288ce7fa2e58c5eaec42407b5e44fa275b743a87e7e80cee1d75cfc4
