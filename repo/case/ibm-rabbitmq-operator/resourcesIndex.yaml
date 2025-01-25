@@ -311,3 +311,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.2.57
+- caseVersions:
+  - 1.0.43
+  category: catalog
+  digest: sha256:9d39b6ecf44dd05b9f1eab2c428ed48d86ce61ed0649eed232014601192555eb
+  image: cpopen/opencontent-rabbitmq-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.58-amd64
+- caseVersions:
+  - 1.0.43
+  category: catalog
+  digest: sha256:031c802a04c0a32c770f3e3aa0a11eeb9b1756aa5b771909dfbd427e0107ade4
+  image: cpopen/opencontent-rabbitmq-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.2.58-s390x
+- caseVersions:
+  - 1.0.43
+  category: catalog
+  digest: sha256:958aff61e4504b3cde1f1b1699ff68ff2c4d8208de9ea6861d6979f37cce4afc
+  image: cpopen/opencontent-rabbitmq-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.2.58
