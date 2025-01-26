@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 4.8.8
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.8_1_license.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.8_1_license.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-wkc
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 4.8.8+20250114.163735.2189
+  webPage: https://www.ibm.com
+created: 2025-01-26T03:33:05.63504158+0000
+digest: sha256:faad28d0c299c1106a8b5f7224e8970063524dd919d51154e9b13aabcca16aad

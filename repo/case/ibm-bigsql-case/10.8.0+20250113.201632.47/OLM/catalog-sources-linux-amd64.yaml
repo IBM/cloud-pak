@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-bigsql-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-bigsql-case-10.8.0+20250113.201632.47-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-bigsql-operator-catalog@sha256:6075742bd32c0457f5bb86d4209c577ab7ad68e593d0cc2845045393363dc09b
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
