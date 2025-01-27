@@ -1,7 +1,9 @@
 source: ibm-stepzen-case-bundle/case/ibm-stepzen-case/case.yaml
-description: "IBM Api Connect essentials case bundle that deploys an operator"
+description: "IBM API Connect Essentials case bundle that deploys an operator"
 images:
   - image: cp/stepzen/introspection
+  - image: cp/stepzen/introspection-without-driver
+  - image: cp/stepzen/jdbc-proxy-without-driver
   - image: cp/stepzen/stepzen-admin-jobs
   - image: cp/stepzen/zenserv2
   - image: icr.io/cpopen/ibm-stepzen-graph-operator
