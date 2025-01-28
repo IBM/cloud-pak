@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-planning-analytics-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-planning-analytics-4.8.8+20250127.150824.1327-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-planning-analytics-operator-catalog@sha256:6aa7f7274d2a5d055b3ab4b19ca296a3432326066be2a61541757e5effb7618a
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
