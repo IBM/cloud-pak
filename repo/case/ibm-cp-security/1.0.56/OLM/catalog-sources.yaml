@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cp-security-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-security-1.0.56
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cp-security-catalog@sha256:a406d9dd174b0175191459390671a058817ce8c9c72a98aa704de8092f046882
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
