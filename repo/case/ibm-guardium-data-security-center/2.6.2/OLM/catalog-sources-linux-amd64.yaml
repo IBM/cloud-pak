@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-guardium-data-security-center-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-guardium-data-security-center-2.6.2-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-guardium-insights-operator-catalog@sha256:781f3b010ebc4fd5d6ff3223bc98f48a129a293dfce0f392182e9a13da9df590
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
