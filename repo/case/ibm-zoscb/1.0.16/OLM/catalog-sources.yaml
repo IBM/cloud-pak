@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-zoscb-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-zoscb-1.0.16
+  publisher: IBM
+  image: icr.io/cpopen/ibm-zoscb-catalog@sha256:671d689bb137da3865bfad87cfdc305d4732b423a8b4a37eb8a9358412a8c88e
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
