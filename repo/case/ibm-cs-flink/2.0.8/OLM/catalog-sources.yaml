@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-flink-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-flink-2.0.8
+  publisher: IBM
+  image: icr.io/cpopen/ibm-opencontent-flink-operator-catalog@sha256:469ee4bb27c431d730cb0c02dd87fbe84bd3aa0a1ff128ae89deb26696943a0f
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
