@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-streamsets-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-streamsets-1.0.0+20250205.091628.22
+  publisher: IBM
+  image: icr.io/cpopen/ibm-streamsets-operator-catalog@sha256:ccf16872c208d9b5a9d822b2da9d1fcb7d62f815ac0d5b987efc6f697db580fa
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
