@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cp-waiops-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-waiops-1.14.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog@sha256:327e780b2dc97e0b5c07619779babf12d54db6af3a2adabef7498b6269d5f41c
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

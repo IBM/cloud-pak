@@ -842,3 +842,51 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v4.8.0-20241204.0907-3d3fedccb
+- caseVersions:
+  - 1.13.1
+  category: catalog
+  digest: sha256:9a8eec3b373c26fe506a1c7d9053b949d2eeea1f30c2769b7ca74d6878923dcf
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v4.8.1-20250206.1642-9a8eec3b3-linux.amd64
+- caseVersions:
+  - 1.13.1
+  category: catalog
+  digest: sha256:23c7353736348eabb6a8a1e5561ccbaac6d204e3fa2c24ab3bd8740baafdb497
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v4.8.1-20250206.1642-23c735373-linux.s390x
+- caseVersions:
+  - 1.13.1
+  category: catalog
+  digest: sha256:583d522b9386bacbf4af469581cda1e0f022039255b35a313fba33450fdaf0e6
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v4.8.1-20250206.1642-583d522b9-linux.ppc64le
+- caseVersions:
+  - 1.13.1
+  category: catalog
+  digest: sha256:8d08f71e80565ae6b78bc7b939c449ec3ee83a7cbec178bcc75efda99d311058
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: v4.8.1-20250206.1642-8d08f71e8-linux.arm64.v8
+- caseVersions:
+  - 1.13.1
+  category: catalog
+  digest: sha256:e82dcdead8f46e57d3015fa72b19de32e4bb8258e7e93865099047acd694ace5
+  image: cpopen/ibm-aiopsedge-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v4.8.1-20250206.1642-e82dcdead
