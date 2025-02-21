@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-zcon-zosconnect-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-zcon-zosconnect-1.0.10
+  publisher: IBM
+  image: icr.io/cpopen/ibm-zcon-zosconnect-catalog@sha256:c0010508ea5d94cb0143e6b439231fd548eca8e08ea095b714e0d8ccc0f08f2f
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
