@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-redis-cp-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-redis-cp-1.2.5
+  publisher: IBM
+  image: icr.io/cpopen/ibm-redis-cp-operator-catalog@sha256:2c66ffecc47ac105d0b8c00814c15e8c9d74ccce673498eee9617b0a9c99aee9
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
