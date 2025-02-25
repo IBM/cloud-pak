@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.1
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data DataStage Services
+  displayDescription: IBM Cloud Pak for Data DataStage Services
+  displayName: ""
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: DataStage License
+        displayName: DataStage License
+      ref: LICENSE-en
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-datastage
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 9.1.0+20250213.182737.76
+  webPage: https://www.ibm.com
+created: 2025-02-25T13:40:15.68901909+0000
+digest: sha256:cf7d11a5536beb8c4a11e26ac1a39def02678041afe062c5d557c1f808c19071

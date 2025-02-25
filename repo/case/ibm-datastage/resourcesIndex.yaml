@@ -410,3 +410,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 4.8.8-27
+- caseVersions:
+  - 9.1.0+20250213.182737.76
+  category: catalog
+  digest: sha256:f3f59e61f0f4c02523739b53bfdce77551fe4a1b122894309a63994e786f9224
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.1.1-76-amd64
+- caseVersions:
+  - 9.1.0+20250213.182737.76
+  category: catalog
+  digest: sha256:02296bc9d772ffa2c7bca5e1b997efd6386547cbd11d8fc1a888bb60d5132340
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.1.1-76-s390x
+- caseVersions:
+  - 9.1.0+20250213.182737.76
+  category: catalog
+  digest: sha256:c01341de21a59aa70d0a7a77bdae0df71d77aef5b385b0e5b6d58447cea13072
+  image: cpopen/ds-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.1.1-76

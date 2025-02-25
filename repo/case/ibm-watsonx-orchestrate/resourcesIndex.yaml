@@ -61,3 +61,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v5.1.0-20241129.144219-c46c18fcd
+- caseVersions:
+  - 5.2.0+20250219.065639
+  category: catalog
+  digest: sha256:1d35584048ca6149a07b5ba7bc8cefd667f85c1628c26e70ebf79e77a730dfd3
+  image: cpopen/ibm-watsonx-orchestrate-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.1-20250219.063047-7df802b19-amd64
+- caseVersions:
+  - 5.2.0+20250219.065639
+  category: catalog
+  digest: sha256:d0fd9f5c15343234b8928dc338ee7581ef036fd7f4ecb585d6bd74b9dedd085d
+  image: cpopen/ibm-watsonx-orchestrate-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v5.1.1-20250219.063047-7df802b19-s390x
+- caseVersions:
+  - 5.2.0+20250219.065639
+  category: catalog
+  digest: sha256:235d2c20cced21289e3bec6ad09d6b366551ee5610727345e8cbe00a7a13d207
+  image: cpopen/ibm-watsonx-orchestrate-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v5.1.1-20250219.063047-7df802b19

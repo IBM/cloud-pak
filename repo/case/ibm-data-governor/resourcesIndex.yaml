@@ -417,3 +417,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v4.8.0
+- caseVersions:
+  - 6.1.5
+  category: catalog
+  digest: sha256:ad9e12c0ade6da4c57aedbc1ada310f96474e0ee8c9092873a2a1f1f90ab644e
+  image: cpopen/ibm-data-governor-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v6.1.5-amd64
+- caseVersions:
+  - 6.1.5
+  category: catalog
+  digest: sha256:c36ad42ffeef623e1788b8941a479473912c4658972646dee27825faa0512435
+  image: cpopen/ibm-data-governor-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v6.1.5-s390x
+- caseVersions:
+  - 6.1.5
+  category: catalog
+  digest: sha256:17ec04a8189328f2ba3a2fd6512894fe59e62c8f5a744e79cd4c46a64167e1c9
+  image: cpopen/ibm-data-governor-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v6.1.5

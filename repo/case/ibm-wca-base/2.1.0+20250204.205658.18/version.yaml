@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.1
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: CASE for watsonx Code Assistant Base
+  displayDescription: watsonx Code Assistant Base
+  displayName: watsonx Code Assistant Base
+  icons: []
+  licenses:
+    cp4data-wca-base:
+      mediaType: text/plain
+      metadata:
+        displayDescription: watsonx Code Assistant Base License
+        displayName: watsonx Code Assistant Base License
+      ref: IBM.watsonx.Code.Assistant.Base_1.0.-License.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+    wcabaseBuildNumber: 5.1.1-18
+  name: ibm-wca-base
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.1.0+20250204.205658.18
+  webPage: https://www.ibm.com
+created: 2025-02-25T13:40:20.64504492+0000
+digest: sha256:8f0d86c47ffc223d1710a4f0b71ccb0a0ea775467ba03af1a4c61dc5b46c91f4
