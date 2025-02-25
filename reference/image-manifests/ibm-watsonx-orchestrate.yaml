@@ -65,15 +65,23 @@ images:
   - image: cp/cpd/granite-20b-code-base-sql-gen
   - image: cp/cpd/granite-20b-code-instruct-part1
   - image: cp/cpd/granite-20b-code-instruct-part2
+  - image: cp/cpd/granite-3-1-8b-base
   - image: cp/cpd/granite-3-2b-instruct
   - image: cp/cpd/granite-3-8b-instruct
+  - image: cp/cpd/granite-3-8b-instruct-part1
+  - image: cp/cpd/granite-3-8b-instruct-part2
   - image: cp/cpd/granite-34b-code-instruct-part1
   - image: cp/cpd/granite-34b-code-instruct-part2
   - image: cp/cpd/granite-3b-code-instruct
   - image: cp/cpd/granite-8b-code-instruct
   - image: cp/cpd/granite-8b-unified-api-model-v2
+  - image: cp/cpd/granite-embedding-107m-multilingual
+  - image: cp/cpd/granite-embedding-278m-multilingual
   - image: cp/cpd/granite-guardian-3-2b
   - image: cp/cpd/granite-guardian-3-8b
+  - image: cp/cpd/granite-ttm-1024-96-r2
+  - image: cp/cpd/granite-ttm-1536-96-r2
+  - image: cp/cpd/granite-ttm-512-96-r2
   - image: cp/cpd/hap-pii-install
   - image: cp/cpd/haproxy
   - image: cp/cpd/ibm-cpd-mongodb-agent-ubi
@@ -98,10 +106,19 @@ images:
   - image: cp/cpd/job-trigger
   - image: cp/cpd/jobs-api
   - image: cp/cpd/jobs-ui
+  - image: cp/cpd/llama-3-1-70b-gptq
   - image: cp/cpd/llama-3-1-70b-instruct-part1
   - image: cp/cpd/llama-3-1-70b-instruct-part2
   - image: cp/cpd/llama-3-1-70b-instruct-part3
   - image: cp/cpd/llama-3-1-70b-instruct-part4
+  - image: cp/cpd/llama-3-1-70b-part1
+  - image: cp/cpd/llama-3-1-70b-part2
+  - image: cp/cpd/llama-3-1-70b-part3
+  - image: cp/cpd/llama-3-1-70b-part4
+  - image: cp/cpd/llama-3-1-70b-part5
+  - image: cp/cpd/llama-3-1-70b-part6
+  - image: cp/cpd/llama-3-1-70b-part7
+  - image: cp/cpd/llama-3-1-8b
   - image: cp/cpd/llama-3-1-8b-instruct
   - image: cp/cpd/llama-3-2-11b-vision-instruct
   - image: cp/cpd/llama-3-2-1b-instruct
@@ -111,6 +128,9 @@ images:
   - image: cp/cpd/llama-3-2-90b-vision-instruct-part3
   - image: cp/cpd/llama-3-2-90b-vision-instruct-part4
   - image: cp/cpd/llama-3-2-90b-vision-instruct-part5
+  - image: cp/cpd/llama-3-3-70b-instruct-part1
+  - image: cp/cpd/llama-3-3-70b-instruct-part2
+  - image: cp/cpd/llama-3-3-70b-instruct-part3
   - image: cp/cpd/llama-3-405b-instruct-part1
   - image: cp/cpd/llama-3-405b-instruct-part10
   - image: cp/cpd/llama-3-405b-instruct-part11
@@ -164,8 +184,11 @@ images:
   - image: cp/cpd/task-credentials
   - image: cp/cpd/text-generation-inference
   - image: cp/cpd/tgis-vllm
+  - image: cp/cpd/tsfminference
   - image: cp/cpd/ubi9-micro
   - image: cp/cpd/vllm
+  - image: cp/cpd/vllm-codestral
+  - image: cp/cpd/vllm-pixtral-large
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
@@ -173,6 +196,7 @@ images:
   - image: cp/cpd/wdu
   - image: cp/cpd/wdu-runtime
   - image: cp/cpd/wkc-init-container-ccs
+  - image: cp/cpd/wkc-search
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-main
@@ -224,6 +248,7 @@ images:
   - image: cp/watson-assistant/clu-serving
   - image: cp/watson-assistant/clu-training
   - image: cp/watson-assistant/conan-tools
+  - image: cp/watson-assistant/data-exhaust-producer
   - image: cp/watson-assistant/dead-letter-sink
   - image: cp/watson-assistant/dialog
   - image: cp/watson-assistant/dvt-bdd-ubi
@@ -313,6 +338,7 @@ images:
   - image: cp/watsonx-orchestrate/tenantctrl
   - image: cp/watsonx-orchestrate/tenantregistry
   - image: cp/watsonx-orchestrate/wo-appconnect-provisioner
+  - image: cp/watsonx-orchestrate/wo-appconnect-provisioner-multiarch
   - image: cp/watsonx-orchestrate/wo-doc-processing-infra-api
   - image: cp/watsonx-orchestrate/wo-doc-processing-infra-commons
   - image: cp/watsonx-orchestrate/wo-doc-processing-infra-flow
