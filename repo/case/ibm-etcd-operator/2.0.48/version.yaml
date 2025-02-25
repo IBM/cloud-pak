@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 3.4.16
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: IBM cloudpak open operator for etcd
+  displayDescription: IBM cloudpak open operator for etcd
+  displayName: IBM operator for etcd
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-etcd-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 2.0.48
+  webPage: ""
+created: 2025-02-25T04:03:40.93573408+0000
+digest: sha256:96842c4872abcbe69cbe06d0d397e91cac1bbdaafbe6c1d0d827eeff29f48ac0
