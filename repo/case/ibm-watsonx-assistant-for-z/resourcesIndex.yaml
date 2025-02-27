@@ -40,3 +40,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v2.1.0-20241206.140000-linux.amd64
+- caseVersions:
+  - 2.1.1
+  category: catalog
+  digest: sha256:063d9d9f22d2b85f75dda778d77d98c77656926586211a0632f91d6e824314cb
+  image: cpopen/ibm-wxa4z-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.1.1-20250219.130000-linux.amd64
+- caseVersions:
+  - 2.1.1
+  category: catalog
+  digest: sha256:831ff6d804d6a4bd7b12f3062b5b3cba60c5a0488543e13cbe5c138e74ee59d5
+  image: cpopen/ibm-wxa4z-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.1.1-20250219.130000-linux.s390x
+- caseVersions:
+  - 2.1.1
+  category: catalog
+  digest: sha256:10ea6742665caf8bcf9990995cc06dcb9d1c5caa87c2076d91cf0810601235a3
+  image: cpopen/ibm-wxa4z-catalog
+  platform:
+    imagetype: manifestList
+  tag: v2.1.1-20250219.130000
