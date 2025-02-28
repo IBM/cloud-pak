@@ -2427,6 +2427,7 @@ containerImages:
   tag: 24.0.1-linux.s390x
 - caseVersions:
   - 2.8.0
+  - 2.8.1
   category: catalog
   digest: sha256:9aba07d87ea40f5abbb43d83a9b49c9e59004f6d7993935744e5b380b0fa2996
   image: cpopen/ibm-cs-bawautomation-catalog
@@ -2537,3 +2538,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: baw24.0.0-IF004
+- caseVersions:
+  - 2.8.1
+  category: catalog
+  digest: sha256:5778c3c5e5f86bc72ef16cfe3b04eac28feeeea4eb289f24058273d49e49bd4a
+  image: cpopen/ibm-cs-bawautomation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 24.0.1-IF001-linux.amd64
+- caseVersions:
+  - 2.8.1
+  category: catalog
+  digest: sha256:55cce974813fa141ce344b077efb2c77eb6dd28ca4c64eedccaca7c90af16ffb
+  image: cpopen/ibm-cs-bawautomation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 24.0.1-IF001-linux.s390x
+- caseVersions:
+  - 2.8.1
+  category: catalog
+  digest: sha256:218f6da6c9a2e842ee92c46fdb31d7ad9c784d96933603ff7c3551fe77e2379b
+  image: cpopen/ibm-cs-bawautomation-catalog
+  platform:
+    imagetype: manifestList
+  tag: 24.0.1-IF001
