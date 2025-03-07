@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 4.5.10
+  catalogs:
+    security: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    apache2:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: apache2
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-cs-iam
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      aws: {}
+      eks: {}
+      gce: {}
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 4.5.10
+  webPage: https://www.ibm.com
+created: 2025-03-07T14:33:44.51861022+0000
+digest: sha256:40d0442c7a19fec3664b63b5dc5dd5552b395048f631a0d694c439504bc26223
