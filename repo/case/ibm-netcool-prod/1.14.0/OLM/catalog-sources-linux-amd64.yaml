@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-noi-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-netcool-prod-1.14.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/noi-operator-catalog@sha256:e4b358e1aeb6f98733e728532635f18ab39c91aba198f49a45a90f3986cf5ad2
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
