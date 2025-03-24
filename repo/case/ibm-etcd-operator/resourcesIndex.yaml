@@ -368,3 +368,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.6.50
+- caseVersions:
+  - 2.0.49
+  category: catalog
+  digest: sha256:62870496b1f14b56a93f8ff7c2a9ed74a5d58ae689ed9a667bde77afba3140c9
+  image: cpopen/ibm-etcd-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.6.51-amd64
+- caseVersions:
+  - 2.0.49
+  category: catalog
+  digest: sha256:0b9e9d634a991347c84f9f756e88f2937dc8ea9943aae0dff060321a7ef2cc3a
+  image: cpopen/ibm-etcd-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.6.51-s390x
+- caseVersions:
+  - 2.0.49
+  category: catalog
+  digest: sha256:df674348cbee50e9875ca7404fafdd7b9752615eeecf8520729fa33500dc629a
+  image: cpopen/ibm-etcd-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.6.51
