@@ -66,6 +66,7 @@ images:
   - image: cp/cpd/granite-20b-code-instruct-part1
   - image: cp/cpd/granite-20b-code-instruct-part2
   - image: cp/cpd/granite-3-1-8b-base
+  - image: cp/cpd/granite-3-2-8b-instruct
   - image: cp/cpd/granite-3-2b-instruct
   - image: cp/cpd/granite-3-8b-instruct
   - image: cp/cpd/granite-3-8b-instruct-part1
@@ -82,6 +83,7 @@ images:
   - image: cp/cpd/granite-ttm-1024-96-r2
   - image: cp/cpd/granite-ttm-1536-96-r2
   - image: cp/cpd/granite-ttm-512-96-r2
+  - image: cp/cpd/granite-vision-3-2-2b
   - image: cp/cpd/hap-pii-install
   - image: cp/cpd/haproxy
   - image: cp/cpd/ibm-cpd-mongodb-agent-ubi
@@ -157,6 +159,7 @@ images:
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part3
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part4
   - image: cp/cpd/meta-llama-llama-3-8b-instruct
+  - image: cp/cpd/mistral-small-24b-instruct-2501
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part1
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part2
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part3
@@ -274,6 +277,7 @@ images:
   - image: cp/watson-gateway
   - image: cp/watsonx-orchestrate/ads-credentials
   - image: cp/watsonx-orchestrate/ads-file-storage-service
+  - image: cp/watsonx-orchestrate/ads-gitservice
   - image: cp/watsonx-orchestrate/ads-keytool-initcontainer
   - image: cp/watsonx-orchestrate/ads-ltpa
   - image: cp/watsonx-orchestrate/ads-parsing
@@ -284,6 +288,7 @@ images:
   - image: cp/watsonx-orchestrate/ads-tools
   - image: cp/watsonx-orchestrate/ai-cognitive-mapper
   - image: cp/watsonx-orchestrate/appconnect-skill-provider
+  - image: cp/watsonx-orchestrate/archer-de-webclient
   - image: cp/watsonx-orchestrate/ba-saas-apicurio-registry-sql
   - image: cp/watsonx-orchestrate/ba-saas-automation-provisioner
   - image: cp/watsonx-orchestrate/ba-saas-common-form-engine
@@ -334,11 +339,13 @@ images:
   - image: cp/watsonx-orchestrate/skill-doc-bootstrap
   - image: cp/watsonx-orchestrate/skill-server
   - image: cp/watsonx-orchestrate/skillsequencingservice
+  - image: cp/watsonx-orchestrate/socket-handler
   - image: cp/watsonx-orchestrate/teams-backend
   - image: cp/watsonx-orchestrate/teams-ui
   - image: cp/watsonx-orchestrate/teamsserver
   - image: cp/watsonx-orchestrate/tenantctrl
   - image: cp/watsonx-orchestrate/tenantregistry
+  - image: cp/watsonx-orchestrate/wdu-runtime
   - image: cp/watsonx-orchestrate/wo-appconnect-provisioner
   - image: cp/watsonx-orchestrate/wo-appconnect-provisioner-multiarch
   - image: cp/watsonx-orchestrate/wo-doc-processing-infra-api
@@ -349,6 +356,8 @@ images:
   - image: cp/watsonx-orchestrate/wo-ootb-bundle
   - image: cp/watsonx-orchestrate/wo-skill-bootstrap-job
   - image: cp/watsonx-orchestrate/wo-skill-catalog-ui
+  - image: cp/watsonx-orchestrate/wo_doc_processing_cache
+  - image: cp/watsonx-orchestrate/wo_doc_processing_cache_rds_init
   - image: cp/watsonx-orchestrate/wo_doc_processing_enrichment_service_annotator
   - image: cp/watsonx-orchestrate/wo_doc_processing_enrichment_service_wnlp_models_std
   - image: cp/watsonx-orchestrate/wo_doc_processing_envoy
@@ -358,3 +367,5 @@ images:
   - image: cp/watsonx-orchestrate/wo_doc_processing_wdu_model_copy
   - image: cp/watsonx-orchestrate/wo_doc_processing_wdu_wrapper
   - image: cp/watsonx-orchestrate/wo_tenant_event_handler
+  - image: cp/watsonx-orchestrate/wxo-server-conversation_controller
+  - image: cp/watsonx-orchestrate/wxo-server-server
