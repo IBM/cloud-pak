@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-orchestrate-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-orchestrate-5.3.0+20250314.113940
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watsonx-orchestrate-operator-catalog@sha256:681dea496f68ecc904eaa759d568717f2773c646177b796ff1d8b229bd1bdcb3
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

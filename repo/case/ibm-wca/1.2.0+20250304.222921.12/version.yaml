@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.2
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: CASE for IBM watsonx Code Assistant
+  displayDescription: IBM watsonx Code Assistant
+  displayName: IBM watsonx Code Assistant
+  icons: []
+  licenses:
+    cp4data-wca:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx Code Assistant License
+        displayName: IBM watsonx Code Assistant License
+      ref: IBM.watsonx.Code.Assistant.Software.1.0.License.txt
+    cp4data-wca-non-ibm:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx Code Assistant Non-IBM License
+        displayName: IBM watsonx Code Assistant Non-IBM License
+      ref: IBM.watsonx.Code.Assistant.Software.1.0.Non-IBM.License.txt
+    cp4data-wca-notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx Code Assistant Notices
+        displayName: IBM watsonx Code Assistant Notices
+      ref: IBM.watsonx.Code.Assistant.Software.1.0.Notices.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    wcaBuildNumber: 5.1.2-12
+  name: ibm-wca
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.2.0+20250304.222921.12
+  webPage: https://www.ibm.com
+created: 2025-03-24T21:04:08.54504284+0000
+digest: sha256:5047b0cd5aacf285d0f0442647d64900bd8f1b9f2a64ebd8890d536801e2457b

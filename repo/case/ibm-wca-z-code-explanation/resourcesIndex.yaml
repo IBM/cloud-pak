@@ -56,3 +56,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 2.4.10
+- caseVersions:
+  - 5.1.2+20250311.153408.8
+  category: catalog
+  digest: sha256:fde1f82e6374997356026a5059fbda6321fa37db55fa5a04f3808fc6a68007d4
+  image: cpopen/ibm-wca-z-code-explanation-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.4.20-amd64
+- caseVersions:
+  - 5.1.2+20250311.153408.8
+  category: catalog
+  digest: sha256:0fbe8b1ee43480fde3fa583b74731e2c1a5627543122d1d394bdc98cc090ecb6
+  image: cpopen/ibm-wca-z-code-explanation-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 2.4.20-s390x
+- caseVersions:
+  - 5.1.2+20250311.153408.8
+  category: catalog
+  digest: sha256:76b73bc2e101dcf43c9a5e344528c2f8fbb3e7ec6f5521d44938385a1bf7fb55
+  image: cpopen/ibm-wca-z-code-explanation-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.4.20
