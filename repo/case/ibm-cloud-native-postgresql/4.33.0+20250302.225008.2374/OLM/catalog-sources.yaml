@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-4.33.0+20250302.225008.2374
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:35e766cb9991006481ce83d25734cafe2e5751bedd56339c9f2e1d07fde9a8f5
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
