@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-ai-manager-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-ai-manager-2.6.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog@sha256:fd3b0eb31e1f890ce59c7cced3944ff0cdf494d4fd0671c3866ae60584002a68
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
