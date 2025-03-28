@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-websphere-automation-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-websphere-automation-1.8.1
+  publisher: IBM
+  image: icr.io/cpopen/websphere-automation-operator-catalog@sha256:ff6806ca0626b59c954eef1d94465427d3b14b10b436196d0065f18669d39340
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
