@@ -1,0 +1,37 @@
+apiVersion: v1
+case:
+  appVersion: 4.2.14
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    opensource: {}
+  description: Measure license use of IBM products deployed in the cluster
+  displayDescription: ""
+  displayName: IBM License Server
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-license-service-reporter-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 4.2.14
+  webPage: https://www.ibm.com/support/knowledgecenter/SSHKN6/kc_welcome_cs.html
+created: 2025-04-09T20:13:38.05654610+0000
+digest: sha256:c6b3d8b688bc8d677f47621910d262de9495c1e60dde32df1307a770d5a8a1fb
