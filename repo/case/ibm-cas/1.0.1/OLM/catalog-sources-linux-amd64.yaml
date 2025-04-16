@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cas-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cas-1.0.1-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-isf-cas-operator-catalog@sha256:7071622ff3608902ef78f3e4a1be23ca28119cf2b7da60fef8cb78b94980aa68
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
