@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-elm-hc-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-elm-hc-1.0.0-linux-amd64
+  publisher: IBM
+  image: cp.icr.io/cpopen/ibm-elm-operator-catalog@sha256:d0acab2fb3265081561c9f21d44c739f2ecc9a579ef8e25bacbb84f91741a91a
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
