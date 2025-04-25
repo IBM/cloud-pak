@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-install-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-install-4.6.13
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cs-install-catalog@sha256:491e2255d13c02ec4fc99c9e278ec9547167ac793c2c69f0f2159603e5cf5b07
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
