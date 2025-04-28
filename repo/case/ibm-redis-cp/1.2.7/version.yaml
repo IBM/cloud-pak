@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 1.2.7
+  catalogs:
+    database: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    experimental: {}
+    opensource: {}
+    sample: {}
+  description: Sample reference CASE that deploys an Operator
+  displayDescription: IBM Redis CP Operator
+  displayName: IBM Redis CP Operator
+  icons:
+  - mediaType: image/png
+    url: TODO
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: license
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-redis-cp
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.2.7
+  webPage: TODO
+created: 2025-04-28T22:04:10.09502491+0000
+digest: sha256:a911bb6b6daa0fbd3dbbf7838ba95e2587455d434f596c835ec7d5c720be7def
