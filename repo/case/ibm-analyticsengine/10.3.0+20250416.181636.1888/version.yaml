@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.3
+  catalogs:
+    analytics: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: license-en-EE
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: license-en-SE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-analyticsengine
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 10.3.0+20250416.181636.1888
+  webPage: https://www.ibm.com
+created: 2025-04-28T18:34:34.80502096+0000
+digest: sha256:7e44a7591d6f883cbc2c6b990b64bfe7fb693e15b271ab133ae3a6f5485bd031

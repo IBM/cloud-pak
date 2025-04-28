@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ca-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cognos-analytics-prod-27.3.0+20250410.142332.3256-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-ca-operator-catalog@sha256:40a9de5334c93988e7d895213e49f5d360eadc834b56b58ba666e215e80c072b
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

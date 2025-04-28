@@ -1,0 +1,98 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.3
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Data Replication Services
+  displayDescription: Data Replication Services
+  displayName: IBM Data Replication
+  icons: []
+  licenses:
+    IDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication Cartridge
+        displayName: IBM Data Replication Cartridge
+      ref: IBM_Data_Replication_Crtg_for_CPD_EN_LI
+    IDRM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication Modernization
+        displayName: IBM Data Replication Modernization
+      ref: IBM_Data_Replication_Modernization_EN_LI
+    IDRZOS:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication for Db2 z/OS Cartridge
+        displayName: IBM Data Replication for Db2 z/OS Cartridge
+      ref: IBM_Data_Replication_ZOS_Crtg_for_CPD_EN_LI
+    IIDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Infosphere Data Replication Cartridge
+        displayName: IBM Infosphere Data Replication Cartridge
+      ref: IBM_Infos_Data_Replication_Crtg_CPD_EN_LI
+    IIDRM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Infopshere Data Replication Modernization
+        displayName: IBM Infopshere Data Replication Modernization
+      ref: IBM_Infos_Data_Replication_Modernization_EN_LI
+    IIDRWXAO:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM InfoSphere Data Replication Cartridge Add-on for IBM
+          watsonx.data
+        displayName: IBM InfoSphere Data Replication Cartridge Add-on for IBM watsonx.data
+      ref: IBM_Infos_Data_Replication_WX_Addon_CPD_EN_LI
+    IIDRWXTO:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM InfoSphere Data Replication for watsonx.data Cartridge
+        displayName: IBM InfoSphere Data Replication for watsonx.data Cartridge
+      ref: IBM_Infos_Data_Replication_WX_Crtg_CPD_EN_LI
+    Non_IBM_IDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Non IBM License IBM Data Replication Cartridge
+        displayName: Non IBM License IBM Data Replication Cartridge
+      ref: non_ibm_license_IBM_Data_Replication_Crtg_for_CPD
+    Non_IBM_IIDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Non IBM License IBM Infosphere Data Replication Cartridge
+        displayName: Non IBM License IBM Infosphere Data Replication Cartridge
+      ref: non_ibm_license_IBM_Infos_Data_Replication_Crtg_CPD
+    Notices_IDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Notices IBM Data Replication Cartridge
+        displayName: Notices IBM Data Replication Cartridge
+      ref: notices_IBM_Data_Replication_Crtg_for_CPD
+    Notices_IIDRC:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Notices IBM Infosphere Data Replication Cartridge
+        displayName: Notices IBM Infosphere Data Replication Cartridge
+      ref: notices_IBM_Infos_Data_Replication_Crtg_CPD
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-replication
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 5.1.3+20250401.125548.173
+  webPage: https://www.ibm.com
+created: 2025-04-28T18:34:42.74114458+0000
+digest: sha256:e728d7e5944df72016a995842f3116c656c4004479884bfa577186a6b5348984
