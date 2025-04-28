@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-spss-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-spss-8.9.0+20250408.120810.10
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-spss-operator-catalog@sha256:86d3a18351c49309dd6f9a6d0677085505e8b1e8ef521251875190f314c3dcea
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

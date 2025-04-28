@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-watsonx-ai-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-ai-8.9.0+20250407.213943.18
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-watsonx-ai-operator-catalog@sha256:0beb4825ef144cf839f6cc26d870f858c500d2f04b1ef8996f80e7ab2030fbd2
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 8.9.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data watsonx.ai
+  displayDescription: IBM Cloud Pak for Data watsonx.ai
+  displayName: IBM Cloud Pak for Data watsonx.ai
+  icons: []
+  licenses:
+    watsonxai-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.ai License
+        displayName: IBM watsonx.ai License
+      ref: IBM-watsonx-ai-Update3-License.txt
+    watsonxai-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM watsonx.ai
+        displayName: Separately Licensed code
+      ref: non_ibm_license-Update3.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watsonx-ai
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 8.9.0+20250407.213943.18
+  webPage: https://www.ibm.com
+created: 2025-04-28T20:34:54.67639394+0000
+digest: sha256:456281082481af2f957d4aed74496364cb4861ebe1c0c3a6cb4a00b8b78536de

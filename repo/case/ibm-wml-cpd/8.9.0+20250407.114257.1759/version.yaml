@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 4.8.9
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data Watson Machine Learning
+  displayDescription: CASE for Watson Machine Learning
+  displayName: IBM Watson Machine Learning
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEnterpriseEd4.8.txt
+    cp4data-standard:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dStandardEd4.8.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-wml-cpd
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 8.9.0+20250407.114257.1759
+  webPage: https://www.ibm.com
+created: 2025-04-28T20:34:54.77239565+0000
+digest: sha256:4269bbab27d5596028cd403b7bfd8284cf6ff59582175c9dd713373841c6db50

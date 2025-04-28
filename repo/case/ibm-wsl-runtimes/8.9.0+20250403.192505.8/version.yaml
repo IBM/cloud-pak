@@ -1,0 +1,49 @@
+apiVersion: v1
+case:
+  appVersion: 8.9.0
+  catalogs:
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: CASE for Notebook Runtimes in Watson Studio
+  displayDescription: CASE for Notebook Runtimes in Watson Studio
+  displayName: IBM Watson Studio Runtimes
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEE4.8_1_license.txt
+    cp4data-standard:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dSE4.8_1_license.txt
+  metadata:
+    caseCommitId: 1ad4da5
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+    runtimesBuildNumber: 8.9.0008
+  name: ibm-wsl-runtimes
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 8.9.0+20250403.192505.8
+  webPage: https://www.ibm.com
+created: 2025-04-28T20:34:54.78439587+0000
+digest: sha256:3b345842a48a6330a2274e17a496e432f6cb8cf272606fa5461f6673b1d6682a

@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-mongodb-enterprise-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-mongodb-enterprise-4.27.0+20250403.101556.1628-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator-catalog@sha256:1518b46f4a73f2d238659f7f58d5a3d5652ba16591ec9a13d838666a28ba1a3f
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

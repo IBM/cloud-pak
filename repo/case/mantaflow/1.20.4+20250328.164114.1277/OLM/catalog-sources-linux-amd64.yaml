@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: manta-adl-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: mantaflow-1.20.4+20250328.164114.1277-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/manta-adl-operator-catalog@sha256:6aa6cfeb0f4dcfe650f01495a05b1522836b21d2e067af6bb504eaee079f52d5
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
