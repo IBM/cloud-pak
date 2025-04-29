@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-data-governor-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-data-governor-4.9.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-data-governor-operator-catalog@sha256:fcacc3cfeb3fa0b39094dd2cc2e8739c48fe754b211a98dd712c0eb505a03807
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
