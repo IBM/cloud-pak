@@ -1,0 +1,75 @@
+apiVersion: v1
+case:
+  appVersion: 9.1.0-pre.stable+10993
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Maximo Manage
+  displayDescription: IBM Maximo Manage
+  displayName: IBM Maximo Manage
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    LA_en:
+      mediaType: text/plain; charset=us-ascii
+      metadata:
+        displayDescription: International Program License Agreement
+        displayName: LA_en.txt
+        name: LA_en
+      ref: LA_en.txt
+    NON_IBM_LICENSE:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: NON_IBM_LICENSE
+        name: NON_IBM_LICENSE
+      ref: NON_IBM_LICENSE
+    NOTICES:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: NOTICES
+        name: NOTICES
+      ref: NOTICES
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: LICENSE INFORMATION
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: text/plain; charset=us-ascii
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: non_ibm_license.txt
+        name: non_ibm_license
+      ref: non_ibm_license.txt
+    notices:
+      mediaType: text/plain; charset=us-ascii
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: notices.txt
+        name: notices
+      ref: notices.txt
+  name: ibm-mas-manage
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 9.1.0-pre.stable.10993
+  webPage: http://ibm.com
+created: 2025-04-30T10:04:12.03962149+0000
+digest: sha256:aa51831a81b9f0fbf27f73a470dcdc8eb5efed3ba9c0e65daa728d9ecbe73c7c
