@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-rhapsody-se-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rhapsody-se-1.2.2-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-rse-operator-catalog@sha256:060dfb47d4b812f2300becd49a1fd0baa04fdd9390fd1044bb9ce52ced81905e
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
