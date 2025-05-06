@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 4.9.1-202504300445
+  catalogs:
+    devops: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM® Netcool® Agile Service Manager
+  displayDescription: ""
+  displayName: IBM® Netcool® Agile Service Manager
+  icons:
+  - mediaType: image/svg+xml
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/asm_icon_color_big.svg
+  licenses:
+    license:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for AIOps License
+        displayName: License
+        name: license
+      ref: LICENSE
+    nonIbmLicense:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for AIOps Terms and Conditions
+        displayName: Terms and Conditions
+        name: nonIbmLicense
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for AIOps Notices and Information
+        displayName: Notices and Information
+        name: notices
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-asm-operator-case
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.28.1
+  webPage: https://www.ibm.com
+created: 2025-05-06T23:04:08.00256571+0000
+digest: sha256:736aa42640d5365fb649124c83d3cfa6fca99315f9b54ade3fbd6523519457b9
