@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-voice-gateway-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-voice-gateway-1.7.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-voice-gateway-operator-catalog@sha256:c779d998a1a7a98cefdbf2dd8c5ac05cac8946592660a9b0541482af6fdc2f73
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
