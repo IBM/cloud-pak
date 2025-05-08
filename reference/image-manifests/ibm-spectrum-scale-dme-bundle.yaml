@@ -1,6 +1,23 @@
 source: ibm-spectrum-scale-dme-bundle/case/ibm-spectrum-scale-dme-bundle/case.yaml
 description: "Represents a deployment of a container native IBM Storage Scale cluster with the Data Management edition"
 images:
+  - image: cp/gpfs/csi/csi-attacher
+  - image: cp/gpfs/csi/csi-node-driver-registrar
+  - image: cp/gpfs/csi/csi-provisioner
+  - image: cp/gpfs/csi/csi-resizer
+  - image: cp/gpfs/csi/csi-snapshotter
+  - image: cp/gpfs/csi/ibm-spectrum-scale-csi-driver
+  - image: cp/gpfs/csi/livenessprobe
+  - image: cp/gpfs/data-management/ibm-spectrum-scale-daemon
+  - image: cp/gpfs/ibm-spectrum-scale-core-init
+  - image: cp/gpfs/ibm-spectrum-scale-coredns
+  - image: cp/gpfs/ibm-spectrum-scale-grafana-bridge
+  - image: cp/gpfs/ibm-spectrum-scale-gui
+  - image: cp/gpfs/ibm-spectrum-scale-logs
+  - image: cp/gpfs/ibm-spectrum-scale-monitor
+  - image: cp/gpfs/ibm-spectrum-scale-pmcollector
+  - image: cp/gpfs/ibm-spectrum-scale-pmsensors
+  - image: cp/gpfs/postgres
   - image: cp/spectrum/scale/csi/csi-attacher
   - image: cp/spectrum/scale/csi/csi-node-driver-registrar
   - image: cp/spectrum/scale/csi/csi-provisioner
