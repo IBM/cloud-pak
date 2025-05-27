@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-tas-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-tas-11.6.2-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-tas-catalog@sha256:a4a677e226ac38397bd26856a81c6cb17410a855c99b0fb28a3a6b8ae22ce18f
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
