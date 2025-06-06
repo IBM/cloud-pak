@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:fb55b0d5cf9c8a57165dcad40e5bf1b8902afd14901a75e39cd51de5a7f11e67
+  image: cpopen/ibm-usage-metering-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: cd-20250530-1420-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:e4cb610261d1362ad1177ff12cbe6b01563c456eed75b993a6deaa1a69e31278
+  image: cpopen/ibm-usage-metering-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: cd-20250530-1420-arm64-v8
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:9dc32e027f5af30c12ee17935b1436684fa5dc7535b68c7be0197cf0c245a3af
+  image: cpopen/ibm-usage-metering-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: cd-20250530-1420-ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:821a981e36b02f9ea767c0ee2043428fa24055f2977d641d253942a473bcf554
+  image: cpopen/ibm-usage-metering-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: cd-20250530-1420-s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:998d77b1c66a9e6c08ec6cc95f97982c5d3720bc57eea3306d681d5b8dc2eee7
+  image: cpopen/ibm-usage-metering-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: cd-20250530-1420
