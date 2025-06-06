@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-eventendpointmanagement-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-eventendpointmanagement-11.6.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-eventendpointmanagement-operator-catalog@sha256:ef0a9d357da7b8bab9663936e3981748f8b1ec1e4c663ebd66b29d0d84fc1522
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
