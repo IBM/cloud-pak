@@ -1,6 +1,11 @@
 source: ibm-lakehouse-bundle/case/ibm-watsonx-data/case.yaml
 description: "IBM watsonx_data Service"
 images:
+  - image: cp/watsonx-data/cassandra-reaper
+  - image: cp/watsonx-data/cql-router
+  - image: cp/watsonx-data/cqlsh-pod
+  - image: cp/watsonx-data/data-api
+  - image: cp/watsonx-data/hcd
   - image: cp/watsonx-data/ibm-lh-cas
   - image: cp/watsonx-data/ibm-lh-ces
   - image: cp/watsonx-data/ibm-lh-control-plane-prereq
@@ -11,19 +16,27 @@ images:
   - image: cp/watsonx-data/ibm-lh-mds-rest
   - image: cp/watsonx-data/ibm-lh-mds-thrift
   - image: cp/watsonx-data/ibm-lh-milvus
+  - image: cp/watsonx-data/ibm-lh-milvus-iceberg-rest-controller
   - image: cp/watsonx-data/ibm-lh-minio
   - image: cp/watsonx-data/ibm-lh-otelcollector
   - image: cp/watsonx-data/ibm-lh-postgres
   - image: cp/watsonx-data/ibm-lh-prestissimo
   - image: cp/watsonx-data/ibm-lh-presto
   - image: cp/watsonx-data/ibm-lh-qhmm
+  - image: cp/watsonx-data/ibm-lh-retrieval-search
+  - image: cp/watsonx-data/ibm-lh-solution-accelerator
+  - image: cp/watsonx-data/ibm-lh-text-to-milvus
   - image: cp/watsonx-data/ibm-lh-tools
   - image: cp/watsonx-data/ibm-lh-validator
+  - image: cp/watsonx-data/k8ssandra-client
   - image: cp/watsonx-data/lhconsole-api
   - image: cp/watsonx-data/lhconsole-javaapi
   - image: cp/watsonx-data/lhconsole-nodeclient
   - image: cp/watsonx-data/lhconsole-ui
   - image: cp/watsonx-data/lhingestion-api
+  - image: cp/watsonx-data/lhplatform-api
+  - image: cp/watsonx-data/lhplatform-ui
+  - image: cp/watsonx-data/medusa
   - image: icr.io/cpopen/edb/postgresql
   - image: icr.io/cpopen/ibm-lakehouse-operator
   - image: icr.io/cpopen/ibm-lakehouse-operator-bundle

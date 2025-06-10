@@ -150,6 +150,7 @@ images:
   - image: cp/cpd/wdp-kg-ingestion-rest-fdb
   - image: cp/cpd/wdp-lineage
   - image: cp/cpd/wdp-policy-service
+  - image: cp/cpd/wdp-policy-service-cldpgmig
   - image: cp/cpd/wdp-profiling
   - image: cp/cpd/wdp-profiling-messaging
   - image: cp/cpd/wdp-profiling-ui
@@ -160,6 +161,7 @@ images:
   - image: cp/cpd/wkc-data-lineage-rest-fdb
   - image: cp/cpd/wkc-data-quality-ui
   - image: cp/cpd/wkc-data-rules
+  - image: cp/cpd/wkc-db2-postgres-data-migration
   - image: cp/cpd/wkc-factsheet-service
   - image: cp/cpd/wkc-factsheets-ui
   - image: cp/cpd/wkc-glossary-service
@@ -214,6 +216,13 @@ images:
   - image: cp/opencontent-elasticsearch-base-plugins-7.8.0
   - image: cp/opencontent-elasticsearch-base-plugins-7.8.1
   - image: cp/opencontent-elasticsearch-base-plugins-7.9.3
+  - image: cp/opencontent-ibm-opensearch-base-10
+  - image: cp/opencontent-ibm-opensearch-min-2.19.1
+  - image: cp/opencontent-ibm-opensearch-plugin-ism-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugin-knn-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugin-ml-common-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugin-security-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugins-2.19.1
   - image: cp/opencontent-opensearch-1.3
   - image: cp/opencontent-opensearch-2.10
   - image: cp/opencontent-opensearch-2.11

@@ -15,11 +15,14 @@ images:
   - image: cp/appc/acecc-mapping-assist-prod
   - image: cp/appc/acecc-proxy-prod
   - image: cp/appc/acecc-velero-plugin-prod
+  - image: cp/cpd/405-vllm
+  - image: cp/cpd/agent-tools-api
   - image: cp/cpd/all-minilm-l12-v2
   - image: cp/cpd/all-minilm-l6-v2
   - image: cp/cpd/answer-relevance-install
   - image: cp/cpd/answer_relevance
   - image: cp/cpd/asset-files-api
+  - image: cp/cpd/benchmarkdata
   - image: cp/cpd/bigcode-starcoder-part1
   - image: cp/cpd/bigcode-starcoder-part2
   - image: cp/cpd/bigcode-starcoder-part3
@@ -69,6 +72,7 @@ images:
   - image: cp/cpd/granite-3-1-8b-base
   - image: cp/cpd/granite-3-2-8b-instruct
   - image: cp/cpd/granite-3-2b-instruct
+  - image: cp/cpd/granite-3-3-8b-instruct
   - image: cp/cpd/granite-3-8b-instruct
   - image: cp/cpd/granite-3-8b-instruct-part1
   - image: cp/cpd/granite-3-8b-instruct-part2
@@ -148,6 +152,24 @@ images:
   - image: cp/cpd/llama-3-405b-instruct-part7
   - image: cp/cpd/llama-3-405b-instruct-part8
   - image: cp/cpd/llama-3-405b-instruct-part9
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part1
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part10
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part11
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part2
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part3
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part4
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part5
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part6
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part7
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part8
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part9
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part1
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part2
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part3
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part4
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part5
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part6
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-part7
   - image: cp/cpd/llama-guard-3-11b-vision
   - image: cp/cpd/meta-llama-llama-2-13b-chat
   - image: cp/cpd/meta-llama-llama-2-70b-chat-part1
@@ -161,6 +183,9 @@ images:
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part4
   - image: cp/cpd/meta-llama-llama-3-8b-instruct
   - image: cp/cpd/mistral-small-24b-instruct-2501
+  - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part1
+  - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part2
+  - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part3
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part1
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part2
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part3
@@ -193,18 +218,21 @@ images:
   - image: cp/cpd/ubi9-micro
   - image: cp/cpd/vllm
   - image: cp/cpd/vllm-codestral
+  - image: cp/cpd/vllm-llama4-mistral
   - image: cp/cpd/vllm-pixtral-large
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
   - image: cp/cpd/wdp-dataview
   - image: cp/cpd/wdu
+  - image: cp/cpd/wdu-models
   - image: cp/cpd/wdu-runtime
   - image: cp/cpd/wkc-init-container-ccs
   - image: cp/cpd/wkc-search
   - image: cp/cpd/wkc-search_master
   - image: cp/cpd/wml-asset-registration
   - image: cp/cpd/wml-main
+  - image: cp/cpd/wml-preinstall-secret
   - image: cp/cpd/wmlproxyservice
   - image: cp/cpd/wx-inference-proxy
   - image: cp/cpd/wx-preinstall-rd-job
