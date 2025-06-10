@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-wca-base-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wca-base-3.0.0+20250506.194733.5
+  publisher: IBM
+  image: icr.io/cpopen/ibm-wca-base-catalog@sha256:8233809d08436bcf69736bcbb071820b2d2b053238e96883bd895b32e503e0a4
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

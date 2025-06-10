@@ -504,3 +504,41 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 4.8.9-17
+- caseVersions:
+  - 10.0.0+20250605.205829.62
+  category: catalog
+  digest: sha256:04a6204064f99bf1f50caf46f916654a75b28e6d498c02a5a5e61e7d8e3074d1
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.2.0-62-amd64
+- caseVersions:
+  - 10.0.0+20250605.205829.62
+  category: catalog
+  digest: sha256:4d9f1cd06f7db9a8402e9a6ea85a95881af610f4a57956ed599a12ceb3317935
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.2.0-61-s390x
+- caseVersions:
+  - 10.0.0+20250605.205829.62
+  category: catalog
+  digest: sha256:6858a599526b75865ce800c1e297b7e968355afe870c66368859913df1f5fc6a
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5.2.0-1094-ppc64le
+- caseVersions:
+  - 10.0.0+20250605.205829.62
+  category: catalog
+  digest: sha256:a5e86e1542e6f6a45f32b1525b3a0a2ed98adf562c875fa742c9aa2b29d1adb1
+  image: cpopen/ds-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.2.0-62

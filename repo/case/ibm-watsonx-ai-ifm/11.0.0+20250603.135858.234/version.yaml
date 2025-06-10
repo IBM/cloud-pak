@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 11.0.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data watsonx.ai Inference for Foundation Models
+  displayDescription: IBM Cloud Pak for Data watsonx.ai Inference for Foundation Models
+  displayName: IBM Cloud Pak for Data watsonx.ai Inference for Foundation Models
+  icons: []
+  licenses:
+    watsonxai-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.ai License
+        displayName: IBM watsonx.ai License
+      ref: watsonx-ai-v2-2-0-license.txt
+    watsonxai-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM watsonx.ai
+        displayName: Separately Licensed code
+      ref: non_ibm_license-for-Models-in-watsonx-ai-v2-2-0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watsonx-ai-ifm
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 11.0.0+20250603.135858.234
+  webPage: https://www.ibm.com
+created: 2025-06-10T02:04:09.26056917+0000
+digest: sha256:1cf34f10a1d37b76c97b33c6633b0f4e324a7bb8903339893976bee19ad17cb5

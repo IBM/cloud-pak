@@ -1,0 +1,55 @@
+apiVersion: v1
+case:
+  appVersion: 11.0.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    watsonxai-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.ai License
+        displayName: IBM watsonx.ai License
+      ref: watsonx-ai-v2-2-0-license.txt
+    watsonxai-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM watsonx.ai
+        displayName: Separately Licensed code
+      ref: non_ibm_license-for-Models-in-watsonx-ai-v2-2-0.txt
+    watsonxai-notice:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.ai notice
+        displayName: IBM watsonx.ai notice
+      ref: IBM-watsonx-ai-v2-2-0_NOTICE-final.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-syntheticdata
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 11.0.0+20250513.180628.35
+  webPage: https://www.ibm.com
+created: 2025-06-10T02:04:09.07256459+0000
+digest: sha256:81811954c151f56b4861c7a3e996bc126f6011d031556c9cce68452d76d9d235

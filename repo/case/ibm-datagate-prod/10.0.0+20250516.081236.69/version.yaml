@@ -1,0 +1,84 @@
+apiVersion: v1
+case:
+  appVersion: 8.0.0
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Data Gate
+  displayDescription: The CASE of IBM Data Gate
+  displayName: IBM Data Gate
+  icons:
+  - mediaType: text/plain; charset=utf-8
+    url: http://raw.githubusercontent.com/IBM/charts/master/logo/IBM-Datagate-icon.png
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4D5.2_EE_License.txt
+    cp4data-standard:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4D5.2_SE_License.txt
+    datagate-watsonx:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Gate for watsonx 1.2 License
+        displayName: IBM Data Gate for for watsonx 1.2 License
+      ref: Data_Gate_for_watsonx_1.2_License.txt
+    datagate-watsonx-licenseNonIBM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Gate for watsonx non_ibm_license
+        displayName: Data_Gate_for_watsonx_1.2_non_ibm_license
+      ref: Data_Gate_for_watsonx_1.2_non_ibm_license.txt
+    datagate-watsonx-notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Gate for watsonx notices
+        displayName: Data_Gate_for_watsonx_1.2_notice
+      ref: Data_Gate_for_watsonx_1.2_notice.txt
+    datagate-zos:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Gate for z/OS license
+        displayName: Data_Gate_for_zOS_3.2_license
+      ref: Data_Gate_for_zOS_3.2_license.txt
+    datagate-zos-licenseNonIBM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Gate for z/OS non_ibm_license
+        displayName: Data_Gate_for_zOS_3.2_non_ibm_license
+      ref: Data_Gate_for_zOS_3.2_non_ibm_license.txt
+    datagate-zos-notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Gate for z/OS notices
+        displayName: Data_Gate_for_zOS_3.2_notice
+      ref: Data_Gate_for_zOS_3.2_notice.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-datagate-prod
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 10.0.0+20250516.081236.69
+  webPage: https://www.ibm.com
+created: 2025-06-10T02:04:03.59642622+0000
+digest: sha256:e967c79267db208d5e6f7ae88b903956eabe78ad883f576b84e4332caa497d60
