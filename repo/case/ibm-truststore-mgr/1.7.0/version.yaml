@@ -1,0 +1,46 @@
+apiVersion: v1
+case:
+  appVersion: 1.7.0
+  catalogs:
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Truststore Manager
+  displayDescription: IBM Truststore Manager Provides a mechanism to  manage a unified
+    truststore
+  displayName: IBM Truststore Manager
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-truststore-mgr
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.7.0
+  webPage: https://www.ibm.com
+created: 2025-06-12T17:44:01.46823957+0000
+digest: sha256:5f7f401587a66f1c59fd1dbeee3e089b75f52549b775d0e5c01af3dda5e0315e
