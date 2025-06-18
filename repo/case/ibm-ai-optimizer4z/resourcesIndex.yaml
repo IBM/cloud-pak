@@ -1,0 +1,30 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:74dfe66b879a7fb216c83910089b22e4eb1ac2e2f77208ebd771e87ce84133b7
+  image: cpopen/ibm-ai-optimizer4z-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.1.0-82-g6c72e5bd32-main-20250617150132-linux-amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:cf95fb23753884412d55103b42251325e24f69c25bc7ce49551fa063088e07b6
+  image: cpopen/ibm-ai-optimizer4z-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.1.0-82-g6c72e5bd32-main-20250617150132-linux-s390x
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:313a3bba761fdabde101bccef600cf83fd9a35c1e076f2fce40d294c523af8e5
+  image: cpopen/ibm-ai-optimizer4z-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.1.0-82-g6c72e5bd32-main-20250617150132
