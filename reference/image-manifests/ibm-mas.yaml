@@ -2,6 +2,7 @@ source: ibm-mas-bundle/case/ibm-mas/case.yaml
 description: "IBM Maximo Application Suite"
 images:
   - image: cp/aibroker/aibroker
+  - image: cp/aibroker/ibm-mas-aibroker-ws
   - image: cp/arcgis/apps
   - image: cp/arcgis/arcgis-busybox
   - image: cp/arcgis/arcgis-disaster-recovery
@@ -374,6 +375,7 @@ images:
   - image: cp/wiotp/ibm-iot-state
   - image: cp/wiotp/ibm-iot-webui
   - image: cp/wiotp/ibm-iot-workspace
+  - image: cp/wiotp/ibm-mas-iot-primary-entity
   - image: cp/wiotp/iot-actions-operator
   - image: cp/wiotp/iot-auth-operator
   - image: cp/wiotp/iot-datapower-operator
