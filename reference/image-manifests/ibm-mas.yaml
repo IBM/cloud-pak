@@ -85,6 +85,10 @@ images:
   - image: cp/datadictionary/kitt-v3-series-store
   - image: cp/datadictionary/kitt-v3-user-store
   - image: cp/datadictionary/kitt-v3-wiot-connector
+  - image: cp/facilities/datainit
+  - image: cp/facilities/ibm-mas-facilities-ws
+  - image: cp/facilities/platform
+  - image: cp/facilities/usersyncagent
   - image: cp/health/health-usersyncagent
   - image: cp/health/health-workspaceagent
   - image: cp/health/healthadmin
@@ -93,6 +97,7 @@ images:
   - image: cp/health/hook-preinstall-health
   - image: cp/manage/bdi
   - image: cp/manage/extension-acm
+  - image: cp/manage/extension-aip
   - image: cp/manage/extension-anywhere
   - image: cp/manage/extension-aviation
   - image: cp/manage/extension-civil
@@ -127,10 +132,12 @@ images:
   - image: cp/manage/manage-groupsyncagent
   - image: cp/manage/manage-usersyncagent
   - image: cp/manage/manageadmin
+  - image: cp/manage/manageadminfoundation
   - image: cp/manage/maxloader
   - image: cp/manage/monitoragent
   - image: cp/manage/ubi-wlp-jms-manage
   - image: cp/manage/ubi-wlp-manage
+  - image: cp/manage/ubi-wlp-manage-foundation
   - image: cp/mas-hputilities/hook-ca-hputilities
   - image: cp/mas-hputilities/hpu-monitor
   - image: cp/mas-hputilities/hputilities-model-engine
@@ -152,6 +159,7 @@ images:
   - image: cp/mas/coreidp
   - image: cp/mas/coreidp-login
   - image: cp/mas/datamodel-migration
+  - image: cp/mas/graphite-configuration
   - image: cp/mas/groupsync-coordinator
   - image: cp/mas/health-operator
   - image: cp/mas/health-tenant-operator
@@ -252,6 +260,7 @@ images:
   - image: cp/optimizer/api
   - image: cp/optimizer/execution-service
   - image: cp/optimizer/ibm-mas-optimizer-appstatus
+  - image: cp/optimizer/ibm-mas-optimizer-primary-entity
   - image: cp/optimizer/ibm-mas-optimizer-ws
   - image: cp/optimizer/usersyncagent
   - image: cp/optimizer/workspace-init
