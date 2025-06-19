@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-merlin-devworkspace-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-merlin-devworkspace-2.0.6
+  publisher: IBM
+  image: icr.io/cpopen/ibmi-merlin-devworkspace-operator-catalog@sha256:1c39a592a42aec7c9de0a9468373f384503efb4296b9afcf22e79788157e400c
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
