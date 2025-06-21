@@ -213,7 +213,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucd-prod --version 2.0.15
+oc ibm-pak get ibm-ucd-prod --version 2.0.18
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -226,7 +226,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucd-prod        \
-    --version 2.0.15           \
+    --version 2.0.18           \
     --namespace <target namespace>    \
     --inventory ucdsOperatorSetup     \
     --action install-catalog
@@ -236,7 +236,7 @@ oc ibm-pak launch ibm-ucd-prod        \
 
 ```
 oc ibm-pak launch ibm-ucd-prod        \
-    --version 2.0.15           \
+    --version 2.0.18           \
     --namespace <target namespace>    \
     --inventory ucdsOperatorSetup     \
     --action install-operator
@@ -250,7 +250,7 @@ oc ibm-pak launch ibm-ucd-prod        \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperator                           \
     --action apply_custom_resources                    \
@@ -268,7 +268,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator
@@ -278,7 +278,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-catalog
@@ -294,7 +294,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action install-operator-native                   \
@@ -306,7 +306,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ucdsOperatorSetup                      \
     --action uninstall-operator-native
@@ -316,7 +316,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action install-helm-chart                        \
@@ -327,7 +327,7 @@ oc ibm-pak launch ibm-ucd-prod                         \
 
 ```
 oc ibm-pak launch ibm-ucd-prod                         \
-    --version 2.0.15                            \
+    --version 2.0.18                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdProd                             \
     --action uninstall-helm-chart                      \
@@ -567,7 +567,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucd-prod
-   export CASE_VERSION=2.0.15
+   export CASE_VERSION=2.0.18
    ```
 
 2. Connect your host to the intranet.
@@ -624,7 +624,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 2.0.15
+    version: 2.0.18
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -1045,6 +1045,8 @@ The Helm chart and operator Custom Resource (UcdServer CR v4) have the following
 |          | fetchDriver | Boolean specifying whether to fetch JDBC driver from well-known location.  Suppported for db2, mysql, oracle, and sqlserver. This setting will be ignored if extLibVolume.configMapName is specified. | Default value true |
 |          | driverVersion | Version of JDBC driver to fetch from well-known location.  This value is optional.  If not specified, the latest jdbc driver for the database type will be fetched. | |
 |          | createDatabase | Automatically create a MySQL 8.0 Database | Default is false |
+|          | dbVolume.storageClassName | If createDatasbase equals "true", specifies the name of the storageclass to use. | |
+|          | dbVolume.size | If createDatasbase equals "true", specifies the size of the persistent volume used by the database. | |
 | secureConnections  | required | Specify whether DevOps Deploy server connections are required to be secure | Default value is "true" |
 |                    | tlsSecret | Name of Kubernetes TLS secret that contains the signed certificate for the Deploy server | |
 | secret | name | Kubernetes secret which defines required DevOps Deploy passwords. | You may leave this blank to use default name of HelmReleaseName-secrets where HelmReleaseName is the name of your Helm Release/UcdServer CR, otherwise specify the secret name here.  If name is left blank and HelReleaseName-secrets does not exist in the namepace, then a default secret will be automatically created with randomized values for the passwords. |
