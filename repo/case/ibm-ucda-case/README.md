@@ -160,7 +160,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucda-case --version 1.4.21
+oc ibm-pak get ibm-ucda-case --version 1.4.25
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -173,7 +173,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case        \
-    --version 1.4.21           \
+    --version 1.4.25           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-catalog
@@ -183,7 +183,7 @@ oc ibm-pak launch ibm-ucda-case        \
 
 ```
 oc ibm-pak launch ibm-ucda-case       \
-    --version 1.4.21           \
+    --version 1.4.25           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-operator
@@ -197,7 +197,7 @@ oc ibm-pak launch ibm-ucda-case       \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperator                           \
     --action apply_custom_resources                    \
@@ -214,7 +214,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -224,7 +224,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog
@@ -239,7 +239,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -250,7 +250,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native
@@ -260,7 +260,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -271,7 +271,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -477,7 +477,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucda-case
-   export CASE_VERSION=1.4.21
+   export CASE_VERSION=1.4.25
    ```
 
 2. Connect your host to the intranet.
@@ -534,7 +534,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.21
+    version: 1.4.25
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -954,7 +954,7 @@ The Helm chart and operator custom resource (UcdAgent v4) have the following val
 |               | size | Size of the volume to hold the DevOps Deploy agent conf directory |  |
 |              | accessMode | Persistent storage access mode for the conf directory persistent volume. | ReadWriteOnce |
 | relayUri |  | Agent Relay Proxy URI if the agent is connecting to a relay. If multiple relays are specified, separate them with commas. For example, random:(http://relay1:20080,http://relay2:20080) |  |
-| codestationUrl |  | Agent Relay Codestation URL. If multiple relays are specified, separate them with commas. For example, random:(http://relay1:20081,http://relay2:20081) |  |
+| codestationUrl |  | Agent Relay Codestation URL. If multiple relays are specified, separate them with commas. For example, random:(https://relay1:20081,https://relay2:20081) |  |
 | serverUri |  | DevOps Deploy server URI. If multiple servers are specified, separate them with commas. For example, random:(wss://ucd1.example.com:7919,wss://ucd2.example.com:7919) |  |
 | secret | name | Kubernetes secret which defines password to use when creating keystores. | |
 | agentTeams |  | Teams to add this agent to when it connects to the DevOps Deploy server.Format is <team>:<type>. Multiple team specifications are separated with a comma. |  |
