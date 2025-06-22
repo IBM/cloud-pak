@@ -46,6 +46,8 @@ oc create secret generic ucd-secrets \
   --from-literal=keystorepassword=MyKeystorePassword
 ```
 
+**NOTE:** If you need to change the keystorepassword after the initial agent relay deployment, follow the instructions shown here: [Changing Password For Keystore File](#changing-password-for-keystore-file).
+
 5. A PersistentVolume that will hold the conf directory for the DevOps Deploy relay is required.  If your cluster supports dynamic volume provisioning you will not need to create a PersistentVolume (PV) or PersistentVolumeClaim (PVC) before installing this chart.  If your cluster does not support dynamic volume provisioning, you will need to either ensure a PV is available or you will need to create one before installing this chart.  You can optionally create the PVC to bind it to a specific PV, or you can let the chart create a PVC and bind to any available PV that meets the required size and storage class.  Sample YAML to create the PV and PVC are provided below.  Ensure that the spec.persistentVolumeReclaimPolicy parameter is set to Retain on the conf directory persistent volume. By default, the value is Delete for dynamically created persistent volumes. Setting the value to Retain ensures that the persistent volume is not freed or deleted if its associated persistent volume claim is deleted.
 
 ```
@@ -159,7 +161,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucdr-case --version 1.4.21
+oc ibm-pak get ibm-ucdr-case --version 1.4.25
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -172,7 +174,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-catalog
@@ -182,7 +184,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator
@@ -196,7 +198,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -214,7 +216,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator
@@ -224,7 +226,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-catalog
@@ -240,7 +242,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator-native                   \
@@ -251,7 +253,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator-native
@@ -261,7 +263,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action install-helm-chart                        \
@@ -272,12 +274,26 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.21                            \
+    --version 1.4.25                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action uninstall-helm-chart                      \
     --args "--helmReleaseName <Name of the helm release>"
 ```
+
+## Changing Password For Keystore File
+
+To change the password used by the DevOps Deploy Agent Relay keystore file, follow these steps:
+
+1. Scale the statefulset resource to 0 to shutdown the DevOps Deploy Agent Relay.
+
+2. Update the Kubernetes secret used to define the agent relay passwords to set the **keystorepassword** to the new value.
+
+3. **IMPORTANT:** Update the Kubernetes secret used to define the agent relay passwords to set the **previouskeystorepassword** to the existing keystore password being used.
+
+4. Scale the statefulset resource to 1 to restart the DevOps Deploy Agent Relay.
+
+5. When the Agent Relay is restarted, the keystore passwords will be updated to the new value during pod initialization.
 
 # Disaster Recovery
 
@@ -478,7 +494,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucdr-case
-   export CASE_VERSION=1.4.21
+   export CASE_VERSION=1.4.25
    ```
 
 2. Connect your host to the intranet.
@@ -535,7 +551,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.21
+    version: 1.4.25
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
