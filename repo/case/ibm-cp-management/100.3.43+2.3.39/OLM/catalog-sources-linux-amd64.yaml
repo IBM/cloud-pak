@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-management-orchestrator
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-management-100.3.43+2.3.39-linux-amd64
+  publisher: IBM
+  image: quay.io/cp4mcm/cp4mcm-orchestrator-catalog@sha256:6fe63fb1f4a833d8e809aa6194491771fade97bef1f18cb41f2efb71121800f2
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
