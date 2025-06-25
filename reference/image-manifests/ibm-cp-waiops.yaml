@@ -179,6 +179,7 @@ images:
   - image: cp/cp4waiops/nasm-docker-observer
   - image: cp/cp4waiops/nasm-dynatrace-observer
   - image: cp/cp4waiops/nasm-elasticsearch
+  - image: cp/cp4waiops/nasm-external-risks-observer
   - image: cp/cp4waiops/nasm-file-observer
   - image: cp/cp4waiops/nasm-github-observer
   - image: cp/cp4waiops/nasm-gitlab-observer
@@ -254,6 +255,9 @@ images:
   - image: cp/cp4waiops/oob-recommended-actions
   - image: cp/cp4waiops/opa
   - image: cp/cp4waiops/opencontent-common-utils
+  - image: cp/cp4waiops/opencontent-ibm-opensearch-base-9
+  - image: cp/cp4waiops/opencontent-ibm-opensearch-min-2.19.1
+  - image: cp/cp4waiops/opencontent-ibm-opensearch-plugin-security-2.19.1.0
   - image: cp/cp4waiops/opencontent-icp-cert-gen-1
   - image: cp/cp4waiops/opencontent-minio
   - image: cp/cp4waiops/opencontent-minio-client
@@ -311,16 +315,25 @@ images:
   - image: cp/opencontent-elasticsearch-7.10.2
   - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
   - image: cp/opencontent-etcd-3
+  - image: cp/opencontent-ibm-opensearch-base-9
+  - image: cp/opencontent-ibm-opensearch-min-2.19.1
+  - image: cp/opencontent-ibm-opensearch-plugin-ism-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugin-knn-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugin-ml-common-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugin-security-2.19.1.0
+  - image: cp/opencontent-ibm-opensearch-plugins-2.19.1
   - image: cp/opencontent-opensearch-1.3
   - image: cp/opencontent-opensearch-2.13.0
   - image: cp/opencontent-opensearch-2.16.0
   - image: cp/opencontent-opensearch-2.17.0
   - image: cp/opencontent-opensearch-2.18.0
+  - image: cp/opencontent-opensearch-2.19.1
   - image: cp/opencontent-os-base-plugins-1.3
   - image: cp/opencontent-os-base-plugins-2.13.0
   - image: cp/opencontent-os-base-plugins-2.16.0
   - image: cp/opencontent-os-base-plugins-2.17.0
   - image: cp/opencontent-os-base-plugins-2.18.0
+  - image: cp/opencontent-os-base-plugins-2.19.1
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
   - image: cp/redis-db-5.0.14
