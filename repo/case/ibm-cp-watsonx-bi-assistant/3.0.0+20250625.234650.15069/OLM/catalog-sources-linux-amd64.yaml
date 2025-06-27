@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cp-watsonx-bi-assistant-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-watsonx-bi-assistant-3.0.0+20250625.234650.15069-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-wxbia-operator-catalog@sha256:8ee560eb5986175f3b8604b3dc0cdf8bbd34ae3363039112864fc6ca15baf735
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
