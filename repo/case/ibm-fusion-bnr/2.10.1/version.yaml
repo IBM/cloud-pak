@@ -1,0 +1,38 @@
+apiVersion: v1
+case:
+  appVersion: 2.10.1
+  catalogs:
+    operations: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Backup and Restore service for IBM Storage Fusion
+  displayDescription: Backup and Restore service for IBM Storage Fusion
+  displayName: IBM Storage Fusion Backup and Restore
+  icons: []
+  licenses:
+    isf:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Storage Fusion Managment Operator License
+        displayName: IBM Storage Fusion Management Operator
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-fusion-bnr
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.10.1
+  webPage: https://www.ibm.com/products/spectrum-fusion
+created: 2025-06-30T23:04:17.29553343+0000
+digest: sha256:92a3cc9995ef3250b068d076d3377af3a6a1fd5e1041c11bd0f5323d51a6dbdb
