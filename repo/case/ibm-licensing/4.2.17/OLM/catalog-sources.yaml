@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-licensing-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-licensing-4.2.17
+  publisher: IBM
+  image: icr.io/cpopen/ibm-licensing-catalog@sha256:f557775e3872dd3ced9a23e5bf0763b1effb9b0184ff966bd2e96ab075d63a0a
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

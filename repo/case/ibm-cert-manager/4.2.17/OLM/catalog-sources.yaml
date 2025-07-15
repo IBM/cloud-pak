@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cert-manager-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cert-manager-4.2.17
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cert-manager-operator-catalog@sha256:10c775e414d55e992b076d28638e83de432302067f3a5ce4a1f7d4b173b41341
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
