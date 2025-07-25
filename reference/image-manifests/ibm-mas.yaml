@@ -2,7 +2,10 @@ source: ibm-mas-bundle/case/ibm-mas/case.yaml
 description: "IBM Maximo Application Suite"
 images:
   - image: cp/aibroker/aibroker
+  - image: cp/aibroker/controller
   - image: cp/aibroker/ibm-mas-aibroker-ws
+  - image: cp/aibroker/store
+  - image: cp/aibroker/watcher
   - image: cp/arcgis/apps
   - image: cp/arcgis/arcgis-busybox
   - image: cp/arcgis/arcgis-disaster-recovery
