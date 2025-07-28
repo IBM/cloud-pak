@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 9.0.8
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Maximo Predict
+  displayDescription: IBM Maximo Predict
+  displayName: IBM Maximo Predict
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: LICENSE INFORMATION
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: NON_IBM_LICENSE
+        name: non_ibm_license
+      ref: NON_IBM_LICENSE
+    notices:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: NOTICES
+        name: notices
+      ref: NOTICES
+  name: ibm-mas-predict
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 9.0.8
+  webPage: http://ibm.com
+created: 2025-07-28T14:34:50.31514611+0000
+digest: sha256:fbd9b6f53dd69673a65fd799ecac7e0e1a8a1dabedc369f4f1a9640d58a52bb4
