@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-asm-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-asm-operator-case-2.30.1
+  publisher: IBM
+  image: icr.io/cpopen/asm-operator-catalog@sha256:c829c689a44332a488227dc0bec32c35c0173ac21c2a0646f7115f567a6b4ca7
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
