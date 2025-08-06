@@ -1,0 +1,98 @@
+apiVersion: v1
+case:
+  appVersion: 12.0.0
+  catalogs:
+    integration: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This case provides an IBM Event Streams Operator and example custom
+    resources which can be used to install instances of IBM Event Streams
+  displayDescription: This case provides an IBM Event Streams Operator and example
+    custom resources which can be used to install instances of IBM Event Streams
+  displayName: IBM Event Streams
+  icons:
+  - mediaType: image/svg
+    url: https://ibm.github.io/event-streams/assets/images/branding/es_pictogram_expressive_light.svg
+  licenses:
+    LA_en_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: License
+      ref: LA_en_CLOUD_PAK
+    LA_en_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 License
+        displayName: License
+      ref: LA_en_EVENT_AUTOMATION
+    LA_en_IBM_WEBMETHODS_HYBRID_INTEGRATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM webMethods Hybrid Integration License
+        displayName: License
+      ref: LA_en_IBM_WEBMETHODS_HYBRID_INTEGRATION
+    LI_en_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: License
+      ref: LI_en_CLOUD_PAK
+    LI_en_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 License Information
+        displayName: License
+      ref: LI_en_EVENT_AUTOMATION
+    LI_en_IBM_WEBMETHODS_HYBRID_INTEGRATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM webMethods Hybrid Integration License
+        displayName: License
+      ref: LI_en_IBM_WEBMETHODS_HYBRID_INTEGRATION
+    non_ibm_license_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: Terms and Conditions
+      ref: non_ibm_license_CLOUD_PAK
+    non_ibm_license_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 Terms and Conditions
+        displayName: Terms and Conditions
+      ref: non_ibm_license_EVENT_AUTOMATION
+    notices_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: Notices and Information
+      ref: notices_CLOUD_PAK
+    notices_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 Notices and Information
+        displayName: Notices and Information
+      ref: notices_EVENT_AUTOMATION
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-eventstreams
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      redhat: {}
+  version: 12.0.0
+  webPage: https://ibm.github.io/event-streams/
+created: 2025-08-06T13:04:20.14634590+0000
+digest: sha256:486748578a12a04a86d8bf4bf413d2314ed0ccb4442f7eed76299d63577cad8f
