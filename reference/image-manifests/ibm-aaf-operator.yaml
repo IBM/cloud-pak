@@ -1,6 +1,29 @@
 source: ibm-aaf-operator
 description: "IBM AAF Automation Application Framework Operator to deploy automation services like Concert. "
 images:
+  - image: cp/concert/addon-ansible
+  - image: cp/concert/addon-expect
+  - image: cp/concert/addon-faas
+  - image: cp/concert/addon-mqws
+  - image: cp/concert/addon-napalm
+  - image: cp/concert/addon-pdf
+  - image: cp/concert/addon-puppeteer
+  - image: cp/concert/addon-textfsm
+  - image: cp/concert/addon-themes
+  - image: cp/concert/addon-toolbox
+  - image: cp/concert/dataapps-end-product-backend
+  - image: cp/concert/dataapps-end-product-frontend
+  - image: cp/concert/dataapps-ide
+  - image: cp/concert/dataapps-ide-api
+  - image: cp/concert/dataapps-minio
+  - image: cp/concert/dataapps-postgres
+  - image: cp/concert/dataapps-redis
+  - image: cp/concert/dataapps-setup
+  - image: cp/concert/ibm-ciso-agent-concert
+  - image: cp/concert/ibm-concert-auto-mod
+  - image: cp/concert/ibm-concert-deps-dev-base
+  - image: cp/concert/ibm-concert-osv-dev-base
+  - image: cp/concert/ibm-concert-osv-dev-data
   - image: cp/concert/ibm-concert-toolkit
   - image: cp/concert/ibm-roja-compliance
   - image: cp/concert/ibm-roja-ingestion
@@ -10,5 +33,36 @@ images:
   - image: cp/concert/ibm-roja-postgres
   - image: cp/concert/ibm-roja-py-utils
   - image: cp/concert/ibm-roja-sra
+  - image: cp/concert/ibm-solis-embedded-db
+  - image: cp/concert/ibm-solis-gw
+  - image: cp/concert/infra-influxdb
+  - image: cp/concert/infra-minio
+  - image: cp/concert/infra-mysql
+  - image: cp/concert/infra-postgresql
+  - image: cp/concert/infra-rabbitmq
+  - image: cp/concert/infra-redis
+  - image: cp/concert/pliant-ai-core
+  - image: cp/concert/pliant-api
+  - image: cp/concert/pliant-api-radius
+  - image: cp/concert/pliant-app-gateway
+  - image: cp/concert/pliant-compiler
+  - image: cp/concert/pliant-db-migration
+  - image: cp/concert/pliant-faas-image-builder
+  - image: cp/concert/pliant-flow-converter
+  - image: cp/concert/pliant-front
+  - image: cp/concert/pliant-image-registry
+  - image: cp/concert/pliant-integrations
+  - image: cp/concert/pliant-metering
+  - image: cp/concert/pliant-proxy
+  - image: cp/concert/pliant-python-pipreqs
+  - image: cp/concert/pliant-scheduler
+  - image: cp/concert/pliant-versioning
+  - image: cp/concert/pliant-worker-nodejs
+  - image: cp/concert/pliant-worker-nodejs-config
   - image: cp/concert/roja-ui
   - image: cp/concert/rojacore
+  - image: cp/solis-hub/ibm-solis-core
+  - image: cp/solis-hub/ibm-solis-embedded-db
+  - image: cp/solis-hub/ibm-solis-gw
+  - image: cp/solis-hub/ibm-solis-hub-gw
+  - image: cp/solis-hub/keycloak-embedded
