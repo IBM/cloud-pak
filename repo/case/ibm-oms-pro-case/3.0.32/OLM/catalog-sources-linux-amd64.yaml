@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-oms-pro-case-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-oms-pro-case-3.0.32-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-oms-pro-case-catalog@sha256:88e55aa6a1ad40a0715ebf462c9f9a90aa1cdd2afe0644ba05ddb66830f4eebb
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
