@@ -1,0 +1,45 @@
+apiVersion: v1
+case:
+  appVersion: 3.35.5
+  catalogs:
+    framework: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    limited: {}
+    opensource: {}
+  description: Business Teams Service case bundle
+  displayDescription: ""
+  displayName: Business Teams Service case bundle
+  icons:
+  - mediaType: image/svg
+    url: https://cache.globalcatalog.test.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/cache/4658fae917a5b2597c29bdb896465773-public/icp4automation.svg
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-bts-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.0.31
+  webPage: https://www.ibm.com
+created: 2025-08-15T20:37:18.07847652+0000
+digest: sha256:24648047f8f1381b6f4fd5970b4b8e755094a298928aaff50aeb2ec34487fc59
