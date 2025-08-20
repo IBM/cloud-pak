@@ -1,0 +1,33 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-elm-hc-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-elm-hc-1.2.0-linux-amd64
+  publisher: IBM
+  image: cp.icr.io/cpopen/ibm-elm-operator-catalog@sha256:71e405c3200147c4e4d26b9a8a076ab57f21ba97c1d037791c37ef5ca1e80cc3
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-elm-hc-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-elm-hc-1.2.0-linux-amd64
+  publisher: IBM
+  image: cp.icr.io/cpopen/ibm-elm-operator-catalog@sha256:63b54663918273bc80902ebff2834aebf4cebb67a6ad260925e34a6264030104
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

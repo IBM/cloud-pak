@@ -12,6 +12,7 @@ containerImages:
   tag: latest
 - caseVersions:
   - 1.1.0
+  - 1.2.0
   category: catalog
   digest: sha256:71e405c3200147c4e4d26b9a8a076ab57f21ba97c1d037791c37ef5ca1e80cc3
   image: cpopen/ibm-elm-operator-catalog
@@ -20,3 +21,13 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: latest
+- caseVersions:
+  - 1.2.0
+  category: catalog
+  digest: sha256:63b54663918273bc80902ebff2834aebf4cebb67a6ad260925e34a6264030104
+  image: cpopen/ibm-elm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: v1.2.0
