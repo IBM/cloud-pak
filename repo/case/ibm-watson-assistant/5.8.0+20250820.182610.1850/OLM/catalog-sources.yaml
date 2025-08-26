@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-assistant-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-assistant-5.8.0+20250820.182610.1850
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-assistant-operator-catalog@sha256:970a0435a3f0554c043236bca45f14342f3d8ecdf3516732e32bfa3856e9dda4
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

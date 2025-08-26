@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-datasift-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datasift-5.2.1+20250819.121041.1045-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-datasift-operator-catalog@sha256:6075cc7cfb52fdc14cf437f1ebfa2fc0277e7c259c7912a5631bb9339b44ab84
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

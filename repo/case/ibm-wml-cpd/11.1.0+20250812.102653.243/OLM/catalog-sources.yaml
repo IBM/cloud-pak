@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-wml-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wml-cpd-11.1.0+20250812.102653.243
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-wml-operator-catalog@sha256:68af1b8b816922a7b25ddccb13f482e818f76455b523b938f9610dc2d1b75928
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

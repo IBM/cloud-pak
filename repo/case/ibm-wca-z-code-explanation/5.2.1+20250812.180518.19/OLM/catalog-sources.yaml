@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-wca-z-code-explanation-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wca-z-code-explanation-5.2.1+20250812.180518.19
+  publisher: IBM
+  image: icr.io/cpopen/ibm-wca-z-code-explanation-catalog@sha256:48ce3e047d6eef2fdf374a34652f09d35e387789987c25ff840c0526d05fe898
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s

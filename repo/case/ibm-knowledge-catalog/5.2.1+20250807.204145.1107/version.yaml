@@ -1,0 +1,61 @@
+apiVersion: v1
+case:
+  appVersion: 5.2.1
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    ikc-premium-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Knowledge Catalog Premium License
+        displayName: IBM Knowledge Catalog Premium License
+      ref: IKCPremium_license.txt
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-VXQA-US26VZ
+    ikc-premium-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM Knowledge Catalog Premium
+        displayName: Separately Licensed code
+      ref: IKCPremium_non_ibm_license.txt
+    ikc-standard-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Knowledge Catalog Standard License
+        displayName: IBM Knowledge Catalog Standard License
+      ref: IKCStandard_license.txt
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-CBGB-2FMYR4
+    ikc-standard-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM Knowledge Catalog Standard
+        displayName: Separately Licensed code
+      ref: IKCStandard_non_ibm_license.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-knowledge-catalog
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 5.2.1+20250807.204145.1107
+  webPage: https://www.ibm.com
+created: 2025-08-26T06:34:23.99822852+0000
+digest: sha256:972391eaeac1d1a13ca32aee4dfcd991e3db99e401d124add99258348ff57ef6

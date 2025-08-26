@@ -200,3 +200,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 2.2.0-197-20250523-051916-onprem-v2.2.0
+- caseVersions:
+  - 5.1.0+20250821.092012.434
+  category: catalog
+  digest: sha256:0b73ab796d59660f0749d21235aec89eca1d0d7ecab7dfe0f74b844bb6add89b
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.2.1-432-20250814-111327-onprem-v2.2.1-amd64
+- caseVersions:
+  - 5.1.0+20250821.092012.434
+  category: catalog
+  digest: sha256:cf768edacfa3aaaaadb7719e2d66323a1d6c37cb98fc8db31a2cf45f0c5fed96
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 2.2.1-417-20250810-015501-onprem-v2.2.1-ppc64le
+- caseVersions:
+  - 5.1.0+20250821.092012.434
+  category: catalog
+  digest: sha256:0de1f998b5acdb095699da6695b85cc664e996af1bd551883220580ffb4e20ec
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.2.1-432-20250814-111327-onprem-v2.2.1

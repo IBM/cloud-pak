@@ -1,0 +1,16 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-informix-cp4d-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-informix-cp4d-operator-9.1.0+20250804.085651.9-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-informix-cp4d-operator-catalog@sha256:c009b4bfd3a3294ee105cd88a7b064faabc01db842c1315127caa35ee24cd77c
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

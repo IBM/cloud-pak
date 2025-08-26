@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-factsheet-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-factsheet-6.1.0+20250806.011951.135
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-factsheet-operator-catalog@sha256:02b65ae4beb81cbe05c24e33322cc2f42250b11974ea02c83591024fc067551b
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
