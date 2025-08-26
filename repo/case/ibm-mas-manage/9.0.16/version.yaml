@@ -1,0 +1,76 @@
+apiVersion: v1
+case:
+  appVersion: 9.0.16
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Maximo Manage
+  displayDescription: IBM Maximo Manage
+  displayName: IBM Maximo Manage
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    LA_en:
+      mediaType: text/plain; charset=us-ascii
+      metadata:
+        displayDescription: International Program License Agreement
+        displayName: LA_en.txt
+        name: LA_en
+      ref: LA_en.txt
+    NON_IBM_LICENSE:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: NON_IBM_LICENSE
+        name: NON_IBM_LICENSE
+      ref: NON_IBM_LICENSE
+    NOTICES:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: NOTICES
+        name: NOTICES
+      ref: NOTICES
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: LICENSE INFORMATION
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: text/plain; charset=us-ascii
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: non_ibm_license.txt
+        name: non_ibm_license
+      ref: non_ibm_license.txt
+    notices:
+      mediaType: text/plain; charset=us-ascii
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: notices.txt
+        name: notices
+      ref: notices.txt
+  name: ibm-mas-manage
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 9.0.16
+  webPage: http://ibm.com
+created: 2025-08-26T14:34:50.97594803+0000
+digest: sha256:a67ffb7444e033f440a5190f4ffab58c31badd36c5a5859aa94cde2c21b1bf39
