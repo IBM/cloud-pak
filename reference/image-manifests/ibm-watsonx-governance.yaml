@@ -86,12 +86,14 @@ images:
   - image: cp/cpd/granite-8b-code-instruct
   - image: cp/cpd/granite-embedding-107m-multilingual
   - image: cp/cpd/granite-embedding-278m-multilingual
+  - image: cp/cpd/granite-guardian-3-2-5b
   - image: cp/cpd/granite-guardian-3-2b
   - image: cp/cpd/granite-guardian-3-8b
   - image: cp/cpd/granite-ttm-1024-96-r2
   - image: cp/cpd/granite-ttm-1536-96-r2
   - image: cp/cpd/granite-ttm-512-96-r2
   - image: cp/cpd/granite-vision-3-2-2b
+  - image: cp/cpd/granite-vision-3-3-2b
   - image: cp/cpd/hap-detector-onnx
   - image: cp/cpd/hap-pii-install
   - image: cp/cpd/haproxy
@@ -161,6 +163,15 @@ images:
   - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part7
   - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part8
   - image: cp/cpd/llama-4-maverick-17b-128e-instruct-fp8-part9
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-int4-part1
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-int4-part2
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-int4-part3
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-int4-part4
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-int4-part5
+  - image: cp/cpd/llama-4-maverick-17b-128e-instruct-int4-part6
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-int4-part1
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-int4-part2
+  - image: cp/cpd/llama-4-scout-17b-16e-instruct-int4-part3
   - image: cp/cpd/llama-4-scout-17b-16e-instruct-part1
   - image: cp/cpd/llama-4-scout-17b-16e-instruct-part2
   - image: cp/cpd/llama-4-scout-17b-16e-instruct-part3
@@ -226,11 +237,15 @@ images:
   - image: cp/cpd/text-generation-inference
   - image: cp/cpd/tgis-vllm
   - image: cp/cpd/tsfminference
+  - image: cp/cpd/tsfminference-cpu
   - image: cp/cpd/ubi9-micro
   - image: cp/cpd/vllm
+  - image: cp/cpd/vllm-405
   - image: cp/cpd/vllm-codestral
+  - image: cp/cpd/vllm-detector-adapter
   - image: cp/cpd/vllm-llama4-mistral
   - image: cp/cpd/vllm-pixtral-large
+  - image: cp/cpd/vllm-spyre
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
@@ -252,6 +267,7 @@ images:
   - image: cp/cpd/wml-dep-init-utils
   - image: cp/cpd/wml-dep-rshiny-23.1-r4.2-ms
   - image: cp/cpd/wml-dep-rshiny-24.1-r4.3-ms
+  - image: cp/cpd/wml-dep-rshiny-25.1-r4.4-ms
   - image: cp/cpd/wml-dep-rt-231-pygpu
   - image: cp/cpd/wml-dep-rt-241-py
   - image: cp/cpd/wml-dep-rt-241-pygpu
@@ -285,7 +301,9 @@ images:
   - image: cp/cpd/wmltrainingservicehydra
   - image: cp/cpd/wx-inference-proxy
   - image: cp/cpd/wx-preinstall-rd-job
+  - image: cp/cpd/wx-preinstall-secret
   - image: cp/cpd/wx-ui-job
+  - image: cp/cpd/wxaivllm
   - image: cp/cpd/zen-database-core
   - image: cp/cpd/zen-databases
   - image: cp/opencontent-elasticsearch-7.10.2
