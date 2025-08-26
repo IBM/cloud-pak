@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.1.2891
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:7b8836f84bffdd8f6b22d486c41779bfdca8669505fe669da3b25ae84c6d62ec
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 30m0s
