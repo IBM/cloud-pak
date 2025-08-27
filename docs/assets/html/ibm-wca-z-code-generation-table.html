@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="https://ibm.github.io/cloud-pak/assets/css/style.scss">
+<div class="header">
+  <h1>IBM: CASE to Application Version</h1>
+</div>
+
+<p>This page describes a summary of the CASE version to Application version mapping</p>
+
+<h2>Common Airgap Environmental Variables:</H2>
+
+<div><code>export OFFLINEDIR=\$HOME/offline </code></div> <br />
+<div><code>export CASE_REPO_PATH=https://github.com/IBM/cloud-pak/raw/master/repo/case </div></code><br />
+<div><code>export CASE_LOCAL_PATH=$OFFLINEDIR/$CASE_ARCHIVE" </div></code><br />
+<div><code>export CASE_ARCHIVE=$CASE_NAME-$CASEVERSION.tgz </div></code><br />
+
+<h2>CASE to Application reference</h2>
+
+<table id="caseTable">
+
+<tr>
+    <th>CASE</th>
+    <th>App Version</th>
+    <th>CASE Version</th>
+    <th>Description</th>
+    <th>Airgap Variables</th>
+</tr>
+<tr><td>ibm-wca-z-code-generation</td><td width=160px;>2.6.10</td><td width=150px;><a href=https://github.com/IBM/cloud-pak/tree/master/repo/case/ibm-wca-z-code-generation/5.2.1+20250824.222247.2.6.10>5.2.1+20250824.222247.2.6.10</a></td> <td width=500ps;>IBM Cloud Pak for Data watsonx Code Assistant for z code Generation</td><td>export CASE_NAME=ibm-wca-z-code-generation<br>export CASE_VERSION=5.2.1+20250824.222247.2.6.10<br>export CASE_ARCHIVE=ibm-wca-z-code-generation-5.2.1+20250824.222247.2.6.10.tgz<br></td></tr>

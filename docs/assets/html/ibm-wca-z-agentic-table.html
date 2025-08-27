@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="https://ibm.github.io/cloud-pak/assets/css/style.scss">
+<div class="header">
+  <h1>IBM: CASE to Application Version</h1>
+</div>
+
+<p>This page describes a summary of the CASE version to Application version mapping</p>
+
+<h2>Common Airgap Environmental Variables:</H2>
+
+<div><code>export OFFLINEDIR=\$HOME/offline </code></div> <br />
+<div><code>export CASE_REPO_PATH=https://github.com/IBM/cloud-pak/raw/master/repo/case </div></code><br />
+<div><code>export CASE_LOCAL_PATH=$OFFLINEDIR/$CASE_ARCHIVE" </div></code><br />
+<div><code>export CASE_ARCHIVE=$CASE_NAME-$CASEVERSION.tgz </div></code><br />
+
+<h2>CASE to Application reference</h2>
+
+<table id="caseTable">
+
+<tr>
+    <th>CASE</th>
+    <th>App Version</th>
+    <th>CASE Version</th>
+    <th>Description</th>
+    <th>Airgap Variables</th>
+</tr>
+<tr><td>ibm-wca-z-agentic</td><td width=160px;>2.6.10</td><td width=150px;><a href=https://github.com/IBM/cloud-pak/tree/master/repo/case/ibm-wca-z-agentic/1.1.0+20250827.115625.2.6.10>1.1.0+20250827.115625.2.6.10</a></td> <td width=500ps;>IBM Software Hub watsonx Code Agents for Z</td><td>export CASE_NAME=ibm-wca-z-agentic<br>export CASE_VERSION=1.1.0+20250827.115625.2.6.10<br>export CASE_ARCHIVE=ibm-wca-z-agentic-1.1.0+20250827.115625.2.6.10.tgz<br></td></tr>
