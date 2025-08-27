@@ -1,0 +1,149 @@
+apiVersion: v1
+case:
+  appVersion: 2.6.10
+  catalogs:
+    analytics: {}
+    dataScience: {}
+    development: {}
+    tools: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data watsonx Code Assistant for z code Generation
+  displayDescription: IBM Cloud Pak for Data watsonx Code Assistant for z code Generation
+  displayName: IBM watsonx Code Assistant for Z Code Generation
+  icons:
+  - base64: PHN2ZyBpZD0id2F0c29ueF9Db2RlX0Fzc2lzdGFudF9mb3JfWl93YXRzb254X0NvZGVfQXNzaXN0YW50X2Zvcl9aX3dhdHNvbnhfQ29kZV9Bc3Npc3RhbnRfZm9yX1pfd2F0c29ueENvZGVBc3Npc3RhbnRmb3JaIiBkYXRhLW5hbWU9IndhdHNvbnggQ29kZSBBc3Npc3RhbnQgZm9yIFogd2F0c29ueCBDb2RlIEFzc2lzdGFudCBmb3IgWiB3YXRzb254IENvZGUgQXNzaXN0YW50IGZvciBaIHdhdHNvbnhDb2RlQXNzaXN0YW50Zm9yWiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3k3MXlneTFxYSIgeDE9IjI3Ljk4NCIgeTE9Ii0yNjUzLjc1MSIgeDI9IjI3Ljk4NCIgeTI9Ii0yNjYzLjU0MyIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIC0yNjQ0Ljg3NykiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iLjgwNSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJ0M2dyODRja3hjIiB4MT0iLS4wMTYiIHkxPSIzMiIgeDI9IjMxLjk4NCIgeTI9IjAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4xIiBzdG9wLWNvbG9yPSIjYTI2ZWZmIi8+PHN0b3Agb2Zmc2V0PSIuOSIgc3RvcC1jb2xvcj0iIzBmNjJmYiIvPjwvbGluZWFyR3JhZGllbnQ+PG1hc2sgaWQ9IjVhN3Q5Mzl5ZmIiIHg9Ii0uMDE2IiB5PSIwIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0xMS45ODUgM2gtOS4wMmMtMS4wOTIgMC0xLjk4Ljg4OS0xLjk4IDEuOTgxVjI3YzAgMS4wOTMuODg5IDEuOTgxIDEuOTggMS45ODFoOS4wMzhBMS45ODMgMS45ODMgMCAwIDAgMTMuOTg0IDI3VjVjMC0xLjEwMy0uODk3LTItMi0yem0wIDcuMDM3TDUuMDYgNWg2LjkyNXY1LjAzN3ptLTguMjc5IDkuOTQ3IDguMjc4LTYuMDIxdjExLjgxNmwtOC4yNzgtNS43OTV6bS0uNzMtMS45NDJMMi45NjUgNS45NSAxMS4yODMgMTJsLTguMzA4IDYuMDQyem0uMDAzIDMuODc1IDcuMjQgNS4wNjhMMi45ODQgMjdsLS4wMDUtNS4wODN6TTI3LjAwMyAzaC05LjAzOGMtMS4wOTIgMC0xLjk4Ljg4OS0xLjk4IDEuOTgxdjE0aDJMMTcuOTY1IDVsOS4wMi0uMDE5djEzLjA0N2gyVjQuOTgxQTEuOTgzIDEuOTgzIDAgMCAwIDI3LjAwNCAzeiIgc3R5bGU9ImZpbGw6I2ZmZjtzdHJva2Utd2lkdGg6MCIvPjxwYXRoIHN0eWxlPSJmaWxsOnVybCgjZ3k3MXlneTFxYSk7c3Ryb2tlLXdpZHRoOjAiIGQ9Ik0yNi41MzkgOC44NzRoMi44OTF2OS43OTFoLTIuODkxeiIvPjwvbWFzaz48L2RlZnM+PGcgc3R5bGU9Im1hc2s6dXJsKCM1YTd0OTM5eWZiKSI+PHBhdGggc3R5bGU9ImZpbGw6dXJsKCN0M2dyODRja3hjKTtzdHJva2Utd2lkdGg6MCIgZD0iTS0uMDE2IDBoMzJ2MzJoLTMyeiIvPjwvZz48cGF0aCBzdHlsZT0iZmlsbDojMDAxZDZjO3N0cm9rZS13aWR0aDowIiBkPSJtMjkuMTg2IDI1LjAyOC0yLjU4IDIuNTggMS40MSAxLjQyIDQtNC00LTQtMS40MiAxLjQxIDIuNTkgMi41OXpNMTcuODQ2IDI1LjAyOGwyLjU4LTIuNTgtMS40MS0xLjQyLTQgNCA0IDQgMS40Mi0xLjQxLTIuNTktMi41OXpNMjMuMDE2IDMwLjAyOGwtMS45MTUtLjU3NyAyLjkxNS05LjQyMyAxLjkxNC41NzctMi45MTQgOS40MjN6Ii8+PC9zdmc+
+    mediaType: image/svg+xml
+  licenses:
+    license_cs:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (cs)
+        displayName: License (cs)
+      ref: LA_cs
+    license_de:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (de)
+        displayName: License (de)
+      ref: LA_de
+    license_el:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (el)
+        displayName: License (el)
+      ref: LA_el
+    license_en:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (en)
+        displayName: License (en)
+      ref: LA_en
+    license_es:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (es)
+        displayName: License (es)
+      ref: LA_es
+    license_fr:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (fr)
+        displayName: License (fr)
+      ref: LA_fr
+    license_in:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (in)
+        displayName: License (in)
+      ref: LA_in
+    license_it:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (it)
+        displayName: License (it)
+      ref: LA_it
+    license_ja:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (ja)
+        displayName: License (ja)
+      ref: LA_ja
+    license_ko:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (ko)
+        displayName: License (ko)
+      ref: LA_ko
+    license_lt:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (lt)
+        displayName: License (lt)
+      ref: LA_lt
+    license_pl:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (pl)
+        displayName: License (pl)
+      ref: LA_pl
+    license_pt:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (pt)
+        displayName: License (pt)
+      ref: LA_pt
+    license_sl:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (sl)
+        displayName: License (sl)
+      ref: LA_sl
+    license_tr:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (tr)
+        displayName: License (tr)
+      ref: LA_tr
+    license_zh:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (zh)
+        displayName: License (zh)
+      ref: LA_zh
+    license_zh_TW:
+      mediaType: application/text
+      metadata:
+        displayDescription: License Information (zh_TW)
+        displayName: License (zh_TW)
+      ref: LA_zh_TW
+    nonIBM:
+      mediaType: application/text
+      metadata:
+        displayDescription: Non IBM License
+        displayName: non_ibm_license
+      ref: non_ibm_license
+    notices:
+      mediaType: application/text
+      metadata:
+        displayDescription: Notices
+        displayName: Notices
+      ref: notices
+  name: ibm-wca-z-code-generation
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 5.2.1+20250824.222247.2.6.10
+  webPage: https://www.ibm.com
+created: 2025-08-27T19:04:23.80845831+0000
+digest: sha256:806076adbb080cf535ab274b2ec77a0286022ef48a05f1cd06a8b02f7d327485
