@@ -1,0 +1,53 @@
+apiVersion: v1
+case:
+  appVersion: 9.1.5
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Maximo AI Service
+  displayDescription: IBM Maximo AI Service
+  displayName: IBM Maximo AI Service
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: LICENSE INFORMATION
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: NON_IBM_LICENSE
+        name: non_ibm_license
+      ref: NON_IBM_LICENSE
+    notices:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: NOTICES
+        name: notices
+      ref: NOTICES
+  name: ibm-aiservice
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 9.1.5
+  webPage: http://ibm.com
+created: 2025-08-28T20:34:51.00386943+0000
+digest: sha256:f6396917b773d2497a0ddd1eba423324d17bfdebcc08f4322c331524cd3ba8ea
