@@ -2,6 +2,7 @@ source: ibm-spectrum-fusion-sds-bundle/case/ibm-spectrum-fusion-sds/case.yaml
 description: "Management operator for IBM Storage Fusion"
 images:
   - image: cp/bnr/fbr-velero
+  - image: cp/bnr/fbr-velero15
   - image: cp/bnr/guardian-application-service
   - image: cp/bnr/guardian-backup-location
   - image: cp/bnr/guardian-backup-policy
@@ -20,6 +21,7 @@ images:
   - image: cp/dcs/import-tags-app
   - image: cp/dcs/isd-proxy
   - image: cp/dcs/keystone
+  - image: cp/dcs/metadata-extender
   - image: cp/dcs/metaocean-api
   - image: cp/dcs/mo-agent-extract
   - image: cp/dcs/mo-ubi-init
@@ -27,6 +29,7 @@ images:
   - image: cp/dcs/moproducer
   - image: cp/dcs/must-gather
   - image: cp/dcs/policyengine
+  - image: cp/dcs/remote-content-search
   - image: cp/dcs/reports
   - image: cp/dcs/scaleafmdatamover
   - image: cp/dcs/scaleilmdatamover
@@ -85,15 +88,20 @@ images:
   - image: cp/fusion-sds/isf-hcp-manager
   - image: cp/fusion-sds/isf-license-service
   - image: cp/fusion-sds/isf-management-consoleplugin
+  - image: cp/fusion-sds/isf-node-exporter
   - image: cp/fusion-sds/isf-prereq-operator
   - image: cp/fusion-sds/isf-proxy
   - image: cp/fusion-sds/isf-serviceability-operator
   - image: cp/fusion-sds/isf-ui-operator
   - image: cp/fusion-sds/isf-update-operator
   - image: cp/fusion-sds/logcollector
+  - image: cp/ibm-cas/aclchecker
+  - image: cp/ibm-cas/cas-utils
   - image: cp/ibm-cas/cast-runtime
+  - image: cp/ibm-cas/docling-serve-container-cu128
   - image: cp/ibm-cas/paradedb
   - image: cp/ibm-cas/query-service
+  - image: cp/ibm-cas/vllm-cuda-rhel9
   - image: cp/ibm-spectrum-discover/auth
   - image: cp/ibm-spectrum-discover/backup-restore
   - image: cp/ibm-spectrum-discover/connmgr
