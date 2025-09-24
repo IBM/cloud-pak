@@ -202,6 +202,7 @@ containerImages:
   tag: 2.2.0-197-20250523-051916-onprem-v2.2.0
 - caseVersions:
   - 5.1.0+20250821.092012.434
+  - 5.1.0+20250909.035517.454
   category: catalog
   digest: sha256:0b73ab796d59660f0749d21235aec89eca1d0d7ecab7dfe0f74b844bb6add89b
   image: cpopen/ibm-lakehouse-operator-catalog
@@ -212,6 +213,7 @@ containerImages:
   tag: 2.2.1-432-20250814-111327-onprem-v2.2.1-amd64
 - caseVersions:
   - 5.1.0+20250821.092012.434
+  - 5.1.0+20250909.035517.454
   category: catalog
   digest: sha256:cf768edacfa3aaaaadb7719e2d66323a1d6c37cb98fc8db31a2cf45f0c5fed96
   image: cpopen/ibm-lakehouse-operator-catalog
@@ -228,3 +230,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 2.2.1-432-20250814-111327-onprem-v2.2.1
+- caseVersions:
+  - 5.1.0+20250909.035517.454
+  category: catalog
+  digest: sha256:b0dccfa247d408dd7e647894c0a4ec3bb8152c0c678be8f742b84234eaacfc73
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 2.2.1-454-20250909-035517-onprem-v2.2.1-hf2-s390x
+- caseVersions:
+  - 5.1.0+20250909.035517.454
+  category: catalog
+  digest: sha256:d26b6c156264e9e8bb16def724f3ec6a6de194336599db8821b1965f1bc5fd72
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.2.1-454-20250909-035517-onprem-v2.2.1-hf2
