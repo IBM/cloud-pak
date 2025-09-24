@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-transadv-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-transadv-4.4.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-transformation-advisor-operator-catalog@sha256:17b12c3c8204cc9d251cc5b0086c720354df7644e01f84c67161fafca8808933
+  sourceType: grpc
