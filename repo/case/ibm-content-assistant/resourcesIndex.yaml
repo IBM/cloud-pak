@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:5e360a6da917f4d3318238ed521d2dc8e6c3c3a434026cdbad710b0a12593f33
+  image: cpopen/ibm-content-assistant-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-fbc-20250923.110524-49B50AF06-amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:f57ed2e0dc86c76af163e84f33209b69126c28cc26268d3ecf2396c9e9abc7c3
+  image: cpopen/ibm-content-assistant-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-fbc-20250923.110524-49B50AF06-s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:868099f991f1d0a701dbb3af7892740dca41159805a34489326fc3bbc8386c85
+  image: cpopen/ibm-content-assistant-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-fbc-20250923.110524-49B50AF06-ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:00b0193a750d1386d3f0df60b10b3b8f510ed0640f37e29899262860cd53127a
+  image: cpopen/ibm-content-assistant-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.0-fbc-20250923.110524-49B50AF06
