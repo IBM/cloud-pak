@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: aiops-analytics-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-aiops-analytics-4.15.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-aiops-analytics-operator-catalog@sha256:a61c4fd671d0223200ed96a5d8b312ec6ae7939044e67753bc0cb09497fe53a2
+  sourceType: grpc

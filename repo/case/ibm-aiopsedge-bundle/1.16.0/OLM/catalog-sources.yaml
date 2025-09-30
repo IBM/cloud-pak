@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: aiopsedge
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-aiopsedge-bundle-1.16.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-aiopsedge-operator-catalog@sha256:7975382caaa4d78b999350ce728a49af825e63848deffcc0ef9cd6a397cac306
+  sourceType: grpc

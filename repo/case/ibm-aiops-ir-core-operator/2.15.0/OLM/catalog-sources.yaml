@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-aiops-ir-core-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-aiops-ir-core-operator-2.15.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-aiops-ir-core-operator-catalog@sha256:44caa23992c551505134c8d70e53ad1377af72750da833900c7d5911fd7b3673
+  sourceType: grpc
