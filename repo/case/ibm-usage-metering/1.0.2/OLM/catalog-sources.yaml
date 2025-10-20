@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-usage-metering-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-usage-metering-1.0.2
+  publisher: IBM
+  image: icr.io/cpopen/ibm-usage-metering-operator-catalog@sha256:9388bf6f7a7753ee9b3936de8f89db1e368fae1a894009524c41e09b67ab34ee
+  sourceType: grpc
