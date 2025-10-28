@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-etcd-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-etcd-operator-2.0.57
+  publisher: IBM
+  image: icr.io/cpopen/ibm-etcd-operator-catalog@sha256:cff51473b0a2d887ff8396ab9f8f26e7f15f419573e95aeeaa15741976cc30bf
+  sourceType: grpc
