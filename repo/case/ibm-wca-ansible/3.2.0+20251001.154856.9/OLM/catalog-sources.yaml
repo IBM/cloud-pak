@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-wca-ansible-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wca-ansible-3.2.0+20251001.154856.9
+  publisher: IBM
+  image: icr.io/cpopen/ibm-wca-ansible-catalog@sha256:f202cacd8187a1d8ceec956ff3906bcc8cafcf61854183171c8e1832c5169d8f
+  sourceType: grpc

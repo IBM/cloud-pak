@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-rstudio-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rstudio-11.2.0+20251008.205148.103
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-rstudio-operator-catalog@sha256:f3be4541377abf6ed304a8ab032b65fac72fd48ab072f47297fecc6bd5a17e92
+  sourceType: grpc

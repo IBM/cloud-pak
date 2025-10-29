@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-edb-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cpd-edb-5.22.0+20251014.093435.2664
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-edb-operator-catalog@sha256:3ba691dfe04f89b1e8f1a19384e1a240fc88b3eebff07ab547d67eb50fa90c7c
+  sourceType: grpc
