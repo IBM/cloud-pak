@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-gateway-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-gateway-operator-2.0.56
+  publisher: IBM
+  image: icr.io/cpopen/watson-gateway-operator-catalog@sha256:0a354b499011eba6d63bdb8653af9a71771ae516b398de246c6fef48e7828a80
+  sourceType: grpc
