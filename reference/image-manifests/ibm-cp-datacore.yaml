@@ -98,6 +98,7 @@ images:
   - image: cp/cpd/datagate-cdc-agent-watsonx
   - image: cp/cpd/datagate-cdc-api
   - image: cp/cpd/datagate-data-catalog-integration
+  - image: cp/cpd/datagate-db2z-api
   - image: cp/cpd/datagate-init
   - image: cp/cpd/datagate-server
   - image: cp/cpd/datagate-server-wxd
@@ -437,6 +438,7 @@ images:
   - image: cp/cpd/spark-hb-db-spec
   - image: cp/cpd/spark-hb-deployer-agent
   - image: cp/cpd/spark-hb-helm-repo
+  - image: cp/cpd/spark-hb-instance-operator
   - image: cp/cpd/spark-hb-jkg
   - image: cp/cpd/spark-hb-nginx
   - image: cp/cpd/spark-hb-python
@@ -685,6 +687,9 @@ images:
   - image: cp/cpd/wslocal-init-241-pygpu
   - image: cp/cpd/wslocal-init-241-r
   - image: cp/cpd/wslocal-init-251-py
+  - image: cp/cpd/wslocal-init-251-py-restricted
+  - image: cp/cpd/wslocal-init-251-pygpu
+  - image: cp/cpd/wslocal-init-251-pygpu-restricted
   - image: cp/cpd/wslocal-init-nlp22.1
   - image: cp/cpd/wslocal-init-nlp22.2
   - image: cp/cpd/wslocal-init-nlp23.1
@@ -717,6 +722,9 @@ images:
   - image: cp/cpd/wslocal-runtime-241-pygpu
   - image: cp/cpd/wslocal-runtime-241-r
   - image: cp/cpd/wslocal-runtime-251-py
+  - image: cp/cpd/wslocal-runtime-251-py-restricted
+  - image: cp/cpd/wslocal-runtime-251-pygpu
+  - image: cp/cpd/wslocal-runtime-251-pygpu-restricted
   - image: cp/cpd/wslocal-runtime-py310gpu
   - image: cp/cpd/wslocal-runtime-py310main
   - image: cp/cpd/wslocal-runtime-py36cuda
@@ -799,6 +807,7 @@ images:
   - image: cp/db2u.update.image
   - image: cp/etcd
   - image: cp/ibm-cloud-databases-redis-operator
+  - image: cp/ibm-cpd-analyticsengine-dataplane-operator
   - image: cp/ibm-redis-cp-6.2.13
   - image: cp/ibm-redis-cp-6.2.7
   - image: cp/ibm-redis-cp-7.2.5

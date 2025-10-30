@@ -52,6 +52,13 @@ images:
   - image: cp/cpd/google-flan-t5-xl
   - image: cp/cpd/google-flan-t5-xxl
   - image: cp/cpd/google-flan-ul2
+  - image: cp/cpd/gpt-oss-120b-part1
+  - image: cp/cpd/gpt-oss-120b-part2
+  - image: cp/cpd/gpt-oss-120b-part3
+  - image: cp/cpd/gpt-oss-120b-part4
+  - image: cp/cpd/gpt-oss-120b-part5
+  - image: cp/cpd/gpt-oss-20b-part1
+  - image: cp/cpd/gpt-oss-20b-part2
   - image: cp/cpd/granite-20b-code-base-schema-linking
   - image: cp/cpd/granite-20b-code-base-sql-gen
   - image: cp/cpd/granite-20b-code-instruct-part1
@@ -66,9 +73,13 @@ images:
   - image: cp/cpd/granite-34b-code-instruct-part1
   - image: cp/cpd/granite-34b-code-instruct-part2
   - image: cp/cpd/granite-3b-code-instruct
+  - image: cp/cpd/granite-4-h-micro
+  - image: cp/cpd/granite-4-h-small-part1
+  - image: cp/cpd/granite-4-h-small-part2
   - image: cp/cpd/granite-8b-code-instruct
   - image: cp/cpd/granite-embedding-107m-multilingual
   - image: cp/cpd/granite-embedding-278m-multilingual
+  - image: cp/cpd/granite-embedding-english-reranker-r2
   - image: cp/cpd/granite-guardian-3-2-5b
   - image: cp/cpd/granite-guardian-3-2b
   - image: cp/cpd/granite-guardian-3-8b
@@ -77,6 +88,7 @@ images:
   - image: cp/cpd/granite-ttm-512-96-r2
   - image: cp/cpd/granite-vision-3-2-2b
   - image: cp/cpd/granite-vision-3-3-2b
+  - image: cp/cpd/granite_3.3_8b_instruct_spyre_cache
   - image: cp/cpd/hap-model
   - image: cp/cpd/hap-pii-install
   - image: cp/cpd/haproxy
@@ -178,10 +190,20 @@ images:
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part3
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part4
   - image: cp/cpd/meta-llama-llama-3-8b-instruct
+  - image: cp/cpd/mistral-medium-2508-part1
+  - image: cp/cpd/mistral-medium-2508-part2
+  - image: cp/cpd/mistral-medium-2508-part3
+  - image: cp/cpd/mistral-medium-2508-part4
+  - image: cp/cpd/mistral-medium-2508-part5
+  - image: cp/cpd/mistral-medium-2508-part6
   - image: cp/cpd/mistral-small-24b-instruct-2501
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part1
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part2
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part3
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part1
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part2
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part3
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part4
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part1
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part2
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part3
@@ -224,8 +246,13 @@ images:
   - image: cp/cpd/vllm-codestral
   - image: cp/cpd/vllm-detector-adapter
   - image: cp/cpd/vllm-llama4-mistral
+  - image: cp/cpd/vllm-lora
   - image: cp/cpd/vllm-pixtral-large
   - image: cp/cpd/vllm-spyre
+  - image: cp/cpd/voxtral-small-24b-2507-part1
+  - image: cp/cpd/voxtral-small-24b-2507-part2
+  - image: cp/cpd/voxtral-small-24b-2507-part3
+  - image: cp/cpd/voxtral-small-24b-2507-part4
   - image: cp/cpd/watsonx-chat-app
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
@@ -296,6 +323,9 @@ images:
   - image: cp/cpd/wslocal-init-241-pygpu
   - image: cp/cpd/wslocal-init-241-r
   - image: cp/cpd/wslocal-init-251-py
+  - image: cp/cpd/wslocal-init-251-py-restricted
+  - image: cp/cpd/wslocal-init-251-pygpu
+  - image: cp/cpd/wslocal-init-251-pygpu-restricted
   - image: cp/cpd/wslocal-init-nlp22.2
   - image: cp/cpd/wslocal-init-nlp23.1
   - image: cp/cpd/wslocal-init-nlp24.1
@@ -310,6 +340,9 @@ images:
   - image: cp/cpd/wslocal-runtime-241-pygpu
   - image: cp/cpd/wslocal-runtime-241-r
   - image: cp/cpd/wslocal-runtime-251-py
+  - image: cp/cpd/wslocal-runtime-251-py-restricted
+  - image: cp/cpd/wslocal-runtime-251-pygpu
+  - image: cp/cpd/wslocal-runtime-251-pygpu-restricted
   - image: cp/cpd/wx-inference-proxy
   - image: cp/cpd/wx-post-upgrade-job
   - image: cp/cpd/wx-preinstall-rd-job

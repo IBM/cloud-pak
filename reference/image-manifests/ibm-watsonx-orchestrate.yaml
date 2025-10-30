@@ -64,6 +64,13 @@ images:
   - image: cp/cpd/google-flan-t5-xl
   - image: cp/cpd/google-flan-t5-xxl
   - image: cp/cpd/google-flan-ul2
+  - image: cp/cpd/gpt-oss-120b-part1
+  - image: cp/cpd/gpt-oss-120b-part2
+  - image: cp/cpd/gpt-oss-120b-part3
+  - image: cp/cpd/gpt-oss-120b-part4
+  - image: cp/cpd/gpt-oss-120b-part5
+  - image: cp/cpd/gpt-oss-20b-part1
+  - image: cp/cpd/gpt-oss-20b-part2
   - image: cp/cpd/granite-13b-chat-api-slot-filling-v1
   - image: cp/cpd/granite-20b-code-base-schema-linking
   - image: cp/cpd/granite-20b-code-base-sql-gen
@@ -79,10 +86,14 @@ images:
   - image: cp/cpd/granite-34b-code-instruct-part1
   - image: cp/cpd/granite-34b-code-instruct-part2
   - image: cp/cpd/granite-3b-code-instruct
+  - image: cp/cpd/granite-4-h-micro
+  - image: cp/cpd/granite-4-h-small-part1
+  - image: cp/cpd/granite-4-h-small-part2
   - image: cp/cpd/granite-8b-code-instruct
   - image: cp/cpd/granite-8b-unified-api-model-v2
   - image: cp/cpd/granite-embedding-107m-multilingual
   - image: cp/cpd/granite-embedding-278m-multilingual
+  - image: cp/cpd/granite-embedding-english-reranker-r2
   - image: cp/cpd/granite-guardian-3-2-5b
   - image: cp/cpd/granite-guardian-3-2b
   - image: cp/cpd/granite-guardian-3-8b
@@ -91,6 +102,7 @@ images:
   - image: cp/cpd/granite-ttm-512-96-r2
   - image: cp/cpd/granite-vision-3-2-2b
   - image: cp/cpd/granite-vision-3-3-2b
+  - image: cp/cpd/granite_3.3_8b_instruct_spyre_cache
   - image: cp/cpd/hap-pii-install
   - image: cp/cpd/haproxy
   - image: cp/cpd/ibm-cpd-mongodb-agent-ubi
@@ -193,10 +205,20 @@ images:
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part3
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part4
   - image: cp/cpd/meta-llama-llama-3-8b-instruct
+  - image: cp/cpd/mistral-medium-2508-part1
+  - image: cp/cpd/mistral-medium-2508-part2
+  - image: cp/cpd/mistral-medium-2508-part3
+  - image: cp/cpd/mistral-medium-2508-part4
+  - image: cp/cpd/mistral-medium-2508-part5
+  - image: cp/cpd/mistral-medium-2508-part6
   - image: cp/cpd/mistral-small-24b-instruct-2501
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part1
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part2
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part3
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part1
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part2
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part3
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part4
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part1
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part2
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part3
@@ -233,8 +255,13 @@ images:
   - image: cp/cpd/vllm-codestral
   - image: cp/cpd/vllm-detector-adapter
   - image: cp/cpd/vllm-llama4-mistral
+  - image: cp/cpd/vllm-lora
   - image: cp/cpd/vllm-pixtral-large
   - image: cp/cpd/vllm-spyre
+  - image: cp/cpd/voxtral-small-24b-2507-part1
+  - image: cp/cpd/voxtral-small-24b-2507-part2
+  - image: cp/cpd/voxtral-small-24b-2507-part3
+  - image: cp/cpd/voxtral-small-24b-2507-part4
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
@@ -417,6 +444,7 @@ images:
   - image: cp/watsonx-orchestrate/openapi-provider-bootstrap
   - image: cp/watsonx-orchestrate/platformui
   - image: cp/watsonx-orchestrate/platformuiproxy
+  - image: cp/watsonx-orchestrate/postgresql
   - image: cp/watsonx-orchestrate/skill-doc-bootstrap
   - image: cp/watsonx-orchestrate/skill-server
   - image: cp/watsonx-orchestrate/skillsequencingservice
@@ -439,6 +467,7 @@ images:
   - image: cp/watsonx-orchestrate/wo-doc-processing-infra-pgbouncer
   - image: cp/watsonx-orchestrate/wo-doc-processing-infra-scheduler
   - image: cp/watsonx-orchestrate/wo-ootb-bundle
+  - image: cp/watsonx-orchestrate/wo-ootb-primitive-skills
   - image: cp/watsonx-orchestrate/wo-skill-bootstrap-job
   - image: cp/watsonx-orchestrate/wo-skill-catalog-ui
   - image: cp/watsonx-orchestrate/wo_doc_processing_cache
@@ -457,6 +486,7 @@ images:
   - image: cp/watsonx-orchestrate/wxo-chat
   - image: cp/watsonx-orchestrate/wxo-connections
   - image: cp/watsonx-orchestrate/wxo-connections-ui
+  - image: cp/watsonx-orchestrate/wxo-docker-proxy
   - image: cp/watsonx-orchestrate/wxo-flow-runtime
   - image: cp/watsonx-orchestrate/wxo-rag-tool
   - image: cp/watsonx-orchestrate/wxo-server-conversation_controller
