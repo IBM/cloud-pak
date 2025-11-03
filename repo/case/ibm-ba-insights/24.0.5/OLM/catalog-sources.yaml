@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ba-insights-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ba-insights-24.0.5
+  publisher: IBM
+  image: icr.io/cpopen/ibm-bai-catalog@sha256:87e4a37172fb72c1703c61a65d2e5b228a31e89b26161638439d82173bfccb93
+  sourceType: grpc
