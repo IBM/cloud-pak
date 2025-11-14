@@ -1,0 +1,50 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:781cd162ac5b0d1bceab01d7640f2d0cd4f0fbd09066656a7f4ceec3fc4e3545
+  image: cpopen/ibm-app-mod-accelerator-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v4.5-20251110.170303-amd64
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:f7d204a45259ef38512813dd5fb5d451f49ad4d9dd436da5d833b5c7b439e6ab
+  image: cpopen/ibm-app-mod-accelerator-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: v4.5-20251110.170303-arm64-v8
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:94577abdfec775f26fa12895035617a860740768e92942b28ec6c15c7e8e9785
+  image: cpopen/ibm-app-mod-accelerator-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v4.5-20251110.170303-ppc64le
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:a0b3b93f2c25a6cc834b4b3afe233c01f7de59d6f03d160a01e54a55b80d3035
+  image: cpopen/ibm-app-mod-accelerator-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v4.5-20251110.170303-s390x
+- caseVersions:
+  - 4.5.0
+  category: catalog
+  digest: sha256:e150dc2f1c828e2e04deb6baf3b552650666d2a61f7ba80b26a264e11dcd0d28
+  image: cpopen/ibm-app-mod-accelerator-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v4.5-20251110.170303
