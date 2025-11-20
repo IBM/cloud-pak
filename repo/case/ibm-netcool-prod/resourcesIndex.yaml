@@ -195,3 +195,51 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.6.14-20250306203448
+- caseVersions:
+  - 1.15.0
+  category: catalog
+  digest: sha256:8444620e441a2ba1f117431727325978176383c9e1eea30669c16b505a9fe818
+  image: cpopen/noi-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.15-20251112.1427-78e070479-linux.amd64
+- caseVersions:
+  - 1.15.0
+  category: catalog
+  digest: sha256:52e1b2dc99e7d06dbf8e81530a27075f75654a84b6460e499dd06c693f408ded
+  image: cpopen/noi-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.15-20251112.1427-78e070479-linux.s390x
+- caseVersions:
+  - 1.15.0
+  category: catalog
+  digest: sha256:6b577f5ad88e4bc08557305118f5728deb88c9119854b3233f4601301f49812c
+  image: cpopen/noi-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.15-20251112.1427-78e070479-linux.ppc64le
+- caseVersions:
+  - 1.15.0
+  category: catalog
+  digest: sha256:abda733d85a0a9a875704b5d1e480698f3fcc9293ddb3507786ae6e6feed9b19
+  image: cpopen/noi-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: v1.6.15-20251112.1427-78e070479-linux.arm64.v8
+- caseVersions:
+  - 1.15.0
+  category: catalog
+  digest: sha256:78e070479766be5fcb92e08055d1db444ad3c0308155ed1daa2b73b9afb43bb9
+  image: cpopen/noi-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.6.15-20251112.1427-78e070479
