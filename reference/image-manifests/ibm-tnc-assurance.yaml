@@ -1,6 +1,13 @@
 source: ibm-tnc-assurance-case-bundle/case/ibm-tnc-assurance/case.yaml
 description: "TNC Assurance provides holistic insights that help prioritize issues and resolution efforts that take place in ever-evolving hybrid cloud and traditional IT environments. It identifies and gathers signals across a variety of structured and unstructured data channels, including alerts, logs, and tickets."
 images:
+  - image: cp/cp4waiops/aiops-policy-bundle
+  - image: cp/cp4waiops/common-datarouting
+  - image: cp/cp4waiops/http-wait-initcontainer
+  - image: cp/cp4waiops/ibm-nginx-proxy
+  - image: cp/cp4waiops/lifecycle-trigger
+  - image: cp/cp4waiops/policy-registry-service
+  - image: cp/cp4waiops/vault-link-initcontainer
   - image: cp/cpd/alert-localization
   - image: cp/cpd/chatops-orchestrator
   - image: cp/cpd/chatops-slack-integrator
@@ -124,11 +131,13 @@ images:
   - image: cp/noi/nasm-dynatrace-observer
   - image: cp/noi/nasm-elasticsearch
   - image: cp/noi/nasm-event-observer
+  - image: cp/noi/nasm-external-risks-observer
   - image: cp/noi/nasm-file-observer
   - image: cp/noi/nasm-gitlab-observer
   - image: cp/noi/nasm-googlecloud-observer
   - image: cp/noi/nasm-hpnfvd-observer
   - image: cp/noi/nasm-ibmcloud-observer
+  - image: cp/noi/nasm-instana-observer
   - image: cp/noi/nasm-inventory-service
   - image: cp/noi/nasm-itnm-observer
   - image: cp/noi/nasm-jenkins-observer

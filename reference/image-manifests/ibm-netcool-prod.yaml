@@ -4,12 +4,14 @@ images:
   - image: cp/cp4waiops/aggregation-collater-java-service
   - image: cp/cp4waiops/aggregation-dedup-service
   - image: cp/cp4waiops/aggregation-normalizer-service
+  - image: cp/cp4waiops/aiops-policy-bundle
   - image: cp/cp4waiops/alert-details-service
   - image: cp/cp4waiops/archiving-service
   - image: cp/cp4waiops/asm-normalizer-service
   - image: cp/cp4waiops/asm-operator
   - image: cp/cp4waiops/cassandra
   - image: cp/cp4waiops/cem-operator
+  - image: cp/cp4waiops/common-datarouting
   - image: cp/cp4waiops/common-elastic-curator
   - image: cp/cp4waiops/couchdb
   - image: cp/cp4waiops/datalayer-cem-service
@@ -36,10 +38,13 @@ images:
   - image: cp/cp4waiops/hdm-normalizer
   - image: cp/cp4waiops/hdm-notificationprocessor
   - image: cp/cp4waiops/hdm-scheduling-ui
+  - image: cp/cp4waiops/http-wait-initcontainer
+  - image: cp/cp4waiops/ibm-nginx-proxy
   - image: cp/cp4waiops/inference-service
   - image: cp/cp4waiops/ingestion-service
   - image: cp/cp4waiops/kafka
   - image: cp/cp4waiops/kafkarest
+  - image: cp/cp4waiops/lifecycle-trigger
   - image: cp/cp4waiops/logstash
   - image: cp/cp4waiops/metric-api
   - image: cp/cp4waiops/metric-spark
@@ -126,6 +131,7 @@ images:
   - image: cp/cp4waiops/training-service
   - image: cp/cp4waiops/ui-api
   - image: cp/cp4waiops/ui-content
+  - image: cp/cp4waiops/vault-link-initcontainer
   - image: cp/cp4waiops/zookeeper
   - image: cp/cpd/edb-postgres-license-provider
   - image: cp/cpd/postgresql
@@ -200,11 +206,13 @@ images:
   - image: cp/noi/nasm-dynatrace-observer
   - image: cp/noi/nasm-elasticsearch
   - image: cp/noi/nasm-event-observer
+  - image: cp/noi/nasm-external-risks-observer
   - image: cp/noi/nasm-file-observer
   - image: cp/noi/nasm-gitlab-observer
   - image: cp/noi/nasm-googlecloud-observer
   - image: cp/noi/nasm-hpnfvd-observer
   - image: cp/noi/nasm-ibmcloud-observer
+  - image: cp/noi/nasm-instana-observer
   - image: cp/noi/nasm-inventory-service
   - image: cp/noi/nasm-itnm-observer
   - image: cp/noi/nasm-jenkins-observer
