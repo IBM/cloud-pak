@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: appconnect-operator-catalogsource
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-appconnect-12.18.0
+  publisher: IBM
+  image: icr.io/cpopen/appconnect-operator-catalog@sha256:965afbdd788dd097cb79f259ea2fec6c65afaa7be342a3b2ce97d5c2d94b86c0
+  sourceType: grpc
