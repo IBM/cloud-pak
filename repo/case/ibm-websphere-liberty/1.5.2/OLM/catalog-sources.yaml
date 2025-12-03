@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-websphere-liberty-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-websphere-liberty-1.5.2
+  publisher: IBM
+  image: icr.io/cpopen/websphere-liberty-operator-catalog@sha256:1ab89e35aa2a6b761ec101d2f551adaf7dd27e0c995a3b2e62b77fdce077b3ab
+  sourceType: grpc
