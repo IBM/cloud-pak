@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ai-optimizer4z-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ai-optimizer4z-2.1.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-ai-optimizer4z-operator-catalog@sha256:daa0c026c7143211251a97b4897398f9b4c55f4fbd5d4acdd6d18e9dd55449be
+  sourceType: grpc
