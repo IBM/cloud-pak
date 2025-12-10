@@ -160,7 +160,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucda-case --version 1.4.25
+oc ibm-pak get ibm-ucda-case --version 1.4.29
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -173,7 +173,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case        \
-    --version 1.4.25           \
+    --version 1.4.29           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-catalog
@@ -183,7 +183,7 @@ oc ibm-pak launch ibm-ucda-case        \
 
 ```
 oc ibm-pak launch ibm-ucda-case       \
-    --version 1.4.25           \
+    --version 1.4.29           \
     --namespace <target namespace>    \
     --inventory ucdaOperatorSetup     \
     --action install-operator
@@ -197,7 +197,7 @@ oc ibm-pak launch ibm-ucda-case       \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperator                           \
     --action apply_custom_resources                    \
@@ -214,7 +214,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator
@@ -224,7 +224,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-catalog
@@ -239,7 +239,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action install-operator-native                   \
@@ -250,7 +250,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ucdaOperatorSetup                      \
     --action uninstall-operator-native
@@ -260,7 +260,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action install-helm-chart                        \
@@ -271,7 +271,7 @@ oc ibm-pak launch ibm-ucda-case                        \
 
 ```
 oc ibm-pak launch ibm-ucda-case                        \
-    --version 1.4.25                            \
+    --version 1.4.29                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdaProd                            \
     --action uninstall-helm-chart                      \
@@ -477,7 +477,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucda-case
-   export CASE_VERSION=1.4.25
+   export CASE_VERSION=1.4.29
    ```
 
 2. Connect your host to the intranet.
@@ -534,7 +534,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.25
+    version: 1.4.29
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
@@ -945,6 +945,11 @@ The Helm chart and operator custom resource (UcdAgent v4) have the following val
 | image | pullPolicy | Image Pull Policy | Always, Never, or IfNotPresent. Defaults to IfNotPresent |
 |       | secret |  An image pull secret used to authenticate with the image registry | If no value is specified we will look for a pull secret named ibm-entitlement-key. |
 | license | accept | Set to true to indicate you have read and agree to license agreements : https://ibm.biz/devops-deploy-license | false |
+| statefulset | annotations | Annotations for statefulset | Default value is "" |
+|             | topologySpreadConstraints.enabled | Determines if topologySpreadConstraints are defined for the agent statefulset | Default value is false |
+|             | topologySpreadConstraints.maxSkew | Describes the degree to which Pods may be unevenly distributed | Default value is 1 |
+|             | topologySpreadConstraints.topologyKey | The key of node labels. Nodes that have a label with this key and identical values are considered to be in the same topology. | Default value is "kubernetes.io/arch" |
+|             | topologySpreadConstraints.whenUnsatisfiable | Indicates how to deal with a Pod if it doesn't satisfy the spread constraint. | Default value is ScheduleAnyway |
 | persistence | enabled | Determines if persistent storage will be used to hold the DevOps Deploy agent conf directory contents. This should always be true to preserve agent data on container restarts. | Default value "true" |
 |             | useDynamicProvisioning | Set to "true" if the cluster supports dynamic storage provisoning | Default value "true" |
 |             | fsGroup | The group ID to use to access persistent volumes | Default value "1001" |
@@ -967,7 +972,7 @@ The Helm chart and operator custom resource (UcdAgent v4) have the following val
 |           | requests.cpu  | Describes the minimum amount of CPU required - if not specified will default to limit (if specified) or otherwise implementation-defined value. | Default is 50m. See Kubernetes - [meaning of CPU](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-cpu) |
 |           | requests.memory | Describes the minimum amount of memory required. If not specified, the memory amount will default to the limit (if specified) or the implementation-defined value | Default is 200Mi. See Kubernetes - [meaning of Memory](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#meaning-of-memory) |
 |           | requests.ephemeral-storage | Describes the minimum amount of ephemeral storage required. If not specified, the amount will default to the limit (if specified) or the implementation-defined value  | Default is 500Mi. See Kubernetes - [ephemeral storage](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#setting-requests-and-limits-for-local-ephemeral-storage) |
-
+| javaContainerOptions | activeProcessorCount | JVM argument used to explicitly specify the number of CPU cores that the Java Virtual Machine (JVM) should consider as available. | Default is 2 |
 
 ## Storage
 See the Prerequisites section of this page for storage information.
