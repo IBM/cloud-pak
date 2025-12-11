@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-assistant-for-z-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-assistant-for-z-3.1.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-wxa4z-catalog@sha256:170aedc10e51946249e02a37061b308b908efb4ca92a62ed07adf52ab996a9be
+  sourceType: grpc
