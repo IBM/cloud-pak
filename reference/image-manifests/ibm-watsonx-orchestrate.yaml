@@ -89,8 +89,10 @@ images:
   - image: cp/cpd/granite-4-h-micro
   - image: cp/cpd/granite-4-h-small-part1
   - image: cp/cpd/granite-4-h-small-part2
+  - image: cp/cpd/granite-4-h-tiny
   - image: cp/cpd/granite-8b-code-instruct
   - image: cp/cpd/granite-8b-unified-api-model-v2
+  - image: cp/cpd/granite-docling-258m
   - image: cp/cpd/granite-embedding-107m-multilingual
   - image: cp/cpd/granite-embedding-278m-multilingual
   - image: cp/cpd/granite-embedding-english-reranker-r2
@@ -227,6 +229,7 @@ images:
   - image: cp/cpd/ms-marco-minilm-l-12-v2
   - image: cp/cpd/multilingual-e5-large
   - image: cp/cpd/ngp-projects-api
+  - image: cp/cpd/off_topic_detector
   - image: cp/cpd/pixtral-12b-2409
   - image: cp/cpd/portal-catalog
   - image: cp/cpd/portal-common-api
@@ -236,6 +239,8 @@ images:
   - image: cp/cpd/portal-projects
   - image: cp/cpd/portal-wx
   - image: cp/cpd/postgresql
+  - image: cp/cpd/prompt-detector-install
+  - image: cp/cpd/prompt_injection
   - image: cp/cpd/rabbitmq
   - image: cp/cpd/redis
   - image: cp/cpd/runtime-assemblies-operator
@@ -279,8 +284,10 @@ images:
   - image: cp/cpd/wx-inference-proxy
   - image: cp/cpd/wx-preinstall-rd-job
   - image: cp/cpd/wx-preinstall-secret
+  - image: cp/cpd/wx-router-receiver
   - image: cp/cpd/wx-ui-job
   - image: cp/cpd/wxaivllm
+  - image: cp/cpd/wxgov-guardrails
   - image: cp/data-exhaust-admin
   - image: cp/data-exhaust-consumer
   - image: cp/data-exhaust-healthcheck
@@ -293,6 +300,7 @@ images:
   - image: cp/ibm-redis-cp-7.2.5
   - image: cp/ibm-redis-cp-7.2.7
   - image: cp/ibm-redis-cp-haproxy
+  - image: cp/ibm-redis-cp-operand
   - image: cp/opencontent-elasticsearch-7.10.2
   - image: cp/opencontent-elasticsearch-base-plugins-7.10.2
   - image: cp/opencontent-etcd-3
@@ -364,6 +372,7 @@ images:
   - image: cp/watson-assistant/data-exhaust-producer
   - image: cp/watson-assistant/dead-letter-sink
   - image: cp/watson-assistant/dialog
+  - image: cp/watson-assistant/dms-controller
   - image: cp/watson-assistant/dvt-bdd-ubi
   - image: cp/watson-assistant/improve-recommendations-engine-x86_64
   - image: cp/watson-assistant/incoming-webhooks
@@ -396,6 +405,7 @@ images:
   - image: cp/watsonx-orchestrate/ads-runtime
   - image: cp/watsonx-orchestrate/ads-service-provisioner
   - image: cp/watsonx-orchestrate/ads-tools
+  - image: cp/watsonx-orchestrate/agent-analytics
   - image: cp/watsonx-orchestrate/ai-cognitive-mapper
   - image: cp/watsonx-orchestrate/ai-gateway
   - image: cp/watsonx-orchestrate/appconnect-skill-provider

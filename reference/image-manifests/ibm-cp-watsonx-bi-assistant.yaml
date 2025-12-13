@@ -43,6 +43,7 @@ images:
   - image: cp/cpd/event-logger-api
   - image: cp/cpd/faithfulness
   - image: cp/cpd/faithfulness-install
+  - image: cp/cpd/flat-file-service
   - image: cp/cpd/fm-detectors-hap
   - image: cp/cpd/fm-detectors-pii
   - image: cp/cpd/fmaas-router
@@ -52,6 +53,13 @@ images:
   - image: cp/cpd/google-flan-t5-xl
   - image: cp/cpd/google-flan-t5-xxl
   - image: cp/cpd/google-flan-ul2
+  - image: cp/cpd/gpt-oss-120b-part1
+  - image: cp/cpd/gpt-oss-120b-part2
+  - image: cp/cpd/gpt-oss-120b-part3
+  - image: cp/cpd/gpt-oss-120b-part4
+  - image: cp/cpd/gpt-oss-120b-part5
+  - image: cp/cpd/gpt-oss-20b-part1
+  - image: cp/cpd/gpt-oss-20b-part2
   - image: cp/cpd/granite-20b-code-base-schema-linking
   - image: cp/cpd/granite-20b-code-base-sql-gen
   - image: cp/cpd/granite-20b-code-instruct-part1
@@ -65,9 +73,13 @@ images:
   - image: cp/cpd/granite-34b-code-instruct-part1
   - image: cp/cpd/granite-34b-code-instruct-part2
   - image: cp/cpd/granite-3b-code-instruct
+  - image: cp/cpd/granite-4-h-micro
+  - image: cp/cpd/granite-4-h-small-part1
+  - image: cp/cpd/granite-4-h-small-part2
   - image: cp/cpd/granite-8b-code-instruct
   - image: cp/cpd/granite-embedding-107m-multilingual
   - image: cp/cpd/granite-embedding-278m-multilingual
+  - image: cp/cpd/granite-embedding-english-reranker-r2
   - image: cp/cpd/granite-guardian-3-2-5b
   - image: cp/cpd/granite-guardian-3-2b
   - image: cp/cpd/granite-guardian-3-8b
@@ -76,6 +88,7 @@ images:
   - image: cp/cpd/granite-ttm-512-96-r2
   - image: cp/cpd/granite-vision-3-2-2b
   - image: cp/cpd/granite-vision-3-3-2b
+  - image: cp/cpd/granite_3.3_8b_instruct_spyre_cache
   - image: cp/cpd/hap-pii-install
   - image: cp/cpd/haproxy
   - image: cp/cpd/ibm-granite-13b-chat-v1
@@ -175,10 +188,20 @@ images:
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part3
   - image: cp/cpd/meta-llama-llama-3-70b-instruct-part4
   - image: cp/cpd/meta-llama-llama-3-8b-instruct
+  - image: cp/cpd/mistral-medium-2508-part1
+  - image: cp/cpd/mistral-medium-2508-part2
+  - image: cp/cpd/mistral-medium-2508-part3
+  - image: cp/cpd/mistral-medium-2508-part4
+  - image: cp/cpd/mistral-medium-2508-part5
+  - image: cp/cpd/mistral-medium-2508-part6
   - image: cp/cpd/mistral-small-24b-instruct-2501
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part1
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part2
   - image: cp/cpd/mistral-small-3-1-24b-instruct-2503-part3
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part1
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part2
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part3
+  - image: cp/cpd/mistral-small-3-2-24b-instruct-2506-part4
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part1
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part2
   - image: cp/cpd/mistralai-mixtral-8x7b-instruct-v01-part3
@@ -227,7 +250,12 @@ images:
   - image: cp/cpd/vllm-405
   - image: cp/cpd/vllm-detector-adapter
   - image: cp/cpd/vllm-llama4-mistral
+  - image: cp/cpd/vllm-lora
   - image: cp/cpd/vllm-spyre
+  - image: cp/cpd/voxtral-small-24b-2507-part1
+  - image: cp/cpd/voxtral-small-24b-2507-part2
+  - image: cp/cpd/voxtral-small-24b-2507-part3
+  - image: cp/cpd/voxtral-small-24b-2507-part4
   - image: cp/cpd/wdp-connect-connection
   - image: cp/cpd/wdp-connect-connector
   - image: cp/cpd/wdp-connect-flight-svc
@@ -294,3 +322,31 @@ images:
   - image: cp/opencontent-os-base-plugins-2.19.1
   - image: cp/opencontent-search-haproxy-fips1402
   - image: cp/opencontent-search-haproxy-fips1403
+  - image: cp/watsonx-data/ibm-lh-acl-manager
+  - image: cp/watsonx-data/ibm-lh-cas
+  - image: cp/watsonx-data/ibm-lh-ces
+  - image: cp/watsonx-data/ibm-lh-control-plane-prereq
+  - image: cp/watsonx-data/ibm-lh-cpg
+  - image: cp/watsonx-data/ibm-lh-etcd
+  - image: cp/watsonx-data/ibm-lh-kafka
+  - image: cp/watsonx-data/ibm-lh-mcp-remote-server
+  - image: cp/watsonx-data/ibm-lh-mds-rest
+  - image: cp/watsonx-data/ibm-lh-mds-thrift
+  - image: cp/watsonx-data/ibm-lh-milvus
+  - image: cp/watsonx-data/ibm-lh-milvus-iceberg-rest-controller
+  - image: cp/watsonx-data/ibm-lh-minio
+  - image: cp/watsonx-data/ibm-lh-otelcollector
+  - image: cp/watsonx-data/ibm-lh-prestissimo
+  - image: cp/watsonx-data/ibm-lh-presto
+  - image: cp/watsonx-data/ibm-lh-qhmm
+  - image: cp/watsonx-data/ibm-lh-retrieval-search
+  - image: cp/watsonx-data/ibm-lh-solution-accelerator
+  - image: cp/watsonx-data/ibm-lh-validator
+  - image: cp/watsonx-data/lhams-api
+  - image: cp/watsonx-data/lhconsole-api
+  - image: cp/watsonx-data/lhconsole-nodeclient
+  - image: cp/watsonx-data/lhconsole-rmq-listener
+  - image: cp/watsonx-data/lhconsole-ui
+  - image: cp/watsonx-data/lhingestion-api
+  - image: cp/watsonx-data/lhplatform-api
+  - image: cp/watsonx-data/lhplatform-ui
