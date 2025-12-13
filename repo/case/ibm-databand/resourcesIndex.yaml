@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0+20251126.181331.77
+  category: catalog
+  digest: sha256:27ef45e931ea7b8ad0987586282f3eb565ab87553d89b389d5e2947ef3d0fc9c
+  image: cpopen/ibm-databand-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-amd64
+- caseVersions:
+  - 1.0.0+20251126.181331.77
+  category: catalog
+  digest: sha256:8a2508cbe2537aa70d9b4534689ba15afd11ac47cfb714a5d72fb6df1b9c2f72
+  image: cpopen/ibm-databand-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-s390x
+- caseVersions:
+  - 1.0.0+20251126.181331.77
+  category: catalog
+  digest: sha256:ed86bec3b15c467f845f0b36ccf107b16e5d5dd605a3c5ad65ddeec61fe5a199
+  image: cpopen/ibm-databand-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-ppc64le
+- caseVersions:
+  - 1.0.0+20251126.181331.77
+  category: catalog
+  digest: sha256:70c881d9a6bfc45d1f5a16f9720056e61b620ffa382119b896e5926b86fb2d24
+  image: cpopen/ibm-databand-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.0

@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0+20251209.132931.129
+  category: catalog
+  digest: sha256:7b74cce92dd2334a327f733bc6ea6054ecdfa5e00caf21d56df3373b865cdc88
+  image: cpopen/ibm-streamsets-sdi-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-amd64
+- caseVersions:
+  - 1.0.0+20251209.132931.129
+  category: catalog
+  digest: sha256:71a6b4588a7c065ebcbc386f4267c910990e5e56a20e160f1e35f57bb685ffd5
+  image: cpopen/ibm-streamsets-sdi-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-s390x
+- caseVersions:
+  - 1.0.0+20251209.132931.129
+  category: catalog
+  digest: sha256:dbc5320b62fa1f030cfb26503b3265b987ea37a6b40e1f83579dad54b0ef1113
+  image: cpopen/ibm-streamsets-sdi-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-ppc64le
+- caseVersions:
+  - 1.0.0+20251209.132931.129
+  category: catalog
+  digest: sha256:2364236526b0a5da7348bd95b331ddf94731ec1b606cb5d93d5cb03bcbd917e9
+  image: cpopen/ibm-streamsets-sdi-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.0

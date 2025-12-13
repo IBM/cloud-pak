@@ -618,3 +618,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 5.2.2-74
+- caseVersions:
+  - 11.0.0+20251203.100137.3359
+  category: catalog
+  digest: sha256:0840d61ae6b749f5e5ae2b55ff2455a5ed7ceb6d5be2add9ed51e1fa1806ff71
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.3.0-3359-amd64
+- caseVersions:
+  - 11.0.0+20251203.100137.3359
+  category: catalog
+  digest: sha256:d080cfb77883d92f6aeb3038873fba3c1c2410e70942f05fdac15d99aed334f7
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.3.0-3350-s390x
+- caseVersions:
+  - 11.0.0+20251203.100137.3359
+  category: catalog
+  digest: sha256:65fdb2bfbe693d36a98b68c8adb1b2df67365e8f6bc4e67d0c99175e2185b9f2
+  image: cpopen/ds-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5.3.0-913-ppc64le
+- caseVersions:
+  - 11.0.0+20251203.100137.3359
+  category: catalog
+  digest: sha256:e87dff71b99d2763ad2f9a18f6f763db4ced52d7f179bd588e231b99a45a0725
+  image: cpopen/ds-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.3.0-3359

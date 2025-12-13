@@ -852,3 +852,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v5.2.2101
+- caseVersions:
+  - 5.3.0+20251203.234930.305
+  category: catalog
+  digest: sha256:403bf24a3cccda0240301a1550f5d85cf5e44b35449d3dbf8d8d7a99ed8200a2
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v5.3.305-amd64
+- caseVersions:
+  - 5.3.0+20251203.234930.305
+  category: catalog
+  digest: sha256:e81f762bac1860feb32c42b23247336bebe97765b0102f6680dfe227c57c03f5
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v5.3.305-ppc64le
+- caseVersions:
+  - 5.3.0+20251203.234930.305
+  category: catalog
+  digest: sha256:6e980666e2b66373cec99128978c3fbc6a8489835a2e084e68b962d4e6fdb3da
+  image: cpopen/ibm-cpd-wkc-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v5.3.305

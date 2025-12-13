@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-productmaster-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-productmaster-9.0.0+20251203.222819.22-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-productmaster-operator-catalog@sha256:bd9b620cc54be8c0c4c820b0b4b5c9c4717873601e2aa35e103034bafbc7d19a
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
