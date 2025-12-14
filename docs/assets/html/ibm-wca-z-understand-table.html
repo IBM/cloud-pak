@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="https://ibm.github.io/cloud-pak/assets/css/style.scss">
+<div class="header">
+  <h1>IBM: CASE to Application Version</h1>
+</div>
+
+<p>This page describes a summary of the CASE version to Application version mapping</p>
+
+<h2>Common Airgap Environmental Variables:</H2>
+
+<div><code>export OFFLINEDIR=\$HOME/offline </code></div> <br />
+<div><code>export CASE_REPO_PATH=https://github.com/IBM/cloud-pak/raw/master/repo/case </div></code><br />
+<div><code>export CASE_LOCAL_PATH=$OFFLINEDIR/$CASE_ARCHIVE" </div></code><br />
+<div><code>export CASE_ARCHIVE=$CASE_NAME-$CASEVERSION.tgz </div></code><br />
+
+<h2>CASE to Application reference</h2>
+
+<table id="caseTable">
+
+<tr>
+    <th>CASE</th>
+    <th>App Version</th>
+    <th>CASE Version</th>
+    <th>Description</th>
+    <th>Airgap Variables</th>
+</tr>
+<tr><td>ibm-wca-z-understand</td><td width=160px;>2.7.20</td><td width=150px;><a href=https://github.com/IBM/cloud-pak/tree/master/repo/case/ibm-wca-z-understand/1.0.0+20251120.153029.2.7.20>1.0.0+20251120.153029.2.7.20</a></td> <td width=500ps;>IBM software hub wca-z for understand</td><td>export CASE_NAME=ibm-wca-z-understand<br>export CASE_VERSION=1.0.0+20251120.153029.2.7.20<br>export CASE_ARCHIVE=ibm-wca-z-understand-1.0.0+20251120.153029.2.7.20.tgz<br></td></tr>
