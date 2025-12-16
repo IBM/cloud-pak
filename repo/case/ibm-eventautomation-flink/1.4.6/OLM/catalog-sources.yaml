@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-eventautomation-flink-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-eventautomation-flink-1.4.6
+  publisher: IBM
+  image: icr.io/cpopen/ibm-eventautomation-flink-operator-catalog@sha256:3431c038ec74b3c6214259158fa7c533fc05da63a2a254d465138a7950ff21ab
+  sourceType: grpc
