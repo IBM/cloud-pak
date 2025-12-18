@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ads-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ads-1.4.6
+  publisher: IBM
+  image: icr.io/cpopen/ibm-ads-operator-catalog@sha256:4e7de77151861bd69e021988011dc850c6811757c8cadd3f0548e5c99d292485
+  sourceType: grpc
