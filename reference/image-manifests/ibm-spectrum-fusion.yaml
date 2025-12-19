@@ -1,6 +1,7 @@
 source: ibm-spectrum-fusion-case-bundle/case/ibm-spectrum-fusion/case.yaml
 description: "Management operator for IBM Storage Fusion"
 images:
+  - image: cp/bnr/fbr-minio
   - image: cp/bnr/fbr-velero
   - image: cp/bnr/fbr-velero15
   - image: cp/bnr/guardian-application-service
@@ -17,6 +18,7 @@ images:
   - image: cp/dcs/connmgr-scheduler
   - image: cp/dcs/db-schema
   - image: cp/dcs/db2whrest
+  - image: cp/dcs/dcs-ai-mcp-server
   - image: cp/dcs/import-service
   - image: cp/dcs/import-tags-app
   - image: cp/dcs/isd-proxy
@@ -71,6 +73,7 @@ images:
   - image: cp/fbr/guardian-transaction-manager
   - image: cp/fbr/guardian-transaction-manager-minio
   - image: cp/fbr/guardian-transaction-manager-redis
+  - image: cp/fsh/ibm-fsh-operator
   - image: cp/fusion-hci/baas-minio
   - image: cp/fusion-hci/callhomeclient
   - image: cp/fusion-hci/eventmanager
@@ -89,6 +92,7 @@ images:
   - image: cp/fusion-hci/isf-network-fw-updater
   - image: cp/fusion-hci/isf-network-operator
   - image: cp/fusion-hci/isf-node-exporter
+  - image: cp/fusion-hci/isf-platform-operator
   - image: cp/fusion-hci/isf-prereq-operator
   - image: cp/fusion-hci/isf-proxy
   - image: cp/fusion-hci/isf-serviceability-operator
@@ -103,6 +107,7 @@ images:
   - image: cp/fusion-hci/ramen-operator
   - image: cp/ibm-cas/aclchecker
   - image: cp/ibm-cas/cas-core
+  - image: cp/ibm-cas/cas-ui
   - image: cp/ibm-cas/cas-utils
   - image: cp/ibm-cas/cast-runtime
   - image: cp/ibm-cas/docling-serve-container-cu128
@@ -111,6 +116,7 @@ images:
   - image: cp/ibm-cas/models/granite-vision-3.3-2b
   - image: cp/ibm-cas/paradedb
   - image: cp/ibm-cas/query-service
+  - image: cp/ibm-cas/valkey
   - image: cp/ibm-cas/vllm-cuda-rhel9
   - image: cp/ibm-spectrum-discover/auth
   - image: cp/ibm-spectrum-discover/backup-restore
