@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ucdr-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ucdr-case-1.4.30
+  publisher: IBM
+  image: icr.io/cpopen/ucdr-operator-catalog@sha256:3feeb90bc21c6fbb2c7c434bea56972c2a7f14dfae79384038e4a95ee52bf60b
+  sourceType: grpc
