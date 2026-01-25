@@ -1,0 +1,26 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/monitor/as-library:8.11.114@sha256:55cc88923bf67f283e7a36f5cfa6cf15bdbd43d74702119855e5378376d38fe1
+  - name: cp.icr.io/cp/monitor/as-ui:8.11.188@sha256:f57cfca96ef563d7a090961e269cb20c62ea6e4c219437848177a26b7dcb84bd
+  - name: cp.icr.io/cp/monitor/db-base:8.11.130@sha256:d58362ed451dfb5fd3661fe109c99c264d95eeba901ac082d27cc09f03d71b7a
+  - name: cp.icr.io/cp/monitor/db2-dataingest-datameter:8.11.197@sha256:57491caab8472e108af7e12392752ac4244ad61a01f71d740b29b761f7fb5e44
+  - name: cp.icr.io/cp/monitor/db2-dataingest-inputerrorprocessor:8.11.197@sha256:8a34c6d51cd6ec944c451f0ede289b621f52e6e2b0a67988b86f1ce94ab5f036
+  - name: cp.icr.io/cp/monitor/db2-dataingest-inputprocessor:8.11.197@sha256:ae984541a0c4f7dc3d65b33ef74f6736d2b04223d359e18dc42e7b7fb51abf83
+  - name: cp.icr.io/cp/monitor/db2-dataingest-outputerrorprocessor:8.11.197@sha256:21fdf245758d8bc3fbe37d2636d25cd952abcfe979b4038554e66465a8101acc
+  - name: cp.icr.io/cp/monitor/db2-dataingest-outputprocessor:8.11.197@sha256:53196766a41e45b784c61e9acf731aeb40703dddff21ad990b858affa918294e
+  - name: cp.icr.io/cp/monitor/db2-dataingest-usagereport:8.11.197@sha256:a5e90f7ec5c4ce23e03e97d96329c4f96347e588399609b4c53361f56dbc5363
+  - name: cp.icr.io/cp/monitor/ft-datamapping:8.11.130@sha256:aaec01f843183da3727347a5c1d50eb1a2b5c85736bdfa1167279e7e6ab67e48
+  - name: cp.icr.io/cp/monitor/hook-db-monitor:8.11.189@sha256:f5263beb0c40a1c3391d2de4fc3ea4c59303d0f17a877a491706ade8d6164a14
+  - name: cp.icr.io/cp/monitor/ibm-mas-monitor-ws:8.11.25@sha256:e93032bf30d42d9825024c60d219a5f2dadfe947552c6a655e163d178f6376d8
+  - name: cp.icr.io/cp/monitor/pipeline-engine:8.11.107@sha256:47a706059747ad2eb6294a4ee180cab2436ac18ba0a1e1face7bdb7a0f758411
+  - name: cp.icr.io/cp/monitor/pipeline2-sync-scheduler:8.11.251@sha256:c605da81c13b36fcb7f971442b77e8c8ad058719c72f813f02d70e6029f26079
+  - name: cp.icr.io/cp/monitor/rest-dscmanager:8.11.251@sha256:56a95f2ca56a9d79bd6821e16da4ef28a10b8ece88dd1e119f91ad851a25faf3
+  - name: cp.icr.io/cp/monitor/v2-core-api:8.11.251@sha256:5d1fb0274cd561b32ad4dea826dfc397a61fa67465e8c1a030ec5651dda1a4e0
+  - name: cp.icr.io/cp/monitor/v2-core-scheduler:8.11.251@sha256:66ff926c2d82524eb59d55f9c26ba537238423ac32f96f12fcccc6c12fa77188
+  - name: cp.icr.io/cp/monitor/v2-datadictionary-scheduler:8.11.251@sha256:24c72c80906e9249d9f2041908877daf420bc2701dd5e6c3290ccb1b3d228471
+  - name: cp.icr.io/cp/monitor/v2-datalake-api:8.11.251@sha256:37ab26087446716b4b0a7a1f904c5d243ad21076e7d249049d9278864217f655
+  - name: cp.icr.io/cp/monitor/v2-deviceidpopulation-scheduler:8.11.251@sha256:a27b13b4587f5aab98f768c958025f2886888f19fc2a15e44d681115a224eb7b
+  - name: icr.io/cpopen/ibm-mas-monitor-operator-bundle:8.11.25@sha256:3f7bed1f69e56b6535a9d4605fdc0f6ac21d8f6751b680f667af442dd8b76a10
+  - name: icr.io/cpopen/ibm-mas-monitor:8.11.25@sha256:f84b01ba1d17c68ec088b18d69928d9f342bdeeee782bb44bf82d8f787db33bd
