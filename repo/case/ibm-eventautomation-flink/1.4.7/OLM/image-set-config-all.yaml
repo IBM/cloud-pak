@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-eventautomation-flink-operator-bundle:1.3.2@sha256:fccde9f97505a8784d2e271e132d915f965d1322ff7cfa410fc0f724384d9a6b
+  - name: icr.io/cpopen/ibm-eventautomation-flink-operator-bundle:1.4.7@sha256:207e93f2c35346640b921d901be1d36c68757265b380209247ccf914a4928d98
+  - name: icr.io/cpopen/ibm-eventautomation-flink-operator-catalog:1.4.7@sha256:c87a87ac1947603217835a840c8cda032e5768ca04a8c80fcedfadb3dfb01ded
+  - name: icr.io/cpopen/ibm-eventautomation-flink-operator:1.3.2@sha256:a195b9d43387b334d6e738e91547c67512b3e732514500bfc4ecd1aa03829e74
+  - name: icr.io/cpopen/ibm-eventautomation-flink-operator:1.4.7@sha256:284cc9c2dab5373f10869f25a452e8336010b10edb1432c6a7a8d6b8df5c5f8f
+  - name: icr.io/cpopen/ibm-eventautomation-flink/ibm-eventautomation-flink:1.3.2@sha256:27a71001a5c980f6f160fb09176fb456a2d6b2e5253f98796f688931b1b435f6
+  - name: icr.io/cpopen/ibm-eventautomation-flink/ibm-eventautomation-flink:1.4.7@sha256:e8e295162d2cadc2fdb440de79f85ca8f66984016bf9104cc3fff287e70d7955
