@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-ads-operator-catalog:24.0.0-IF008@sha256:dd63cba90f4145f05a9aca4e8f6fe10134d4544f598c68fad6b486ed2742f80c
+    packages:
+    - name: ibm-ads-kn-operator
+      channels:
+      - name: v24.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-ads-operator-catalog:24.0.0-IF008@sha256:dd63cba90f4145f05a9aca4e8f6fe10134d4544f598c68fad6b486ed2742f80c
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF001@sha256:04a51dd336c951fa1b44ddeedccbf716dc9b4c0c5d2c0f6f40caea938660c9cd
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF002@sha256:23f8d359b157526de677368412238cc262c1ec055a1466846608afb54689b7f1
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF003@sha256:f39c4ae49d82d5ca9e28aaa5906319dad69df53723f01cba37eef157335d6a41
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF004@sha256:cff6c6006cf971d1e1af66253f2fc67c2b6a6bd432d05d158a58303ff9f132f3
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF005@sha256:1dc0f7a02ee3cfc1682335720f2b1a7fa50624f8d5a9e0708bca5f60d32e5985
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF006@sha256:cc277c75fc4529a6b9f41586b7fc900772311a55f855d0eb05d31f183f47e20f
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF007@sha256:885ec6bc3732756de4103bdfe16d049ee4d2a20505b295fe1ae08f0d81aa2ba7
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0@sha256:2ec8e56b85f9759746bd1193b4417f534d1de98cab1e8a2bbec5323d9780265a
