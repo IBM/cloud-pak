@@ -1,0 +1,21 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-default-agents-loader:3.12.24.0-amd64@sha256:870673ba6697ee47975de6138c0fa109e441d49dde46ef7833ad17194d3e4c8a
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-default-policies-loader:3.12.24.0-amd64@sha256:ddae2caea626b17ef1765cadf735910c1b407ca04a73ece631be967fc0a335a0
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-event-hive-feeds-api:3.12.24.0-amd64@sha256:fb5bbee51cf5f408f00fc842acce5495c3cfb35b0fb4fb887d30bf58fff01ab1
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-event-hive-fixed-hardware-id:3.12.24.0-amd64@sha256:6a841b23f77c1b89dabd3023db952a32cc703559b9c91c6c7949b11e6e77d391
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-graphy:3.12.24.0-amd64@sha256:81a4f7c7e08f5b43e9dd8dc29eb9bb8473de9a0321bc3b3309c2d52e33067459
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-license-reporter:3.12.24.0-amd64@sha256:cbfd62ab0b179c4be6ab28f1d5b903c87793a17254715f81b81bf7383f48fd66
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-maia:3.12.24.0-amd64@sha256:28bcbca4658d58084b6ab25ac50b0046ab0be620888342d815102a5ae2c573c5
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-policycompiler:3.12.24.0-amd64@sha256:c3bd53cdd1d7c68ff6a40ddf983ad45457d7d487482c7f73df252374727fd374
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-service-colony:3.12.24.0-amd64@sha256:b4030028e4017e64a9809c8c4c64837d7837b0610f273425c91eaca4c9d36728
+  - name: cp.icr.io/cp/cp4s/reaqta-hive-yogi:3.12.24.0-amd64@sha256:d8513e97d0daa99aa507e11e907885cff50fad591864687be5fd31b19ab14d15
+  - name: icr.io/cpopen/cp4s-reaqta-operator-bundle:3.12.24.0@sha256:9df9dd34e17d53789ead108d1f696a9d4266d1076b93237cac1d81daf7f27b22
+  - name: icr.io/cpopen/cp4s-reaqta-operator:3.12.24.0@sha256:5d2ec290a45db597d7a17c2d7998dbc23fb660c1854256de0ee34cc81a7e16aa
+  - name: icr.io/cpopen/cp4s/busybox:1.30.1@sha256:4fe8827f51a5e11bb83afa8227cbccb402df840d32c6b633b7ad079bc8144100
+  - name: icr.io/cpopen/cp4s/openldap:1.1.10@sha256:e4ee55792cdf23041e6b8f72a3cddd7f96d1006c5827b911ff54a84dba4291cd
+  - name: icr.io/cpopen/ibm-security-edr-catalog:latest@sha256:a77664074c407d5c2dbcd90bda2a4d5a146119aa53af47cd3d95ba1b10c19a0b
+  - name: icr.io/cpopen/ibm-security-edr-operator-bundle:3.12.24.0@sha256:6843968db2fed4147db4e187f599b308b82e7ae40235126e474ac6d96755ccb2
+  - name: icr.io/cpopen/ibm-security-edr-operator:3.12.24.0@sha256:b09dcdd156ac9c63716922bb9433fb9c7d87521b6ab5b643475ab33ef125aca9
