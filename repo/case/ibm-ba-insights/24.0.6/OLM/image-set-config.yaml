@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-bai-catalog:vBAIS-24.0.0-IF006-fbc-20260128.082450-F89E4FCC6@sha256:f19507c7de51603de25494c35813d0847bf659266fdafc7c845d62ac86fa4881
+    packages:
+    - name: ibm-bai-foundation-operator
+      channels:
+      - name: v24.0
+    - name: ibm-bai-insights-engine-operator
+      channels:
+      - name: v24.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-bai-catalog:vBAIS-24.0.0-IF006-fbc-20260128.082450-F89E4FCC6@sha256:f19507c7de51603de25494c35813d0847bf659266fdafc7c845d62ac86fa4881
