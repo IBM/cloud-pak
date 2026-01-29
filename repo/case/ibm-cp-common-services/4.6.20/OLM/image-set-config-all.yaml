@@ -1,0 +1,19 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2644@sha256:2f921d1c39f72f183ca285151acf5d0dc6bd9e71a24acd1db17e6b05baf4935c
+  - name: icr.io/cpopen/common-service-operator:4.6.20@sha256:17a510be765aca426fa953d36a6f57f485d158a9820c616ed5e0c9bb993e853e
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:08038c77f8a3d8f9121bf551ee81b63145cdb92b78b140d8b86c37e21b679744
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:281e71fe3321db4ba0cae95960b3afb95af425aae144e2a15084ab26abd0bfdf
+  - name: icr.io/cpopen/edb/postgresql:13.22-5.22.0-cpfs@sha256:841db53fc45ebcb3c0dbbb0f68c2fdfe80cda1c7a5871ac1956fc80e18198e27
+  - name: icr.io/cpopen/edb/postgresql:14.19-5.22.0-cpfs@sha256:bce78b457ffeb4080aaac01dee712aa0e852ab9a3b4b42414634310b85019d8e
+  - name: icr.io/cpopen/edb/postgresql:15.14-5.22.0-cpfs@sha256:44167b92101095992f3c1e1d7727db7e9e624fc5ed81c13a2d5efb1f1901c70d
+  - name: icr.io/cpopen/edb/postgresql:16.10-5.22.0-cpfs@sha256:0ec7d9cc2211ce38d9881bda9b0a1370f0420d54ff18f90495530c7cf02c0301
+  - name: icr.io/cpopen/edb/postgresql:17.6-5.22.0-cpfs@sha256:6985297657d7b7b916427f7a0da9684cf7b269cb9015dfdacbaa7f68659e7ae4
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.6.20@sha256:bad0e5fc02c87d0737ce6963c59ad3c2b071373ee45d7ba020f5574a7aa391e1
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.6.20@sha256:6c4403e6a9c77b3235344fbc694451b1b615bae2259749629e02c7bdbe7229e0
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.2.20@sha256:d42322b9106b400851cbfdab871bf6437601bfab713a6b95c5f8a9b24cbaf5d0
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.2.20@sha256:5f09ae0ab93e298feee05f159b30dcfa709e0039efb3ebf4c13a227bdb68e20c
+  - name: icr.io/cpopen/odlm:4.3.18@sha256:b9dfc6ac8886f27d8b4855bdfecab2aa13a6e948fcc799bf36c447b3520c5041
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.3.18@sha256:b7e6833a64c98523b39f09b2ef4def46aca36cabf0b8a64216e518c268aaf620
