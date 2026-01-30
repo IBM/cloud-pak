@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-isf-cas-operator-catalog:v1.1.1@sha256:16fbd56a22df3e1cc9607e0d07ba038f043982888d65186c8d745524e55115d1
+    packages:
+    - name: ibm-isf-cas-operator
+      channels:
+      - name: v1.0
+      - name: v1.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-isf-cas-operator-catalog:v1.1.1@sha256:16fbd56a22df3e1cc9607e0d07ba038f043982888d65186c8d745524e55115d1
