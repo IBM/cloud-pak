@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-pem/pem:6.2.4.3_standard@sha256:62aff2d819232442458e6bdf111c23da4e8bb03efad9bfbbeb4587ae76f8692a
+  - name: cp.icr.io/cp/ibm-pem/pem_cm:6.2.4.3@sha256:00d926567b25c5880f623d2c03f10600d13ddeed9695adca492f971b6933292b
+  - name: cp.icr.io/cp/opencontent-common-utils:1.1.67@sha256:80c8b0c8cd51aaa95f366ced837808695d96eae327f24637b0f9c198e1353835
