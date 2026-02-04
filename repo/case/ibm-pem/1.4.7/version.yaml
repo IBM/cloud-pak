@@ -1,0 +1,63 @@
+apiVersion: v1
+case:
+  appVersion: 6.2.4.3
+  catalogs:
+    automation: {}
+    mft: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    automation: {}
+    b2b: {}
+    b2bi: {}
+    commercial: {}
+    mft: {}
+    pem: {}
+    rhocp: {}
+  description: A CASE to deploy IBM Partner Engagement Manager helm charts on a container
+    platform
+  displayDescription: A CASE to deploy IBM Partner Engagement Manager
+  displayName: IBM Partner Engagement Manager CASE
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-b2bi-icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    licenseEn:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LA_LI_en
+        name: licenseEn
+      ref: LA_LI_en
+    licenseNonIbm:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NON_IBM_LICENSE
+        name: licenseNonIbm
+      ref: non_ibm_license
+  name: ibm-pem
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.1
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.4.7
+  webPage: https://www.ibm.com/docs/en/spems/6.2.4
+created: 2026-02-04T04:57:10.75822668+0000
+digest: sha256:90677d888693a1a5eb9a72aa575f731f1a0451ab508e0bfe680ac303cbd823da
