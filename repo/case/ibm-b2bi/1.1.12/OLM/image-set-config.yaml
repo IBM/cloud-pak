@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-b2bi/b2bi-dbsetup:6.1.2.8@sha256:d98ab31584e83ce4b911d634a853a4072b1f7727634a29c7cad2d7caaf7ec44c
+  - name: cp.icr.io/cp/ibm-b2bi/b2bi-ps:6.1.2.8@sha256:ea1ce0bece1643b8f9edd8255f3ea28fbce95fb776e693c64553814de14440ef
+  - name: cp.icr.io/cp/ibm-b2bi/b2bi-purge:6.1.2.8@sha256:5bfa6b36dc3f7fef093cac70375412b2bf3e9941033fb65b023bd0e2c5dadae4
+  - name: cp.icr.io/cp/ibm-b2bi/b2bi-resources:6.1.2.8@sha256:5c723d857b3a65ea48d1c797767f53524a92bbc225a49a58fcc00bf60ba84f17
+  - name: cp.icr.io/cp/ibm-b2bi/b2bi:6.1.2.8@sha256:af9b08fe451cd8c81caae3ab5d13b741c39c0ddc3d8fd9ede27f8be440f5e277
+  - name: cp.icr.io/cp/opencontent-common-utils:1.1.69@sha256:122ba7c754148d1a95a45a4a531fdf0a7ac90066cc965b8495d2301b93de96ab
