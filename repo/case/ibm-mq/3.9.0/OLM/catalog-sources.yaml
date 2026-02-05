@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibmmq-operator-catalogsource
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-mq-3.9.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-mq-operator-catalog@sha256:7d6a2f91ea91f46a3e991422db9fd27e5b03f4d8defca77fd7ce3afd8b2e2695
+  sourceType: grpc
