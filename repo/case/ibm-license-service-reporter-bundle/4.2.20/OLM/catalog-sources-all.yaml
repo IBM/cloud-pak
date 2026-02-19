@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-license-service-reporter-bundle-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-license-service-reporter-bundle-4.2.20
+  publisher: IBM
+  image: icr.io/cpopen/ibm-license-service-reporter-operator-catalog@sha256:b0576a0b9cd0af9f26532cf6be015ac3077863dd6cc83231a6212ed0f521b960
+  sourceType: grpc
