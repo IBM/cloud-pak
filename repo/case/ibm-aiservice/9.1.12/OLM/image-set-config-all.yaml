@@ -1,0 +1,37 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/aibroker/aibroker:1.2.10@sha256:6aceacd2cd1886456d71f84e9a33ecacecc832b3c348df6cac7f7cff3b687d9d
+  - name: cp.icr.io/cp/aibroker/controller:1.0.16@sha256:1193cc4ca314ce779b84cd20d96d8d14327f627ef142c14cf09867e3b89a84ac
+  - name: cp.icr.io/cp/aibroker/maximo-fmea-common:1.0.3@sha256:4974f445cafebfddfad9eda58132c47116c7a273ff790d196eaae21d4cbe9df9
+  - name: cp.icr.io/cp/aibroker/maximo-fmea-common:1.0.4@sha256:06779dac6b7234488f3928cff7637d4ada02733352259b73c038f95ffb5d8bf0
+  - name: cp.icr.io/cp/aibroker/maximo-fmea-predictor:1.0.3@sha256:24c4243def414ffce499ab84fd9de8b26ca0ba0ea6eaa9cbf01c6d88fd073b8b
+  - name: cp.icr.io/cp/aibroker/maximo-fmea-predictor:1.0.4@sha256:6cc148c22c3acd42a4d2a6d8f3fb2f60f61ba7a34d4f4b8c38e31039ee3c3611
+  - name: cp.icr.io/cp/aibroker/maximo-mcc-common:1.1.4@sha256:28ce7d098df18f3c06424a95ec6134326f75226988d013bd32a5f0e17e50fd04
+  - name: cp.icr.io/cp/aibroker/maximo-mcc-common:1.1.5@sha256:db1061336a2dc2a4bb4fee6e88d79d973a2b7682f802eb279cc5328451fce6fb
+  - name: cp.icr.io/cp/aibroker/maximo-mcc-predictor:1.1.4@sha256:c9321002c05e2824d6ff6042a584dc01abf12dfd69d093696a02486e2eff09c8
+  - name: cp.icr.io/cp/aibroker/maximo-mcc-predictor:1.1.5@sha256:a27c5617b917698c9ec5e3bdecf12b1c55afbee43f2772a499bf6937a593b436
+  - name: cp.icr.io/cp/aibroker/maximo-mcc-train:1.1.4@sha256:6810d687b7bb124546ac020406a6d33a4271612318974b66d2e5011d156384f7
+  - name: cp.icr.io/cp/aibroker/maximo-mcc-train:1.1.5@sha256:e6a2f2e5655e80de6aaef6ee62beece501335a52185e83c38363b023dc56e139
+  - name: cp.icr.io/cp/aibroker/maximo-nl2oslc-common:1.0.4@sha256:e7aba1a9808b0a4a36f216f1c7d1eb26c370fa15843e27b33df2d324c1f1d86b
+  - name: cp.icr.io/cp/aibroker/maximo-nl2oslc-common:1.0.5@sha256:71b82875877eb13c082ba696bed991e4f7037b50a4139acec774eeadce5fc0ad
+  - name: cp.icr.io/cp/aibroker/maximo-nl2oslc-predictor:1.0.4@sha256:0b351d0c9c2c67ed3ed75c99ce2955f53329ab3cea9ff61632aa1533459f473e
+  - name: cp.icr.io/cp/aibroker/maximo-nl2oslc-predictor:1.0.5@sha256:ae586c24f27765bbe39c765654549853739174c4f72b4354fc6cba1266e3a4bd
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-common:1.2.4@sha256:91423646e287b5fd01198fab25c3e0242b13792c508033d2bb11e26ea130232e
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-common:1.2.5@sha256:d3a7ce349b6040f98279b525fbca66aba281b49095bc22f52abb65d14b682539
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-predictor:1.2.4@sha256:d23cd7d98a2c39044b38812a0c88de9e63c7b416d9615f446523594d71e7afa7
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-predictor:1.2.5@sha256:05978d437b763840f5ebe83c49883a54e74973373d8b8e58383f712d4e770ec7
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-pretrained:1.2.4@sha256:2c833ae7e6068f23fbca1164102c6245d7b2d2617fb86a54a0114ccc27c04f5f
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-pretrained:1.2.5@sha256:ff1740f3ae1f75ec101a04225f6aaec7bc7f7e2509dd8ecbed13cb2ba58a20ea
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-train:1.2.4@sha256:50ddf316288110bc9b7ef39933e476b7995422a327e3935461396ad12fe180ce
+  - name: cp.icr.io/cp/aibroker/maximo-pcc-train:1.2.5@sha256:025a13636b0ecad712ecafd04f45951fce8a717e79e75739ea1469c564f668b3
+  - name: cp.icr.io/cp/aibroker/maximo-similarity-common:1.0.2@sha256:3e1310480367660710138920bc92f05cf37c1c9eff8f2335144141a686ea61ea
+  - name: cp.icr.io/cp/aibroker/maximo-similarity-predictor:1.0.2@sha256:f1e07f38c5d95e645ad33659c9ebd95b6d52df9c16bc336691a3fd98829746ed
+  - name: cp.icr.io/cp/aibroker/maximo-similarity-train:1.0.2@sha256:23985840e5c5afe87314acc6dc3b0498ce643bc7acd30bec4038e04ee9bc5e94
+  - name: cp.icr.io/cp/aibroker/s3:1.0.4@sha256:ae384da4fef9467c8a6c6d80c431e71c46a0334d865b0ce92b5eade9ecf31c0f
+  - name: cp.icr.io/cp/aibroker/store:1.0.18@sha256:6240493c7ad98d6deff2a601085b4827fc3ce169b9c2b48ee42d71b213113325
+  - name: cp.icr.io/cp/aibroker/watcher:1.0.6@sha256:3f53007c095a138f4d4f50a7e3764f5013112ee3e6edee3a07059c1a119f0d45
+  - name: cp.icr.io/cp/aiservice/ibm-aiservice-tenant:9.1.12@sha256:a9690f1bfd5eea96eafda1f70160bfea91be5fb7d26fadc1d87dc35aaab934ea
+  - name: icr.io/cpopen/ibm-aiservice-operator-bundle:9.1.12@sha256:8360a6f4f3f27a3a5f97b3c4272bc49222332fe819186cd709f11ef13f13318f
+  - name: icr.io/cpopen/ibm-aiservice:9.1.12@sha256:bce9f7e5bf917a5f04ec61be25661b609fb28b5cf3cd1dcda1b01ebe6ad1bd76

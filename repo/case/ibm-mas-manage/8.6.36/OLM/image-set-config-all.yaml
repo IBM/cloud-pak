@@ -1,0 +1,36 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/manage/bdi:8.2.2@sha256:2b6ab6c09470928ba37d2360a76627d6606b98f6652fac93eb4368351ed5781a
+  - name: cp.icr.io/cp/manage/extension-acm:8.1.6@sha256:2c835d87e177212a3466d03ebd5f6f12fb2020b08856c53d9fafba7508cf696a
+  - name: cp.icr.io/cp/manage/extension-aviation:8.1.8@sha256:40fd307180ee97baa64882686e150ff9e677f8e36cfc1d06bcbd950d08a9c11f
+  - name: cp.icr.io/cp/manage/extension-civil:8.5.30@sha256:848bf08f6d324b23e65616875544339ad36bd4509d49a2600c83f00a3af6be43
+  - name: cp.icr.io/cp/manage/extension-envizi:8.0.0@sha256:656667a64bda2c85770412267dc31518d872a62d42e67fc3788400b11db43d6e
+  - name: cp.icr.io/cp/manage/extension-health:8.8.13@sha256:d893e9db01600d8fc02fc645c1357c9262237e048c85cae38b55a8a0cd470ba0
+  - name: cp.icr.io/cp/manage/extension-hse:8.1.5@sha256:3d8ef0fb3605b420ddc7244a521207df3a0495861812608c07843bc9e5f8c142
+  - name: cp.icr.io/cp/manage/extension-nuclear:8.1.5@sha256:72f8144d97030fb31be1abe736ddef256cc4f8eef7b5026a36e41ec3421ff5fa
+  - name: cp.icr.io/cp/manage/extension-oilandgas:8.1.5@sha256:abad7693b116812afae5520f5671777320cd1f6cb15c39034f5d4e34e289ad35
+  - name: cp.icr.io/cp/manage/extension-oracleadapter:8.2.0@sha256:d8f3a47ca74207bcef561176fe8f0a6ab05b477aa2e43e432c72c6bda1391234
+  - name: cp.icr.io/cp/manage/extension-sapadapter:8.2.0@sha256:eb83c9e0e155d1c6bee8bb63ac3c1581c076dbaec7ec3513ab23ccaae097645c
+  - name: cp.icr.io/cp/manage/extension-serviceprovider:8.1.7@sha256:7a8d03a1f205bbbe88a74c787cbc375ec4075b07b1688c797c3bc91560730910
+  - name: cp.icr.io/cp/manage/extension-spatial:8.6.23@sha256:14ff0b2e7ef898a1cf9df91b6d81b50ca084138269f2f0e90855fea04ab13c46
+  - name: cp.icr.io/cp/manage/extension-transportation:8.1.6@sha256:6d0f653094f737c627cbdf19bd0cfa612307efffd5611afed35eddcfd2022081
+  - name: cp.icr.io/cp/manage/extension-tririga:8.0.0@sha256:6f605b54c60363548d3bc60ca82ac85f50c45ddf0014062d89345e883000ce46
+  - name: cp.icr.io/cp/manage/extension-utilities:8.1.5@sha256:925f193d4b71c5fb62cd39c848f90dcc1c7f31d65d64c73b1876d8e8cde4d8c2
+  - name: cp.icr.io/cp/manage/extension-workday:8.1.0@sha256:fef64cccc1e544072c7440c7ab9c60fc7b4208df606c120e4d6901a33cb408d3
+  - name: cp.icr.io/cp/manage/health-aio:8.8.13@sha256:ae236f68feb282f10e450c34eaf2826244a660f01d74bc00cd9e118c6865dc0f
+  - name: cp.icr.io/cp/manage/ibm-mas-manage-appstatus:8.6.36@sha256:6823226cbc1e977c35a7c322aea2eca4740d4193455a62e853655157a3e55e4a
+  - name: cp.icr.io/cp/manage/ibm-mas-manage-bdi:8.6.36@sha256:e60a33fc5476b25b3ec3194da95a36429b3d06d65bbd60eeb4180357f6bca546
+  - name: cp.icr.io/cp/manage/ibm-mas-manage-ws:8.6.36@sha256:01b24de4224723a378348502f8855db12b9285da2caab86c7f8835a2aacb5bee
+  - name: cp.icr.io/cp/manage/maf-tools:8.9.5@sha256:a897146f24a012e7cf5d6cdef448e9ec1834aac900673dea9b4b39dfb11a53c0
+  - name: cp.icr.io/cp/manage/manage-groupsyncagent:1.2.47@sha256:c3055919382f19439ebec05d8974e6926f21eb373b7d2278b47bb5384d5fd253
+  - name: cp.icr.io/cp/manage/manage-usersyncagent:2.3.38@sha256:193694161ddb1053db2c776f24977ce8e1b2d801e76e0fb49c742ffd1146f92c
+  - name: cp.icr.io/cp/manage/manageadmin:8.6.35@sha256:d87b9c36640ef4cf9d8ce5c082645eb62f3a416c01abe2502e6a9aa1d9e3bd01
+  - name: cp.icr.io/cp/manage/maxloader:9.0.12-amd64@sha256:1d89bc2195809b02342418ca7fae5d762c144c1a9f59ddc66c691d4395e39110
+  - name: cp.icr.io/cp/manage/monitoragent:4.1.34@sha256:e63eaaca47b63fe675d8a42772f5abe265c3cf0435284fb1a7c499e8520550ff
+  - name: cp.icr.io/cp/manage/ubi-wlp-jms-manage:2.2.13@sha256:30e5f08695500c28827766477e99eab39110bfa00d85b8925927879edbe9923b
+  - name: cp.icr.io/cp/manage/ubi-wlp-manage:3.2.25@sha256:efffea56027bf8c61213e18a609435cc8e3e51b6451c98ee14a206b6795d0555
+  - name: icr.io/cpopen/ibm-mas-manage-operator-bundle:8.6.36@sha256:c5f8e459d6813cafa38e107505830c5a8d46b1e99264e1407ef2d504bad83fd5
+  - name: icr.io/cpopen/ibm-mas-manage-webhook:8.6.36@sha256:c9988522674ed00f6fbebb4ef1f3e300debd45c811bce857af24b19a9c29ae7c
+  - name: icr.io/cpopen/ibm-mas-manage:8.6.36@sha256:d1f0fc652c3685efc3536b35ef5c2b23da0e4ebda6d94bf08057250109a8426d
