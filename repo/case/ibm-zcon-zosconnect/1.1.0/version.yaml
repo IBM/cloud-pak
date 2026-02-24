@@ -1,0 +1,42 @@
+apiVersion: v1
+case:
+  appVersion: "3.0"
+  catalogs:
+    deploy: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Provides AirGap support for the IBM z/OS Connect Operator
+  displayDescription: Provides AirGap support for the IBM z/OS Connect Operator
+  displayName: IBM z/OS Connect CASE Bundle
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-zcon-zosconnect
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.1.0
+  webPage: https://www.ibm.com/products/zos-connect
+created: 2026-02-24T12:24:54.93063540+0000
+digest: sha256:fd9a8cd72931ceeedec7b3d95046e5cb2bcc41d9c42760131b8c6117ed44a18f
