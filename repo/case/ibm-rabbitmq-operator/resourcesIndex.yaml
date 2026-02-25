@@ -538,3 +538,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.2.72
+- caseVersions:
+  - 1.3.0+20250909.172851
+  category: catalog
+  digest: sha256:f228a8bd4e86a38419f270fdccebb69033db4d5efe1e1cb57e3e62e70f7ed6a2
+  image: cpopen/opencontent-rabbitmq-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.3.0-amd64
+- caseVersions:
+  - 1.3.0+20250909.172851
+  category: catalog
+  digest: sha256:8b74a1603fea1691907b42a37745b0ad0a26fc9dcc710540f3f4c4118ff61d1e
+  image: cpopen/opencontent-rabbitmq-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.3.0-s390x
+- caseVersions:
+  - 1.3.0+20250909.172851
+  category: catalog
+  digest: sha256:480b830a4b08d7fee2b29e1571d6ac8cd5ada7999d2048146796d0723905353c
+  image: cpopen/opencontent-rabbitmq-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.3.0
