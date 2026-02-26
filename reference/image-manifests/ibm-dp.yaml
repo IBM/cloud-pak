@@ -1,6 +1,7 @@
 source: ibm-dp-bundle/case/ibm-dp/case.yaml
 description: ""
 images:
+  - image: cp/cpd/cos-logger-sidecar
   - image: cp/cpd/dp-api
   - image: cp/cpd/dp-privacyprocessor
   - image: cp/cpd/dp-subset
@@ -10,6 +11,7 @@ images:
   - image: cp/cpd/spark-hb-cpd-miniforge-runtimes
   - image: cp/cpd/spark-hb-db-spec
   - image: cp/cpd/spark-hb-deployer-agent
+  - image: cp/cpd/spark-hb-graphite-exporter
   - image: cp/cpd/spark-hb-helm-repo
   - image: cp/cpd/spark-hb-instance-operator
   - image: cp/cpd/spark-hb-jkg

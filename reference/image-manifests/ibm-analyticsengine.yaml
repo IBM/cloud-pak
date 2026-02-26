@@ -1,11 +1,13 @@
 source: ibm-analyticsengine-bundle/case/ibm-analyticsengine/case.yaml
 description: ""
 images:
+  - image: cp/cpd/cos-logger-sidecar
   - image: cp/cpd/spark-hb-control-plane
   - image: cp/cpd/spark-hb-cpd-miniconda-runtimes
   - image: cp/cpd/spark-hb-cpd-miniforge-runtimes
   - image: cp/cpd/spark-hb-db-spec
   - image: cp/cpd/spark-hb-deployer-agent
+  - image: cp/cpd/spark-hb-graphite-exporter
   - image: cp/cpd/spark-hb-helm-repo
   - image: cp/cpd/spark-hb-instance-operator
   - image: cp/cpd/spark-hb-jkg
