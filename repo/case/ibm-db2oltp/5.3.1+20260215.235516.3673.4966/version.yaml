@@ -1,0 +1,61 @@
+apiVersion: v1
+case:
+  appVersion: 12.1.3.0-cn1
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: The IBM Db2 db2oltp operator provides the Db2U Operator integration
+    within Cloud Pak for Data
+  displayDescription: Case Bundle for the operator which deploys and manages the Db2
+    db2oltp Database
+  displayName: IBM Db2 db2oltp Operator Bundle for the Db2 Operator
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/db2logoicp-01.png
+  licenses:
+    db2oltpAdvanced:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Db2 Extension for IBM Cloud Pak for Data Advanced
+          Edition License
+        displayName: IBM Db2 Extension for IBM Cloud Pak for Data Advanced Edition
+          License
+      ref: db2ae.txt
+      url: https://ibm.biz/BdnPBW
+    db2oltpCommunity:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Db2 Extension for IBM Cloud Pak for Data Community
+          Edition License
+        displayName: IBM Db2 Extension for IBM Cloud Pak for Data Community Edition
+          License
+      ref: db2ce.txt
+      url: https://ibm.biz/BdnPB7
+    db2oltpStandard:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Db2 Extension for IBM Cloud Pak for Data Standard
+          Edition License
+        displayName: IBM Db2 Extension for IBM Cloud Pak for Data Standard Edition
+          License
+      ref: db2se.txt
+      url: https://ibm.biz/BdnPdB
+  name: ibm-db2oltp
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp3: {}
+      rhocp4: {}
+  version: 5.3.1+20260215.235516.3673.4966
+  webPage: https://www.ibm.com/analytics/db2
+created: 2026-02-26T09:31:01.11934691+0000
+digest: sha256:d17517a31d7ba6e427b7e8d30f543c5d524fa3bc4f41ace8cec61618d11ad032

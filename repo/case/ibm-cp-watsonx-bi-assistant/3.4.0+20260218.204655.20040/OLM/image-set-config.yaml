@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/conversation-api-service:1.0.593-hf.11-release@sha256:43d78a24ad2779488ef445731673daef188f1c9a16016a80be82017e148f6f58
+  - name: cp.icr.io/cp/cpd/data-connector:1.0.217-cpd-release@sha256:21bf774d79953246acdbc5ec42bc331c25eebb45aaea898eb2c20905ba5ae771
+  - name: cp.icr.io/cp/cpd/enrichment-rmq:1.0.169-cpd-release@sha256:643ab944f9be7158f2da51364e4368e0c2788b33e4b28c5932281f30c1a1c5ed
+  - name: cp.icr.io/cp/cpd/enrichment:1.0.183-cpd-release@sha256:82c2f00f8b30a0e380ce404405378cd860f3d1302b3b318334b20b033eb59550
+  - name: cp.icr.io/cp/cpd/flat-file-service:1.1.57-release@sha256:0302f5ab149dc8fc05ed3a988c3a8b09ebafa97910bf24e87085e6d858086b9e
+  - name: cp.icr.io/cp/cpd/ingest-pipeline-node:1.0.84-cpd-release@sha256:6f4941b631fa05b34dd03edc8d45afc2a6bca5615f2ae5704c669aa868d9fdd0
+  - name: cp.icr.io/cp/cpd/insights-wxbi:1.0.58-cpd-release@sha256:10bb38d7e96beeafb2ddcea4daa19c1feddb7ba81dcec0051a8d966d66468f95
+  - name: cp.icr.io/cp/cpd/predict-wxbi:1.0.108-cpd-release@sha256:3a2f24c743b9aee4d0574036013b04c83e223ef2f256b3e3e16b82f3958ec5e8
+  - name: cp.icr.io/cp/cpd/ripasso-auth-metering:1.0.251-release@sha256:84cf9408da2053bd56776feb992c4c2cdd61e1c7b021d87507f1e039dfdbef59
+  - name: cp.icr.io/cp/cpd/ripasso-conversation:1.0.522-cpd-release@sha256:7f5322d8c274d7a754365d9c905ef295a3856f81eefd40d09e3346af5a857150
+  - name: cp.icr.io/cp/cpd/ripasso-modeling-service:1.1.55-release@sha256:4af89658e2c301acfeccb0c57886c7f5c6e983289248a62f06316bfe744c2854
+  - name: cp.icr.io/cp/cpd/ripasso-proxy:1.0.50@sha256:58afeb715578cc236e30f5a0d9ee1257631edd581c607e9b1c49707c8aa40e7d
+  - name: cp.icr.io/cp/cpd/ripasso-query-service:1.1.23-hf.6-release@sha256:52d4812ea5733cb9f80e6bb889c26e5ade7d373536cb9f320882ce27b2de0165
+  - name: cp.icr.io/cp/cpd/ripasso-ui-service:1.0.1247-hf.15-release@sha256:981f70b0c8fd728a48398f53439b54b8f484f3c0bfab04b4d57bea3393f7f9be
+  - name: cp.icr.io/cp/cpd/ripasso-ws-service:1.0.132-release@sha256:f2619059489db91638e082c26c3596f82d39ed43dc1333292e82b5b5658b239c
+  - name: cp.icr.io/cp/cpd/semantic-search:1.0.692-cpd-release@sha256:b338dd9bf77ca6e16797cab823432bda60dc150234748a1cb86cf88f56c96d7d
+  - name: cp.icr.io/cp/cpd/suggested-questions:1.0.357-cpd-release@sha256:31edee04c6082e2707f4b50b2c775c1a81401b5936a33820354cb7e1dfa1955d
+  - name: cp.icr.io/cp/cpd/vis-rec-server:1.0.48-cpd-release@sha256:46159b0e9b32f1a31d2ec55b258e24ed1fd1880e4a98dbf43aad4475ecdd5bea
+  - name: cp.icr.io/cp/cpd/visualizer-tool:1.0.203-cpd-release@sha256:6596f6ee452aad8759ac53e3896bf04bfae9e0909c911d65dc821799161bfd6d
+  - name: cp.icr.io/cp/cpd/viz-nodejs:1.0.116@sha256:b9781afeb1ea74edbadcbdad795ac312c1f1e10d036547a67b6218c67dec2b31
+  - name: icr.io/cpopen/ibm-cpd-wxbia-operator-bundle:v3.4.0-20260218.204655.20040@sha256:7635aa0c56f2f470247dd3d57544fd7798a16afe97c1322b0b0c1c990c70d9f6
+  - name: icr.io/cpopen/ibm-cpd-wxbia-operator-catalog:v3.4.0-20260218.204655.20040@sha256:38c2016571b14d08eb3f44569a25df59d58efc29da6cb21f8d4abaeabaaf13ee
+  - name: icr.io/cpopen/ibm-cpd-wxbia-operator:v3.4.0-20260218.204655.20040@sha256:ce98b3606ae999e5ddc13c1eac3e2d78843e5c9b62fb51bdd1c9b79e5c2ccd7c

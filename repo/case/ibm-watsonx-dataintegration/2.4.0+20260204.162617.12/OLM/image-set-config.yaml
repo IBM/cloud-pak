@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/di-operator-bundle:5.3.1-12@sha256:1c52165ba6652d2e990c75764c0e7952fc5b31f61dd95f36fe78651d9b9eb1fb
+  - name: icr.io/cpopen/di-operator-catalog:5.3.1-12@sha256:5f9703049924fc1a08c84eb2c87e84976305badcb485136557276830bb16c026
+  - name: icr.io/cpopen/di-operator:5.3.1-12@sha256:b1b91e6a85cf588dd56b029853cdc9fea0fd0a73df3232e65f9fcd16d94e862c

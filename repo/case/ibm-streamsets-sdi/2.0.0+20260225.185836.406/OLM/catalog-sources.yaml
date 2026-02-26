@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-streamsets-sdi-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-streamsets-sdi-2.0.0+20260225.185836.406
+  publisher: IBM
+  image: icr.io/cpopen/ibm-streamsets-sdi-operator-catalog@sha256:10dda9261221c0d45b4bbf99ce2a5e85e7ae54ab4a3beee57624e1ce1755c5d4
+  sourceType: grpc

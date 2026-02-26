@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-cpd-watsonx-dataintelligence-operator-bundle:v2.3.120@sha256:8b88f6281b1393eff3f1a6a40da487fb40b3c91654f9c9d41d4907ccbdceb8ba
+  - name: icr.io/cpopen/ibm-cpd-watsonx-dataintelligence-operator-catalog:v2.3.120@sha256:244270ea80533d8ea7d9dad5e9548484cce76125602f13f7b5396397168f9710
+  - name: icr.io/cpopen/ibm-cpd-watsonx-dataintelligence-operator:v2.3.120@sha256:cacaec0abc5fcc7b9bc75d49dd017017d41a1bf643ce27c54133e83409b165ec

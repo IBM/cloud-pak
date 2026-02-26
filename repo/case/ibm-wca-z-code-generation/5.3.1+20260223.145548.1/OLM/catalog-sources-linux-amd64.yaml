@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-wca-z-code-generation-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wca-z-code-generation-5.3.1+20260223.145548.1-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-wca-z-code-generation-catalog@sha256:3db6d0fcfb024cacfaa08a2d5ded9026a70d3dff2e270fea327fd9a31c302195
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/mdm-audit-rsyslog:2.0.73@sha256:5f2ac639fd59700d052a107d3dbe18db120952a3d3e14643b6e8d5a8c50f920f
+  - name: cp.icr.io/cp/cpd/mdm-boarding:0.33.21@sha256:fbf362b5f05471d8bf1ebd005ee89634000c84c9ccf4b0e2dab42e24c962d5ad
+  - name: cp.icr.io/cp/cpd/mdm-config-ui:1.34.87@sha256:6402db9d034e6197ad6061b1d12614b1adb197f8bbfcf3366f27c7f174c35990
+  - name: cp.icr.io/cp/cpd/mdm-configuration:1.33.50@sha256:c494432558cdab71aa8f93b13cc3adb9ffc64fe08b4f8778752130b71034d57e
+  - name: cp.icr.io/cp/cpd/mdm-data-quality-maintenance-job:0.25.2@sha256:8cabc22a6962b766e186b3b82d266331442f74c725666bfc4440b2deda6de2bc
+  - name: cp.icr.io/cp/cpd/mdm-data-sample-data:0.5.56@sha256:0bee193a038b6f8252dff37cf3f63008e61a71e2fa7ecf1c4e32721e452f43ac
+  - name: cp.icr.io/cp/cpd/mdm-data-spark-driver:1.31.73@sha256:b98ba2c94f23b0a70387c1a4ba797d44c572384c4f069f6faac6d68a071a353b
+  - name: cp.icr.io/cp/cpd/mdm-data:1.33.209@sha256:6fd9fefa21a662ef65938af43fb642234bdf216eff676120461afbf9076dbb24
+  - name: cp.icr.io/cp/cpd/mdm-em-ui:1.33.121@sha256:3c6f3f6b129b4fdefc2916f62679e529522985ef2a0aa5a2d7dce80b25addaf6
+  - name: cp.icr.io/cp/cpd/mdm-job:1.40.4@sha256:4fa878a078672f199d135603b6e5837b8e0d8678fd7ed2ab9e2370d4b781e654
+  - name: cp.icr.io/cp/cpd/mdm-matching:1.33.64@sha256:ae802515d8fce78eb1b46c5e4e9d958db8b6520b50b67384b21763fac1e4e355
+  - name: cp.icr.io/cp/cpd/mdm-migration:0.2.99@sha256:6bf02aef9be5982760fff4114467b067a143a9794e50e8c285eb1fed917ba91a
+  - name: cp.icr.io/cp/cpd/mdm-model:1.33.78@sha256:1678e7f1f24ecb28b3af0257a58132d751a697aa95be9281b660cc6d3601331b
+  - name: cp.icr.io/cp/cpd/mdm-post-restore-job:1.27.11@sha256:4513645aca61eb609090ad46374657e0ba795fa998e3d47f65fbae67742da77a
+  - name: cp.icr.io/cp/cpd/mdm-post-translations-job:4.4.6@sha256:6d2a08c3b2db29452a8c5e47d4d2bb7a144074fb6ee6c921e9512f0506df28b3
+  - name: cp.icr.io/cp/cpd/mdm-shutdown-job:0.20.10@sha256:1196494a72361925fb0e15f348f8814caab4c14894fc97df7961a955de567d6f
+  - name: cp.icr.io/cp/cpd/mdm-spark-job:1.33.21@sha256:442de9182588f8ab7da135932311b6bde8c257e3877f805ba4cf765c4a145e7c
+  - name: cp.icr.io/cp/cpd/mdm-spark-sample-job:1.33.21@sha256:595f6ea2fa90aba3f7fc925930193cf8c563b6c56d6f2be01f04c4a1335f3e56
+  - name: cp.icr.io/cp/cpd/mdm-tuning-job:1.26.15@sha256:a75bf305b166f29204e59299a2f7afe41f9eca36fce8cfbf673b6f628ff6cdac
+  - name: cp.icr.io/cp/cpd/mdmx-neo4j-migration-image:0.6.14@sha256:2dcf46d38d1dba9077675adcc06a69e85d3629c10b06ffefd99cc0d90e21b2cf
+  - name: icr.io/cpopen/mdm-operator-bundle:4.11.50@sha256:d8fe0a026c07ee242bc8606bfe6589b0f4b0292b4923c600c6093870be4c739b
+  - name: icr.io/cpopen/mdm-operator-catalog:4.11.50@sha256:cec0b304f696f74aa5365c116a0bb92e9c9d8147045eeca02f2ce0d92ebb9dc5
+  - name: icr.io/cpopen/mdm-operator:4.11.50@sha256:26fdaf0f0c679857e8d7a84bc3ab63d1cf3df44e7e9b2e549051600cfa293030

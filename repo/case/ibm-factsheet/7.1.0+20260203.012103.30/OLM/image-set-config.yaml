@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/wkc-factsheet-service:5.3.1019@sha256:76a54a57f2e8f59581d4bcdca55452543e57d00e49aa45fa45d29b1304e49739
+  - name: cp.icr.io/cp/cpd/wkc-factsheets-ui:5.3.1011@sha256:5f6d8d8153fcb20d0f121038824c5fb1521913bbeb3355acec2e6d596158fc73
+  - name: icr.io/cpopen/ibm-cpd-factsheet-operator-bundle:v7.1.30@sha256:68bd00ce103a9993cea15963c14e692b9386bcad31522ce18585723ed8b2a12a
+  - name: icr.io/cpopen/ibm-cpd-factsheet-operator-catalog:v7.1.30@sha256:7e2c1d9df96d8f6377fc17be48200392b8c020df8e480906a84e17e347f45e09
+  - name: icr.io/cpopen/ibm-cpd-factsheet-operator:v7.1.30@sha256:8285f7dc8966323627c09503c7fa8c4a1f8c771bfef0df859dbbc5af110b8eeb

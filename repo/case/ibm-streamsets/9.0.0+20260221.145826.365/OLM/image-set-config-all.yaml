@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-metering:94f3e35ff2f7c3c9c09e4ce1d85d0a58d761d94d@sha256:02e5f29f4847d61e21409948f865613b48f678b422c3fdbd86f4d7dba8244d90
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-security-ui:12bdafc27fb088bdadf5eb3ea2b7c8dc1e5d4fd4@sha256:617b69194680690f9afceaf496d7ad8b6491db086eb1312fcf5115ee3841eeed
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-security:449108d0e7b4e879b0c490a80be39c4627a26811@sha256:6471d282dd114c186bb126f98f492a6fd04bbe625754339ac1b32364fb130cd5
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-banner-service:1.2.0@sha256:40b6c0433a38292de895e8011285eb40129ea2e12b4f30b4533c0eb41f0b01d2
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-datacollector:JDK17_7.0.0@sha256:bc56179a20ff2dc8584a904775df298860272f0c6bab32fa72f161e99475c58a
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-docs:7.1.2@sha256:f647d6631fced8f8905094d700b8b79d986032944fbaecacbf3f554da1726a80
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-kubernetes-agent:1.4.0@sha256:61a7f1d5232cae8f615a6cdae69935b1e4e599b60cdd3cbabf23068e97262a2f
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-mysql-backup:7.1.2@sha256:35660d66266e85807cb9e510d96174dec593fed21005f867ae481cce6d9abac9
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-mysql:7.1.2@sha256:c457883c9f7e4b8b1a705f3e706a986ba00c63e5dcc7996d09b30d10db5db902
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-nginx:7.1.2@sha256:68721284b6cbcd8dd704fca38a360565757f71ffb13cf2516cb7403e38ed0d2c
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-provisioning-app:6.3.1@sha256:7bee48d8a33b38385c837f9804242598e7b1d5d5bdb896fa994f8a4babc9820b
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-sch:f2f0d16e25c84c80498c0b9bdf5ce4a76bf9ac39@sha256:0faf33e5e3812dfabc206bfd79b564c0cb75bac7aa92ebefb6c67d56be3392d9
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-static-content:7.1.2@sha256:fbdf422a086d6732ef12b4b846df3cac4d99b67a2f9f3f8ee4769a091e755307
+  - name: icr.io/cpopen/ibm-streamsets-operator-bundle:v6.3.1@sha256:94c258121c934f647e5823bf9242b873b09760b957ca066893090b1a9fdc969a
+  - name: icr.io/cpopen/ibm-streamsets-operator-catalog:v6.3.1@sha256:de06e50854bb2ef0bbbf27a67d417fd9793bdb43a263666ac89311b66cb299da
+  - name: icr.io/cpopen/ibm-streamsets-operator:v6.3.1@sha256:3d7b8a8d467d11c3f39cfd4d4ad912e4218e8ad87c38662aaead8698053f6836

@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-agent-ubi:108.0.6.8796-1@sha256:50b8bf7fae2df27482c0b49d82fcf7b4125e0a8d2fee2791bb2bd5cd488b5362
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-database-ubi:1.33.0@sha256:799747408ade15162788c8fb4cd701b2b5eea419516abbad2c8b249453256ccd
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-init-appdb-ubi:1.33.0@sha256:8033b625db1ab08ffcfb1420eabd5e16fa98a074bae2f17ab3daa2a9e317232b
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-init-database-ubi:1.33.0@sha256:3c8072eda73216da37519f4ee42169e72197ecd5bbd1dc03a1f1a8c7c9276a7b
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-init-ops-manager-ubi:1.33.0@sha256:cec9377ef491b374349b14fd4c8c141c3524345320fbfa54a2ecdf861e795d06
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-ops-manager-ubi:7.0.15@sha256:09788976bdc1327acbf18cedf8efd5fca2159e43b506faa40e03ee42ad94928a
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-ops-manager-ubi:8.0.6@sha256:78f11c9cd5e63f2b0e10c67dc1491f4ce1279fa90178c108814725414defab9a
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-server:7.0.23-ubi9@sha256:9c6fa94ff261b9b8a3e661a88bb1e094d00dd585d3fc7b1eef27ea8187374afe
+  - name: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator-bundle:1803@sha256:50b520d979fe5dc68d0ac1f90a8fbf803f46dba6987e2a3f743bdd9d96df6b35
+  - name: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator-catalog:1803@sha256:2b8b6189c7669e4a6bb7a2ee8cc8383f07435761aa0b49cde3233051a1052d4e
+  - name: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator:1.33.0@sha256:b0510172341234b0c80c0708e35a978e2138949f35244dc03af089b6b35658e4
+  - name: icr.io/cpopen/ibm-cpd-mongodb-operator-bundle:1859@sha256:7c7f055db57dd048abe6fdf1190661c84eb48e99f94d07568966e97367df8959
+  - name: icr.io/cpopen/ibm-cpd-mongodb-operator-catalog:1859@sha256:b1b297bc755154f93a377e16d67979e27d67fc03695c429f707630dc57bcb5d3
+  - name: icr.io/cpopen/ibm-cpd-mongodb-operator:1859@sha256:3c0d332245d1ab59a277be842af24b15ebabfc66157eebca9391f0c2575c4a73

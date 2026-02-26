@@ -1,0 +1,59 @@
+apiVersion: v1
+case:
+  appVersion: 1.16.1
+  catalogs: null
+  classifications:
+    commercial: {}
+  description: IBM DataStax HCD Service
+  displayDescription: IBM Datastax HCD Mission Control is a Kubernetes tooling which
+    handles the provisioning and management of HCD, DSE and Apache Cassandra clusters.
+  displayName: IBM Datastax HCD Mission Control
+  icons: []
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    licenseNonIBM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: non_ibm_license
+        displayName: non_ibm_license
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: notices
+        displayName: notices
+      ref: notices
+    watsonx-data-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data license for IBM Cloud Pak for Data
+        displayName: watsonx.data_license
+      ref: watsonx.data_license
+      url: https://ibm.biz/Bde2Jw
+    watsonx-data-premium-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data Premium Edition license for IBM Cloud
+          Pak for Data
+        displayName: watsonx.data_premium_license
+      ref: watsonx.data_premium_license
+      url: https://ibm.biz/Bde2AL
+  name: ibm-datastax-mc
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.16.1+20260128.135352.5491
+  webPage: https://www.ibm.com
+created: 2026-02-26T09:30:28.39534691+0000
+digest: sha256:61d3449f9f879a3ea5dd1dea1bb8a5f9dd36eafad2145cc96cc592af79337898

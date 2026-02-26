@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-openpages-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-openpages-10.1.0+20260211.115519.913102730
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-openpages-operator-catalog@sha256:be9595715635981b815344e9c7ef627f46fd3db0458da5135a0e6b7fdfc725a6
+  sourceType: grpc

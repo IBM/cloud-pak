@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 12.1.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Watson Studio Local
+  displayDescription: Watson Studio Local
+  displayName: Watson Studio Local
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4D5.3_EE_License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4D5.3_SE_License.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-wsl
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 12.1.0+20260211.205149.49
+  webPage: https://www.ibm.com
+created: 2026-02-26T09:44:45.08334691+0000
+digest: sha256:20f840900d50ccb1c827c913b2aa1de0944074afbb25f711654d73c3af7cd82e

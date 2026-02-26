@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-agent-ubi:108.0.6.8796-1@sha256:f2d1728df506f2a6e8daea0d6b5e12f0c142a11602e274872ac5a4dc0175e135
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-database-ubi:1.33.0@sha256:799747408ade15162788c8fb4cd701b2b5eea419516abbad2c8b249453256ccd
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-init-appdb-ubi:1.33.0@sha256:8033b625db1ab08ffcfb1420eabd5e16fa98a074bae2f17ab3daa2a9e317232b
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-init-database-ubi:1.33.0@sha256:3c8072eda73216da37519f4ee42169e72197ecd5bbd1dc03a1f1a8c7c9276a7b
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-init-ops-manager-ubi:1.33.0@sha256:cec9377ef491b374349b14fd4c8c141c3524345320fbfa54a2ecdf861e795d06
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-ops-manager-ubi:7.0.15@sha256:09788976bdc1327acbf18cedf8efd5fca2159e43b506faa40e03ee42ad94928a
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-ops-manager-ubi:8.0.6@sha256:78f11c9cd5e63f2b0e10c67dc1491f4ce1279fa90178c108814725414defab9a
+  - name: cp.icr.io/cp/cpd/ibm-cpd-mongodb-enterprise-server:7.0.23-ubi9@sha256:9c6fa94ff261b9b8a3e661a88bb1e094d00dd585d3fc7b1eef27ea8187374afe
+  - name: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator-bundle:1841@sha256:cea7939537706d9ec1fdac2cd7d6d108e12a0d32aaf87471e487b4ad864b4b8d
+  - name: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator-catalog:1841@sha256:8f5dee155a16a47967ec18ec13492cd6f4688169cd354660c047903889bd4e33
+  - name: icr.io/cpopen/ibm-cpd-mongodb-enterprise-operator:1.33.0@sha256:b0510172341234b0c80c0708e35a978e2138949f35244dc03af089b6b35658e4

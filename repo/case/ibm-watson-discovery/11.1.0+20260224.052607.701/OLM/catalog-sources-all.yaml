@@ -1,0 +1,76 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-4.33.0+20250302.225008.2374
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:35e766cb9991006481ce83d25734cafe2e5751bedd56339c9f2e1d07fde9a8f5
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-4.10.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:e76fd2279cc2ffec3921655aa0ee4354f62603362d10f019dae8820f24a21bd1
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-elasticsearch-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-elasticsearch-operator-1.1.2667
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-elasticsearch-operator-catalog@sha256:a34169228887ff93161584753c990bb82a5520ad7945dfa1ff4078e70aede592
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-etcd-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-etcd-operator-2.0.57
+  publisher: IBM
+  image: icr.io/cpopen/ibm-etcd-operator-catalog@sha256:cff51473b0a2d887ff8396ab9f8f26e7f15f419573e95aeeaa15741976cc30bf
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-rabbitmq-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rabbitmq-operator-1.0.57+20250909.172851
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-rabbitmq-operator-catalog@sha256:05fc303da5adf8f8dc67a432849d46341be900ef8a782432cfefd8a9c3df1f8d
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-discovery-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-discovery-11.1.0+20260224.052607.701
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-discovery-operator-catalog@sha256:f39d8f2ed0c74d1e996deb4a6fd569e559332cb5881c2db15c8fe1b447d0076d
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-gateway-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-gateway-operator-2.0.63+20250905.144313
+  publisher: IBM
+  image: icr.io/cpopen/watson-gateway-operator-catalog@sha256:bdd34479856d19cfe9537ebc319022efce15b8686f999e936546a2cce625e0e7
+  sourceType: grpc

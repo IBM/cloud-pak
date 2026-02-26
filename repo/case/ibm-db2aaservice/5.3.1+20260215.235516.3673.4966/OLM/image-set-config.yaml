@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/zen-database-core:5.3.1-3673-amd64@sha256:0349b16e4d5ad4662d5ec32b86dfb754fed2742d68735c26ccf849072aa281a6
+  - name: cp.icr.io/cp/cpd/zen-database-core:5.3.1-3673-ppc64le@sha256:719669d4afb2b2ace48794a03d80519d493c33b72978e8ff0128a8ebec235198
+  - name: cp.icr.io/cp/cpd/zen-database-core:5.3.1-3673-s390x@sha256:b6c0928a017cad696cede1019a66a69fb1475225fe99d6a5d96c31a305b71e5e
+  - name: cp.icr.io/cp/cpd/zen-databases:5.3.1-3673-amd64@sha256:4f9b1344058b92b0c182810ccc9d5fed549652450bc1687da1d9baf3920e8450
+  - name: cp.icr.io/cp/cpd/zen-databases:5.3.1-3673-ppc64le@sha256:dd19bb3c80618d540a1a4ed8f344ff314879d616ccee128bc3b55489a65fd7f5
+  - name: cp.icr.io/cp/cpd/zen-databases:5.3.1-3673-s390x@sha256:4c4c3a4a400c236e1fc37f19311c7fce86777f942a4b21eb30875d8eea69d009
+  - name: icr.io/cpopen/ibm-db2aaservice-cp4d-operator-bundle:5.3.1-4966@sha256:144bbfeff0967cb09d8eeb10eb9639b508a67d88c898d2d2040109b22e29132e
+  - name: icr.io/cpopen/ibm-db2aaservice-cp4d-operator-catalog:5.3.1-4966@sha256:8633ab5a5b6fd4cfda1a267a9b6199e1df42ec3d9b7544be97806797a9ad6945
+  - name: icr.io/cpopen/ibm-db2aaservice-cp4d-operator:5.3.1-4966@sha256:b8ee767473f8a1ea2e109d9d4019e271ac5b160c3b4e0b32e885740b923673f1

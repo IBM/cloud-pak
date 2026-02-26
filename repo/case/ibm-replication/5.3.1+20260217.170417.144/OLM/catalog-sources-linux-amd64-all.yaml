@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-replication-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-replication-5.3.1+20260217.170417.144-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-replication-catalog@sha256:18bc3fd82320d25e5bee248408952af0634692d7848a4c96b9aeb9db0705f41f
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

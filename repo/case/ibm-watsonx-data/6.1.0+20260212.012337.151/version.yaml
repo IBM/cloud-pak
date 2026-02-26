@@ -1,0 +1,74 @@
+apiVersion: v1
+case:
+  appVersion: 2.3.1
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM watsonx_data Service
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    watsonx-data-NonIBM-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data Non IBM License for IBM Cloud Pak for
+          Data
+        displayName: watsonx.data_non_ibm_license
+      ref: watsonx.data_non_ibm_license
+    watsonx-data-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data license for IBM Cloud Pak for Data
+        displayName: watsonx.data_license
+      ref: watsonx.data_license
+      url: https://ibm.biz/BdpdBF
+    watsonx-data-notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data notices for IBM Cloud Pak for Data
+        displayName: watsonx.data_notices
+      ref: watsonx.data_notices
+    watsonx-data-premium-NonIBM-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data Premium Edition Non IBM License for IBM
+          Cloud Pak for Data
+        displayName: watsonx.data_premium_non_ibm_license
+      ref: watsonx.data_premium_non_ibm_license
+    watsonx-data-premium-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data Premium Edition license for IBM Cloud
+          Pak for Data
+        displayName: watsonx.data_premium_license
+      ref: watsonx.data_premium_license
+      url: https://ibm.biz/BdpdcU
+    watsonx-data-premium-notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data Premium Edition notices for IBM Cloud
+          Pak for Data
+        displayName: watsonx.data_premium_notices
+      ref: watsonx.data_premium_notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-watsonx-data
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 6.1.0+20260212.012337.151
+  webPage: https://www.ibm.com
+created: 2026-02-26T09:40:17.79934691+0000
+digest: sha256:789372ead93fbab4feb319c89a6c23380bc858bd61c13772a3979ce93a0a1af2

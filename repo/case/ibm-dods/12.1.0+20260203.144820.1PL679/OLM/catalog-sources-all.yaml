@@ -1,0 +1,54 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ccs-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ccs-12.0.0+20251229.152017.337
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog@sha256:a09ca30496644be1d91d92890eca855726516eed090064bed84cea4a4703de73
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-dods-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-dods-12.1.0+20260203.144820.1PL679
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-dods-operator-catalog@sha256:e48b4aa07a77cacc26e284e6df12e92c3f6a130a8aa5b9abfcfb2aa5cdeb7e32
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-wml-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wml-cpd-12.0.0+20251201.131555.330
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-wml-operator-catalog@sha256:bc6e993188e8e3df983f0726ca8fe09dd461521d6d89df1c0998f6363d548f06
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.1.4009
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:978763bcea32db8e03928870cbe0b7352f3910b031013f28c74272303cacccf5
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-redis-cp-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-redis-cp-1.2.9
+  publisher: IBM
+  image: icr.io/cpopen/ibm-redis-cp-operator-catalog@sha256:27cb54b6e8f23c779b1f16752d3f6abe982fe94693e811a607fc7f42ccb2f548
+  sourceType: grpc

@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/watsonx-chat-app:5.3.1.2249@sha256:3848fff6dc989a389b72891d6bf950f95eae0eddf2561975c6e1453cb6f4f523
+  - name: cp.icr.io/cp/cpd/wx-post-upgrade-job:5.3.1.94@sha256:eb89d8ad75c3df2bb18aa64e1bbd54ba8fe34670530f8ed32ac6becc14e7bbce
+  - name: icr.io/cpopen/ibm-cpd-watsonx-ai-operator:12.1.0-20260206.163804@sha256:14a8c6635efbf5d5518c7021edfcbc222cc1a4570a8ee3b400f73877dfa8a7d2

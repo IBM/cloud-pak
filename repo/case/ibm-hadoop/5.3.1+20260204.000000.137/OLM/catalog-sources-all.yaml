@@ -1,0 +1,43 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ccs-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ccs-12.0.0+20251229.152017.337
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog@sha256:a09ca30496644be1d91d92890eca855726516eed090064bed84cea4a4703de73
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-hadoop-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-hadoop-5.3.1+20260204.000000.137
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-hadoop-operator-catalog@sha256:a8293001e172fdb03bcefeb35974ed450713ea97eb0c22b0726e07235542b509
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ws-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wsl-8.3.0+20240209.173620.31
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-ws-operator-catalog@sha256:dcac02b3a2490536a39cdd91a2771080eaa1839fc433a506c33804b36778fb05
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.1.4009
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:978763bcea32db8e03928870cbe0b7352f3910b031013f28c74272303cacccf5
+  sourceType: grpc

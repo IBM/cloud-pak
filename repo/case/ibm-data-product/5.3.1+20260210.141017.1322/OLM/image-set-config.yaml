@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/data-product-api:1.1.1627@sha256:2fdc1ed65dff15540efd9d4130874ae76b7cca98724c963c4070652c973ab2ef
+  - name: cp.icr.io/cp/cpd/data-product-ui:1.1.2375@sha256:b9e914c0dbb04c2c587841797626882be46b14543d2d745e377bf2d78978be49
+  - name: icr.io/cpopen/ibm-cpd-data-product-operator-bundle:v5.3.1322@sha256:6a273e5173c5fe1635b2e4ce6d00badb30e77a42cfbfcc0e349a11dd495b0606
+  - name: icr.io/cpopen/ibm-cpd-data-product-operator-catalog:v5.3.1322@sha256:acc55dc1e2af4429f9020e1c9bf56884f2f51557c18f6107bb69d8f475773d59
+  - name: icr.io/cpopen/ibm-cpd-data-product-operator:v5.3.1322@sha256:6368251fa213a6daeb164f91c407b1b716f546740ce0a095cfea2606570663c4

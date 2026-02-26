@@ -1,0 +1,83 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-bigsql-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-bigsql-case-14.0.0+20251124.140440.76-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-bigsql-operator-catalog@sha256:843a0d4d3cc86e90fde2bc93a72e9424f5854dc97d35bc08ed32cd8d6d1d4bb8
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-dv-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-dv-case-8.0.0+20251124.140440.76-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-dv-operator-catalog@sha256:b59c80c79ef97bfc8891ddf10da0267d60fbc27be320b4476e9627a2411fa5f7
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-fdb-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-fdb-3.1.13+20250328.094929.15-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/fdb-operator-catalog@sha256:f78a74139bed1d810a2badda5940abeb81d0936b45f734b04d0a10d056d4f0dd
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-fdb-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-fdb-5.3.0+20251124.132732.8-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/fdb-operator-catalog@sha256:4e93c351b01338f13b0afa7db3610c1fb7088a067b7d2db2a61fb4d32a97ec66
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-mdm-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-mdm-4.10.0+20251218.170210.23-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/mdm-operator-catalog@sha256:b373f5bae4744d682c20498546d799ba126120437f75d0b9181b683615f9b076
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-neo4j-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-neo4j-1.3.0+20251112.144309.166-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-neo4j-operator-catalog@sha256:19c49bc3295f9a304d9803c040db8ee34d67366a4b11cbf59682a334db545910
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

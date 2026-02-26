@@ -1,0 +1,51 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-data-governor-operator-catalog@sha256:44df273d60e2523e9b9c5c68e0216d769d0ab3bec37fb538195d798e1cf8588a
+    packages:
+    - name: ibm-data-governor-operator
+      channels:
+      - name: v3.0
+      - name: v3.1
+      - name: v3.2
+      - name: v3.3
+      - name: v4.0
+      - name: v4.1
+      - name: v4.2
+      - name: v4.3
+      - name: v4.4
+      - name: v4.5
+      - name: v4.6
+      - name: v4.7
+      - name: v4.8
+      - name: v4.9
+      - name: v5.0
+      - name: v5.1
+      - name: v5.2
+      - name: v6.0
+      - name: v6.1
+      - name: v6.2
+      - name: v6.3
+      - name: v7.0
+      - name: v7.1
+      - name: v7.2
+      - name: v8.0
+      - name: v8.1
+    full: true
+  - catalog: icr.io/cpopen/ibm-events-operator-catalog@sha256:8f57a45f228c8f197299d616a73040e8231fe95ec963027cd17dd476908ec3a6
+    packages:
+    - name: ibm-events-operator
+      channels:
+      - name: v6.0
+    full: true
+  - catalog: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:978763bcea32db8e03928870cbe0b7352f3910b031013f28c74272303cacccf5
+    packages:
+    - name: ibm-opensearch-operator
+      channels:
+      - name: v1.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-data-governor-operator-catalog:v8.1.0@sha256:44df273d60e2523e9b9c5c68e0216d769d0ab3bec37fb538195d798e1cf8588a
+  - name: icr.io/cpopen/ibm-events-operator-catalog:cd-20260126-1113@sha256:8f57a45f228c8f197299d616a73040e8231fe95ec963027cd17dd476908ec3a6
+  - name: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog:1.1.4009@sha256:978763bcea32db8e03928870cbe0b7352f3910b031013f28c74272303cacccf5

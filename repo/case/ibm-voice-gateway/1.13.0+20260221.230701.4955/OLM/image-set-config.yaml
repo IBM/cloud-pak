@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/voice-gateway-codec-g729:20260129-191140-36-40e4fac@sha256:9c8bb4e1751d7b55d10d7eb2bcbc529ed321f1faf6d71ce66043b8eb359fb353
+  - name: cp.icr.io/cp/voice-gateway-mr:20260129-173011-196-51f43f8@sha256:4f40440b4eaef0916d7eb6ef287071e5dba739398cb62b78e2bfe1f5f86e92c8
+  - name: cp.icr.io/cp/voice-gateway-so:20260129-180637-271-1393f03f@sha256:6396d84f36523921e9bdba25a883be960e45a0524f8ca065f4321c95cab60c1a
+  - name: icr.io/cpopen/ibm-voice-gateway-operator-bundle:v1.13.0@sha256:0565cfad0ea13a97c0d9fc68aacfcdc50e3ff840abe5a9f96a16df36ffd8900c
+  - name: icr.io/cpopen/ibm-voice-gateway-operator-catalog:v1.13.0@sha256:8450cadd49796dac0c27a5643f6c1492dc2c840b2ce9f6a50010a79ab5cd244b
+  - name: icr.io/cpopen/ibm-voice-gateway-operator:v1.13.0@sha256:b3dc69bd25dfaf97e12868846bba97a161c4838c960c07bf712ffe0ea7aa560b

@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-datagate-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datagate-prod-11.1.0+20260210.165858.91
+  publisher: IBM
+  image: icr.io/cpopen/ibm-datagate-operator-catalog@sha256:e3631c403d5cea16a3459709bf4d1c5a2ef71f1fea43facfcdba52297158997f
+  sourceType: grpc

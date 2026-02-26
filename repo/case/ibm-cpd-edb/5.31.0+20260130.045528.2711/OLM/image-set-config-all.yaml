@@ -1,0 +1,30 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:3eac00032f35563a4e4f5d3e6a7dc23e46e5433dfe9313ad8e19f33cfd5e43b8
+    packages:
+    - name: cloud-native-postgresql
+      channels:
+      - name: fast
+      - name: stable
+      - name: stable-v1.18
+      - name: stable-v1.22
+      - name: stable-v1.25
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:13.23-5.31.0@sha256:3717d806f4fc27160db4a6bd7178d812b520a89798cf4a24f735f7cbf35a5456
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:14.20-5.31.0@sha256:f7da8bf0548e424ff83c199731bb82a3534311a98a2f8f38bada10cbe2a8c666
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:15.15-5.31.0@sha256:68099e41b98fdd8bb9e5283d2f27a67c5a099a7b1b5838068f689d3703ed218f
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:16.11-5.31.0@sha256:2d1751ede4c340df02816ecc35ef52bbca192fe2f511d6d2e92945adc760292c
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:17.7-5.31.0@sha256:c82b1f995ec0afbbf6e96b978abc85408906d9682dee8ddd94f13634e948d46a
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:18.1-5.31.0@sha256:b0ac21c44f188d48cc7e0e53ac09b7930c1f9ebe9fd9a6c8c780ae3733544d09
+  - name: icr.io/cpopen/edb/postgresql:13.18-5.13.0@sha256:9ab8998b20834d975f584925d93b31498911116fc6500123090129939ad1e59a
+  - name: icr.io/cpopen/edb/postgresql:14.15-5.13.0@sha256:a37979b533caaf28ed3540f15af11b06596fbd5418a4734b502ed6fdb3bb856c
+  - name: icr.io/cpopen/edb/postgresql:15.10-5.13.0@sha256:34f3a35ebfe2c4a0be2d5b6fabc21524d754c4debc66d7faf1f7988a442e8438
+  - name: icr.io/cpopen/edb/postgresql:16.6-5.13.0@sha256:58dd603a58db16137bfb0643467121d286cefb1f753ec1537b39cc4514b851d0
+  - name: icr.io/cpopen/edb/postgresql:17.2-5.13.0@sha256:ed01e08c2f051ebb7a39f2074b8d30d3bddb918ad44d9d61a633ae7cca75930c
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog:2423@sha256:3eac00032f35563a4e4f5d3e6a7dc23e46e5433dfe9313ad8e19f33cfd5e43b8
+  - name: icr.io/cpopen/ibm-cpd-edb-operator-bundle:2711@sha256:d6b845e9282125decf84a51e767aa1c34191fbc9c118e9127a2b2454a4b3e29e
+  - name: icr.io/cpopen/ibm-cpd-edb-operator-catalog:2711@sha256:e280860f7db2811edd2c025acade73ba75af321f2d66571603a161f5190e857d
+  - name: icr.io/cpopen/ibm-cpd-edb-operator:2711@sha256:b8bacec144ddb062f0d38c38dca54d12f7595a1bd265a4918e8c89828f06937d

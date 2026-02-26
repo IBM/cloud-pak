@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-syntheticdata-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-syntheticdata-12.1.0+20260213.070439.22
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-syntheticdata-operator-catalog@sha256:488c4b7b360c3f3bcbfe4f1505863b17500c845fbf9aad588382f3c4a677d0c7
+  sourceType: grpc
