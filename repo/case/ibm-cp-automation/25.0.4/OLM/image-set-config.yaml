@@ -1,0 +1,79 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cp-automation-catalog@sha256:ecf506c04de17ff76f519882d2b3f650fd55f8b774cb24c2befb0a604c95e2b9
+    packages:
+    - name: ibm-ads-operator
+      channels:
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-content-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-cp4a-operator
+      channels:
+      - name: v21.3
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v25.0
+    - name: ibm-cp4a-wfps-operator
+      channels:
+      - name: v21.3
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-dpe-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-insights-engine-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-odm-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-pfs-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    - name: ibm-workflow-operator
+      channels:
+      - name: v25.0
+    - name: icp4a-foundation-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v25.0
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cp4a/ads/mongo:6.0.20@sha256:b721cff73d4da24cb3acc35d0e3799ddd514b1e40e1b4b9c1ee42c3f932ade77
+  - name: cp.icr.io/cp/cp4a/iadp/mongo_adp:6.0.20@sha256:b721cff73d4da24cb3acc35d0e3799ddd514b1e40e1b4b9c1ee42c3f932ade77
+  - name: icr.io/cpopen/ibm-cp-automation-catalog:v25.0.0-IF004-fbc-20260227.010551-BF03D018C@sha256:ecf506c04de17ff76f519882d2b3f650fd55f8b774cb24c2befb0a604c95e2b9
