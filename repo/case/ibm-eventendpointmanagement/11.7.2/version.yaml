@@ -1,0 +1,93 @@
+apiVersion: v1
+case:
+  appVersion: 11.7.2
+  catalogs:
+    integration: {}
+  classifications:
+    commercial: {}
+  description: This case provides an IBM Event Endpoint Management Operator and example
+    custom resources which can be used to install instances of IBM Event Endpoint
+    Manager
+  displayDescription: This case provides an IBM Event Endpoint Management Operator
+    and example custom resources which can be used to install instances of IBM Event
+    Endpoint Manager
+  displayName: IBM Event Endpoint Management
+  icons:
+  - base64: iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAPlklEQVR4nO2dbWxb13nHfw/dbcAGTCqC1hZWQOy4GLWjQErspItRSCwwy46jLWo2FAuc1cxeGrVIGxbWig4rKmbtZm9NF7lrV6FtZspDv8ZyLb+IxpDrzHa6xl4pTImaDNoooOiHAbWlTwvlmc8+3HNpWuY7ee8lfe8fMC5EXp7zXD+/e16fc46oKqGCq4jfBoTyVyEAAVcIQMAVAhBwhQAEXCEAAVcIQMAVAhBwhQAEXCEAAVcIQMAVAhBwhQAEXCEAAVcIQMD1Pr8N8EOxgYlxYByImo9ywNzK0sycXzb5JQlSQEhsYGIISAODFW5ZBMZXlmZyXtnktwIDQGxgohf7Te+pces6EF1Zmllz3agOUFdXAXu+enYIiKoyhM1x+o2pA7kKt89R2/mYe6aBRBtM7Hh1VQnw2N+cHUIZB+IoIwIYx6MKKB9/Y+qAtfl3sYGJKPDfDWb34SBUBR1fAjx29GwUJSGQEOhXwXa62E4X87dIkYVyGm8i6zh2e+GeVscC8NG/PRsFUgKHpMTZolANggrqbcKEaDN2d5s6DoCPfv1cr6gmRWRKVYvOrhOCZhwdaHXUQNCjL52LK2RVZAoUMa+0OsV7yVXMlTs/H6qQtNWEOc38puvUMQA88tK5aYXXEPoVUPNKNwxBGa0szVjAagPmrJrf3PPyvQp49O/P9YLMRYSRgppS3RTriCBqQ1CmOlgVwRLFUiGHkn3jyweq9d2TwMk6zUq2+lzdIl+7gY+8fK4XsEQZBNvZBWOO08UT20hAUNVVIC1K+kdfqtjfr6jYwEQCOF7jtmdXlmbSjabdrfINgN3T53tRLEEHbUOgCgSropr60RcPpFvNNzYwEcd+w5/c9NUpILWyNJNtNY9uki8APHLsfC9gqTJoO1iNMbAJgnWB6R9PPp5yww4DA0Gp78vJFwB2f/O8JcoIFEfwykGwWFDG35x8POe5gQGS543AXf9wPiUwoqY/74zgqQqC3dAT1dl/O/x4wmvbgihPS4Dd31qIF1Rfsxt2jgH2taQkmH3zC6HzvZJnAOz69kKvqGZB+guqVIBg9mpyf8ITg0IB3g4EJVWkH5SI2DW+mkEccw2d74M8aQPs+seFXoQkao/widoQFNTu44myqNIdgy97vnzmN1E+ovAAyn2CfgDlAwK/7oxbqJIFcqJkL/3dmOWzyVXlSRXw8HcWpkV5ASiO1zqDO6Y6eOja5/Z3bP/7sa+ceT8qg6DbRNkK9KFsVfvaJ+g2lA+WDl5pSfUmcBFlTtC517/+uznfHqSMXAdg98xCL5ArKD1OXb8JghevPr8v5aoRLWjP1JlfLSBbRbUPla2gfQaCbSjbDARbBe1D+aUqEDiN3Iuikr740ljap0e6Q663AVRIAD0RuV3nU6z7ZRV02m0bWpJIPoLeVJE8ojdB8irkgQ2EmwJ5hLwi+dKJKmdOAzZPZMmIih4fmZzPDU+eTvj0VEV50QhMOI4vA0Hq6vP7Ozr48krqwC0DQd5AkAfZMBDkEfJiYFAzRVkHBKhovyDHhydPZ4cn5+M+PZ67ADz83YUoYodgl4FgHaFL4vA1j8iGgeAmohslEGyUQFBoEAIEGQR9bXhyfnr48LznAS2uAqDCuPPA5m87UxuC9LXP7uvot9+RimyAbpRAsGFKgh+rcBm4jPAvAiuOcxuEANAXEKzhw/OVglpckdvdwHjpHD4mlEsUItJVAZcbKvLzKiHnd+ixvzwTVZUhER1XJS5CvxO2piXhbPbf9n+IqKDoICLW8OH58de/4U330dVewND3M2ui2mNndLslDKxfe25fYOL39vzFfFwggXKoSu/AgQBTPDz7+jfc7ym4VgU8+EomqtCjZUK6CEi8naMrR8asy0fGEggfVpitozoA4fjw4fmE27a5BoBCtODM9N0NQccO+ripy0fGcpePjiUUHhJhEeqCwNU2gXsACFEFKkBguZVvN+jy0bHspaNjQyK8CDUhsIYPz0fdssXVEsB5sHIQhIJLR8dSInwCWK8CQY+b3WXXegG3I3sBtSGI3I709bUKMCuF41BcR5AFLD9WBF86Ojb3sS/Nx9WObu6p1DsYnpxPvf7SWKrd+bs3DiAl0T6bSoKf/Jl//f/YwEQKe5n4SWDK/DsJ5Mx3nuvS0bGsCHGqlwRTw5Ptbw+4WQVUhMAPxQYmemMDExa2w8stE+8BpmIDE2kv7XJkIEhC1TZB2+dNXC0BKkHw4CsZT0e7TJFvgR2IWkOHfIQgLcIxqAjByPDk6WZWOleU6yVABQg8GwQqcX6lbWHKyU8IkjW6iKl25udmCWBVgSDqWr4latL5jnyDQCFZZbBocKSNs4dulgBrmydESiBwvQpo0fmOfIHg8tExq8aIYaJdebkGwE8/NZrd7PwSCOJu5QsNOX8We2ewavKnJBBSVWYRDw3/+em2VKOuTgdvERYrQDD4wPGMK+2ARpy/sjSTwB4P6DgILh8ZyyFcrAJBWxqD7sYDgLWlTAlgrm1tzUJTzscM/sSBizV+4zkECukq8QTxduThbkiYaQhWgKCtYeDNON/RytLM2srSTBy7SqgmTyG4cmQsXSWoJN6OPFwF4O1nRucQ1itAMLgznYm3Mbs5mnB+qcx3HQUBwqkKEPR/7IutTxK5HxUMc47xZSBItSMPM4Rba5CnqvMdNQBBqh7bWpUi2SrhZdFW03c/KliYLjV+EwQjO2czw60kb4r+WtVJXc53VCcESZO3uxKsKjGG8VaTdx2A5YOjWac1WwaCW4o9J96C4lTfArYh5zuqA4Ie2lQPV5NArlagaSvyZHGoIqnNxm+xnb+G8Bs7ZjOfaSH5aoNKTTnfUR0QuD6gdeWvn8gJUAGCaKvpewLATw/utRS5yJ1v/toW4brCdYQnd8xmPuRC1kOtFNPmt55OXJWVmFDKuyGItpq0Z8vDBU0a4503/7rC9S3CmsIvED7XZNLVgksGAasZCOrsVlqNptu0KkHQojwDYPngaFbQryhSdD7G+VuEGwrv7TiR+XQTSVvYe/xXUsMQ1On8da82lypdTrcZglbl6U6hywdHvyrovypSdD62839hqoP3dpzI7G0kTTOSVytQom4IGhhQ8nBRq1SCINdqyt5vFRuR5wT9mSJF55sS4YaB4H93nMjsbCTJlaWZFLW7bTUhaHA0MdWAiU3rt6fORu09dMpCkGs1fc8BWH567/8QkaSgNwwE1xVumGuxYbjjROZXGkm3zr57RQhaGUp2UxE0qs4W6XdD0HJspS+bRS8/vfdnRGRK0OuKFJ1f0jC8sfyp0Xyj6TYLQac6HwCReASlAgQtR1f7fmTMjh9kxhRZE/Q6ynWBG28/07jzS2XG6g/VuG2R2wM5Fp3ofGBP6owFMoIqBez9lZzVpaK8/8rXnmipFPB9u/jlg6Pzgv7cNAxbdj40VhLQwc4HUJEk6IuILG4qCVZbdT50QAngpuosCWrJN+dv1p7U2V5UxwvIuKjm3virJ1qeUr+nAYCWIegY57sl36sAt1VndVBO97zzweUSoGQsPY7dZcn6tTV7gyVBIJwPLgJgAiaS3D1Vuwok/TiouU4IAuN8cAGAju5TUxXMdWDaqxG+TpEbAEyD2Ra2tj7hU0lQWjWBvTTc8tqOcjKnmBSXrbttV1sBaOKM3tWVpZlo2wzoYsUGJpJAivIlU2placaVyad29wIajfXvjw1M+B9w4bNM2+RlKi9bf9mtSOR2A9BM9E1gtosrJ/Pm19M7cSUS+Z4fB+gCpRq4t+2RyO3eI6grtn5tl3Z/a+FDBdW8QF6UDWDj6uf3F+r9vWnwVYto3iwnErltDed2lwCNGuZZWJU70q0Rka0K21TYBmzb/c3z9zWQQLyJTNvaZmorACtLMzkaG3ZNtTN/L7Xr2wuPqkgfaF9EZJuBwD5IoovkxjZxSWxK6xkI6uzDIqpJ2I2SV5G8qN6MiOQLqhtIQ9VgMwEduSZ+U1FtbwSWLLeuVBKsAy9283Drw99Z+B1gK+aNV5GtoNtMdfBfDSRlUT2iuZzaOnDm9mRQFBuGqPnItw0Z26XdMwvvA75XUDZMwy+PuYrqxtXn9x9pJD3TtZuq8/ZjK0szbV1W7+p5AaZNkHYzD6+lwtdE6YsI+YLd+r+J2BCoyJuNpreyNJOKDUyMU7vKXMSFNlPHjQNsfzUT9duGStr13YWngd8zjb2+iNBXbPjZ15PNpLuyNDME9v6AFXQMiLtRcnZURND9JzMpgSmUj7/71Kjltz2leuh7C4OiZAR+2RT574naZwYVlLwol699dt/nW8mjTJWZw64yc62kW00dAcD2U5loQe0dPswpGusoQ+8+NZrz2zaAoe9nzLnH9Jec8nELG4L3gP8rKPv+/TP7am021XHyvQq4/4eZhArZSMnpYgo9CHPbX3VnJ7FG9OArmV4Fyz73+I5NmrYAv6bCfcD5bnQ++AxA7HQmpSLHgR4V+zQxKP4nDyJYfkLwwD/Zzi8Ig/YOp1Jqn7M4c7Vbzj0uJ39LAJE5RddL/2PLQJDb/qq3m0sDPHA8M2S/+bbzqxx/k7j2XHccf1dOvgKwMrY3i0hSnQUPlIWgB+En21/NePaW7UxnkgiWFN/821vdb4Lg2Wuf3md5ZZcb6ohGYGz+QgrVKXGWPmEvfikY00oaXhcFku88NerKiSM7TmSiKGmBEW7niTnlvmhHxL7OZv90NOGGHV6qIwAAiM1fSKN6qA4IEJhFmX7n99sDws5/zkQFUrfMuX7cmVc5CGb/40+63/nQQQAAxOYvTKP6Qp0QgHKxoKSBuf/8g9GG6uGP/OBCr6DjKOMCTzpp3irj/E0QzL71x/eG86HDAACIzV9IoHq8AQic7xZRLCAnas+yibKm9j295u2NAkOCxCnooH0Qi97l7CoQfOGtZ0e7dwazjDoOAIDY/IUhVOcE6W8QguLOSVJy1ZJ7i58jUFDqhGAdZfztxKjl5nP7Id8HgsrJ9A6GFD1WpXdwx555zneU3ONcpeTe4ucoRGznl9uEsWQzy1MK0XvR+dChJUCpYqczcUFSojoCnpYEqwKJt/5o1HL7Gf1UxwPg6LdOX0iIagIYcRmCVZTU8jOjaQ8ey3d1DQCO7v9hJg4kRBkvKHcdTd8CBLMUNL18cNTy4jk6RV0HQKm2n8qMF9Q+AlaUkQYhWESxBKx3/nDU8/WJnaKuBmCz7j+ZGRLoRYkKRDdBsAZkRVl795PujCR2o+4pAEI1ro7sBobyTiEAAVcIQMAVAhBwhQAEXCEAAVcIQMAVAhBwhQAEXCEAAVcIQMAVAhBwhQAEXCEAAVcIQMAVAhBwhQAEXCEAAdf/A9YMyVpTz+/gAAAAAElFTkSuQmCC
+    mediaType: image/png
+  licenses:
+    LA_en_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: License
+      ref: LA_en_CLOUD_PAK
+    LA_en_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 License
+        displayName: License
+      ref: LA_en_EVENT_AUTOMATION
+    LA_en_IBM_WEBMETHODS_HYBRID_INTEGRATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM webMethods Hybrid Integration License
+        displayName: License
+      ref: LA_en_IBM_WEBMETHODS_HYBRID_INTEGRATION
+    LI_en_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: License
+      ref: LI_en_CLOUD_PAK
+    LI_en_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 License Information
+        displayName: License
+      ref: LI_en_EVENT_AUTOMATION
+    LI_en_IBM_WEBMETHODS_HYBRID_INTEGRATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM webMethods Hybrid Integration License
+        displayName: License
+      ref: LI_en_IBM_WEBMETHODS_HYBRID_INTEGRATION
+    non_ibm_license_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: Terms and Conditions
+      ref: non_ibm_license_CLOUD_PAK
+    non_ibm_license_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 Terms and Conditions
+        displayName: Terms and Conditions
+      ref: non_ibm_license_EVENT_AUTOMATION
+    notices_CLOUD_PAK:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Cloud Pak for Integration 16.1.2 License
+        displayName: Notices and Information
+      ref: notices_CLOUD_PAK
+    notices_EVENT_AUTOMATION:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Event Automation 1.2.0.0 Notices and Information
+        displayName: Notices and Information
+      ref: notices_EVENT_AUTOMATION
+  name: ibm-eventendpointmanagement
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      redhat: {}
+  version: 11.7.2
+  webPage: https://www.ibm.com
+created: 2026-02-27T12:26:18.05227901+0000
+digest: sha256:6857028062ec151ca1a69c7ddac7bba5738f444352dbbea1b1691d98e89f6857
