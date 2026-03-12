@@ -1,0 +1,36 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/df/ceph:v4.17.21-1@sha256:50945286dae5941044aa91c7700ff058ab2cb308d5d1d6d6bb2daf28aa7a0ca3
+  - name: cp.icr.io/cp/df/cephcsi-rhel9:v4.17.21-1@sha256:8b38a082b70cbc7caace2e668efba57881bca35070b1b6c15d7e60b91efe25df
+  - name: cp.icr.io/cp/df/mcg-core-rhel9:v4.17.21-1@sha256:1524c8762583f696c0880291a76f8b697f527db22b274633ecc8068f5d92b61a
+  - name: cp.icr.io/cp/df/ocs-client-console-rhel9:v4.17.21-1@sha256:6eec6347813efc04a74f4ae35991ecf874f5d58f5a5d33edd40d494f322e5167
+  - name: cp.icr.io/cp/df/ocs-metrics-exporter-rhel9:v4.17.21-1@sha256:d3caecd8e47f11b3097e8a2b66c6f8aa95c6b94a427b294398507711e70e8fd0
+  - name: cp.icr.io/cp/df/odf-console-rhel9:v4.17.21-1@sha256:867e017d8082611e08e92721aab5b668da986133248b524140b1884b510172fc
+  - name: cp.icr.io/cp/df/odf-cosi-sidecar-rhel9:v4.17.21-1@sha256:5142a07275fbb8580f4db59a6308dbdc377708542b7d62ed5cad2cdb79bb71d8
+  - name: cp.icr.io/cp/df/odf-csi-addons-sidecar-rhel9:v4.17.21-1@sha256:55cec10a63d40f8bde6f0efadbadc45fff8ff6b7f3bb4e5895a6cd2206828ded
+  - name: cp.icr.io/cp/df/odf-multicluster-console-rhel9:v4.17.21-1@sha256:c0f2bc14afb97dd01e1522518499024f5ab862516b7323b20d8c70c5e49a1f88
+  - name: icr.io/cpopen/cephcsi-operator-bundle:v4.17.21-1@sha256:2749dba8b194b8e9abd0e891434659ac12c7efc328634a29957035d7c166a43c
+  - name: icr.io/cpopen/cephcsi-operator:v4.17.21-1@sha256:d0bdc78a2874f55d94419b1b35d0ad5da09429f237e6e86054b700e87386e664
+  - name: icr.io/cpopen/isf-data-foundation-catalog:v4.17.21-1@sha256:92f711c166ad9635dc02cc0682fecab7c913c1a73fa25042de934b267772026d
+  - name: icr.io/cpopen/mcg-operator-bundle:v4.17.21-1@sha256:72c6ab018c8ff622f03d0579f1a8dfac951d7e7c8f89f9303beea50c7224be6f
+  - name: icr.io/cpopen/mcg-operator:v4.17.21-1@sha256:eb0640e23af882f23180a46df07fc9c6132f8cad066723e51410bcceb1110b2f
+  - name: icr.io/cpopen/ocs-client-operator-bundle:v4.17.21-1@sha256:ea45e97489a753348aca93e400f75f327d5b21d2164705ad2199cbb7a3e350b1
+  - name: icr.io/cpopen/ocs-client-operator:v4.17.21-1@sha256:958d2094c6343f3e41722223e7d81ee5fcd8bc3586f320b34edcad0309026bcc
+  - name: icr.io/cpopen/ocs-operator-bundle:v4.17.21-1@sha256:30625464ebe2636a51fa6bfe9496bfb0d356055da50cc9aac7c65ea616635e88
+  - name: icr.io/cpopen/ocs-operator:v4.17.21-1@sha256:5e862db3e88065def9e2d39466ffc5817ab4f255f5cf118d981703f3d903409d
+  - name: icr.io/cpopen/odf-csi-addons-operator-bundle:v4.17.21-1@sha256:9c86c0420788ac5b801d339c6a00932e18357e53835688dca6396184b8cb4d2c
+  - name: icr.io/cpopen/odf-csi-addons-operator:v4.17.21-1@sha256:7c082e76b37113a4fdeb56078211a605cac248ccc699a2c1f6b1a0d77d7cf4ae
+  - name: icr.io/cpopen/odf-multicluster-operator-bundle:v4.17.21-1@sha256:017dd13ecba4ef66609af26569ab9535da427733931cec4673a458f820ba6661
+  - name: icr.io/cpopen/odf-multicluster-operator:v4.17.21-1@sha256:71f13eb0c2d95c8174722ceef489f33a3e4eb1e62b0388dffe32060be369588e
+  - name: icr.io/cpopen/odf-must-gather:v4.17.21-1@sha256:87e7c4f44009bb69e6319b53219b0961a97361fac4139784e327d757125bbf6a
+  - name: icr.io/cpopen/odf-operator-bundle:v4.17.21-1@sha256:922159d462a9f421f690d156f7ab41e617d772506ed92a5cea7865414293500e
+  - name: icr.io/cpopen/odf-operator:v4.17.21-1@sha256:a01efe07bdc61e8e154a1a9e97a4e43f8640f7b4c3c466958ca53ef1b1002144
+  - name: icr.io/cpopen/odf-prometheus-operator-bundle:v4.17.21-1@sha256:927eb2c83850c7dad8b0d4ae048635d7542cf2eb19bc3713b91fe850442034d6
+  - name: icr.io/cpopen/odr-cluster-operator-bundle:v4.17.21-1@sha256:256e1069a4be80ee750c631c063a6923d8a45ce857e9a703287e0857424f1f6d
+  - name: icr.io/cpopen/odr-hub-operator-bundle:v4.17.21-1@sha256:8a59c52ba9ea67631ac645ce53a39294e8c8bb4586ae7423f72c10cede057574
+  - name: icr.io/cpopen/odr-operator:v4.17.21-1@sha256:cd6822b116d174cb5e0a613bf98d4d5013ea8e496d91e0ab565b892582b073f1
+  - name: icr.io/cpopen/odr-recipe-operator-bundle:v4.17.21-1@sha256:e6767fe81abff0cc4dae9c97d0041b72c10ef54a8017e8212899390417a8d94e
+  - name: icr.io/cpopen/rook-ceph-operator-bundle:v4.17.21-1@sha256:4c35a63d0431f196bc5336ed6f5df9721618060382422d30fea3782215a8d58d
+  - name: icr.io/cpopen/rook-ceph-operator:v4.17.21-1@sha256:761deb427856fcd979d7d169bdeaaac5669659306b7352efc378f7418f06b4a3

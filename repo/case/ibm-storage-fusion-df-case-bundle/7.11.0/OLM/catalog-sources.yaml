@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-storage-fusion-df-case-bundle-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-storage-fusion-df-case-bundle-7.11.0
+  publisher: IBM
+  image: icr.io/cpopen/isf-data-foundation-catalog@sha256:54fb40b453bab8c5ca8db45b5ad8f19074a8b12adaca75e92e6d433cacb9a994
+  sourceType: grpc
