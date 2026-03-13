@@ -1,0 +1,64 @@
+apiVersion: v1
+case:
+  appVersion: 14.10.13
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Informix microservice into K8s cluster
+  displayDescription: ""
+  displayName: IBM Informix Standalone Operator Bundle
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
+  licenses:
+    li_en_aee_modernization:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Advanced Enterprise Edition Modernization
+          v14.10
+        displayName: LI_en_AEE_Modernization
+        name: li_en_aee_modernization
+      ref: LI_en_AEE_Modernization
+    li_en_ee_modernization:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Enterprise Edition Modernization v14.10
+        displayName: LI_en_EE_Modernization
+        name: li_en_ee_modernization
+      ref: LI_en_EE_Modernization
+    li_en_we_modernization:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Informix Workgroup Edition Modernization v14.10
+        displayName: LI_en_WE_Modernization
+        name: li_en_we_modernization
+      ref: LI_en_WE_Modernization
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-informix-standalone
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com
+created: 2026-03-13T12:55:37.13312321+0000
+digest: sha256:b4530633d0f3078287bcaaae322470df8cdb8a5dfe088c735b6e5e274c031ddc
