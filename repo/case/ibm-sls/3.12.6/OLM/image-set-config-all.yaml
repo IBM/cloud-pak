@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-sls-operator-bundle:3.12.6-amd64@sha256:034bddb45b70a3be258e154c064c20a3ccc38a5bf09101b5f07afed603a6c340
+  - name: icr.io/cpopen/ibm-sls-operator-bundle:3.12.6-ppc64le@sha256:f0ee382461864dd7f261d3ec36f94fdc34be92aa796c6e06024f32f56b81f592
+  - name: icr.io/cpopen/ibm-sls-operator-bundle:3.12.6-s390x@sha256:5211f8dfefce406ddb03bb78fccf8ee2db5fcf2b114487f102e491ba3b2b6fe6
+  - name: icr.io/cpopen/ibm-sls/api-licensing:7.4.32-amd64@sha256:364715c630f58d1a8881c01323d6abcee04361bf2d5cb1b670e176fb570ebee1
+  - name: icr.io/cpopen/ibm-sls/api-licensing:7.4.32-ppc64le@sha256:ae86d4477b202ddcad44587e769371b9928afa81809de6110dd91f1e88507936
+  - name: icr.io/cpopen/ibm-sls/api-licensing:7.4.32-s390x@sha256:f5e0e0cfaf3dc367dd4c743dbb4647b691adf2e2a6118b2ef625f6b78f9be2d5
+  - name: icr.io/cpopen/ibm-sls:3.12.6-amd64@sha256:0ba287050885cb03cbf04a345cad207a37c5edfe057324d9b8ffc7f449e84f42
+  - name: icr.io/cpopen/ibm-sls:3.12.6-ppc64le@sha256:4a9db698c81c9b8901903052b17b7b9f4f35bf3586e7ee81cdb0ad5e6bcb0a79
+  - name: icr.io/cpopen/ibm-sls:3.12.6-s390x@sha256:1a8f22708baa0b89ae05dbb31047ddaa4c11b4856f890f930e9d4b58e0baf989
