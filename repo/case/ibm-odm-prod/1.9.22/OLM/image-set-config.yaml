@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cp4a/odm/dbserver:9.0.0.1-IF022@sha256:97d02026c32bcac928d96ee0ab2a32c55df5e719cacd76534af678246198604c
+  - name: cp.icr.io/cp/cp4a/odm/odm-decisioncenter:9.0.0.1-IF022@sha256:2a882972363ccf0a23bd55617f322e58fac2c073fdf99b915774c8e079d71721
+  - name: cp.icr.io/cp/cp4a/odm/odm-decisionrunner:9.0.0.1-IF022@sha256:438c6d8ed5f0f81495adb534be130b395e2995311a4444db45bc2c9f7e64467d
+  - name: cp.icr.io/cp/cp4a/odm/odm-decisionserverconsole:9.0.0.1-IF022@sha256:2b9a555f3f2031d65359fbd5ad3d8f7f71af8246580f3b06d80430666a4f16bc
+  - name: cp.icr.io/cp/cp4a/odm/odm-decisionserverruntime:9.0.0.1-IF022@sha256:cfbcb259919b7fa980b42cd18aea059e92d8956ac28e487187323e649cac25fe
