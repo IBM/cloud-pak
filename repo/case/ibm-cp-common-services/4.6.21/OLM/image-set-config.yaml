@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2705@sha256:f0e427cefc7cdb09cc63af1dc5d4e8f55c264eec111ffd193b6ee701370e1970
+  - name: icr.io/cpopen/common-service-operator:4.6.21@sha256:9a4dba99ed33c7f13bf021e14e53a06445750578da3de71487084819f4ca8d93
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:ad11058f0371f93435474a79dd0e4b87365b6c290bb256ad38f01eabf0743ee8
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:cd139633897892312772554b47f1d7f29ff3d778afed71ecfddff0fec26c4e82
+  - name: icr.io/cpopen/edb/postgresql:13.23-5.31.0-cpfs@sha256:353d13d874d60f7dff5dba2b080e8b127d54f3d71f9c5421f3895d737a604d41
+  - name: icr.io/cpopen/edb/postgresql:14.20-5.31.0-cpfs@sha256:5b9e17fa0f210e78622e965d4da7f79c20b99cf8db507451e5453dd4c3dab8b7
+  - name: icr.io/cpopen/edb/postgresql:15.15-5.31.0-cpfs@sha256:425de739fb88db833881eb0c1c9db7408059bec5b5f45830c92e5de4b4ebbddc
+  - name: icr.io/cpopen/edb/postgresql:16.11-5.31.0-cpfs@sha256:b711c28ad678c53fae114a3b80b801979dd30cf4b7f6676db0db5c9987e377d3
+  - name: icr.io/cpopen/edb/postgresql:17.7-5.31.0-cpfs@sha256:4becaff092407bf0c4a55b921c1ff8a9f2e4cb2b53c339eea41269ee38a21f12
+  - name: icr.io/cpopen/edb/postgresql:18.1-5.31.0-cpfs@sha256:022b2d0beb9ae959ddd7c06038a4369f935fc07edc9cd288bc019d81b6ef1a49
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.6.21@sha256:1f0378a673b804fd14b314ef7b329697f73d24b26069492f1c14326735d394e5
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.6.21@sha256:33a3fe9b1c4f2fddfa608749bebb6f3a1e782b183916aaa8dc0f368b70974fbc
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.2.21@sha256:3d9df69e4988e933e595062242f5e3ebb891128829e5b7fa23068a6790e116b3
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.2.21@sha256:56402f0acaeff1979fc7865ccbfea996dacf8d80526461940e411df0f3304894
+  - name: icr.io/cpopen/odlm:4.3.19@sha256:607119493104d6b4c9558d50ac12925ed6d44ad8e6f8b852eb21370e73e3ee88
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.3.19@sha256:e7f79bdfc580d27f2a3af49f93c050fc9f4fb44570f79bfac3bee8702738a8b7

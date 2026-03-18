@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-zen-operator-catalog@sha256:29e3f98c94feb364927eb5d79ceb5cdcd0ac92f980bc77bfdfc0c2b1b0fc6f1c
+    packages:
+    - name: ibm-zen-operator
+      channels:
+      - name: v4.4
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/edb/postgresql:14.20-5.31.0@sha256:5b9e17fa0f210e78622e965d4da7f79c20b99cf8db507451e5453dd4c3dab8b7
+  - name: icr.io/cpopen/ibm-zen-operator-catalog:5.1.20@sha256:29e3f98c94feb364927eb5d79ceb5cdcd0ac92f980bc77bfdfc0c2b1b0fc6f1c
