@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/datadictionary/kitt-v3-graph-service:3.3.63@sha256:05aa9769c36915c3717a90523ff0f56a084ea726bb1fa674b8128b2f0dd003fc
+  - name: cp.icr.io/cp/datadictionary/kitt-v3-maximo-connector:3.3.63@sha256:dbf46d7275406e9b969ce5b6d347302385c6d1d6dc7c5fcee036f0b9ea73e502
+  - name: cp.icr.io/cp/datadictionary/kitt-v3-router:3.3.63@sha256:83fe7bf1376a72eb5df14188d6326b4392040fc6ef3e0770bbef2dec9ce6f709
+  - name: cp.icr.io/cp/datadictionary/kitt-v3-series-store:3.3.63@sha256:747def3fc857e8ea1ab4bb04064b99b8b9bb443835c95dc0db92a1f2da70da23
+  - name: cp.icr.io/cp/datadictionary/kitt-v3-user-store:3.3.63@sha256:c623dc0f2a22d204c8371284c21fe4f9936714e53ba26c88f99b6f977f8cc4e3
+  - name: icr.io/cpopen/ibm-data-dictionary-operator-bundle:1.1.23@sha256:0279dfdab0d80342d3801a0e4894bd30734089e4962f977ff34478f3dc637690
+  - name: icr.io/cpopen/ibm-data-dictionary:1.1.23@sha256:f4ffe2221f99bb8fea1a6885291f6fa8512322b36c6fde64b3787707527a4059
