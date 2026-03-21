@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-server-prod:12.0.12-r22-20260313-095035@sha256:cfd4874d37b8fef416e8002c16f573a13df87d0f6b56556cac38b1bd7361faaf
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:12.0.12-r22-20260313-084426@sha256:39b59f5c356b24c5adcb47ba809fcaf3a3d1bf565e7d358f4008748beaae77a9
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:12.0.12-r22-20260313-084434@sha256:a3a2937c51759c056dd0a6354f2c1b13d04a2211bdb983589b0468e4d1e3826d
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:12.0.12-r22-20260313-185512@sha256:b1e4d4d2d62f13a1231b79be8ed6650099cd5a3964a5b612509fa9dd84dc710b
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:12.0.12-r22-20260313-084425@sha256:25f418682f60c972018085c6f34ac694a9b0399493a0551f984140f4a34c0450
+  - name: cp.icr.io/cp/appc/acecc-designerflows-prod:12.0.12-r22-20260320-225311@sha256:db21155accbe802c6d8580a38cc808b81b39e4ca7e765e26a1b902a66e64de3c
+  - name: cp.icr.io/cp/appc/acecc-ecp-prod:12.0.12-r22-20260313-084427@sha256:186833be4f49965301372bbc096ce175ca0b4bf800f2106507dbfbf5ecbfc465
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:12.0.12-r22-20260313-084425@sha256:6fc10f1517ed7783fe435e0431b1da0a96b7729ab49ae38ae64a3f9e91bc3632
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:12.0.12-r22-20260313-084426@sha256:cd83f1843e49862d7e5e72d4697a8bb1fa119d482ad1f4bb8e20809a6347d766
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:12.0.12-r22-20260313-084438@sha256:f42ab1a9f9183028c495e6998481fea831520203a284bb4c2c2500c88ef3c3c0
+  - name: icr.io/cpopen/appconnect-operator-bundle:12.0.22-20260321-101203@sha256:00bd58bd2799c82d7617ca6a356581210fc56699b02ae1d0a3664a9800b9def6
+  - name: icr.io/cpopen/appconnect-operator-catalog:12.0.22-20260321-101203@sha256:ffba4e22d4b9371e4d0e13d8762fbae0b1df951096105be389aae80c78f6a90d
+  - name: icr.io/cpopen/appconnect-operator:12.0.22-20260321-101203@sha256:af2d685601472fcbdc30e70d41fa194b659f7036cedb440d01a037b89d004eaf
