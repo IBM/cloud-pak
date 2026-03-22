@@ -1,0 +1,32 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-db2oltp-cp4d-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-db2oltp-5.3.2+20260310.172818.3717.5005
+  publisher: IBM
+  image: icr.io/cpopen/ibm-db2oltp-cp4d-operator-catalog@sha256:33881d3ab29e31a8268e68c6685b726713f03fd4c7bbbc14233550f612dd8812
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-db2uoperator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-db2uoperator-7.6.0+20260224.123157.19264
+  publisher: IBM
+  image: icr.io/cpopen/ibm-db2uoperator-catalog@sha256:f3596edf224621175b5739cf36d7e9b53179816191f9a4123064aedb57e642e9
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-db2uoperator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-db2uoperator-7.6.0+20260224.123157.19264
+  publisher: IBM
+  image: icr.io/cpopen/ibm-db2uoperator-catalog@sha256:ac608e4f744be84997e0306e459f086a99223749bc29725045e3f673b1c0446b
+  sourceType: grpc

@@ -1,0 +1,58 @@
+apiVersion: v1
+case:
+  appVersion: 5.3.2
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data Factsheet
+  displayDescription: CASE for IBM Factsheet
+  displayName: IBM Factsheet
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4D5.3_EE_License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4D5.3_SE_License.txt
+    watsonxgovernance-LA:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.governance License Agreement
+        displayName: IBM watsonx.governance License Agreement
+      ref: LA_en
+      url: https://ibm.biz/BdbyV8
+    watsonxgovernance-LI:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.governance License Information
+        displayName: IBM watsonx.governance License Information
+      ref: LI_en
+      url: https://ibm.biz/BdbyV8
+  name: ibm-factsheet
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 7.1.1+20260306.035609.21
+  webPage: https://www.ibm.com
+created: 2026-03-22T17:26:28.82816766+0000
+digest: sha256:2e93bb48e16f86184a54c8524f6f1c1c72aef0b0338416e4a0af1d4b0cac4d9c

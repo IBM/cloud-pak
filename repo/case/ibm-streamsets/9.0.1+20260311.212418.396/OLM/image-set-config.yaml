@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-metering:94f3e35ff2f7c3c9c09e4ce1d85d0a58d761d94d@sha256:02e5f29f4847d61e21409948f865613b48f678b422c3fdbd86f4d7dba8244d90
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-security-ui:9b3697ae7e16c4f47a7859e9e7ef25cf616b61e4@sha256:a094b73627b12b23a5c0b1525cce018ae90ba3a5f77ab474e70a21be739ab90e
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-security:1.0.2@sha256:1b5874d277011b56ebee1f1c12227b0a6b5c4a5ad32b667d50a708df3a6141f9
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-banner-service:1.2.3@sha256:35c50678558a759515b8522efa50c8ebac54caefaacb60fc759a7917d2cede9b
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-datacollector:JDK17_7.2.0@sha256:defd3073d60542e8836e6ff6d1db737ef2aa29182cb67ec5a218e46ff947a1f7
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-docs:7.2.1@sha256:954f4e36cbed05e2fad653dea1bb58b16b7d08edcae5d946f88f1f0d93f33a20
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-kubernetes-agent:1.5.1@sha256:74be2621b7f18815885632192e2da03215ece35ebdc02bf9a8fff602216afbf6
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-mysql-backup:7.2.1@sha256:41923fe909b55ebebc732b3fdc4396b37c81423e797622ccced16809896a52c7
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-mysql:7.2.1@sha256:2cf87a26932d16a12065368c49af4da4e27e1803828defe8ccb0ff71f54c653c
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-nginx:7.2.1@sha256:38c831279bce17c2ed8f8ae325c5dda365eb007af1e9ad12ae4ce7adfc745bad
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-operator:9.0.1_20260311.212418.396@sha256:0e07b823678bbb200838bcee64e5f5dad02d59944aaad2b1326619a561b0c5f9
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-provisioning-app:6.5.0@sha256:2c77bd03efafac31ef46924e004dd1301a6771e7e44d3d61df1ee0ae6aaaf024
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-sch:c39fdba747847cf070c7eb427658a4d5ac147648@sha256:2f027ea73144759c7d4167e11ac883c3a3473fcdd78f49e794daa0d18438e90b
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-static-content:7.2.1@sha256:c66e94ebf2eae0a3638de3e0c800e4af739a963dbd2a5c03c5f76c5589370f20

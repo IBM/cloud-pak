@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/openpages-cpd-addon-translations:9.1.3.1-841@sha256:b36fa58b17cb9e25b13bf2fae941c6cf7e2211deea64ebf7ac919a4e1ed51d34
+  - name: cp.icr.io/cp/cpd/openpages-cpd-cognos-service:9.1.3.1-841@sha256:526238967cb2d66f70d2ec052cbf97534c79b064a56bedfcf41d9db58b29a135
+  - name: cp.icr.io/cp/cpd/openpages-cpd-opapp:9.1.3.1-841@sha256:5bf152b3c35127700d96a3e4032871fa79d2c485757b9b140ad853d88881a19e
+  - name: cp.icr.io/cp/cpd/openpages-cpd-opappaudit:9.1.3.1-841@sha256:425cd773e3a2181f72fd072c5bf6a2770b89575f06015fcc495ae8d47c840c2c
+  - name: cp.icr.io/cp/cpd/openpages-cpd-opsearch:9.1.3.1-841@sha256:532acd7988cefce8afe83e88341fb223f58480dede2313a00bc4eb961a6723c7
+  - name: cp.icr.io/cp/cpd/openpages-cpd-provisioner-oracle:9.1.3.1-841@sha256:c97cb357c8b6852a6a8d5f802a94d57ace0ffeab0391fbcd12732ed21d3dd655
+  - name: cp.icr.io/cp/cpd/openpages-cpd-provisioner:9.1.3.1-841@sha256:c6a515578fce8372b7cbabbb3518eb34bb552a1078b98a32f89c483055a7f533
+  - name: cp.icr.io/cp/cpd/openpages-cpd-user-sync:9.1.3.1-841@sha256:c460a1893b75fe842087ac7c674ccd834210280535a6fbd3263b19e7fbda5a4b
+  - name: cp.icr.io/cp/opencontent-rabbitmq-3:v3.13-1.3.0@sha256:9836c64aef7a8760f07a54b7a64d9d01cbe9d7fa8372a2ecc2d5e33cc315cefc
+  - name: cp.icr.io/cp/opencontent-rabbitmq-config-copy:1.3.0@sha256:52472f1d1f10bb6bc424ffda1eb48d6ce6bf29aa6b5a21bbabf6878fcd64a69d
+  - name: icr.io/cpopen/ibm-cpd-openpages-operator-bundle:9.1.3.1-841@sha256:c79a1bf42c5a107e7bcb1ce59e58a0840c1ca5d7f61d05476edd2dfcc1c5bdaa
+  - name: icr.io/cpopen/ibm-cpd-openpages-operator-catalog:9.1.3.1-841@sha256:02163842020bffd435a6da66766a4a9988d300fd3cab7048bf9b3b0695f67f3b
+  - name: icr.io/cpopen/ibm-cpd-openpages-operator:9.1.3.1-841@sha256:8900365dd5bffe1db0fc181fa581118502bca73bc1f81c56c5c79927fe2f68b4
+  - name: icr.io/cpopen/opencontent-rabbitmq-operator-bundle:1.3.0@sha256:88e6d4b8775e8db5efb1f711727a0a570c9ad87da78509cc7f3db59f945b6822
+  - name: icr.io/cpopen/opencontent-rabbitmq-operator-catalog:1.3.0@sha256:480b830a4b08d7fee2b29e1571d6ac8cd5ada7999d2048146796d0723905353c
+  - name: icr.io/cpopen/opencontent-rabbitmq-operator:1.3.0@sha256:cc64f8ec113746d804527f50b5e2d2c83be4eb2318c3d8d95075f02bca46197b
