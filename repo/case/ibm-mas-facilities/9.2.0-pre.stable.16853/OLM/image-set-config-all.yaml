@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/facilities/datainit:9.2.0@sha256:953239f4faa91274843f09977c36d2082d5f43b28a7f5128845505bf60a72080
+  - name: cp.icr.io/cp/facilities/ibm-mas-facilities-ws:9.2.0-pre.stable_16853@sha256:437c8311173678a549015cce863353257f7aa3905b93dea529f14625e3c4565b
+  - name: cp.icr.io/cp/facilities/platform:9.2.0@sha256:da0aefe0b115c623d5d439c54343f1ecc564409fa14eaf3ee41c9a940ba654dc
+  - name: cp.icr.io/cp/facilities/usersyncagent:1.0.0@sha256:cfc458ed67a09f6ed4798cd22a275dc91225ceca9844c9c7e843261bceba77d3
+  - name: icr.io/cpopen/ibm-mas-facilities-operator-bundle:9.2.0-pre.stable_16853@sha256:12a4cdf181432e40007a9cfdd0beb9f974407e9aa083806cb384e11d580968e6
+  - name: icr.io/cpopen/ibm-mas-facilities:9.2.0-pre.stable_16853@sha256:f0db52166ca42d73aadb2e5cd7c6e91025ef9907007c38764f808fcf3b4ada32
