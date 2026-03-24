@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ucda-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ucda-case-1.4.31-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ucda-operator-catalog@sha256:c2277c0d2542c9d9df1faf01f675e18362a047a5319ad5e3cbe0573dcdaebbc7
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
