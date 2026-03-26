@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:1.8.4-2025-04-15-1422-7a9b0acf@sha256:f0227e0fcf524689d6510b4492012a6eb595463a8ffab941b43035b13b23571e
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:1.9.4-2025-10-02-1126-92aa5ece@sha256:859cfc8c0f441170ffc32e659294e247c90eb1d236482ecc2e62e1857da1a49a
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:2.0.3-2026-03-13-1207-66e4b971@sha256:5d868e7648263a07e96b0236d631f1173382bf302fc6b84cd19b284db8bbe89c
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:1.8.4-2025-04-24-1308-29dda2d7@sha256:d38047624528d5d7ae95668a30a7730eaf73b64314e8197c8a8c2606ebb6330f
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:1.9.4-2025-10-02-1509-1a4bf72d@sha256:4e9b9e32eb9570a90448a1043d0ba8081a1814e25da630f592d60e4f60015009
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:2.0.3-2026-03-16-1628-cdbc089c@sha256:ab7de0c03547a97f9f25c834d577b59473e4ed305f9ff2849409f446f67f20ce
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:2.0.3-2026-03-23-1534-60b7c04c@sha256:b30890d8131a83abc39065fdc72350065d30ad686070d448cf8063f5639025fa
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:1.8.4-2025-04-22-1421-c1f2122c@sha256:581030d01b59aedb03660b4ad86ab6bc707e52b4a6299062970c82caca69f4be
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:1.9.4-2025-10-02-1126-19186790@sha256:3bd4ccf52d23fc09eb2297a4cc718839167e871f61e753ad468b800586e8e4a0
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:2.0.3-2026-03-13-1206-fa55259e@sha256:f070e5ff0e380e55994ee9f245e93c06820c485c2ca80662f5499bd2cd6b3878
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:1.8.4-2025-04-24-1314-185661d1@sha256:99467e8e8561e171eb2ee1d88486570af8a3f3419d77ebed629d194dcef4bc15
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:1.9.4-2025-10-17-1417-c393a42d@sha256:587e45e08e54d75a7cd8d661be206912ce1753f29cb37345037acdbfc4d3326c
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:2.0.3-2026-03-16-1711-4a295150@sha256:b678ed1c05dae8582501cb0b213d1f6c3e2779bb60a5f4d4e23f092282a2d6ed
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:2.0.3-2026-03-25-0510-81b93996@sha256:cf7f9267194ef80693e469daf1046a12801fad38ef3d04419f78f30081250b9d
+  - name: icr.io/cpopen/ibm-integration-asset-repository-catalog:2.0.3-2026-03-25-0645-db59352d-amd64@sha256:68e34df94fb0378e32f9d35c85b955e8f14e35ab2b05f507d336a1c382ce98df
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:1.7.19-2026-03-17-0446-972b86f8-16.1.0@sha256:c18966c682060b8d58960e7498aadecdee0022426413457279212c892b9b0e1c
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:1.8.4-2025-04-29-1101-7e2fce2f@sha256:7e36c8d46b4a5298c091d5a0d361d764cbddde774bc44ba90ecfd027940842c0
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:1.9.4-2025-10-30-1036-3f2d8f42@sha256:36bb8dd9d84d835ee61d03340c2a1254d4b5af52d870e6824b8772ce47eabb31
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:2.0.3-2026-03-25-0645-db59352d@sha256:81887136bc8a1307cacf6521cb96ed8fa4eafb5ba248c7c381fb2b62c6ee6165
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:1.7.19-2026-03-17-0446-972b86f8-16.1.0-amd64@sha256:fd5d68d6464169c2d0a8874702d8b93a0f62f048dc728b5886b0654f2325ae4c
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:1.8.4-2025-04-29-1101-7e2fce2f-amd64@sha256:a963c57e9876b764bd62a6606e85f7a557d40bfc83a9ac81ce535af29dfcba92
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:1.9.4-2025-10-30-1036-3f2d8f42-amd64@sha256:01a41df347a255cc9448a63705094d5aeb4c6b4f520360d67eb251b7549b2b8d
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:2.0.3-2026-03-25-0645-db59352d-amd64@sha256:e16a37f7e5a2f5960c8c2648333c49905577e451215f7e5c3b7506066df9efd3
