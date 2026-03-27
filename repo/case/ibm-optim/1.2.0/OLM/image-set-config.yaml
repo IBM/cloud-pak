@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-optim/optim-core-api:1.2.0-amd64@sha256:26ec4a5bef503fd6ef5f8c940f90df70e14dee753de978b20d678e14a2915f0d
+  - name: cp.icr.io/cp/ibm-optim/optim-flight-service:12.3.310-amd64@sha256:bdd32e75bffc04a3bc5d705d5d9f1d9f16769e3eb5d9683e55440e75c2254ad0
+  - name: cp.icr.io/cp/ibm-optim/optim-keycloak:1.2.0-amd64@sha256:88e0ec1045b383800c0988a70500ab694d1deb74f3609a29bea3def46ffcd33e
+  - name: cp.icr.io/cp/ibm-optim/optim-metadb:1.2.0-amd64@sha256:bf7e22a40af45a6ff462db48afb4c0962d24b3f7bc608ffab729a47cc417c14b
+  - name: cp.icr.io/cp/ibm-optim/optim-runtime:1.2.0-amd64@sha256:dd7cd1031ac637eb3f019eebbfe6c9e0d7088b51789da344612624238de88975
+  - name: cp.icr.io/cp/ibm-optim/optim-spark:1.2.0-amd64@sha256:c7e9653e7779dbbc9849b4a8d1b0e49e4d8c58c0571a10ea6637aefc99624765
+  - name: cp.icr.io/cp/ibm-optim/optim-ui:1.2.0-amd64@sha256:4f174c3ba780f7a866b9d298a1ab7c2f34035d2dc90bd749035b074b0ba8ee49
