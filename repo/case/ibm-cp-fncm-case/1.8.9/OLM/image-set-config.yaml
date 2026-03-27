@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-fncm-catalog@sha256:1ecf27f98d35222bc9f69a26c8a3814ea5009c405fa67a24db444368ba5317a1
+    packages:
+    - name: ibm-fncm-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-fncm-catalog:v55.12.7-fbc-20260319.104243-897D5AD9F@sha256:1ecf27f98d35222bc9f69a26c8a3814ea5009c405fa67a24db444368ba5317a1
