@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-devops-automation-analyticsai:8335f300@sha256:5b392b839cdb3db130d14b9df617144a566785bc80ca5eb17493cf89e848371d
+  - name: cp.icr.io/cp/ibm-devops-automation-code-client:2.0.100@sha256:16db7a919b8743eaf7da831d1a67ec3d73cf4f4e8054dd35a718adaf820d8c18
+  - name: cp.icr.io/cp/ibm-devops-automation-code-container-mgr:2.0.100@sha256:9756b25732ae24c3e2f7f31569d23b6b07c1060fb9d0f6196aead9135971c7aa
+  - name: cp.icr.io/cp/ibm-devops-automation-code-extension-registry:2.0.100@sha256:756b6c6a6477d4be9caa600dd6829f1eb3e41cdf78cc1ef9bd9e774a42a31a14
+  - name: cp.icr.io/cp/ibm-devops-automation-code-minimal:2.0.100@sha256:42cebd20af79b92cdc198edfc3546c807e9f82992480094e3cc4f99550f1be1e
+  - name: cp.icr.io/cp/ibm-devops-automation-frontend:d0aacdc@sha256:7ea6950013acc764548cc7a5d8b9147b75b421f3cd980e85ae9978ae97fc440c
+  - name: cp.icr.io/cp/ibm-devops-automation-jdk17:1.0.7@sha256:e00eed40dd78fae65fed074d99756aa83169b91de67f5d22b7f5f68faf78f91b
+  - name: cp.icr.io/cp/ibm-devops-automation-licensing:e987b58@sha256:982c86cff27de8ad613c13052ca6bc3d6b199ce8b1e8908dccde50454509ff1c
+  - name: cp.icr.io/cp/ibm-devops-automation-loop:b4417f0@sha256:192a3296dcafa500f2890e361efdfc3796da5af38ab1f10e58c598d2f00e730f
+  - name: cp.icr.io/cp/ibm-devops-automation-mcploop:292e5d3@sha256:e29d3e5da96a172d4bfe6618ea02b9dde8b6d29704ee03a5f0c99f2e5f2ef714
+  - name: cp.icr.io/cp/ibm-devops-automation-nginx:c0aaf7d@sha256:9f9e7b1c7ed1abf2633ca3140ae2a2a46899a1089ab98f2c9ac34ba71c357166
+  - name: cp.icr.io/cp/ibm-devops-automation-tenant:13fd323@sha256:827a4474026f353e4ff72ea55a154cb2d42841b2bb48e39f328b2d911e3b23cb
+  - name: cp.icr.io/cp/ibm-devops-automation-trivy:1.0.8@sha256:ad5f31e24d4c8138127c0d57030a90eea6ebde59d370c573fb3deabd0b605dde
