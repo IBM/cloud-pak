@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-langgraph-agents-prod:13.0.7.0-r1-20260327-040717@sha256:f5ab934c39193fe37bc79d24f908eeb2d260ec719653a2fc39a4d55e7f0efa45
+  - name: cp.icr.io/cp/appc/ace-mcp-prod:13.0.7.0-r1-20260321-040834@sha256:cb0c8b2ebe8af7af00ef1d043fb66d670e3a4c0e42bbc8e583b1d745ba57eebe
+  - name: cp.icr.io/cp/appc/ace-server-prod:13.0.7.0-r1-20260330-205212@sha256:62712fd50daac0365dc07fe35e07037538bbd8eada69771e034d446deb07d7c0
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:13.0.7.0-r1-20260327-075723@sha256:2a5ec476c0b5630b5ecddf9b2308c3ea747ffeb058cadaeef7971d068c09ace0
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:13.0.7.0-r1-20260322-001339@sha256:589e20e9e2f472e9045b92bae5c418b9168e6fd8454958d05bc7cd1b4c513402
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:13.0.7.0-r1-20260327-075522@sha256:6b1b7928211fee822e2ff3bdf1ac5e7283112d545fe1fa613571da43bc0c1604
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:13.0.7.0-r1-20260327-075638@sha256:79eff8c599ed6a82ac40c0add493f7fc8462ae075ba43f69ee5b12b0cbdb3a73
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:13.0.7.0-r1-20260330-171545@sha256:6d17f7bd2d5f3e114d598ed511710385661c483beebcbbdc462e7f3c0de0fed8
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:13.0.7.0-r1-20260322-031313@sha256:904d80d00741ee8ca90eb9173cbe1ae584b507ee60d736d3c086dc36c2873014
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:13.0.7.0-r1-20260324-112341@sha256:acb26a9222bf2a449fe60b11e0e5ae2e373257152f3a5a04135a2f1045da84e8
+  - name: icr.io/cpopen/appconnect-operator-bundle:13.0.0-20260331-082426@sha256:0ed6de1c71ad9975a5d191cf827f8b2091ae0536aa054a720bbbcf8f85f679f8
+  - name: icr.io/cpopen/appconnect-operator-catalog:13.0.0-20260331-082426@sha256:6f5599266d8699bf6def378f7ebbc0bc92253806d0ad8adde512aed7bada6455
+  - name: icr.io/cpopen/appconnect-operator:13.0.0-20260331-082426@sha256:f57ac467fe714ec5359025206d701e44987c0a6c907eb1f628e6ae57b393ad38
