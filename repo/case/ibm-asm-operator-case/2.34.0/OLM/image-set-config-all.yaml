@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/asm-operator-catalog@sha256:61f2a186ae4469c3534a1995aa51a0fb9a970236ca2b919ca7cb67cab6c01841
+    packages:
+    - name: asm-operator
+      channels:
+      - name: v4.12
+      - name: v4.13
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/asm-operator-catalog:v4.13.0-20260331.2349-61f2a186a@sha256:61f2a186ae4469c3534a1995aa51a0fb9a970236ca2b919ca7cb67cab6c01841

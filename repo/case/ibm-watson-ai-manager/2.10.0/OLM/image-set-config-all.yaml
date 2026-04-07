@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog@sha256:b0ab5abba1930941e083336f8f820b65cf3c84bb0892e76a9434bc4a3ca65644
+    packages:
+    - name: aimanager-operator
+      channels:
+      - name: v4.12
+      - name: v4.13
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-watson-ai-manager-operator-catalog:v4.13.0-20260331.2349-b0ab5abba@sha256:b0ab5abba1930941e083336f8f820b65cf3c84bb0892e76a9434bc4a3ca65644

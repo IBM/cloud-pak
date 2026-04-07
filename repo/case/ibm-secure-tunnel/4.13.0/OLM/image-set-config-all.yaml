@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-secure-tunnel-operator-catalog@sha256:8e8cb3ccf0dbbbd35c4144e6790dae59c0727bce8e8a0bdd00dd17ecda95ad2b
+    packages:
+    - name: ibm-secure-tunnel-operator
+      channels:
+      - name: v4.12
+      - name: v4.13
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-secure-tunnel-operator-catalog:v4.13.0-20260331.2349-8e8cb3ccf@sha256:8e8cb3ccf0dbbbd35c4144e6790dae59c0727bce8e8a0bdd00dd17ecda95ad2b
