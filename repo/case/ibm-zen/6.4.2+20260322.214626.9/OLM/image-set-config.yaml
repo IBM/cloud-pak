@@ -1,0 +1,21 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/cpfs/icp4data-nginx-repo:6.4.2-9@sha256:fdf0d2f0a0ab7b8e30812de8a3947db381df011ce155bc243c8e4ce4a6b8ffd2
+  - name: icr.io/cpopen/cpfs/icpd-requisite:6.4.2-9@sha256:514d85156ec8497f53c649596302c630b2eb32d49ab519405d17cb16dcd35324
+  - name: icr.io/cpopen/cpfs/platform-assistant-broker:6.4.2-9@sha256:689e416d4052416a700a8cb50a27fb1e5a1b35e76fc3a9d9fdfc062aee7141ad
+  - name: icr.io/cpopen/cpfs/privatecloud-usermgmt:6.4.2-9@sha256:7f250e323334e0cf4f5eff6234fea305632b65ce833c5b4e06795e34f6ad3d13
+  - name: icr.io/cpopen/cpfs/spoke-nginx:6.4.2-9@sha256:ed90d6960f5e1dfb0b3ff115809ec1a319e0018c36e642e300561fc1ebf637ad
+  - name: icr.io/cpopen/cpfs/zen-audit:6.4.2-9@sha256:8a44a68a3c223e85be90c6caee7c1188a67d3ff362bd65d6f979094ef929f2af
+  - name: icr.io/cpopen/cpfs/zen-core-api:6.4.2-9@sha256:8ce67803df7cc5a80dae417101386bfc2cc520c449449aceb9a57578349f0699
+  - name: icr.io/cpopen/cpfs/zen-core:6.4.2-9@sha256:391102d56d83d3e69e5aecd55f17c7115e2aa6f65d0e5c18d30cd75dc57f1783
+  - name: icr.io/cpopen/cpfs/zen-iam-config:6.4.2-9@sha256:ed0c24d435fdb6efe22faaa3cd3c8b18780beb6040ba9274ee3f647dfc1bad77
+  - name: icr.io/cpopen/cpfs/zen-minio:6.4.2-9@sha256:c57dcef7241ee7b8c5189763112eb0a4363e527442b684a8a061f50c50e7e2ec
+  - name: icr.io/cpopen/cpfs/zen-openresty-base:6.4.2-9@sha256:2542f601605e4dc3bc52af66e3e3706c495d744b1461cd4f226af8ae10432d8b
+  - name: icr.io/cpopen/cpfs/zen-rsi-adm-controller:6.4.2-9@sha256:e7ccd314e932e3701473a6a3be4d541ec2c942aa76cb638d675582b877bfa491
+  - name: icr.io/cpopen/cpfs/zen-utils:6.4.2-9@sha256:8b472d7c8babdb0465989fa9f452708cb3a7ac2dc90017e5b87a1cd6f99426ee
+  - name: icr.io/cpopen/cpfs/zen-watchdog:6.4.2-9@sha256:ac91b8cefd9c0eea2c20c09f8de431fe2f52db43c936541490e6a4daac1423d8
+  - name: icr.io/cpopen/ibm-zen-operator-bundle:6.4.2-9@sha256:4d6474807fc81a8a64bd2e4fe506ec88c427d258455719448b2c066105a5ff51
+  - name: icr.io/cpopen/ibm-zen-operator-catalog:6.4.2-9@sha256:cf2a4c2f1b8bc2e03ba1d78e7650c7bbf5af9560f2c56352bdcf6b7cfc7b9bf9
+  - name: icr.io/cpopen/ibm-zen-operator:6.4.2-9@sha256:d224e168b55a85f9bfd08b5fa89ad0d690feac46d02d4e4fbfb8fa93b44240bd
