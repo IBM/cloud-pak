@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/dsx-hi-proxy:v5.3.2.24@sha256:1de39e47a0ed91586a54673c500030c4e6296c3d33b482f85d00e81804def9b9
+  - name: cp.icr.io/cp/cpd/hadoop-kubectl:v5.3.2.25@sha256:8a72dd4a3a03df56f28c96e12e047388c67c2e0a892d7545bc5eb086a119241f
+  - name: cp.icr.io/cp/cpd/haproxy:v5.3.2.8@sha256:1bc507966f19b5a3156b4b254f843d939f9c379ae37577d852f9d2ace0cd220c
+  - name: cp.icr.io/cp/cpd/portal-hadoop:v5.3.2.20@sha256:f310e3368fff4586c4e869dfa0a7a6b5836000942705a11425153fbb5d434390
+  - name: cp.icr.io/cp/cpd/utils-api:v5.3.2.23@sha256:ba56c0e904e9faf15a69a174bb32694cd92d07e9498c92b5542f7ac6f0516222
+  - name: icr.io/cpopen/ibm-cpd-hadoop-operator-bundle:5.3.2-20260323.000000-26@sha256:89fc38017e242d195ef55b6e1ac8f8d6a35f703f55736cdfaf53826facb4dec5
+  - name: icr.io/cpopen/ibm-cpd-hadoop-operator-catalog:5.3-20260323.000000-26@sha256:4355199bc8e84cfbb40a011ce32dade56b74594b7961bd5f19c9f5cbdeff37b7
+  - name: icr.io/cpopen/ibm-cpd-hadoop-operator:5.3.2-20260323.000000-26@sha256:3f1cb5b527a306ca23310f5ff41a938470d26345bb82be803a8b85d7a7d4e018

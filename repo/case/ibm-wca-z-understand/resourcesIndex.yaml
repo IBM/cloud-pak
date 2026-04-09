@@ -20,3 +20,31 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 1.0.48
+- caseVersions:
+  - 1.1.1+20260322.164935.2
+  category: catalog
+  digest: sha256:a3db1d35e61057cf71fc15284dfee183b369a91efdff0f31089895b2b9a61d9f
+  image: cpopen/ibm-wca-z-understand-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.61-amd64
+- caseVersions:
+  - 1.1.1+20260322.164935.2
+  category: catalog
+  digest: sha256:05456f6fe2b42fcf2499ee237a569415c6f4896fabe7c48822db89ba3f7f83f7
+  image: cpopen/ibm-wca-z-understand-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.61-s390x
+- caseVersions:
+  - 1.1.1+20260322.164935.2
+  category: catalog
+  digest: sha256:51e44e637d36968a8523c96ab2129f55412a26a4b2f66d4c02b5e7190a2016d2
+  image: cpopen/ibm-wca-z-understand-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.61

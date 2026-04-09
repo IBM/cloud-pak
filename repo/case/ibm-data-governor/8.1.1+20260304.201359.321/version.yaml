@@ -1,0 +1,50 @@
+apiVersion: v1
+case:
+  appVersion: 8.1.1
+  catalogs:
+    tools: {}
+    watson: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: A CASE for deploying Data Governor.
+  displayDescription: ""
+  displayName: Data Governor
+  icons: []
+  licenses:
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+        name: notices
+      ref: NOTICES
+    notices_slc:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES_SLC
+        name: notices_slc
+      ref: NOTICES_SLC
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-data-governor
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+  version: 8.1.1+20260304.201359.321
+  webPage: https://www.ibm.com
+created: 2026-04-09T23:26:41.13402566+0000
+digest: sha256:ecdf166ebec83c505d9fad474b8662d6109f43d182ec41b95262afee166f72d4

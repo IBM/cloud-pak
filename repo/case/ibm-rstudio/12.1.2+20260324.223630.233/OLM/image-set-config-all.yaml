@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/wslocal-rstudio-init:12.1.21907@sha256:b49620a4e1caf41929db82f45b9ffa934d1bf6ccd1dab3ba22361ee49855cab6
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-rstudio-241:12.1.21906@sha256:063ba0351365a4e946ae0d5e7fbfd077adcc412548faac2b4743e0136da8e98e
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-rstudio-251:12.1.21906@sha256:5d90c76be972da2adfad766e10da05ede61c249a5ccfb81dab28562283366997
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-shiny-241:12.1.21898@sha256:f6078f613526b9a51d8bfe9368d5c8497cfd3d50798edf30b66bd84861493106
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-shiny-251:12.1.21898@sha256:3d80d003194116f0c7cf506e0743acc22771a4e6a35961fdf23c09536aaa8018
+  - name: icr.io/cpopen/ibm-cpd-rstudio-operator:12.1.2-20260324.223630@sha256:68393288aa95f814b2beb0a5a334a9cd550b8f95a6e4f796b32c0974f86fcebd

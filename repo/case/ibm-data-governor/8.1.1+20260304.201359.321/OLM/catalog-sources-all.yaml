@@ -1,0 +1,32 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-data-governor-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-data-governor-8.1.1+20260304.201359.321
+  publisher: IBM
+  image: icr.io/cpopen/ibm-data-governor-operator-catalog@sha256:7610424aa44133c648df92863055b353ec743d261c632b0dcccc67f567e4a672
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-events-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-events-operator-6.1.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-events-operator-catalog@sha256:605d250cd54f8a6c83204de06544835a8a37073ff520199fbed978997f53922b
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.2.0
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:c20414136174ef24513560ca56204787fb4a3c3de8f84a490551dd63efb67a7f
+  sourceType: grpc

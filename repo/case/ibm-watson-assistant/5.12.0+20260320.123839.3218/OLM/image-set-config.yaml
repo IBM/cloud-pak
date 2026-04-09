@@ -1,0 +1,35 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/granite-8b-unified-api-model-v2:202406-v1.12@sha256:b09aa79cfa70c315e24f0f105c6648c074eb6d5f668308ba8d2f0f3c7a9d916a
+  - name: cp.icr.io/cp/watson-assistant/analytics:20260205-wa-icp-5.3.1-250-4c939d7@sha256:8c39343f8a5da843efa1889caa86a5eb6a61f1f6c8a02c4aec09f916819f5e3b
+  - name: cp.icr.io/cp/watson-assistant/clu-build-env:20260227-cpd@sha256:1a0007a31fab9afc901b1e6a165d9e38d21a82a78b8e27dcf32c8479f1bffc3e
+  - name: cp.icr.io/cp/watson-assistant/clu-controller:20260303-master-664-36ca986@sha256:6bbe90eff04607029ea6f9eb5b5285fae753a4349e80a4c40b4f0d5acb690514
+  - name: cp.icr.io/cp/watson-assistant/clu-embedding-service:20260306-master-372-8801dc0@sha256:c6522a3e6d27bcee6f487c7fc3df69e0f1f91f7e40a2918df2defa69df61076a
+  - name: cp.icr.io/cp/watson-assistant/clu-serving:20260306-master-911-fa23bb2@sha256:3ff56492f8e6107fde96db91169c38e6d4c318f57721f495d2e1df2a3e750540
+  - name: cp.icr.io/cp/watson-assistant/clu-training:20260306-master-911-fa23bb2@sha256:c610b042f965088985728823b51754249c36d9d30389bbe1cdc6348ff24fcbf1
+  - name: cp.icr.io/cp/watson-assistant/conan-tools:20260226-master-49-0434e7d@sha256:45ace6d3f86ff3da981d2dbbf5be070dfa81c38d2169c11c479f354ee180d793
+  - name: cp.icr.io/cp/watson-assistant/dead-letter-sink:20260305-main-253-a1831b8@sha256:aae5361e463dcf0ae8c704f3cb5ef1559f66ccf229e3fd7733fe1d2668cfeedf
+  - name: cp.icr.io/cp/watson-assistant/dialog:20260222-master-415-6283872@sha256:16c43645e02d6a9e2774988fd4dc6fc1574b4aa98dfb2f8d1e847af8f3a7ea99
+  - name: cp.icr.io/cp/watson-assistant/dms-controller:20260304-main-258-f13db41@sha256:25ba3f9cdc38a4298c56c2946f624993d6a7294b9271111f9c0c6b95bd30b97b
+  - name: cp.icr.io/cp/watson-assistant/dvt-bdd-ubi:20260218-000158_cea95b-signed@sha256:46edc64ce215ca939a381dfc362046e8490c478ee6bc392af28a7f3252a3dde4
+  - name: cp.icr.io/cp/watson-assistant/improve-recommendations-engine-x86_64:20260304-master-230-72bd0a9@sha256:597a48215a2b6a2a5b71c68646bfce280df746e6e7d0eff4ea5c75005f5b83b4
+  - name: cp.icr.io/cp/watson-assistant/incoming-webhooks:20260224-develop-194-4db3a26@sha256:54dc7962ef4acfd7ba503e24b8714f2a33e54119021f7a2575368014d5f70108
+  - name: cp.icr.io/cp/watson-assistant/model-mesh-intent-classifier:20260306-master-342-bae96f3@sha256:c45b6f88dd5535345a390f04239bb51f76c2a709b40d10c4361bea4524c5cf5b
+  - name: cp.icr.io/cp/watson-assistant/model-mesh-tfsa:master-20260306-master-255-78bea66@sha256:501f432055265ed07d0d8e03689154994518bfdbf16e549004f80279463f062b
+  - name: cp.icr.io/cp/watson-assistant/openentities-serving:20260306-master-351-4004b2a@sha256:c057369747ad7ee33ff576d02ed87cb25bcc403ec8f2bb3787207501bcddebd6
+  - name: cp.icr.io/cp/watson-assistant/recommends-rest-x86_64:20260304-master-204-6409ada@sha256:089fe2439be2fdc87ec8683b9aded71eb68bc4bafb7f04bb8fd3e463c57e9562
+  - name: cp.icr.io/cp/watson-assistant/servicedesk-integration:20260305-develop-377-654db25@sha256:ecd906a4d198ef80c198561064a428b309bda30944ec343783374eea54485317
+  - name: cp.icr.io/cp/watson-assistant/spellcheck-server-image:20260306-master-298-d80669c@sha256:6fe14fce59d1fb721de6dd7f63bfe56b8620c80133998a2a002106476080675d
+  - name: cp.icr.io/cp/watson-assistant/store-admin:20260303-master-320-f9c2a9a@sha256:f7b45680af56de8a4fc8619d7caff3c7b30f3900f9bda6db9bfd90fcce0f3130
+  - name: cp.icr.io/cp/watson-assistant/store:20260303-100605-897-6f1e44d9c@sha256:e75a37dd1ac4c24d33e5627a1651b23c7cbabf8f8268d602c47f75857eecb72e
+  - name: cp.icr.io/cp/watson-assistant/system-entities:20260306-master-322-30f6ae6@sha256:a6396ad9a629ee007ec184937aabe0014dce1cc55e1d4cf86bfb718e9bf1a0ab
+  - name: cp.icr.io/cp/watson-assistant/tensorflow-model-upload:20260304-master-215-ac06a8b@sha256:cb2cdb3b63de916f2a39d6738650be29a9d19670aae1397e18bae5f3a28d3450
+  - name: cp.icr.io/cp/watson-assistant/tensorflow-serving:2.4.0-add-reconfig-poll-patch-ubi-20260305-132850-241-bad8a6e@sha256:b9277b2afc102d464dab20de6d33642196711973a28e94332fcb58ff6d2ffcad
+  - name: cp.icr.io/cp/watson-assistant/triton-serving:20260305-main-287-bdf5af7@sha256:cea8b12bd5a53e3052f274324e94e3e69eb96f5e17f17d77f5d720bfd68e00e1
+  - name: cp.icr.io/cp/watson-assistant/ui:20260306-175415-755-89c046c2f@sha256:e70b650b29799bdadc0f897b7382e9e3cce3ef0d34f7519bbe389a4253e97f15
+  - name: icr.io/cpopen/edb/postgresql:16.13-5.31.1@sha256:c632b5ef78ab6686939e8f76543c08dac8cb77e7b30578b21eb0a0c8d3b0b020
+  - name: icr.io/cpopen/ibm-watson-assistant-operator-bundle:5.12.0-537228b1@sha256:d8b2c307262bf408e5acce9932f212c2629f89061088e19a302d9215aaa5e204
+  - name: icr.io/cpopen/ibm-watson-assistant-operator-catalog:5.12.0-537228b1@sha256:6c2a18ca4db8d79edd94d94cd92382387e30338f4b91fa23eb5505527ae6e6a3
+  - name: icr.io/cpopen/ibm-watson-assistant-operator:5.12.0-537228b1@sha256:ff0f1a7e182359ade19556266576867029df41b7d9507e9376bfde1192417ed5

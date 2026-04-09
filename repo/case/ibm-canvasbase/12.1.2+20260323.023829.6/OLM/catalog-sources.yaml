@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-canvasbase-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-canvasbase-12.1.2+20260323.023829.6
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-canvasbase-operator-catalog@sha256:e0bbae1faa39aa6c65bb97308c07955ae6f5e5d179110d05554715f9443f76b5
+  sourceType: grpc

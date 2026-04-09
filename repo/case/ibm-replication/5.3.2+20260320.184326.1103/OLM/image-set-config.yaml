@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/replication-apiserver:2.0.1790-release.5.3.2.6@sha256:05ac47b52ad534e8eb76f988e70b69c45995f39f512e824119e1d643b72f09c8
+  - name: cp.icr.io/cp/cpd/replication-engine:2.0.1790-release.5.3.2.6@sha256:1197e3d277628c2cc02238a6384041841f908217b57fb9b75b5adaec51da59d8
+  - name: cp.icr.io/cp/cpd/replication-ui:2.0.2288-release.5.3.2.4@sha256:abba33ddd53098b8a337081a4620dc869143b5275225d80e9f86f07cf119f11c
+  - name: icr.io/cpopen/ibm-replication-catalog:5.3.2-release.5.3.2.1103@sha256:f0b5878e51524bd1660431932d5f42054c9fddce61dfba3372ca668b906962ee
+  - name: icr.io/cpopen/ibm-replication-operator-bundle:5.3.2-release.5.3.2.1103@sha256:478eee1fa296386eceed63df7bd13bc00c17d62a35d091e4607e628d32c65159
+  - name: icr.io/cpopen/ibm-replication-operator:5.3.2-release.5.3.2.1103@sha256:83dc71fbbda6929ce4983e7fd6ec062206e3f1d51edf6063b715c0fca9afc16d

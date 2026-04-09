@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-fdb-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-fdb-5.3.3+20260323.141133.3-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/fdb-operator-catalog@sha256:c6f347caf4099bf80299549b1a986f1e6bd234c25e42a86b7531743216fa11ee
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

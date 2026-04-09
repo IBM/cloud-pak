@@ -2395,6 +2395,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:52b8178b795c4fe31fd892c67fc557bcee25915251f53a7eb07386ac8586ff86
   image: cpopen/ibm-db2uoperator-catalog
@@ -2409,6 +2410,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:716b1211500bdfea2fb284b6810a41f4d4aca6ca72b0474f66851767a0e7f211
   image: cpopen/ibm-db2uoperator-catalog
@@ -2423,6 +2425,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:f232f4899bc097398bb1a91e2a434b25fc26ad821526946b17a6e35495c4841b
   image: cpopen/ibm-db2uoperator-catalog
@@ -2437,6 +2440,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:d04c48016e64fd6c7b06945921b05e8aa6dcc7efacf043cb8800d31c2b941a38
   image: cpopen/ibm-db2uoperator-catalog
@@ -2449,6 +2453,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:20f355196f15206a33ca693de98ed1552eb4dd125de23232782cb109acc7c08a
   image: cpopen/ibm-db2uoperator-catalog
@@ -2463,6 +2468,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:c488f83a8d3297fedef9f2feb5d1c3647c459936a30224ff190845515ee85b76
   image: cpopen/ibm-db2uoperator-catalog
@@ -2477,6 +2483,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:692f0588bb3ff5ac4ed69b4cae68b2ac295658ebaf0f19529eb313cd56f8e906
   image: cpopen/ibm-db2uoperator-catalog
@@ -2491,6 +2498,7 @@ containerImages:
   - 7.5.0+20251202.114927.18415
   - 7.5.2+20260224.152548.19265
   - 7.5.3+20260313.144300.19486
+  - 7.5.3+20260323.180257.19599
   category: catalog
   digest: sha256:3c06cc9c618f3d029b97b6c9c6a2424a278b5488821faea3510a773580922c7e
   image: cpopen/ibm-db2uoperator-catalog
@@ -2801,3 +2809,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 19486-dev
+- caseVersions:
+  - 7.5.3+20260323.180257.19599
+  category: catalog
+  digest: sha256:557a20dd19619e1493c8b171c2f8bfabd61c745e3f0c365edbf9814ab24f8e50
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 19599-dev-s390x
+- caseVersions:
+  - 7.5.3+20260323.180257.19599
+  category: catalog
+  digest: sha256:14d09a72a30fcbfce4993ac903bf3b00d05d973cc9ef3949410cea0b94092c32
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 19599-dev-ppc64le
+- caseVersions:
+  - 7.5.3+20260323.180257.19599
+  category: catalog
+  digest: sha256:65ac0f3b86758e254919310e7213abb46c3aa20f26ec0268229d22a7a9386e7a
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 19599-dev-amd64
+- caseVersions:
+  - 7.5.3+20260323.180257.19599
+  category: catalog
+  digest: sha256:13141e771b9bb6b3e2504341573e62f51b42ec01c8e9c124ea3fd9d544a8b7eb
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 19599-dev

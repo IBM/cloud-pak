@@ -1,0 +1,29 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ad-core-server:5.3.2-3@sha256:de1cd11ff808a539c8200b6d7b55ae2056331aee8639d9941e1533b6b48d0aef
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00000:v1.1.144@sha256:f243f46daa894e52ceb378aa3b1341f4be510a0cc19ce7b9625a6009064120b8
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00001:v1.1.144@sha256:4aada17883c2281432ce77c52cb20374508f091c8fdedc0e90f2bc20564c7387
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00002:v1.1.144@sha256:6e34782e61eaa470bf83c57c7d4b49c9c92d3b4eb7a86c1d21202b20f86bf882
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00003:v1.1.144@sha256:1e4b47fdfb85b57825323ab185ae6195407c5b4716ae4a16e92d657e8a38ce5f
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00004:v1.1.144@sha256:f8756217540e178e1d66d7a156055f709303fc6620093931cdb4f2f580cb9914
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00005:v1.1.144@sha256:a6b956b48bb4c1c988590941cf4d911e70134b83e896d80ec258c4acb847e3f2
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00006:v1.1.144@sha256:c4d09ef9f9b5843ba2bf6a8d0508e62d40c2debaacd2124f9cd331ff85ee53e2
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00007:v1.1.144@sha256:6381b6a3ea8357b1022cbf5b05b86592f6beae9edea915e7684179804e696864
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00008:v1.1.144@sha256:45aa93e537eb901c6f1293f8a94ef4a4711edc2ef82edcab4f38c5581d076f1a
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00009:v1.1.144@sha256:ae5171f40a71ec39ec8c24c22eb858061dbe302c6c445d95195a317dca09a6a1
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00010:v1.1.144@sha256:0e37d821ae03539edb33a02f344cc7e6818bc43aac448787747792b876599e97
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00011:v1.1.144@sha256:da89968e1a80f16fd32ee3b6874532ed5ab2bee8096c3aeeb9d502b4ed52ebfa
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00012:v1.1.144@sha256:f2fdab24272762c756250dc861ceb2a50988890bd9abc3d8e850f5fdeb023e04
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00013:v1.1.144@sha256:c69dbdfa5adfba523a22732a7474d9f2f5361225ec99b691790b8e7a5140ed33
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00014:v1.1.144@sha256:b1e7cceef27fb69d492fbc43c3cf61fe0958b81237b370649f7b06061e5549c8
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00015:v1.1.144@sha256:7f174dc8f2e37b55c158819815bef15a1316a219b4e8f523baeb0a2e9c138772
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00016:v1.1.144@sha256:1b5048f57d3a822fdb4731edb11781c6e67b613ae83e7990a33bce386aebbb52
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00017:v1.1.144@sha256:977e8b48054c6f68dee30c85d62144c61e9f35eb0151f43fc9a511933049c459
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-cobol-v1-00018:v1.1.144@sha256:2f68927344b1233c22021e735dbb9c50a52a7e7eee2ec3be767a10d4565884d9
+  - name: cp.icr.io/cp/cpd/ibm-wca-z-model-gateway:5.3.2-3@sha256:80665cf2fa7bf160ee96335eee1ec5caf5d1b3acde9f1a1bb8e96e2f9fdd7bd8
+  - name: cp.icr.io/cp/cpd/wca-codegen-c2j-audit-log-sidecar:5.3.2-3@sha256:196534632d399d6d90cfaaa761ea88fff9221ec594f2b6738841cb5dc5ad3cdb
+  - name: cp.icr.io/cp/cpd/wca-codegen-c2j:5.3.2-3@sha256:15bda66af3f4be921505621cb3396800784b8887703a9c281cde7021c78f08cb
+  - name: cp.icr.io/cp/cpd/wca4z-common-yq-docker:5.3.2-3@sha256:68e5beb42f0a22aba5c4df72e108cde5a3405033b7dda40b07c4e2f315e51808
+  - name: icr.io/cpopen/ibm-wca-z-operator:5.3.2-3@sha256:70a39a58231f1ca66d602626fb54298cd26d95bfa1dec2519f4aac7b903010e3
