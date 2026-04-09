@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-bts-operator-catalog@sha256:4b50b922c347ea363a1c0da6f28ce70cf51d7ff9af03412b6779997a1cadc9cd
+    packages:
+    - name: ibm-bts-operator
+      channels:
+      - name: v3.35
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-bts-operator-catalog:3.35.9@sha256:4b50b922c347ea363a1c0da6f28ce70cf51d7ff9af03412b6779997a1cadc9cd

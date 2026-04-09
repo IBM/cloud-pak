@@ -1,0 +1,24 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:99e9d2c387395e31d40fec96c47b1cc7d4610eb3682369ab99d0f211fbd34eca
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.18
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2714@sha256:fd61ba81bd15d53e79ed8bc7467acf4e92b813dc8dac916e30231468efca2afe
+  - name: icr.io/cpopen/edb/postgresql:14.22-5.31.1-cpfs@sha256:6d74c43c7f6d016c28484d252607feeb2b1c5a2a0539db60bc685718d55cc770
+  - name: icr.io/cpopen/edb/postgresql:15.17-5.31.1-cpfs@sha256:1f31a3ab18f4f9d0ef852f4dd22300746150912e5a4731ed07195f9c79674e40
+  - name: icr.io/cpopen/edb/postgresql:16.13-5.31.1-cpfs@sha256:c632b5ef78ab6686939e8f76543c08dac8cb77e7b30578b21eb0a0c8d3b0b020
+  - name: icr.io/cpopen/edb/postgresql:17.9-5.31.1-cpfs@sha256:69e19c5ee470943d281445c670dac682e4963362ca9e8638b2623cbf27124e33
+  - name: icr.io/cpopen/edb/postgresql:18.3-5.31.1-cpfs@sha256:6a2e4c1108532a28d89b83e33d8206e543b63372e31f6831b997740de36d3b79
+  - name: icr.io/cpopen/ibm-cs-install-catalog:cd-20260402-1624@sha256:99e9d2c387395e31d40fec96c47b1cc7d4610eb3682369ab99d0f211fbd34eca

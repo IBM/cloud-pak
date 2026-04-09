@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-license-service-scanner-operator-catalog@sha256:fedf35a5169a7fc04b8dddf9c2d7a9a262d6d00f9fb001dc9c72062f13f51eaa
+    packages:
+    - name: ibm-license-service-scanner-operator
+      channels:
+      - name: v4.2
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-license-service-scanner-operator-catalog:cd-20260324-1502@sha256:fedf35a5169a7fc04b8dddf9c2d7a9a262d6d00f9fb001dc9c72062f13f51eaa

@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-usage-metering-operator-catalog@sha256:a97cef95c73ac6dacea010818757b4ed9b7440f4c0ec4154a091f248c68d1c9e
+    packages:
+    - name: ibm-usage-metering-operator
+      channels:
+      - name: v1.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-usage-metering-operator-catalog:cd-20260402-1624@sha256:a97cef95c73ac6dacea010818757b4ed9b7440f4c0ec4154a091f248c68d1c9e
