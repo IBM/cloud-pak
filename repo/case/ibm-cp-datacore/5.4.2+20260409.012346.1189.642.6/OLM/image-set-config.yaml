@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/cpd/cpdbr-api:5.3.1@sha256:2ae51c3528464e962989c95a428fd3f2bd9d56a709bdf9f28c6978b33211654c
+  - name: icr.io/cpopen/cpd/cpdbr-oadp:5.3.1.2@sha256:f3e0a4dfedfa68da945ce891647a4d7404e5dea465f7ca34643ffcd438079066
+  - name: icr.io/cpopen/cpd/cpdbr-velero-plugin:5.3.1@sha256:7750835814d78729bf9f793523c585286593d1a90baba5fe6802da694d2e1a00
+  - name: icr.io/cpopen/cpd/cpdtool:5.3.1@sha256:afad7f1684b8ff2c652520071f4e852791e42a253ccfb6f266a36a64a109246a
+  - name: icr.io/cpopen/cpd/ibm-network-performance:5.3.1@sha256:31d8f446a891abc25e1078e0a1c284d485f895e7d6f567dea310b727fd2f4eb2
+  - name: icr.io/cpopen/cpd/ibm-service-functionality:5.3.1.2@sha256:ea713b0a1db1d6fc2c8dd4a99c99c22cb5eda7820ec8ab8327e9b5c8107a843e
+  - name: icr.io/cpopen/cpd/k8s-storage-perf:5.3.1.2@sha256:4c9c0dd71ee5888faef4a5805320fef6ae27f8091bb5bc2e1567becfeae2ae5f
+  - name: icr.io/cpopen/cpd/k8s-storage-test:5.3.1@sha256:5934d88a6671149f4440cc49fd8d3d1a5dbf69bfa0d37091c0c2c17585c4eec7
+  - name: icr.io/cpopen/cpd/olm-utils-v4:5.3.1.2@sha256:1a1ef87aff99b06bdbdf40bf41449d878ab2dbad252cdd60b9a0c7d8f80f439e
+  - name: icr.io/cpopen/cpd/swhub-velero-plugin:5.3.1@sha256:06e13264f215d724daff29c03be3d9bfdae5c96d71fb76be2bc434092b6c35c4
+  - name: icr.io/cpopen/cpfs/cpdbr-hook-utils:5.3.1@sha256:3b6f328e980015698da61eaf56f3edf25d680be6f5a99751974d17f8eb1cbe4b
+  - name: icr.io/cpopen/ibm-cpd-platform-operator-bundle:6.4.2-6@sha256:f1ee08d4525affce789c4e7fdacf7276076df924d8892345e82ddde9e2adc910
+  - name: icr.io/cpopen/ibm-cpd-platform-operator-catalog:6.4.2-6@sha256:84bd93d08996b1ac624e0432b2a3f6fcce30cbd490ffc95b7016bcc11b692652
+  - name: icr.io/cpopen/ibm-cpd-platform-operator:6.4.2-6@sha256:d8a6baa5658e611f11556c515f6334a8642905e647063e57e7ec6dfd5fbc71c3
