@@ -1,0 +1,34 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/df/ceph:v4.16.25-1@sha256:84ea2e2705f5e380beca2a68aee54be849fc9ea3d9e5f3ea90f0d9c4b94cd756
+  - name: cp.icr.io/cp/df/cephcsi-rhel9:v4.16.25-1@sha256:c31f5132e41def96efac063a1b239f6c8bb896e2b5ebc2a57045f7042ed2a287
+  - name: cp.icr.io/cp/df/mcg-core-rhel9:v4.16.25-1@sha256:25bfc95673803a19a3abde17ff1abc25dd35a378fabf18f769a72ae91cfe7fcf
+  - name: cp.icr.io/cp/df/ocs-client-console-rhel9:v4.16.25-1@sha256:7862cc984f46d1f0f1eb4130d1f478c29608df795644447de3b4d9f6df20d41f
+  - name: cp.icr.io/cp/df/ocs-metrics-exporter-rhel9:v4.16.25-1@sha256:ab6dacd604bc2f4a5b2a0840369601453c5c8383f7d709a57b1d691c7f3c392c
+  - name: cp.icr.io/cp/df/odf-console-rhel9:v4.16.25-1@sha256:71134c37ea7f231c161126f189a3e19c8aa2e38c686c9e9f039ad6bf52df0384
+  - name: cp.icr.io/cp/df/odf-cosi-sidecar-rhel9:v4.16.25-1@sha256:68e4ca9f4087617ac3d81b76262e95978b63e4567c47be053b62d44f80d3252c
+  - name: cp.icr.io/cp/df/odf-csi-addons-sidecar-rhel9:v4.16.25-1@sha256:da6ed81e52685ec5473be19ecd5f7b9dbfb7bbaa0741384cf4e1fb8bdfc053d6
+  - name: cp.icr.io/cp/df/odf-multicluster-console-rhel9:v4.16.25-1@sha256:83aba35a65e3f0dd9f3ab134e4fcfcb3ac84e47a42ae14c1214ed07bad8f7559
+  - name: icr.io/cpopen/isf-data-foundation-catalog:v4.16.25-1@sha256:611292f4f3e9a396ae13996d97e3bb18c4ffd936dbeb012d3d2acf7af5a307f8
+  - name: icr.io/cpopen/mcg-operator-bundle:v4.16.25-1@sha256:c0b7a2a780319fae88768e999b967cc4ff4535f063f1a857fca02bf8b662e20f
+  - name: icr.io/cpopen/mcg-operator:v4.16.25-1@sha256:a973ee74dc118d4f960cecf2998b2bfd419c735511e08edec58188ace41f40f8
+  - name: icr.io/cpopen/ocs-client-operator-bundle:v4.16.25-1@sha256:d94a126adffdf20b1bf4006813df4c2855f79acff55f873fe3f47df6d6dca18b
+  - name: icr.io/cpopen/ocs-client-operator:v4.16.25-1@sha256:1cb25c7130b5c0f5afceb0f0560487647c1f76ffcc67ae44fb9022fd26f62ec7
+  - name: icr.io/cpopen/ocs-operator-bundle:v4.16.25-1@sha256:760fa1c566650878360d074c34d11c9db2df9c4aea61803efb8a72e6d2a28063
+  - name: icr.io/cpopen/ocs-operator:v4.16.25-1@sha256:4ad7f9ba72874d7023848913bd278732730b67ffecf5ce8073c3ff4dc4a412eb
+  - name: icr.io/cpopen/odf-csi-addons-operator-bundle:v4.16.25-1@sha256:b7c5f637906c79e79895077e243211129edec29dbe436b56f91c7e626ab89c0f
+  - name: icr.io/cpopen/odf-csi-addons-operator:v4.16.25-1@sha256:80ca73f54e58e858242a39be607bec8ec93cf3e455a3fd87bf77efa5c60f1b2a
+  - name: icr.io/cpopen/odf-multicluster-operator-bundle:v4.16.25-1@sha256:995819f686ddbce30eca7c8b5246ede3ed8b441de099146e7988e9e537423a6f
+  - name: icr.io/cpopen/odf-multicluster-operator:v4.16.25-1@sha256:d243003bb19be125da3d5df35e811b455b78cbeea7705c95b37b47f5736420df
+  - name: icr.io/cpopen/odf-must-gather:v4.16.25-1@sha256:ea5132ea73c30d17e713904f09edf9c1c0005a585c637f129254ed027b6f1771
+  - name: icr.io/cpopen/odf-operator-bundle:v4.16.25-1@sha256:dc42cf97dc635c62f33337001f8c65fd1248a3aa1fa2785926864acf23047b17
+  - name: icr.io/cpopen/odf-operator:v4.16.25-1@sha256:72cc904bbb32ebc1c75654a80d2bc15472d7022a81914015a425b26fb47689eb
+  - name: icr.io/cpopen/odf-prometheus-operator-bundle:v4.16.25-1@sha256:b8e91b65375c055c2fc9f1b3dcb86a2ba75773986945ed4bf131c553643cb99f
+  - name: icr.io/cpopen/odr-cluster-operator-bundle:v4.16.25-1@sha256:47dd6078516d22e5b4ecabdc3b127c6a376b5c3d497aa34a02c9beaf1ce388f0
+  - name: icr.io/cpopen/odr-hub-operator-bundle:v4.16.25-1@sha256:338a516da89fc8117624e43f117789d75a43bae0a9d37664cfc8f81e5c4d358b
+  - name: icr.io/cpopen/odr-operator:v4.16.25-1@sha256:bf0804f3fb9651f0d3d41c361b9767e255912e4247b6fd7908e11f72e2d8be73
+  - name: icr.io/cpopen/odr-recipe-operator-bundle:v4.16.25-1@sha256:d5c08f012555d0d452e399edb2266f594cc8293dc257ea6fb35fae4968351b6c
+  - name: icr.io/cpopen/rook-ceph-operator-bundle:v4.16.25-1@sha256:82b8d5366547ed71bad236c9471691983dbdae03e795a642168d11f1d774e75e
+  - name: icr.io/cpopen/rook-ceph-operator:v4.16.25-1@sha256:a7c4e19d864b8cd7561c2535f09d005ef866c9276a82ae34cd47f2587aabe852
