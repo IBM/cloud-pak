@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-sfg/sfg-customization:6.2.0.6@sha256:d5e4aec1b6fe515123ffecfbe0b2500a50cbccf1893a7538957a13d6fcac0e9b
+  - name: cp.icr.io/cp/ibm-sfg/sfg-dbsetup:6.2.0.6@sha256:31a167a757aa19d1bc81b1162ebdce9c6752bffbe5c918ad71a7f8b9e831ad19
+  - name: cp.icr.io/cp/ibm-sfg/sfg-documentservice:1.0.0.6@sha256:86a699f263ee3c634c9b277ca5e3034a6f158c9aa7722b5f97df4937423ed5bd
+  - name: cp.icr.io/cp/ibm-sfg/sfg-ps:6.2.0.6@sha256:e87a2b794335ff24b4c365da804261ed436cd54400f5d78fc63d931cedf2c851
+  - name: cp.icr.io/cp/ibm-sfg/sfg-purge:6.2.0.6@sha256:97f69f93fad60dc4c8e0e34695edb453a3072fec60d1ade9ae2d0cf1173d4bd2
+  - name: cp.icr.io/cp/ibm-sfg/sfg-resources:6.2.0.6@sha256:1db832b9fbe0c843e240c5bd5fae8695d415f75dd7d10fd95399a8ac3da888ac
+  - name: cp.icr.io/cp/ibm-sfg/sfg:6.2.0.6@sha256:f5d35eda505ff31a59de715e3e465007553328a6cc54d026c58984e541ae2114
+  - name: cp.icr.io/cp/opencontent-common-utils:1.1.69@sha256:122ba7c754148d1a95a45a4a531fdf0a7ac90066cc965b8495d2301b93de96ab
