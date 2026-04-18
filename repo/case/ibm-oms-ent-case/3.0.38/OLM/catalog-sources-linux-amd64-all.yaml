@@ -1,0 +1,41 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-oms-ent-case-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-oms-ent-case-3.0.38-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-oms-ent-case-catalog@sha256:9693a9c7096402004cada042a5f2246c41d3743f59115b485be01f6dfd30de44
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-oms-ent-case-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-oms-ent-case-3.0.38-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-oms-gateway-operator-catalog@sha256:3f1da4ccd39c6ae896dcfe8326b69f3f2bf0a61ac8229afd06c763c92aa28c38
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-oms-ent-case-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-oms-ent-case-3.0.38-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-oms-sip-operator-catalog@sha256:17e1875ea99539d38d2c27ec09affa8bde499f8465eb80fc1c31ca39b8c85864
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
