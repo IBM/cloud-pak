@@ -1,0 +1,27 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-eamhub-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-eamhub-5.0.3-linux-amd64
+  publisher: IBM
+  image: cp.icr.io/cpopen/ibm-usage-metering-operator-catalog@sha256:998d77b1c66a9e6c08ec6cc95f97982c5d3720bc57eea3306d681d5b8dc2eee7
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-eamhub-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-eamhub-5.0.3-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-eamhub-operator-catalog@sha256:d1059ab85e207ec364dc75ccb5f887ab0cb69cc1d2b26f7a2465570609ffc7f5
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
