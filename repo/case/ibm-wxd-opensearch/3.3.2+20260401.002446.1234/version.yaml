@@ -1,0 +1,62 @@
+apiVersion: v1
+case:
+  appVersion: 3.3.2
+  catalogs: null
+  classifications:
+    commercial: {}
+  description: IBM OpenSearch Service
+  displayDescription: OpenSearch is a search and indexing engine for building fast,
+    scalable search experiences. It supports multiple search methods, enabling hybrid
+    retrieval. This allows developers to create richer, more intelligent search across
+    documents, products, and other content.
+  displayName: IBM OpenSearch
+  icons: []
+  licenses:
+    apache2:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: apache-2.0
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    licenseNonIBM:
+      mediaType: text/plain
+      metadata:
+        displayDescription: non_ibm_license
+        displayName: non_ibm_license
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: notices
+        displayName: notices
+      ref: notices
+    watsonx-data-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data license for IBM Cloud Pak for Data
+        displayName: watsonx.data_license
+      ref: watsonx.data_license
+      url: https://ibm.biz/Bde2Jw
+    watsonx-data-premium-license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM watsonx.data Premium Edition license for IBM Cloud
+          Pak for Data
+        displayName: watsonx.data_premium_license
+      ref: watsonx.data_premium_license
+      url: https://ibm.biz/Bde2AL
+  name: ibm-wxd-opensearch
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 3.3.2+20260401.002446.1234
+  webPage: https://www.ibm.com
+created: 2026-04-21T19:55:55.85314234+0000
+digest: sha256:f738cac6180bc4dca36d6c30d10f0ac52ee84b1c405ccd2f150a23f54ad8f40c
