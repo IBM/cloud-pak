@@ -1,0 +1,70 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:c20414136174ef24513560ca56204787fb4a3c3de8f84a490551dd63efb67a7f
+    packages:
+    - name: ibm-opensearch-operator
+      channels:
+      - name: v1.1
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/asset-files-api:5.3.1.2828@sha256:4bdc7ec71e621b82ccae44892d6b963653115eba9d8c368714d201aafde4418d
+  - name: cp.icr.io/cp/cpd/catalog-api-aux_master:2.0.0-20260317193345-ea7814d8f5@sha256:a2fc77de49abb854771541dd8267ab5b9cbbebfcc63bee01790213838a17e4e3
+  - name: cp.icr.io/cp/cpd/catalog-api-jobs:1.0.0-20260310163909-3ef24692@sha256:5694b59a98e29f6a0311de9fe387d9feacc0c65a1a7ef554077aa35960a0756b
+  - name: cp.icr.io/cp/cpd/catalog_master:2.0.0-20260317193345-ea7814d8f5@sha256:527ac1aea40533e249b00a910ccd5e6da73c4eedee4b497a6f9f0e6a6d1a2583
+  - name: cp.icr.io/cp/cpd/couchdb3:3.4.1-ubi9-619@sha256:fd2a86efb30dda868ed9279d759eeb1e1c30eaa036308703ec0f8ea032f1ddbe
+  - name: cp.icr.io/cp/cpd/dap-base-job:5.3.1.2519@sha256:4e681b5116ecc914f6a2fb88e2713271b76401314af920435c5ae6a04a9d3c9d
+  - name: cp.icr.io/cp/cpd/dataview-api-service:5.3.1.1168@sha256:5b3e27e9932b8224287148a50165fcaad0b136eeacddf9b6bdc99976b7018b99
+  - name: cp.icr.io/cp/cpd/dc-main:3.0.164@sha256:a745becf4a7f33d4419fa8c0bf12c36b3a790eb59aae7ff539c4442c0cd3ceb3
+  - name: cp.icr.io/cp/cpd/ds-assets:531.0.5@sha256:9d705f59e94bae3c2a8d4a3aec5f987f8f911a1036de6b5f3bc2588dee615afe
+  - name: cp.icr.io/cp/cpd/ds-canvas:531.0.31@sha256:b5af851cc7fe41f4b4af2752eb511e39a538ad64dfa0a18a460f5185f0f774b2
+  - name: cp.icr.io/cp/cpd/ds-cas-lite:531.0.6@sha256:e0bd6dfa43421cd9a2137495d995bc870986da54407b6918a35905bb819c2bf4
+  - name: cp.icr.io/cp/cpd/ds-dataservice:531.0.5@sha256:8fd9063ac179817c8ea9ce5f2629ad70c923bf2d7aa99960ce7e7ec970809ccb
+  - name: cp.icr.io/cp/cpd/ds-flows:531.0.28@sha256:997d5613f5ba178f53dddf84179ee9f13cee09f5c43daa9b8ef869f29e2ee022
+  - name: cp.icr.io/cp/cpd/ds-metrics:531.0.5@sha256:6858dd22737ca5c21da3a74c665e69b30ce4f760e98c173c2d247e4641cc427b
+  - name: cp.icr.io/cp/cpd/ds-migration:531.0.10@sha256:d9228accf0aca5416b400db291fcda9ae573a460fe535449ef1d218761b2af1a
+  - name: cp.icr.io/cp/cpd/ds-nginx-proxy:5.3.1@sha256:f20d61b123f899fb5ec6c75caf6e1490b47776f94fdf1697710fff25708fbe77
+  - name: cp.icr.io/cp/cpd/ds-px-compute:531.0.17@sha256:ed2c307ad638639195d9dfd365578a6e4bdaa153cdf71207c48ba56b40928fbd
+  - name: cp.icr.io/cp/cpd/ds-px-runtime:531.0.17@sha256:a122f2b67bf5438c72ebc67217f1863053d3ffb69d6b10b56c8f86aff34a09c7
+  - name: cp.icr.io/cp/cpd/ds-runtime:531.0.6@sha256:c021f458dc5536864b44dc724f71c312b7140546e2f9ab8a4258d7f840b279fb
+  - name: cp.icr.io/cp/cpd/dsx-requisite:v5.3.2.18@sha256:56233f5a2351e0ea173b1282548bce77b9bae998aa57af8a0faa8c60d82a5e7b
+  - name: cp.icr.io/cp/cpd/environment-specifications-sync:12.1.029@sha256:decbe3af394705e020214cda24d90a98d9a6a99e8b4deed6cab64de26f95dfd1
+  - name: cp.icr.io/cp/cpd/environments-api:12.1.029@sha256:2f2e02f7e22bbc3de10573b4aadede76575db0f6f230b6b0ea87a0ea971100b7
+  - name: cp.icr.io/cp/cpd/environments-init-job:12.1.029@sha256:4b1c706976c6f97ad59d1a7f237a6467b510930ef9b59d19fd93afe3d919546c
+  - name: cp.icr.io/cp/cpd/environments-ui:12.1.029@sha256:90fcd60b56e68bed070fc4cd31072d089708f0a0127b806d16616c220ee7e616
+  - name: cp.icr.io/cp/cpd/event-logger-api:5.3.1.2814@sha256:47983255167452d9c8ed14316b8b0cf75c3a45ae97a563c1bc7ead4b04816fe1
+  - name: cp.icr.io/cp/cpd/haproxy:3.2.4-ubi9-464@sha256:bc1081c6aa7a5d44ca84ecf44a08d705c42ad17cc4518acdc1c4f84df26aea3b
+  - name: cp.icr.io/cp/cpd/job-trigger:5.3.1.2856@sha256:b29c77219c70231a92276aeacea682bc8e82cc7f247369cbb69d58c31af86909
+  - name: cp.icr.io/cp/cpd/jobs-api:5.3.1.2855@sha256:5eec0ab31ba374901ee11ae0daf9e0ad4bae9dae5edb2039f4c15c059d111cb0
+  - name: cp.icr.io/cp/cpd/jobs-ui:5.3.1.2857@sha256:e063cdaa810a57788a1da166b35e15a32cc0727f9e005305cc7f7c76d1c81dfd
+  - name: cp.icr.io/cp/cpd/ngp-projects-api:5.3.1.2834@sha256:1a1bd79db3e9272a752651f08e573e9cf1db59e5afcb7da887e4ae1d1032ce33
+  - name: cp.icr.io/cp/cpd/portal-catalog:3.0.145@sha256:c2ff40dd097ada250609e65d90e5310f8d941b8166d649c05dd6b8a2625a7ac6
+  - name: cp.icr.io/cp/cpd/portal-common-api:5.3.1.2831@sha256:f3717115b943abc67205a68d64742fe1bdd1cf2a08dc458a91db648b4f297793
+  - name: cp.icr.io/cp/cpd/portal-job-manager:5.3.1.2836@sha256:96808db12220ec90f530fcf9ecb9a6bef203de2ba89845ed50562aa74d9160da
+  - name: cp.icr.io/cp/cpd/portal-main:5.3.1.2845@sha256:ba449a16c34ce33c0a9d4c1f2bd28e0f96ede4a37aa40f5f3f156500f7e8cdad
+  - name: cp.icr.io/cp/cpd/portal-notifications:5.3.1.2812@sha256:4491ddd2041895e4850a1a0e82c18e9a947532514dee9441b9f0e108644bda77
+  - name: cp.icr.io/cp/cpd/portal-projects:5.3.1.2849@sha256:cdef553b6eaae246efb38dbfb78a29f16dd56af3f916fb87ed5290037c714847
+  - name: cp.icr.io/cp/cpd/qs-ruleset:531.0.5@sha256:1a7f69b8bd2888b1f856aed076949ebe04703483846bf7cc1dd279734a5ebfb7
+  - name: cp.icr.io/cp/cpd/rabbitmq:3.13.7-ubi9-575@sha256:5da8816c31dc69f49fd7e83670172a287637e1d3f3e774ecb8bc24f5629dc872
+  - name: cp.icr.io/cp/cpd/redis:8.2.3-ubi9-601@sha256:092002efd9ec52d6b83f7a82f7b41c2e3fd53c2cd921e1885cc5cb36b1f4b47e
+  - name: cp.icr.io/cp/cpd/runtime-assemblies-operator:5.3.1-2695@sha256:5c9547c596e7bb09c1ef79a2a80a735ba64cb896912967221378cddf08659a53
+  - name: cp.icr.io/cp/cpd/runtime-manager-api:5.3.1-3208@sha256:5cbbd6d6841e6641e8e7a30b55c27d9b53b13588dde926a27640e54ce76ce343
+  - name: cp.icr.io/cp/cpd/spaces-ui-job:5.3.1.2848@sha256:c64f363fc8a9139e4ff991c24060a84f490d942496f2345740dab5c07ef0bc2a
+  - name: cp.icr.io/cp/cpd/spaces:5.3.1.2861@sha256:c3442858dda4fd7bea9b64dd5067af4ed22828b699a2c1b573f94b3c66ea3076
+  - name: cp.icr.io/cp/cpd/task-credentials:5.3.1.2277@sha256:433242696281e01b36850fb1939e736cfcc4ead7edaf864efce5f752361e646a
+  - name: cp.icr.io/cp/cpd/wdp-connect-connection:12.3.325@sha256:f249e44bd1fb6f35cc7470374d175dbf1ffdedd3561b98c12d1646737fe47d71
+  - name: cp.icr.io/cp/cpd/wdp-connect-connector:12.3.325@sha256:57d0ef1641ad04b0fcd9d52cf5bf66aa98eeb2ad1c367caa520c340a4fd959fd
+  - name: cp.icr.io/cp/cpd/wdp-connect-flight-svc:12.3.325@sha256:5bcd98e28a13bda62ba9ae17cb0c1ebeabb13e8560f420251df77a4ac4eb1b0f
+  - name: cp.icr.io/cp/cpd/wdp-dataview:5.3.1.1520@sha256:df2a7f5f8d8b66abaf62778a07ad192c895363ffd4fdb0a6822ff7b5b563c91b
+  - name: cp.icr.io/cp/cpd/wkc-init-container-ccs:2.0.641-ubi9@sha256:92c6f3f400a91d42ed3ee748c12a561becb6cb0d5c91938f1dc3662793d3f3b0
+  - name: cp.icr.io/cp/cpd/wkc-search:5.3.12009@sha256:f56eb5767e702acf81c3e2106a65333459c7bf9a29b720f65103f4f7519a7bf3
+  - name: cp.icr.io/cp/cpd/wml-asset-registration:0.1.196@sha256:c0fc2d8834360d43de9a46d90ba80a1a902a30b6647a702cf1e933fd346ad636
+  - name: cp.icr.io/cp/cpd/wml-main:5.3.1.2847@sha256:f5799e97df5ada858ade4a067cea20ea51d182def2995a1430b5e725d3bf9a0c
+  - name: icr.io/cpopen/ds-operator-bundle:5.3.2-8@sha256:563f56e99e81d17c00854f440e351036b38eaf59f8c2b7c2453586581d6fb73f
+  - name: icr.io/cpopen/ds-operator-catalog:5.3.2-8@sha256:678b585947f334630ba0b0cbea511d51a1d585bed284309c1a1650df244b41dc
+  - name: icr.io/cpopen/ds-operator:5.3.2-8@sha256:019f36bdafc23cd62050aa34e62a79a9480dd48136d8607bd5fc443596a3c013
+  - name: icr.io/cpopen/ibm-cpd-ccs-operator-bundle:12.1.2-20260402.132309@sha256:99e8f454c0b565181cd5fe1883b240515ba0ce5819258e092f5fba8229e5833e
+  - name: icr.io/cpopen/ibm-cpd-ccs-operator-catalog:12.1-20260402.132309@sha256:42b114e735f3d0501c3ada562866bcde68d6111a2e853c028cf7d4be1ef6ef5d
+  - name: icr.io/cpopen/ibm-cpd-ccs-operator:12.1.2-20260402.132309@sha256:25d654bb132ed7cb8e5b94a3117f55cc2c303084a48f96f64457e113a3ec5d77
+  - name: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog:1.2.0@sha256:c20414136174ef24513560ca56204787fb4a3c3de8f84a490551dd63efb67a7f

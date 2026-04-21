@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/dp-api:5.3.1304@sha256:81cdead55925def0e35441a464989cfb9a3649a5c2568f558806b5f0e69e6430
+  - name: cp.icr.io/cp/cpd/dp-privacyprocessor:5.3.1304@sha256:d155d6ca99cc34097dbb63b56849f791ba96a2912e5adb8427d5caea25327564
+  - name: cp.icr.io/cp/cpd/dp-subset:5.3.1304@sha256:9ac3648446230f4bd7442a6426d7021357dc3a0ff1d5b8a2c6c4691e3a988e2e
+  - name: cp.icr.io/cp/cpd/dp-ui:5.3.1306@sha256:88a1de2c78a2e529616a92c11a45a7b61c02ce992ffaf664570c058648c6b0e6
+  - name: icr.io/cpopen/ibm-cpd-dp-operator-bundle:v11.1.2803@sha256:9412f9b86d42988d8d9678513291e991f6ad34fcca035cb7348c6cec4521bfe6
+  - name: icr.io/cpopen/ibm-cpd-dp-operator-catalog:v11.1.2803@sha256:eb85f42846fefa6693b22480e870d32c8159e0723e47b6f68a93a802d1e81386
+  - name: icr.io/cpopen/ibm-cpd-dp-operator:v11.1.2803@sha256:65deb9a8db3da2f419766e62a496f5f7568ba469381382dec71dadc881cabf4d

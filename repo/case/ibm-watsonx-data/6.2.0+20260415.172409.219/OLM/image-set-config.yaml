@@ -1,0 +1,35 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-acl-manager:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:3702960e61812e83dc9a31cda9d47ba4df2f3c5ab11c62d9ac91bf0f1aa63cba
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-advance-retrieval-service:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:63ff531ad458ec2f6f23d949b6204dc306e791bbebbd87f30257443d06431162
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-cas:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:815ce781eaf2f3867c7eb21f33725d07f2e08ed45a3ec28108a7f6dcca9795f4
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-ces:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:90bbf4304555b72ebcaf1f2038e91dd2f29ab8ff686edb9c468623dead7b0963
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-control-plane-prereq:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:6908c325587a995d54adab0e48756bfc784cd85d6758f48401a11c335a0eb381
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-cpg:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:76da23b32ef4002e2c32f82a9b0a846a4b652b82d06344543f3d5fd31c6112c3
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-etcd:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:6b2cbdb2c76b1e63dd41a5d0055ca8e1ecd19b6a393311beacb1eaf85b8c9f60
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-kafka:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:6605018d6511d3d17fff4275d0a623e4f48a35d16bf0a7d46361ee520399c652
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-mcp-remote-server:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:669097d76dc89e8e823bb9cf4c0139f81bf29477483cc31c1a61aed680281c37
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-mds-rest:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:a46e858481b5f1b8fb33aa06e6c95755a2a8dd1b642cb646d42a9205730d4dcd
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-mds-thrift:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:e6a97fd65fcdaca0212126f3c65866cb8d8fbe315ab4d321c94751e02f1bcb21
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-milvus:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:a5de956bd8fa4c66f9b9cf56d8988194b6a8831be1f616927f3fe03c95e4d460
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-minio:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:281584c881090339813cb6085a18ff9cd749df3793b3f750390e8e95f5495c5d
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-otelcollector:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:1ab72b174919db83c982ffdc7d2919af4693aefa21ab07a619329d185a53a037
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-prestissimo:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:4e2551b4a6295af32a3f78fb8ab93e294b199163307d1a72c5fd23ed16498824
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-presto:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:67a508197684ab86da1bd5e1472b32435ee776f82fd156b72d9e5f7f6e1b5afe
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-qhmm:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:5ef2671a68459bb33eb06186593f9f98a03e46a22c680a2facf94ee846b3abb8
+  - name: cp.icr.io/cp/watsonx-data/ibm-lh-validator:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:c1e395c1b57844c3473cba440b1400801547d52d78b7e7389b128bd97a5e29bf
+  - name: cp.icr.io/cp/watsonx-data/lhams-api:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:766f0a2997da8632afea331603ed401f7f95d9018ffbb5f71067f18248ba4991
+  - name: cp.icr.io/cp/watsonx-data/lhconsole-api:2.2.0-223-20260323-213746-onprem-v2.2.0-hf4@sha256:22c528a02a19207d69d77e17be37572a6b2c1e0e7e5985ab8a321dc325794bff
+  - name: cp.icr.io/cp/watsonx-data/lhconsole-api:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:41f0a8c1fb8598700cdff50d86160ed54787cc36d89138ebfb4fe4ebb599a573
+  - name: cp.icr.io/cp/watsonx-data/lhconsole-nodeclient:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:a20e82fbc69bde2125f46e283d7de130a7c7f551196e222b93dcac1fb7ea7df4
+  - name: cp.icr.io/cp/watsonx-data/lhconsole-rmq-listener:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:45e782f85dcf4999fd4c16ac47d2aa3d9f1c33f6359ff1f3aabaaf6d595afef0
+  - name: cp.icr.io/cp/watsonx-data/lhconsole-ui:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:ad7fa3e785b5ba53c6a163a9a70de3d32bc329d344719913e8bfe202df59336c
+  - name: cp.icr.io/cp/watsonx-data/lhingestion-api:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:a8e4415ed5488b9d9ee2fd6cfd80e352281d352ef1b76652de9d19564cc1db4a
+  - name: cp.icr.io/cp/watsonx-data/lhplatform-api:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:b8499de965478cc63963642e718a34b9e673d41f73e5ae9dd04c2d221ca74116
+  - name: cp.icr.io/cp/watsonx-data/lhplatform-ui:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:8f18847d0fbe21810fa006db6b362b77a94eabf9f87b2d1fcc9621a3853070ba
+  - name: cp.icr.io/cp/watsonx-data/table-analyzer-service:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:d9878c31e66761e32cd9d8474795b469723ede967e55c1a4529be5be0b327136
+  - name: icr.io/cpopen/ibm-lakehouse-operator-bundle:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:3dd9e246d06bfb324c3cc1386beb9cfb7e9fb21a774706a39d382337a1fd7303
+  - name: icr.io/cpopen/ibm-lakehouse-operator-catalog:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:788b1ace511bb0d0156d84e7dfca769d8dd9cd8d8c65d8f72f3dc047c6656f79
+  - name: icr.io/cpopen/ibm-lakehouse-operator:2.3.2-219-20260415-172409-onprem-v2.3.1-patch1@sha256:ffd93d4e8fc120a18455e53a64220279fb4d47dc467c3dad8f3183d6fabd0a2a
