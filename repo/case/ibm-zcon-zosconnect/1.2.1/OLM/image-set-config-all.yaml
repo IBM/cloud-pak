@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-zcon-zosconnect-catalog:v1.2.1@sha256:e9bf57f9af9987b32f8eed4250f6ea42fd81985f2c35c4d039744fabb029488a
+  - name: icr.io/cpopen/ibm-zcon-zosconnect-operator-bundle:v1.2.1@sha256:dfed4478c44ab9a1ca432be2489313384f59ba7e9b004d8b373d65f6716b8b95
+  - name: icr.io/cpopen/ibm-zcon-zosconnect-operator:v1.2.1@sha256:d168ed2dab312ef7e5203cdf530fe433076595d9abaec1664b43acd46b5045a8
