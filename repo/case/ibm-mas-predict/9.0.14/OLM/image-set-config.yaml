@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/mas/kubectl:5.0.20@sha256:61bc875d64a472380e690ea485300b35c0491aaf68368664831a2a8db8161bbe
+  - name: cp.icr.io/cp/predict/explainability:1.7.12@sha256:e3578ea0c0616a0bf62714c1da1d933df35a53c7b805f17cedc74307cce20fba
+  - name: cp.icr.io/cp/predict/ibm-mas-predict-ws:9.0.14@sha256:0d43256dc8f53edd141b2dcfd606c0fd5810cd91d61a02d40a4c8ba2ac1fc7f2
+  - name: cp.icr.io/cp/predict/mat-service:1.5.3@sha256:82b8c8d7e6fd4fb05d50513fe9141217264aba6fa20dce1fb9a3af12b2153080
+  - name: cp.icr.io/cp/predict/predict-api:6.0.19@sha256:ff35b24e480fcb097f81b7fa1e210866e15fd5aa7b5362663a0c2674c704bdfc
+  - name: icr.io/cpopen/ibm-mas-predict-operator-bundle:9.0.14@sha256:0e928198babcfaf112ef070a06f48b0b509d7aefaa84b266944b3e42433ecbc0
+  - name: icr.io/cpopen/ibm-mas-predict:9.0.14@sha256:6d5f9c70acc19decaae9e858bcb8077d602ae7f62cf9b8066e32d919d8139bc3
