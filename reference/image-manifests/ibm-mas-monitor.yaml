@@ -10,6 +10,7 @@ images:
   - image: cp/monitor/db2-dataingest-ciscodnaspaceinputprocessor
   - image: cp/monitor/db2-dataingest-ciscodnaspacereceiver
   - image: cp/monitor/db2-dataingest-datameter
+  - image: cp/monitor/db2-dataingest-fileingest
   - image: cp/monitor/db2-dataingest-inputerrorprocessor
   - image: cp/monitor/db2-dataingest-inputprocessor
   - image: cp/monitor/db2-dataingest-outputerrorprocessor
@@ -37,6 +38,9 @@ images:
   - image: cp/monitor/v2-deviceidpopulation-scheduler
   - image: cp/monitor/v2-hierarchy-management
   - image: cp/monitor/v2-sync-scheduler
+  - image: cp/omnio/djangomodel-edgeconfig
+  - image: cp/omnio/omnio-server
+  - image: cp/omnio/sqlmodel-edgeconfig
   - image: icr.io/cpopen/ibm-mas-monitor
   - image: icr.io/cpopen/ibm-mas-monitor-operator-bundle
   - image: icr.io/cpopen/ibm-mas-monitor-operator-catalog
