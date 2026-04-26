@@ -1,0 +1,34 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/mas/ltpakeys-generator:3.3.21-amd64@sha256:e4ee3d823693f1dd0440592d12c46cc308b0d86cfd1df04167f1c49873c4409b
+  - name: cp.icr.io/cp/monitor/maximo-iot-monitor-auth-api:9.2.4@sha256:b6840e677d75f11a17e133ebf9d09a91038c3a7e3b8fceedfd0b7cccd4140add
+  - name: cp.icr.io/cp/wiotp/api-devops:4.0.20@sha256:696091b239db9879f3d0503583a1d1c15e86737ac52a94b2d7310e449b7efda7
+  - name: cp.icr.io/cp/wiotp/api-mbgadmin:3.0.89@sha256:fee2285ba3c8b1f7a8020a00e70dfefdc8a0a318a73189a85ce39fece29308a0
+  - name: cp.icr.io/cp/wiotp/api-status:3.4.168@sha256:91dda5be164d88d8b9462781a244d0d767c605f80579490080a15af21656cd68
+  - name: cp.icr.io/cp/wiotp/entity-connector:2.0.76@sha256:4412d2ec47bd67b84caf44d81cc97842d2aa5b4131bc9d4fd89845932ce9ce34
+  - name: cp.icr.io/cp/wiotp/entity-manager:3.0.81@sha256:12308c90a72254272147ca8f710c88b4a21c3438fea3e273bc6890b2999975e0
+  - name: cp.icr.io/cp/wiotp/graphite-exporter:2.1.219@sha256:6b07f622c9e3be019c1a8c3d1a97afb5fd2f961a1f77102662976cd0b1495068
+  - name: cp.icr.io/cp/wiotp/graphite-exporter:2.1.221@sha256:4ddf260863a86d79ef8c7f80c185cd4380ee6fb82c5b622d4df63950382226e6
+  - name: cp.icr.io/cp/wiotp/ibm-iot-auth:9.2.6@sha256:5e74940bbba2e7e7ad83fb64f59b2aeecbebb99362dcc2e8cd5fb50810cc2ac1
+  - name: cp.icr.io/cp/wiotp/ibm-iot-devops:11.0.37@sha256:6693d2b6b34fcf358b51a30e741f87cbdf43337030fdb5998a2c72673bc0b8fa
+  - name: cp.icr.io/cp/wiotp/ibm-iot-mbgx:9.2.5@sha256:a8a401b38b4372b88e891dce2fc02f704c440b47addb176e536611e70bcaf25c
+  - name: cp.icr.io/cp/wiotp/ibm-iot-mfgx:9.2.10@sha256:bae90f92c146dddc92516750c9c898dacaecc3b9a20dd9f9c95ffc5e86dacf52
+  - name: cp.icr.io/cp/wiotp/ibm-iot-monitor:3.0.40@sha256:15d4bb90fc4cc04d933f6af42bfd13d383614e71a46f0c88a7aa1435a0b8985f
+  - name: cp.icr.io/cp/wiotp/ibm-iot-workspace:9.2.5@sha256:004dbf495ab185d927bc7c575aefa3c9b69e39a978e1f1ea187f1d8cfa8d65a5
+  - name: cp.icr.io/cp/wiotp/ibm-mas-iot-primary-entity:9.2.0-pre.stable_21024@sha256:e0d827936536f4c52453a48fd041f7e80be7c47d8bc07ab5f119dd92072b2d90
+  - name: cp.icr.io/cp/wiotp/masuseragent:1.5.166@sha256:7ffe672d27f5891784f58e8f5f728f0c98ca777159cbbd45019ba58f0f564555
+  - name: cp.icr.io/cp/wiotp/messagegateway-server-configurator:1.6.139@sha256:e494f7b8d73441452b6ac7a1f11129a7c6492c33bda3b39544d20b13f31994ef
+  - name: cp.icr.io/cp/wiotp/messagegateway-server:1.6.139@sha256:a79de54d9d7398546967092d13a300e9ba1aae6fd31591bf9bfeddab0610c144
+  - name: cp.icr.io/cp/wiotp/messagesight-configurator:5.16.133@sha256:a5898e1406dcc7b5df654628f345dba6af863889119b1f6f64ecbf60da7a7ca2
+  - name: cp.icr.io/cp/wiotp/messagesight:5.16.133@sha256:d3f0b2c91313cd894d78ac231f4381e657ebfeb90a44ea38030c79359acf9308
+  - name: cp.icr.io/cp/wiotp/monagent-iot:2.3.110@sha256:8dd5f96399b4223008e1e97cf549d580fa92111c0c2c4958e310b7b86588144a
+  - name: cp.icr.io/cp/wiotp/monagent-msserver:9.2.5@sha256:5a0981e6fedcc5aa1cc8b6dc1f8bd4b299e53c5093c349eeffad70acf252adcd
+  - name: cp.icr.io/cp/wiotp/msproxy-monitor:9.0.120@sha256:9ec8a3bba143b44b1731e9d27390129453f1e3fa2bdee49ccdd908c8a7b360ba
+  - name: cp.icr.io/cp/wiotp/msproxy:9.2.13@sha256:64d8a710f573416423f3b5b002978971a9c92c6a25f4bc17e1d6647431099508
+  - name: cp.icr.io/cp/wiotp/statsd:1.3.188@sha256:6a5748da4909f746b0376853bd4a9b1653f274a1be638fe6e0ebac2e221cb4b3
+  - name: cp.icr.io/cp/wiotp/statsd:1.3.193@sha256:65d6e01f0002b5dd9eaf792de9bc41fba459089f47678735735b8a9bca208847
+  - name: cp.icr.io/cp/wiotp/statsd:1.3.194@sha256:9bac16a30b2a2480b1f63909a7a92c645374d4b9ae85936595b34099274d8ad8
+  - name: icr.io/cpopen/ibm-mas-iot-operator-bundle:9.2.0-pre.stable_21024@sha256:0a5864927588c44ed3620b6a1ffad72598dbf95b3fcd2d94097761cc7a5d60be
+  - name: icr.io/cpopen/ibm-mas-iot:9.2.0-pre.stable_21024@sha256:4d17fd463df67a63e432c30f1f0aff48a1d904c682263d8232497749145b0399
