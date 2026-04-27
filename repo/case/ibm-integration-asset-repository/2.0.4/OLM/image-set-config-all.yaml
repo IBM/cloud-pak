@@ -1,0 +1,29 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:1.8.4-2025-04-15-1422-7a9b0acf@sha256:f0227e0fcf524689d6510b4492012a6eb595463a8ffab941b43035b13b23571e
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:1.9.4-2025-10-02-1126-92aa5ece@sha256:859cfc8c0f441170ffc32e659294e247c90eb1d236482ecc2e62e1857da1a49a
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:2.0.4-2026-04-14-1204-66a929f3@sha256:db9e8338acb50e12280fb65bfd2fdac06b08291c268cff7e73b592b16a04e906
+  - name: cp.icr.io/cp/icp4i/ar-velero-plugin:2.0.4-2026-04-23-1442-66a929f3@sha256:a4f2ba3e3bb229f71379730bd2d7408e1059ba7926b49fd0d8fa6da6b184fc39
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:1.8.4-2025-04-24-1308-29dda2d7@sha256:d38047624528d5d7ae95668a30a7730eaf73b64314e8197c8a8c2606ebb6330f
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:1.9.4-2025-10-02-1509-1a4bf72d@sha256:4e9b9e32eb9570a90448a1043d0ba8081a1814e25da630f592d60e4f60015009
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:2.0.4-2026-04-17-1433-b5a904d8@sha256:7f80d320926672b16d245b00be876b0a204c862c9da23479f401ebd9290e960d
+  - name: cp.icr.io/cp/icp4i/cp4i-asset-repo-api:2.0.4-2026-04-23-1338-d527c83c@sha256:4e1aaa64e29d8826d0896ad768501a59732c3f90da8b9906d168b0c6fac18ec5
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:1.8.4-2025-04-22-1421-c1f2122c@sha256:581030d01b59aedb03660b4ad86ab6bc707e52b4a6299062970c82caca69f4be
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:1.9.4-2025-10-02-1126-19186790@sha256:3bd4ccf52d23fc09eb2297a4cc718839167e871f61e753ad468b800586e8e4a0
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:2.0.4-2026-04-15-1009-92ff968c@sha256:cd393e134268c429d3e3bf803c96943beb3f255761b6c6e5cafccdffa6e9ebf9
+  - name: cp.icr.io/cp/icp4i/ibm-aa-couchdb:2.0.4-2026-04-23-1441-92ff968c@sha256:5c1906e4d9f9c593491f4f5df3147974b63d274304762b537dbd669cb3945b32
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:1.8.4-2025-04-24-1314-185661d1@sha256:99467e8e8561e171eb2ee1d88486570af8a3f3419d77ebed629d194dcef4bc15
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:1.9.4-2025-10-17-1417-c393a42d@sha256:587e45e08e54d75a7cd8d661be206912ce1753f29cb37345037acdbfc4d3326c
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:2.0.4-2026-04-17-1306-099e5dde@sha256:fee79a927cbfcb7d38442274e6c8c139a27ff57dd68daf4e22558815a4e42f21
+  - name: cp.icr.io/cp/icp4i/icp4i-asset-repo-ui:2.0.4-2026-04-24-0916-d492b344@sha256:7e9040edb6fba3fe3c526346a4f5afdb50c00ed636ff00bc898200a2cf6da33b
+  - name: icr.io/cpopen/ibm-integration-asset-repository-catalog:2.0.4-2026-04-24-1044-efbff950-amd64@sha256:71bb233288a6d8f3e5dee92911b747c9825ba91a5873759450bd4d63b677e482
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:1.7.20-2026-04-20-1412-13ed4247-16.1.0@sha256:90bcf3b14e33fa04194701284f535522b022eb47a611444aa39ea7fda4ee50c1
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:1.8.4-2025-04-29-1101-7e2fce2f@sha256:7e36c8d46b4a5298c091d5a0d361d764cbddde774bc44ba90ecfd027940842c0
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:1.9.4-2025-10-30-1036-3f2d8f42@sha256:36bb8dd9d84d835ee61d03340c2a1254d4b5af52d870e6824b8772ce47eabb31
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator-bundle:2.0.4-2026-04-24-1044-efbff950@sha256:494671f9bf52fb862d52cf9869903ad062deaaaab12eb181bab89362135bc956
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:1.7.20-2026-04-20-1412-13ed4247-16.1.0-amd64@sha256:7ad42f35cc31c476c34b1fe3ac99c28be99edc3e7df101f236ce7d1c43a28218
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:1.8.4-2025-04-29-1101-7e2fce2f-amd64@sha256:a963c57e9876b764bd62a6606e85f7a557d40bfc83a9ac81ce535af29dfcba92
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:1.9.4-2025-10-30-1036-3f2d8f42-amd64@sha256:01a41df347a255cc9448a63705094d5aeb4c6b4f520360d67eb251b7549b2b8d
+  - name: icr.io/cpopen/ibm-integration-asset-repository-operator:2.0.4-2026-04-24-1044-efbff950-amd64@sha256:10850d5b8041bec07b67b1cc1cedca6a48bf904db7b0ffea379619b06d1a4de9
