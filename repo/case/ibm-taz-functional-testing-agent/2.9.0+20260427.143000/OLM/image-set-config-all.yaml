@@ -1,0 +1,6 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-taz-functional-testing/taz-functional-testing-agent:v2.9.0@sha256:8aa12e19a287968f4e84b05abed790ca21f4640bd5a4ff49c2284ba0ccb27c3e
+  - name: cp.icr.io/cp/ibm-taz-functional-testing/taz-functional-testing-mcp-server:v2.9.0@sha256:d7317475972ec25bdd03d0569c9eb3dd852459f454f912753406625ceb751294
