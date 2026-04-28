@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2644@sha256:2f921d1c39f72f183ca285151acf5d0dc6bd9e71a24acd1db17e6b05baf4935c
+  - name: cp.icr.io/cp/icp4i/ai-agent-graphs:2026-04-24-1442-d1edd2ca@sha256:5de383c1b69f31511301fe71433005c84af84a39b1168e65c7813e00415c8f92
+  - name: cp.icr.io/cp/icp4i/cp4i-mcp:2026-04-27-1053-152555dd@sha256:98603df919ee1538ab34cd0368f7032ce045ed677b194d7b8e7171269acce51a
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2024-04-23-1118-7b530fad@sha256:660025edb850b0b2e14b90ae52ed3e7d45ae5d436207d6092c7b6aeae49f2a43
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2026-04-16-1355-db044a9b@sha256:a5a2fe46e76e05834fd90295729a7bb416596202a469bf1ef455eae35e1ab786
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2026-04-21-1821-7a1137c7@sha256:da15a82cc43fe4600a92fb9d8dbf236ad57155362fe98bdacf83332088220862
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2026-04-24-1543-23189323@sha256:29d9a0dd2cd3f976de11a301e45f7724c22da0f089cd50932b3266c28ed5fcca
+  - name: cp.icr.io/cp/icp4i/icip-services:2024-04-23-0832-40249b2e@sha256:72ddbc040ef677bbe5da63416e34563906fc80b65583a7b80b340a09d624aff9
+  - name: cp.icr.io/cp/icp4i/icip-services:2026-04-21-0952-5abba869@sha256:df464e7f33b3d73bbd8f768b33fe1ae31a328ba6d6fb13b87c335acbd577e375
+  - name: cp.icr.io/cp/icp4i/icip-services:2026-04-23-1516-0d3b8a57@sha256:28b8889804a1871cb69aa10a615fb0c686b6bced7f32e343d8374836c1bc5945
+  - name: icr.io/cpopen/edb/postgresql:14.19-5.22.0@sha256:bce78b457ffeb4080aaac01dee712aa0e852ab9a3b4b42414634310b85019d8e
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2660@sha256:b166e9d0129eb02080d8ccf44b5ac680a99eba9cb4040e0d686132ee78109467
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.25.3@sha256:64fdfbe46284cdfda81d710f285ce75fc5f38a14634b8c27498e7de663342c8b
+  - name: icr.io/cpopen/ibm-integration-cloud-native-postgresql-catalog:2025-10-21-1057-14b41165@sha256:f2caa677005b888407465f00b9b424bae38d1251ede9b57fdff86c244b6cf230
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-catalog:8.2.4-2026-04-28-0828-8ed87a70@sha256:e0f0c571a7fb7df68e094e7db96acd8650ef3c5ca71ae21a194130ab16c3fa06
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle:7.3.24-2026-04-21-1549-3e1177b6-service-v16.1.0@sha256:7c7b901b808e787e42f3d7d8391a0d72a6d980aece31827b530d50758f3cab63
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle:8.2.4-2026-04-28-0828-8ed87a70@sha256:1b1d1fbc824dd31ffcf7193a2fd2d1088a0e3908f37c53f3e069b1fa4a30710d
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator:7.3.24-2026-04-21-1549-3e1177b6-service-v16.1.0@sha256:202b15bad45da654396313d7830b0cdcfe1a9dac8b5f1467cf4761dbc9f2cfce
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator:8.2.4-2026-04-28-0828-8ed87a70@sha256:42d79b65c9ad09b87a88b9d7d2e55aec769facb659eced5be3f6a23ed503b371
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2024-04-15-1443-4a3fc7dc@sha256:a8fa7092cbe81416c617596f27f9c10b0cdee0027a555d075751b56e413bc53d
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2026-03-10-1425-f795f9fc@sha256:173d2b29d85ac99d0b5bdde6e7f6d4a5b1b15fb4e19872dd5a609ecf0893f7e9
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2026-04-16-1132-003786b0@sha256:a35e5c1d535b15d3da378445ee4d6d5bf42ae6d3d79522811bb1f2313a22bbd3
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2026-04-27-1107-fca8573a@sha256:fd842b7b219db7328cf5685db1f81d3d92267dcf5d171875a3a1f7aa526b6a96
