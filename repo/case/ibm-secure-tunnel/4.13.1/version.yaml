@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 4.13.1-202604171328
+  catalogs:
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This case is used to install ibm-secure-tunnel into k8s cluster.
+  displayDescription: IBM Management Secure Tunnel operator
+  displayName: IBM Management Secure Tunnel Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-secure-tunnel
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 4.13.1
+  webPage: https://www.ibm.com
+created: 2026-04-28T22:56:25.12852794+0000
+digest: sha256:59c9acf5c6bd2154de161f5d18b803c109f5b7203beeb4182e23782f4e404843

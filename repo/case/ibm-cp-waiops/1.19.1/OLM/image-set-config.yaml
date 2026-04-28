@@ -1,0 +1,29 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog@sha256:67aa7d1e36c567c4cd750354aa81d95279abcb18a6070463299cef7c7a11126d
+    packages:
+    - name: ibm-aiops-orchestrator
+      channels:
+      - name: v4.12
+      - name: v4.13
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cpopen/cpfs/cpdbr-hook-utils:v6.4.0@sha256:eced4a131fd5cb307cff8b1ab301af2f62ba0fed68deca5713851d094cd0f00e
+  - name: icr.io/cpopen/cp4waiops/ingress-nginx/controller:v1.15.1@sha256:594ceea76b01c592858f803f9ff4d2cb40542cae2060410b2c95f75907d659e1
+  - name: icr.io/cpopen/cp4waiops/ingress-nginx/kube-webhook-certgen:v1.6.9@sha256:01038e7de14b78d702d2849c3aad72fd25903c4765af63cf16aa3398f5d5f2dd
+  - name: icr.io/cpopen/cp4waiops/operator-framework/olm:v0.42.0@sha256:36563571fdddf266ab871efcec0fbd98d3b74bff14506718aa79f9853712d640
+  - name: icr.io/cpopen/cp4waiops/operator-framework/opm:v0.42.0@sha256:f778630c62ee19b0aeda9969c2488de88ce84d5b1d040c97a33f9f38832bab14
+  - name: icr.io/cpopen/cp4waiops/prometheus-operator/prometheus-config-reloader:v0.90.1@sha256:693faa0b87243cddca2cffb13586e4e2778b0cdf319cb2e601ba7af3fd19ef7d
+  - name: icr.io/cpopen/cp4waiops/prometheus-operator/prometheus-operator:v0.90.1@sha256:52a6a92d915ea2fa94314748d99db7a94922e3fe63274f6182fc033b9126b573
+  - name: icr.io/cpopen/cp4waiops/prometheus/alertmanager:v0.32.0@sha256:58e117eabccebbff04e6643a3432d6315a2cc3a8c24ab5849bc628886bf08857
+  - name: icr.io/cpopen/cp4waiops/prometheus/prometheus:v3.11.1@sha256:b90bb266161f865086537611c6c3199cedf41dea470d8ba71ce20ba0fad79ea9
+  - name: icr.io/cpopen/ibm-aiops-catalog:v4.13.1-20260417.1328-498bf235d@sha256:498bf235db6321fe46b3b98528f50dcbc64f7d5a991f2d9ed072993740b166e7
+  - name: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog:v4.13.1-20260417.1328-67aa7d1e3@sha256:67aa7d1e36c567c4cd750354aa81d95279abcb18a6070463299cef7c7a11126d
+  - name: icr.io/cpopen/k8s-mirror/kube-state-metrics/kube-state-metrics:v2.18.0_v0.1.0@sha256:66209a6905621c9953626955fb75a684967cc98cb848996ed1bfe4304092b8d1
+  - name: icr.io/cpopen/k8s-mirror/rancher/klipper-lb:v0.4.15_v0.28.0@sha256:c8deed4e6ccde36b221ab593b7400ae8f217817f4b2e211f8fce0edee7b79304
+  - name: icr.io/cpopen/k8s-mirror/rancher/local-path-provisioner:v0.0.35_v0.19.0@sha256:720b4af60106fa61c2fbec29b859612c0f89cfc98c142498554d8fcfb4257ef2
+  - name: icr.io/cpopen/k8s-mirror/rancher/mirrored-coredns-coredns:1.14.2_v0.20.0@sha256:7f7dd78e043bdafbb85438775f11abf48befdf557abda32a38e13e5c63aaa27f
+  - name: icr.io/cpopen/k8s-mirror/rancher/mirrored-metrics-server:v0.8.1_v0.17.0@sha256:56325ea2adbaa38505b8a83b3bdde4d41a2bc12c03f38da60d32b6de12c87bcb
+  - name: icr.io/cpopen/k8s-mirror/rancher/mirrored-pause:3.6_v0.17.0@sha256:335fe4428a5eb771c509a19daabae5b25c615bc90a590c787bdc5199c8b443b2

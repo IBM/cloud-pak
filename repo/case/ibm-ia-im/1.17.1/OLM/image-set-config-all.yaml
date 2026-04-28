@@ -1,0 +1,16 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cp4waiops/httpd:v4.13.1-20260415.1245-2d4a0beec@sha256:2d4a0beecc8351d4de9dc1bddc98ea4632a5d869df62a99dc582f46e12edc937
+  - name: cp.icr.io/cp/cp4waiops/infra-mgmt-application:v4.13.1-20260415.1245-355462f25@sha256:355462f2565a875472fbe1125390a2fa392321abd801ca9ca27b86f55636dcdc
+  - name: cp.icr.io/cp/cp4waiops/infra-mgmt-base-worker:v4.13.1-20260415.1245-04e967f88@sha256:04e967f88c7bcf4262ff28e87dec56e811262acd36739e64e6a73654793d48b4
+  - name: cp.icr.io/cp/cp4waiops/infra-mgmt-opentofu-runner:v4.13.1-20260415.1245-b536117de@sha256:b536117dee2f7b350c12fc47192654ed31664fdaecdba268f1b9601ccba463a6
+  - name: cp.icr.io/cp/cp4waiops/infra-mgmt-orchestrator:v4.13.1-20260415.1245-2897203d5@sha256:2897203d5c69aa22b171aa9cd9c774e0251173bf98ec10768fa28a1dc4e3e9b9
+  - name: cp.icr.io/cp/cp4waiops/infra-mgmt-ui-worker:v4.13.1-20260415.1245-ff529a975@sha256:ff529a97502898a4c03c5d147fc04b962b63592818071d0ba14d027c54adfad2
+  - name: cp.icr.io/cp/cp4waiops/infra-mgmt-webserver-worker:v4.13.1-20260415.1245-36a48c870@sha256:36a48c8701f90832ae26051d6723ef910dac0aa5f09d8f7a89f902d427802e06
+  - name: cp.icr.io/cp/cp4waiops/memcached:v4.13.1-20260415.1245-604423fc2@sha256:604423fc239820fec77754a3535e2feda1cb480d70ebed56de85037d714d4577
+  - name: cp.icr.io/cp/cp4waiops/postgresql:v4.13.1-20260415.1245-73737a855@sha256:73737a85510034e2be84416caef954f9d2efd6313a8ad546fde68c4f3c7ee9e6
+  - name: icr.io/cpopen/ibm-infra-management-install-operator-bundle:v4.13.1-20260415.1245-adba27b63@sha256:adba27b6389c8bf4e90b0c10e201ea826c3e69596b5441bfefcad7506d4b7331
+  - name: icr.io/cpopen/ibm-infra-management-install-operator-catalog:v4.13.1-20260415.1245-2f8f44f15@sha256:2f8f44f15151f1a29d316a170397f275a038e54c2ff7fcf5bc3a2ac17f52a981
+  - name: icr.io/cpopen/ibm-infra-management-install-operator:v4.13.1-20260415.1245-f27098149@sha256:f27098149af57fb82ec2128eb5ceaab8bd1789e7d1a096c3bb64075d7f4f72dc

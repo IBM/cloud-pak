@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-aiops-ui-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-aiops-ui-operator-case-1.19.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-aiops-ui-catalog@sha256:635ae35c322267706557f2980cf14356284800ebcc3f873f49a24dacf3493270
+  sourceType: grpc
