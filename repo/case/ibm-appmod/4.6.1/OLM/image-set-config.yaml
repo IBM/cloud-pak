@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-app-mod-accelerator-operator-catalog@sha256:6b64d760c08e4e78bf7f381f41aa2c84b44327115331af19bfb54debb4760b3a
+    packages:
+    - name: ibm-app-mod-accelerator
+      channels:
+      - name: v4.6
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-app-mod-accelerator-operator-catalog:v4.6-20260424.073403@sha256:6b64d760c08e4e78bf7f381f41aa2c84b44327115331af19bfb54debb4760b3a
