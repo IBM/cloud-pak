@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-eventprocessing/sp-backend:1.4.7@sha256:dfdebbcbce69ba24e676e4f74005f10f654cf048ea7b59896298b6ebe2146f5b
+  - name: cp.icr.io/cp/ibm-eventprocessing/sp-backend:1.5.2@sha256:436ec977fa8fdf60ab8ffcbd86711d4baf5fac94f013fbf8f1051c5ddf18ca40
+  - name: cp.icr.io/cp/ibm-eventprocessing/sp-frontend:1.4.7@sha256:45949701d585e4e2d674a69c22677186b25599fa059f755b09c3fbdf3ef6ee59
+  - name: cp.icr.io/cp/ibm-eventprocessing/sp-frontend:1.5.2@sha256:68d7b01c1bde337f9cd0d2f8e911ddee2c2ced37198650d44ef70af84c6c6c9d
+  - name: icr.io/cpopen/ibm-eventprocessing-operator-bundle:1.4.7@sha256:a1d0f28326c692f136b41745f56070e578881cb25cceb314b7f2457dbf72bbb6
+  - name: icr.io/cpopen/ibm-eventprocessing-operator-bundle:1.5.2@sha256:4510e9461d3aeaf2c79d5f06ec637210b7f784fd79d149cf9548fd2db08031c9
+  - name: icr.io/cpopen/ibm-eventprocessing-operator-catalog:1.5.2@sha256:4b16ed4e3223d0d7f6f71ff06f013d701ac86f5d75012e4cc9d953d2fce68328
+  - name: icr.io/cpopen/ibm-eventprocessing-operator:1.4.7@sha256:8865dafc9d8f8e12002c9e9e324f10aa2edd2778222b59757ec584d2f02c0f1e
+  - name: icr.io/cpopen/ibm-eventprocessing-operator:1.5.2@sha256:5de958ded7d9ec227539b64bd71ea4b5e938514f0838dd396fb1e7c1be87c73b
