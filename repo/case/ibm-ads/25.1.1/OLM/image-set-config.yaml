@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-ads-operator-catalog@sha256:71996d7972b247e90064c080d17de7e2faff74e88b713e0bc49bafe2ec0d3ec0
+    packages:
+    - name: ibm-ads-kn-operator
+      channels:
+      - name: v25.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-ads-operator-catalog:25.0.1-IF001@sha256:71996d7972b247e90064c080d17de7e2faff74e88b713e0bc49bafe2ec0d3ec0
+  - name: icr.io/cpopen/ibm-ads-operator:25.0.1@sha256:f37ce04549201880527eb076595de610f295529e2e2ece47ae0a751cffb319a6
