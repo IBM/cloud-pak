@@ -1,0 +1,54 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: bts-operator
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-bts-bundle-1.0.35
+  publisher: IBM
+  image: icr.io/cpopen/ibm-bts-operator-catalog@sha256:4b50b922c347ea363a1c0da6f28ce70cf51d7ff9af03412b6779997a1cadc9cd
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ba-insights-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ba-insights-25.1.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-bai-catalog@sha256:0280ef5a212c56e95b4eb8d65327eda562d19b0cc4c55a0efc7677aa27264dc9
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-flink-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-flink-2.0.18
+  publisher: IBM
+  image: icr.io/cpopen/ibm-opencontent-flink-operator-catalog@sha256:d68536ac84dafca1a2041bb5511f487aaf52e239b1be340e79801e5c419e9f44
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-install-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-install-4.18.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cs-install-catalog@sha256:99e9d2c387395e31d40fec96c47b1cc7d4610eb3682369ab99d0f211fbd34eca
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.2.0
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:c20414136174ef24513560ca56204787fb4a3c3de8f84a490551dd63efb67a7f
+  sourceType: grpc
