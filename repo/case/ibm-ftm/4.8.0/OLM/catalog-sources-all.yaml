@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ftm-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ftm-4.8.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-ftm-catalog@sha256:7c4141b43a6c2a913e6939daf77dbd748ab59e3661a2c15467acb9539c7a9f5e
+  sourceType: grpc
