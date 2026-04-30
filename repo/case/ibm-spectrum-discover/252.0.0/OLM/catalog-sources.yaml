@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-spectrum-discover-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-spectrum-discover-252.0.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-spectrum-discover-operator-catalog@sha256:71b4d238de5a9bc9f355bd669c776d13140840063bfd1f30562a6ae541d696c7
+  sourceType: grpc
