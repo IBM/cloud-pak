@@ -1,0 +1,55 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-bai-catalog@sha256:a519301721f5e718ab1d929cf417a647b97352850cc452ea71a6b90bc9b4ba17
+    packages:
+    - name: ibm-bai-foundation-operator
+      channels:
+      - name: v24.0
+    - name: ibm-bai-insights-engine-operator
+      channels:
+      - name: v24.0
+    full: true
+  - catalog: icr.io/cpopen/ibm-bts-operator-catalog@sha256:4b50b922c347ea363a1c0da6f28ce70cf51d7ff9af03412b6779997a1cadc9cd
+    packages:
+    - name: ibm-bts-operator
+      channels:
+      - name: v3.35
+    full: true
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:99e9d2c387395e31d40fec96c47b1cc7d4610eb3682369ab99d0f211fbd34eca
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.18
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  - catalog: icr.io/cpopen/ibm-opencontent-flink-operator-catalog@sha256:d68536ac84dafca1a2041bb5511f487aaf52e239b1be340e79801e5c419e9f44
+    packages:
+    - name: ibm-opencontent-flink
+      channels:
+      - name: v2.0
+    full: true
+  - catalog: icr.io/cpopen/opencontent-elasticsearch-operator-catalog@sha256:a34169228887ff93161584753c990bb82a5520ad7945dfa1ff4078e70aede592
+    packages:
+    - name: ibm-elasticsearch-operator
+      channels:
+      - name: v1.1
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2714@sha256:fd61ba81bd15d53e79ed8bc7467acf4e92b813dc8dac916e30231468efca2afe
+  - name: icr.io/cpopen/edb/postgresql:14.22-5.31.1-cpfs@sha256:6d74c43c7f6d016c28484d252607feeb2b1c5a2a0539db60bc685718d55cc770
+  - name: icr.io/cpopen/edb/postgresql:15.17-5.31.1-cpfs@sha256:1f31a3ab18f4f9d0ef852f4dd22300746150912e5a4731ed07195f9c79674e40
+  - name: icr.io/cpopen/edb/postgresql:16.13-5.31.1-cpfs@sha256:c632b5ef78ab6686939e8f76543c08dac8cb77e7b30578b21eb0a0c8d3b0b020
+  - name: icr.io/cpopen/edb/postgresql:17.9-5.31.1-cpfs@sha256:69e19c5ee470943d281445c670dac682e4963362ca9e8638b2623cbf27124e33
+  - name: icr.io/cpopen/edb/postgresql:18.3-5.31.1-cpfs@sha256:6a2e4c1108532a28d89b83e33d8206e543b63372e31f6831b997740de36d3b79
+  - name: icr.io/cpopen/ibm-bai-catalog:vBAIS-24.0.0-IF007-fbc-20260430.100531-4E7E37714@sha256:a519301721f5e718ab1d929cf417a647b97352850cc452ea71a6b90bc9b4ba17
+  - name: icr.io/cpopen/ibm-bts-operator-catalog:3.35.9@sha256:4b50b922c347ea363a1c0da6f28ce70cf51d7ff9af03412b6779997a1cadc9cd
+  - name: icr.io/cpopen/ibm-cs-install-catalog:cd-20260402-1624@sha256:99e9d2c387395e31d40fec96c47b1cc7d4610eb3682369ab99d0f211fbd34eca
+  - name: icr.io/cpopen/ibm-opencontent-flink-operator-catalog:cd-20260403-1808@sha256:d68536ac84dafca1a2041bb5511f487aaf52e239b1be340e79801e5c419e9f44
+  - name: icr.io/cpopen/opencontent-elasticsearch-operator-catalog:1.1.2667@sha256:a34169228887ff93161584753c990bb82a5520ad7945dfa1ff4078e70aede592
