@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-fusion-bnr-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-fusion-bnr-2.12.2
+  publisher: IBM
+  image: icr.io/cpopen/idp-server-operator-catalog@sha256:15b12df2c8ed9e7aa57f993be2adc09bfa839f1a9eef51209210b9aa583c4c51
+  sourceType: grpc

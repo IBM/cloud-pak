@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/idp-server-operator-catalog@sha256:15b12df2c8ed9e7aa57f993be2adc09bfa839f1a9eef51209210b9aa583c4c51
+    packages:
+    - name: guardian-dm-operator
+      channels:
+      - name: v2.0
+    - name: guardian-dp-operator
+      channels:
+      - name: v2.0
+    - name: guardian-mongo-operator
+      channels:
+      - name: v2.0
+    - name: ibm-dataprotectionagent
+      channels:
+      - name: v2.0
+    - name: ibm-dataprotectionserver
+      channels:
+      - name: v2.0
+    - name: redis-operator
+      channels:
+      - name: v2.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/idp-server-operator-catalog:v2.12.2@sha256:15b12df2c8ed9e7aa57f993be2adc09bfa839f1a9eef51209210b9aa583c4c51

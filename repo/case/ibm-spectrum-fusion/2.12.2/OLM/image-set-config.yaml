@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/isf-operator-catalog@sha256:fdc38a62f1f5411588a34bb745ab8b1eaa0f1eee9c8dc05d04c2bb7d0124ef97
+    packages:
+    - name: isf-operator
+      channels:
+      - name: v2.0
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/fusion-hci/isf-validate-entitlement:2.11.0@sha256:1a0dbf7c537f02dc0091e3abebae0ccac83da6aa147529f5de49af0f23cd9e8e
+  - name: icr.io/cpopen/isf-operator-catalog:v2.12.2@sha256:fdc38a62f1f5411588a34bb745ab8b1eaa0f1eee9c8dc05d04c2bb7d0124ef97
