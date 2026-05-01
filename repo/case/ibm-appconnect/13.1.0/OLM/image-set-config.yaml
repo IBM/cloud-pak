@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-langgraph-agents-prod:13.0.7.1-r1-20260429-094236@sha256:717ae65c020653608d8846c8d854ec38952b2b6f78e3b00f1f339bcdf1932499
+  - name: cp.icr.io/cp/appc/ace-mcp-prod:13.0.7.1-r1-20260423-083631@sha256:56536c2e974a97a4ee95da0b673f93ac71f223da3a130d722089977c91da827e
+  - name: cp.icr.io/cp/appc/ace-server-prod:13.0.7.1-r1-20260423-121603@sha256:846f3f481406d72821589bbbd84d34970309dc0c427c68bdacb7f5f71703bb8c
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:13.0.7.1-r1-20260423-021629@sha256:05dd2d59ceee4d0ff0e34fd7f3a82fcd06997f9ddfc82cac75b25cc55c5337c6
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:13.0.7.1-r1-20260422-230743@sha256:1d12d60e5da3f6e0e064881133c0f6e5d0bb7011cd7f14afff5fa5ca85a5315e
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:13.0.7.1-r1-20260427-092749@sha256:ffa4c60889f732abad7e42587c4eab9a4b989b43ba6ce868666ff2f38efb86f7
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:13.0.7.1-r1-20260423-120745@sha256:69a7e62878ecab30b98f7f1f47764f303245ee74aca867e9a281e84305314b93
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:13.0.7.1-r1-20260423-123338@sha256:6fe66bd0272698125a251292d4e3b3f17084dd11c982aef5fe26eaa7deb77dec
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:13.0.7.1-r1-20260423-071214@sha256:f2a656382a5220954db897055858b6a4c10bb7d0327ec3757e07346795fde002
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:13.0.7.1-r1-20260422-231127@sha256:10790eb585387a6be4e2b85b7405930da9cf7af5a07d9d0ff87ca43d6fa8e2bd
+  - name: icr.io/cpopen/appconnect-operator-bundle:13.1.0-20260429-153446@sha256:8c9926002f1104b19cc73975c335be368177b74f6ac8e44d83bd82e03ec701a8
+  - name: icr.io/cpopen/appconnect-operator-catalog:13.1.0-20260429-153446@sha256:79e134d6b9e299384b8c18ec382389acaf95310d1057056ee54e608ae5a302ae
+  - name: icr.io/cpopen/appconnect-operator:13.1.0-20260429-153446@sha256:0d29c8afbf573410fb28ad608255fe66c6a7074c93565570dabddaf62f38b01c
