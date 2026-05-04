@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part1:1.0.43@sha256:6f9887dd0ae01e6f7c6f26bce541b02a757de105ade8767617d6576ec16ca549
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part2:1.0.43@sha256:dc031f2f60b55720aed540ec7ecf0f107d10c3c3cfe39e3aa54de06c4056f419
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part3:1.0.43@sha256:cc3560f6b6c0a161decf55f77d6739062b90411d707d18ce4dc3dd4e1fb53da0
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part4:1.0.43@sha256:4af9c6f128c4c3f74a121df38d33fcc9b57ebe19ba1ecf4744d5bc80355227dc
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part5:1.0.43@sha256:f6c13291ab5db1fbdb49eb9aee682dad4764e0d5dbf186603d887d3cefa8c5a3
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part6:1.0.43@sha256:021f6781da26e4260d2c2ce2278991d56c5dca39fdedca5063a9e783661e8cd4
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part7:1.0.43@sha256:34713a7f6a11f3f2ed6c00cd2cee4cebbd5356b1b8f3d447933835521b53e4b0
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part8:1.0.43@sha256:b32610e0dd2dd5f2bc47e312c313bbd4740c1f01e6e8ffc15025960b5fd0e042
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part9:1.0.43@sha256:acd4c2a18c444a5838cb4b4b870986be7a93f79bc9ae910c99f6f7eec8f9cbd3
+  - name: cp.icr.io/cp/cpd/wca-codegen:5.3.5-6@sha256:8cc64b568c67ed1297ef69746113e0a982a838679d60034e72587f38df250193
+  - name: cp.icr.io/cp/cpd/wca-codematch-index:2.20.33@sha256:39ce5d7f2f682c785663cd78224e043068397c0090deebb1a7158a8a92a42c39
+  - name: cp.icr.io/cp/cpd/wca-codematch:5.3.5-6@sha256:584b6eb2c8dd66f6bc4af6569b08b8e5014c05ce3a73e2b3ed1832ea8431c690
+  - name: icr.io/cpopen/ibm-wca-ansible-operator:5.3.5-6@sha256:1afa7503925748d069dbf1d35e730e5e4b04af5246ff2789a4bb99a103c40d5e

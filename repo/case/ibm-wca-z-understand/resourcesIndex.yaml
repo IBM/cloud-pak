@@ -48,3 +48,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 1.0.61
+- caseVersions:
+  - 1.1.2+20260406.112506.1
+  category: catalog
+  digest: sha256:2eb408e3cedf58bc262e73b296c4cbd85bf5edcd718ad06940f9c9ed74066da3
+  image: cpopen/ibm-wca-z-understand-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.65-amd64
+- caseVersions:
+  - 1.1.2+20260406.112506.1
+  category: catalog
+  digest: sha256:65454ce1ab5d0bb2b011d708f5ac98ef90ed25802060780ac7350c9c2b89470a
+  image: cpopen/ibm-wca-z-understand-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 1.0.65-s390x
+- caseVersions:
+  - 1.1.2+20260406.112506.1
+  category: catalog
+  digest: sha256:9d07a5ad5e696d4daae1783e03750ed9f1e2224c8392552cd07aa4c77cd8df55
+  image: cpopen/ibm-wca-z-understand-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.0.65

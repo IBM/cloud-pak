@@ -1,0 +1,21 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/container-stunnel-init:v1.2.13-5-gb551c373a5-datagate_9.1.x_stabilization-20260416105945@sha256:678c768b28d8c17011b4a6347a76758064b3ded902006e1537f135f986832fe1
+  - name: cp.icr.io/cp/cpd/container-stunnel:v1.2.36-8-gd2cfef6e49-datagate_9.1.x_stabilization-20260416081456@sha256:e7800085b3773d4f22081846a62e6f923cd87cdaf5787069a6c7849b1a7e9d47
+  - name: cp.icr.io/cp/cpd/datagate-api:v2.6.2-13-g00d86d6bfa-datagate_9.1.x_stabilization-20260416074514@sha256:2a3cac04e107753f016391a68bae8643adeffe3468f8a6e05c28b10cb4073afe
+  - name: cp.icr.io/cp/cpd/datagate-apply:v3.0.4-10-g08b749200f-datagate_9.1.x_stabilization-20260416063751@sha256:1057d547862cdcc30cf9a4ab6efff597a154bd7a350b2367a445a872031612ab
+  - name: cp.icr.io/cp/cpd/datagate-catalog:v3.22.26-8-gc326035612-datagate_9.1.x_stabilization-20260416064645@sha256:290d4887a1fdf51b0fcb78b86e3040d164104939fd560a6d61394e624e8a87b0
+  - name: cp.icr.io/cp/cpd/datagate-cdc-accessserver:v1.1.21-6-gfad0379289-datagate_9.1.x_stabilization-20260416091230@sha256:9442629ddd389a426935759a33bcf62ffacb7e8bf7862686d97b4edc53cec9d0
+  - name: cp.icr.io/cp/cpd/datagate-cdc-agent-watsonx:v3.0.7-7-gfc6686da25-datagate_9.1.x_stabilization-20260415113555@sha256:f71b074ea23ee8742ab20b1e293a6a8f659f6ea4f96e1bc99a9dc465b3273272
+  - name: cp.icr.io/cp/cpd/datagate-cdc-api:v3.3.11-11-g52ddb25ed6-datagate_9.1.x_stabilization-20260416081542@sha256:fa4f28d0f570e72480dce9fb1e61fb52ee2ea40639a08312f8799c3c515b42f2
+  - name: cp.icr.io/cp/cpd/datagate-data-catalog-integration:v3.1.43-9-gca26a482f1-datagate_9.1.x_stabilization-20260416105811@sha256:3b3275db1fe058ce6d43a8c8a3421e3ab80a15c6385b9bd484d3c3da21acff48
+  - name: cp.icr.io/cp/cpd/datagate-db2z-api:v1.5.14-9-g9da5c7669f-datagate_9.1.x_stabilization-20260416081657@sha256:591d977413ad70429045dea0b55df75936be22af2e624e286339f3bd9c8ab60e
+  - name: cp.icr.io/cp/cpd/datagate-init:v1.4.4-6-gde0cb5db21-datagate_9.1.x_stabilization-20260416071444@sha256:8cbad912bcd7b4d49e447c4b7d19fae1d51e8f68ad0a66c07e104e46148c19e2
+  - name: cp.icr.io/cp/cpd/datagate-server:v2.0.2-11-ga6ca381a72-datagate_9.1.x_stabilization-20260416072126@sha256:2e30e443dadf580a426d1d8e6966d39533d7c550b97cc99864d4fa4e0e6e18ef
+  - name: cp.icr.io/cp/cpd/datagate-tundra-lt-iceberg:v2.1.44-12-gcfd9f232d3-datagate_9.1.x_stabilization-20260416062653@sha256:3ca2c6a4112ad7c5433ce1f1384e43d26466f6a913d5c1f049e7319b8f2fa8c7
+  - name: cp.icr.io/cp/cpd/datagate-ui:v2.1.25-9-gfbe7e3addb-datagate_9.1.x_stabilization-20260416104820@sha256:da4fb50dc48c9878cf9fb26a5b4ee9e09fd60263a1dbda58d806ed92d2bce2e2
+  - name: icr.io/cpopen/ibm-datagate-operator-bundle:9.1.4.118@sha256:a5735fc0acc242bb9d3f582438ea65e29ab5b3198e610c173fb14995519c5aba
+  - name: icr.io/cpopen/ibm-datagate-operator-catalog:9.1.4.118@sha256:01dcba3fd0bdf82bf004d84a1b85f64893e700fbeae6a19591a93a1f3603fb41
+  - name: icr.io/cpopen/ibm-datagate-operator:9.1.4.118@sha256:00e90e983c60baa9d839778fee12946b981f27ed51a8fd46de00eb74bb4a44b1

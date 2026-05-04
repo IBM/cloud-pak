@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/flow-api:1357@sha256:8a883a02979eceb83380c71b38906365a4284b0ee5fa39ad23998d57c6b889c1
+  - name: cp.icr.io/cp/cpd/flow-ui:4536@sha256:4701d2c5a58a10f8ef5b35eb163e6b7c46cfe7e096e4ec284ca32e1d61f59799
+  - name: icr.io/cpopen/ibm-cpd-canvasbase-operator-bundle:12.1.0-301@sha256:e61b939f20989ed9c10ee8dc770453b022805b97e181e8b92f4c7cee5c4d7282
+  - name: icr.io/cpopen/ibm-cpd-canvasbase-operator-catalog:12.1.0-301@sha256:92b07460ad17fbae60944f65f5bda2adcf0bf11978b8c107518f4b043dd9efe8
+  - name: icr.io/cpopen/ibm-cpd-canvasbase-operator:12.1.4-363@sha256:47989c26257ee53a8b7ffa7f179ffe24d19f2047e4805dd8f229661d901384e0
