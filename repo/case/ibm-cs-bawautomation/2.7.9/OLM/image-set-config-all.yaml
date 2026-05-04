@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cs-bawautomation-catalog@sha256:b028b041a2c4c1eacfee016ac356d4c726fa383646db5f15d0a9fc94866ffd37
+    packages:
+    - name: ibm-baw-operator
+      channels:
+      - name: v22.2
+      - name: v23.2
+      - name: v24.0
+    - name: ibm-content-operator
+      channels:
+      - name: v22.2
+      - name: v23.2
+      - name: v24.0
+    - name: ibm-pfs-operator
+      channels:
+      - name: v22.2
+      - name: v23.2
+      - name: v24.0
+    - name: ibm-workflow-operator
+      channels:
+      - name: v24.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-cs-bawautomation-catalog:24.0.0-IF009@sha256:b028b041a2c4c1eacfee016ac356d4c726fa383646db5f15d0a9fc94866ffd37
