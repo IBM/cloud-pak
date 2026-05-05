@@ -1,0 +1,65 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-automation-foundation-core-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-automation-foundation-core-1.3.15
+  publisher: IBM
+  image: icr.io/cpopen/ibm-automation-foundation-core-catalog@sha256:1f80c5f43ffa6d00dfa776b140e19e2db36c4c731da255a4e042fd7ba73e0eeb
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-events-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-events-operator-5.0.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-events-operator-catalog@sha256:4cd92e1a78b080cc94beae89c257078314a6a0fae66e8a14512953b1c4004c09
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-redis-cp-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-redis-cp-1.3.1+20260209.171809.004
+  publisher: IBM
+  image: icr.io/cpopen/ibm-redis-cp-operator-catalog@sha256:33aa607160683e22e89c86a81d59eb9c4a6e4b6cb85ab2825a78ece7f36ea194
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibmmq-operator-catalogsource
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-mq-2.0.29
+  publisher: IBM
+  image: icr.io/cpopen/ibm-mq-operator-catalog@sha256:d35142f392b53bf2e40a619947dd7118c23b6e3c14c11dd66c5af0d865a21ba7
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: opencloud-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-common-services-1.19.14
+  publisher: IBM
+  image: icr.io/cpopen/ibm-common-service-catalog@sha256:bcbaa9f163211c7c876d895b62ece17409457c7047ca77ab9d93b810764c738e
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: opencloud-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-common-services-1.15.22
+  publisher: IBM
+  image: icr.io/cpopen/ibm-common-service-catalog@sha256:cc770f7c03cb00d70d143a2f42107f1e3b034c2c795952b0cc01dfec249ad60b
+  sourceType: grpc
