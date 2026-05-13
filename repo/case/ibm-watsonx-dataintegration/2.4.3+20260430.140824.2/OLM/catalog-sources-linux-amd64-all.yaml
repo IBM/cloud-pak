@@ -1,0 +1,41 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-replication-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-replication-5.3.3+20260420.220220.1529-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-replication-catalog@sha256:91e2ea58a309f714122e5be84421d18cdef25e47bf3422660089b2b798d28f4b
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-datasift-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datasift-5.3.13+20260401.111029.205-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-datasift-operator-catalog@sha256:3efab0be28b2342bb24b0826ac0e34087a23c7a534ad0184908de3277b3cb4a5
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-dataintegration-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-dataintegration-2.4.3+20260430.140824.2-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/di-operator-catalog@sha256:f76744db6e19f2bb86e677f934e820f1b515c7a31f7e0241513f01d0e3cad789
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
