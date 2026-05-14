@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 6.0.0.2.5
+  catalogs:
+    storage: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: Represents a deployment of a container native IBM Storage Scale cluster
+    with the Data Management edition
+  displayDescription: Represents a deployment of a container native IBM Storage Scale
+    cluster
+  displayName: IBM Storage Scale Container Native Storage Version
+  icons: []
+  licenses:
+    spectrumscale:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Storage Scale Container Native Data Management Edition
+          License
+        displayName: IBM Storage Scale Container Native Data Management Edition
+      ref: license
+      url: https://www.ibm.com/support/customer/csol/terms/?id=L-VSLK-BKKG3D
+  name: ibm-spectrum-scale-dme-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 1.11.8
+  webPage: https://www.ibm.com/docs/en/scalecontainernative
+created: 2026-05-14T19:27:25.28210074+0000
+digest: sha256:fa58600fc0be907bdc1fb5f5397ce1217b896322e43cc2099b9cfe8ca0aa2382
