@@ -1,0 +1,56 @@
+apiVersion: v1
+case:
+  appVersion: 9.2.0-pre.stable+26245
+  catalogs:
+    ai: {}
+    operations: {}
+    tools: {}
+  certifications:
+    ibmccs: {}
+  classifications:
+    commercial: {}
+  description: IBM Maximo Application Suite
+  displayDescription: IBM Maximo Application Suite is a program that offers a single
+    point of access to the full suite of Maximo asset lifecycle management capabilities.
+  displayName: IBM Maximo Application Suite
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: LICENSE INFORMATION
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: TERMS AND CONDITIONS FOR SEPARATELY LICENSED CODE
+        displayName: NON_IBM_LICENSE
+        name: non_ibm_license
+      ref: NON_IBM_LICENSE
+    notices:
+      mediaType: text/plain; charset=utf-16
+      metadata:
+        displayDescription: NOTICES AND INFORMATION
+        displayName: NOTICES
+        name: notices
+      ref: NOTICES
+  name: ibm-mas
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms: {}
+  version: 9.2.0-pre.stable.26245
+  webPage: http://ibm.com
+created: 2026-05-14T07:56:30.12150380+0000
+digest: sha256:c0577a331b062e73c93ec8d5f3e0a1a2b6d6925045ba1d4bbc96234cccfe2f3d
