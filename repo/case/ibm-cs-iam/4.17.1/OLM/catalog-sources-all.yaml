@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-iam-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-iam-4.17.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-iam-operator-catalog@sha256:845eb294d21e6af580f70424f7c57886194cd5644bb1d57e31d8be6818b4fc2c
+  sourceType: grpc
