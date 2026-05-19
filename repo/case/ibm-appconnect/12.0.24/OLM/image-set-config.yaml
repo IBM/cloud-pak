@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-server-prod:12.0.12-r24-20260514-154718@sha256:fad66930858b27513e20cfee9e9528e834a3f8bdda01d5b3687593a180cd9334
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:12.0.12-r24-20260513-150703@sha256:a11b19eea1eb99e41540f7ce8dcd35d4b38782deb0da18231de07c2b1a0c06f7
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:12.0.12-r24-20260512-010011@sha256:3aa6f9a86899ab257bfced6a390665e6f9779779cfeb3cd9fce086430d41ab6f
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:12.0.12-r24-20260513-150654@sha256:ddccac92d7380ddb0202b77b1eff88c4766ee8f569c26ee48bf07430649c50cc
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:12.0.12-r24-20260517-233614@sha256:f556e0ef2450a7694b3b40989d39919354e51e1387d78a7240d989dc3946274c
+  - name: cp.icr.io/cp/appc/acecc-designerflows-prod:12.0.12-r24-20260518-180008@sha256:f199ffac4a8a3eea9f6cc43cea738e9b127c4fd3722ae86b4086361bf4462f87
+  - name: cp.icr.io/cp/appc/acecc-ecp-prod:12.0.12-r24-20260518-180322@sha256:b192c4fb30ad5bdf98f8c37d2f29d7d29ff0b2012b0f409667064e8b26d21cce
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:12.0.12-r24-20260518-100842@sha256:c4f115b60ac20f6c547ad37ba6b3cb9b9bf75fba538af47ba75c72b51840f907
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:12.0.12-r24-20260513-115729@sha256:2762e04aefac65b503681d2356a242fb52928cc4b5eede28719215ad5d9cd6d0
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:12.0.12-r24-20260513-115751@sha256:b13c95e5613cc91055dea2f83d8ea82a72d29e72ff114b16e52fa148ba4f51e3
+  - name: icr.io/cpopen/appconnect-operator-bundle:12.0.24-20260519-102623@sha256:a32d76eba680e735a21daafa95a5d2f22afae341df2369a9f6a93a44169561df
+  - name: icr.io/cpopen/appconnect-operator-catalog:12.0.24-20260519-102623@sha256:9970c0109b64be58145474cb1c375b1cfd950fbf7f3b1b996084caa076eb4352
+  - name: icr.io/cpopen/appconnect-operator:12.0.24-20260519-102623@sha256:789f7ca587d8cb49a11a56c1c00298cbd56901a806a0ea6e3697440f949d7f04
