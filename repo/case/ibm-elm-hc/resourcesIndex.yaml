@@ -25,6 +25,7 @@ containerImages:
 - caseVersions:
   - 1.2.0
   - 1.3.0
+  - 1.4.0
   - 2.0.0
   category: catalog
   digest: sha256:63b54663918273bc80902ebff2834aebf4cebb67a6ad260925e34a6264030104
@@ -36,6 +37,7 @@ containerImages:
   tag: v1.2.0
 - caseVersions:
   - 1.3.0
+  - 1.4.0
   - 2.0.0
   category: catalog
   digest: sha256:0fe62f4c413af9766d3a8b5b44bd7b2fd2288d879347bbfa45fb3705a2124ac6
@@ -46,6 +48,7 @@ containerImages:
     os: linux
   tag: v1.3.0
 - caseVersions:
+  - 1.4.0
   - 2.0.0
   category: catalog
   digest: sha256:c43f5119693245d227bcda7757186a46baec63287142da35082b9278046b6615
@@ -55,3 +58,13 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v2.0.0
+- caseVersions:
+  - 1.4.0
+  category: catalog
+  digest: sha256:67b09721e1ea4c2c0c33d6595a6230bbe820324c174c38df9f8d8a36cb087ad4
+  image: cpopen/ibm-elm-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: latest
