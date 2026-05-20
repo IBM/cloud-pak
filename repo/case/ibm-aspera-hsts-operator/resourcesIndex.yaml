@@ -1030,3 +1030,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: latest
+- caseVersions:
+  - 1.5.20
+  category: catalog
+  digest: sha256:0a5d24307439c32a45e5775b11ff2cd9b01e8bcaab89b8ee99ebd19d4e9ced06
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: latest-amd64
+- caseVersions:
+  - 1.5.20
+  category: catalog
+  digest: sha256:b5a7c4b874f8652b3d1a43bfc63a998439163890f54047cdc9746b5bd05f7057
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: latest-s390x
+- caseVersions:
+  - 1.5.20
+  category: catalog
+  digest: sha256:d98dab1499896d8894b2e5ec0216fd64c7ea22779ddb83a644b9a9008d8b7eb0
+  image: cpopen/aspera-hsts-catalog
+  platform:
+    imagetype: manifestList
+  tag: latest
