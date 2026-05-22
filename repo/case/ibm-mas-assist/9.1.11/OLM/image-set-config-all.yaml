@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/assist/assist-db-job:2.2.20@sha256:ba129fc948cccfe64f3cb6e6a67d533fc6b3253f36d0e41fc40e606d5fe8eb2f
+  - name: cp.icr.io/cp/assist/assist-useragent:2.1.34@sha256:bb7bb05b22874254691370f74e123e2bf1b83c4b3cccb6e014bd430daf3a6ab6
+  - name: cp.icr.io/cp/assist/ema-admin-console:2.15.7@sha256:7ebc4a1bf70ddb455bff6fb998f0be1ecaf882e98411ce32671c902b93c8aabb
+  - name: cp.icr.io/cp/assist/ema-api:2.49.22@sha256:104cc4772acd39fb9b86032a256e06d8eedf067cfff5c0d0b90a4e5c2ff1698a
+  - name: cp.icr.io/cp/assist/ema-common-util:2.1.41@sha256:3eca52ed7106dc35a41f98d3868637045d3a13d142bea4c47fa53d8e5687f39a
+  - name: cp.icr.io/cp/assist/ema-haproxy:2.1.41@sha256:0450aef3fee9e704dc06fa19f6bd801f7089621c6a8cd99fc4416623660d0c18
+  - name: cp.icr.io/cp/assist/ema-monitor:2.2.24@sha256:1d940107882ffdaf83c01e240d6037a7c8233c7a87b7eac8709b2756e7c313d5
+  - name: cp.icr.io/cp/assist/ema-multi-tenant:2.19.24@sha256:7188a2e4de8184f65d2dae971c0b43a2b7c0ca9b3d7291e13d1d258515bfb8bb
+  - name: cp.icr.io/cp/assist/ema-pg-cronjob:2.1.28@sha256:fafab651786ad5d8d4c71461a140cfd1378e45dced81ed8f9b13136898030c8f
+  - name: cp.icr.io/cp/assist/ema-redis:2.1.41@sha256:8b3c1b555c921e4c3bb97e244562fcce57b77ca99766138e1278adbbf0858ead
+  - name: cp.icr.io/cp/assist/ema-studio:2.12.12@sha256:27db44edc4f1baf9f23cc7477561d42ec7de15aba212a5fbdbc5ba7d0e3031a2
+  - name: cp.icr.io/cp/assist/ema-technician:2.14.31@sha256:24e5eae9753c4487ea73afdfb6aff0e9a0a413b22da1cad180f534b9e178d9e9
+  - name: cp.icr.io/cp/assist/ibm-mas-assist-primary-entity:9.1.11@sha256:4e902fe7ee68d6a02b4ff6d4f4bf4ab328889aa559fc8c19bb2ec1a1612a68c1
+  - name: cp.icr.io/cp/assist/ibm-mas-assist-ws:9.1.11@sha256:f9e76bda69589c7cf046b333dfcaabf4a5e351ec6b904b6454d9545496078005
+  - name: icr.io/cpopen/ibm-mas-assist-operator-bundle:9.1.11@sha256:5446d1e82149341059e6e3af3bbf3b7a779d78304fc89c82f96e41be53bd55cf
+  - name: icr.io/cpopen/ibm-mas-assist:9.1.11@sha256:32e7540e4f014ecf1c8694feb04024b240fc4b5907fdfb43b2f2234af732a36c
