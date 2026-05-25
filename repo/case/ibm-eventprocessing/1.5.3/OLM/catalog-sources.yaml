@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-eventprocessing-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-eventprocessing-1.5.3
+  publisher: IBM
+  image: icr.io/cpopen/ibm-eventprocessing-operator-catalog@sha256:358f31cdd94878ffe32103dd756f3721a3da4e1825a5f8510b07d314a3a0e033
+  sourceType: grpc
