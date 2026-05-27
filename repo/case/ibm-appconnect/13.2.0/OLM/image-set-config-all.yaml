@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-langgraph-agents-prod:13.0.7.2-r1-20260520-083823@sha256:c7fb8bed7b14ce960cb24b074ade3688c9ba48ee01f3f78cd3c2607c7c143c8a
+  - name: cp.icr.io/cp/appc/ace-mcp-prod:13.0.7.2-r1-20260520-030640@sha256:17bc6ca5a82838e8f51ef469ac665c9ad87f60ffca9d6f00a9f594f248c898a7
+  - name: cp.icr.io/cp/appc/ace-server-prod:13.0.7.2-r1-20260524-190429@sha256:090c9f1bb8c23fe83ec27728ceb1d78f59b004ebf45c04b6477e3cd6d262e50c
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:13.0.7.2-r1-20260520-135904@sha256:710c33a81432a0e9fc6eaeb223393d2ef244885c45ac8844e7ccd8f33b15440f
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:13.0.7.2-r1-20260520-232134@sha256:5a5c1d355b1966b482b96ed00df5296a9e56b99c8cbccc3033688808155fa485
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:13.0.7.2-r1-20260520-135954@sha256:8f0c4cd143477ab9fc2826b4b28c9b46e61b3f3d4ad0d225ad93c0f8e854082a
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:13.0.7.2-r1-20260522-150725@sha256:c02b8ed7c5c7f21b191488dd2659c7c864eeb12338f733261089a57a9b0f1de9
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:13.0.7.2-r1-20260525-031457@sha256:379b177abb3420fb25bdfe4c7d2eb424fff1afccc1d51a5ef45c7066136c27fb
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:13.0.7.2-r1-20260520-021224@sha256:c7186ad204f0f117574273aa127a33cac6cffa257b66fb182e5164492afa7ac1
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:13.0.7.2-r1-20260520-231456@sha256:8ab8565ac776b2cab9557610f1100f38a79897b40e0f6a6f40bf9f4108f76a06
+  - name: icr.io/cpopen/appconnect-operator-bundle:13.2.0-20260525-113623@sha256:c0beb8d00b8e97a196ac4b10c4e07c9dc4a3f5e80150ddcc93eeb8bac0dc71d7
+  - name: icr.io/cpopen/appconnect-operator-catalog:13.2.0-20260525-113623@sha256:d636d223ae3351d9e5d8a29d864c9556c63ebf13cfd1151579adb6f1ac5e8b8a
+  - name: icr.io/cpopen/appconnect-operator:13.2.0-20260525-113623@sha256:68a3d944ab3866d5b6e19c25a6997e0caa57dac9a7fa2211f9f74e4ac8c402e0
