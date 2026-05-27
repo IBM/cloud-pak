@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-appmod-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-appmod-4.6.2
+  publisher: IBM
+  image: icr.io/cpopen/ibm-app-mod-accelerator-operator-catalog@sha256:99153d7700c26300e8c1245d72dcc13b4401c1d507129dbeb9a7bfe3c0786ad6
+  sourceType: grpc
