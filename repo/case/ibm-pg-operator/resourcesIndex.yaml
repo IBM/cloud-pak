@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 28.3.0
+  category: catalog
+  digest: sha256:594d19a1b24f977602b926007d052392fac3eba1796c55df9a39e03cf095c4ea
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v28.3.0-linux.amd64
+- caseVersions:
+  - 28.3.0
+  category: catalog
+  digest: sha256:017a5c4559f27a63905013e5a9eff7b448a3a36bf3f5a74712b38c8e1c29a29f
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v28.3.0-linux.ppc64le
+- caseVersions:
+  - 28.3.0
+  category: catalog
+  digest: sha256:6437743a8d541b1d195aea987611b700fc00274be0c39d4a33670c9f0be0b8d0
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v28.3.0-linux.s390x
+- caseVersions:
+  - 28.3.0
+  category: catalog
+  digest: sha256:58192d11df52a17ecd2bd3faafc590ec275f3893177b57f8b041c442894b78a3
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v28.3.0
