@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2716@sha256:f1af89c4aa6d9f8e842c1afeb9969e529f778368230ff1de8d7631adce318a36
+  - name: icr.io/cpopen/edb/postgresql:14.22-5.40.0@sha256:8b1f10ce2ca260a381eac0677c70d74a7c733092e0f3625f9b12b425edfb3cc8
+  - name: icr.io/cpopen/edb/postgresql:15.17-5.40.0@sha256:c4f7664b77ec21fb43e924006640da5d55ed39a596d25a90c8374410d362e673
+  - name: icr.io/cpopen/edb/postgresql:16.13-5.40.0@sha256:a16a63c48cd117e592a3e2fd15f31802a0e1ee357c71630aaba38452fa2f8c04
+  - name: icr.io/cpopen/edb/postgresql:17.9-5.40.0@sha256:d4fe1575db25f382608de20b552dd042f3bb4542387e6f82910dafd026d170e1
+  - name: icr.io/cpopen/edb/postgresql:18.3-5.40.0@sha256:5ac13a0948a0648306cf6792a882db2e1a24ee55bda3b6adf78a7aba35f5b7aa
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2716@sha256:28328fda2f86b3c48a063f704d972f58948abd888f3f3c3b7dcf165f91da86d2
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog:2716@sha256:563e0032a3d96e39a7f94cc1bcd4fea5ec38d6249da591baaec1473cf58cf7a9
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.28.2@sha256:513a9a63890f36dd3a9e66ecf1dda1487b18ff99283e17aebd19dc7ea52f1d2f
