@@ -1,0 +1,22 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/cpd/cpdbr-api:5.3.1.4@sha256:f9f76e8608da316a7975d4310160bd578b516adeef71d1b662b4d3421ab83c7c
+  - name: icr.io/cpopen/cpd/cpdbr-api:5.3.1.5@sha256:6473b78e7fff98ebd69771264fe3b4205b38d15b8ebd3d027f9c05e9be2773fc
+  - name: icr.io/cpopen/cpd/cpdbr-api:5.3.1.6@sha256:955bb3ae42390d83cd7592e85162afce30c129c49c4a5dd7ae1cf819a16461fd
+  - name: icr.io/cpopen/cpd/cpdbr-oadp:5.3.1.4@sha256:7fd7e95ccfac76211ce900189401886152db9a6a99961bdf56ea9687cdc81378
+  - name: icr.io/cpopen/cpd/cpdbr-oadp:5.3.1.5@sha256:a40cfc89f70b2caad471ca9d1d43632310e0a6d27d843402c37df33a54b50e05
+  - name: icr.io/cpopen/cpd/cpdbr-oadp:5.3.1.6@sha256:4fd27ba63f5e0f67cc64ac59dfcaed4933a4b1f79fdb808490d9eab783779415
+  - name: icr.io/cpopen/cpd/cpdbr-velero-plugin:5.3.1@sha256:0c325ed6757a459fbe569be93b8bc4984123380dd07039c8954298f222a1dd5d
+  - name: icr.io/cpopen/cpd/cpdtool:5.3.1@sha256:4723f9278a9694068b711b74b7ac063ff91c50df4bc32cbb138f90771f619eec
+  - name: icr.io/cpopen/cpd/ibm-network-performance:5.3.1@sha256:73aa37ee18bab7f34c64208e14de2eff867ed7776121fd4ac8ced31bd79292bb
+  - name: icr.io/cpopen/cpd/ibm-service-functionality:5.3.1@sha256:25fdf10d7479064e862b9c0c00164cb3fdcacd37bf39d2ce894eff807af6d237
+  - name: icr.io/cpopen/cpd/k8s-storage-perf:5.3.1@sha256:b632b9d41c047f5d0d43ba9d4fbae0d7e15c0eb37b0fdb8cd6e5023581853f58
+  - name: icr.io/cpopen/cpd/k8s-storage-test:5.3.1@sha256:23a3f144f495469700accfd7ac934995927e6e89e4f9e654d947a53c67ea424d
+  - name: icr.io/cpopen/cpd/olm-utils-v4:5.3.1@sha256:9c02aa92116259ae9c28c9ed5f6b2e10b87b17ec43c46f0f6a48f80f5fdd4970
+  - name: icr.io/cpopen/cpd/swhub-velero-plugin:5.3.1@sha256:8b75fcfebf4e7004439b39f797363fab42208447b4743b663950307c15ac2031
+  - name: icr.io/cpopen/cpfs/cpdbr-hook-utils:5.3.1@sha256:29753aa6e2b97f4bd2853e7311610037cd577afc68b2739f2cd5c164a55fa611
+  - name: icr.io/cpopen/ibm-cpd-platform-operator-bundle:6.4.6-4@sha256:345ead0968936fdd12faafbc88666d1bb6a627dc67b3f43f43eface89454faae
+  - name: icr.io/cpopen/ibm-cpd-platform-operator-catalog:6.4.6-4@sha256:8021514bac2572afca39c9ea676ecc0838a7fa7826b1e726964281cc336a33ea
+  - name: icr.io/cpopen/ibm-cpd-platform-operator:6.4.6-4@sha256:1931a906652ea274706f7f8cc8a6e8e4fe73e1524fcc563141f502d3ef71773c

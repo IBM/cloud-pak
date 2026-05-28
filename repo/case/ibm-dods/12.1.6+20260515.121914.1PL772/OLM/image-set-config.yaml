@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/dd-cognitive:1.0-cp4d-v5.3-b1PL1078@sha256:c4f74963d62d3d675de3c391baca5a8edae25c8e8d0e6b2e1a42553077136c22
+  - name: cp.icr.io/cp/cpd/dd-init:1.0-cp4d-v5.3-b1PL704@sha256:7df246324e26888b3e4aff58ef59645d1083c0e6ed9823b13cf996731b61daf4
+  - name: cp.icr.io/cp/cpd/dd-scenario-api:1.0-cp4d-v5.3-b1PL1393@sha256:26a008c61ca991ecf93aa888694c602326a7866ed8eec89da4debd1a912a52a2
+  - name: cp.icr.io/cp/cpd/dd-scenario-ui:1.0-cp4d-v5.3-b1PL1831@sha256:984d8d53f8ec06f0f881fbe1edc7e796979ed1f73ac32650e5311560504a0bdc
+  - name: icr.io/cpopen/ibm-cpd-dods-operator:v12.1.6-20260515.121914-1PL772@sha256:cf41e20efdf390bd9777c302e6e0e6ad1da60aae09433fddbb0318b8fabce62c

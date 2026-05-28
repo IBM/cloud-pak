@@ -1,0 +1,39 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0
+  catalogs: {}
+  classifications: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    apache2:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ' Apache License Version 2.0, January 2004'
+        displayName: apache2
+        name: apache2
+      ref: APACHE-LICENSE-2.0.txt
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM
+        displayName: IBM
+        name: license
+      ref: IBM
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-opensearch-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports: {}
+  version: 1.4.3
+  webPage: https://www.ibm.com
+created: 2026-05-28T21:27:59.31074709+0000
+digest: sha256:3fc66ab9bbd724c4c85d2fe7046df38b08bcf8c1b1b0b10b5fad1c7d6e254f56

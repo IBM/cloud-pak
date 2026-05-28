@@ -1,0 +1,31 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/aios-bias-service:5.3.4.2312@sha256:e35da0b4e08aa36dac70baab05530c0fe93a2f8aa283768166c3d8874534d2fc
+  - name: cp.icr.io/cp/cpd/aios-bkpi-combined-services:5.3.4.155@sha256:81a840620e7bf1cec7328282b517a78f595ec91d3470a33370fafb89a08dda8e
+  - name: cp.icr.io/cp/cpd/aios-common-api:5.3.4.473-signed@sha256:75563d7b4d1d87b6b17ca11d81e1f645be8c5850a304e125a772cf1e6ecd1014
+  - name: cp.icr.io/cp/cpd/aios-configuration-service:5.3.4.130-signed@sha256:5bf80f3a5ad81d3b70eadebd3f4c4fab6c916cae43ea0ddacbebc804cf24ae7b
+  - name: cp.icr.io/cp/cpd/aios-dashboard:5.3.4.91-signed@sha256:08ac3028156fd5be82281c1ccac68aabb73ac4e7670f06252526bc57c2344468
+  - name: cp.icr.io/cp/cpd/aios-datamart-service-api:5.3.4.88-signed@sha256:ecb93aa1107a657667ff207085d1e58ab026d44f32817455ff034ea4ce1c4c3a
+  - name: cp.icr.io/cp/cpd/aios-etcd:3.5.30-ubi9-r4@sha256:63227f6a23eaab4e56f17d50dd1f859d33a8412a533ad1a7360498a037cdcf15
+  - name: cp.icr.io/cp/cpd/aios-fast-path:5.3.4.909@sha256:3448791e410ee19f5b279babb31641b2d92c4c9970924c7cb43da64bddb5a00f
+  - name: cp.icr.io/cp/cpd/aios-feedback-service:5.3.4.979@sha256:e9764cb6621028cd36a93d5dafd4107c28ca6389390719aaf5587ac93ebe76cc
+  - name: cp.icr.io/cp/cpd/aios-kafka:0.0.285@sha256:a401c7ea4cc059b3333c145cad9a3f95453989ddad191b9e08aa467308f37df4
+  - name: cp.icr.io/cp/cpd/aios-kubectl:1.0.272@sha256:688b73a80ff1924cb9c92328bc1a46bc77f58ce7c63ea0104f1ba332fbf7b733
+  - name: cp.icr.io/cp/cpd/aios-ml-gateway-discovery:5.3.4.1298@sha256:e5123004d69f1a6ec3633be442853724c9669839c1911193d22245f1e60a2a52
+  - name: cp.icr.io/cp/cpd/aios-ml-gateway-service:5.3.4.1298@sha256:cf7fdd4077e207e6179119bd809f114c548b6762405fc5ebde416e84aaf4ee39
+  - name: cp.icr.io/cp/cpd/aios-nginx-local:1.15.5-ubi9-r98@sha256:dbb6b2816be682b918cb3dc0be8d8484ed30d592c7e705c7f1790a671440140c
+  - name: cp.icr.io/cp/cpd/aios-orch-notifications-service:5.3.4.438-signed@sha256:06fc72376c779a0bfa2fbaa1ac039d7f0acf74bd902a495917be702b873ee61e
+  - name: cp.icr.io/cp/cpd/aios-payload-logging-service-api:5.3.4.1011@sha256:618357ebca3da5726cb04d1af2711d4eb5a33f126900d39acad989dd4b89d950
+  - name: cp.icr.io/cp/cpd/aios-payload-logging-service:5.3.4.1238@sha256:c6f3eb4843ec1c0c85bb3ddb6f37121d2f8e636138e13b0debb0b00cfede2da1
+  - name: cp.icr.io/cp/cpd/aios-redis:5.5.0-ubi9-r105@sha256:065d26c09b77e58850e3834748201cc1e1ed6ab50caba3922b9ef0ee57b6c638
+  - name: cp.icr.io/cp/cpd/drift:5.3.4.2046@sha256:32118e2b3fc9f394c7680d4c8314cf27fd7ec5e1aa1c300bf572131e59db3b02
+  - name: cp.icr.io/cp/cpd/explainability:5.3.4.2697@sha256:b505d5c3fe6026c2cc065def3dd08ed5613fe7e0b970c7ab827daeaff224a9e6
+  - name: cp.icr.io/cp/cpd/metrics-compute-manager:5.3.4.553@sha256:74948585521832da498fddb85d48b7a2962f0bb0eaed875d981e58a0b098935a
+  - name: cp.icr.io/cp/cpd/model-operation-service-scheduling:5.3.4.483@sha256:1a0da96b00385bd809761d0d8806e178bc84381aba521697271876235f80f15f
+  - name: cp.icr.io/cp/cpd/model-risk-management:5.3.4.2046@sha256:8b680a072fde76c38eb46ebf85a0b3247e847c75eb0e1aa6c51107a8f51f0088
+  - name: cp.icr.io/cp/cpd/wxgov-guardrails-manager:5.3.4.180@sha256:5632915416ae6ae653ab89b54643c33b1f59ef043d24e3bd75a277b54ea0c604
+  - name: icr.io/cpopen/ibm-watson-openscale-operator-bundle:9.1.3-23@sha256:d48b963142ec9ef904b604d52febc6abf2c4c8fe8cb31724d83cebb61d4982d8
+  - name: icr.io/cpopen/ibm-watson-openscale-operator-catalog:9.1.3-23@sha256:e6876883d91f6ab82c7b850d99315f350d27dfb9be997a30e1e101ed1ee34dce
+  - name: icr.io/cpopen/ibm-watson-openscale-operator:9.1.3-23@sha256:0ed711b1352842c937bdc06e8580f39b9ee25cc0b4b2cf7e83f4e19468cb809e

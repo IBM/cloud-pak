@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-wca-z-model-gateway:1.0.264@sha256:17ac06d84debf733182615e5375b6efa80f7ef0a4b13b435593cf6c2d149ac8b
+  - name: cp.icr.io/cp/cpd/wca4z-agents-orchestrator-understand:1.1.186@sha256:7b1b9bb90a7b5883d0aaecdd416faff957f80e481ed3dfe500b4d390b858132f
+  - name: cp.icr.io/cp/cpd/wca4z-semantic-insights:1.9.143@sha256:625f2f0f1835dfa9717dc637fa964f1207efeb203322b5cca56c5e5663be2e8d
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator-bundle:1.0.61-patch6-v2@sha256:9a71b49b93bb06a15cd49705f4417a2ed3f7bcbfe8a31e03f24dbf78bf22f4fe
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator-catalog:1.0.61-patch6-v2@sha256:06c718c32d4acd3b3ebd4186dc3e3ebd5734e3300d0409a1f4857f6693abaf4d
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator:1.0.61-patch6-v2@sha256:01001074159cf9d9e827e4f602f284c38ffd9ecb2fe3fff11f246e0fd62012c3

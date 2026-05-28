@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:4a40ac23337e129531396e2e59bc00f65f25b8b70d52a190d4c116135ff39267
+    packages:
+    - name: ibm-opensearch-operator
+      channels:
+      - name: v1.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog:1.4.3@sha256:4a40ac23337e129531396e2e59bc00f65f25b8b70d52a190d4c116135ff39267
