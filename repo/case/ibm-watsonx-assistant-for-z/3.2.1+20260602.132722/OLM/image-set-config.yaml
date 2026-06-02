@@ -1,0 +1,32 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/authorization:v3.2.0@sha256:85748534c8564374e5887adba06a8314c7ff7b930e6447bda2c2ac06fc04a398
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/dynamic-filtering-model:v3.1.0-20251211-120500@sha256:14b972be738c6facc6b5b9e6432a0457aa7327adc44d4d8c3098e48d765358d7
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/ibm-wxa4z-content-ingestion:v3.2.1@sha256:4a4f6593660aefd3aaaccdd9e8b94769eef17c261541745516eb2ceef4343fa1
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/ibm-wxa4z-data-processor:v3.2.0@sha256:6ea00fb3a3a30b0b40168349854b6bf0bd6aeec0b254758ea2a3e93119b5c44b
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/ibm-wxa4z-pii-detection-service:v3.2.0@sha256:f50ea888e2410cfa28a685570b856f80fa75b25f3f9622ac5fe7f2d1670cc37c
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/opensearch-client:v3.2.0@sha256:8024942337ba87bee04659ea1d15c9053edbb64be8ed56fcd41f171a6228b040
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/opensearch-s390x-builder:v2.2.0-20250324-204200-s390x@sha256:d87bdc1bf5b623a56aec044e05b720d3470ed9fcc262b5b9e0ac492142e49556
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/opensearch-snapshot:v3.2.1@sha256:fef8bb19e212543db30e8f479b24fb5e5079a9b55dd60a41540fe73b89b6f5fc
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/opensearch-wrapper:v3.2.1@sha256:87296edd56914c6a306d92cbe773a3f59155c19f2f724ec2e011e4fd4bc44322
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/reranker-model:v3.1.0-20251211-120500@sha256:6219a780e0de13a495c9b7dfa3cbf632f8a0d971d47169f2dc7325e35619a021
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/slate-model-47m:v3.0.0-20251003-140000@sha256:e7bba24bcf43ca6103846df9d2a4b36ae9cbb9d72399b6792e12017eb02c70bf
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/slate-model-safetensors:v2.2.5-20250626-203000@sha256:39364b5bb95f55d00ad4d015a554ed85a0961fd9aa814de5d02facd1e05db492
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/slate-model:v2.2.0-20250324-204200@sha256:58d876c92c70fddb0fe81e32f8e3f2e5d6a45acce218081a220911db85bd8b3a
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/snapshot-setup-base:v3.2.0@sha256:a68dce60a8a2fc9cc256c564267c226a4ecb31aa5d489eb8237cde3606cacd76
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/upgrade-agent:v3.2.1@sha256:e822ca5816652aacbf8bc5fea6cbc67edd6e8f03622350d8387da7b50b48b839
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-agent-bootstrapper:v3.2.0@sha256:2957329a637d4ce4c21bbd1b88da77f050497883ce78cabc96afeb1d790425f5
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-aiops-agent:v3.2.1@sha256:f8552c45558331015302c81b6406205a9c8dc9d07883e62b672d4f3c79ea12f2
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-content-ingestion-ui:v3.2.0@sha256:638cdad12cd64340295d0dcc1faaed28b02cc4098919832b787646f737781ff5
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-system-automation-netview-agent:v3.2.1@sha256:fab10ab6ccb28b9cdd41921b27af6ba8efe0807f9cc76c974e0bf53a831453c7
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-tls-agent:v3.2.1@sha256:24345c310c501bc1b03dab788382c94c2954e978a71f67be6e207a854807872d
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-workload-scheduler-agent:v3.2.1@sha256:0a3b5b88f2546f5f7aee40b7ee3140b76a3ea517fd13276cc0c6748b666dffbf
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/wxa4z-zchatops-mcp-server:v3.2.0@sha256:1da9fed234e33082ce91fda17928c82706486299ebf9ab3bb89f59a374612778
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/zchatops:v3.0.0-20251003-140000@sha256:b5a80e5525c75c32d66a6845979f114ea3b1ecf00346a63d884f7d5e2dbf96dd
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/zos-topology:v3.2.0@sha256:78a36b54345350c549280ebb2afbe7d8e7f1984849c42c5e4dc5c6365c7168ca
+  - name: cp.icr.io/cp/ibm-watsonx-assistant-for-z/zrag-mcp-server:v3.2.0@sha256:9f1acd2fe09a6e856c9dab32c2dba3a5b9ed8ff1ab86f0879ecfe72f8aaa1a57
+  - name: icr.io/cpopen/ibm-wxa4z-catalog:v3.2.1@sha256:067a7889539b073830965dbae0b5fcd39c8516a31a70b9956576f03316820d89
+  - name: icr.io/cpopen/ibm-wxa4z-operator-bundle:v3.2.1@sha256:2a6cfa83467cd10381b4b1dd84616a989430615db0183c70ec047de04fb397cd
+  - name: icr.io/cpopen/ibm-wxa4z-operator:v3.2.1@sha256:8668d4ca816197a9913fbe5168c240083f85bb2f99211016d7ec8727e04562cc
