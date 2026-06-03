@@ -1,0 +1,14 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/common-service-operator:4.19.0@sha256:a07c9bb3e23b07b1d160716620cf985252c8d80a40276bca4b4d5bca99c26e9c
+  - name: icr.io/cpopen/cpfs/cpfs-oadp-plugins:latest@sha256:d4865d5e633da4c35f716b26692b5cfbb598335e486f8991e3e75bfcda109df4
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:aeca8ae5da97582051f847b66bae11e28467944243cb8b9fcb6221a6f7350864
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:4d61e05912f9bfed5283e5117a6e248596da61fd30f4cfeb816f2ea8dcd45bd7
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.19.0@sha256:7fb5f24456d71f89630a1a5297e7573565da29a65c4687ff13c54d30bb7753f2
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.19.0@sha256:be1f306b401d2802d8334b70d0e40444cd74598e05cb935c42933bf88af3ca99
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.3.6@sha256:4c4787eede067d51913a50c98e4db911cebc9658822ff32800ef3208300cf11a
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.3.6@sha256:5c200f68974a377208c7a9c184d818b6c0ea69a76099c2d798d1e80497a2c5ca
+  - name: icr.io/cpopen/odlm:4.5.8@sha256:95624a362336189b44bf20ece52ec76f758c9d2cdbc1e5c709bcab0806a615d0
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.5.8@sha256:c0284a0937fccb789c296c72d3d70fcd5ed3fef06e0ff0184de6881214b1827e

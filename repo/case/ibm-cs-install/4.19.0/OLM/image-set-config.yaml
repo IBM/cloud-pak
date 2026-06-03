@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:56abd3e9e1d33dca6658a9cc7ac9f804c37ddf65aedcaa1e5258ee19fd619219
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.19
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-cs-install-catalog:cd-20260527-1432@sha256:56abd3e9e1d33dca6658a9cc7ac9f804c37ddf65aedcaa1e5258ee19fd619219

@@ -1,0 +1,65 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-5.31.1+20260310.150029.2714
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:79042063952ee9683c972a83ebfa9085f8899ea73403ff7a0de74e537d7b84b3
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-iam-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-iam-4.17.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-iam-operator-catalog@sha256:845eb294d21e6af580f70424f7c57886194cd5644bb1d57e31d8be6818b4fc2c
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-install-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-install-4.18.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cs-install-catalog@sha256:f76c75ccb46689bdfd7ad30169593c96895aba5458962681aaa3cef74fb7a324
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-events-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-events-operator-5.2.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-events-operator-catalog@sha256:228ea92d69daa2350e151d1fe6b14e6fb56eadd0d3b5b5872178180747297687
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-swhub-control-center-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-swhub-control-center-5.4.5+20260602.173838.1436.545.2
+  publisher: IBM
+  image: icr.io/cpopen/ibm-software-hub-control-center-operator-catalog@sha256:1b201f79b13137dd7d5e8d49e29ac8e1c7d998880c2c70e0cdf86099687abcc2
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: opencloud-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-common-services-4.18.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-common-service-catalog@sha256:cd83d878115b87d0d0a056398568978c776502aad3f5f432205a961e3af12c6c
+  sourceType: grpc
