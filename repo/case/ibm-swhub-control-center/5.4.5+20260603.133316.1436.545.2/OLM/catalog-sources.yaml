@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-swhub-control-center-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-swhub-control-center-5.4.5+20260603.133316.1436.545.2
+  publisher: IBM
+  image: icr.io/cpopen/ibm-software-hub-control-center-operator-catalog@sha256:1b201f79b13137dd7d5e8d49e29ac8e1c7d998880c2c70e0cdf86099687abcc2
+  sourceType: grpc
