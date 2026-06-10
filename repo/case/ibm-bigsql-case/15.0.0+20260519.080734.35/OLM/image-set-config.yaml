@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/dv-addon:v3.4.0-35@sha256:dd7f534ec0ff23fa49d7363d6d1437d997e9cb231551d43222f02015bf5669d3
+  - name: cp.icr.io/cp/cpd/dv-alert-monitor:v3.4.0-35@sha256:951fee8d480439ac2fa303676aa9ca569ae130d62ccb2909ef9efde3d3e946da
+  - name: cp.icr.io/cp/cpd/dv-service-provider:v3.4.0-35@sha256:2b78370a82939de114e9765f5928833536ac098e50f4c17d592002f8183debe2
+  - name: icr.io/cpopen/ibm-cpd-bigsql-operator-bundle:v3.4.0-35@sha256:78d54c9afdb0ff42a260df6d4ec19c88b6dae5fc9fb619632d504cd65efb3a65
+  - name: icr.io/cpopen/ibm-cpd-bigsql-operator-catalog:v3.4.0-35@sha256:b6ef9194b5cf8e9e663e4457919712c054cecd85fb15cb7b40209fd0a839f686
+  - name: icr.io/cpopen/ibm-cpd-dv-operator:v3.4.0-35@sha256:9607ef062e0e265450fb402df28bc02150296b041bba2bfbab14008283cfdfca

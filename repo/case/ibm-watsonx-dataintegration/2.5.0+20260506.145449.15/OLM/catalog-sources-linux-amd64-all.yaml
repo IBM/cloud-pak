@@ -1,0 +1,27 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-replication-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-replication-5.3.4+20260511.205233.2010-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-replication-catalog@sha256:c3a91a3d440e52e3176e6faf98c0d00b3f21e2c6da2d63cb1d0701477e5354a8
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-datasift-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datasift-5.3.15+20260505.070338.219-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-datasift-operator-catalog@sha256:b742df380fed4f5bec24677aba933cdf64b5fc5dd73187c1637b4e9aecf6d890
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

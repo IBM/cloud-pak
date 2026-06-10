@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-db2oltp-cp4d-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-db2oltp-5.4.0+20260526.114651.3858.5177
+  publisher: IBM
+  image: icr.io/cpopen/ibm-db2oltp-cp4d-operator-catalog@sha256:7846eb06198a80f148903d0aaa2223b35527225b4043a24f5604c52c49b17b90
+  sourceType: grpc

@@ -1,0 +1,50 @@
+apiVersion: v1
+case:
+  appVersion: 13.0.0
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Centralized gateway service providing unified access to multiple AI
+    model providers with enterprise-grade features
+  displayDescription: Enterprise AI model gateway with multi-provider support, load
+    balancing, and rate limiting
+  displayName: Gateway
+  icons: []
+  licenses:
+    watsonxai-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM watsonx.ai License
+        displayName: IBM watsonx.ai License
+      ref: watsonx-ai-v2-4-0-license-update.txt
+    watsonxai-non-ibm-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM watsonx.ai
+        displayName: Separately Licensed code
+      ref: non_ibm_license-for-Models-in-watsonx-ai-v2-4-0.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-model-gateway
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 13.0.0+20260527.003345.105
+  webPage: https://www.ibm.com
+created: 2026-06-10T08:01:39.24488960+0000
+digest: sha256:2a1fc0c4b1c73ef2cbc1f30880e2eec02311dee4daefa55fffa9bba1f498ad9e
