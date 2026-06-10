@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 5.4.0+20260606.131948.287
+  category: catalog
+  digest: sha256:df190631ddfe863ca59e767e0c0467fd790e7ffbf6c6ca452bad761607bd81fc
+  image: cpopen/br-orchestration-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.4.0.amd64
+- caseVersions:
+  - 5.4.0+20260606.131948.287
+  category: catalog
+  digest: sha256:ef13f4faa2d67e6d851d6fb0bae304cb7e74125fafe52d01642b20b8a09f6ec1
+  image: cpopen/br-orchestration-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 5.4.0.ppc64le
+- caseVersions:
+  - 5.4.0+20260606.131948.287
+  category: catalog
+  digest: sha256:6d25b55c5b8a4e9e875acbbb33df63adadca70a5e981109f8ccab6fb984858dd
+  image: cpopen/br-orchestration-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.4.0.s390x
+- caseVersions:
+  - 5.4.0+20260606.131948.287
+  category: catalog
+  digest: sha256:ff775397d17c1d7091374a592811fed15060ef3fc0b487e87f71fadc53a2ec46
+  image: cpopen/br-orchestration-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.4.0
