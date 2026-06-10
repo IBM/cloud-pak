@@ -2,6 +2,20 @@ source: ibm-analyticsengine-bundle/case/ibm-analyticsengine/case.yaml
 description: ""
 images:
   - image: cp/cpd/cos-logger-sidecar
+  - image: cp/cpd/ibm-lh-spark-control-plane
+  - image: cp/cpd/ibm-lh-spark-cos-logger-sidecar
+  - image: cp/cpd/ibm-lh-spark-cpd-miniconda-runtimes
+  - image: cp/cpd/ibm-lh-spark-cpd-miniforge-runtimes
+  - image: cp/cpd/ibm-lh-spark-deployer-agent
+  - image: cp/cpd/ibm-lh-spark-graphite-exporter
+  - image: cp/cpd/ibm-lh-spark-helm-repo
+  - image: cp/cpd/ibm-lh-spark-instance-operator
+  - image: cp/cpd/ibm-lh-spark-nginx
+  - image: cp/cpd/ibm-lh-spark-python
+  - image: cp/cpd/ibm-lh-spark-rsyslog-sidecar
+  - image: cp/cpd/ibm-lh-spark-truststore-util
+  - image: cp/cpd/ibm-lh-spark-ui
+  - image: cp/cpd/ibm-lh-spark-wxd-cpd-miniforge-runtimes
   - image: cp/cpd/spark-hb-control-plane
   - image: cp/cpd/spark-hb-cpd-miniconda-runtimes
   - image: cp/cpd/spark-hb-cpd-miniforge-runtimes
