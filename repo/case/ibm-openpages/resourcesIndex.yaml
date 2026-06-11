@@ -414,3 +414,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 9.1.3.3-70
+- caseVersions:
+  - 11.0.0+20260610.072657.920061787
+  category: catalog
+  digest: sha256:3b1169999ce8da591928bce845a7aa17950a6dbe42b2d58b2fd84b1ee9ae30bc
+  image: cpopen/ibm-cpd-openpages-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 9.2.0.1-1787-amd64
+- caseVersions:
+  - 11.0.0+20260610.072657.920061787
+  category: catalog
+  digest: sha256:e3de60c58658c4368283ece6123a46485680cf711dd7e811d25eb547f254f560
+  image: cpopen/ibm-cpd-openpages-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 9.2.0.1-1787-s390x
+- caseVersions:
+  - 11.0.0+20260610.072657.920061787
+  category: catalog
+  digest: sha256:e673463c8fcbb15d78a974d34c8c802317a8af7650cb1a1f0eb3025bd1ba31e3
+  image: cpopen/ibm-cpd-openpages-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 9.2.0.1-1787

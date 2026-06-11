@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/openpages-cpd-addon-translations:9.2.0.1-1787@sha256:aed6081e56b80fae749d470f590a0bab6060bafc432a02627c41fa6a9d549da2
+  - name: cp.icr.io/cp/cpd/openpages-cpd-cognos-service:9.2.0.1-1787@sha256:92f6e9867bf5af6ceda47caf0d0712ca1338da121a63bbc9670327d395a6c317
+  - name: cp.icr.io/cp/cpd/openpages-cpd-opapp:9.2.0.1-1787@sha256:01035762ac98e5f26039f1efa4c12879150e9e9578321d315a474b75a6db66de
+  - name: cp.icr.io/cp/cpd/openpages-cpd-opappaudit:9.2.0.1-1787@sha256:641092133eb66fcfa2f1d8b221e2bbd1e9491163aadbfe1a4fb2b40b7e72538a
+  - name: cp.icr.io/cp/cpd/openpages-cpd-opsearch:9.2.0.1-1787@sha256:7a54eddca3a24a511afa012cf838597e3fe046bdb302059f8e7b808e7928c129
+  - name: cp.icr.io/cp/cpd/openpages-cpd-provisioner-oracle:9.2.0.1-1787@sha256:78f8f6b3f2c38796b673de0dc247974c3b7d95013bd9a37f7a6be542d9854249
+  - name: cp.icr.io/cp/cpd/openpages-cpd-provisioner:9.2.0.1-1787@sha256:e50bb35d944b932496594219fc4c5303dcca9335f7468c9d81098670f4811de6
+  - name: cp.icr.io/cp/cpd/openpages-cpd-user-sync:9.2.0.1-1787@sha256:c8f9019f4dfbf47da6ad174eb650a0eb4757d5793bb3494bdb23275973e89674
+  - name: icr.io/cpopen/ibm-cpd-openpages-operator-bundle:9.2.0.1-1787@sha256:148ac4debe1d3b68e8d70ff3a22d70a65a42b25f63bcfadfa4c7d249fdb56c7d
+  - name: icr.io/cpopen/ibm-cpd-openpages-operator-catalog:9.2.0.1-1787@sha256:e673463c8fcbb15d78a974d34c8c802317a8af7650cb1a1f0eb3025bd1ba31e3
+  - name: icr.io/cpopen/ibm-cpd-openpages-operator:9.2.0.1-1787@sha256:4411699647d9e0e8a976ce0860e549e1e2deb8e83633485c6b565f3c3a25418e
