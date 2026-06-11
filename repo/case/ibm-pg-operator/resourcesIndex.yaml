@@ -76,3 +76,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v28.3.1
+- caseVersions:
+  - 28.3.2
+  category: catalog
+  digest: sha256:3707668070473068d0ee08ef5e2a95dfe4de24ff93a74d2f90c5d15402e0b626
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v28.3.2-linux.amd64
+- caseVersions:
+  - 28.3.2
+  category: catalog
+  digest: sha256:b8265abae64edb4e87d2663166c86b1478f20f06eca2cb10b69c8fc0bc6cab81
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v28.3.2-linux.s390x
+- caseVersions:
+  - 28.3.2
+  category: catalog
+  digest: sha256:10fbaf5670977e6df4aea7d9207a63eb28c09a0cd173992410274db30ef12fa1
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v28.3.2-linux.ppc64le
+- caseVersions:
+  - 28.3.2
+  category: catalog
+  digest: sha256:cf5e7800f9f8e63946adbc0de091fd3cd524a0082ffaf98c926876da4aa0c816
+  image: cpopen/ibm-pg-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v28.3.2
