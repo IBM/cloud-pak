@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/bob4z-shell-proxy:1.10.38@sha256:7357bd36e3d5681f7fd05181adea764683e0b37a16d7da70b56393c9b96e3708
+  - name: cp.icr.io/cp/cpd/ibm-wca-z-model-gateway:1.0.219@sha256:c37fa52f0420ee2ce6842cb5d26cf0e61cb41ecc761f3259ec17c40ec48fc003
+  - name: cp.icr.io/cp/cpd/wca-codegen-c2j-certificate-docker:1.0.122@sha256:8eade9ad29975abb7c54e4624cd92e23b9a286bdaa2db0e5446074821533092b
+  - name: cp.icr.io/cp/cpd/wca4z-agents-ide-gateway-image:1.1.120@sha256:0c7758099b5e98b26c1e9db1e2c2df9a66fe7b95268cdd4ec1fb59273cd9d47a
+  - name: cp.icr.io/cp/cpd/wca4z-opensearch-docker-build:1.0.22@sha256:2af1379f24f6e32ed328b77dfb26e61ac8532ba903cd67e68e8e93d3f24ced1f
+  - name: cp.icr.io/cp/cpd/wca4z-rag-db-snapshot:1.0.2@sha256:687419233f0953fc9432a6f18212dd2539754c356bb7dcf41fd4558161764d25
+  - name: cp.icr.io/cp/cpd/wca4z-rag-db-utils-docker-build:1.0.1@sha256:f7f2529c56353d7cc3b0c143177f50257a03d8afb71bfdc2335cfc8ee8107fb0
+  - name: cp.icr.io/cp/cpd/wca4z-rag-mcp-server:1.3.19@sha256:700da9f56c3f005f3f09026c4427d8ea5c6c185d1b1264839c5da44ff44dec6e
+  - name: icr.io/cpopen/ibm-wca-z-agentic-operator-bundle:0.13.7@sha256:b840816886bf7c224fbe0aa471864c798774e9ff39d297dbc916073a0bb6cbd8
+  - name: icr.io/cpopen/ibm-wca-z-agentic-operator-catalog:0.13.7@sha256:0e85721e7dd443f52cfea61393a21a9c13928c676271a520c062d1d2ab0342ea
+  - name: icr.io/cpopen/ibm-wca-z-agentic-operator:0.13.7@sha256:9247b19dac29642120a9dcd4fb95f55c9bf0df43bbe0c8cfe8ce5f36cd52acda
