@@ -1,0 +1,14 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-datacollector-libs:JDK17_7.4.0@sha256:06f7df33d2ee834bbfaa46460b8859672ab4c154ff606e9f1e2c68b254d59531
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-datacollector:JDK17_7.4.0@sha256:11c2e3997fd303699f16b22b874a2eb97aa988550b3313e0261bc2aa453bbdfa
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-sdi-rabbitmq:1.6.6@sha256:d8f349c1ed710547fc82e15d57570bbd2b8c71a0148896b58592e55ab23685ad
+  - name: cp.icr.io/cp/cpd/sdi-config:1.26.0@sha256:e5c6f2e52918f8a12f20831be99186c7e5a5e0443c8a8325f34e31363b2b99d7
+  - name: cp.icr.io/cp/cpd/sdi-engine-gateway:4.34.0@sha256:a1285825f3089cbbfcb57e0aee8d04ba803dfeb1b781d0ba192d5aa46b2f82f6
+  - name: cp.icr.io/cp/cpd/sdi-engine-manager:3.55.5.2@sha256:023b338d3a525fa8a1091456a455e78a6019bd56d4fb97874068cfa356f7e8e2
+  - name: cp.icr.io/cp/cpd/sdi-flowstore:1.58.1@sha256:ad497ec9bb6f50617fab6ed971c90160a8e94e8bc5e6118cf51ba4dea879ff5d
+  - name: cp.icr.io/cp/cpd/sdi-jobrunner:1.67.3@sha256:e2e35342eb57bd8d24518b57962e23ddf518c40a180ad976f857f46cbef5a877
+  - name: cp.icr.io/cp/cpd/streamsets-canvas:20260526183015-release-20260417.1-4e215e5d7474066d5ea125bb1bc3e59a0d88ca7e@sha256:5deef970ebcbdcf34f98d9c6a4e6f6ff5bc8640752ac10b6b08ab0b8bdf575fb
+  - name: icr.io/cpopen/ibm-streamsets-sdi-operator:3.0.0_20260612.123735.501@sha256:5a2d56b01285a44ea1348076cb55d3310a870cae5e349e2400b4eff2ff27601a
