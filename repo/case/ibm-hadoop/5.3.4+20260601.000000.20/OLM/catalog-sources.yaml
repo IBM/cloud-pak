@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-hadoop-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-hadoop-5.3.4+20260601.000000.20
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-hadoop-operator-catalog@sha256:287fecb4b86043fdd084e70fc15748caedab1fb9e1aaae01cd01abcab2e3a0df
+  sourceType: grpc

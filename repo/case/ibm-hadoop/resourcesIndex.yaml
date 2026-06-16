@@ -1389,3 +1389,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 5.4-20260505.000000-99
+- caseVersions:
+  - 5.3.4+20260601.000000.20
+  category: catalog
+  digest: sha256:a923f1925f387bb12bf4de9cb36ec232a9bc83d73cee588c42f52392d480010d
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 5.3-20260601.000000-20-amd64
+- caseVersions:
+  - 5.3.4+20260601.000000.20
+  category: catalog
+  digest: sha256:e723f2386c72d583446c35fd873df19e40cdc7d857de96da6f303ffee11e1564
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 5.3-20260601.000000-20-s390x
+- caseVersions:
+  - 5.3.4+20260601.000000.20
+  category: catalog
+  digest: sha256:287fecb4b86043fdd084e70fc15748caedab1fb9e1aaae01cd01abcab2e3a0df
+  image: cpopen/ibm-cpd-hadoop-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 5.3-20260601.000000-20

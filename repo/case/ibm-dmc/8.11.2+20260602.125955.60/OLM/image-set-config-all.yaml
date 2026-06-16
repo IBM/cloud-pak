@@ -1,0 +1,22 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-api:8.11.1-35@sha256:fad9fe3df72985b677efd4d71d5d8e3fbfc4f8afc4bd829a69fc1050872b7499
+  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-ui:8.11.1-35@sha256:0a98d76e7fbb4f248d0b6668d21ca5ec09158b07ecb9597a1852585c0ed1a939
+  - name: cp.icr.io/cp/cpd/ibm-dmc-admin:3.1.12-139@sha256:4c84e97fc0be3283045dc221f907c59fa381dd0cb03afee226a701e4675d4ea0
+  - name: cp.icr.io/cp/cpd/ibm-dmc-dbapi:3.1.12-139@sha256:96daa79771579320757dcb43bc4049d89e367641529eceb430cfaa48101bfc85
+  - name: cp.icr.io/cp/cpd/ibm-dmc-explain:3.1.12-139@sha256:4da17b5cd22479b84f69e0258385776aa1a01b6457610f31aa843b2538f34b94
+  - name: cp.icr.io/cp/cpd/ibm-dmc-job-scheduler:3.1.12-122@sha256:355b02b712bdf98176ecab6a33bd589bb518541f2525ab8e0e021f90dd5c108c
+  - name: cp.icr.io/cp/cpd/ibm-dmc-monitor:3.1.12-139@sha256:956626f8dfcb3c68872b74a1479a403d833131ff3ad2135980110414221b6b90
+  - name: cp.icr.io/cp/cpd/ibm-dmc-nginx:3.1.12-122@sha256:2ca48340ee087ece39ee3a6ba397dc22bec77e6be84af644d78fe6b2d5f3930c
+  - name: cp.icr.io/cp/cpd/ibm-dmc-registry-manager:3.1.12-122@sha256:674de7288861229c22243bb0a5c41506ae79c3979e8b8d6bf0aba83f94335cab
+  - name: cp.icr.io/cp/cpd/ibm-dmc-runsql:3.1.12-139@sha256:a9580f92a4e839a0f4e13bd330c576a44f2251a3b97b21101c9381769f2604d3
+  - name: cp.icr.io/cp/ibm-redis-cp-haproxy:1.4.0@sha256:49cb406b778c33f5cf4b9b07c367d7f0117007fc1a9cd1be57e1dde48d0f1d56
+  - name: cp.icr.io/cp/ibm-redis-cp-operand:1.4.0@sha256:efcd271baf18245998de72fcc38f5e9068603de3b2c98fb12f8bf9d26f56302f
+  - name: icr.io/cpopen/ibm-dmc-operator-bundle:5.11.2-60@sha256:1c1f1333d68ec58e56f0602ec9849f0955ed7bf1d61b640e43842a40fff082f5
+  - name: icr.io/cpopen/ibm-dmc-operator-catalog:5.11.2-60@sha256:8bf5612581fa68a2f589ef1760515e3f113a82189fb152a954676a5c3b2084b6
+  - name: icr.io/cpopen/ibm-dmc-operator:5.11.2-60@sha256:416ba065aa804e62990703e8bc9e12a70c4d0085c66102b507dd2d6e3e032646
+  - name: icr.io/cpopen/ibm-redis-cp-operator-bundle:1.4.0@sha256:692bbec4f7d4c13c002fcdfbf2b9d6593e85cd15a513e42899698d98ee823747
+  - name: icr.io/cpopen/ibm-redis-cp-operator-catalog:1.4.0@sha256:8391c3e193e9dc54f1a91996daaaca73126d5a814dd82cd49651576a4ac633e9
+  - name: icr.io/cpopen/ibm-redis-cp-operator:1.4.0@sha256:8a6f79071358018eb0af00914b8189224f126e5eb36c0a14548e53a3188d3ce4

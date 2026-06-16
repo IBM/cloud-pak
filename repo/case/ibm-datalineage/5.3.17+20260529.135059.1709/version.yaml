@@ -1,0 +1,47 @@
+apiVersion: v1
+case:
+  appVersion: 5.3.17
+  catalogs:
+    framework: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    datalineage-nonprod-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Separately Licensed code for IBM Manta Data Lineage
+        displayName: IBM Manta Data Lineage
+      ref: IBMDatalineage_non_ibm_license.txt
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-YWZT-Z4V53K
+    datalineage-prod-license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Manta Data Lineage
+        displayName: IBM Manta Data Lineage
+      ref: IBMDatalineage_license.txt
+      url: https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-YWZT-Z4V53K
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-datalineage
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 5.3.17+20260529.135059.1709
+  webPage: https://www.ibm.com
+created: 2026-06-16T02:58:03.84089112+0000
+digest: sha256:b9b09ec8e0a3dc3cefe8694dffeca9d74abf492521fbaba7bf9c89bd34e0b46b

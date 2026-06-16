@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cpd-platform
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-datacore-5.4.7+20260606.125434.1538.647.5
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-platform-operator-catalog@sha256:448844bd1c89d65ac4df1e6d49d08c73edb2a68d946f01f1ac0ac2f9dc6984ba
+  sourceType: grpc
