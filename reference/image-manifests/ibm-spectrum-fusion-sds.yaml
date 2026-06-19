@@ -2,6 +2,7 @@ source: ibm-spectrum-fusion-sds-bundle/case/ibm-spectrum-fusion-sds/case.yaml
 description: "Management operator for IBM Storage Fusion"
 images:
   - image: cp/bnr/fbr-minio
+  - image: cp/bnr/fbr-mongo
   - image: cp/bnr/fbr-velero
   - image: cp/bnr/fbr-velero15
   - image: cp/bnr/guardian-application-service
@@ -95,6 +96,7 @@ images:
   - image: cp/fusion-sds/isf-prereq-operator
   - image: cp/fusion-sds/isf-proxy
   - image: cp/fusion-sds/isf-serviceability-operator
+  - image: cp/fusion-sds/isf-ui-graphql
   - image: cp/fusion-sds/isf-ui-operator
   - image: cp/fusion-sds/isf-update-operator
   - image: cp/fusion-sds/logcollector
