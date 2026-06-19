@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-apiconnect-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-apiconnect-8.0.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-apiconnect-catalog@sha256:5eedc758b5197efc0a9613e4d0427f6576dea6e2e133cf00f96511d1040053d7
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
