@@ -19,10 +19,7 @@ The Persistent Volume access modes ReadWriteOnce (RWO) and ReadWriteMany (RWX) a
 ## Prerequisites
 
 1. Kubernetes 1.19.0+/OpenShift 4.6.0+; kubectl and oc CLI; Helm 3;
-  * Install and setup oc/kubectl CLI depending on your architecture.
-    * [ppc64le](https://mirror.openshift.com/pub/openshift-v4/ppc64le/clients/ocp/stable/openshift-client-linux.tar.gz)
-    * [s390x](https://mirror.openshift.com/pub/openshift-v4/s390x/clients/ocp/stable/openshift-client-linux.tar.gz)
-    * [x86_64](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz)
+  * [Install and setup oc/kubectl CLI](https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz).
   * [Install and setup the Helm 3 CLI](https://helm.sh/docs/intro/install/).
 
 2. Accessing the container Image - The DevOps Deploy agent relay image is accessed via the IBM Entitled Registry.
@@ -161,7 +158,7 @@ This operator can be installed in an on-line or air-gapped cluster through eithe
 Run
 
 ```
-oc ibm-pak get ibm-ucdr-case --version 1.4.29
+oc ibm-pak get ibm-ucdr-case --version 1.4.32
 ```
 
 ## To install operator using OpenShift Operator Catalog
@@ -174,7 +171,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-catalog
@@ -184,7 +181,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator
@@ -198,7 +195,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action apply_custom_resources                    \
@@ -216,7 +213,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator
@@ -226,7 +223,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-catalog
@@ -242,7 +239,7 @@ By default, TARGET_REGISTRY is `icr.io/cpopen`. You could export the TARGET_REGI
 export TARGET_REGISTRY="Desired image registry"
 
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action install-operator-native                   \
@@ -253,7 +250,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ucdrOperatorSetup                      \
     --action uninstall-operator-native
@@ -263,7 +260,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action install-helm-chart                        \
@@ -274,7 +271,7 @@ oc ibm-pak launch ibm-ucdr-case                        \
 
 ```
 oc ibm-pak launch ibm-ucdr-case                        \
-    --version 1.4.29                            \
+    --version 1.4.32                            \
     --namespace <target namespace>                     \
     --inventory ibmUcdrProd                            \
     --action uninstall-helm-chart                      \
@@ -494,7 +491,7 @@ Before mirroring your images, you can set the environment variables on your mirr
 
    ```
    export CASE_NAME=ibm-ucdr-case
-   export CASE_VERSION=1.4.29
+   export CASE_VERSION=1.4.32
    ```
 
 2. Connect your host to the intranet.
@@ -551,7 +548,7 @@ Your host is now configured and you are ready to mirror your images.
    description: "an example product targeting OCP 4.9" # <optional, but recommended> defines a human readable description for this listing of components
    cases:                                          # list of CASEs. First item in the list is assumed to be the "top-level" CASE, and all others are dependencies
   - name: ibm-ucd-prod
-    version: 1.4.29
+    version: 1.4.32
     launch: true                                  # Exactly one CASE should have this field set to true. The launch scripts of that CASE are used as an entry point while executing 'ibm-pak launch' with a ComponentSetConfig
    ```
 
