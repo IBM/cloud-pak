@@ -4,6 +4,7 @@ images:
   - image: cp/concert/addon-ansible
   - image: cp/concert/addon-expect
   - image: cp/concert/addon-faas
+  - image: cp/concert/addon-instrumentation
   - image: cp/concert/addon-mqws
   - image: cp/concert/addon-napalm
   - image: cp/concert/addon-pdf
@@ -25,8 +26,11 @@ images:
   - image: cp/concert/ibm-concert-osv-dev-base
   - image: cp/concert/ibm-concert-osv-dev-data
   - image: cp/concert/ibm-concert-toolkit
+  - image: cp/concert/ibm-roja-buddy
   - image: cp/concert/ibm-roja-compliance
   - image: cp/concert/ibm-roja-ingestion
+  - image: cp/concert/ibm-roja-mcp
+  - image: cp/concert/ibm-roja-mgmt
   - image: cp/concert/ibm-roja-minio
   - image: cp/concert/ibm-roja-pipeline
   - image: cp/concert/ibm-roja-portal-gw
@@ -61,6 +65,9 @@ images:
   - image: cp/concert/pliant-worker-nodejs-config
   - image: cp/concert/roja-ui
   - image: cp/concert/rojacore
+  - image: cp/concert/securecoder-external
+  - image: cp/concert/securecoder-nginx-tls-proxy
+  - image: cp/concert/securecoder-redis
   - image: cp/platform-hub/agent-card-provider
   - image: cp/platform-hub/agent-card-registry
   - image: cp/platform-hub/ai-coordinator
@@ -69,6 +76,13 @@ images:
   - image: cp/platform-hub/data-model-graphql
   - image: cp/platform-hub/data-model-mcp
   - image: cp/platform-hub/fallback-agent
+  - image: cp/platform-hub/ibm-platform-ui
+  - image: cp/platform-hub/ibm-solis-core
+  - image: cp/platform-hub/ibm-solis-embedded-db
+  - image: cp/platform-hub/ibm-solis-gw
+  - image: cp/platform-hub/ibm-solis-hub-gw
+  - image: cp/platform-hub/ibm-solis-ui
+  - image: cp/platform-hub/keycloak-embedded
   - image: cp/platform-hub/litellm-proxy
   - image: cp/platform-hub/llm-gateway-binding
   - image: cp/platform-hub/mcp-context-forge
