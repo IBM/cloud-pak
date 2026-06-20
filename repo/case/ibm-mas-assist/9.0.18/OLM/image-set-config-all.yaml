@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/assist/assist-db-job:2.0.92@sha256:fe1d56bb19dee3552b6228abf931adb01e537134fc9fb0c9c77bb8d1f501bb41
+  - name: cp.icr.io/cp/assist/assist-useragent:2.0.92@sha256:1764176b9f1e30a3201e2af770310cd71cb2962771563ac8d6429d035f40c91f
+  - name: cp.icr.io/cp/assist/ema-admin-console:2.0.115@sha256:03bd459a8d78e558a38ee58b01a8c383d59d65bb4f3d98bc16eb15a7be17ef39
+  - name: cp.icr.io/cp/assist/ema-api:2.0.130@sha256:6831922183672035c575f16f8782287f539d427d9cc13a61fc094f0b0a9bdaba
+  - name: cp.icr.io/cp/assist/ema-common-util:2.0.88@sha256:32554aad675cbf364317aa06c426d134735201559b630dc7c401c33c4eff4d6d
+  - name: cp.icr.io/cp/assist/ema-haproxy:2.0.88@sha256:053a3e9f800a4154628b903477847dea377a6ca1370df2122a497ee817523fbe
+  - name: cp.icr.io/cp/assist/ema-monitor:2.0.93@sha256:08765d72aa7c81ba2b7fbd1bd7a6a484b988c09dec6cf96232b86259c4b4d87c
+  - name: cp.icr.io/cp/assist/ema-multi-tenant:2.0.103@sha256:98d06eb8331847df3931e0e56bc3543f86b616bb01e99855709132f356dcacbc
+  - name: cp.icr.io/cp/assist/ema-pg-cronjob:2.0.67@sha256:0da0fe7ce836b3c22ff3fe9d3ec313b480ce908c46810121b318574faea78635
+  - name: cp.icr.io/cp/assist/ema-redis:2.0.88@sha256:884e51f797f30b0462d4936dc7979a75319d54c77244b89309d3280f40670add
+  - name: cp.icr.io/cp/assist/ema-studio:2.0.86@sha256:50d31c2cbc26bd8060443cc7ce010449624f23a21b86c10defaaebbcc14ff895
+  - name: cp.icr.io/cp/assist/ema-technician:2.0.117@sha256:c712b2e0e5a83474e1e6d84138b6d45ff3799abd07499cd0095fd5fec4d31c1f
+  - name: cp.icr.io/cp/assist/ibm-mas-assist-primary-entity:9.0.18@sha256:c31f4ae641f8ac9008f864368730fc986f3db377ea0b17a60df281fe5649f839
+  - name: cp.icr.io/cp/assist/ibm-mas-assist-ws:9.0.18@sha256:39c53dc3df5820cdb34c136fcd97e0acbd4c89f358cfba8c2d185306df3bd4c7
+  - name: icr.io/cpopen/ibm-mas-assist-operator-bundle:9.0.18@sha256:10ee17e6ccf693be1a2905d94b65753618f83b13e39449c7d97ee2d8be90ab52
+  - name: icr.io/cpopen/ibm-mas-assist:9.0.18@sha256:3fff44ccf96740a1bd73a8cef87789430053f73720b8800891aee2c7e1080be5
