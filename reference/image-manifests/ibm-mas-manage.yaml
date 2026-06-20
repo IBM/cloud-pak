@@ -1,13 +1,18 @@
 source: ibm-mas-manage-bundle/case/ibm-mas-manage/case.yaml
 description: "IBM Maximo Manage"
 images:
+  - image: cp/assist/ema-common-util
+  - image: cp/assist/ema-haproxy
+  - image: cp/assist/ema-redis
   - image: cp/manage/aip-optimizer
   - image: cp/manage/bdi
+  - image: cp/manage/ema-signalling
   - image: cp/manage/extension-acm
   - image: cp/manage/extension-aip
   - image: cp/manage/extension-anywhere
   - image: cp/manage/extension-aviation
   - image: cp/manage/extension-civil
+  - image: cp/manage/extension-collaborate
   - image: cp/manage/extension-envizi
   - image: cp/manage/extension-health
   - image: cp/manage/extension-hse
@@ -27,8 +32,10 @@ images:
   - image: cp/manage/health-utilities-accelerator
   - image: cp/manage/healthext-model-engine
   - image: cp/manage/ibm-mas-aipoptimizationext
+  - image: cp/manage/ibm-mas-collaborateext
   - image: cp/manage/ibm-mas-healthext-ws
   - image: cp/manage/ibm-mas-imagestitching
+  - image: cp/manage/ibm-mas-kafkaimageprocessor
   - image: cp/manage/ibm-mas-manage-acc
   - image: cp/manage/ibm-mas-manage-appstatus
   - image: cp/manage/ibm-mas-manage-bdi
@@ -37,6 +44,8 @@ images:
   - image: cp/manage/ibm-mas-slackproxy
   - image: cp/manage/icdslack
   - image: cp/manage/image-stitching
+  - image: cp/manage/kafka-image-processor
+  - image: cp/manage/kafkamodel-civil
   - image: cp/manage/maf-tools
   - image: cp/manage/manage-groupsyncagent
   - image: cp/manage/manage-usersyncagent

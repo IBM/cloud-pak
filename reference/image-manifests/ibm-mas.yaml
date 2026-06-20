@@ -4,8 +4,12 @@ images:
   - image: cp/aibroker/aibroker
   - image: cp/aibroker/controller
   - image: cp/aibroker/ibm-mas-aibroker-ws
+  - image: cp/aibroker/maximo-fieldextractor-common
+  - image: cp/aibroker/maximo-fieldextractor-predictor
   - image: cp/aibroker/maximo-fmea-common
   - image: cp/aibroker/maximo-fmea-predictor
+  - image: cp/aibroker/maximo-insights-common
+  - image: cp/aibroker/maximo-insights-predictor
   - image: cp/aibroker/maximo-mcc-common
   - image: cp/aibroker/maximo-mcc-predictor
   - image: cp/aibroker/maximo-mcc-train
@@ -18,6 +22,7 @@ images:
   - image: cp/aibroker/maximo-similarity-common
   - image: cp/aibroker/maximo-similarity-predictor
   - image: cp/aibroker/maximo-similarity-train
+  - image: cp/aibroker/maximo-watsonx-predictor
   - image: cp/aibroker/post
   - image: cp/aibroker/pre
   - image: cp/aibroker/s3
@@ -38,6 +43,7 @@ images:
   - image: cp/arcgis/arcgis-ozone
   - image: cp/arcgis/arcgis-postgresql
   - image: cp/arcgis/arcgis-prometheus
+  - image: cp/arcgis/arcobjects-server
   - image: cp/arcgis/catalog-server
   - image: cp/arcgis/config-factory-server
   - image: cp/arcgis/customdata-server
@@ -120,11 +126,13 @@ images:
   - image: cp/health/hook-preinstall-health
   - image: cp/manage/aip-optimizer
   - image: cp/manage/bdi
+  - image: cp/manage/ema-signalling
   - image: cp/manage/extension-acm
   - image: cp/manage/extension-aip
   - image: cp/manage/extension-anywhere
   - image: cp/manage/extension-aviation
   - image: cp/manage/extension-civil
+  - image: cp/manage/extension-collaborate
   - image: cp/manage/extension-envizi
   - image: cp/manage/extension-health
   - image: cp/manage/extension-hse
@@ -144,8 +152,10 @@ images:
   - image: cp/manage/health-utilities-accelerator
   - image: cp/manage/healthext-model-engine
   - image: cp/manage/ibm-mas-aipoptimizationext
+  - image: cp/manage/ibm-mas-collaborateext
   - image: cp/manage/ibm-mas-healthext-ws
   - image: cp/manage/ibm-mas-imagestitching
+  - image: cp/manage/ibm-mas-kafkaimageprocessor
   - image: cp/manage/ibm-mas-manage-acc
   - image: cp/manage/ibm-mas-manage-appstatus
   - image: cp/manage/ibm-mas-manage-bdi
@@ -154,6 +164,8 @@ images:
   - image: cp/manage/ibm-mas-slackproxy
   - image: cp/manage/icdslack
   - image: cp/manage/image-stitching
+  - image: cp/manage/kafka-image-processor
+  - image: cp/manage/kafkamodel-civil
   - image: cp/manage/maf-tools
   - image: cp/manage/manage-groupsyncagent
   - image: cp/manage/manage-usersyncagent
@@ -175,6 +187,7 @@ images:
   - image: cp/mas/adoptionusage-metering
   - image: cp/mas/adoptionusage-reporter
   - image: cp/mas/adoptionusageapi
+  - image: cp/mas/alm-agent
   - image: cp/mas/api-licensing
   - image: cp/mas/appsuite-operator
   - image: cp/mas/assist-operator
@@ -245,6 +258,7 @@ images:
   - image: cp/monitor/db2-dataingest-ciscodnaspaceinputprocessor
   - image: cp/monitor/db2-dataingest-ciscodnaspacereceiver
   - image: cp/monitor/db2-dataingest-datameter
+  - image: cp/monitor/db2-dataingest-fileingest
   - image: cp/monitor/db2-dataingest-inputerrorprocessor
   - image: cp/monitor/db2-dataingest-inputprocessor
   - image: cp/monitor/db2-dataingest-outputerrorprocessor
@@ -255,6 +269,7 @@ images:
   - image: cp/monitor/hook-ca-monitor
   - image: cp/monitor/hook-db-monitor
   - image: cp/monitor/ibm-mas-monitor-ws
+  - image: cp/monitor/maximo-iot-monitor-auth-api
   - image: cp/monitor/migration-manager
   - image: cp/monitor/monitor-workspaceagent
   - image: cp/monitor/pipeline-engine
@@ -340,6 +355,7 @@ images:
   - image: cp/visualinspection/vision-logstash
   - image: cp/visualinspection/vision-migrate
   - image: cp/visualinspection/vision-model-conversion
+  - image: cp/visualinspection/vision-model-validation
   - image: cp/visualinspection/vision-models
   - image: cp/visualinspection/vision-mongodb
   - image: cp/visualinspection/vision-postgres
