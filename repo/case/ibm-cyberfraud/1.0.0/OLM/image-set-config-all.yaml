@@ -1,0 +1,42 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cf/arithmetic-functions-server:1.0.0-amd64@sha256:99f05b005cceb7a69d6c614e0c33af3ca2f3794c73115bd10923a458679dc859
+  - name: cp.icr.io/cp/cf/cf-audit:1.0.0-amd64@sha256:63523fd2ba512c92dcf28da55aa6f22036a0963de4b8d38e4c5fd82e3c453d05
+  - name: cp.icr.io/cp/cf/cf-backup:1.0.0-amd64@sha256:6b586be68300faa1bd13283a8d118d0981f7166a87a8b6d6e9f4e878587e35ab
+  - name: cp.icr.io/cp/cf/cf-config:1.0.0-amd64@sha256:0dc18362675d80ab13a4f6911777d207c4cdd6feb07d90e12fc90ebadc01faa1
+  - name: cp.icr.io/cp/cf/cf-db-schema-provisioning-job:1.0.0-amd64@sha256:2ca14c1373779278e6bf6e86fe33d51280c2fab588a05a8b589635efa8c47848
+  - name: cp.icr.io/cp/cf/cf-investigate:1.0.0-amd64@sha256:8e381e22c6d92b0bf1cc4045ff3a84795d3ac20e8be99deac9f144287d7858f5
+  - name: cp.icr.io/cp/cf/cyberfraud-account-onboarding-job:1.0.0-amd64@sha256:6a1ccec121052ac0c1f5f18fd13f4d2d1f552da9c3e6bd8cf1c8aa329ac59558
+  - name: cp.icr.io/cp/cf/cyberfraud-frontend:1.0.0-amd64@sha256:520e96e1fa781dd4c6268270796ce7b44727595c3bf828dd81a892706ff830de
+  - name: cp.icr.io/cp/cf/cyberfraud-mcp-context-forge:1.0.0-amd64@sha256:bfffcf9a3168e0500b342a11b0f4a110bc30bb6f8718a03ea6d17d1560972119
+  - name: cp.icr.io/cp/cf/cyberfraud-mcp-management-service:1.0.0-amd64@sha256:9d05258aa7a9718b8b60103f28d8eafdd3eebea8ddef3de82b3825a9b191a23a
+  - name: cp.icr.io/cp/cf/data-analysis-server:1.0.0-amd64@sha256:e2435e71f18bbea26008bc47e7ee1c6f254d55ff6b5d9a8b73a6ae3f767d9192
+  - name: cp.icr.io/cp/cf/datetime-conversion-server:1.0.0-amd64@sha256:834d7ba9b283105472baa105b5647557fcfba904f1c7232095764d58762950fe
+  - name: cp.icr.io/cp/cf/encrypt-decrypt-server:1.0.0-amd64@sha256:143754fa9530245918c1da14d3aa9450316213fdd293e9e8cd69be4bfed13443
+  - name: cp.icr.io/cp/cf/envoy-gateway:1.0.0-amd64@sha256:74b438f7e3f35f03b3d0f992d123af177cc3ee8a62f1a233b951a8850812cef7
+  - name: cp.icr.io/cp/cf/envoyproxy:1.0.0-amd64@sha256:d5fbed999b8947d93adf6742118b7dc195b0dcded28a9a7d2cff60567a6e8e46
+  - name: cp.icr.io/cp/cf/geo-spatial-server:1.0.0-amd64@sha256:b8b5158d6077390a8a42bfc4e9a6f17ca4dd4ce68335b52e07ee06833f1948ba
+  - name: cp.icr.io/cp/cf/identity-management:1.0.0-amd64@sha256:eb3f972aa537557714a698ae41da0ef358df92241a560e01f2c030472296da66
+  - name: cp.icr.io/cp/cf/restore-pod:1.0.0-amd64@sha256:5998e862179f49a317c9fa26d4d154e8bb0731c4c0cad0fe7f649c688b15ae33
+  - name: cp.icr.io/cp/cf/seaweedfs:1.0.0-amd64@sha256:dead1860ac4eb229a96ddca48c64860d592ef511ceac0bde0ed616a34aff7d0b
+  - name: cp.icr.io/cp/cf/tm-ambassador:1.0.0-amd64@sha256:f651ca8549be6d7a5929dd398306334b94dc474ef10111f83e95c6bac94e8a57
+  - name: cp.icr.io/cp/cf/tm-cnpg:1.0.0-amd64@sha256:e86dd3c1717972e1b41402bf3a9a97d0bc997c6ff3526efcbae958dacdaeee53
+  - name: cp.icr.io/cp/cf/tm-init-mod:1.0.0-amd64@sha256:c657ac3c0514293effbef9e53fc19f6284b8b5e36f87a702175291a443fcb9f5
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2716@sha256:f1af89c4aa6d9f8e842c1afeb9969e529f778368230ff1de8d7631adce318a36
+  - name: cp.icr.io/cp/ibm-redis-cp-haproxy:1.3.1@sha256:56a0eee3aa08b1a4a20bcec86a2e4fa7511d124b6cf91b37f5c4bfa09d559380
+  - name: cp.icr.io/cp/ibm-redis-cp-operand:1.3.1@sha256:13cbd3b851a8f8624a79111e4e502d2128f53217505eee6693d7bda9f0a0bd58
+  - name: cp.icr.io/cpopen/cf/mustgather:1.0.0-latest@sha256:fa4e28be6e7537c13f73fb818ab32a8dc94e7e52af8091c2dd9f5fca69e28523
+  - name: cp.icr.io/cpopen/cf/serviceability:1.0.0-latest@sha256:59c7c983a4809f1f8fcb8d31b4bae383f34bcead32c5e625215b7623a690f6a9
+  - name: icr.io/cpopen/edb/postgresql:14.22-5.40.0@sha256:8b1f10ce2ca260a381eac0677c70d74a7c733092e0f3625f9b12b425edfb3cc8
+  - name: icr.io/cpopen/edb/postgresql:15.17-5.40.0@sha256:c4f7664b77ec21fb43e924006640da5d55ed39a596d25a90c8374410d362e673
+  - name: icr.io/cpopen/edb/postgresql:16.13-5.40.0@sha256:a16a63c48cd117e592a3e2fd15f31802a0e1ee357c71630aaba38452fa2f8c04
+  - name: icr.io/cpopen/edb/postgresql:17.9-5.40.0@sha256:d4fe1575db25f382608de20b552dd042f3bb4542387e6f82910dafd026d170e1
+  - name: icr.io/cpopen/edb/postgresql:18.3-5.40.0@sha256:5ac13a0948a0648306cf6792a882db2e1a24ee55bda3b6adf78a7aba35f5b7aa
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2716@sha256:28328fda2f86b3c48a063f704d972f58948abd888f3f3c3b7dcf165f91da86d2
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog:2716@sha256:563e0032a3d96e39a7f94cc1bcd4fea5ec38d6249da591baaec1473cf58cf7a9
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.28.2@sha256:513a9a63890f36dd3a9e66ecf1dda1487b18ff99283e17aebd19dc7ea52f1d2f
+  - name: icr.io/cpopen/ibm-redis-cp-operator-bundle:1.3.1@sha256:45cd6db9efe0156b63e8caaeee689d832835fab736134f1a063d9c883bb04501
+  - name: icr.io/cpopen/ibm-redis-cp-operator-catalog:1.3.1@sha256:33aa607160683e22e89c86a81d59eb9c4a6e4b6cb85ab2825a78ece7f36ea194
+  - name: icr.io/cpopen/ibm-redis-cp-operator:1.3.1@sha256:21555bf64cefb36efe14027b4db0cf289fba74749f014a154e943db00f899b5c
