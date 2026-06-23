@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-secure-tunnel-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-secure-tunnel-5.0.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-secure-tunnel-operator-catalog@sha256:2e206a8ba8945c9742948520367b8b447db9de3a2b3185c39150a066b8c8424a
+  sourceType: grpc
