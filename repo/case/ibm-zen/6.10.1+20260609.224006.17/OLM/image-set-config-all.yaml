@@ -1,0 +1,31 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-pg-operator-catalog@sha256:cf5e7800f9f8e63946adbc0de091fd3cd524a0082ffaf98c926876da4aa0c816
+    packages:
+    - name: ibm-pg-operator
+      channels:
+      - name: v28
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/cpfs/icp4data-nginx-repo:6.10.1-17@sha256:e1fb6c860b8b56505b10899b912bae819627d752262c24af7b653fcd0912e630
+  - name: icr.io/cpopen/cpfs/icpd-requisite:6.10.1-17@sha256:b42bca3b12b2947f6295d18f9de08d8565a8c12a563a1f53df252f8ef4cd92e0
+  - name: icr.io/cpopen/cpfs/platform-ai-agent:6.10.1-17@sha256:bc972bf9aa1e96c8a3dac9372cd1141e022e15ea90e5c7a30b3f8087797c4658
+  - name: icr.io/cpopen/cpfs/platform-assistant-broker:6.10.1-17@sha256:48fdddbfe0cc2a35e4610b4e809bca57e1e5d06d5ab2a6d954495403179e4506
+  - name: icr.io/cpopen/cpfs/privatecloud-usermgmt:6.10.1-17@sha256:1ac1d2b20a46e70a12cd8dcab259a802c17cb37f222d09f748f4eaf00a8956e1
+  - name: icr.io/cpopen/cpfs/spoke-nginx:6.10.1-17@sha256:657c3e44ec9b1887726fcffadb9c4ea438e336ea10a475abdfba29e6f43212a9
+  - name: icr.io/cpopen/cpfs/zen-audit:6.10.1-17@sha256:dfc205c5812dd7ca746e541ae4f30409549ce9366b1f36d99b9e2afee1d44722
+  - name: icr.io/cpopen/cpfs/zen-core-api:6.10.1-17@sha256:a08bcf5e466b5718631511002f9057e11dade7a6a9277d4a646489285cbbb0b2
+  - name: icr.io/cpopen/cpfs/zen-core:6.10.1-17@sha256:1f3ec1816032c63922e40d9460c09630583932bc229e42ca8d0955911f806ba0
+  - name: icr.io/cpopen/cpfs/zen-iam-config:6.10.1-17@sha256:079561b8b342c39fa22e13acd5b2d465f72ae0d9a0ac00519ea63d14fdae885a
+  - name: icr.io/cpopen/cpfs/zen-mcp-server:6.10.1-17@sha256:140689547087a2f4232dcb30465267d23abcf98369903897946960f6a9c32d97
+  - name: icr.io/cpopen/cpfs/zen-minio:6.10.1-17@sha256:6e290d1d6730ad8ea3a58792f4cac38c3bf2729ed710a8354ecc5a90351f3823
+  - name: icr.io/cpopen/cpfs/zen-openresty-base:6.10.1-17@sha256:0ab6cbb98ac8542c448c4407e8fbef02b23178934fe14f2d709d986b925e8459
+  - name: icr.io/cpopen/cpfs/zen-rsi-adm-controller:6.10.1-17@sha256:575ece7ab973bcfa5fb7bb7381363a900de2a8f6be581a12762606a2bf0ce318
+  - name: icr.io/cpopen/cpfs/zen-utils:6.10.1-17@sha256:e05c488f70163e4e4e7d684d752ba46b968da426d01dcb82cef46eb40c1941e5
+  - name: icr.io/cpopen/cpfs/zen-watchdog:6.10.1-17@sha256:cc3b39b62c32fbd53864ff80dc4129b92e127bc724294a3347c918da8845bb1a
+  - name: icr.io/cpopen/ibm-pg-operator-catalog:v28.3.2@sha256:cf5e7800f9f8e63946adbc0de091fd3cd524a0082ffaf98c926876da4aa0c816
+  - name: icr.io/cpopen/ibm-zen-operator-bundle:6.10.1-17@sha256:3bdf0c2b1d2a7d97191300b1a5348ccbdc7769f6e9a2b29e5d76d09c21e8d883
+  - name: icr.io/cpopen/ibm-zen-operator-catalog:6.10.1-17@sha256:c484716cda51bba3212a1cf89a9def7c83f515415284348a04486df24b56dd21
+  - name: icr.io/cpopen/ibm-zen-operator:6.10.1-17@sha256:494b3df857592d67ec183253fa6b4397d0fae13bebee88e7cd10e6bc8cada9ad

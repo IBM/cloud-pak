@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ds-assets:540.0.8@sha256:b3a53207e1f637e93e24f1485fd706a6629c0a0bc2267017397074439e54e573
+  - name: cp.icr.io/cp/cpd/ds-canvas:540.0.30@sha256:8b556b8ad11beac64220ecf039713d0ef49041afbe9ef6c3924f5179365e3148
+  - name: cp.icr.io/cp/cpd/ds-cas-lite:540.0.7@sha256:9cd301690ce801791671d0639ddd35b84073ea9ae2193038897fc42032001499
+  - name: cp.icr.io/cp/cpd/ds-dataservice:540.0.6@sha256:a2330a270c9dd9f89d68dc29831854e7a5e5dfdc4c99901e354ec5af452a09bf
+  - name: cp.icr.io/cp/cpd/ds-flows-assistant:1.0.848@sha256:e5cf819e23a1aa6a00e1fcac5daa8aaf4ecdf6bcb725ff67cd0bcee8c474e398
+  - name: cp.icr.io/cp/cpd/ds-flows:540.0.27@sha256:a993e2838ca6a10d8983bd45f68e9800639d3143145fd9b994220a0f2b6a7c28
+  - name: cp.icr.io/cp/cpd/ds-metrics:540.0.8@sha256:4924bacd1b2e0d7b5b29ea302a3cdbe104dbe0636bda6f7113ab1168c99b742b
+  - name: cp.icr.io/cp/cpd/ds-migration:540.0.21@sha256:4c4c40001dfa23c280ae84b1f545aa0477bf1426467e7d6ee2d104830e4cb494
+  - name: cp.icr.io/cp/cpd/ds-nginx-proxy:5.4.1@sha256:b0f6dc75c1389872ea24323581b0273072ef2b75710c03496dc913feef9f5857
+  - name: cp.icr.io/cp/cpd/ds-px-compute:540.0.34@sha256:83eb944286c36cb47d8d963f00022eea5cb14582d7375cf18cf02ad803925097
+  - name: cp.icr.io/cp/cpd/ds-px-runtime:540.0.34@sha256:f0ba10f3a7c55d785348e06cb5d1db2a76c81d524cd7750cc92b0f2e1cb67c1b
+  - name: cp.icr.io/cp/cpd/ds-runtime:540.0.8@sha256:3bcdb6e7a0a1e91765251be025f1c53adeda0474c98bf9e1f835af042a6035fc
+  - name: cp.icr.io/cp/cpd/qs-ruleset:540.0.6@sha256:2ca181dc8d3e49dc9a944a366cf385f33926174620adb8404e605d2402efa9b2
+  - name: icr.io/cpopen/ds-operator-bundle:5.4.1-13@sha256:dfe90f8010762c00050fac9b052317642ae95f48d2ed81cf553900c20b045b80
+  - name: icr.io/cpopen/ds-operator-catalog:5.4.1-13@sha256:e97a8d65c7cb87ab3e1f9a27cf1aa06f095e59521466844ef3bf85bebb046400
+  - name: icr.io/cpopen/ds-operator:5.4.1-13@sha256:d153aa078df9692f8a69e097ee6238b0b48c9a2fd626a95b526fef3dea2bf8fc

@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-dataintelligence-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-dataintelligence-2.4.1+20260610.092010.1005-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-watsonx-dataintelligence-operator-catalog@sha256:c640520dd277266a604e0f4c38fa4673b49916eed6ca1c3757fb656cc700e4d2
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
