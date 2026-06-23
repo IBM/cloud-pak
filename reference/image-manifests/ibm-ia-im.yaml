@@ -1,7 +1,13 @@
 source: ibm-ia-im-bundle/case/ibm-ia-im/case.yaml
-description: "IBM Cloud Pak® for AIOps Infrastructure Automation management  v4.13.1 "
+description: "IBM Infrastructure Automation management v5.1.0 "
 images:
   - image: cp/cp4waiops/httpd
+  - image: cp/cp4waiops/ibm-infra-management-application
+  - image: cp/cp4waiops/ibm-infra-management-base-worker
+  - image: cp/cp4waiops/ibm-infra-management-opentofu-runner
+  - image: cp/cp4waiops/ibm-infra-management-orchestrator
+  - image: cp/cp4waiops/ibm-infra-management-ui-worker
+  - image: cp/cp4waiops/ibm-infra-management-webserver-worker
   - image: cp/cp4waiops/infra-mgmt-application
   - image: cp/cp4waiops/infra-mgmt-base-worker
   - image: cp/cp4waiops/infra-mgmt-opentofu-runner
