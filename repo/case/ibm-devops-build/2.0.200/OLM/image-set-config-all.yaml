@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-devops-build-agent:7.1.0.4-1190202@sha256:2c4944d50482df695139e578a785246af4f49386121ee26c17246b9283e53c0d
+  - name: cp.icr.io/cp/ibm-devops-build-mcp-server:1.0.0-1189972@sha256:5bd5f0e11b26a97f7a80f56e80435944e5b6115955c9b42a289eded1378621a7
+  - name: cp.icr.io/cp/ibm-devops-build-server:7.1.0.4-1190368@sha256:ec4929e8b9c7284e064aa96a8e906ca183543cb47458e4e79a120b15ee17849a
