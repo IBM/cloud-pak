@@ -2303,6 +2303,7 @@ containerImages:
   - 7.4.0+20251011.015214.17553
   - 7.5.1+20251217.121408.18568
   - 7.6.0+20260224.123157.19264
+  - 7.7.0+20260619.165454.20463
   category: catalog
   digest: sha256:41bc20f8c83fedc61ff257190c1618146dc4bd9ddc706e107092d30811d2d50c
   image: cpopen/ibm-db2uoperator-catalog
@@ -2317,6 +2318,7 @@ containerImages:
   - 7.4.0+20251011.015214.17553
   - 7.5.1+20251217.121408.18568
   - 7.6.0+20260224.123157.19264
+  - 7.7.0+20260619.165454.20463
   category: catalog
   digest: sha256:c3c479cf86656ba308c4cf8830a15fcb65b59b9c76eda29e0d6e20a349bb93a3
   image: cpopen/ibm-db2uoperator-catalog
@@ -2331,6 +2333,7 @@ containerImages:
   - 7.4.0+20251011.015214.17553
   - 7.5.1+20251217.121408.18568
   - 7.6.0+20260224.123157.19264
+  - 7.7.0+20260619.165454.20463
   category: catalog
   digest: sha256:3824a8c78abdca50d5c9cd5c3feb625c9afa3861751992e27c2ed3269a3de2f4
   image: cpopen/ibm-db2uoperator-catalog
@@ -2345,6 +2348,7 @@ containerImages:
   - 7.4.0+20251011.015214.17553
   - 7.5.1+20251217.121408.18568
   - 7.6.0+20260224.123157.19264
+  - 7.7.0+20260619.165454.20463
   category: catalog
   digest: sha256:f3596edf224621175b5739cf36d7e9b53179816191f9a4123064aedb57e642e9
   image: cpopen/ibm-db2uoperator-catalog
@@ -2939,3 +2943,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 20184-dev
+- caseVersions:
+  - 7.7.0+20260619.165454.20463
+  category: catalog
+  digest: sha256:ca8be976069d684fd620f1c5568470feb8bf6b500469217412ae900b094121f5
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 20463-dev-s390x
+- caseVersions:
+  - 7.7.0+20260619.165454.20463
+  category: catalog
+  digest: sha256:4c57bbf327f7dec2ca02122e0f55f0bd3e193c2149761b33ce43a35f49cf6371
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 20463-dev-ppc64le
+- caseVersions:
+  - 7.7.0+20260619.165454.20463
+  category: catalog
+  digest: sha256:6a4b88d296756b8c05beaeb04ef64ab92cc23590909cdea703b0e0062d95de84
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 20463-dev-amd64
+- caseVersions:
+  - 7.7.0+20260619.165454.20463
+  category: catalog
+  digest: sha256:f4e8b79fdb846081b53af6100d609d3d07752ba3fc1bbcd26593ed2a36c3ef47
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 20463-dev
