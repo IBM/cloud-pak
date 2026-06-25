@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-integration-platform-navigator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-integration-platform-navigator-7.3.27
+  publisher: IBM
+  image: icr.io/cpopen/ibm-integration-platform-navigator-catalog@sha256:ae1a6d130cabd0ba5497bc5bebb160b53030c9d9566bf984e687cd2e349955f0
+  sourceType: grpc
