@@ -1,0 +1,87 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-ads-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ads-26.0.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-ads-operator-catalog@sha256:579c447ca5e7dfe4469ff48904c14704c71c8d9699072d8736595c7231ac938c
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-iam-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-iam-4.18.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-iam-operator-catalog@sha256:afcaff989fdb4da5b6f91a63de76e43b1b6ff3a7b3c7a69425d98c08b668390d
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-install-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-install-4.19.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cs-install-catalog@sha256:56abd3e9e1d33dca6658a9cc7ac9f804c37ddf65aedcaa1e5258ee19fd619219
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cs-install-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cs-install-4.19.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cs-install-catalog@sha256:0a94094bf3666d7df31c794b3362af1ee519c39abbd56d38f8e080ca42409270
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-events-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-events-operator-5.2.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-events-operator-catalog@sha256:228ea92d69daa2350e151d1fe6b14e6fb56eadd0d3b5b5872178180747297687
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-pg-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-pg-operator-28.3.3
+  publisher: IBM
+  image: icr.io/cpopen/ibm-pg-operator-catalog@sha256:35d601a0d5af74add516984f4f16aa5f631e8d0dbc4fa65403ac0c73ea0e3ae2
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-usage-metering-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-usage-metering-1.0.6
+  publisher: IBM
+  image: icr.io/cpopen/ibm-usage-metering-operator-catalog@sha256:b80738a02914c0eb08af87a7bc63226bf2b65de7add92156cc8d14673707b4dc
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: opencloud-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-common-services-4.19.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-common-service-catalog@sha256:cd21c92c43445d23edea4bd89cb788e12893fd6d296dcc8717b53f46814d1f13
+  sourceType: grpc
