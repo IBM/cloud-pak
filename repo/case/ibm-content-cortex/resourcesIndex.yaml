@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 26.0.0
+  category: catalog
+  digest: sha256:a20610ebf03634228a6df3da30ad21673e35ff8f4d1b6544840a7318d65fe805
+  image: cpopen/ibm-content-cortex-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v26.0.0-fbc-20260622.215610-47DB7C4F8-amd64
+- caseVersions:
+  - 26.0.0
+  category: catalog
+  digest: sha256:b67bc7fd1a8947423f224ffd2de86d2d1470e1bd1805a047e4d9914385ad7413
+  image: cpopen/ibm-content-cortex-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v26.0.0-fbc-20260622.215610-47DB7C4F8-s390x
+- caseVersions:
+  - 26.0.0
+  category: catalog
+  digest: sha256:7f82ad636c5d8c97a43381856da3c942a01a2f9a457b45796984a7dd31a7efde
+  image: cpopen/ibm-content-cortex-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v26.0.0-fbc-20260622.215610-47DB7C4F8-ppc64le
+- caseVersions:
+  - 26.0.0
+  category: catalog
+  digest: sha256:df9ef5d008d87f260838a5143ae514dcc89afaaa9339c1b748b2e53b7cc19711
+  image: cpopen/ibm-content-cortex-catalog
+  platform:
+    imagetype: manifestList
+  tag: v26.0.0-fbc-20260622.215610-47DB7C4F8
