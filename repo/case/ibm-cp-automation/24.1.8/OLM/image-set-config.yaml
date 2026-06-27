@@ -1,0 +1,69 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cp-automation-catalog@sha256:f999f2d14d989b73a84867d698e8094cff4ad65c481de1f07f2573e6d0fe7b5d
+    packages:
+    - name: ibm-ads-operator
+      channels:
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    - name: ibm-content-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    - name: ibm-cp4a-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v24.1
+    - name: ibm-cp4a-wfps-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    - name: ibm-insights-engine-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    - name: ibm-odm-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    - name: ibm-pfs-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    - name: ibm-workflow-operator
+      channels:
+      - name: v24.1
+    - name: icp4a-foundation-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v24.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-cp-automation-catalog:v24.0.1-IF008-fbc-20260626.064801-0F6EAE262@sha256:f999f2d14d989b73a84867d698e8094cff4ad65c481de1f07f2573e6d0fe7b5d
