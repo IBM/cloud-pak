@@ -1,0 +1,8 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/shaper-server:5.3.1.416@sha256:ce8da270beb296b198a3909141b628d8f3919b261ebfd8229c218be8bee13a90
+  - name: cp.icr.io/cp/cpd/wdp-dataprep:5.3.1.325@sha256:43db4a199f3257d406ad0a130ced53dc1209b99b0b9f45fc24138e3b8302c920
+  - name: cp.icr.io/cp/cpd/wdp-shaper:5.3.1.571@sha256:b449533b6a406ca8c53e6153f916ba715dc9c2f2e39144a4c8b325fc64fe7f42
+  - name: icr.io/cpopen/ibm-cpd-datarefinery-operator:12.1.8-334@sha256:90448f62b1f1e041459cf0b5ede65c04e73b9730227e13872527f44c14e909fb

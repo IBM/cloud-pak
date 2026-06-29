@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-api:8.11.1-35@sha256:fad9fe3df72985b677efd4d71d5d8e3fbfc4f8afc4bd829a69fc1050872b7499
+  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-ui:8.11.1-35@sha256:0a98d76e7fbb4f248d0b6668d21ca5ec09158b07ecb9597a1852585c0ed1a939
+  - name: cp.icr.io/cp/cpd/ibm-dmc-admin:3.1.12-144@sha256:372d8153e0c90d2e058e4aba54b6d271d0bf93f1e30f6502812a861f7939c3aa
+  - name: cp.icr.io/cp/cpd/ibm-dmc-dbapi:3.1.12-144@sha256:886b97c423750d49cd6364f1676bd227c5ddcd68ab375d97d0634e296db87310
+  - name: cp.icr.io/cp/cpd/ibm-dmc-explain:3.1.12-144@sha256:e84bc6e7cca2107c05671e560c74dc29a300ae0288583b3001b595d850ae04f6
+  - name: cp.icr.io/cp/cpd/ibm-dmc-job-scheduler:3.1.12-144@sha256:107cda2c2b0d6207059c873c95c4898253feb7509c21270f4c7fedfa16a77b51
+  - name: cp.icr.io/cp/cpd/ibm-dmc-monitor:3.1.12-144@sha256:62def5dd5d1d59f2de6fe55f66f08490ebe64ec5751936ea8f8b726c71586601
+  - name: cp.icr.io/cp/cpd/ibm-dmc-nginx:3.1.12-144@sha256:383908166d78f92fb3438fdfb31f216c098466cfe63c9394efb889df0f737d00
+  - name: cp.icr.io/cp/cpd/ibm-dmc-registry-manager:3.1.12-144@sha256:eedc946103d05ad6065c6bfd6d21e715ffbf863bf263f59838b00d9dfb6b2c60
+  - name: cp.icr.io/cp/cpd/ibm-dmc-runsql:3.1.12-144@sha256:eca28b4a9973f2721f4a13ef7727aff6e132d8bb24fa042594076f5f4eaed41a
+  - name: icr.io/cpopen/ibm-dmc-operator-bundle:5.11.3-62@sha256:ca10a9800e54cdff056214d2cd31bc2432f314e32f661ee5795d89e7f6c4235a
+  - name: icr.io/cpopen/ibm-dmc-operator-catalog:5.11.3-62@sha256:e59f6269841d6c5474b154875ee2f6a50e69cc7d65470745ec875852fbec6b97
+  - name: icr.io/cpopen/ibm-dmc-operator:5.11.3-62@sha256:5deabe6f435f5c0c8d6317272686bd50bea8defffeb483da5e98124ca672d387

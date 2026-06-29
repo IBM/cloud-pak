@@ -1,0 +1,21 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-dmc-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-dmc-8.11.3+20260611.055425.62
+  publisher: IBM
+  image: icr.io/cpopen/ibm-dmc-operator-catalog@sha256:e59f6269841d6c5474b154875ee2f6a50e69cc7d65470745ec875852fbec6b97
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-redis-cp-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-redis-cp-1.4.0+20260609.131456.726
+  publisher: IBM
+  image: icr.io/cpopen/ibm-redis-cp-operator-catalog@sha256:8391c3e193e9dc54f1a91996daaaca73126d5a814dd82cd49651576a4ac633e9
+  sourceType: grpc

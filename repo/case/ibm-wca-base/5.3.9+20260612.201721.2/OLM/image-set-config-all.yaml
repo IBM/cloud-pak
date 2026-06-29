@@ -1,0 +1,8 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/wca-config-ui:5.3.9-2@sha256:e1869338707a39a995285aa12f8092a5823cd58abea9a896c804613359ff52ba
+  - name: cp.icr.io/cp/cpd/wca-metering-job:5.3.9-2@sha256:5fee6ebdbe251c05f6d9034079515a4cc9dc2e94bbeb7b601dcf297d869ac762
+  - name: cp.icr.io/cp/cpd/wca-metering:5.3.9-2@sha256:b0dd23c8e88fd8c2eb76fb5c50bf78f03072e1b85c83ab0e7ad110bd3796de5e
+  - name: icr.io/cpopen/ibm-wca-base-operator:5.3.9-2@sha256:5ec0177e2642a5b263cf1e416c0841864939653a279666e8b45edc1eeb530472

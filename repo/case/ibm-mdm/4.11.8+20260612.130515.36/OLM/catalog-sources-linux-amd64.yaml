@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-mdm-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-mdm-4.11.8+20260612.130515.36-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/mdm-operator-catalog@sha256:0787caa0b83abf92e99539f957b79a19092e200023fa21c3e76bf8cb78030896
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

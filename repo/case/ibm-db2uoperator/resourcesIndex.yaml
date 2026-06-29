@@ -2401,6 +2401,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:52b8178b795c4fe31fd892c67fc557bcee25915251f53a7eb07386ac8586ff86
@@ -2418,6 +2419,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:716b1211500bdfea2fb284b6810a41f4d4aca6ca72b0474f66851767a0e7f211
@@ -2435,6 +2437,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:f232f4899bc097398bb1a91e2a434b25fc26ad821526946b17a6e35495c4841b
@@ -2452,6 +2455,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:d04c48016e64fd6c7b06945921b05e8aa6dcc7efacf043cb8800d31c2b941a38
@@ -2467,6 +2471,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:20f355196f15206a33ca693de98ed1552eb4dd125de23232782cb109acc7c08a
@@ -2484,6 +2489,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:c488f83a8d3297fedef9f2feb5d1c3647c459936a30224ff190845515ee85b76
@@ -2501,6 +2507,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:692f0588bb3ff5ac4ed69b4cae68b2ac295658ebaf0f19529eb313cd56f8e906
@@ -2518,6 +2525,7 @@ containerImages:
   - 7.5.3+20260313.144300.19486
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
+  - 7.5.5+20260616.211211.20439
   - 8.0.0+20260526.191302.20184
   category: catalog
   digest: sha256:3c06cc9c618f3d029b97b6c9c6a2424a278b5488821faea3510a773580922c7e
@@ -2981,3 +2989,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 20463-dev
+- caseVersions:
+  - 7.5.5+20260616.211211.20439
+  category: catalog
+  digest: sha256:122e546117a738d300924d7ff5252ef532dc782235bd79c3248a023f905fbf12
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 20439-dev-s390x
+- caseVersions:
+  - 7.5.5+20260616.211211.20439
+  category: catalog
+  digest: sha256:596d1cc55703e609d6e5b61ae24e6159c14d59d0677e877e761c70d16ed3090b
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 20439-dev-ppc64le
+- caseVersions:
+  - 7.5.5+20260616.211211.20439
+  category: catalog
+  digest: sha256:5a0fe85b784191a1411de9f69c2eaf97984307e677b36dc24b22f4d07f95701f
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 20439-dev-amd64
+- caseVersions:
+  - 7.5.5+20260616.211211.20439
+  category: catalog
+  digest: sha256:3fe10a438fdf810783b661d58db88f5e0c92000c790fcb89ca7b6d836437044d
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 20439-dev
