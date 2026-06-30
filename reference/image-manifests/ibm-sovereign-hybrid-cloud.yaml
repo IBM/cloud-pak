@@ -62,6 +62,7 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/aiiaas-model-gateway
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/aiiaas-model-gateway-certificates
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/app-template
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/backup-restore-pipelines
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/blackbox-exporter
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/bootstrap-cd-pipeline
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/catalog-as-a-service-broker
@@ -73,6 +74,7 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/consumption-metrics-backend
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/coredns
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/email-service-app
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/eso-secret-store
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/gori-dns-metalb
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/iam
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/ibm-pg-instance
@@ -98,14 +100,19 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/redis
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/redis-instance
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sov-core-cert-rotation
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sov-core-k8s-wrapper
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sov-core-networking
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sov-core-storage
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sovereign-core-metrics-aggregator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sovereign-core-upgrade-discovery
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sovereign-core-upgrade-pipelines
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/sovereign-ui
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/tekton-runtime
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/tempo-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/tempostack
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/vault
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/vm-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/mcsp-ext-portal-product-sync
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/model-gateway-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/postgres-service-broker
@@ -113,8 +120,11 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sov-core-networking
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sov-core-storage-api
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sov-core-storage-controller
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sovereign-core-metrics-aggregator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sovereign-core-metrics-aggregator-dbmanager
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/tekton-baseimage
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/vm-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/vm-service-broker-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform/access-management/account-iam
   - image: cp/sovereign-cloud-platform/automation-saas-platform/access-management/ivia-configmgr
   - image: cp/sovereign-cloud-platform/automation-saas-platform/cicd/mcsp-argocd-vault-plugin
@@ -122,6 +132,7 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform/mcsp-sovereign-netbox
   - image: cp/sovereign-cloud-platform/automation-saas-platform/product-registration-backend
   - image: cp/sovereign-cloud-platform/automation-saas-platform/sovereign-core-compliance-center
+  - image: cp/sovereign-cloud-platform/automation-saas-platform/tekton-baseimage
   - image: cp/sovereign-cloud-platform/automation-saas-platform/tenant-management/mcsp-sov-email-service
   - image: cp/sovereign-cloud-platform/cp/concert/addon-ansible
   - image: cp/sovereign-cloud-platform/cp/concert/addon-expect
@@ -183,12 +194,21 @@ images:
   - image: cp/sovereign-cloud-platform/cpopen/ibm-cpd-cloud-native-postgresql-operator
   - image: cp/sovereign-cloud-platform/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle
   - image: cp/sovereign-cloud-platform/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog
+  - image: cp/sovereign-cloud-platform/cpopen/ibm-pg-operator
+  - image: cp/sovereign-cloud-platform/cpopen/ibm-pg-operator-bundle
+  - image: cp/sovereign-cloud-platform/cpopen/ibm-pg-operator-catalog
+  - image: cp/sovereign-cloud-platform/cpopen/ibm-pg/ibm-pg-16
+  - image: cp/sovereign-cloud-platform/cpopen/ibm-pg/ibm-pg-17
+  - image: cp/sovereign-cloud-platform/cpopen/ibm-pg/ibm-pg-18
   - image: cp/sovereign-cloud-platform/cpopen/ibm-redis-cp-operator
   - image: cp/sovereign-cloud-platform/cpopen/ibm-usage-metering-operator-catalog
+  - image: cp/sovereign-cloud-platform/cpopen/isf-data-foundation-catalog
+  - image: cp/sovereign-cloud-platform/cpopen/sovereign-cloud-platform/sovcore-must-gather
   - image: cp/sovereign-cloud-platform/hashicorp/vault
   - image: cp/sovereign-cloud-platform/hashicorp/vault-csi-provider
   - image: cp/sovereign-cloud-platform/hashicorp/vault-enterprise
   - image: cp/sovereign-cloud-platform/hashicorp/vault-k8s
+  - image: cp/sovereign-cloud-platform/isvd/verify-directory-seed
   - image: cp/sovereign-cloud-platform/isvd/verify-directory-server
   - image: cp/sovereign-cloud-platform/ivia/ivia-config
   - image: cp/sovereign-cloud-platform/ivia/ivia-oidc-provider
