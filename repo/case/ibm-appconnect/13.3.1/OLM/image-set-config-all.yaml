@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-langgraph-agents-prod:13.0.8.0-r1-20260617-205044@sha256:ff753788ecbfae9c6fba2a3ad7f37981664c7d723b808b576416f0c0e58968a1
+  - name: cp.icr.io/cp/appc/ace-mcp-prod:13.0.8.0-r1-20260617-031118@sha256:8c6389bfca14271106093f6dc9c3d750ea9cf3376954ab825908b0eadbe8d37b
+  - name: cp.icr.io/cp/appc/ace-server-prod:13.0.8.0-r1-20260626-183124@sha256:6c288ebbf9135c5cd4c155b55f4d8379cc447f20a54911e2aedb15376c6aef23
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:13.0.8.0-r1-20260626-182941@sha256:007d88e582650d881c249a41fa4a3c99b28832c9ef02adce4224a5a071b31392
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:13.0.8.0-r1-20260617-115433@sha256:5b350f25f3229a84d19328849d6807f46121e3efecfc62ae904020e4198f53a8
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:13.0.8.0-r1-20260629-131202@sha256:2580869dca777f2303dccdacba76a45bb3c5467e012ed0e5f5a60e82af26117d
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:13.0.8.0-r1-20260626-182514@sha256:4a78b6672091ce2ba1cf993803723dff4cb1ef4d746e195bef869172e8ac21f4
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:13.0.8.0-r1-20260617-031649@sha256:88349432f0db4e93b75690556ee2f79ae7608bd059f99f95927d6bb0271b9459
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:13.0.8.0-r1-20260617-111402@sha256:80002ca39e8dd611154044ef3aab7d21d76a029854017333328ee1b72fe624e2
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:13.0.8.0-r1-20260616-230801@sha256:c21e802e3fba98ef48ea6067fed70f3f063e315b59f1f3e789fc2e51bde22686
+  - name: icr.io/cpopen/appconnect-operator-bundle:13.3.1-20260629-165530@sha256:adde6b5a22190885076bd44d7e262e29fcc53b98787419ec5a8dd310ba631ecb
+  - name: icr.io/cpopen/appconnect-operator-catalog:13.3.1-20260629-165530@sha256:4d86a501a87f165ad4a75ae012ae03885b570bf6688109b14d2bfd2ec0eadc04
+  - name: icr.io/cpopen/appconnect-operator:13.3.1-20260629-165530@sha256:0e782fba949c41cfff6de41247df3a7638b9b030ddae9b2ed5967764f75748a8
