@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-fsh-operator-catalog@sha256:795981b1ea21fb1cd574434531c66ca2d7d02d62ea07c335900a3b1257891b05
+    packages:
+    - name: ibm-fsh-operator
+      channels:
+      - name: v1.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-fsh-operator-catalog:v1.0.5@sha256:795981b1ea21fb1cd574434531c66ca2d7d02d62ea07c335900a3b1257891b05

@@ -1,0 +1,40 @@
+apiVersion: v1
+containerImages:
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:335e3c4fbd26e1543f7a8fdd5fd3ec9961f562eeee21b724d482bb004fcc3f5c
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-linux.amd64
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:8d8cb8c85422a0a4f97914cf678b734ce0e77141c3c58bf52920522100b87308
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-linux.ppc64le
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:a56779ead4ba40196f9bcb597957af799cb707cef62ec0b57e3bab832fbbd5ea
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.0.0-linux.s390x
+- caseVersions:
+  - 1.0.0
+  category: catalog
+  digest: sha256:32edf106fa7f94f6a5d9a6ca377f5b3e56cb0a06200adaf83ab3901b3d05e1e7
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.0.0
