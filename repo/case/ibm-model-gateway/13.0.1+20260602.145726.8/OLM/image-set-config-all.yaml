@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/go-proxy:v0.1.0-609.229147bdadf1-wxai@sha256:50bf4c75c240ee9a7ca7c6679f56b8d06b3c200fcb3481c5b869f37c404bcbd5
+  - name: cp.icr.io/cp/ibm-redis-cp-haproxy:1.4.0@sha256:49cb406b778c33f5cf4b9b07c367d7f0117007fc1a9cd1be57e1dde48d0f1d56
+  - name: cp.icr.io/cp/ibm-redis-cp-operand:1.4.0@sha256:efcd271baf18245998de72fcc38f5e9068603de3b2c98fb12f8bf9d26f56302f
+  - name: icr.io/cpopen/ibm-cpd-model-gateway-operator:13.0.1-20260602.145726@sha256:9210c3cfc605b5076a2ac96049c97d31c5094281747f549097ca774cc2ecd725
+  - name: icr.io/cpopen/ibm-redis-cp-operator-bundle:1.4.0@sha256:692bbec4f7d4c13c002fcdfbf2b9d6593e85cd15a513e42899698d98ee823747
+  - name: icr.io/cpopen/ibm-redis-cp-operator-catalog:1.4.0@sha256:8391c3e193e9dc54f1a91996daaaca73126d5a814dd82cd49651576a4ac633e9
+  - name: icr.io/cpopen/ibm-redis-cp-operator:1.4.0@sha256:8a6f79071358018eb0af00914b8189224f126e5eb36c0a14548e53a3188d3ce4

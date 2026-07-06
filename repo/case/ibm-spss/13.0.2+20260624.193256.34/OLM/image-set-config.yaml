@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/flow-session:2586@sha256:ba9f43880ef9e261927e23f9a974fac524925d39407afb0917e3b1ba80a5c5ee
+  - name: cp.icr.io/cp/cpd/modeler-flow-api:1205@sha256:5316c905df5e08110044caf9534f813fa841f17e786b9b76f4e1425d2e4fe323
+  - name: icr.io/cpopen/ibm-cpd-spss-operator:13.0.2-478@sha256:583266fe34c4a42984b4d8990b9509aec1f1f54c7001c76310015beeeee988a4

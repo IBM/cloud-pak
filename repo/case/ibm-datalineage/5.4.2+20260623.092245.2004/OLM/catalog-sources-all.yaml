@@ -1,0 +1,65 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-5.40.0+20260511.071333.2716
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:563e0032a3d96e39a7f94cc1bcd4fea5ec38d6249da591baaec1473cf58cf7a9
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ae-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-analyticsengine-12.1.8+20260622.023245.2352
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-analyticsengine-operator-catalog@sha256:84b767f8265674d2d3114d72ba51fc7123cefea6eb604a2942123f3243fd7e0e
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ccs-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ccs-13.0.1+20260611.163504.84
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog@sha256:6481124f7d6188a5986e2df971171dc60b58517a2ff2ef30531110af2a714882
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-datastage-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datastage-enterprise-12.0.1+20260610.141727.13
+  publisher: IBM
+  image: icr.io/cpopen/ds-operator-catalog@sha256:e97a8d65c7cb87ab3e1f9a27cf1aa06f095e59521466844ef3bf85bebb046400
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-wkc-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wkc-5.4.1+20260611.160906.1023
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-wkc-operator-catalog@sha256:df4e34e070607b252d76b7ba47f78a26ec9733d5be79024e3f94d5dddc76b562
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.4.3
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:4a40ac23337e129531396e2e59bc00f65f25b8b70d52a190d4c116135ff39267
+  sourceType: grpc

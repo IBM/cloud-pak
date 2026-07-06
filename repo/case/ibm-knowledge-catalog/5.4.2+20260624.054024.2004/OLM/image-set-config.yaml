@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/semantic-agent-service:5.4.46@sha256:de10b8507c66a18baa4189f25326313c67ae2e212b322d6e7e9444c52afa2f4c
+  - name: cp.icr.io/cp/cpd/semantic-automation-service:5.4.33@sha256:c9e032da1a17f31f9525b0cea1d9f66cd7915d0ff3f315f84a92ee9131dd1c3b
+  - name: cp.icr.io/cp/cpd/semantic-inference-service:5.4.33@sha256:89d87c7c85470e2e694ddebf14f72e656df45a2524476deb6d2197c4bac4ef82
+  - name: cp.icr.io/cp/cpd/semantic-text-generation:5.4.33@sha256:940fb5cef5bea6ff29d09b45b0611ac4b205d188ed8aaf4b78760a7fbe52b067
+  - name: cp.icr.io/cp/cpd/wkc-init-container-ikc:2.0.684-ubi9@sha256:c96c55c0b883ab5c6f1780f728a79472e5134bf8be7e780c054a523150b9fc72
+  - name: icr.io/cpopen/ibm-cpd-knowledge-catalog-operator-bundle:v5.4.2004@sha256:34260ea0c846c6ae011b08049a65a1c5fb522fdfe039d182c86e164979e1a3b3
+  - name: icr.io/cpopen/ibm-cpd-knowledge-catalog-operator-catalog:v5.4.2004@sha256:f5e6554d4c48222ccb37da90af8dd1d7e5140ab3aefee3a99e82e314bfb2d9e1
+  - name: icr.io/cpopen/ibm-cpd-knowledge-catalog-operator:v5.4.2004@sha256:79005561e22652765c4de446f79d5fde22136cb92833760e1d4a0de17c92d83a

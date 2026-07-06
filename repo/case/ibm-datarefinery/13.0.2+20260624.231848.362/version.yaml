@@ -1,0 +1,48 @@
+apiVersion: v1
+case:
+  appVersion: 13.0.2
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Cloud Pak for Data DataRefinery
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4dEnterpriseEd5.4.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4dStandardEd5.4.txt
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-datarefinery
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 13.0.2+20260624.231848.362
+  webPage: https://www.ibm.com
+created: 2026-07-06T21:57:45.41611335+0000
+digest: sha256:ca06c4c02b18295a4000c239c80ab5faf8ef430431b75c7e2aa30f57dc181f08

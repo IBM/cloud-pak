@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-data-product-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-data-product-5.4.2+20260623.110707.2009-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-data-product-operator-catalog@sha256:5989727800df319e861fcc76bf7998badc925693895a1073ef17cdd4a219753a
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
