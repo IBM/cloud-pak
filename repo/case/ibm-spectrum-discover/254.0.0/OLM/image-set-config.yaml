@@ -1,0 +1,34 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/dcs/auth:2.5.4@sha256:6cb6e582d02fb017dbbc1c736f3409a08823fef56381747f13952bd8a613cabb
+  - name: cp.icr.io/cp/dcs/connmgr-scheduler:2.5.4@sha256:6d2d56cb948cc20bb2f0226504df4cc9440263ae97effd2874bf0563f7d9eba8
+  - name: cp.icr.io/cp/dcs/connmgr:2.5.4@sha256:611759a6a83309bd293997282b598509faa7d0f024152fcd487872925a9310bb
+  - name: cp.icr.io/cp/dcs/db-schema:2.5.4@sha256:17a22ae2e06ec0fa41c9eba6e8005249aa08794b924161e56a648bdc0eb3d8d8
+  - name: cp.icr.io/cp/dcs/db2whrest:2.5.4@sha256:6e66f7d2fd072739b427a7adcfe0a7377c76957706795f726c1906f612fe44d8
+  - name: cp.icr.io/cp/dcs/dcs-ai-mcp-server:2.5.4@sha256:1bc39b0960b27d2ec8ce3ef85b2168b8af0b462ea923e0596444b937408b8b1c
+  - name: cp.icr.io/cp/dcs/import-service:2.5.4@sha256:1003a8694eff91c163a72b88c19baeb5cd47a97d152ab64ac910b8b8b693f096
+  - name: cp.icr.io/cp/dcs/import-tags-app:2.5.4@sha256:43a9ac3e60142d1ea3a9035f7ce949cc67631ba811c5981f07c0ef903119c43a
+  - name: cp.icr.io/cp/dcs/isd-proxy:2.5.4@sha256:ca57277facb5f6b865e6383ce100983c31d4e6177dc27e7c9a9c0498f4a96c62
+  - name: cp.icr.io/cp/dcs/keystone:2.5.4@sha256:b3128687e35f78bc25cefbe7254f625b5f01f344ae190d161cdbf79057109aa6
+  - name: cp.icr.io/cp/dcs/llm-proxy:2.5.4@sha256:fce3aebc677eba45434f16039d3c678ccf4c1c71d709ab3b13b5aebd79c928b6
+  - name: cp.icr.io/cp/dcs/metadata-extender:2.5.4@sha256:ab999ba306749862101846d91e33eac093e9f68b97803eabdb581020af26eeef
+  - name: cp.icr.io/cp/dcs/mo-agent-extract:2.5.4@sha256:de671df88f637dcac78902c36795f345af93efd03d4157b90312d7fb06603a7e
+  - name: cp.icr.io/cp/dcs/mo-ubi-init:2.5.4@sha256:927bb277f576f2a772faf8dc9978a6592d5d08bfad3cdce81da180a9095a34c2
+  - name: cp.icr.io/cp/dcs/moconsumer:2.5.4@sha256:4c9eb6978030c80e77e8106bee1c97c52a5f05427f4361d576fd3d0d112226d6
+  - name: cp.icr.io/cp/dcs/moproducer:2.5.4@sha256:4d64b13b5e3b7455bc6c1b234ff2d995c56b514ace3ca6c4322f9edb1b16b924
+  - name: cp.icr.io/cp/dcs/must-gather:2.5.4@sha256:bc7cc6519466b03bbc4b7fce9e34c60c6b91c4cf1abe60543623644544e5a99d
+  - name: cp.icr.io/cp/dcs/policyengine:2.5.4@sha256:877b0be81605319f2d886246bee591230cf655078153b674fed2d6375bce83f3
+  - name: cp.icr.io/cp/dcs/remote-content-search:2.5.4@sha256:49698b7ee36ed92dedc1a1d386dc9a56c7654c6326aaffd5b384e0092b4446d2
+  - name: cp.icr.io/cp/dcs/reports:2.5.4@sha256:cb990527b32a1257fe7b1e03202192ff17c0aff64ffd05fb3bef9a736e522420
+  - name: cp.icr.io/cp/dcs/scaleafmdatamover:2.5.4@sha256:fc4dcc5908555fcede5469c075e76775276f245311493e6ba7ee26e8085f8c66
+  - name: cp.icr.io/cp/dcs/scaleilmdatamover:2.5.4@sha256:a58516618149cca90c6b5c41bf35348afc14192ee79ec14d3296c450dfd23d01
+  - name: cp.icr.io/cp/dcs/sdmonitor:2.5.4@sha256:2d853b11e533a9eee9e922034478289ed82d4641a16e9c797fafbaaff8fb1fdf
+  - name: cp.icr.io/cp/dcs/tikaserver:2.5.4@sha256:d43f87312d490f1afcf071afe530e0c929ca3befc37fce9bf6b800b32e62d070
+  - name: cp.icr.io/cp/dcs/uibackend:2.5.4@sha256:01a758f5e289bdb4c4324a8a7c72c7441b811cfe601c2fe65d540a25ed595432
+  - name: cp.icr.io/cp/dcs/uifrontend:2.5.4@sha256:afddb6b8f31e890286985b76c34feead0df37ad80551170633c1531c48502677
+  - name: cp.icr.io/cp/dcs/wkc-connector:2.5.4@sha256:484dc8bc31f9b21707f0fca9741fb059655d8f6ce2533563a99840d74bd02756
+  - name: icr.io/cpopen/ibm-spectrum-discover-operator-bundle:v2.5.4@sha256:e12fd29286784348699a248c6c14838ebbcb212eda03e514c2d3107539e2500a
+  - name: icr.io/cpopen/ibm-spectrum-discover-operator-catalog:v254.0.0@sha256:991ffe8cf046cd06e2a4ece1e9ba97aa6e81ff5d719bcdc06ab1fea3d4a5c779
+  - name: icr.io/cpopen/ibm-spectrum-discover-operator:254.0.0@sha256:bdd890dbe235d32b92ffb22b3fcf739057d20cf3451780ea845a43c401d39202
