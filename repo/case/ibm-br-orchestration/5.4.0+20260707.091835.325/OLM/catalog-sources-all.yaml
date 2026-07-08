@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-br-orchestration-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-br-orchestration-5.4.0+20260707.091835.325
+  publisher: IBM
+  image: icr.io/cpopen/br-orchestration-operator-catalog@sha256:74d7f649987f83f66ba03071dc1ab47c3112ec2ab0ab15a584f26873adbc865d
+  sourceType: grpc
