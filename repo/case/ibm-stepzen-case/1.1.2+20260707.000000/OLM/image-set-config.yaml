@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/stepzen/introspection-without-driver:v2026.0519@sha256:16d0caa1ebbf52628966d816facd3b5fae5b3d309695ff3d5aa34bec2dd76c4b
+  - name: cp.icr.io/cp/stepzen/jdbc-proxy-without-driver:v2026.0519@sha256:a4b2f0746bfefeb1c6b8c4fe8834a868d8a39b70a8eb0c7ff942726314c7c273
+  - name: cp.icr.io/cp/stepzen/stepzen-admin-jobs:v2026.0707@sha256:50cd850457ecd2f93793833c8c13d0c885ad831478f64f29211b5b4f745dee08
+  - name: cp.icr.io/cp/stepzen/zenserv2:v2026.0707@sha256:f67758b90b6082f9a968be42c76844c5b3a0b925e1a2c785bfba128cfe292627
+  - name: icr.io/cpopen/ibm-stepzen-graph-operator:v2026.0707@sha256:142294733eec2271b2563734f6a616a0d083aa5992fcc97a66986cfc8899a8cf
