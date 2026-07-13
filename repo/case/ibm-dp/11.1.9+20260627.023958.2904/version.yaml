@@ -1,0 +1,54 @@
+apiVersion: v1
+case:
+  appVersion: 5.3.19
+  catalogs:
+    analytics: {}
+    dataScience: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: ""
+  displayDescription: ""
+  displayName: ""
+  icons: []
+  licenses:
+    cp4data-enterprise:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Enterprise Edition License
+        displayName: IBM Cloud Pak for Data Enterprise Edition License
+      ref: CP4D5.3_EE_License.txt
+    cp4data-standard:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM Cloud Pak for Data Standard Edition License
+        displayName: IBM Cloud Pak for Data Standard Edition License
+      ref: CP4D5.3_SE_License.txt
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-dp
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 11.1.9+20260627.023958.2904
+  webPage: https://www.ibm.com
+created: 2026-07-13T22:28:07.74491087+0000
+digest: sha256:d98c81ce5b508f94f9870c4fa72df03ba169cb161df9a5f07a1a7f32e4410185

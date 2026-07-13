@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/action-connectors:1.8.7-3@sha256:3776a0e7d14367428d3e5ff9dd89e9541b9dbbae1ad2853995e859b5f53f6f86
+  - name: cp.icr.io/cp/cpd/datasift-api:5.3.167-3@sha256:2db0da16dfae7b81ad24d89b138d01b0fe875bfef272e53751c06e92868dff96
+  - name: cp.icr.io/cp/cpd/datasift-ui:5.3.136-1@sha256:9112d20dfeab355684eeba7fa69f9e314f10b98240ed8ff0645bf1c8a3fe3e17
+  - name: cp.icr.io/cp/cpd/wdp-connect-adapter-appconnect-flight:0.4.50@sha256:5f4a008f0941d9b386c3a00122d7ddd6624d25e837fcb77fe9b5786976f0a607
+  - name: icr.io/cpopen/ibm-cpd-datasift-operator-bundle:v5.3.906@sha256:9f49ec2809e22e0d34ff04cdfd2fe8e0675b352ef4bbe4f9ae53a05a0d5c49c0
+  - name: icr.io/cpopen/ibm-cpd-datasift-operator-catalog:v5.3.906@sha256:f6246ad8091c877557c5eca8b2bc0646ad9b3ed942c5bdfffcf608db735ba38c
+  - name: icr.io/cpopen/ibm-cpd-datasift-operator:v5.3.906@sha256:2c1450e20162502d7d98faac7c0b0299dd61d8ae0e5cbffe8e12c2641c16275e

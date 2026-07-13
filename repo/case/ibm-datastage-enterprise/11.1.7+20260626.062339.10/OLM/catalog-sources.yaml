@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-datastage-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datastage-enterprise-11.1.7+20260626.062339.10
+  publisher: IBM
+  image: icr.io/cpopen/ds-operator-catalog@sha256:c93c542c5010d15583c01903af02f90558d2923ab516780b546b3b927d80b13d
+  sourceType: grpc

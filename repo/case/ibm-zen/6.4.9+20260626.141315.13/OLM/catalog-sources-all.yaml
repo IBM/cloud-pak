@@ -1,0 +1,21 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-5.31.2+20260623.072929.2733
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:4ef0d06b2f48e1a43c2cd0d28515ffdb77f2243a3b16a7e96644623d8a51bea9
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-zen-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-zen-6.4.9+20260626.141315.13
+  publisher: IBM
+  image: icr.io/cpopen/ibm-zen-operator-catalog@sha256:59dec253d628145739f5183862af23330e9857bc5dcf126a9250162c25dad8c9
+  sourceType: grpc

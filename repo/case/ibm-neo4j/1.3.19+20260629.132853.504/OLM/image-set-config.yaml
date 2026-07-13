@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/neo4j:2026.05.0-292@sha256:ddfda85c7b305b7f1c9151f5b012f969a287a01ebd2af30236b9c9edd998f88a
+  - name: cp.icr.io/cp/cpd/neo4j:5.26.26-292@sha256:6d2709015d23f8c2a259e9b5a3f84d4ab7107c8123a404ab70e2c8a3aae3216e
+  - name: icr.io/cpopen/ibm-cpd-neo4j-operator-bundle:v4.19.504@sha256:c2c9c5cd5d02645d3d8c11681653cefb6bc1ec613540ad07c9904328b769dff4
+  - name: icr.io/cpopen/ibm-cpd-neo4j-operator-catalog:v4.19.504@sha256:4471d536ddef682840f994886a95cedfa70a7b8058da64b7ecfeb25f2075d955
+  - name: icr.io/cpopen/ibm-cpd-neo4j-operator:v4.19.504@sha256:0af3161649b74409bd3321edcb57b5dfbae5abe9e343973c56f0ec594ebe9d06

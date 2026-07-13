@@ -1,0 +1,30 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2730@sha256:b259810099ca7a4150f00ccaa870b02890d1d7f022f3ac330918d515968a033b
+  - name: icr.io/cpopen/cpfs/icp4data-nginx-repo:6.4.9-13@sha256:76e5abff998f81211b7c4f9876ce8ea47161cbb8d3cdf17d05a9015d700d2932
+  - name: icr.io/cpopen/cpfs/icpd-requisite:6.4.9-13@sha256:f436bc3429d676262dea2f50a02c7d7b656d21d24266e655c6748a34a85fd6cd
+  - name: icr.io/cpopen/cpfs/platform-assistant-broker:6.4.9-13@sha256:02215fccef07a60dfc4a5852f737dda1c8925d02d47f76f5fc1d3fa68f09a2d4
+  - name: icr.io/cpopen/cpfs/privatecloud-usermgmt:6.4.9-13@sha256:dcc634bd10512760dc142d7fc624aeb4bf009bbe55e9c04759046cc86296938a
+  - name: icr.io/cpopen/cpfs/spoke-nginx:6.4.9-13@sha256:3bbf895f595476654e0845c4a33e4e995085712c5d042fe9c970a761b05f9c24
+  - name: icr.io/cpopen/cpfs/zen-audit:6.4.9-13@sha256:b45ed7646c1ae6d521a64c893495ad443d7ee3dc0faf1d6b7b84ec774401a04c
+  - name: icr.io/cpopen/cpfs/zen-core-api:6.4.9-13@sha256:706417dfe60aab27a2fabb97aa0bf3cec01343acdd699462fc0c857a4824b026
+  - name: icr.io/cpopen/cpfs/zen-core:6.4.9-13@sha256:b9b2eddc4671d42009dde34af01b8885f1fc781e7e1d4a9707042987b685e42d
+  - name: icr.io/cpopen/cpfs/zen-iam-config:6.4.9-13@sha256:9fdddae95aa0f30df028c77f6595a7313c26620875970f63605f6dd93f461cc4
+  - name: icr.io/cpopen/cpfs/zen-minio:6.4.9-13@sha256:4dff11567993870616af70dc40f355a0e557914c6e0cd612fafc487899e11147
+  - name: icr.io/cpopen/cpfs/zen-openresty-base:6.4.9-13@sha256:3c68fec9dd5fa2ec3cde23c402ddd27404325634717ed371fa24002541b77491
+  - name: icr.io/cpopen/cpfs/zen-rsi-adm-controller:6.4.9-13@sha256:d47ada8bab62694e1c849798fbea732d3c70f6cda01c33fa879c7dab5f90db2e
+  - name: icr.io/cpopen/cpfs/zen-utils:6.4.9-13@sha256:ff44491f4ddb68c716d43c1bac309dd72e0c947d02ed895c7dd8f8c5c0951569
+  - name: icr.io/cpopen/cpfs/zen-watchdog:6.4.9-13@sha256:bf61136004858c7b1cf33efaae94ba90f68383cefed23a598bb6c86d3e5db840
+  - name: icr.io/cpopen/edb/postgresql:14.23-5.31.2@sha256:063c8a38d80a2b34f06ccdf4e432424a2d1257cddbefb87794b39ae505f8c921
+  - name: icr.io/cpopen/edb/postgresql:15.18-5.31.2@sha256:3d2f9ceb5f3414881d67a78f921303e47b2eb90601c0a938fea6d16611d26b0f
+  - name: icr.io/cpopen/edb/postgresql:16.14-5.31.2@sha256:e32d271e1d9635b6d9b9b46d84f4984a28d3cc863d828a4fbb42ec082c5976bd
+  - name: icr.io/cpopen/edb/postgresql:17.10-5.31.2@sha256:256e0a72bbcd490af6071e82d8fb1697a24835223cd186b2673b72f6d8add4d9
+  - name: icr.io/cpopen/edb/postgresql:18.4-5.31.2@sha256:8b046402ce495e262f6589b4ad16d960e190f151a42751461f5939b2275511db
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2733@sha256:df4f2edc4813baaa556171e2d9da5e6aee8e0c208bcc3f3cf4ded367d6c9b7a9
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog:2733@sha256:4ef0d06b2f48e1a43c2cd0d28515ffdb77f2243a3b16a7e96644623d8a51bea9
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.28.3@sha256:002efb4961c762fbd31079dfad1534c63d145a626ffcc777ab928914485c55d6
+  - name: icr.io/cpopen/ibm-zen-operator-bundle:6.4.9-13@sha256:f8e3d10d2acc588927666e9e5642fea2a58cba52ee129a567d900ed689548a57
+  - name: icr.io/cpopen/ibm-zen-operator-catalog:6.4.9-13@sha256:59dec253d628145739f5183862af23330e9857bc5dcf126a9250162c25dad8c9
+  - name: icr.io/cpopen/ibm-zen-operator:6.4.9-13@sha256:83fe4d00d0490535cde9c1ef375417300675ac562051d057d20d1378c6811a91
