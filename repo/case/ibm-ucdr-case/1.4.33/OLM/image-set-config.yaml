@@ -1,0 +1,8 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-ucdr:8.2.2.1.1190555@sha256:30b70684239637ec430ab62adfb1e1527be0a5bb7e84ed02e67708231003c940
+  - name: icr.io/cpopen/ucdr-operator-bundle:3.0.23@sha256:f64363d567a066a45753b27616b82efcdad2537b376f11790830e073df782356
+  - name: icr.io/cpopen/ucdr-operator-catalog:3.0.23@sha256:e41d32fd57100f3551164607a1e5a9794a57411ebfc9068824fe380d43e3f0c3
+  - name: icr.io/cpopen/ucdr-operator:3.0.23@sha256:e95cbc82bda2b216f47aa6d69db0a2057f0dc5a33eb3ca341b39f65235d25f0e
