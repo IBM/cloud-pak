@@ -1,0 +1,16 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cognos/ba-agentic-ai:12.1.3.1@sha256:fef29d38538e2e7b7cfad64f2f33eabcd56cf5e93c276393301e881cd0044920
+  - name: cp.icr.io/cp/cognos/ca-proxy:12.1.3.1@sha256:89b9e5c2a8a2f99c58439ad2a92e828911d4900792f833b70d327937dfa30459
+  - name: cp.icr.io/cp/cognos/elastic-ca-cm:12.1.3.1@sha256:815c06d5ac6b4fe641a94696cf183ee4ff7114cb3d6482ffdaa95eba6ee51cc5
+  - name: cp.icr.io/cp/cognos/elastic-ca-dss:12.1.3.1@sha256:6264f76f684f66342050fb3cc1a29e86ebb497548d8de75841deac05d3567f23
+  - name: cp.icr.io/cp/cognos/elastic-ca-readypinger:12.1.3.1@sha256:6c64211a1871a60df4dfd4bc08be4769429714034a8f3df7472a979814cd1291
+  - name: cp.icr.io/cp/cognos/elastic-ca-reporting:12.1.3.1@sha256:1c80ffc0d003a34c1f73b71800715e293fb602f8586673f9b311c12c2cd87853
+  - name: cp.icr.io/cp/cognos/elastic-ca-rest:12.1.3.1@sha256:1410868252fdf835f5c634d5bb5e91039c612ad7c394554c22b01230322d17ec
+  - name: cp.icr.io/cp/cognos/elastic-ca-smarts:12.1.3.1@sha256:a77469ed4b2930457ba5a46d319a14fb1ea896e36ef48cc60508dacb21720f8e
+  - name: cp.icr.io/cp/cognos/elastic-ca-ui:12.1.3.1@sha256:c3ed3a41584b279b37f689374c71aca80012d5b8a274bba11667e82fe3645d7d
+  - name: cp.icr.io/cp/cognos/litellm:non-root@sha256:e6bda9d912f22b209beea92d961c21c92802ebbe720764cfa4c3ba99cc41bc09
+  - name: cp.icr.io/cp/cognos/opensearch:3.4.0@sha256:0820988bf3c409560263e0760999f90cbb42833e51ec3de9541ee69c1836a8e0
+  - name: cp.icr.io/cp/cognos/redis:8.2.0@sha256:0d3518f56ce00d50959a655b39234a5d7e48068e52c5e3af6cf6270e50194e1f
