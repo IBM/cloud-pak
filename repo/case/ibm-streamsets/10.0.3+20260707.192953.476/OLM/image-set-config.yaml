@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-security-ui:d9530eb6886ebbbf4cae24c814e754bfe098a33d@sha256:d7347f0c23da8e7027e4da439b9e36a5b44341a1f32208f1b3e505bcce6f5570
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-aster-security:1.9.10@sha256:746acb1bd7ec4db006690213a5e9b4cc791330d4a3e8d87c69e441a96b039319
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-banner-service:1.3.5@sha256:5f72ff78c77fc74f0059d9d17345b0231d94f82ce560b6bbd7bc81f5c567f56d
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-datacollector:JDK17_7.6.0@sha256:59438edde4bfd27eab19f2893cbb3ffbd6a5b155ca9b9c32a08a8f96ad7a5dc9
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-docs:7.7.1@sha256:a5b5c9595eb3925bc4a3e676fd468712d9edf8aba85e4adf5275e8b348641824
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-kubernetes-agent:1.5.11@sha256:e9fd662a257135df6ce5cc1f03d3e469ff188f9565c80b4a68ffe79f11beb808
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-mysql-backup:7.7.1@sha256:de40118a9282b6a44e0baff7d1cb096dc8fae9205f572175511f2822547bbb96
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-mysql:7.7.1@sha256:bdc90b50f1e81a7aee83c26a24482203b4d97bce628dac89253b52f25aa30476
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-nginx:7.7.1@sha256:09c48ad31d14de5d79d438312c00d12e555fd5a6b39b8fa8c851150f84e048a6
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-provisioning-app:6.9.4@sha256:c601812f018c7ba990d1632584cea1bca10fc7e23ce42bdbdec35a8b95b671fc
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-sch:23c577a23b1034800c1b6d7c95dfd6f015f2f21b@sha256:df234994b6777604c09af884cb844f1a1093d9cb04af98e18a94900bd67288d4
+  - name: cp.icr.io/cp/cpd/ibm-streamsets-static-content:7.7.1@sha256:093f610ce117cd7d2210b4baa34ea128c2fa7c9dcade10ab4cbedd9f9b07546a
+  - name: icr.io/cpopen/ibm-streamsets-operator:10.0.3_20260707.192953.476@sha256:c23bd5142495ef0d46cbc1b9223b0a7d1a8d1c35569ee642f8fc75290ec6d409

@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-data-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-data-7.2.0+20260702.215644.273
+  publisher: IBM
+  image: icr.io/cpopen/ibm-lakehouse-operator-catalog@sha256:47064c4892b47e46de1ee36725a04b809d8ee7fc6be30c29268edbbff58d6a75
+  sourceType: grpc

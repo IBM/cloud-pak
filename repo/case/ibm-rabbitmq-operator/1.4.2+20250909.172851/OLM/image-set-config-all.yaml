@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/opencontent-rabbitmq-3:v3.13-1.4.1@sha256:a143cfcfdef107e8b07107a8db563d243cbb7a487d515a2afefab564e0e94256
+  - name: cp.icr.io/cp/opencontent-rabbitmq-config-copy:1.4.1@sha256:d9955e87ecd480a846c4462b406efd34101ea4e61b393aa94e5f48edd5c6e74a
+  - name: icr.io/cpopen/opencontent-rabbitmq-operator-bundle:1.4.2@sha256:aa214d833d2bd30b6c03bd7131e68382a1f06eba1a3f5f77df0bf1d640a71708
+  - name: icr.io/cpopen/opencontent-rabbitmq-operator-catalog:1.4.2@sha256:f351dd50568eaaa11cb2d0ff08d9420692fc4315785e8cf2996ef3ee56c23211
+  - name: icr.io/cpopen/opencontent-rabbitmq-operator:1.4.2@sha256:7751aac34c49e509fc80a0add210ded457690c82774e6540ff66197d0200c504

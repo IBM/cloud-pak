@@ -1,0 +1,21 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-pg-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-pg-operator-28.3.3
+  publisher: IBM
+  image: icr.io/cpopen/ibm-pg-operator-catalog@sha256:35d601a0d5af74add516984f4f16aa5f631e8d0dbc4fa65403ac0c73ea0e3ae2
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-zen-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-zen-6.10.3+20260713.120632.33
+  publisher: IBM
+  image: icr.io/cpopen/ibm-zen-operator-catalog@sha256:1bcfdf65019d322a2d137f72bf216e80f98abfc80f8338b575d43fabf5bdebb9
+  sourceType: grpc

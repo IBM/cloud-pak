@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/br-orchestration-operator-catalog@sha256:cb3948d85277b16bbb3657c0bb54b2215a8299f664ce564ded437f1b8901bcb7
+    packages:
+    - name: br-orchestration-operator
+      channels:
+      - name: alpha
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/br-orchestration-operator-catalog:5.4.3@sha256:cb3948d85277b16bbb3657c0bb54b2215a8299f664ce564ded437f1b8901bcb7
+  - name: icr.io/cpopen/cpd/cpdbr-api:5.4.0.3@sha256:7023c424f45d6ce801379150d37558619235d795d407a8113a4afdce5389698d
+  - name: icr.io/cpopen/cpd/cpdbr-oadp:5.4.0.3@sha256:2acf0a957051876a71fedb59c30735c89d933e1e4ae63cf478dcef547a19af94
+  - name: icr.io/cpopen/cpfs/cpdbr-hook-utils:5.4.0.3@sha256:81a9dbd6e642ea815dd6e38a947978ae78c7a97dd10882409cb67aa9a9544c6b

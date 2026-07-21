@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-dmc-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-dmc-8.12.2+20260713.071929.93
+  publisher: IBM
+  image: icr.io/cpopen/ibm-dmc-operator-catalog@sha256:a05d157d51295bd3fcd2eb0474bc99276c2808a868ba585c7f413b13a20ec466
+  sourceType: grpc
