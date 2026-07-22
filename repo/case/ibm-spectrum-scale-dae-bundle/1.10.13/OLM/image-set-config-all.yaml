@@ -1,0 +1,23 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/gpfs/csi/csi-attacher:v4.8.1@sha256:69888dba58159c8bc0d7c092b9fb97900c9ca8710d088b0b7ea7bd9052df86f6
+  - name: cp.icr.io/cp/gpfs/csi/csi-node-driver-registrar:v2.13.0@sha256:d7138bcc3aa5f267403d45ad4292c95397e421ea17a0035888850f424c7de25d
+  - name: cp.icr.io/cp/gpfs/csi/csi-provisioner:v5.2.0@sha256:d5e46da8aff7d73d6f00c761dae94472bcda6e78f4f17b3802dc89d44de0111b
+  - name: cp.icr.io/cp/gpfs/csi/csi-resizer:v1.13.2@sha256:8ddd178ba5d08973f1607f9b84619b58320948de494b31c9d7cd5375b316d6d4
+  - name: cp.icr.io/cp/gpfs/csi/csi-snapshotter:v8.2.1@sha256:5f4bb469fec51147ce157329dab598c758da1b018bad6dad26f0ff469326d769
+  - name: cp.icr.io/cp/gpfs/csi/ibm-spectrum-scale-csi-driver:v2.14.8@sha256:af4de6d02421a6dfaebf071f726152cd09e53a08d9955a0b680406d323a10a12
+  - name: cp.icr.io/cp/gpfs/csi/livenessprobe:v2.15.0@sha256:2c5f9dc4ea5ac5509d93c664ae7982d4ecdec40ca7b0638c24e5b16243b8360f
+  - name: cp.icr.io/cp/gpfs/data-access/ibm-spectrum-scale-daemon:v5.2.3.9@sha256:2b97c8539b2fe8d7d6a276f839613fb6bfa57e902723d76ca998628693e4475e
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-core-init:v5.2.3.9@sha256:00c6c0571d6b13176522ac357b72910af31f6cd698bca54ff90ad9e8ccffa1e3
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-coredns:v5.2.3.9@sha256:18058dc1e5ee3febb327a13d846fa80533de365788e3e03ed00e358ef45581ff
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-grafana-bridge:v5.2.3.9@sha256:ed88b3873a0af645f2404bb0423bdf27a37fdd3c80bbac2464bf1952d40aa46b
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-gui:v5.2.3.9@sha256:54f43396b246dc5ddfe0c2d1d2458f4a311508fe07dcde0e517955873dd7296a
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-logs:v5.2.3.9@sha256:c99a47b850832ec9ceb1cb5fac6b4e46e745f59c2019934d25c2cfe8f2b36b10
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-monitor:v5.2.3.9@sha256:212aded9c810bb48979b300156382c1384a6145f867f02f691d70946991746f0
+  - name: cp.icr.io/cp/gpfs/ibm-spectrum-scale-pmcollector:v5.2.3.9@sha256:a03a306209f9ae8d370a0f7c9459e00ae83d4d22ae483b4f81df97308958e127
+  - name: cp.icr.io/cp/gpfs/postgres:17.6-alpine3.22@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94
+  - name: icr.io/cpopen/ibm-spectrum-scale-csi-operator:v5.2.3.9@sha256:b98a23cabda8c19bb4e488f46487b9c17a319e12ca00d833d7de139ff373b8b9
+  - name: icr.io/cpopen/ibm-spectrum-scale-must-gather:v5.2.3.9@sha256:dac18aafbd462e766ae4f1806284bf9c48a5496e65c52fe1f16877655a283b80
+  - name: icr.io/cpopen/ibm-spectrum-scale-operator:v5.2.3.9@sha256:907b1187b1e47e17a1392d38856731ced3da418645b023062e3cf292e6ee99eb
