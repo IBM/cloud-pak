@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-eventendpointmanagement/eim-backend:11.7.4@sha256:4dee9d135fce5897093b5e1991854b906f71598b1b3023a54e51e1554990a11a
+  - name: cp.icr.io/cp/ibm-eventendpointmanagement/eim-backend:11.8.1@sha256:c0914d77c3b652ec16da95f4bdd2c779fdb2dfbc5c0ab2e3e7bd7a4e5de18533
+  - name: icr.io/cpopen/ibm-eventendpointmanagement-operator-bundle:11.7.4@sha256:16b80f8bedbb36e8bd02a0790c4a268b0058ff9a6bd1858b7493fdbc48bc74f9
+  - name: icr.io/cpopen/ibm-eventendpointmanagement-operator-bundle:11.8.1@sha256:097c78f2d5c42b7b0bff832db2db71b855145307957fa6aa59ddab23bf4c0cba
+  - name: icr.io/cpopen/ibm-eventendpointmanagement-operator-catalog:11.8.1@sha256:157b254fb8ccc0be4c29aa85de8458f46c3bf6b3433643fee67b143ad1f87dfa
+  - name: icr.io/cpopen/ibm-eventendpointmanagement-operator:11.7.4@sha256:f69ae7f40df84af7399cf7d2229c3c4f121c318fa7919306a17588042b8ec924
+  - name: icr.io/cpopen/ibm-eventendpointmanagement-operator:11.8.1@sha256:9992e55d2ffb8b00a6d43c3ba547975eb00351fca1bfeed41b6219c8fe5fbdb7
+  - name: icr.io/cpopen/ibm-eventendpointmanagement/egw-tutorial:11.7.4@sha256:a9ce6dd1ee9f7864b3968c72ccbc51f378c48cc7d02f400d7b20264c6e083c96
+  - name: icr.io/cpopen/ibm-eventendpointmanagement/egw-tutorial:11.8.1@sha256:c9b485be882b7b18d4556ea8e5f09f7f6154e541c7d1597d9d454724035ea440
+  - name: icr.io/cpopen/ibm-eventendpointmanagement/egw:11.7.4@sha256:716862393b504c751b5b3e95ddd303da13b7f10c3596e4fde47c62394c4b0994
+  - name: icr.io/cpopen/ibm-eventendpointmanagement/egw:11.8.1@sha256:a5f18c0c12a74dd70c09f31e19b3e20fdd41e5bfb1b430cabf7ab442f87d962e
