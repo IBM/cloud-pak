@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-pg-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-pg-operator-28.4.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-pg-operator-catalog@sha256:7559f731a915ec897a62cce0572b7312d2c83780feb518cfeac3d8043860ddcb
+  sourceType: grpc
