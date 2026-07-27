@@ -1,0 +1,33 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-eventstreams-admin-ui:12.3.1@sha256:7994dd53bea33bed71a768da259207ff58006aa80d30545308c164c511c89c91
+  - name: cp.icr.io/cp/ibm-eventstreams-admin-ui:13.0.1@sha256:61dbcffdb00ff210265071788b10e407f0361f44ee6e404fbe25d51b003dbf87
+  - name: cp.icr.io/cp/ibm-eventstreams-admin:12.3.1@sha256:ad9d12d88e1b04947d56c0ab0c55541d857a4aeb3890e465b908ec879de8375e
+  - name: cp.icr.io/cp/ibm-eventstreams-admin:13.0.1@sha256:894f9259fb67a7ebee67555b3969112bf8d550a0969ced60ea1eb86d9e3ec3fb
+  - name: cp.icr.io/cp/ibm-eventstreams-apicurio-registry:12.3.1@sha256:505586d11ec7781b4d53bae1492840f7be8f52df7ce3ab9d091819f2d12a69cf
+  - name: cp.icr.io/cp/ibm-eventstreams-apicurio-registry:13.0.1@sha256:04919e3dc1e2a8618c88d36e1a5e31c360200612fc0eca9a049b0f2ff2a59f07
+  - name: cp.icr.io/cp/ibm-eventstreams-kafka-bridge:12.3.1@sha256:ea7100769a0f4f6fae3ca9f5819e8775de18a663f8345390d704d5f691a0f1b6
+  - name: cp.icr.io/cp/ibm-eventstreams-kafka-bridge:13.0.1@sha256:7fe4effe7cd935604f8e621ee6c138e62d77d536c56b45ea1fc36ebb1cdd1d51
+  - name: cp.icr.io/cp/ibm-eventstreams-kafka:12.3.1@sha256:396f15857de14c3e2798acf8c6765932e0da1e13c12967c72da83d98163057cc
+  - name: cp.icr.io/cp/ibm-eventstreams-kafka:13.0.1@sha256:64838fe0e9eccf1f7d6d1041de846d495e1f71de0557399fa7be4395746c3c27
+  - name: cp.icr.io/cp/ibm-eventstreams-kaniko-executor:12.3.1@sha256:2e191eb4b4cd40b375b68f480d75aee82c6f939ec629b39a6f8f13c801a0afe0
+  - name: cp.icr.io/cp/ibm-eventstreams-kaniko-executor:13.0.1@sha256:6fad249f7eb40eb0fb78831a02aabf487d5f32cec9cc6a18e601caeba1219272
+  - name: cp.icr.io/cp/ibm-eventstreams-maven-builder:12.3.1@sha256:5ac4572e11116634fd2f154954683a7f199cfc136c565f1ebc4fdc482f81f722
+  - name: cp.icr.io/cp/ibm-eventstreams-maven-builder:13.0.1@sha256:fe63805a52fe01e30c5ffb0677a1611cafec11fb36a16ecfd579aaf22790748f
+  - name: cp.icr.io/cp/ibm-eventstreams-metrics-collector:12.3.1@sha256:fea17b623522a7bda3d96bb993cd4bff1f28465b5d1e557432512872fa56e8a2
+  - name: cp.icr.io/cp/ibm-eventstreams-metrics-collector:13.0.1@sha256:667decc51972163eb021465b9a3d6f9248a78e71d3ec59182b3df7d24ae9b906
+  - name: cp.icr.io/cp/ibm-eventstreams-rest-producer:12.3.1@sha256:dff12fd5461b6e6b65dfb8af68daee3c48f2f2d0d444cfe171d49ad2bf926056
+  - name: cp.icr.io/cp/ibm-eventstreams-rest-producer:13.0.1@sha256:87c55c8d645a7df6d20787ab3fa04edcbff2ee28e768eca27092509d15a9e343
+  - name: cp.icr.io/cp/ibm-eventstreams-schema-proxy:12.3.1@sha256:d1233859645ea6d0d908a2a96c65a6404eb8b311d78833da8fe2ef08e54f31e4
+  - name: cp.icr.io/cp/ibm-eventstreams-schema-proxy:13.0.1@sha256:f711e382fc20dd03f7a5f3ed8aa46f891cf689aee817ce233c777671d5e5c9af
+  - name: cp.icr.io/cp/ibm-eventstreams-session-store:12.3.1@sha256:fe326f47bc55df25fa1c7b88cb915f1cead068533f6a293755fc96c9f1ecbd15
+  - name: cp.icr.io/cp/ibm-eventstreams-session-store:13.0.1@sha256:b537befb2fdabe7116a2477b49912f7bcee1053b905a0fce507fc17cb9227c8a
+  - name: icr.io/cpopen/ibm-eventstreams-catalog:13.0.1@sha256:736ad9608e888a0d1a27a250ebe53ae052f991cf0fc53352ac9f40311d211019
+  - name: icr.io/cpopen/ibm-eventstreams-operator-bundle:12.3.1@sha256:fa63bb2a1617e2bb9c6011a129c77a723a7903a6fa0c2b46b8abde42948f29e7
+  - name: icr.io/cpopen/ibm-eventstreams-operator-bundle:13.0.1@sha256:633e4983d51c6d60f6857a695bacc21fa65f2c67d7eb9979e7d7b1cd309fe706
+  - name: icr.io/cpopen/ibm-eventstreams-operator-init:12.3.1@sha256:6eba7b67f964da0d46ff782fc72c5b3b1242c9554c2073dcc9e17aeeacc4dfc6
+  - name: icr.io/cpopen/ibm-eventstreams-operator-init:13.0.1@sha256:33363b5a8fa1a4ad3606893dfed33e715fdf992bcfe7ef7e7db0391bdbbf29fc
+  - name: icr.io/cpopen/ibm-eventstreams-operator:12.3.1@sha256:d82069aa1f6bc4aba0935c7604bb13ee4b8e57edb149725ff4f5f3f395353473
+  - name: icr.io/cpopen/ibm-eventstreams-operator:13.0.1@sha256:da881357f355dda7d8a69b195e71d3e7841b31aeb9d01e993240a350187ca7ba
