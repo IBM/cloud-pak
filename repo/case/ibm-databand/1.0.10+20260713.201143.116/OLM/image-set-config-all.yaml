@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-databand-operator-bundle:v1.0.10@sha256:54bf059ea4e4bb31b730c81074f3d47011acf76c898eeef42f3c5ba5532928e5
+  - name: icr.io/cpopen/ibm-databand-operator-catalog:v1.0.10@sha256:59e2579ffdb10e7e417eff1b7f01ee12481db9b38513a325d104503a4c4430f3
+  - name: icr.io/cpopen/ibm-databand-operator:v1.0.10@sha256:8fddc2a457abdbd88a4f983883a949139acf0afb27600e2acccb5ffb5a59f82a

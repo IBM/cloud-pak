@@ -1,0 +1,19 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ds-assets:531.0.14@sha256:97ffd1cac2ffa238d583c5532a77fc4b14c6dbb249840e654f9c546f3e7eb39d
+  - name: cp.icr.io/cp/cpd/ds-canvas:531.0.71@sha256:288c19276fa91a4daf86a099032e310b76ff37c5a5c8fa1e6702fba21945ba5b
+  - name: cp.icr.io/cp/cpd/ds-cas-lite:531.0.11@sha256:68a0cb7664929d555aabf4201100456cded7f06737092d1683e477aa27567824
+  - name: cp.icr.io/cp/cpd/ds-dataservice:531.0.12@sha256:96b334f4182f37172fb7ec02d086f2d5c89744f7d7efd58975c04f69a91592a7
+  - name: cp.icr.io/cp/cpd/ds-flows:531.0.69@sha256:dfe1c980f0912647b8c621182599356af45b87d090f970ed42a23867f9f3ef7e
+  - name: cp.icr.io/cp/cpd/ds-metrics:531.0.10@sha256:995da6b77478d0c70db6aa225cfee4323757de60868a980f18c9ab9d7e5e9515
+  - name: cp.icr.io/cp/cpd/ds-migration:531.0.36@sha256:09f382cc72bf957e31e99114d17a9ef6e6d264a87bad29e4908e6778d9351e70
+  - name: cp.icr.io/cp/cpd/ds-nginx-proxy:5.3.1c@sha256:66a5ae96a8771e0c5d04dfe8e6cf876c8469c16c4a9ee588f81c098cf8834d00
+  - name: cp.icr.io/cp/cpd/ds-px-compute:531.0.54@sha256:f091beca6ab0ea1d64fa875725617e975d7a3156c03c986c63f1344ce747f6fd
+  - name: cp.icr.io/cp/cpd/ds-px-runtime:531.0.54@sha256:3c05ce7962721322c7bb3a723c5ea48788aefe27b0954444b8d349790713c77f
+  - name: cp.icr.io/cp/cpd/ds-runtime:531.0.15@sha256:60f3204f30e08a269acda42e5569c8c2cb5607a3fe2719e549de4f45e2868b77
+  - name: cp.icr.io/cp/cpd/qs-ruleset:531.0.9@sha256:2dbe2feea0acb0d3c464579aaa662efa2a1fcb735727e14a1c482c7cca868b02
+  - name: icr.io/cpopen/ds-operator-bundle:5.3.9-7@sha256:12c63a37b913918f0ef93faa107ac4aaa1528cf6db797572533b2b47a6df95da
+  - name: icr.io/cpopen/ds-operator-catalog:5.3.9-7@sha256:288bbafca9d3403b7cfa29200005d1bdc355e9990c83531194dff9231a71a702
+  - name: icr.io/cpopen/ds-operator:5.3.9-7@sha256:28ecb9c738305471672c22adf3ccc38b7c94e10d3319c6ac83f79a55ff7512ac
