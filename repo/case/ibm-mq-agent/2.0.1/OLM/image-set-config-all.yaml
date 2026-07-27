@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-mq-agent-embedding-service:v2.0.1@sha256:84a5c16452279bed50552f252e9c97a39b87e2b35f638df375d036ba004aca61
+  - name: cp.icr.io/cp/ibm-mq-agent-mcp:v2.0.1@sha256:14f6b6e316b2d2f8bdc8d3c363d8b780783dcbd19635e28b5878bfa887cb5d3d
+  - name: cp.icr.io/cp/ibm-mq-agent-runtime:v2.0.1@sha256:50e56b22a915389a2c74ef7f0b7062b595f8a8a7d367c70686a332d0682fea00
