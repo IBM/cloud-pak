@@ -1,0 +1,27 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cf/arithmetic-functions-server:1.0.1-amd64@sha256:d19a69b6bf0881b4660160876f230c57ec1d8eb3515df8d571a62ab1fa9fe7d3
+  - name: cp.icr.io/cp/cf/cf-audit:1.0.1-amd64@sha256:5622bb28b82d56ac0c9f3eb62f163961a793c740d51a329cd847e7d85e3387ee
+  - name: cp.icr.io/cp/cf/cf-backup:1.0.1-amd64@sha256:dda3053f45d5d44ea03d2f6e4c1ddb13db82adf22efdc4d129aba64b3fe816b3
+  - name: cp.icr.io/cp/cf/cf-config:1.0.1-amd64@sha256:1172289d9f8ec64a833f6a990a5582a09ed70011b8139f0013ad342729d01a42
+  - name: cp.icr.io/cp/cf/cf-db-schema-provisioning-job:1.0.1-amd64@sha256:0ed2cc99ec34acd78013cfd124c5288d1e57f3cbcce6da24d19039f501581303
+  - name: cp.icr.io/cp/cf/cf-investigate:1.0.1-amd64@sha256:d1d50f522a17c3c61ac8121962eca11e413f8be095e0fbdf89fb876c02c78e5d
+  - name: cp.icr.io/cp/cf/cyberfraud-account-onboarding-job:1.0.1-amd64@sha256:6f8ba5d97056aed11e9808ce43659320cbea12593444a03108301ba77ec58674
+  - name: cp.icr.io/cp/cf/cyberfraud-frontend:1.0.1-amd64@sha256:fc1b2ae8e671901a58e89e4eccc6867ab1bb6f4ef8c380c0a2aea7238b82a14c
+  - name: cp.icr.io/cp/cf/cyberfraud-mcp-context-forge:1.0.1-amd64@sha256:5875e8057b5d423ab9918538ef849adcc322371ae5fcc8a85409c19304ff1c17
+  - name: cp.icr.io/cp/cf/cyberfraud-mcp-management-service:1.0.1-amd64@sha256:e0068212ba0e53b0643257f9994bcce1de05c8899570393c2be8fbcb8b393f86
+  - name: cp.icr.io/cp/cf/data-analysis-server:1.0.1-amd64@sha256:285964981e95fde95b7bb6e22d0e2e447082b66c2187c0301e985f1d3da40302
+  - name: cp.icr.io/cp/cf/datetime-conversion-server:1.0.1-amd64@sha256:6ab14844e32628454b6d959a88f1871eb3557b2a23d6e327197946475ba9e6f7
+  - name: cp.icr.io/cp/cf/encrypt-decrypt-server:1.0.1-amd64@sha256:76f44b0f763fe08927171f32ce3fb49d6701f50cb6cffdbb20a7229aa558995b
+  - name: cp.icr.io/cp/cf/envoy-gateway:1.0.1-amd64@sha256:a19e0b2c5d6cb94667e4d378867ef87ead520d6cc6b9f31d5f55439c34310ff5
+  - name: cp.icr.io/cp/cf/envoy-proxy:1.0.1-amd64@sha256:5bd5111e849f6be59064a1cb94822b3ad61624feba2756bbe79903eafa202b2f
+  - name: cp.icr.io/cp/cf/geo-spatial-server:1.0.1-amd64@sha256:892c0b3c394fc5834fae7b176cfec564fda9b074b4b8f9e692efa9419aa4c020
+  - name: cp.icr.io/cp/cf/identity-management:1.0.1-amd64@sha256:b0848e41618795b80e08a03e15991e0432ca401a255474897a554ec2d2b0bb35
+  - name: cp.icr.io/cp/cf/restore-pod:1.0.1-amd64@sha256:1d12ac21c5a48e1cc73069c48973a653a67559d48f223e64c4adfe35c9fb6648
+  - name: cp.icr.io/cp/cf/seaweedfs:1.0.1-amd64@sha256:42e61cc94ebd315ad167c5b160aa92e542d41761931581e81cb1ad6bb035a41a
+  - name: cp.icr.io/cp/cf/tm-cnpg:1.0.1-amd64@sha256:167334daa1b71fb977ed15989c5f2429a82b1f6a14ebcbb60195cbb592ed2b2f
+  - name: cp.icr.io/cp/cf/tm-init-mod:1.0.1-amd64@sha256:437f96f220507315e1f3beb46084f16fc91ba78ab65cd53f0b16615f8ddddebf
+  - name: cp.icr.io/cpopen/cf/mustgather:1.0.1-latest@sha256:56df4dc8ebc69535a1a61098368834fadca6f6fa5328e5bc8fe4ab1639653cae
+  - name: cp.icr.io/cpopen/cf/serviceability:1.0.1-latest@sha256:3f62a07fb22d65a0bf1ac9926c035a83cafcb65c1e9eec4d8bb074582f7a97dc
