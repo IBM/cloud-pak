@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cam-install-operator-controller-manager-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ia-cam-2.0.1
+  publisher: IBM
+  image: icr.io/cpopen/cam-install-operator-controller-manager-catalog@sha256:25a176bf34746714aad15fc765958aaaed452b5832a53b9df68ad800205ba6ff
+  sourceType: grpc

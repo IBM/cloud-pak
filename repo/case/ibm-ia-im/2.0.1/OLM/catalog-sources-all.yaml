@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-infra-management-install-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ia-im-2.0.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-infra-management-install-operator-catalog@sha256:e54a839812c41010fdd144c27e0a3fdab75c3d3cc4997215c133c7e9c4a23bc1
+  sourceType: grpc

@@ -1,0 +1,51 @@
+apiVersion: v1
+case:
+  appVersion: 5.1.5-202607231139
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: This operator manages the AIOpsEdge components of the IBM Concert Operate
+    product.
+  displayDescription: ""
+  displayName: AIOpsEdge Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+        name: apache2
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    cp4aiops:
+      mediaType: application/text
+      metadata:
+        displayDescription: IBM Concert Operate License
+        displayName: IBM Concert Operate
+      ref: LICENSE
+      url: https://ibm.biz/concertoperate_510_install
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiopsedge-bundle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 2.0.1
+  webPage: https://www.ibm.com
+created: 2026-07-30T06:40:23.65979951+0000
+digest: sha256:66d9f969c7b93fe59730ac99aeb235bd49ab3d438809c1fd0e46f14e28910419

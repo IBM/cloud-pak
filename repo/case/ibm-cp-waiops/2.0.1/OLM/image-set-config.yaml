@@ -1,0 +1,29 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog@sha256:fe6ada9a0db6a8d99c07a60a9667c7f2bf00e74a08ec8d07fd4a815a16955d2f
+    packages:
+    - name: ibm-aiops-orchestrator
+      channels:
+      - name: v4.13
+      - name: v5.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-aiops-catalog:v5.1.5-20260723.1139-29bb9e7da@sha256:29bb9e7da9bed58948dcae74a22ce542748acba6f18b64c27875c1db3ac7db53
+  - name: icr.io/cpopen/ibm-cp-waiops-case-bundle-catalog:v5.1.5-20260723.1139-fe6ada9a0@sha256:fe6ada9a0db6a8d99c07a60a9667c7f2bf00e74a08ec8d07fd4a815a16955d2f
+  - name: icr.io/cpopen/k8s-mirror/envoyproxy/envoy:1.36.3_v0.26.0@sha256:2449452b3d15d006fdbaac1e8a4a74117672cc4379a97f26663ae4a83c88d18f
+  - name: icr.io/cpopen/k8s-mirror/envoyproxy/gateway:v1.8.2_v0.7.0@sha256:b43f6583a8859d1a85fd3c8be1ad8839f9ded48d9155e6e3c357bd74e19253d6
+  - name: icr.io/cpopen/k8s-mirror/envoyproxy/ratelimit:f2fb157_v0.6.0@sha256:c7f4648a4e3aa5193c3a34a27ec14c9a2acdadfae88cc66c73062be0fdb7a82e
+  - name: icr.io/cpopen/k8s-mirror/kube-state-metrics/kube-state-metrics:v2.19.1_v0.6.0@sha256:f8d3f656643657954b15e9b1c28e8909658a2592df8ca5d42f0d104c24036796
+  - name: icr.io/cpopen/k8s-mirror/operator-framework/olm:v0.45.0_v0.5.0@sha256:4427e684c86ea9c6db2286ae3c6be7547dfc0c83de4eeede9c2b4f03bc6e2816
+  - name: icr.io/cpopen/k8s-mirror/operator-framework/opm:v1.72.0_v0.5.0@sha256:636cf1d1bc531474cb10a4bbfd20e3cd1d9b6a2b384fb414cacd43966881a6a1
+  - name: icr.io/cpopen/k8s-mirror/prometheus-operator/prometheus-config-reloader:v0.92.1_v0.2.0@sha256:1707ff8ec7775863d56a012727a83a6f1e97458d0374bae43c67dc58f000ff0f
+  - name: icr.io/cpopen/k8s-mirror/prometheus-operator/prometheus-operator:v0.92.1_v0.2.0@sha256:117b6d7b27612eb876dbac8f0ddaca54947ec53a34384378a9755f32c370247f
+  - name: icr.io/cpopen/k8s-mirror/prometheus/alertmanager:v0.33.0_v0.1.0@sha256:5d93e9b5e022361345dc72d21cac61839511890a3f3e2fa7a4e6354b40b41d47
+  - name: icr.io/cpopen/k8s-mirror/prometheus/prometheus:v3.13.1_v0.2.0@sha256:d1b1e3c28237d65fccc34a1dc95795d7cae6cc15af35c18dcdee1ee627e5ef36
+  - name: icr.io/cpopen/k8s-mirror/rancher/klipper-lb:v0.4.17_v0.35.0@sha256:7074571acece96465b9b83ab91d6ad213dbf6a1b83583ab189e10ff10440b337
+  - name: icr.io/cpopen/k8s-mirror/rancher/local-path-provisioner:v0.0.36_v0.25.0@sha256:18e16a2de3bad32cc44196a82cd2c11148eb70cdc9bc98d09bdcc340bca53bf6
+  - name: icr.io/cpopen/k8s-mirror/rancher/mirrored-coredns-coredns:1.14.6_v0.27.0@sha256:297e77cbbbe4fe7bad4ffb7033f1a6c43bb6a2b1826f52ff3dcae2570ee4985a
+  - name: icr.io/cpopen/k8s-mirror/rancher/mirrored-metrics-server:v0.9.0_v0.24.0@sha256:c4555a1bf657e3965e187a9f6ea0f39666ef77a66419d0e490a5fd157722870e
+  - name: icr.io/cpopen/k8s-mirror/rancher/mirrored-pause:3.6_v0.23.0@sha256:bbdf68a1649a431b0c1fc76a56adbc355efcbd8991ae4bb02450185b9a20a815
