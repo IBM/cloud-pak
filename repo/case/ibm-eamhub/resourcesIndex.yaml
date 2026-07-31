@@ -199,6 +199,7 @@ containerImages:
   - 5.0.2
   - 5.0.3
   - 5.0.4
+  - 5.0.5
   category: catalog
   digest: sha256:998d77b1c66a9e6c08ec6cc95f97982c5d3720bc57eea3306d681d5b8dc2eee7
   image: cpopen/ibm-usage-metering-operator-catalog
@@ -258,3 +259,13 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: 5.0.4-20260525-113127
+- caseVersions:
+  - 5.0.5
+  category: catalog
+  digest: sha256:7fc85c230c7c4c2c4f63a669a472c6539684edea4354c891ba29a07ea549e2c6
+  image: cpopen/ibm-eamhub-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: singleArch
+    os: linux
+  tag: 5.0.5-20260729-171215

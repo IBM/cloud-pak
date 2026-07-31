@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cp-fncm-case-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-fncm-case-5.7.5
+  publisher: IBM
+  image: icr.io/cpopen/ibm-fncm-catalog@sha256:2349101237f667954e2c9d755d850b4f3f10c799f60540a84769d0766be12235
+  sourceType: grpc

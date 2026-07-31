@@ -1,0 +1,28 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ieam/amd64_agbot:2.32.0-1803@sha256:b52b8882cc79856995d80040ff9205060bf0c648f848f0fb881f8c0f7e6c318b
+  - name: cp.icr.io/cp/ieam/amd64_anax:2.32.0-1803@sha256:dcfb5c58b651e576c722823c56a365030beb8b9297b9f79c518eabaab8b261ed
+  - name: cp.icr.io/cp/ieam/amd64_anax_k8s:2.32.0-1803@sha256:07631523cd74571bf03f8b63ba1c24f06214d7bd9a54482391483c0ef3fd2f8d
+  - name: cp.icr.io/cp/ieam/amd64_cloud-sync-service:1.12.8-1803@sha256:0ed9f57e599d2969bb34302ad0f259cfd9cb9055a59f3c129f0ae5cada3ecac0
+  - name: cp.icr.io/cp/ieam/amd64_edge-sidecar:5.0.3-1447@sha256:2141222af3e643a9fcc6693e0d7e80286875e3bc0f35eef7a6a0a8dcdb57a1e0
+  - name: cp.icr.io/cp/ieam/amd64_edge-sidecar:5.0.3-1489@sha256:7ef92cb90e088f209e4310e1740f9a05ab9135d389aca7f19c6e3e6df89487d8
+  - name: cp.icr.io/cp/ieam/amd64_edge-sync-service:1.12.8-1803@sha256:b5e98db1da011ff67edef30d124ac8e367298e462cecbc9f6cf803eab672c3be
+  - name: cp.icr.io/cp/ieam/amd64_exchange-api:2.144.6-1313@sha256:405503974daa5ffc33feb54f9f1d4a53865dc7da62129104ab21d6c376707ff1
+  - name: cp.icr.io/cp/ieam/amd64_vault:5.0.6-1126@sha256:41550448d6aa455545cf153d630860616d07440c9623df5eecab8f4a0495c33b
+  - name: cp.icr.io/cp/ieam/edge-ui-amd64:1.6.0-2328@sha256:2742bdab8d048f9d7e7dfd104a0ddd27dcf91fd71534970b9c5cdb926074583a
+  - name: cp.icr.io/cp/ieam/fdo-owner-services:1.13.0-280@sha256:e9e427cab74ec9cf3a2d2d291774745a9e67e6e9941956819e9fc771cd7b35e5
+  - name: cp.icr.io/cp/ieam/mongodb-community-server:7.0-ubi9-slim@sha256:93b9a3d7f9bb06feffbc4224b1092fc3d4d6e1f63f23035c2803ee0aaed8bf77
+  - name: cp.icr.io/cp/ieam/nginx-ingress-operator:3.2.3@sha256:0b5ebaa8dc309f1f2ab77f81e054828a7eaf6e9461a05326527eef96308c17ac
+  - name: cp.icr.io/cp/ieam/nginx-ingress:5.1.1-ubi@sha256:8fb6b05bbaac3b499695ee960a1d51620bf1bb97eb8d159a2d57308e089c0956
+  - name: cp.icr.io/cp/ieam/oauth2-proxy:v7.9.0@sha256:0ddbe50812c5b974611e6c7a9aa05ff6eb56aaedb30bf4fb09fd78570c187fd6
+  - name: cp.icr.io/cp/ieam/operatorhubio:ieam-5.0@sha256:7c83fbf0c97f701d2d44dc1c5fe6638cc6b862de17c0598022f5fdb4e2075a30
+  - name: cp.icr.io/cp/ieam/postgresql:17.6-standard-bookworm@sha256:b2b891c486f67bf126ba7247157f070ead88cf532c6fe072822775d111e2c9df
+  - name: cp.icr.io/cp/ieam/ppc64el_anax:2.32.0-1803@sha256:0e7a07e52cdf6ba4d54caa094bdb7d3debe0cc48a589d790041cce0de1013313
+  - name: cp.icr.io/cp/ieam/ppc64el_anax_k8s:2.32.0-1803@sha256:7c550e8d34a82e4c8b1b848b511a9fb062b92d11d45cc0db57b58ee9242c79b5
+  - name: cp.icr.io/cp/ieam/ppc64el_edge-sync-service:1.12.8-1803@sha256:5044bd0cd28b6b6f38d5d911df69f0df4652af4b24b6b52f44468afc826c0a46
+  - name: cp.icr.io/cpopen/ibm-usage-metering-operator-catalog:1.0.0@sha256:998d77b1c66a9e6c08ec6cc95f97982c5d3720bc57eea3306d681d5b8dc2eee7
+  - name: icr.io/cpopen/ibm-eamhub-operator-bundle:5.0.5-20260729-171215@sha256:525a05ae0381c5135e6decff798338aeb21f04875b1fb7f3621ec474330e24e2
+  - name: icr.io/cpopen/ibm-eamhub-operator-catalog:5.0.5-20260729-171215@sha256:7fc85c230c7c4c2c4f63a669a472c6539684edea4354c891ba29a07ea549e2c6
+  - name: icr.io/cpopen/ibm-eamhub-operator:5.0.5-20260729-171215@sha256:e6699f54bb8122d0712a9912a8dcd9b22da70ce270061240e089182a4508a025
