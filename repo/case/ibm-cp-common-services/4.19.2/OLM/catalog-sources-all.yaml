@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: opencloud-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-common-services-4.19.2
+  publisher: IBM
+  image: icr.io/cpopen/ibm-common-service-catalog@sha256:3a2f6f7dc46a76c3d6346e4cef8cee5c36f882534648dee1303fc54021e09d2c
+  sourceType: grpc

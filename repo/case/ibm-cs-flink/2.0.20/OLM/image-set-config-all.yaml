@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-opencontent-flink-operator-catalog@sha256:7bd7ec7afe332707a826a7e3634d380cc9574bdf18d0467cfbdb0ae1c4e384a5
+    packages:
+    - name: ibm-opencontent-flink
+      channels:
+      - name: v2.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-opencontent-flink-operator-catalog:cd-20260716-1017@sha256:7bd7ec7afe332707a826a7e3634d380cc9574bdf18d0467cfbdb0ae1c4e384a5

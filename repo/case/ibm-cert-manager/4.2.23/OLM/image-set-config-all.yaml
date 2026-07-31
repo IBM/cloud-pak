@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cert-manager-operator-catalog@sha256:c704e8c7418cd6df1e766bd8aea2975d0e7c988509c28456bf37ca5b62c18ac8
+    packages:
+    - name: ibm-cert-manager-operator
+      channels:
+      - name: v4.2
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:050fc75fb194be6bbb5b7ede5349c701717a9590427f081382d1ceb058c73163
+  - name: icr.io/cpopen/ibm-cert-manager-operator-catalog:cd-20260722-1319@sha256:c704e8c7418cd6df1e766bd8aea2975d0e7c988509c28456bf37ca5b62c18ac8
