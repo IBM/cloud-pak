@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/artifacts:2.3.115@sha256:880fd540cd5a940f8b9208227e2a416b1bc8e437f99c1799b6149b29504029e1
+  - name: cp.icr.io/cp/cpd/ba-agentic-ai:latest@sha256:c9ec5f14e1352bbbe132ed1600f72be165d3a89eaa407b09cd7d58973b231378
+  - name: cp.icr.io/cp/cpd/ca-cpd-addon-translation:v30.0.4-10660@sha256:8a7920108d14c5d617e0f187fc01bd08e19dd6b88a4e2c07c5f1dbb41aadd970
+  - name: cp.icr.io/cp/cpd/ca-cpd-cm:12.1.2-2607201235@sha256:8691b8bc86afe73460d5dc00c878d34023a0b549ded2b951daa9479a3f62ebc7
+  - name: cp.icr.io/cp/cpd/ca-cpd-reporting:12.1.2-2607201337@sha256:8747d5f001f9e5640cfa7a97af488c1a9660f3d69e5d97d3befee5b948c0f879
+  - name: cp.icr.io/cp/cpd/ca-cpd-rest:12.1.2-2607201327@sha256:28dfcbc26038a169db1878a75729a6df7aa881642b30aed7a1538d2b094ea486
+  - name: cp.icr.io/cp/cpd/ca-cpd-smarts:12.1.2-2607201353@sha256:2a982a7a8bfc0042da39cb62f1f02e8bda5b4a1796d3e148dc98791dd9fc3619
+  - name: cp.icr.io/cp/cpd/ca-cpd-ubi-lite:12.1.2-2604021304@sha256:4d8f3c202da2e8112d2106bb5feaa1aebc6dda6890f16a2db5129652bab9e5db
+  - name: cp.icr.io/cp/cpd/ibm-cognos-addon-sp:2.2.7@sha256:5ffd54ef1e2aa964e52c17c33ce3665a970f73ff7e5197151ed8485f3a8ec0fc
+  - name: cp.icr.io/cp/cpd/redisearch:8.2@sha256:0d3518f56ce00d50959a655b39234a5d7e48068e52c5e3af6cf6270e50194e1f
+  - name: icr.io/cpopen/ibm-ca-operator:v30.0.4-10660@sha256:b04cd023907d236adacb5b23821d5fce796aa3eb1dd85d5f084db8f5b93723bc

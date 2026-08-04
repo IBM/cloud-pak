@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-scheduling-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cpd-scheduling-2.0.3+20260717.000218.21d5a19a
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-scheduler-operator-catalog@sha256:fed62ab35f3ee5016e41f950868da4c1814489b7e50e33e5f990a2b01bbb2255
+  sourceType: grpc

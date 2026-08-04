@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/calibrate-ic-cp4d:cpd-5.4.0@sha256:a61ae3422c714e51076bb645fd1975ff538b647548eed9372ab4c39649506bb5
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/calibrate-jsu-cp4d:cpd-5.4.0@sha256:371e168849c9ada51d3adab9239cd384cea4f8a7b736f127dfee473a4c52abc7
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/calibrate-k8s-util-cli:cpd-5.4.0@sha256:f1e5122ef28fcb76a0197c774af17b3174091419f810ddf2c198ac2d79bcd236
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/calibrate_ui_backend:cpd-5.4.0@sha256:8fab1401a2803f9f50f95a8056f9c96efefdc3e63eee82d71dec41e0a2983938
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/calibrate_ui_frontend:cpd-5.4.0@sha256:0745b37fa4fe58d01d507e5625406bcb5ca16f01b933ddc3dc2b6e7a38ade3d5
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/cp4d-calibrate-percona-server-mongodb:cpd-5.4.0@sha256:0dbc11b82aa3caad12b4e312292c479db5c82baf80830e705f12eb4251923f27
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/cp4d-calibrate-sbe-fingerprint:cpd-5.4.0@sha256:88976c94b761b4fab001e3d0e2c271f09f4440db5d50d79a53ace288334c6b41
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/cp4d-db2-drivers:cpd-5.4.0@sha256:6bf01db942c8f53b4f9212d8bf026b16be2c052c5ba80ed3e0e1d4264fadc13a
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/cp4d-hashicorp-vault:cpd-5.4.0@sha256:d048cb0c517eb4df5bd6017823bfbea297c652a1113388aed176801899b07bce
+  - name: cp.icr.io/cp/cpd/ibm-cpd-calibrate/cp4d-integration:cpd-5.4.0@sha256:cea8ec4a633f78e3fbfc7f588b6747fb2f4c2e0e6ba2c408611a0f991575baea
+  - name: icr.io/cpopen/ibm-cpd-dpra-operator-bundle:v1.21.503@sha256:7677a0cee92c65f6bcad408881339ca43a867dca2f8bdc2932426d0d117ecec0
+  - name: icr.io/cpopen/ibm-cpd-dpra-operator-catalog:v1.21.503@sha256:cfb3eff6f87c375375f0b918a374993bd640935c1fe3cbd71e695b74eafb57dc
+  - name: icr.io/cpopen/ibm-cpd-dpra-operator:v1.21.503@sha256:c6c57fa9522dbf8f35a4d5f99ecd0b5f3673cf1b5b6d2a1eae0a785ed898f2d1

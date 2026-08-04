@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-openscale-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-openscale-11.0.1+20260719.192411.59
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-openscale-operator-catalog@sha256:10de605ad3ff29e739a476011e23e0eb881b35966b4832256843a3aa9237aec7
+  sourceType: grpc

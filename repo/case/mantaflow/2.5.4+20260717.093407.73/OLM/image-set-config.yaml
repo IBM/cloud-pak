@@ -1,0 +1,16 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/manta-admin-gui:42.17.0-rc.9@sha256:af6cd3d206c91e05c35a758682d3793789641795e3facd6caaa953a9e486113e
+  - name: cp.icr.io/cp/cpd/manta-artemis:46.18.2@sha256:26a83813847fd2883959ef1732e3d5434a1692d8117bcb141bc8f133af0c4e17
+  - name: cp.icr.io/cp/cpd/manta-base-jre:43.3.58@sha256:675595e285816bbbac6cf0ffb9ae3a680c5250f0d3d2df4cfb1d6056b91deacf
+  - name: cp.icr.io/cp/cpd/manta-configuration-service:42.17.0-rc.9@sha256:e07480704cef56a08eb9b5ea6f3c02591780c71e345056a77654e9ff65b62f45
+  - name: cp.icr.io/cp/cpd/manta-dataflow:42.17.0-rc.9@sha256:5e43d2f349e6565292ee0cbb14ee5309b4f02902f2ca03a0a23efaacb535368b
+  - name: cp.icr.io/cp/cpd/manta-flow-agent:42.17.0-rc.9@sha256:aff0949cfc4064964623d6792f92050f401ec93b88796bc8423686222d35278a
+  - name: cp.icr.io/cp/cpd/manta-init-migrate-neo4j-5:42.17.0-rc.9@sha256:28d3d7bc25ea2c9132bc97f5e023b6c9b6a1eda506b98c158c0351d0a46d511d
+  - name: cp.icr.io/cp/cpd/manta-init-volumes-merge:42.17.0-rc.9@sha256:e2ddc7abd96866d4c78e3a1404f1b07a78c74c6c4305c06d956e34ebddbd5e8b
+  - name: cp.icr.io/cp/cpd/manta-open-manta-designer:44.13.1@sha256:5180ccb6a3158af7953ede367111104f292773f90f3def0ba013265352efac7f
+  - name: icr.io/cpopen/manta-adl-operator-bundle:v2.5.4148@sha256:ba3f080d02195979a4d58e086d11d45ff64d9e759db49c167a29553dc7317700
+  - name: icr.io/cpopen/manta-adl-operator-catalog:v2.5.4148@sha256:cc062c3ad58ec251d4c16f8654bdb5754da0c6f6bdcd25e8293d3cf461834afb
+  - name: icr.io/cpopen/manta-adl-operator:2.5.4148@sha256:d49ea28cb0ebfb4ecb19503262a248526d004228dbd2ba6a7564d6668aa952bc

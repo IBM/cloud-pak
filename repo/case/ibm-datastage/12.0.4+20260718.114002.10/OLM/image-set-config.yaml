@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ds-assets:540.0.12@sha256:6f3619a9ecad6ecbccbf1f60682203f7b245ee3a84870ae0f6e9c25bf465397d
+  - name: cp.icr.io/cp/cpd/ds-canvas:540.0.58@sha256:55961456f8d173ac1e82086ba4860c0d8cf95cf46352541a093cabfc412586c0
+  - name: cp.icr.io/cp/cpd/ds-cas-lite:540.0.7@sha256:7bddc4ce4c57c67084481df8c0b59472bfa8a66feb0e4ae5c0bbbe1ecc08457d
+  - name: cp.icr.io/cp/cpd/ds-dataservice:540.0.7@sha256:e61dabb7a92e69e8f03a0055af68c7e75c11f446f6391b3487b62a82696baa3d
+  - name: cp.icr.io/cp/cpd/ds-flows-assistant:1.0.858@sha256:64f2a509ab03ca26f118bfd2672b3beb1adad176eb30acb8b62eb199c9818e2a
+  - name: cp.icr.io/cp/cpd/ds-flows:540.0.37@sha256:b80b228645b357c735c3c000ba3a585fd05bbd5bfcea5e88836f5cca5c12336c
+  - name: cp.icr.io/cp/cpd/ds-metrics:540.0.9@sha256:cff70c4fe825d109019f72582c093ad4976a9a5cbd5b23bd0b538360ac732ebd
+  - name: cp.icr.io/cp/cpd/ds-migration:540.0.30@sha256:48910d78dc794372e4afe736a56be456c92e304f8d14cc88650d9790c5b571cb
+  - name: cp.icr.io/cp/cpd/ds-nginx-proxy:5.4.4@sha256:0ad97bb5770af3c0a8397d03b06bb6750df6864f49bb6f594552a2b3ebb763e4
+  - name: cp.icr.io/cp/cpd/ds-px-compute:540.0.51@sha256:9dad1ec2136bb2950024ae17e19b59d7fc6a04ef5182a53b6aa00ac3d3443e09
+  - name: cp.icr.io/cp/cpd/ds-px-runtime:540.0.51@sha256:07813cb0cf3abf59eb9de10e422e5a87f8b191207854fd779333a6b481fb71f9
+  - name: cp.icr.io/cp/cpd/ds-runtime:540.0.10@sha256:ab62b0c9a414904fd4f6382c0d15f4ae333dbc0f75438abeace585196d6cba8b
+  - name: cp.icr.io/cp/cpd/qs-ruleset:540.0.7@sha256:450afd2ba626d29e8b87a7eeb0db185152c796bd1e652cae37a183486888b524
+  - name: icr.io/cpopen/ds-operator-bundle:5.4.4-10@sha256:b5ea3f4885aaba9be0e5ee3241ef57da580178b110d5b019f98862e47af647e7
+  - name: icr.io/cpopen/ds-operator-catalog:5.4.4-10@sha256:180220cd84dec64eafd8e32fe88c20ea03f04f5afab90fde4a961b2ec0a64b94
+  - name: icr.io/cpopen/ds-operator:5.4.4-10@sha256:20540f7d064131b73cc365e2b22aa65e70ac18d527f9aa859a044bf00cddbb24

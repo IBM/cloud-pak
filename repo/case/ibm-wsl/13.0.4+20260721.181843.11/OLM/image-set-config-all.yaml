@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/jupyter-notebooks-converter:13.0.055@sha256:e36b755f473551b17bc8dd534f683dbdc093fc7fee108340ca652f8a002844eb
+  - name: cp.icr.io/cp/cpd/model_viewer:5.4.530@sha256:eaaaf29c4317830d24be730cae3a1817e6c6d57670d84341497c67568929812c
+  - name: cp.icr.io/cp/cpd/notebooks-init-job:13.0.055@sha256:777593b50020c58885238a94fe07008cfad29be69b3df4c8b6bdef1f3a6e1b5d
+  - name: cp.icr.io/cp/cpd/notebooks-job-manager:13.0.055@sha256:3c4cd461e6378da625eec1ae208fb1bae42e159f4ddb92ca918a46aab2e9d3c8
+  - name: cp.icr.io/cp/cpd/portal-ml-dl:5.4.0.5598@sha256:ae98ba4e74a5267bb47741f80bcdb3cf25170f30ea4a06e15a202b70ba3c0c6a
+  - name: cp.icr.io/cp/cpd/wdp-notebooks-api:13.0.055@sha256:3aa6d61dd6d79555f4a30d7857d725fcc9d0f878c0b4f6f6160afc6a30cffc89
+  - name: cp.icr.io/cp/cpd/ws-notebooks-ui:13.0.055@sha256:a514f651aac476522a75a59e0d41076d4a40bccec27dad0ad4f7166bee747d61
+  - name: icr.io/cpopen/ibm-cpd-ws-operator:13.0.4-20260721.181843@sha256:559be53ee999d38161237306b2b4aeeaada843246c48d770047e838e4c4d5d22

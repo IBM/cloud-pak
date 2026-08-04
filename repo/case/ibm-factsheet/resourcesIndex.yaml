@@ -1034,3 +1034,31 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v8.0.1-9
+- caseVersions:
+  - 8.0.2+20260721.012727.12
+  category: catalog
+  digest: sha256:51bc29e0a8e9748f44813e9eadb409927e07d97bfbe2c9ccf77f7989e3d95cb7
+  image: cpopen/ibm-cpd-factsheet-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v8.0.2-12-amd64
+- caseVersions:
+  - 8.0.2+20260721.012727.12
+  category: catalog
+  digest: sha256:af94d134b2573aea164f495d2075f2f87939eab0fc948a9ad68dadab61e84b7e
+  image: cpopen/ibm-cpd-factsheet-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v8.0.2-12-s390x
+- caseVersions:
+  - 8.0.2+20260721.012727.12
+  category: catalog
+  digest: sha256:dda271740cb98d1a289f5c68982308552ace11e328964281b3af32718652219c
+  image: cpopen/ibm-cpd-factsheet-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v8.0.2-12

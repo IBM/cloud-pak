@@ -1,0 +1,76 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cp-automation-catalog@sha256:0dbf8b747abe329a342b9bc06f5dae06599b8ad1e0375261eb9a0e1f04a42103
+    packages:
+    - name: ibm-ads-operator
+      channels:
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-ccx-ai-services-operator
+      channels:
+      - name: v26.0
+    - name: ibm-content-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-cp4a-operator
+      channels:
+      - name: v21.3
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v26.0
+    - name: ibm-cp4a-wfps-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-insights-engine-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-odm-operator
+      channels:
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-pfs-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-workflow-operator
+      channels:
+      - name: v26.0
+    - name: icp4a-foundation-operator
+      channels:
+      - name: v22.1
+      - name: v22.2
+      - name: v23.1
+      - name: v23.2
+      - name: v24.0
+      - name: v26.0
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cp4a/ibm-connectivity-pack/action-connectors:1.8.1@sha256:f791362db974198695b2a7f0efbb42e29378e026cf9200e1abda476109b2fca0
+  - name: cp.icr.io/cp/cp4a/ibm-connectivity-pack/connectivity-pack-prehook:1.8.1@sha256:e1aa890b35d4d8e0079312ef7206fb36eae01a0b053c9b2c2b476a73de62fe74
+  - name: icr.io/cpopen/cp4ba-install-upgrade:26.0.0-IF001@sha256:f95ac344123b2362dbf4503aba7d6a51d2c53499fb821a2fc437c6e9716b4f64
+  - name: icr.io/cpopen/ibm-cp-automation-catalog:v26.0.0-IF001-fbc-20260801.004626-4117A9973@sha256:0dbf8b747abe329a342b9bc06f5dae06599b8ad1e0375261eb9a0e1f04a42103
