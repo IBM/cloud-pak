@@ -1,0 +1,74 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-ads-operator-catalog@sha256:f699fdc4a28ae57ebe94416999405aecb66c1500859610788dba7c6292dbbde6
+    packages:
+    - name: ibm-ads-kn-operator
+      channels:
+      - name: v24.0
+    full: true
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:56405e6eceab8851a1ef4e123283102c60ec4a0cf7e3760eb4737bd9f1552d2c
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.19
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  - catalog: icr.io/cpopen/ibm-events-operator-catalog@sha256:228ea92d69daa2350e151d1fe6b14e6fb56eadd0d3b5b5872178180747297687
+    packages:
+    - name: ibm-events-operator
+      channels:
+      - name: v5.2
+    full: true
+  - catalog: icr.io/cpopen/ibm-iam-operator-catalog@sha256:cc6014641c67668e77d7a512ae02a0f2521f78ba406f86c17f340f13ea8c836a
+    packages:
+    - name: ibm-commonui-operator-app
+      channels:
+      - name: v4.15
+    - name: ibm-iam-operator
+      channels:
+      - name: v4.18
+    full: true
+  - catalog: icr.io/cpopen/ibm-pg-operator-catalog@sha256:35d601a0d5af74add516984f4f16aa5f631e8d0dbc4fa65403ac0c73ea0e3ae2
+    packages:
+    - name: ibm-pg-operator
+      channels:
+      - name: v28
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/common-service-operator:4.19.2@sha256:f968088c2f3595951b542bde603a2493f9516b5f8321800558bbd9742eba6f91
+  - name: icr.io/cpopen/cpfs/cpfs-oadp-plugins:latest@sha256:067fda011929b22e3f5d02cc1600726587bde2338abe9e7c8cd0c58d3a9bf290
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:050fc75fb194be6bbb5b7ede5349c701717a9590427f081382d1ceb058c73163
+  - name: icr.io/cpopen/cpfs/ibm-events-kafka-3.6.1:5.0.1@sha256:545b41cc6c044d6807bfeb7453a045e074a5670cfff9f5c311f4918946901fcb
+  - name: icr.io/cpopen/cpfs/ibm-events-kafka-3.8.0:5.1.2@sha256:2754384c6936b36ffd64f89df751cbe47993f73dd700a184af35f412b3408d72
+  - name: icr.io/cpopen/cpfs/ibm-im-db-migrator:4.18.1@sha256:a84e0ffe8f963c9e23a84e203a857dcf0532378d060ef0f4cf041e59cc4f9d02
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:2b16eb299312412f1be6d8d7e7f963abe3deaac7916dd63d44ea968f91c2682b
+  - name: icr.io/cpopen/ibm-ads-operator-catalog:24.0.0-IF010@sha256:f699fdc4a28ae57ebe94416999405aecb66c1500859610788dba7c6292dbbde6
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF001@sha256:04a51dd336c951fa1b44ddeedccbf716dc9b4c0c5d2c0f6f40caea938660c9cd
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF002@sha256:23f8d359b157526de677368412238cc262c1ec055a1466846608afb54689b7f1
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF003@sha256:f39c4ae49d82d5ca9e28aaa5906319dad69df53723f01cba37eef157335d6a41
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF004@sha256:cff6c6006cf971d1e1af66253f2fc67c2b6a6bd432d05d158a58303ff9f132f3
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF005@sha256:1dc0f7a02ee3cfc1682335720f2b1a7fa50624f8d5a9e0708bca5f60d32e5985
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF006@sha256:cc277c75fc4529a6b9f41586b7fc900772311a55f855d0eb05d31f183f47e20f
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF007@sha256:885ec6bc3732756de4103bdfe16d049ee4d2a20505b295fe1ae08f0d81aa2ba7
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF008@sha256:dd6f8d944deed75e3ffeaf2f2397bde071752cbde91a83bedf414376d951d85f
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0-IF009@sha256:fb3ac1ab60d281a51e46f3c58f6c7b404c75ab43cf76d0248976f708e32254bf
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.0@sha256:2ec8e56b85f9759746bd1193b4417f534d1de98cab1e8a2bbec5323d9780265a
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.19.2@sha256:3a2f6f7dc46a76c3d6346e4cef8cee5c36f882534648dee1303fc54021e09d2c
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.19.2@sha256:fe68506385dbaf1f3f068f6e00a2c2a6ba7c1d63069332fdf472432d3e74c817
+  - name: icr.io/cpopen/ibm-cs-install-catalog:cd-20260730-1213@sha256:56405e6eceab8851a1ef4e123283102c60ec4a0cf7e3760eb4737bd9f1552d2c
+  - name: icr.io/cpopen/ibm-events-operator-catalog:5.2.1@sha256:228ea92d69daa2350e151d1fe6b14e6fb56eadd0d3b5b5872178180747297687
+  - name: icr.io/cpopen/ibm-events-operator:5.0.1@sha256:0fb78efb9e92dd0c2e52ca2488e6f1e7431e197f87e6994e15f7d621b90319f2
+  - name: icr.io/cpopen/ibm-events-operator:5.1.2@sha256:46893c166cabdd8b3422a190e220ee2e34861e797aa068100ccf53da349e3fe7
+  - name: icr.io/cpopen/ibm-iam-operator-catalog:cd-20260730-1213@sha256:cc6014641c67668e77d7a512ae02a0f2521f78ba406f86c17f340f13ea8c836a
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.3.7@sha256:4630726b0e61da7c5f34c67175bf5be6e17bd90b5a231939b9398c75f4cad7f4
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.3.7@sha256:a1aba95c52ec48d46be0bbed603bfb2b45b588a91d628de83fd0e6b4a6666501
+  - name: icr.io/cpopen/ibm-pg-operator-catalog:v28.3.3@sha256:35d601a0d5af74add516984f4f16aa5f631e8d0dbc4fa65403ac0c73ea0e3ae2
+  - name: icr.io/cpopen/odlm:4.5.10@sha256:9d286479e06acf9569737095600e623a7259c647878e9a8dc71391e6a70da177
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.5.10@sha256:6017969d7277861a2d57221fa457ff4eb43082d9ea2632d34b31c4cb4d89f369
