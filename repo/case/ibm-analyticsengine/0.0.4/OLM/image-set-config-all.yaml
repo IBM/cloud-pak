@@ -1,0 +1,28 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/cos-logger-sidecar:5.3.101704@sha256:143554e864729696abfce827c4aa9365e1fa18304c0b44a82cb666ed8534bc6b
+  - name: cp.icr.io/cp/cpd/spark-hb-control-plane:231-patch8-v2-adobe-patch@sha256:eceaf1034aaa02695f73f9b65d49adb51ed26b54d445065c331c623971035345
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniconda-runtimes:3.4.4-v2-onprem-2.3.1-patch8@sha256:668c74357501bb66e6984e2723269ef9f7bb183c3af979017b996ca6108681f3
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniconda-runtimes:3.5.4-v2-onprem-2.3.1-patch8@sha256:79046203a5ec3e9c42111c490179fd89234d753a7db88157f1b13d12e8aa1cf2
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniconda-runtimes:4.0.0-v2-onprem-2.3.1-patch8@sha256:fecffd082f57761fd1303cef2170399dd28221937af5380ef075a1354987b79b
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniforge-runtimes:3.4.4-v2-onprem-2.3.1-patch8@sha256:63128e7f0f8cdf05aa54ee4d520e4b143b7d5489f6ebfb34e12d7c057c05f4a9
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniforge-runtimes:3.5.4-v2-onprem-2.3.1-patch8@sha256:6afc118667c264790a88d462dddc8f50ede76fb7803beb3d09def1e98f4276e0
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniforge-runtimes:4.0.0-v2-onprem-2.3.1-patch8@sha256:91d5262f78268799f8a623a78cdeaeeab9220ea9d1d54b87e8d5c97728a9bcb4
+  - name: cp.icr.io/cp/cpd/spark-hb-deployer-agent:231-patch8-v2-adobe-patch@sha256:d4c43fa967838567c77f0226faa3915d71e68e538d6baa546957b78d165a3792
+  - name: cp.icr.io/cp/cpd/spark-hb-graphite-exporter:5.3.101704@sha256:21dd2b9d30f52dca34ba9409dda8c08b6cbee3d0017ca6acadfdda23029dd80f
+  - name: cp.icr.io/cp/cpd/spark-hb-helm-repo:231-patch8-v2-adobe-patch@sha256:eeee81f07038958cf3a68fb66c5c56df8f77e82279350b9389da9d063d4fa654
+  - name: cp.icr.io/cp/cpd/spark-hb-instance-operator:231-patch8-adobe-patch@sha256:7b19acbce77f1a4071c4e778abcd6758bf3c3cfe3ac282a354d391c033b9363d
+  - name: cp.icr.io/cp/cpd/spark-hb-nginx:5.3.101704@sha256:f5aab010c3c8a65eb17e84f1330c8dfd371533d098798580082f0ebbabe5dda4
+  - name: cp.icr.io/cp/cpd/spark-hb-python:5.3.101704@sha256:5d6daaa763cb4e09ed7f97e4c30db2ee9d7a360c3fa71db9436b9b6e7b7f28c7
+  - name: cp.icr.io/cp/cpd/spark-hb-rsyslog-sidecar:5.3.101704@sha256:d239b8ee914a0f29f53a2a3a1fcd463b7be31708435eb5174c44fbd08d7bc438
+  - name: cp.icr.io/cp/cpd/spark-hb-truststore-util:5.3.101704@sha256:7a9891b88f1577e9e655453d023ee7b649593e9bd3702eec7f36dddd80c2eccb
+  - name: cp.icr.io/cp/cpd/spark-hb-ui:5.3.101704@sha256:1df036dcd9ed1a4705153d099b1f7d487344d673d58a3220c1c8354e81eec530
+  - name: cp.icr.io/cp/cpd/spark-hb-wxd-cpd-miniforge-runtimes:3.4.4-v2-231-patch8-adobe-patch@sha256:42cf5e18e41e48f0d78cdc6919f7c9f7e8fdc71982bbf3d5757622056c6037f5
+  - name: cp.icr.io/cp/cpd/spark-hb-wxd-cpd-miniforge-runtimes:3.5.4-v2-231-patch8-adobe-patch@sha256:0ea2a183b5cb7a350938a62124a406c1a93fa8992bea8fae982aeeb8054e9c04
+  - name: cp.icr.io/cp/cpd/spark-hb-wxd-cpd-miniforge-runtimes:4.0.0-v2-231-patch8-adobe-patch@sha256:b232d5c1ecc154d706f6b584a608a09d8f4d3b12671231b10a741ed695cbd87c
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-dataplane-operator:5.3.2567-amd64@sha256:6e029572603a17c83584348d07d626511e3464d5203f7fb819736f2ea1032df3
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-operator-bundle:5.3.2567@sha256:d33a68c9e939f73a5f3c4c7f6ddfb0db6a64792820810023157376592b432429
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-operator-catalog:5.3.2567@sha256:3af873b2d2fd48731b058c394ee7d0c65b572a621262ff95e9b814252d2ea402
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-operator:5.3.2567@sha256:b1573d94d45c424268d6a261a2e978bb24226faa46c4df0a6e174f78db6f4876
