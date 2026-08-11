@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-zen-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-zen-6.4.11+20260727.234054.6
+  publisher: IBM
+  image: icr.io/cpopen/ibm-zen-operator-catalog@sha256:9c4c2e23ae1c23fcbf587bdbbd0b0ad015676d96b1c0f05731889dfbdc98dfef
+  sourceType: grpc

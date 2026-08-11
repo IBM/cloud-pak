@@ -1,0 +1,23 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/artifact-store:5.3.1.4146@sha256:b2b1c1a2e0cb213f1b100f7508547d529c3d52a0647e31877d0a0906def7acbd
+  - name: cp.icr.io/cp/cpd/cpdctl:1.8.257-5.3.1.4282@sha256:4b0ecaa8462035e51ffc66ecc72a0a074ab02f34fa58dee09287149610c080ad
+  - name: cp.icr.io/cp/cpd/opa:5.3.1.4223@sha256:ecfc8e734723a8b1c6a31fa8930568ffb22b48674d67be2336a95f6280d39d8e
+  - name: cp.icr.io/cp/cpd/portal-pipelines:5.3.1.X.4151@sha256:36c921c1cf9b8277fa459d6b800acd1dcce862923b16b902a72324226753366e
+  - name: cp.icr.io/cp/cpd/rbs-ext:1.8.257-5.3.1.4282@sha256:e78bc09e714dfc947acfef2ad8b6d6fd499b68302f95695057b662efb6666ac9
+  - name: cp.icr.io/cp/cpd/run-bash-script:1.8.257-5.3.1.4282@sha256:9a3d79c2975e5d750dc19fe515d743b5514710002e40a4dd356e96c4768c3767
+  - name: cp.icr.io/cp/cpd/send-email:1.8.257-5.3.1.4282@sha256:bd9d88b9c4ae5f7999f596e1fef903abd063c0fa7a13cb85ac9edfdc90365796
+  - name: cp.icr.io/cp/cpd/tekton-extensions-controller:5.3.1.4256@sha256:5fec499a6e9d19ac9612f6fbe8713fda4cd57f3d5e785b5a1efbb877006d398a
+  - name: cp.icr.io/cp/cpd/tekton-extensions-webhook:5.3.1.4256@sha256:410abe0649a1ad4b8a3f8fc84c294c156d6f5cbb71c19db66d59ff9412038c18
+  - name: cp.icr.io/cp/cpd/tekton-pipelines-controller:5.3.1.4142@sha256:5ca1183b7e2644f1d9ccb0d450621a87996471296f0100e670fd0362f3fcc6a7
+  - name: cp.icr.io/cp/cpd/tekton-pipelines-entrypoint:5.3.1.4142@sha256:4ad4ee54b47ff4dab844a8032013ea1f957432b053eb74e447ab6f83c8cb8b2f
+  - name: cp.icr.io/cp/cpd/tekton-pipelines-nop:5.3.1.4142@sha256:29ad3074d32b4c31ac9437fa0c670279257d4997be111fcdcb85845e3b8f193d
+  - name: cp.icr.io/cp/cpd/tekton-runtime-controller:5.3.1.4144@sha256:4a59ab6b3a2cacd5aa27d0b42ab81161f0b8b650d67cfbff2eafb634570c7c1b
+  - name: cp.icr.io/cp/cpd/tekton-runtime-worker:5.3.1.4144@sha256:38e6668d8309c89c5f8312f6de0d353e1526e416830adfe5d1a30339cbab8663
+  - name: cp.icr.io/cp/cpd/ubi-minimal-cpd:1.0.857@sha256:6477cf4c6f7527dfe4bdc5ec21d648ab34d1732ab63c8f51d59650e2c32083b7
+  - name: cp.icr.io/cp/cpd/wsp-ts:5.3.1.3976@sha256:f030dafd2130697dfe639f110910bce0fdbacc979092493fe0fac31a865d54c1
+  - name: icr.io/cpopen/ibm-cpd-wspipelines-operator-bundle:5.3.11-8@sha256:b8f71d8252ed5626dc9750ecd9758e3eb8b17a515a8c85a9120293b6fb8c46f4
+  - name: icr.io/cpopen/ibm-cpd-wspipelines-operator-catalog:5.3.11-8@sha256:d6721b1bc2848de05ab434aa254e68f82b072e546d4cabc652ddfde5e1ddf796
+  - name: icr.io/cpopen/ibm-cpd-wspipelines-operator:5.3.11-8@sha256:467917a29d0bcf2aec4294472a1466cf5ba6996cf6562e7c91a7985c858f2631

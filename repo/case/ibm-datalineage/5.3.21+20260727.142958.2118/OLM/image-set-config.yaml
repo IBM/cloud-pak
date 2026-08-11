@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/lineage-scanner-agent:9.2.35@sha256:8863efa3f91fae51a9bd5bb958de42d0bb9821cd883ffc1409b58820ffaf3e99
+  - name: cp.icr.io/cp/cpd/lineage-scanner-service:9.1.14-6@sha256:e195907323c9f9ff2c38a5e803a4ff691a31e61ad78f00ac79687a14aa900fdd
+  - name: cp.icr.io/cp/cpd/lineage-scanner-worker:9.1.29@sha256:e96ea07b79436afe89f4eba06f339a927dcb85c202e6e4d43eb5d3a9d2b14ac3
+  - name: cp.icr.io/cp/cpd/lineage-ui:5.3.1435@sha256:634d2f9edd0e6c5eb5cbb7496e571dc0f414ab9705b0767007ffc02c80b02b62
+  - name: icr.io/cpopen/edb/postgresql:16.11-5.31.0@sha256:b711c28ad678c53fae114a3b80b801979dd30cf4b7f6676db0db5c9987e377d3
+  - name: icr.io/cpopen/ibm-cpd-datalineage-operator-bundle:v5.3.2118@sha256:10c7901612782db1b85d3d9efdbcb26bbb2a487c181e1c3e049226ad299f5958
+  - name: icr.io/cpopen/ibm-cpd-datalineage-operator-catalog:v5.3.2118@sha256:4309231ba3b767778a7cd08adf40d6d054a7398ea24407e758c939c1451b2920
+  - name: icr.io/cpopen/ibm-cpd-datalineage-operator:v5.3.2118@sha256:cbfaf09b476b3663e10d7fe27b23b660a4646b5bd39e0fbb56d18a7a66e8418e
