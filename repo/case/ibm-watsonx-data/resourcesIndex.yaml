@@ -761,6 +761,7 @@ containerImages:
     os: linux
   tag: 2.3.11-297-20260720-111729-onprem-v2.3.1-patch11-amd64
 - caseVersions:
+  - 0.0.1+20260806.143318.311
   - 6.1.11+20260720.111729.297
   category: catalog
   digest: sha256:2f9ff941d89cf97d7785ddd14364d0175f7c409520acc66a4c13ab5959078838
@@ -771,6 +772,7 @@ containerImages:
     os: linux
   tag: 2.3.11-297-20260720-111729-onprem-v2.3.1-patch11-ppc64le
 - caseVersions:
+  - 0.0.1+20260806.143318.311
   - 6.1.11+20260720.111729.297
   category: catalog
   digest: sha256:ab3edc6f3c3ff1de5c1ffda5a183dc282dc59c5ce28027f0a15a470ab98c3d03
@@ -788,3 +790,21 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 2.3.11-297-20260720-111729-onprem-v2.3.1-patch11
+- caseVersions:
+  - 0.0.1+20260806.143318.311
+  category: catalog
+  digest: sha256:87ea15be04bb50882ec439880a1b243b4a8870069e0c7c572f80f3ff0a949324
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 2.3.11-311-20260806-143318-onprem-v2.3.1-patch11-hf1-amd64
+- caseVersions:
+  - 0.0.1+20260806.143318.311
+  category: catalog
+  digest: sha256:62e31a786048a3753555aa26e1364170ab706615290936548bb36bc3eb22e4db
+  image: cpopen/ibm-lakehouse-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 2.3.11-311-20260806-143318-onprem-v2.3.1-patch11-hf1

@@ -1,0 +1,31 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/cos-logger-sidecar:5.3.10adobe-patch11-hf1@sha256:ee4666b981cb25c7d98a28befe17dad1a20687decf6361af54bb437350f29adb
+  - name: cp.icr.io/cp/cpd/spark-hb-control-plane:231-patch11-adobe-patch@sha256:d54bd8bac34091fc63290597d05d177a3ec24ccc1d4b09791ac7ba4286aaed97
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniconda-runtimes:3.4.4-v623-onprem-2.3.1-patch11@sha256:cac7cc5dd4cf06778c2ea4895d44be528639a18313691b8deb6bd503d8d5859e
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniconda-runtimes:3.5.4-v623-onprem-2.3.1-patch11@sha256:6afce4f684a4b0dddfec06b96bcb1338702b4e8a8f6eae7bdcb5a7b057a1edb3
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniconda-runtimes:4.0.0-v623-onprem-2.3.1-patch11@sha256:55475772ef69432d1a8c6531175e94f1a939ae401023658a970b6d7848aac8c2
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniforge-runtimes:3.4.4-v623-onprem-2.3.1-patch11@sha256:697a44cc5d858d708fb4370bf8487df9581a847eba36541c5950be640e386bd7
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniforge-runtimes:3.5.4-v623-onprem-2.3.1-patch11@sha256:91d53f6ce06f04e0a0cda478f365774165917c3b41bb4e5d047bff6c9bf11338
+  - name: cp.icr.io/cp/cpd/spark-hb-cpd-miniforge-runtimes:4.0.0-v623-onprem-2.3.1-patch11@sha256:74417d5a127723e581e6005145a9af9a2ba6e67aea29dc9b847af95e34a8b52b
+  - name: cp.icr.io/cp/cpd/spark-hb-dataplane-service:231-patch11-adobe-patch@sha256:de3fa4b4a56a8dcfd6d3e7a87b21c76997a9cc1d63088b9749e5326b259cb6ff
+  - name: cp.icr.io/cp/cpd/spark-hb-deployer-agent:231-patch11-adobe-patch@sha256:4eb98399471a4c166d1554225bb324b3c55ca4606807393554bcfd0ffea9d5ad
+  - name: cp.icr.io/cp/cpd/spark-hb-graphite-exporter:5.3.10adobe-patch11-hf1@sha256:07e9206f33799560841f41214e3e31afdfe80fe962694e988922454c37ddcedc
+  - name: cp.icr.io/cp/cpd/spark-hb-helm-repo:231-patch11-adobe-patch@sha256:d160d020e14adf3b35a62aa3237612cbe45ac176cb2ffb2a8969c317b75679a4
+  - name: cp.icr.io/cp/cpd/spark-hb-instance-operator:5.3.10adobe-patch11-hf1@sha256:d77521d66a21fcea83330c93d44eac23ff35c64043b71a5610513fd57e9bd23c
+  - name: cp.icr.io/cp/cpd/spark-hb-kube-informer:231-patch11-adobe-patch@sha256:04d60f665538cb63ad10f8a0c303b738042b4bd0d6518202e14391337986f257
+  - name: cp.icr.io/cp/cpd/spark-hb-nginx:5.3.10adobe-patch11-hf1@sha256:fe02549f1629f73a89fcae9d6e405d33c7a1fc414c32349eff524b4f5395651a
+  - name: cp.icr.io/cp/cpd/spark-hb-python:5.3.10adobe-patch11-hf1@sha256:e277a76f68722d2cb538836b3454bfa78ddff440f8584874018ba60594d69624
+  - name: cp.icr.io/cp/cpd/spark-hb-rsyslog-sidecar:5.3.10adobe-patch11-hf1@sha256:00c60d89c456967cdc6fa21ce26b9d9bb70dd6663123611789a7c5fb032abab6
+  - name: cp.icr.io/cp/cpd/spark-hb-truststore-util:5.3.10adobe-patch11-hf1@sha256:b32b538b42fde8e8d15f1306a0f7bcafc43b87dccb07a4e4a13e50cd0ed4c208
+  - name: cp.icr.io/cp/cpd/spark-hb-ui:5.3.10adobe-patch11-hf1@sha256:ea3460b521ba0b717f8b563d91b8dd67d1da9154761c5fcf03c158f596da5f79
+  - name: cp.icr.io/cp/cpd/spark-hb-workload-manager:231-patch11-adobe-patch@sha256:fb34f6d4a02bf08923841d4437b5b0ea1e206ddcc625930b04087e314b92385a
+  - name: cp.icr.io/cp/cpd/spark-hb-wxd-cpd-miniforge-runtimes:3.4.4-latest-231-patch11-adobe-patch-mira-20260810-093351@sha256:c518c4c2160b65f37593394d99daadec3728ca3889e6d24402c13b0cdb280f3e
+  - name: cp.icr.io/cp/cpd/spark-hb-wxd-cpd-miniforge-runtimes:3.5.4-latest-231-patch11-adobe-patch-mira-20260810-093351@sha256:9705881641e7c58bf35e29f4d88b4cdff50686bc938a8fc8f07529b0477adf6c
+  - name: cp.icr.io/cp/cpd/spark-hb-wxd-cpd-miniforge-runtimes:4.0.0-latest-231-patch11-adobe-patch-mira-20260810-093351@sha256:4d9204f64bb261b2f48cf58a73895b0792e586250b7639c9a62c6302b2b78a8b
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-dataplane-operator:5.3.2658-amd64@sha256:cd670bbabebdbb73c384ad56535c0fabd6a7f7dc39bb31d0b2f2bd97cd0df4f3
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-operator-bundle:5.3.2658@sha256:218257c39c269d948f0ed80f7df85d5f8500337b2029bfb8245cdeb9e4c4acab
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-operator-catalog:5.3.2658@sha256:6892b2dca9e9e899762b122afc3d60512109f0bf66c5bb48338062534bc3172b
+  - name: icr.io/cpopen/ibm-cpd-analyticsengine-operator:5.3.2658@sha256:7fd67b3754f6f88ebf4f85480fa3fb41191bb61b6e4cb9477419f78ebbee84ad
