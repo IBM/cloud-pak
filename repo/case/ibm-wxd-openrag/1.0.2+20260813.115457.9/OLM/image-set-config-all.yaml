@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/docling-serve-cpu:main-c24b4f1-20260804132916@sha256:f4c4bc3d45441cd03e3617e77e396ad976622806240e4d6f86d28c315c818282
+  - name: cp.icr.io/cp/cpd/openrag-authserver:wxd_main-7f63e6d-20260729082938@sha256:7318587cbb95f62db11b4f676e79fa8aaa45088db9851785708bb2b0c1cedef2
+  - name: cp.icr.io/cp/cpd/openrag-backend:release-cpd-0.6.0-e6b7673-20260804162253@sha256:215c4dd2c6b8b6147b792b6d162eba7ddbfcd4e7b332f2d4f15d22b38836b4ca
+  - name: cp.icr.io/cp/cpd/openrag-frontend:release-cpd-0.6.0-e6b7673-20260804162253@sha256:c60032f8cd678359bf310d182aeb842ebf4cd1af75970fabe1d27e7f45a47ade
+  - name: cp.icr.io/cp/cpd/openrag-langflow:release-cpd-0.6.0-e6b7673-20260804162253@sha256:25a1972a5300761ea0586311e0940555b9d2ce8ef28e7572d6b11c14cf219473
+  - name: cp.icr.io/cp/cpd/openrag-traefik:wxd_main-e2403ef-20260715133609@sha256:96b024141319e63393cf50880fc51d659b2633d2b6ba789eda75952492724b58
+  - name: cp.icr.io/cp/cpd/valkey:main-c24b4f1-20260804132916@sha256:bdb830d37c69a79991c9615b01c0e24bb453ff2f3a0d96f6c1753282e074feb7
+  - name: icr.io/cpopen/openrag-cpd-operator:5.4.0_patch5-457544c-20260813184352@sha256:cfd8b3efa17de8cf4a61dd813dbd6e425b79b87b73957a60e64fb45531d77f76
+  - name: icr.io/cpopen/openrag-oss-operator:main-d3353b8-20260804183824@sha256:bc759b7105ce6107369f912605fb99bbf1407cf641c04e3ba9eb6f325e31c94f

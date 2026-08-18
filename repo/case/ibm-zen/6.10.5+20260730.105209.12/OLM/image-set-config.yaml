@@ -1,0 +1,23 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/cpfs/icp4data-nginx-repo:6.10.5-12@sha256:2a476548b4d6945dd28b2ff7e258252503fa1eae091fc14bfc58222c33484cbf
+  - name: icr.io/cpopen/cpfs/icpd-requisite:6.10.5-12@sha256:9bb6bb84e0d14189437ae11c180e16510eac554b4dac4136d499f322de072bc3
+  - name: icr.io/cpopen/cpfs/platform-ai-agent:6.10.5-12@sha256:bed97d71b3ec6a5bc1d43454f171907a2f0071ccd331fb2751adb309fc43b7bc
+  - name: icr.io/cpopen/cpfs/platform-assistant-broker:6.10.5-12@sha256:d08977b5d1b5218820647d5b65bfb5a3f8d98f6eda9dc63ace67970049797e31
+  - name: icr.io/cpopen/cpfs/privatecloud-usermgmt:6.10.5-12@sha256:a1a65ca28102fb1029e3ec2496017b2342c287b82208ea61104c648e49c2fa97
+  - name: icr.io/cpopen/cpfs/spoke-nginx:6.10.5-12@sha256:5f1d762e4cfaaed9c8184ad0689dab65380dfb4b65019d8021181f252d4e7b7d
+  - name: icr.io/cpopen/cpfs/zen-audit:6.10.5-12@sha256:2d2849e6f202a4b6303446b7ce65efc48c69335da9fd5945ae1dbf826dec90bb
+  - name: icr.io/cpopen/cpfs/zen-core-api:6.10.5-12@sha256:cf58111f95f7aca128dff31c997d0b02a9c2189cf0ae07f262a0a6a4e7b33dd5
+  - name: icr.io/cpopen/cpfs/zen-core:6.10.5-12@sha256:1abddd6e4e0f190b6a872ece55bac788e1952a52c699cae5422579a9ef793d9e
+  - name: icr.io/cpopen/cpfs/zen-iam-config:6.10.5-12@sha256:c6d123bbd8ea3eaff60e012b5bb9be076376387385d466696e95382b790e332b
+  - name: icr.io/cpopen/cpfs/zen-mcp-server:6.10.5-12@sha256:8f1021d8686f248f45793739d216dad25e16fb86f5e02d04ecdfb24420e8b3c2
+  - name: icr.io/cpopen/cpfs/zen-minio:6.10.5-12@sha256:b82459381a29719925640477da234eef8845364d996d5944c4014d1da14b938f
+  - name: icr.io/cpopen/cpfs/zen-openresty-base:6.10.5-12@sha256:e9983573cf42c02e2106a3a89a82e07a8ff678a825219908d9edc530ab918887
+  - name: icr.io/cpopen/cpfs/zen-rsi-adm-controller:6.10.5-12@sha256:f05f55a56b26b48f68efe26bb3e5a6d9d7618066b9c848ae073d760f67e12fb6
+  - name: icr.io/cpopen/cpfs/zen-utils:6.10.5-12@sha256:b1aba44db9c8aa1f109281af17086e9fab1b64f5c69f6a2bea50e6ff6ac15e21
+  - name: icr.io/cpopen/cpfs/zen-watchdog:6.10.5-12@sha256:bb0c08ecdbd01c1de5255490480b8e954fd6ade47f78aa72abc0474c6b7390b6
+  - name: icr.io/cpopen/ibm-zen-operator-bundle:6.10.5-12@sha256:15d83941649ef4b9cdc6ffead9d356aebb8e10825f6493845fced83961f9e4f8
+  - name: icr.io/cpopen/ibm-zen-operator-catalog:6.10.5-12@sha256:7e02b06482966b17a6a9e6808f992a3effcb796fb2fab4d0a5ba70b870e43efa
+  - name: icr.io/cpopen/ibm-zen-operator:6.10.5-12@sha256:672f3dd57cd77eb27262143279de41b7d5b6155a59a57d6940acb52659aa120d

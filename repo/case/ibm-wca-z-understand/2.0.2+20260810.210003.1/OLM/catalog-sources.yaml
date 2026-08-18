@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-wca-z-understand-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-wca-z-understand-2.0.2+20260810.210003.1
+  publisher: IBM
+  image: icr.io/cpopen/ibm-wca-z-understand-operator-catalog@sha256:43cc82a6598bb514a2d4f654b8ba3a3adf20027fee70066ef342804dc4b1840e
+  sourceType: grpc

@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ipm-cpd-admin:14.0.3-2@sha256:2bc2f67e3ee8c4c54544fd97e4fb79c30ce61081c8a031cc845f616ea8b142ef
+  - name: cp.icr.io/cp/cpd/ipm-cpd-fts-indexer:14.0.3-2@sha256:36d772778167cbf463d76829233e634cbe3ab61fade125b99a255bbc0a719e15
+  - name: cp.icr.io/cp/cpd/ipm-cpd-fts-pim:14.0.3-2@sha256:212fbedaefedd435c9f1b7121ecd38e32e33108a138f51bc9ade29e6d32014c9
+  - name: cp.icr.io/cp/cpd/ipm-cpd-gds:14.0.3-2@sha256:dbe818c913ae94ee75845e141edd8a01c31747ab9b3f1d5c5bf728491865ff61
+  - name: cp.icr.io/cp/cpd/ipm-cpd-hazelcast:5.3.6@sha256:d9b8ced818d04d938c187f72ebb40cdc23c0054d0b571f34ccb62dbb8e702a2a
+  - name: cp.icr.io/cp/cpd/ipm-cpd-ml:14.0.3-2@sha256:099ce5419a008e0cb3baf219d242eb5267a6a58eeac24c1a3e9f925bf14b6337
+  - name: cp.icr.io/cp/cpd/ipm-cpd-personaui:14.0.3-2@sha256:d46ac4f2f3f8635da4d7bc91584948bbc8c535c805ed85c43d2063caef5c233a
+  - name: cp.icr.io/cp/cpd/ipm-cpd-restapi:14.0.3-2@sha256:770a3c0cb49af3867d7f3968c298e6b312dd07a89994beea2a7d34861e41f9e4
+  - name: cp.icr.io/cp/cpd/ipm-cpd-sch:14.0.3-2@sha256:f28a311f9ec4f128345720fdd894d7f1f79afe709232a6dbb3801de1290abd29
+  - name: cp.icr.io/cp/cpd/ipm-cpd-wfl:14.0.3-2@sha256:40aef7e9072ce01c1bccc249ac35b262d75c70c558c32293939a53ac8c976c73
+  - name: icr.io/cpopen/ibm-cpd-productmaster-operator-bundle:10.0.4-amd64-25@sha256:d12f69c8cb92905b522b4ef277e5baf37be88da1181f958414419644e509d3bd
+  - name: icr.io/cpopen/ibm-cpd-productmaster-operator-catalog:10.0.4-amd64-25@sha256:0e50653878bd322b1a10c5e443cf20c82d102144cfc0c81c6b5a9aaa8c3507a8
+  - name: icr.io/cpopen/ibm-cpd-productmaster-operator:10.0.4-amd64-25@sha256:c86b16e0d997f19618eace2a680474e4d687426adea99bac182b591c214664a1

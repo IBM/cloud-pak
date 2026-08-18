@@ -1,0 +1,24 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ad-core-server:2.8.303-amd64@sha256:94aba2d9239a8dd64a0570d5f132b729e3cf163a38a027b384116043eaf53c3b
+  - name: cp.icr.io/cp/cpd/ad-core-server:2.8.303-s390x@sha256:e5224501ba80631831cf372e125c8fb11190ed7156a3099055d94a7b368c8568
+  - name: cp.icr.io/cp/cpd/ibm-wca-z-model-gateway:1.0.336@sha256:c5468389af3dbe6888bb9fe632750155f9c7aa260b1a25346037a3bf74f6bfdb
+  - name: cp.icr.io/cp/cpd/orientdb:2.8.303-amd64@sha256:d3ffa81a800a455cd0443ac87cbde86f093e64b43adb874247f29781ec04fbfe
+  - name: cp.icr.io/cp/cpd/orientdb:2.8.303-s390x@sha256:466ebf7a0f63a3de78030db59679afb4d1acde4c13202106cf4442ba50e38abb
+  - name: cp.icr.io/cp/cpd/refactoring-assistant-ui:2.8.303-amd64@sha256:9b7d42288a73c77e1b6d4fc1904f58d1b49cb4210b70d7514b2b4ea5dac77c6c
+  - name: cp.icr.io/cp/cpd/refactoring-assistant-ui:2.8.303-s390x@sha256:8155bd772d313eefb5a616a31f68bdd58ad566e34d0f9e310cc9406e16b1c36b
+  - name: cp.icr.io/cp/cpd/refactoring-assistant:2.8.303-amd64@sha256:455b097f09accc28ca6c03faee54e3db5a3d812c0ccedbd6e89dce4b28e4ddff
+  - name: cp.icr.io/cp/cpd/refactoring-assistant:2.8.303-s390x@sha256:3fd585c903c5bb6a347841dc24b65cdb1e6fee5ea7e79b1d1e8a54dfd338244e
+  - name: cp.icr.io/cp/cpd/wca-config-ui:5.4.2-3@sha256:e3b48399f314eb9bf4f63c74d4a67709cd373d215050ea02a20946bcfdf6ef88
+  - name: cp.icr.io/cp/cpd/wca-metering-job:5.4.2-3@sha256:fa1c0e84b78a0e467963b9ce191d5ab27c446bf38f3bcb385569aeb3a96e192c
+  - name: cp.icr.io/cp/cpd/wca-metering:5.4.2-3@sha256:2b3cf2d1b3e90fac28bb02db50cd7eaa51c1f411fd36cadc0e05c767b67e587d
+  - name: cp.icr.io/cp/cpd/wca4z-agents-orchestrator-understand:1.1.274@sha256:7c82af97816d41213bdac0e1bcca9527a141d8406198a3e5612b6c212ccd03ed
+  - name: cp.icr.io/cp/cpd/wca4z-semantic-insights:1.9.222@sha256:9bb48148ff9122dc7620d586b85f4236b32e14d6a2164e15fcd60a71e2a9d101
+  - name: cp.icr.io/cp/cpd/wca4z-understand:2.8.303-amd64@sha256:6234a6bbe1ed68e225f6da8837406e2df8efccd8821c0d668cd6b5f7d0cb7e95
+  - name: cp.icr.io/cp/cpd/wca4z-understand:2.8.303-s390x@sha256:f71d59e5d312e3ff0aef7e861c284af329959c3b902cd7074990cb679b55e6d3
+  - name: icr.io/cpopen/ibm-wca-base-operator:5.4.2-3@sha256:9ff21b92a59409485e032d1b13cb0ba5420ee8f1125a6a3b9bfe636299bcb1ef
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator-bundle:1.1.25@sha256:0a4bad4895af27b73e4c69471ecb6d748c1f01d4421e9e0c50e8c3a76c003791
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator-catalog:1.1.25@sha256:43cc82a6598bb514a2d4f654b8ba3a3adf20027fee70066ef342804dc4b1840e
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator:1.1.25@sha256:8cd59626c512f975a1358295b984279ddf18837612519fd7b65e788c28600a92
