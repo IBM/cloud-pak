@@ -1,0 +1,64 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:ae3fd1dd0f21b10f6c4c80f2089b4476dc1c858abeb9dd31073a428ddb32d38a
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.6
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.2
+    - name: ibm-odlm
+      channels:
+      - name: v4.3
+    full: true
+  - catalog: icr.io/cpopen/ibm-events-operator-catalog@sha256:228ea92d69daa2350e151d1fe6b14e6fb56eadd0d3b5b5872178180747297687
+    packages:
+    - name: ibm-events-operator
+      channels:
+      - name: v5.2
+    full: true
+  - catalog: icr.io/cpopen/ibm-iam-operator-catalog@sha256:f8c4ba1862a1185b9bdd08737af7537753070f62c2a861235caae93ab2f8830d
+    packages:
+    - name: ibm-commonui-operator-app
+      channels:
+      - name: v4.4
+    - name: ibm-iam-operator
+      channels:
+      - name: v4.5
+    full: true
+  - catalog: icr.io/cpopen/ibm-zen-operator-catalog@sha256:cdbfa293c4c6f6428bec1e9dc4e3180653b98004b0f69bbfd15ebf61b088720c
+    packages:
+    - name: ibm-zen-operator
+      channels:
+      - name: v4.4
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2716@sha256:f1af89c4aa6d9f8e842c1afeb9969e529f778368230ff1de8d7631adce318a36
+  - name: icr.io/cpopen/common-service-operator:4.6.22@sha256:90965ec1436795e8dd5495a89ae7ae00c808822940e9bf28b52acdda37bffb17
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:bb35bcf02e4a269367d52275724fd634b44c81394837e1026bc81b5daa3f8125
+  - name: icr.io/cpopen/cpfs/ibm-events-kafka-3.6.1:5.0.1@sha256:545b41cc6c044d6807bfeb7453a045e074a5670cfff9f5c311f4918946901fcb
+  - name: icr.io/cpopen/cpfs/ibm-events-kafka-3.8.0:5.1.2@sha256:2754384c6936b36ffd64f89df751cbe47993f73dd700a184af35f412b3408d72
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:a02c6b5bb4e6dc44629518b4d051e27b2d48b59be35ba4f8b84a7fb1d2ed1d1a
+  - name: icr.io/cpopen/edb/postgresql:14.22-5.40.0-cpfs@sha256:8b1f10ce2ca260a381eac0677c70d74a7c733092e0f3625f9b12b425edfb3cc8
+  - name: icr.io/cpopen/edb/postgresql:15.17-5.40.0-cpfs@sha256:c4f7664b77ec21fb43e924006640da5d55ed39a596d25a90c8374410d362e673
+  - name: icr.io/cpopen/edb/postgresql:16.13-5.40.0-cpfs@sha256:a16a63c48cd117e592a3e2fd15f31802a0e1ee357c71630aaba38452fa2f8c04
+  - name: icr.io/cpopen/edb/postgresql:17.9-5.40.0-cpfs@sha256:d4fe1575db25f382608de20b552dd042f3bb4542387e6f82910dafd026d170e1
+  - name: icr.io/cpopen/edb/postgresql:18.3-5.40.0-cpfs@sha256:5ac13a0948a0648306cf6792a882db2e1a24ee55bda3b6adf78a7aba35f5b7aa
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.6.22@sha256:8f985635cf086ca7727b42c1b6cbe81e64e843a15133309bfa0e0291daae2a72
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.6.22@sha256:c0b89f1b6cbd989d2630687ddb6fd6ecbe87eba126f15558a9e6d1b8f46b8787
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2716@sha256:28328fda2f86b3c48a063f704d972f58948abd888f3f3c3b7dcf165f91da86d2
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog:2716@sha256:563e0032a3d96e39a7f94cc1bcd4fea5ec38d6249da591baaec1473cf58cf7a9
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.28.2@sha256:513a9a63890f36dd3a9e66ecf1dda1487b18ff99283e17aebd19dc7ea52f1d2f
+  - name: icr.io/cpopen/ibm-cs-install-catalog:4.6.22@sha256:ae3fd1dd0f21b10f6c4c80f2089b4476dc1c858abeb9dd31073a428ddb32d38a
+  - name: icr.io/cpopen/ibm-events-operator-catalog:5.2.1@sha256:228ea92d69daa2350e151d1fe6b14e6fb56eadd0d3b5b5872178180747297687
+  - name: icr.io/cpopen/ibm-events-operator:5.0.1@sha256:0fb78efb9e92dd0c2e52ca2488e6f1e7431e197f87e6994e15f7d621b90319f2
+  - name: icr.io/cpopen/ibm-events-operator:5.1.2@sha256:46893c166cabdd8b3422a190e220ee2e34861e797aa068100ccf53da349e3fe7
+  - name: icr.io/cpopen/ibm-iam-operator-catalog:4.5.19@sha256:f8c4ba1862a1185b9bdd08737af7537753070f62c2a861235caae93ab2f8830d
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.2.22@sha256:f44ee0d11a88a86533956d90470f5d5f478852729f206f5b87f0eccc307b2928
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.2.22@sha256:55a991ec95a673eb9efcc653f52ef5d51305fdeeed87c99efacdd9ba14ccb434
+  - name: icr.io/cpopen/ibm-zen-operator-catalog:5.1.21@sha256:cdbfa293c4c6f6428bec1e9dc4e3180653b98004b0f69bbfd15ebf61b088720c
+  - name: icr.io/cpopen/odlm:4.3.20@sha256:84da73d9e051cc73619c16b1017822d6dbe9b2227f3cc1efd6896418544768b8
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.3.20@sha256:5c48df5d2833a4a582c65b9227ba9869ab404082f04b0de33b491f446dd2f394

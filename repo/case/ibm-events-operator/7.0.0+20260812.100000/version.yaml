@@ -1,0 +1,59 @@
+apiVersion: v1
+case:
+  appVersion: 7.0.0
+  catalogs:
+    tools: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: This case provides IBM Events Operator
+  displayDescription: ""
+  displayName: This case provides IBM Events Operator
+  icons: []
+  licenses:
+    apache2:
+      mediaType: application/text
+      metadata:
+        displayDescription: Apache License, version 2.0
+        displayName: Apache 2.0
+      ref: LICENSE
+      url: https://www.apache.org/licenses/LICENSE-2.0.txt
+    non_ibm_license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: non_ibm_license
+        name: non_ibm_license
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: notices
+        name: notices
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-events-operator
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+      arm64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 7.0.0+20260812.100000
+  webPage: https://github.ibm.com/IBMPrivateCloud/BedrockServices/blob/master/AdopterGuides/EventsAdoptionGuide.md
+created: 2026-08-18T14:28:54.12046064+0000
+digest: sha256:390bfe66123146eb17ebcc5a9398de1f979e9c39558bfa3e60af91ad5e45692a
