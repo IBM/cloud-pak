@@ -2406,6 +2406,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2425,6 +2426,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2444,6 +2446,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2463,6 +2466,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2480,6 +2484,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2499,6 +2504,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2518,6 +2524,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -2537,6 +2544,7 @@ containerImages:
   - 7.5.3+20260323.180257.19599
   - 7.5.4+20260422.202134.19853
   - 7.5.5+20260616.211211.20439
+  - 7.5.6+20260805.053213.20897
   - 8.0.0+20260526.191302.20184
   - 8.0.1+20260707.030848.20598
   category: catalog
@@ -3153,3 +3161,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: 20856-dev
+- caseVersions:
+  - 7.5.6+20260805.053213.20897
+  category: catalog
+  digest: sha256:e6699607da6e770262a1cd39f6925577d2a84b3b228479f5c689ae19ff15e3de
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 20897-dev-s390x
+- caseVersions:
+  - 7.5.6+20260805.053213.20897
+  category: catalog
+  digest: sha256:a9ff867dc1f5f02183da57ba9cbdf622c9a5021c7821602719f13230fc885b5f
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 20897-dev-ppc64le
+- caseVersions:
+  - 7.5.6+20260805.053213.20897
+  category: catalog
+  digest: sha256:be5021e2649524abdcac02d435d46529948d006090857c5e97cc26227dc6b18a
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 20897-dev-amd64
+- caseVersions:
+  - 7.5.6+20260805.053213.20897
+  category: catalog
+  digest: sha256:10cd2650a33d06076615a8d9d5642a8b397936d6e7f081ca5a1caaadecee1e2e
+  image: cpopen/ibm-db2uoperator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 20897-dev

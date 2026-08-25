@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/fdb-apple-foundationdb-sidecar:0.31.10@sha256:a654eec8cde8eca0dd16cdaed983f24865e93ebe352ce53eab6792f359b6ad34
+  - name: cp.icr.io/cp/cpd/fdb-apple-foundationdb:0.31.10@sha256:f1b9d93d1595c7d2818486aafa8acc368e5fd6fa879102b7fc2565f16b8c9412
+  - name: cp.icr.io/cp/cpd/fdb-ibm-backup-agent:0.31.10@sha256:00895c1e50c0ee4a14a81cc6908ae059ad5db73eab3c2496b2483f44e8287cf8
+  - name: cp.icr.io/cp/cpd/fdb-ibm-restore-agent:0.31.10@sha256:53f7e4ede474712c2b2b70c1101a9f9ff56611a64f387f214d16640ea19e15ec
+  - name: icr.io/cpopen/fdb-apple-operator-bundle:3.35.9@sha256:a7da5aa5b355d4a24226e886ffaa9ecd7e680da4a667b51802bd397ec9b905cd
+  - name: icr.io/cpopen/fdb-apple-operator:3.35.9@sha256:5af8f1ad91679b4d85d6c3505341bb61069fb481ed85022c044bc2ded3ff7ff8
+  - name: icr.io/cpopen/fdb-ibm-operator-bundle:3.35.9@sha256:e3341077db22846ed14988a8461946aaa4bc3a2155d1fa5b7dcbb3267cbe8585
+  - name: icr.io/cpopen/fdb-ibm-operator:3.35.9@sha256:21c35d316eabb1defa667e812ebff8d81957833a118ea4f81876a2e82a4c3ad4
+  - name: icr.io/cpopen/fdb-operator-catalog:3.35.9@sha256:bf878b543551af994c357c257f2e0b06484ccf3bef76005edf4147427427bc1e

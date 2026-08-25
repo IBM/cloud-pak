@@ -1,0 +1,14 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-wca-z-model-gateway:1.0.336@sha256:c5468389af3dbe6888bb9fe632750155f9c7aa260b1a25346037a3bf74f6bfdb
+  - name: cp.icr.io/cp/cpd/wca-config-ui:5.4.2-3@sha256:e3b48399f314eb9bf4f63c74d4a67709cd373d215050ea02a20946bcfdf6ef88
+  - name: cp.icr.io/cp/cpd/wca-metering-job:5.4.2-3@sha256:fa1c0e84b78a0e467963b9ce191d5ab27c446bf38f3bcb385569aeb3a96e192c
+  - name: cp.icr.io/cp/cpd/wca-metering:5.4.2-3@sha256:2b3cf2d1b3e90fac28bb02db50cd7eaa51c1f411fd36cadc0e05c767b67e587d
+  - name: cp.icr.io/cp/cpd/wca4z-agents-orchestrator-understand:1.1.274@sha256:7c82af97816d41213bdac0e1bcca9527a141d8406198a3e5612b6c212ccd03ed
+  - name: cp.icr.io/cp/cpd/wca4z-semantic-insights:1.9.222@sha256:9bb48148ff9122dc7620d586b85f4236b32e14d6a2164e15fcd60a71e2a9d101
+  - name: icr.io/cpopen/ibm-wca-base-operator:5.4.2-3@sha256:9ff21b92a59409485e032d1b13cb0ba5420ee8f1125a6a3b9bfe636299bcb1ef
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator-bundle:1.0.117@sha256:67f2ff5a259ff4e7cf4882bee35a7ad910e9f5ce8f800c651169afd1776019db
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator-catalog:1.0.117@sha256:977475b19e36acd9071bd33170e36f514631ef7cf74f5fe6920c5b826b977c22
+  - name: icr.io/cpopen/ibm-wca-z-understand-operator:1.0.117@sha256:e3d3dc5d3e9c45c10da4d43bac49490b79893a117db61b942db086522c06d78b
