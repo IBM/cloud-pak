@@ -1,0 +1,34 @@
+apiVersion: v1
+case:
+  appVersion: 15.0.1.11
+  catalogs:
+    database: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: Used to deploy Informix microservice into K8s cluster
+  displayDescription: ""
+  displayName: IBM Informix Standalone Operator Bundle
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.png
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-informix-standalone
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      icp: {}
+      rhocp4: {}
+    managedPlatforms:
+      ibm: {}
+  version: 2.0.3
+  webPage: https://www.ibm.com
+created: 2026-08-26T12:58:34.98742628+0000
+digest: sha256:5cb405a544710906959737bf5bcd9b9404592af6f64817c9fcfe067ef3dc8254

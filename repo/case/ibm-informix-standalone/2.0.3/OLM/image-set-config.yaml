@@ -1,0 +1,11 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-informix-standalone-operator-bundle:2.0.3-0000-x86_64@sha256:2405598c28f009673561b691afb918eb26b9c3f68bf2359f6b5ef5d8963ed4e7
+  - name: icr.io/cpopen/ibm-informix-standalone-operator:2.0.3-0000-x86_64@sha256:0b62afc8f7388f9264e658fb6b2fd2629be9ecab2d913b0a8defadeec231f930
+  - name: icr.io/cpopen/informix/informix-cm:2.0.3-0000-x86_64@sha256:3f2214cfee991c2586760d88302d1a29bec2fa9aa284d8f784f5087a90435ef8
+  - name: icr.io/cpopen/informix/informix-edition-de:2.0.3-0000-x86_64@sha256:8aac3bb0ebcea8378925e232d23574891957e0df7a91ce61ade099b9e2322cc3
+  - name: icr.io/cpopen/informix/informix-eng:2.0.3-0000-x86_64@sha256:95886f5fb781cb57b9ede87283bade6a816d7feda462c84442d7fb4a0be900cf
+  - name: icr.io/cpopen/informix/informix-hq:2.0.3-0000-x86_64@sha256:e1696ecfb4b86922025f21f0f5b329234f10292dbbbd11b91f047f58bb436f09
+  - name: icr.io/cpopen/informix/informix-wl:2.0.3-0000-x86_64@sha256:d63ee56842df2984ec3108007ca4b719788be33e88da01e1da4777dfa532fd29
