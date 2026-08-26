@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-transformation-advisor-operator-catalog@sha256:aee7a5f45d5f1bface8f5f3c5e973e06329fc32c994f56ab19517f79a64477af
+    packages:
+    - name: ibm-transformation-advisor
+      channels:
+      - name: v5.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-transformation-advisor-operator-catalog:v5.0-20260821.135459@sha256:aee7a5f45d5f1bface8f5f3c5e973e06329fc32c994f56ab19517f79a64477af
