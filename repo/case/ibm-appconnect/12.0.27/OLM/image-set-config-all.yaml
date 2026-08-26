@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-server-prod:12.0.12-r27-20260819-125207@sha256:4afb6a80913cd561c1014376bc2b95153a560c6b85c0383ec29acd31af928336
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:12.0.12-r27-20260818-235412@sha256:9395d17601d9b3fa13f88ca865958214ccf6c64a15c995fbfc7ea9ce0a497218
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:12.0.12-r27-20260819-010011@sha256:bfd994c14e93538dd0d19208ac958f44b1e5a528edc645a71b51c7ec30cdb515
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:12.0.12-r27-20260819-133213@sha256:3ad4ee3e086b3550098275f73efdd451253d9f45e45a100184eaa2007d621e85
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:12.0.12-r27-20260818-233612@sha256:4469a665204c6581d5bff55d2a370028f337b9735791b92cd6b680d0e183d9df
+  - name: cp.icr.io/cp/appc/acecc-designerflows-prod:12.0.12-r27-20260817-225214@sha256:80ee670f3fe783f2ea791725c71a670a3dacedee7528659bd00cca1d754ea645
+  - name: cp.icr.io/cp/appc/acecc-ecp-prod:12.0.12-r27-20260818-020033@sha256:ebed7677cc7a36d83dc53bddd0c4daca744a9db329fc74d9420ce8f019b08c4b
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:12.0.12-r27-20260819-030018@sha256:22c4417550c1bba09f27fa7807ea4e53040a77d009aedea0bedbcada1bd05b8c
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:12.0.12-r27-20260818-181913@sha256:7eecc0d4eab191dcb92c6c9685fe52cbf83e04200dcc3db451b623f45addf6d9
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:12.0.12-r27-20260818-210116@sha256:ee87b58ae3d5a9975734b75b1f2782c02591a6c3b968ea9448004e8a716af62c
+  - name: icr.io/cpopen/appconnect-operator-bundle:12.0.27-20260819-162835@sha256:905281a632418048a4127981963813fcb8d10f07b7211dd7228b36947a99f188
+  - name: icr.io/cpopen/appconnect-operator-catalog:12.0.27-20260819-162835@sha256:a59f27adfd7ffb13440ff942be7173182a6132b939e5cc321ce9c5e510ddb7e8
+  - name: icr.io/cpopen/appconnect-operator:12.0.27-20260819-162835@sha256:c6e6e703bcc11258c97751848a21d36d5fb2829d3fc9041dfc4ae34e24a16133
