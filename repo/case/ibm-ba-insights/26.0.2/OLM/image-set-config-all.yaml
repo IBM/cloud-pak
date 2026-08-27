@@ -1,0 +1,51 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-bai-catalog@sha256:5221387ea6ddbe64b86666958527fcfe3894e6dc01f09ad4ec12d100a8bde623
+    packages:
+    - name: ibm-bai-foundation-operator
+      channels:
+      - name: v24.0
+      - name: v26.0
+    - name: ibm-bai-insights-engine-operator
+      channels:
+      - name: v24.0
+      - name: v26.0
+    full: true
+  - catalog: icr.io/cpopen/ibm-bts-operator-catalog@sha256:25458e158903b6645f17f3b2ec076f60a595872680cc6b8cdca596434239c4b7
+    packages:
+    - name: ibm-bts-operator
+      channels:
+      - name: v3.35
+    full: true
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:7e04eb94c33ca06ce1144a5b2ef5cd6bb53ed24b15e68c9414d284826468f9a4
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.19
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  - catalog: icr.io/cpopen/ibm-opencontent-flink-operator-catalog@sha256:213ad9bbb57059ecea1bad90f9d433f8402d7040805d30ea32947e666d29cbcc
+    packages:
+    - name: ibm-opencontent-flink
+      channels:
+      - name: v2.0
+    full: true
+  - catalog: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:001157d4e2a80a96b507c3c9b7ec3d17a8149b269db40f334c89d33398803072
+    packages:
+    - name: ibm-opensearch-operator
+      channels:
+      - name: v1.1
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-bai-catalog:v26.0.0-IF002-fbc-20260826.001202-10C66A74C@sha256:5221387ea6ddbe64b86666958527fcfe3894e6dc01f09ad4ec12d100a8bde623
+  - name: icr.io/cpopen/ibm-bts-operator-catalog:3.35.13@sha256:25458e158903b6645f17f3b2ec076f60a595872680cc6b8cdca596434239c4b7
+  - name: icr.io/cpopen/ibm-cs-install-catalog:cd-20260730-1213@sha256:7e04eb94c33ca06ce1144a5b2ef5cd6bb53ed24b15e68c9414d284826468f9a4
+  - name: icr.io/cpopen/ibm-opencontent-flink-operator-catalog:cd-20260716-1017@sha256:213ad9bbb57059ecea1bad90f9d433f8402d7040805d30ea32947e666d29cbcc
+  - name: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog:1.4.5@sha256:001157d4e2a80a96b507c3c9b7ec3d17a8149b269db40f334c89d33398803072
