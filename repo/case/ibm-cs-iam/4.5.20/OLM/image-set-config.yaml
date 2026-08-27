@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-iam-operator-catalog@sha256:2464627ab3d0d52d84f7f1faa7075aaf3160e1d00de81b931f3b8cc35a47e086
+    packages:
+    - name: ibm-commonui-operator-app
+      channels:
+      - name: v4.4
+    - name: ibm-iam-operator
+      channels:
+      - name: v4.5
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-iam-operator-catalog:4.5.20@sha256:2464627ab3d0d52d84f7f1faa7075aaf3160e1d00de81b931f3b8cc35a47e086

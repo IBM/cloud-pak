@@ -1,0 +1,19 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2734@sha256:b839fa082ce65b218734d34e716119bb0c57ad0a761448c8b01153456f30728a
+  - name: icr.io/cpopen/common-service-operator:4.6.23@sha256:7b59618d1f6709c50e985b5f83391e20471e33ad11078aef884cf1afe3f0ba72
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:e77f7d83aea878560b1e4540127f34ca51eeb5dcf1d7069decc5dc734f0320f8
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:d2c50d8013785540a757cc9fb324548680a3d088752c71c3f2d8496f3feafa9d
+  - name: icr.io/cpopen/edb/postgresql:14.23-5.40.1-cpfs@sha256:f67f5db05ba9d830d999f99248e7978812d498bd5f51f6cff3347b3672dd0580
+  - name: icr.io/cpopen/edb/postgresql:15.18-5.40.1-cpfs@sha256:60809f1ebc9df3c3aaed5aa2b8b6eb11402192c6cb949b4fbb4f4d622f300c19
+  - name: icr.io/cpopen/edb/postgresql:16.14-5.40.1-cpfs@sha256:97610e3b18dcdb90eda197481c2fb6b51bf4e4f39bebb97c1597b268c9dfefa4
+  - name: icr.io/cpopen/edb/postgresql:17.10-5.40.1-cpfs@sha256:1f566bbdc6feb07e818a06f680aaedaefdbb31a770562c27a2fe67ac2c970c44
+  - name: icr.io/cpopen/edb/postgresql:18.4-5.40.1-cpfs@sha256:7c2b8e6f1820fdb29523de45ba965d111fe0d959fc88e61dc88c6479ae67f880
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.6.23@sha256:c4db6ff785a0244c43665953577024f76519ee43299400aa3147849d437d2020
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.6.23@sha256:e8db85fd0def1af4eeb5ffc649bc780065fc945f1b2924887bb545f6ad1e58ae
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.2.23@sha256:a89ba37feff04dd8d6139fb107d242c791f22c895346abebef378afb3a849cd3
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.2.23@sha256:6d40a654e79e4977d96f3776a8ae2072fba5e287763c5abd671e1a7f2c0e82be
+  - name: icr.io/cpopen/odlm:4.3.21@sha256:7ed6ffba551097714d8d0d1e8a388d2f8e2d16c12c9ec68ecbfb95ab63b72e38
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.3.21@sha256:1195f528ab0ce0888291aee0df81d719618d18d4dd26e9d4b96597a568bea1c8
