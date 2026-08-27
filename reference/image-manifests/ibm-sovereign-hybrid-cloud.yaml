@@ -4,6 +4,8 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/acm-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/aiiaas-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/aiiaas-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/byop-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/byop-service-broker-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/catalog-as-a-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/common-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/compliance-registration-operator
@@ -47,6 +49,12 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/ibm-pg-16
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/ibm-pg-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/itsm/images/itsm-service-manager
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main-must-gather/must-gather-clean-darwin_amd64
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main-must-gather/must-gather-clean-darwin_arm64
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main-must-gather/must-gather-clean-linux_amd64
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main-must-gather/must-gather-clean-linux_arm64
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main-must-gather/must-gather-clean-linux_ppc64le
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main-must-gather/must-gather-clean-linux_s390x
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/accountiam-keys
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/acm-cuga-system
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/main/acm-eso
@@ -116,6 +124,74 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/mcsp-ext-portal-product-sync
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/model-gateway-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/postgres-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/accountiam-keys
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-cuga-system
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-eso
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-gitops-push
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-observability
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-ocp-truststore
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/acm-vault-aas
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/agent-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/aiiaas
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/aiiaas-cluster-setup
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/aiiaas-inference
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/aiiaas-inference-certificates
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/aiiaas-model-gateway
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/aiiaas-model-gateway-certificates
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/app-template
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/backup-restore-pipelines
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/blackbox-exporter
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/bootstrap-cd-pipeline
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/byop-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/catalog-as-a-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/cloudrock-account-iam-management-microservice-app
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/cluster-networking
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/cluster-util
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/common-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/compliance-registration-operator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/consumption-metrics-backend
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/coredns
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/email-service-app
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/eso-secret-store
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/gori-dns-metalb
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/iam
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/ibm-pg-instance
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/ibm-pg-operator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/ibm-redis-cp-complete
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/ibm-usage-metering-service
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/itsm-service-manager
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/ivia
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/ivia-charts
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/lokistack
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/main
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/managed-cluster-set
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/netbox-external
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/netbox-internal
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/observability-charts
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/observability-cr
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/opentelemetry-collector
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/opentelemetry-operator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/postgres
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/postgres-service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/product-registration-backend
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/product-sync-app
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/redis
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/redis-instance
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/service-broker
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sov-core-cert-rotation
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sov-core-k8s-wrapper
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sov-core-networking
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sov-core-storage
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sovereign-core-metrics-aggregator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sovereign-core-upgrade-discovery
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sovereign-core-upgrade-pipelines
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/sovereign-ui
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/tekton-runtime
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/tempo-operator
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/tempostack
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/vault
+  - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/release-v1.2.0/vm-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sov-core-k8s-wrapper
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sov-core-networking
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/sov-core-storage-api
