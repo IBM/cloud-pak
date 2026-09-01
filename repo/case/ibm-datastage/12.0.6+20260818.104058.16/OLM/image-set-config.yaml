@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ds-assets:540.0.17@sha256:76ddf902165757e740cd196dc1ec7f40adf276b6ad398d1f5a2d39cc955bca74
+  - name: cp.icr.io/cp/cpd/ds-canvas:540.0.106@sha256:8772b11f89455ea6b846f1faa7ed95e0251daf0aa7dfb84166b33a42f1958bfc
+  - name: cp.icr.io/cp/cpd/ds-cas-lite:540.0.11@sha256:a33bd6cfe25b7e983a5288cfb53221952119a14b7234942caa7b78ca7287a792
+  - name: cp.icr.io/cp/cpd/ds-dataservice:540.0.12@sha256:73850c9628a0a142da1948a7899ef311113563f1e1f35567453a8fa3e2e4ebf8
+  - name: cp.icr.io/cp/cpd/ds-flows-assistant:1.0.870@sha256:5c22eacf3054281342450b7ce3454d77c684813e4876ad40e496ab59029f5e46
+  - name: cp.icr.io/cp/cpd/ds-flows:540.0.53@sha256:9631940823a5f9881baf8dec00154961081bdb60c9e6d2b735f2e27ca4d96c96
+  - name: cp.icr.io/cp/cpd/ds-metrics:540.0.11@sha256:0ede5a09d629768be45fed83d0398f226ad21905dee6cf2d164bc3a41eef9c44
+  - name: cp.icr.io/cp/cpd/ds-migration:540.0.38@sha256:89656294172c1c8e14dfcf09b4b1bd226e34ca6628f21e3cdfbad571b30b11a3
+  - name: cp.icr.io/cp/cpd/ds-nginx-proxy:5.4.6@sha256:473563e574d9ec965e1d4830acbcb19a13b0721c733feb8473613b590fb23d31
+  - name: cp.icr.io/cp/cpd/ds-px-compute:540.0.71@sha256:d879941ed60e3b8bddb8f4caddcd039041083ff32c75072b67395a0d40a06154
+  - name: cp.icr.io/cp/cpd/ds-px-runtime:540.0.71@sha256:3ac330f00dd5a81b8aec50aa8a24498839245a4752d431f16903dfbd2a84f0fa
+  - name: cp.icr.io/cp/cpd/ds-runtime:540.0.21@sha256:ce6475b3faeda10ca6b954b3d2bded2445251855430b6c167eceb6bb11466e8f
+  - name: cp.icr.io/cp/cpd/qs-ruleset:540.0.9@sha256:649c3983dd86c5375ada4274e93750b91f0fcb67cfcce12d6380d9374a0f6ba2
+  - name: icr.io/cpopen/ds-operator-bundle:5.4.6-16@sha256:c5cf59fad2b6a68f6cb01c325412c2d159d07edc39c099de4f7fb40cd38e487b
+  - name: icr.io/cpopen/ds-operator-catalog:5.4.6-16@sha256:fc0fcc486121ace71385fc71bc01a13267a5914af71d6f3d1323ce286403a00b
+  - name: icr.io/cpopen/ds-operator:5.4.6-16@sha256:7a01e7b8bdff3ce2e453fde7e2c5fd0622646af0b152d6fd8eb858c22c6ee93a
