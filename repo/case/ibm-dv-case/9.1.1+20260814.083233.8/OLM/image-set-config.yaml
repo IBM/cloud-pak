@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/dv-addon:v3.4.2-8@sha256:f6b4622bb265d0ba351fb9c6597474d1f5d4bada07bc5aea5068dfa483533d54
+  - name: cp.icr.io/cp/cpd/dv-alert-monitor:v3.4.2-8@sha256:5d642f7223decc1b26b178f965190f047998b1fec8c85499b92a3f90b0fe4218
+  - name: cp.icr.io/cp/cpd/dv-exportimport:v3.4.2-8@sha256:2ae08a1dbb18b46e5a797ca38747d95bb974c054ac30d0aa6354a3eb9c450e34
+  - name: cp.icr.io/cp/cpd/dv-extension-translations:v3.4.2-8@sha256:4a5b4ee61623cbbec2ee9f293fd35585b835e21aec718d8a8e689011b466d2c3
+  - name: cp.icr.io/cp/cpd/dv-service-provider:v3.4.2-8@sha256:be1e54d6dd97cd515daa87df3cfa2c6bdcb27033a176289754193b2929aa242b
+  - name: icr.io/cpopen/ibm-cpd-dv-operator-bundle:v3.4.2-8@sha256:c293262cf65465cbdd746ea70c70c0ccc19d690a50f6e3383defd7739de622c2
+  - name: icr.io/cpopen/ibm-cpd-dv-operator-catalog:v3.4.2-8@sha256:ded30f3e9a7f5cfb574b5e867d1d17f7afcc98998a0ca75acfd7d7960f2bd741
+  - name: icr.io/cpopen/ibm-cpd-dv-operator:v3.4.2-8@sha256:bae49e3cb75be10686a2c2e305871399c687ba75ba9be56e5578f5afacfd1ccf
