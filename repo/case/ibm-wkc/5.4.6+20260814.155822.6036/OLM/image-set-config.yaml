@@ -1,0 +1,32 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/data-privacy:1.0.2676-7@sha256:253e8d1f9d7ca052bdae5fecda76860fa09869db6d81aae45a7c5a434ca80d01
+  - name: cp.icr.io/cp/cpd/dp-transform:5.4.6002-1@sha256:0736a21ee9f6b0baefee61e2dc581d501806a4a61898334ce7f2d07c33f4fbf7
+  - name: cp.icr.io/cp/cpd/finley-public:13.0.48-2@sha256:0ef93f75b48fcbddc92a7e721ea7b5613345f648914c6918a92ba0289e8a710b
+  - name: cp.icr.io/cp/cpd/knowledge-accelerators:2.0.1730@sha256:642eb8ed03ed8607fd8a0d6a484551cc770f4fee517c7eceb5e3eb3bc4aaa416
+  - name: cp.icr.io/cp/cpd/metadata-discovery:5.4.122-1@sha256:c8e06f5d8509a1fe0f64b07aa21bacee00b40312dfc455b8a3ac8a3b8e0e9ca0
+  - name: cp.icr.io/cp/cpd/profiling-template:540.0.90011-1@sha256:2ee2ced00374a9b734847b17988fa8ec7a492ffcbe9fdad841bc3a630c947ae7
+  - name: cp.icr.io/cp/cpd/semantic-search-service:5.4.40004-2-amd64@sha256:a62247cd438cb8cc103a40481f3eca34b205be5acda4ba039cde574ab7031e59
+  - name: cp.icr.io/cp/cpd/term-assignment-service:13.0.117-1@sha256:6a4fd277397c1d9b656813c9436b6b5449a4fac60f49a519040e2f7b980f501d
+  - name: cp.icr.io/cp/cpd/wdp-kg-ingestion-rest-fdb:3.19.25@sha256:fbf3ae0ee9e4b7d0d8cfa8a05eec0b358dde986762f09a6f8639799dd38bcecf
+  - name: cp.icr.io/cp/cpd/wdp-kg-ingestion-rest:5.8.181-1@sha256:b0345eb4f34e442de829cbf324e8fb4fcb206ca0cb7ee893d1d13650ff5cb240
+  - name: cp.icr.io/cp/cpd/wdp-lineage:4.7.2416@sha256:3ccc41892e7cc5e62c94e9e1d1c504bcaac83e76fba5f0e27c093dc8610833ae
+  - name: cp.icr.io/cp/cpd/wdp-policy-service:5.3.5573@sha256:d91127b29b414af7aa7fd7a793c9a6aff4b6292b52fdec073bfc4196eb4dfb5f
+  - name: cp.icr.io/cp/cpd/wdp-profiling-ui:5.4.84-1@sha256:534f069805ec76be9c6cf3c839ee0c81e0a2f2f369efbb198fbe9baf1d58be34
+  - name: cp.icr.io/cp/cpd/wdp-profiling:540.0.116@sha256:6c60d4b6dc4564c883aa30c282394d25bb61df5a869bb5d1576d13a3296c23b9
+  - name: cp.icr.io/cp/cpd/wkc-bi-data-service:5.4.125@sha256:f52b08ee6d9262abb17bc8c4d22ef33b586da8b9b07e683fe94f7ebc1e575be0
+  - name: cp.icr.io/cp/cpd/wkc-data-lineage-rest-fdb:3.19.28@sha256:46ee946abbd8db2a429109ee46dd0950036fe1e859bc875aaa82a89fe131e3f0
+  - name: cp.icr.io/cp/cpd/wkc-data-lineage-rest:5.8.149-1@sha256:91a1ccdecc02dd9ec4dc2c8424d712960d8545755408a3a9f7b5de0105a69994
+  - name: cp.icr.io/cp/cpd/wkc-data-quality-ui:5.4.252-1@sha256:f125c1145be95250e317e325bc4007e18396a9b6c5a3617c7796fb35c42425df
+  - name: cp.icr.io/cp/cpd/wkc-data-rules:540.0.192@sha256:2f3877f91d6437fb69ebe889d35f3b2f055e959e1f91192963b8e75256001f8a
+  - name: cp.icr.io/cp/cpd/wkc-glossary-service:5.4.110-1@sha256:77fcac43cfe62af5ff118f76dbc01afd8dfa1c873f1749ba5d354ec07b3a0427
+  - name: cp.icr.io/cp/cpd/wkc-gov-ui:5.4.467@sha256:636f02bba2472b3798dcd5e30bb9bad91e809a72274b23b8fc11fc7d5936c8d1
+  - name: cp.icr.io/cp/cpd/wkc-init-container-wkc:2.0.710-ubi9@sha256:f58cefdd0b1852ff56ccd52a7ee21d6f5dbf2088b97be54f54da768aea16cd3c
+  - name: cp.icr.io/cp/cpd/wkc-mde-service-manager:2.27.41-1@sha256:b79ecffd58951d0922d051a6bfc455c1d1e30ffe81ef3617486ba5eb5dbbe3d7
+  - name: cp.icr.io/cp/cpd/wkc-metadata-imports-ui:5.4.511-1@sha256:2a46aecbf2836f159f7379fd54ac89359718eef4319d1632eb599a36c1579129
+  - name: cp.icr.io/cp/cpd/wkc-workflow-service:5.4.37-1@sha256:63f741487b7478425622e64bd6c114fd85516bb9eed04c232f233b3910c5117d
+  - name: icr.io/cpopen/ibm-cpd-wkc-operator-bundle:v5.4.6036@sha256:4a08cb929013c638cb0658f87fd9524f13990f10f984797567f4c4f4bad17b56
+  - name: icr.io/cpopen/ibm-cpd-wkc-operator-catalog:v5.4.6036@sha256:c2f692c558e5fb100c4006c228b8cee66c405e3b0225ba59b571c8ff45539a8c
+  - name: icr.io/cpopen/ibm-cpd-wkc-operator:v5.4.6036@sha256:b256cd1249b45eca837765ba0db7900c2c3ce80957cdfcffd4f529c32bc05c01
