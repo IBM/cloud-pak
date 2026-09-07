@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/appc/ace-embedding-service-prod:13.0.8.2-r1-20260827-031413@sha256:e3a06c6ff48a2df7a905aaad7fc7560d67f0561e203e30595c75d5bcc31e3760
+  - name: cp.icr.io/cp/appc/ace-langgraph-agents-prod:13.0.8.2-r1-20260904-031247@sha256:012ee9d541d6718583501cf8a1468d446d4c384ca1c9711859b8abaaf1103318
+  - name: cp.icr.io/cp/appc/ace-mcp-prod:13.0.8.2-r1-20260827-085044@sha256:4e205c64b89791ef110c292c893f0b549b8b66b9aa5886292ee5a120e076480c
+  - name: cp.icr.io/cp/appc/ace-server-prod:13.0.8.2-r1-20260826-110847@sha256:f7a1e9dfd5cad76a5f8534e0ab6c26e8b656a573ffdac9171699d0138ed843f5
+  - name: cp.icr.io/cp/appc/acecc-content-server-prod:13.0.8.2-r1-20260827-021920@sha256:a48b3263dc69e5788ff876da463c14ffe0bf87c6473803a98c2da18482e9dd23
+  - name: cp.icr.io/cp/appc/acecc-couchdb3-prod:13.0.8.2-r1-20260827-133343@sha256:d1975be6db12d56ae9273ed4bbda34ff23e64542e88ad28c85ca6f0416330296
+  - name: cp.icr.io/cp/appc/acecc-dashboard-prod:13.0.8.2-r1-20260904-171325@sha256:8c0737da363cf86c5e1c31bd0a707fdcd74c44a0e489d9ee9c9581c9a444c695
+  - name: cp.icr.io/cp/appc/acecc-designer-ui-prod:13.0.8.2-r1-20260904-121928@sha256:4e0c8afd77611e70cd5d5923878d8a1a4fb7d9eda0b9c270df9f3b3d21281e80
+  - name: cp.icr.io/cp/appc/acecc-mapping-assist-prod:13.0.8.2-r1-20260827-031438@sha256:72276fe5d78e54a9e5e70d0a84de5f491b666d0b7569c2bb11c6be1ab0afe2de
+  - name: cp.icr.io/cp/appc/acecc-proxy-prod:13.0.8.2-r1-20260827-021554@sha256:b17400e189a8c5f98f2e2cf360a8c0bf7193777c075bae1d1b5eb6475f3bca40
+  - name: cp.icr.io/cp/appc/acecc-velero-plugin-prod:13.0.8.2-r1-20260826-230934@sha256:abca8789f2f21fac91e03bc05c91536e55459830fb298d1371a4fc224f9e15e0
+  - name: icr.io/cpopen/appconnect-operator-bundle:13.5.0-20260904-204553@sha256:5d7142a94c98e2b8ed4bcf3bb7040c827aac9eeabc49ffe962b156138a7b433b
+  - name: icr.io/cpopen/appconnect-operator-catalog:13.5.0-20260904-204553@sha256:af4a683922ca9cfaee757192aecb8a52991407d6c4d800456d7a70d781429761
+  - name: icr.io/cpopen/appconnect-operator:13.5.0-20260904-204553@sha256:3169082460c2f0a36dbfc259c63f244d425f821d2dc3fd0cd34bb635a959dad3
