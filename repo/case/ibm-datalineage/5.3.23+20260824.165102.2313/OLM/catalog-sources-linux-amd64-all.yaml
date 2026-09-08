@@ -1,0 +1,41 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-datalineage-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datalineage-5.3.23+20260824.165102.2313-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-datalineage-operator-catalog@sha256:24abd4d2745c4a82e67ae90989ae2dcf2cc8ff44843d28a5af824e9346089ef1
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-fdb-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-fdb-5.4.3+20260824.172127.4-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/fdb-operator-catalog@sha256:3fd496240e3418d9014a2f95b54c444e2ade0f5d28ed294cfd7c19de9e3a54bb
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-neo4j-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-neo4j-1.4.6+20260814.051106.586-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-neo4j-operator-catalog@sha256:0bb7309e908bd86ec39aadb900370ce76c308d96f200ed192595333b12b286e7
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

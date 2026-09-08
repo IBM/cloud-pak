@@ -1,0 +1,16 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-cpd-scheduler-metrics:1.61.9-20260819.000133.068e0820@sha256:7b2e2ddc6d631a9968ef769afde279e538b0b57d993f73bc1114a5a0b8fedaa8
+  - name: cp.icr.io/cp/cpd/ibm-cpd-scheduler-mutate-webhook:1.61.9-20260819.000133.068e0820@sha256:c2699d63145fa8c8c7b34bee69788cc89fd8b321203d38108c275939911dd34e
+  - name: cp.icr.io/cp/cpd/ibm-cpd-scheduler-pjc:1.61.9-20260819.000145.ff456f7@sha256:a177160082f65bbccba2ba9e681c3118891bca39f3a2431cef039bee67baf655
+  - name: cp.icr.io/cp/cpd/ibm-cpd-scheduler-spoke-resource-collector:1.61.9-20260820.000242.0cf1abc@sha256:a4d0ce4e9fb042b2e149ae31fb8faceb8962ce53e60b24ff091fed8799477ff1
+  - name: cp.icr.io/cp/cpd/ibm-cpd-scheduler-webhook:1.61.9-20260819.000133.068e0820@sha256:84f6c43a31b7734404ab631b3f5cf4aa6a1366e1ca1387f6bb982f594846cdcc
+  - name: cp.icr.io/cp/cpd/ibm-cpd-scheduler:1.61.9-20260819.000145.ff456f7@sha256:739a3bec953adaee279bd618c0d4dd42184d6b0f9c73aa81bc8987f41e51eb61
+  - name: cp.icr.io/cp/cpd/ibm-mcs-placement:1.61.9-20260820.000242.0cf1abc-amd64@sha256:6d5e192c098177af569bf4ff4acf93b083f08b9bd72988fe2fcf896417b854e7
+  - name: cp.icr.io/cp/cpd/ibm-mcs-storage:1.61.9-20260820.000242.0cf1abc-amd64@sha256:f9dca871f36b91f6be2a92d342413e7ee7519469600c28cfd8b8689fa536a5b8
+  - name: cp.icr.io/cp/cpd/ibm-mcs-work:1.61.9-20260820.000242.0cf1abc-amd64@sha256:52131fbfd0cb25d0879b2db0ee2d12815e118a398daa92a7dc5ed3d9829084e1
+  - name: icr.io/cpopen/ibm-cpd-scheduler-operator-catalog:1.61.9-20260820.000628.e1297275@sha256:8fe86ad067f20ae8c5e3b4a8bd5dbafb82391360ff9c06d6553930bdb9991c32
+  - name: icr.io/cpopen/ibm-cpd-scheduling-operator-bundle:1.61.9-20260820.000628.e1297275@sha256:d73c44649469a3fe32973534cdd509e96de7ce635a11294f4c58f07d33ebe8c9
+  - name: icr.io/cpopen/ibm-cpd-scheduling-operator:1.61.9-20260820.000628.e1297275@sha256:b42a8d5fcacbd8f71ba0b38eb9faf0550a4b6ce10c6b1cc4830e905ff6738119

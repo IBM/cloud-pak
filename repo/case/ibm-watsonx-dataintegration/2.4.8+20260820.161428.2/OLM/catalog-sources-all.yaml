@@ -1,0 +1,54 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-5.40.1+20260729.193417.2741
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:e1d381abf8a019c91e6dc434dd3ccf146a004dc9ee0f73ea10ace247b8414909
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ccs-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ccs-13.0.6+20260826.195359.126
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-ccs-operator-catalog@sha256:7a64441c673aa1afc5bad1f2fffd0d973564dc398ad411da14843d68e8464c96
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-datastage-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datastage-12.0.6+20260818.104058.16
+  publisher: IBM
+  image: icr.io/cpopen/ds-operator-catalog@sha256:fc0fcc486121ace71385fc71bc01a13267a5914af71d6f3d1323ce286403a00b
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-databand-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-databand-1.0.12+20260812.162429.8
+  publisher: IBM
+  image: icr.io/cpopen/ibm-databand-operator-catalog@sha256:950dbd6a4a4f4aa5350aa31ae66e94f815f9682d7ccdbb716ca319cd1a8360b0
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.4.5
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:001157d4e2a80a96b507c3c9b7ec3d17a8149b269db40f334c89d33398803072
+  sourceType: grpc

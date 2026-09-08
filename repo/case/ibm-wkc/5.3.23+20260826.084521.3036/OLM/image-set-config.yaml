@@ -1,0 +1,35 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/data-privacy:1.0.2663-10@sha256:306442a574b51d006efccfa8d1131fac7e4bc5ec138439ea6c77f6f387ab9027
+  - name: cp.icr.io/cp/cpd/dp-transform:5.3.1121@sha256:07ba1224e49efb0c4c36a4de46df7568c2b4c3d2db16e4efdd01c164476b91af
+  - name: cp.icr.io/cp/cpd/finley-public:12.1.52-5@sha256:76fcca8d050a11be435fd0ea07512f8fa829ce078d285f577b55e80a5e6c0df0
+  - name: cp.icr.io/cp/cpd/knowledge-accelerators:2.0.1733@sha256:6f9c80df5bbd958d0032206166b21b46d85c8df047a920111d8fbbb6e77c4fe6
+  - name: cp.icr.io/cp/cpd/metadata-discovery:5.3.1018-2@sha256:7a671ba24d458e01e8acc21e29144c2aba96e5acdc1cde71c695915e5268ac77
+  - name: cp.icr.io/cp/cpd/profiling-template:531.0.90044@sha256:bc395e8075ab75050d198a23a683113cc82c7bd44829e564047d65a34422fab6
+  - name: cp.icr.io/cp/cpd/semantic-search-service:5.3.113004-2-amd64@sha256:8edc203b2cd7e141925a80b865bb0da5458675910a723e03bdd0daa94e26cada
+  - name: cp.icr.io/cp/cpd/term-assignment-service:12.1.146@sha256:fc2cd212531582f9b1f2b4ec4ef6fd1ac764209c7576117486e23aad9309e086
+  - name: cp.icr.io/cp/cpd/wdp-kg-ingestion-rest-fdb:3.18.30@sha256:18a53790e736de22b631ffcd98122f80649fd7fd6d9be111f1d0eabae83bbd79
+  - name: cp.icr.io/cp/cpd/wdp-kg-ingestion-rest:5.7.214@sha256:e3df1ec7f966e67164ea21301068bd5925784228dd40a3574cea17a9144c27c3
+  - name: cp.icr.io/cp/cpd/wdp-lineage:5.3.1019-2@sha256:5583ff7964c91fe2a3e0ffc7f2bc917cc6401e7c7f55cacfe5b3e2ea26b31cd9
+  - name: cp.icr.io/cp/cpd/wdp-policy-service-cldpgmig:5.2.3527.777-amd64@sha256:f92399a20d3126490ec236d9a6479a35391996d3b14e531345b8138088bb64ed
+  - name: cp.icr.io/cp/cpd/wdp-policy-service:5.3.3702@sha256:268dddf26e744a9d4c84fab780c1395d4c5ea97860ceb239fe54aca15fecea1c
+  - name: cp.icr.io/cp/cpd/wdp-profiling-ui:5.3.1109@sha256:348da5a063173a0e0f5d1429358bf389a42240699437e92c156e27189a2ad7c0
+  - name: cp.icr.io/cp/cpd/wdp-profiling:531.0.62-1@sha256:5c0d02859f433a98bf348941ccc1e79d37ee25a47251c3a1e9e3c3db1627659d
+  - name: cp.icr.io/cp/cpd/wkc-bi-data-service:5.3.9248-2@sha256:c5a460d8a6de2c658d32c6348b82ca6ca151ccda3d089f8c299d7f6684f59842
+  - name: cp.icr.io/cp/cpd/wkc-data-lineage-rest-fdb:3.18.37@sha256:c520aa956ddf5c6be10a1438885f81fda6c08391bae0611bfa1436aaa8150e7c
+  - name: cp.icr.io/cp/cpd/wkc-data-lineage-rest:5.7.147@sha256:c155f1886caab30effea8dba269e7e36da96f16ba1bddb2e6aaa8ebe45751a3d
+  - name: cp.icr.io/cp/cpd/wkc-data-quality-ui:5.3.1352-1@sha256:56f7c73b37168a5702a9f6ec13f79fdbbdb2d13b6638763e22416b736f868bc6
+  - name: cp.icr.io/cp/cpd/wkc-data-rules:531.0.161@sha256:f4573ff8032d2fc2c59849b9afc4ef07fc0fcfb782f24d7395975141b79cc282
+  - name: cp.icr.io/cp/cpd/wkc-db2-postgres-data-migration:5.2.402-amd64@sha256:f307c2e6b3b1ed2b81886618c2882a0bbb16558894a718fa2815ca1a578fea48
+  - name: cp.icr.io/cp/cpd/wkc-glossary-service:5.3.1073@sha256:12dd0326cb1dbfb867eb384f44188cb44bf8946191e68451a4393eb083c70c32
+  - name: cp.icr.io/cp/cpd/wkc-gov-ui:5.3.1566@sha256:2ba999f52ab7b5ced049b5a25c89bb7a674d3b0c9b3dc461c4ddc0b525aad050
+  - name: cp.icr.io/cp/cpd/wkc-init-container-wkc:2.0.715-ubi9@sha256:ed98522af9e1143ee1ee92781c7101d82ad0fe07fba5fb25331462ebf74699dd
+  - name: cp.icr.io/cp/cpd/wkc-mde-service-manager:2.24.66@sha256:72c8597848fbf7f36faa06efdd96c409a82c485e3456d95edb11a3f55ccaa56d
+  - name: cp.icr.io/cp/cpd/wkc-metadata-imports-ui:5.3.1546@sha256:d988e5258ef09a9ad617b7555427cf565a35e461b99e2d990e7a9cd653f264b1
+  - name: cp.icr.io/cp/cpd/wkc-results-migration:1.0.2026060105-7@sha256:902506585d2fa3950512de6ec47c376a2db013370e50607091deed345e5ff21a
+  - name: cp.icr.io/cp/cpd/wkc-workflow-service:5.3.2012@sha256:9416fee24bcf17e3d407afee3975d8f21be10c668d349c9635d281211c82b3be
+  - name: icr.io/cpopen/ibm-cpd-wkc-operator-bundle:v5.3.3036@sha256:16d13ffb607c031eec4b4755509e974747b80a00eaa67f62cfb42d767289dc29
+  - name: icr.io/cpopen/ibm-cpd-wkc-operator-catalog:v5.3.3036@sha256:eb48e7f94835029c3ae769ae3eea43f7e8f901341aa1fc8dc84b5b3c91e3eb87
+  - name: icr.io/cpopen/ibm-cpd-wkc-operator:v5.3.3036@sha256:2e9ae8c4b6f9501caa2e1bfa20a75a30a9958c292da7bae4b2564c468c3592c2

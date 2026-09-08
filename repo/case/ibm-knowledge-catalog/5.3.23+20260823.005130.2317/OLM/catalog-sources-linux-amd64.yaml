@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-knowledge-catalog-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-knowledge-catalog-5.3.23+20260823.005130.2317-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-knowledge-catalog-operator-catalog@sha256:86272d6ea0db2cf36a3717caa62795cd18f9acb5adb4b790400e94c59b4b6dc5
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
