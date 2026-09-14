@@ -1,0 +1,37 @@
+apiVersion: v1
+case:
+  appVersion: 12.0.0.0.40
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Data Replication 12.0 CDC Engine
+  displayDescription: IBM Data Replication 12.0 CDC Engine
+  displayName: IBM Data Replication CDC
+  icons: []
+  licenses:
+    IIDR:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM InfoSphere Data Replication License
+        displayName: IBM InfoSphere Data Replication License
+      ref: LI_en
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-cdc-replication
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 12.0.40
+  webPage: https://www.ibm.com
+created: 2026-09-14T14:57:46.00051978+0000
+digest: sha256:56c99f081e734d16a50c9d09b5db3fb198da67c1ed4bb3e32824ac5d6dd03de5

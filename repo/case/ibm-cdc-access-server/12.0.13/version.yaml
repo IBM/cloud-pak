@@ -1,0 +1,37 @@
+apiVersion: v1
+case:
+  appVersion: 12.0.0.0.13
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Data Replication 12.0 Access Server
+  displayDescription: IBM Data Replication 12.0 Access Server
+  displayName: IBM Data Replication CDC Access Server
+  icons: []
+  licenses:
+    IIDR:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM InfoSphere Data Replication License
+        displayName: IBM InfoSphere Data Replication License
+      ref: LI_en
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-cdc-access-server
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 12.0.13
+  webPage: https://www.ibm.com
+created: 2026-09-14T14:57:42.84200664+0000
+digest: sha256:24603f11456a335db19a152683567e6b49ab6fb6fe489776e8d016794bb00f3d
