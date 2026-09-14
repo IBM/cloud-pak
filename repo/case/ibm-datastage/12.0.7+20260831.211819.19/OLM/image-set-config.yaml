@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ds-assets:540.0.21@sha256:9bd2c5d86e3ce4f94fbac6cec5a2dfdd3c03ee105e117fcf79bc602249845453
+  - name: cp.icr.io/cp/cpd/ds-canvas:540.0.126@sha256:55aa405fcfdef485d9ccea92183fc51cdf668a6d5c67fd359d0154e72f435c59
+  - name: cp.icr.io/cp/cpd/ds-cas-lite:540.0.14@sha256:e0703b19a08980acd4351749635db82b8b827e6f09198215cd160a6475c7f182
+  - name: cp.icr.io/cp/cpd/ds-dataservice:540.0.17@sha256:6494d4ed42f518eb8dd93be0c3fb765762d609e1e975c9564864f273109f6f69
+  - name: cp.icr.io/cp/cpd/ds-flows-assistant:1.0.873@sha256:37648cb7122af64ce5383f8b470576017e4292792c6f68d0a0cf3d0d970c1459
+  - name: cp.icr.io/cp/cpd/ds-flows:540.0.61@sha256:bc9427ca2823ee400bfc2181a3c28a1767dea7ff205e4bf58881e62899177a7c
+  - name: cp.icr.io/cp/cpd/ds-metrics:540.0.15@sha256:3783453d18f8d529b5e2a3b5a89279c57a547112d5310654994e2d21fe8ae289
+  - name: cp.icr.io/cp/cpd/ds-migration:540.0.43@sha256:5d99d0a7ee228bc16b4eb3bee71c8081ed0eafd82f2c8dba34bbafb596ee0939
+  - name: cp.icr.io/cp/cpd/ds-nginx-proxy:5.4.7@sha256:e0b6337520cbfeecd4cc1adcba460fc2d942eab966f4e5e968764f433a868a63
+  - name: cp.icr.io/cp/cpd/ds-px-compute:540.0.79@sha256:12afbf3084bca91a58c23793756585622a1dab94cba08085fde88a3a9af593b9
+  - name: cp.icr.io/cp/cpd/ds-px-runtime:540.0.79@sha256:fff2e9e77b0ec40aad9f6c5a1c7955f6155ae650f558367ba8d0d7940f020dbc
+  - name: cp.icr.io/cp/cpd/ds-runtime:540.0.25@sha256:0504b5b3c20747057cf5faeeed0f05a82f37ae870e1b9c8adb23c6d7d120a367
+  - name: cp.icr.io/cp/cpd/qs-ruleset:540.0.13@sha256:d4d129c7a848c10e7db204d952d1b326ff5cf8f9b145ee9058ec0d29631a4678
+  - name: icr.io/cpopen/ds-operator-bundle:5.4.7-19@sha256:4921ddf900c3414f2dd46fdb952b5fb9533c05b865d3367b2060777f3fdfae11
+  - name: icr.io/cpopen/ds-operator-catalog:5.4.7-19@sha256:bae6636a6191c39609c2de8431bb54abdb6e91ed866d8ef4c5006c849760c604
+  - name: icr.io/cpopen/ds-operator:5.4.7-19@sha256:873429fe09e4fc4f3ed07c5d746f58f6732522b8541cd961a7734e1e6fa93c84

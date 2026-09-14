@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-wspipelines-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-ws-pipelines-13.0.7+20260828.130733.7
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-wspipelines-operator-catalog@sha256:288cd61fc1a5ddc94f5a7c4a894f87c6fac9b6c8e11c3c84c57c6afb0513102c
+  sourceType: grpc
