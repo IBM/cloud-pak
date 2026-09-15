@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-itx-rs:11.0.2.0.20250829@sha256:35894f9753dab895e028ea3201a06f7d327433860f7461ca5dd2e96115ad510f
+  - name: cp.icr.io/cp/ibm-itxa/itxa-init-db:10.0.2.2_1-x86_64-20260904@sha256:f532076308232a764b7747a9c00193c0462bc2a89881ca2151f60d226aff1ca2
+  - name: cp.icr.io/cp/ibm-itxa/itxa-resources:10.0.2.2_1-x86_64-20260904@sha256:1d50125e89056dc50b8b904b1d311e4f63517dda7cdc81f3108fb0bc60dd6acb
+  - name: cp.icr.io/cp/ibm-itxa/itxa-runtime:10.0.2.2_1-x86_64-20260904@sha256:1b7513168875e6cc44e1571af94a588f3364b05ab8ab604aa674516c8c3ad0d3
+  - name: cp.icr.io/cp/ibm-itxa/itxa-ui-server:10.0.2.2_1-x86_64-20260904@sha256:d2fcb33a7f1199d286e58522df5950b5401f9c7fd1d9c9373a19e94e822b94b1
