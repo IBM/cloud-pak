@@ -1,0 +1,20 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-ini/agents-api:2.0.0@sha256:00cc22cf45ea3ed0fc142d88435a606fc1c7bc98acc3feb4dee5906a5811cf5c
+  - name: cp.icr.io/cp/ibm-ini/distributed-analysed:2.0.0@sha256:da60f29cde74458f52928aac6ffae2f4526250e461c452388e0691e0509824ca
+  - name: cp.icr.io/cp/ibm-ini/distributed-classifier:2.0.0@sha256:6969e79b8639f2d25a1b3eafb130b9cfddcf4f173f54235abaa0af798022e4af
+  - name: cp.icr.io/cp/ibm-ini/frontend:2.0.0@sha256:fbbad9cd307960e03c6f266afbc14b9dfc41fb22687121d97e3aca027c9ac3c4
+  - name: cp.icr.io/cp/ibm-ini/ikigai-api:2.0.0@sha256:f88d63f6bbc1e1945eb71b15c120b23bc07655770a1325542943c03c63fa45a1
+  - name: cp.icr.io/cp/ibm-ini/ikigai-juniper-adapter:2.0.0@sha256:4c4e986d4b12c1054bef2a1df4b254c487b3a81ca5384a5e2acf8e76b2160943
+  - name: cp.icr.io/cp/ibm-ini/ingestor:2.0.0@sha256:a076532733760396f3f9430ad3a30702b81a03f7b830d46bc6ef5c92994c24bc
+  - name: cp.icr.io/cp/ibm-ini/k8s-integration:2.0.0@sha256:b55c211539ef562cd363955a3fabdb01144b1009401bd9277875ad6c1444c4a1
+  - name: cp.icr.io/cp/ibm-ini/postgres:ubi9-16.15-2633@sha256:16aa44a68786e213130e84baf3fb2292ee5acdcf2695d87b25f8172492d2bf20
+  - name: cp.icr.io/cp/ibm-ini/redis:v8.6.2@sha256:11439ea3daf3e5756b5fa87830b3a71038bd28033f5fcbbc965e043af1e3e54b
+  - name: cp.icr.io/cp/ibm-ini/victoria-logs:v1.50.0@sha256:c884d5c1e714a151bb730797cc762881538c8e9e9fd65f404592f52e1557ee7b
+  - name: cp.icr.io/cp/ibm-ini/victoria-metrics:v1.143.0@sha256:bb629e0869cd413d7e8e4ffa2fbe8a9e50b2299e5973604944679f3201523815
+  - name: cp.icr.io/cp/ibm-ini/vllm-openai:v0.14.0@sha256:48a03c91eaa04fb7e71c77121a85e661d62de1b2207edf591aea6a05d779f9ef
+  - name: icr.io/cpopen/ini-operator-bundle:2.0.0@sha256:a2810df01221d321bfd539339d8a925c8d89fdfe0809c61d0e55390ead2a66f9
+  - name: icr.io/cpopen/ini-operator-catalog:2.0.0@sha256:55828f5b38bf26bb463abf560af2653d269314d74a0879a031c6842e79786c3f
+  - name: icr.io/cpopen/ini-operator:2.0.0@sha256:6aa6f1bb42fab26cfa4409c14f81b9b8bc9b120717ada1fd28e86e59d77ae121

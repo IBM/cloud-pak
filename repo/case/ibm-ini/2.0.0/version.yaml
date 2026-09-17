@@ -1,0 +1,57 @@
+apiVersion: v1
+case:
+  appVersion: 2.0.0
+  catalogs: {}
+  certifications:
+    ibmccs: {}
+  classifications: {}
+  description: IBM Network Intelligence Operator manages the lifecycle of IBM Network
+    Intelligence components on Kubernetes.
+  displayDescription: IBM Network Intelligence is engineered to support the entire
+    lifecycle of intelligent network operations.
+  displayName: IBM Network Intelligence Operator
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: IBM License Information for IBM Network Intelligence
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    nonIbmLicense:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Notices for separately licensed code used by IBM Network
+          Intelligence or its dependencies.
+        displayName: non_ibm_license
+        name: nonIbmLicense
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Notices for licensed code used by IBM Network Intelligence
+          or its dependencies.
+        displayName: notices
+        name: notices
+      ref: notices
+  name: ibm-ini
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+      ppc64le: {}
+      s390x: {}
+    k8sDistros:
+      iks: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 2.0.0
+  webPage: https://www.ibm.com/products/network-intelligence
+created: 2026-09-17T13:52:31.16905423+0000
+digest: sha256:750c8835bd3f5cd245fa38b79e98e27071a254195b5bd4b42e3efa9644d0622b
