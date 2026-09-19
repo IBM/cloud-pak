@@ -1,0 +1,25 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-ucv-application-api:5.3.0.5@sha256:267af70943ecb2f9f885bd5728f5c6a646b4d829d3ea9fcfa8a54e80626ae53d
+  - name: cp.icr.io/cp/ibm-ucv-continuous-release-consumer:5.3.0.5@sha256:3b88d83dc9ee6c670fd7abbd16c77289a7e3e0b352b698b980d7daf87c412ae0
+  - name: cp.icr.io/cp/ibm-ucv-continuous-release-poller:5.3.0.5@sha256:ecfcf26153a7df8499b3380fd6273e76e80febebbe35d7ac34f37a9f8ab31061
+  - name: cp.icr.io/cp/ibm-ucv-continuous-release-ui:5.3.0.5@sha256:458be43e1040218275ef1eac0b61a216070a45de6815142375633059096a2b7d
+  - name: cp.icr.io/cp/ibm-ucv-generator-rabbitmq:5.0.0.3@sha256:0520d3cc7973f9bf2f0844891f88e5f658aeb942df419a99b9b03d2c2c5ee224
+  - name: cp.icr.io/cp/ibm-ucv-mcp-server:5.3.0.5@sha256:20d1001943f9adf0d958105289367be1a9402ff5623bb7653b70ec31d2581ae4
+  - name: cp.icr.io/cp/ibm-ucv-multi-app-pipeline-api:5.3.0.5@sha256:6727afe30a1066765451bd608cef8b5fe114039b591e9c300814ec4e5e198ab4
+  - name: cp.icr.io/cp/ibm-ucv-opensearch-dashboards:1.0.0.3@sha256:be24cdf6cd1219332342b8edb313a2b8c639463eebc56e6e83dd8a99e7f6f9ba
+  - name: cp.icr.io/cp/ibm-ucv-opensearch-dataprepper:1.0.0.3@sha256:67b58ba2dd4968b6a1898286f219a97a8d54aa27981019459c73110353c1b506
+  - name: cp.icr.io/cp/ibm-ucv-opensearch-server:1.0.0.3@sha256:33a3d774e6649ca9327d088d6ecd09665e0bef4e654da19afd1bc57c78d8ee25
+  - name: cp.icr.io/cp/ibm-ucv-rcl-client:5.0.0.114@sha256:b718dfdf53e62ba325c6ebe3ef78372fbbb5e25958dfc01ea202df391e52463e
+  - name: cp.icr.io/cp/ibm-ucv-release-events-api:5.3.0.5@sha256:ab0a400e74b9a73867b6f04feefd37fdb10412133d0a05c0b41bfb6f26e0bd63
+  - name: cp.icr.io/cp/ibm-ucv-release-events-ui:5.3.0.5@sha256:09c010dd81ac5d3c8a2a2d779775b42ada0b8ddb2fd2af1939883d33762054d9
+  - name: cp.icr.io/cp/ibm-ucv-reporting-consumer:5.3.0.5@sha256:b87960077ade577ab5be8a8f4fd4038aee36ab3e4ad8329452e5ced7635c9b62
+  - name: cp.icr.io/cp/ibm-ucv-security-api:5.3.0.5@sha256:5abe5a660245ee66c07a695ae73a6a37dfc8fcb1ff8e83f67db93c134303d6fb
+  - name: docker.io/alpine:3@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+  - name: docker.io/bitnamilegacy/kubectl:1.22.13@sha256:d0e426ccff330d004f645bbf5f41387d9fabe097b1693c501c9688c861b4bb65
+  - name: docker.io/bitnamilegacy/nginx:1.27.1@sha256:934d1acd5ca81efbb3e968391b0a79df13d30bd21983defadaad9db995901867
+  - name: docker.io/bitnamilegacy/rabbitmq:4.1.2@sha256:fac502149c400b0e373520f02ff8288114b57d9209019b15f5695947c9dbb14d
+  - name: icr.io/cpopen/opencontent-common-utils:1.1.2@sha256:cd5065df7304b8b6e17adf174e2742902f25b98b5605f721a3dcafd0df8ad1fc
+  - name: registry.access.redhat.com/ubi10/ubi-minimal:10.2@sha256:e6babb0aa7e2adbd210103d0736207381c76fb38ea8cc15d4872087799bdc5c1
