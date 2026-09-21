@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-events-operator-catalog@sha256:630c33f7f2bbf189a15eafdec1a0ade79d1100337ee7ec16afb693f927586245
+    packages:
+    - name: ibm-events-operator
+      channels:
+      - name: v7.2
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-events-operator-catalog:cd-20260915-1026@sha256:630c33f7f2bbf189a15eafdec1a0ade79d1100337ee7ec16afb693f927586245

@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-license-service-scanner-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-license-service-scanner-4.2.25
+  publisher: IBM
+  image: icr.io/cpopen/ibm-license-service-scanner-operator-catalog@sha256:fae3106c63b03385668b288b10524a7520fd5f4d9698bf07b7412dda5da4e69c
+  sourceType: grpc
