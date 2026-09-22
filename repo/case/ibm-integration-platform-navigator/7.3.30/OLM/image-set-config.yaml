@@ -1,0 +1,15 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2716@sha256:b259810099ca7a4150f00ccaa870b02890d1d7f022f3ac330918d515968a033b
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2026-09-21-1003-8b1c1bc9@sha256:1d2641141ee8e67743dd37a7741651b9f8f8732af8c9c8ec27066b1e755ad1f7
+  - name: cp.icr.io/cp/icp4i/icip-services:2026-09-21-1213-53aa71d7@sha256:382eb83718e6734b3e0aea48cf01dad636892ba8362ba1ca46a9681878ee8745
+  - name: icr.io/cpopen/edb/postgresql:14.23-5.31.2@sha256:063c8a38d80a2b34f06ccdf4e432424a2d1257cddbefb87794b39ae505f8c921
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2716@sha256:df4f2edc4813baaa556171e2d9da5e6aee8e0c208bcc3f3cf4ded367d6c9b7a9
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.28.3@sha256:002efb4961c762fbd31079dfad1534c63d145a626ffcc777ab928914485c55d6
+  - name: icr.io/cpopen/ibm-integration-cloud-native-postgresql-catalog:2026-07-08-1351-d949b70d@sha256:f37a533ac770aa145ee78d33f030d52b6d78ad3bf4c49ca7ffe1559d0eeb0624
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-catalog:7.3.30-2026-09-21-1508-3f504f3b-service-v1610@sha256:3f723cac432e91e9afa0b2866d9db0540f0d03ad2fdcd8b5661ae2b5a80b8ceb
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle:7.3.30-2026-09-21-1508-3f504f3b-service-v1610@sha256:9b6169a8d2b27e694189422d5ecacb74072f32638ee7623931383eb7dc451e1d
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator:7.3.30-2026-09-21-1508-3f504f3b-service-v1610@sha256:b4e5a2d52e881546940ca3c7b783dcc3fdeb2e737bcf797bef99639cbc412ce4
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2026-09-18-0850-d0dfe74d@sha256:fd91d65c7f91afb61c0207bd2b3f9ce468aa2aa196cb8d8a87e2df6533cc708f
