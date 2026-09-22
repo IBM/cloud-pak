@@ -1,0 +1,21 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part1:1.0.55@sha256:c07607b1cf92416e0d39c48204cca411e895e98d11410f72109491a0aae57881
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part2:1.0.55@sha256:68faf7342bfa9693e0c34f6d6123ac02d3eeafa48a2dd6d6663c7e37cde23e14
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part3:1.0.55@sha256:526e7bbbaaabf96260276184df410a3d08cba44cc53495bb59e21eacaea4a7fa
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part4:1.0.55@sha256:2f73af909f20c2d01162fe26e2782824191eff6e0b770aa0c0a31be6666a4f9f
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part5:1.0.55@sha256:3d3bd89724dc8a3f218aca9af16f242525ba952e2e8e929194bed0d52d7d7071
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part6:1.0.55@sha256:12b8cdfe39a27a1288a8a74af24f52dd684d2925b713917a684180faee7737cf
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part7:1.0.55@sha256:82887d0175efc176d66a1eb667893d4b4b792fbb5fd2e2f180de1c456717fb47
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part8:1.0.55@sha256:11170bc913ce9082e5e0e4aaef607d82e08967f2fd787f9c2167c1a18857da66
+  - name: cp.icr.io/cp/cpd/ibm-granite-20b-code-8k-ansible-part9:1.0.55@sha256:c517454657949670920c497a267865d243228d28f8cb9362e9bab78bb1fcde1e
+  - name: cp.icr.io/cp/cpd/wca-codegen:5.3.15-1@sha256:a3d83773ba4173e2f9ba99083f4a0a25777a078fa59fedae1496ecc72cb22d9d
+  - name: cp.icr.io/cp/cpd/wca-codematch-index:3.5.4@sha256:d5c6dd54e33caadcbda971f8578dd6a3315612838fb32da5977b89945e2fdc12
+  - name: cp.icr.io/cp/cpd/wca-codematch:5.3.15-1@sha256:69ee453b1ce68d854b0cfa3de8aaa025415b6885cf34a077f277b152c2370c1f
+  - name: cp.icr.io/cp/cpd/wca-config-ui:5.4.6-2@sha256:2c389c8a97f08c738c4ef0b052f2a4c4517d49cc70f98e5176285b4250684ae1
+  - name: cp.icr.io/cp/cpd/wca-metering-job:5.4.6-2@sha256:fe2a211d3c79e086cb4a9491d0c9e0c4c38d9660a842e14fc03c9dcbdcddf27c
+  - name: cp.icr.io/cp/cpd/wca-metering:5.4.6-2@sha256:a104ba531f973f55ea13dc1597be0a229d5fa1cffdfec30a406c6c127c826fcb
+  - name: icr.io/cpopen/ibm-wca-ansible-operator:5.3.15-1@sha256:5e75d5b8ea88e65130d6ad01de5b6cb1b1f95fabb9cff28edf01f76b6f521768
+  - name: icr.io/cpopen/ibm-wca-base-operator:5.4.6-2@sha256:a218d673dbe87ce1cfe06f5d9fdc0ea3a26bbdd39eef737a03365ce54b1db68f
