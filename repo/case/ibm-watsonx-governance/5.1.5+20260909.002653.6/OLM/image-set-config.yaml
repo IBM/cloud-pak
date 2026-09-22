@@ -1,0 +1,10 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/hap-detector-onnx:1.0.0-35@sha256:337e5af160758c2ef4c01ea615d56a3c34b7dacd59848495eb464ff225c79d5f
+  - name: cp.icr.io/cp/cpd/off-topic-detector-onnx:1.0.0-35@sha256:d34a17599e5a21a7569b91b1a5cb259c3fe0c39a72ddf98916af7ded7ca5c017
+  - name: cp.icr.io/cp/cpd/prompt-armour-detector-onnx:1.0.0-35@sha256:043a33ea94db93c103042618956be08cd2c0ac8bbdb16353e64d2122c9bcc3ac
+  - name: icr.io/cpopen/ibm-cpd-watsonx-governance-operator-bundle:5.1.5-6@sha256:2b6bbfb069b65ab1ee17eb19ac3d904ea93852e654a0ef1809037a4354c340a9
+  - name: icr.io/cpopen/ibm-cpd-watsonx-governance-operator-catalog:5.1.5-6@sha256:98975bba8f2e179adba7b83dadaf298ae7ad458a43c1b96d9517b21a9f479579
+  - name: icr.io/cpopen/ibm-cpd-watsonx-governance-operator:5.1.5-6@sha256:d112fdadeff42d326edde183919421a78ae6fd53dcf18c677c3cbe07d940c00e

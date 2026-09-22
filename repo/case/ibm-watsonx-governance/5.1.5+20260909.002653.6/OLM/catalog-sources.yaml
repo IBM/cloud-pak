@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-governance-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-governance-5.1.5+20260909.002653.6
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-watsonx-governance-operator-catalog@sha256:98975bba8f2e179adba7b83dadaf298ae7ad458a43c1b96d9517b21a9f479579
+  sourceType: grpc
