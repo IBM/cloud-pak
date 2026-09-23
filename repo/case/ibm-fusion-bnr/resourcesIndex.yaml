@@ -521,3 +521,41 @@ containerImages:
     imagetype: singleArch
     os: linux
   tag: v2.11.2
+- caseVersions:
+  - 2.14.0
+  category: catalog
+  digest: sha256:b79caf8d2787f73527a3e73933c16b0124739e3804af42078fdcc54ac9e0eea9
+  image: cpopen/idp-server-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v2.14.0-linux.amd64
+- caseVersions:
+  - 2.14.0
+  category: catalog
+  digest: sha256:cbd23c2fde25d54ca2ca77383ff85b6fdfe6c37a8ccedd7e7a7d04c3e7ded2ef
+  image: cpopen/idp-server-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v2.14.0-linux.s390x
+- caseVersions:
+  - 2.14.0
+  category: catalog
+  digest: sha256:d2bdbc58431f9bfbd1bf1d550f3465900b3791085e4703c93b0d04a80f05f493
+  image: cpopen/idp-server-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v2.14.0-linux.ppc64le
+- caseVersions:
+  - 2.14.0
+  category: catalog
+  digest: sha256:1cda52f948d2fa351a72e28fb0f8faf53f04ccc8da3d071d4dbc694027272d87
+  image: cpopen/idp-server-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v2.14.0
