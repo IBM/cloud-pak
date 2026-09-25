@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-datapower-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-datapower-operator-1.18.6
+  publisher: IBM
+  image: icr.io/cpopen/datapower-operator-catalog@sha256:90d69ab65c626b15a78106f7da1cbd8e884d4f49d77aa181d96ae31881df069d
+  sourceType: grpc
