@@ -1,0 +1,28 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-devops-test-emissary:62105fa5db@sha256:8080d949dbbe27e8f7ef6c6725c78a97b7b84c375662986c3a240dd8f1eb0942
+  - name: cp.icr.io/cp/ibm-devops-test-jdk25:62105fa5db@sha256:f581752cf700913b7c86aaf96df0f564d111bc157ea6baba7b8b5d5763a4ef6d
+  - name: cp.icr.io/cp/ibm-devops-test-jmeter:62105fa5db@sha256:66e70d7e72118a58b43969f5ef2173ce6213f6f4b3f51a34aaf80fdeae441f55
+  - name: cp.icr.io/cp/ibm-devops-test-junit:62105fa5db@sha256:4d7083b36d1e0229401f6b6e61bf45fd345c09a491625cdd09f5489e9b10be17
+  - name: cp.icr.io/cp/ibm-devops-test-keycloak:62105fa5db@sha256:e62207d7f69df83f6360db2dfd0a94847f5660d44a568ec0a65fa5a97cab41d1
+  - name: cp.icr.io/cp/ibm-devops-test-postgresql-migrate:62105fa5db@sha256:98c50852a4433dd6a798d0d9ebe6afa9f7c3d6c4aed8f3857ad82d5388ddbb3c
+  - name: cp.icr.io/cp/ibm-devops-test-postgresql:62105fa5db@sha256:ab6a9ddb22232ff9ab6766361641efed6c9f6a5c521d2a72b3f792f4a8425549
+  - name: cp.icr.io/cp/ibm-devops-test-postman:62105fa5db@sha256:cf666afecd9577d809b48341be1ee17fd59d4b62c279bd115f9d0e7aeee9e081
+  - name: cp.icr.io/cp/ibm-devops-test-rabbitmq:62105fa5db@sha256:41c13d89b2acfc9bd59840607bc9ca5b686192df680f979e0808399150a6202a
+  - name: cp.icr.io/cp/ibm-devops-test-runtime-chrome:62105fa5db@sha256:d3a66eab380a4970eda2540f9b2b01755652777f77ef1c5c0ac4fd41d23755d8
+  - name: cp.icr.io/cp/ibm-devops-test-runtime-edge:62105fa5db@sha256:c4e756e4409760a6949e2b264da4529103e59cfb0d0230cf4fca600a760d2a1d
+  - name: cp.icr.io/cp/ibm-devops-test-runtime:62105fa5db@sha256:8d7f771a11ecfe19d9cb29aec0830bf940c96cdfaafd213347f4bd9e01d2bbfa
+  - name: cp.icr.io/cp/ibm-devops-test-virtualization:62105fa5db@sha256:5316c6fc7ce5e629c95ea4093fa04815b830c7ccef4a936781c8167dd99f0ceb
+  - name: cp.icr.io/cp/ibm-devops-test-workbench:62105fa5db@sha256:84235924183616c6c926dbed48dfc1e19101284b079c567c53089bb8772a1295
+  - name: cp.icr.io/cp/ibm-devops-testhub-core:62105fa5db@sha256:94addb96e0799c5aad4c2d96f202d94c265ca2a5741c6747947b8926d29b2eb4
+  - name: cp.icr.io/cp/ibm-devops-testhub-datasets:62105fa5db@sha256:b3af3cc7454700f0446481c2b3d880ee4136becc73c08a9f40e006e507680d54
+  - name: cp.icr.io/cp/ibm-devops-testhub-execution:62105fa5db@sha256:f56e970f2c61a8a80f66b12cc6707dc16a8b578e0258725e97b3443a34c8a6f6
+  - name: cp.icr.io/cp/ibm-devops-testhub-extensions:62105fa5db@sha256:c6af25196da2e81a83fe654c3637d031cad301ce8a95c9b51a4bfc0aea2e7c4f
+  - name: cp.icr.io/cp/ibm-devops-testhub-frontend:62105fa5db@sha256:591e81c19f5106959b62420d6abd01be68377200bc5245559448d5da3426cedb
+  - name: cp.icr.io/cp/ibm-devops-testhub-results:62105fa5db@sha256:2dfaa3b59f2e8cd1fbd545aa90ce62260b7adedbb7b6fd350305aee4518f8159
+  - name: cp.icr.io/cp/ibm-devops-testhub-rm:62105fa5db@sha256:b3cd82894226d6cdf9a4ee4f955858fca23a5507c68c8a8e3f4126f441316b45
+  - name: cp.icr.io/cp/ibm-devops-testhub-router:62105fa5db@sha256:0a1f91e9b02f9dc9d4a1042bc41fc98eb3f4baa50b262541f8e3fa4e7c547c3f
+  - name: cp.icr.io/cp/ibm-devops-testhub-runtime-install:62105fa5db@sha256:bdd38014b706e46df324a7bd88968d19441677809f6643fe83e81212736ee985
+  - name: cp.icr.io/cp/ibm-devops-testhub-tam:62105fa5db@sha256:491fc99bff65973835d153d26e91e377ac05ce75bc0cd5b0ee2132c8590895d7
