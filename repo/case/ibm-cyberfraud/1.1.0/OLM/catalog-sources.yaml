@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cyberfraud-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cyberfraud-1.1.0
+  publisher: IBM
+  image: icr.io/cpopen/cf/ibm-cyberfraud-release-catalog@sha256:0078a1dfb40e2d7ae9ddd227c63ffca72a9a822b872912467fa8dc7dbf32d156
+  sourceType: grpc

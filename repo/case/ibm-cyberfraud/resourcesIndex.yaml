@@ -1,2 +1,20 @@
 apiVersion: v1
-containerImages: []
+containerImages:
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:5a636852d800e8998d3c42dfa32ce5f8dead4e200f8608d6963954c0503d5a9a
+  image: cpopen/cf/ibm-cyberfraud-release-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.1.0-latest-amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:0078a1dfb40e2d7ae9ddd227c63ffca72a9a822b872912467fa8dc7dbf32d156
+  image: cpopen/cf/ibm-cyberfraud-release-catalog
+  platform:
+    imagetype: manifestList
+  tag: 1.1.0-latest
