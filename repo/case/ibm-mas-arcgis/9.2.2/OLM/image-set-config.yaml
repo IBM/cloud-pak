@@ -1,0 +1,46 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/arcgis/apps:12.0.0.7445@sha256:80b7ce803f24405c448c81503c96347388bf724b5859ffe12bf344da4bbac625
+  - name: cp.icr.io/cp/arcgis/arcgis-busybox:12.0.0.7415@sha256:3a121a3cc9cce4190192a82751955124c6cb7a47bfde0dcc298da883379f1699
+  - name: cp.icr.io/cp/arcgis/arcgis-disaster-recovery:12.0.0.7445@sha256:2783b0a5d9f95c5c180d50d857da89c0d340f6d28e7cac4cea989200d573d0e0
+  - name: cp.icr.io/cp/arcgis/arcgis-fluent-bit:12.0.0.7286@sha256:cf49de2436d3713a74b20a1f908277ed8ae703e43e31bc0a309b1b67a077601d
+  - name: cp.icr.io/cp/arcgis/arcgis-ignite:12.0.0.7445@sha256:c72051d0c95846a0f8d9ad1ced95aeef591424cb6ffe09810adc59d5533ee336
+  - name: cp.icr.io/cp/arcgis/arcgis-ingress-controller:12.0.0.7445@sha256:6cd034a8254e9335c4c4b71960980322660b7559b6279e972e8bbc6a9f45ff28
+  - name: cp.icr.io/cp/arcgis/arcgis-nginx-web:12.0.0.7445@sha256:d72943acd56dcc940918b4bd3fa426a2a8cd1fa40da772c43a41c416e865f974
+  - name: cp.icr.io/cp/arcgis/arcgis-notebook-handler:12.0.0.7445@sha256:fa2ad3cedf277adc1aefab22c718c96c5d7c81c8f8af5c3cf227c90549aaaf09
+  - name: cp.icr.io/cp/arcgis/arcgis-notebook-server:12.0.0.7445@sha256:d5a4fea24c8e83b0970990d3debe11e566bb3c527e419748c6972647657d1e0e
+  - name: cp.icr.io/cp/arcgis/arcgis-opensearch:12.0.0.7445@sha256:51b2fc30830bcf4299ddfa68eb2a3cd5a1fe20098d1811f16823835eaef67417
+  - name: cp.icr.io/cp/arcgis/arcgis-ozone:12.0.0.7445@sha256:7079741f703bbf98dbcad24a5d41294461a063d55ff7e855ca1b6625b6e5355c
+  - name: cp.icr.io/cp/arcgis/arcgis-postgresql:12.0.0.7445@sha256:c7038f53e69d78877f50ba270f371c4370d3597c3f28ddc1a10c24da8be8934e
+  - name: cp.icr.io/cp/arcgis/arcgis-prometheus:12.0.0.7286@sha256:8bfd85a590ff731c0391c65b960b9028ce064cf77e4f42797741a49eb7504c27
+  - name: cp.icr.io/cp/arcgis/arcobjects-server:12.0.0.7445@sha256:1890bd5ccb6da4005af7556647bb13ee44bfe21fa7921088d39c86172307d546
+  - name: cp.icr.io/cp/arcgis/catalog-server:12.0.0.7445@sha256:c683bfea8eff3c183e5a9534d8e76b4a5416fd1be839ccb1a2efe4285cea6096
+  - name: cp.icr.io/cp/arcgis/config-factory-server:12.0.0.7445@sha256:867c3c2a89810cfc2aa97d8b8b5a10cea877462ad594f25eccf8b5f359ecc0e3
+  - name: cp.icr.io/cp/arcgis/customdata-server:12.0.0.7445@sha256:f3f40abc1c652f45e627dfe8be57f4fec5fed15198e37dba1d5d4c6736d10e4e
+  - name: cp.icr.io/cp/arcgis/deeplearning-model-server:12.0.0.7445@sha256:c156157256dbf3b85434996fa77e9d3e04d6492eac9c98403754d34d450f30ca
+  - name: cp.icr.io/cp/arcgis/distributed-server-deeplearning:12.0.0.7445@sha256:748babafd9f632f496f02c1a34a5cff1c7854fad5791098230b918a6c64b1d15
+  - name: cp.icr.io/cp/arcgis/enterprise-admin-tools:12.0.0.7445@sha256:b5e4290dded097e53cd8ddc7d54f6ef4aa4c569c2a020af48ab3247dc7edb712
+  - name: cp.icr.io/cp/arcgis/enterprise-admin:12.0.0.7445@sha256:ae23902c0a4797517db7a5aa6490c82024b19b5db379fa0d7b62ba26c1c5cc87
+  - name: cp.icr.io/cp/arcgis/enterprise-rabbitmq:12.0.0.7435@sha256:42bc5534fd1f157b617f3d8cfaa4466ec801446531d0be0100fc8c3d6e6a9975
+  - name: cp.icr.io/cp/arcgis/geocode-runtime-server:12.0.0.7445@sha256:d97f5020cdc8369ab0bba4320998b0b2821a7a0aff0656fbb0b993a0a5fdfb3d
+  - name: cp.icr.io/cp/arcgis/help:12.0.0.7445@sha256:d630702ab364ffe4533e573e22266f5a1c7cb52d453880f682f947577780968b
+  - name: cp.icr.io/cp/arcgis/home:12.0.0.7445@sha256:647cadff2b36b30964db33b758281f76e70d5df1c80c62e4f554396828a24b5b
+  - name: cp.icr.io/cp/arcgis/ibm-mas-arcgis-ws:9.2.2@sha256:ba7a9cb7f99f2a8dd61e6f45d2952a2c93f4f41c5b9aeab8c5e8501121f14fdb
+  - name: cp.icr.io/cp/arcgis/job-manager:12.0.0.7445@sha256:f6a268ef86b35a2ba3b3470c963750611be97461b7a764794a8cc35291342b16
+  - name: cp.icr.io/cp/arcgis/jsapi:12.0.0.7445@sha256:6f7823a1bb04475c53c45fe6e00cc3edba50061a7b62046c1f3de429e0fc3d92
+  - name: cp.icr.io/cp/arcgis/manager:12.0.0.7445@sha256:bb214b2a707b0bc78f3ff7b3148bbc98c51824ef71e81c12c0157a416715263d
+  - name: cp.icr.io/cp/arcgis/native-server:12.0.0.7445@sha256:4dd7be6c58f744de4995d1b5745e9c69475ab8ae9fe9216089cc181874590bf0
+  - name: cp.icr.io/cp/arcgis/object-store-migration-tools:12.0.0.7445@sha256:1ca75ffaab63e544ebed424b576a7083a35a7c41cb5737f29f03854d3f8bb34e
+  - name: cp.icr.io/cp/arcgis/portal-content-template:12.0.0.7445@sha256:ac9279b8e213aa93f36a9378eb4eb82a7c52dac73c4414f88bc680ddfe4a1ab8
+  - name: cp.icr.io/cp/arcgis/postgres-upgrade-tools:12.0.0.7445@sha256:0d9c693374d2198c7cb0f69fabaada3247ffa2bdc4379b19ec32e4c51378371a
+  - name: cp.icr.io/cp/arcgis/raster-analytics-server-deeplearning:12.0.0.7445@sha256:c58443d17cf7e411b64b0e0eb9c2401924bd24ed72ba69eb6e68c1c8bf33b9cb
+  - name: cp.icr.io/cp/arcgis/relational-datastore:12.0.0.7445@sha256:ab2301482d5971973592e8aace46d9f3880689fd7fb2d339976db519c08c8ec3
+  - name: cp.icr.io/cp/arcgis/sds-feature-server:12.0.0.7445@sha256:e2985d86902d42ef690ceb99a44b2c4b5fcc8cb2ef82a49add956858eaba2341
+  - name: cp.icr.io/cp/arcgis/sharing:12.0.0.7445@sha256:4302fd9428d7e9d84b110382479d2a511316b5c86077dee80068f5d2a1cb7683
+  - name: cp.icr.io/cp/arcgis/tile-server:12.0.0.7445@sha256:41cd74201541f668c6602131459b737632d7634c84c2d5e8e733927a82441530
+  - name: cp.icr.io/cp/arcgis/web-style:12.0.0.7445@sha256:b1946a9974e251cc6ebe8a58780192f61ce74aa62f3570bcb82dd86e706fc187
+  - name: cp.icr.io/cp/arcgis/webhook-processor:12.0.0.7445@sha256:9d107e42509942050d3b0cd57b44d84014a491a7dabb924b71c2a05797bf73c8
+  - name: icr.io/cpopen/ibm-mas-arcgis-operator-bundle:9.2.2@sha256:d056b4fb66933083f393f31b10c50a0ca7212dc9361035e38821c5c01982f540
+  - name: icr.io/cpopen/ibm-mas-arcgis:9.2.2@sha256:c4c987af39c3883db516464b4580c863668e7054433819d6bc6e4dd598b4a522

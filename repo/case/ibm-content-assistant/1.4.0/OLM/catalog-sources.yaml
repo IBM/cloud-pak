@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-content-assistant-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-content-assistant-1.4.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-content-assistant-catalog@sha256:33f344909a063195dae4f9afbb0d18ba143a88893b03d6e589016669d9bc4a4f
+  sourceType: grpc

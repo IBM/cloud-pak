@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-content-assistant-catalog@sha256:33f344909a063195dae4f9afbb0d18ba143a88893b03d6e589016669d9bc4a4f
+    packages:
+    - name: ibm-content-assistant-operator
+      channels:
+      - name: v1.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-content-assistant-catalog:v1.0.4-fbc-20260925.015026-4C302C7FE@sha256:33f344909a063195dae4f9afbb0d18ba143a88893b03d6e589016669d9bc4a4f

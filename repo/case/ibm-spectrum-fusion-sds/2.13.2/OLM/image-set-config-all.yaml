@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/isf-operator-software-catalog@sha256:085362757f4f6e5d8305b76eff1e80159d8f8493fe3f6c1e5489e07faf2c1ed3
+    packages:
+    - name: isf-operator
+      channels:
+      - name: v2.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/isf-operator-software-catalog:v2.13.2@sha256:085362757f4f6e5d8305b76eff1e80159d8f8493fe3f6c1e5489e07faf2c1ed3
