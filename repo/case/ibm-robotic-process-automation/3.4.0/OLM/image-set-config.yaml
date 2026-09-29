@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-rpa-operator-catalog@sha256:145c73af610473737770239b09c0d09001bd34c0190772b916639b6b16bcd660
+    packages:
+    - name: ibm-automation-rpa
+      channels:
+      - name: v3.0
+      - name: v3.1
+      - name: v3.2
+      - name: v3.3
+      - name: v3.4
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-rpa-operator-catalog:3.4.0@sha256:145c73af610473737770239b09c0d09001bd34c0190772b916639b6b16bcd660
+  - name: icr.io/cpopen/ibm-rpa-operator:3.0.0@sha256:80a840019fec24ac81e5151d0d8d7634f99684bd66b7ddb4243a7d2d5084d16e
+  - name: icr.io/cpopen/ibm-rpa-operator:3.0.1@sha256:9a3e839b25f8afd0f281179b82dfc18fbcd77f6ccb4377609f3a48355b81a060
