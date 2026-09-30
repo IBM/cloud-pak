@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-content-cortex-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-content-cortex-26.0.3
+  publisher: IBM
+  image: icr.io/cpopen/ibm-content-cortex-catalog@sha256:bc24332e5c4722bb5ea12ebb4fa90ac5f15fc48865562f3bc26aa47497fa955a
+  sourceType: grpc
