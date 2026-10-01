@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-aiopsedge-operator-catalog@sha256:89b0d08a19c795b120ce630feecb893f89b56fcfed95d6bbf764f01e880aec4a
+    packages:
+    - name: aiopsedge-operator
+      channels:
+      - name: v5.1
+      - name: v5.2
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-aiopsedge-operator-catalog:v5.2.0-20260929.1912-89b0d08a1@sha256:89b0d08a19c795b120ce630feecb893f89b56fcfed95d6bbf764f01e880aec4a

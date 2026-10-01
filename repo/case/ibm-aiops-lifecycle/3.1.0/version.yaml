@@ -1,0 +1,54 @@
+apiVersion: v1
+case:
+  appVersion: 5.2.0-202609291912
+  catalogs:
+    ai: {}
+    automation: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+    limited: {}
+  description: This operator manages the AIOps Lifecycle component of the IBM Cloud
+    Pak for AIOps product.
+  displayDescription: ""
+  displayName: AIOps Lifecycle Operator
+  icons: []
+  licenses:
+    license:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for AIOps License
+        displayName: Cloud Pak for AIOps
+      ref: LA_en
+    nonIbmLicense:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for AIOps Terms and Conditions
+        displayName: Terms and Conditions
+      ref: non_ibm_license
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: Cloud Pak for AIOps Notices and Information
+        displayName: Notices and Information
+      ref: notices
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+    cpcicd_ibm_com:
+      installProperties:
+        internalOnlyDependency: {}
+  name: ibm-aiops-lifecycle
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 3.1.0
+  webPage: https://www.ibm.com
+created: 2026-10-01T15:09:30.13106800+0000
+digest: sha256:0dcf0c99155756be1ba7711e738b84b15b28aa3b167873e2c23c52353d3fdaaa

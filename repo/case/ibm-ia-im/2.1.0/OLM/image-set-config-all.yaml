@@ -1,0 +1,17 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cp4waiops/httpd:v5.2.0-20260915.1245-dbe5f70d4@sha256:dbe5f70d4d7572d1bad1871d6a0aa583fcbdb5418fb8ed6e73b627ea58a01ddc
+  - name: cp.icr.io/cp/cp4waiops/ibm-infra-management-application:v5.2.0-20260915.1245-0e787b486@sha256:0e787b4861df02361a35cafd67654bf7e111e6eac39b9f16355a97ec760938e4
+  - name: cp.icr.io/cp/cp4waiops/ibm-infra-management-base-worker:v5.2.0-20260915.1245-2792884e6@sha256:2792884e66b3c701d607ba7da74acfc7132c41c56c7ad26516630b0476e8a195
+  - name: cp.icr.io/cp/cp4waiops/ibm-infra-management-opentofu-runner:v5.2.0-20260915.1245-9d741465a@sha256:9d741465aaeaf1ff701218fec8b29583888874fbb3f69dd36dec02c04fe4c9e9
+  - name: cp.icr.io/cp/cp4waiops/ibm-infra-management-orchestrator:v5.2.0-20260915.1245-cf6c1b83f@sha256:cf6c1b83f64f23fcba1f9d1b3a2062774694bdfc06297a867a58abcd62d5185b
+  - name: cp.icr.io/cp/cp4waiops/ibm-infra-management-ui-worker:v5.2.0-20260915.1245-616f9608b@sha256:616f9608b1633eff3ef3c76d6a73f9f35964fc3922f6e7922c0284d11d4df018
+  - name: cp.icr.io/cp/cp4waiops/ibm-infra-management-webserver-worker:v5.2.0-20260915.1245-664a73bfa@sha256:664a73bfa074f9a0fd95969a02a0e2cbd5b6ed55cbc76b182458e9168b0de888
+  - name: cp.icr.io/cp/cp4waiops/memcached:v5.2.0-20260915.1245-0f1dd4199@sha256:0f1dd41998af3b63ad8c6aaa40b91fcbdd2f4b02cd9c8c8fcb13e567c349d571
+  - name: cp.icr.io/cp/cp4waiops/postgresql:v5.2.0-20260915.1245-0b82116c3@sha256:0b82116c3dcbbfb1c39a93a071137d27b4d28ae586c217b7e4c2a9d6c072ab57
+  - name: cp.icr.io/cp/cp4waiops/postgresql:v5.2.0-20260915.1245-b723d16e5@sha256:b723d16e5053a5d0721a16a17f81594506ecf97c3254a04c84053bb92857929c
+  - name: icr.io/cpopen/ibm-infra-management-install-operator-bundle:v5.2.0-20260915.1245-84c72abb9@sha256:84c72abb9ce2b821c9265066b9ce94f94851c3177d98d24e3cad7d4f5cd0d9ab
+  - name: icr.io/cpopen/ibm-infra-management-install-operator-catalog:v5.2.0-20260915.1245-5720b1f41@sha256:5720b1f417dfd82f037c9c9db8c8836b8711c1934508533f48ec95ef18b0de58
+  - name: icr.io/cpopen/ibm-infra-management-install-operator:v5.2.0-20260915.1245-1456d6730@sha256:1456d673082d3f6e620970c22a34c6f6d3bc97013236cc64f376a38f2fcf167d

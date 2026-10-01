@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-watson-aiops-ui-catalog@sha256:b4b6b61eea0675120d21c5ac441beee47950012615111a0400ce73ee88a204c7
+    packages:
+    - name: ibm-watson-aiops-ui-operator
+      channels:
+      - name: v5.1
+      - name: v5.2
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-watson-aiops-ui-catalog:v5.2.0-20260929.1912-b4b6b61ee@sha256:b4b6b61eea0675120d21c5ac441beee47950012615111a0400ce73ee88a204c7
