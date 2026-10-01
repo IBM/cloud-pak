@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-integration-monitoring-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-integration-monitoring-1.0.2-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-integration-monitoring-catalog@sha256:2c8d90acbf0d7ae4ef79980d0417e1a6a5b61c672fe6ddf94645a76972ff62fb
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
