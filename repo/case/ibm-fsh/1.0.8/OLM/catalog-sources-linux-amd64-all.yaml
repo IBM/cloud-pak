@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-fsh-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-fsh-1.0.8-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-fsh-operator-catalog@sha256:a91e50a67f72584877f33db0e3db7e61685a4df328ef45a4127e1751ee28438f
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64

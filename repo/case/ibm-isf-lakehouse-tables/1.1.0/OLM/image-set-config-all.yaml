@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-isf-lakehouse-tables-operator-catalog@sha256:62ccb0b71414cf075dfcea134c31907e1b587a2085c8ff30727e31c791a909d6
+    packages:
+    - name: ibm-isf-lakehouse-tables-operator
+      channels:
+      - name: v1.0
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-isf-lakehouse-tables-operator-catalog:v1.1.0@sha256:62ccb0b71414cf075dfcea134c31907e1b587a2085c8ff30727e31c791a909d6

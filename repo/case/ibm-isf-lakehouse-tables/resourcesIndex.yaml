@@ -38,3 +38,41 @@ containerImages:
   platform:
     imagetype: manifestList
   tag: v1.0.0
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:00060b0766d3da5df8e3282a876147a1cd5e9c8e18a8cd63f4ac2f41778ae2b0
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: v1.1.0-linux.ppc64le
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:c0280fab57d05192ec4ae2d38455d21124cb1dc02d9908858d73a0615d7e25a8
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: v1.1.0-linux.amd64
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:d13f2542278c6be82f7324c72c5f25a03016d48bcd568b8bdbd87777bd24eab9
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: v1.1.0-linux.s390x
+- caseVersions:
+  - 1.1.0
+  category: catalog
+  digest: sha256:62ccb0b71414cf075dfcea134c31907e1b587a2085c8ff30727e31c791a909d6
+  image: cpopen/ibm-isf-lakehouse-tables-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: v1.1.0

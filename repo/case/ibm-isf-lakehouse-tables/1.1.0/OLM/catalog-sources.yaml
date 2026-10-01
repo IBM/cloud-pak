@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-isf-lakehouse-tables-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-isf-lakehouse-tables-1.1.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-isf-lakehouse-tables-operator-catalog@sha256:62ccb0b71414cf075dfcea134c31907e1b587a2085c8ff30727e31c791a909d6
+  sourceType: grpc
