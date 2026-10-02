@@ -775,6 +775,7 @@ containerImages:
 - caseVersions:
   - 256.0.0
   - 256.0.1
+  - 256.0.2
   category: catalog
   digest: sha256:059157e093f25acbf8e1e322180333fba8c47ddcb2685eb6469293f16cdd7c79
   image: cpopen/ibm-spectrum-discover-operator-catalog
@@ -786,6 +787,7 @@ containerImages:
 - caseVersions:
   - 256.0.0
   - 256.0.1
+  - 256.0.2
   category: catalog
   digest: sha256:d55fc2ebe2e02229a2c4368584dd6385d3efcf5b35252f102997a21549cf470c
   image: cpopen/ibm-spectrum-discover-operator-catalog
@@ -797,6 +799,7 @@ containerImages:
 - caseVersions:
   - 256.0.0
   - 256.0.1
+  - 256.0.2
   category: catalog
   digest: sha256:334071d8df5b829f34f91e4d3004112ce5200ca270ea6879e10415eb6c43462f
   image: cpopen/ibm-spectrum-discover-operator-catalog
@@ -808,9 +811,58 @@ containerImages:
 - caseVersions:
   - 256.0.0
   - 256.0.1
+  - 256.0.2
   category: catalog
   digest: sha256:3ada857fe322cf08f50be799a6194d5248fd0627f061098dab0511f5b277d89c
   image: cpopen/ibm-spectrum-discover-operator-catalog
   platform:
     imagetype: manifestList
   tag: v256.0.0
+- caseVersions:
+  - 256.0.2
+  category: catalog
+  digest: sha256:02c83c91e0c53121ca54058afc36d8ec3c2d2eabad3a4b24a9ec5b286220add4
+  image: cpopen/ibm-isf-nexus-operator-catalog
+  platform:
+    architecture: arm64
+    imagetype: manifestList
+    os: linux
+  tag: 0.2.0-arm64
+- caseVersions:
+  - 256.0.2
+  category: catalog
+  digest: sha256:c83861b98725d1eb3932ee7b28ddd280876b3685b7609d89982659927b34ad25
+  image: cpopen/ibm-isf-nexus-operator-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 0.2.0-amd64
+- caseVersions:
+  - 256.0.2
+  category: catalog
+  digest: sha256:dab9992959f60ec74027de6a83dfcfef99cd8125de71dcdae6de749874729332
+  image: cpopen/ibm-isf-nexus-operator-catalog
+  platform:
+    architecture: s390x
+    imagetype: manifestList
+    os: linux
+  tag: 0.2.0-s390x
+- caseVersions:
+  - 256.0.2
+  category: catalog
+  digest: sha256:e86ff02cf2871885453761679bd069f1fcad268286559b71777bb4e7fa540984
+  image: cpopen/ibm-isf-nexus-operator-catalog
+  platform:
+    architecture: ppc64le
+    imagetype: manifestList
+    os: linux
+  tag: 0.2.0-ppc64le
+- caseVersions:
+  - 256.0.2
+  category: catalog
+  digest: sha256:4fcf90ed48abb5f0d2107ca4efea2f021b414cf6b8d93351cb8d450d1e4d298a
+  image: cpopen/ibm-isf-nexus-operator-catalog
+  platform:
+    imagetype: manifestList
+  tag: 0.2.0
