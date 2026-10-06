@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: bts-operator
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-bts-bundle-1.0.39+20260901.100000
+  publisher: IBM
+  image: icr.io/cpopen/ibm-bts-operator-catalog@sha256:a200289eeb21d298b6a044e8e4a7029dc2769cad2d1d002aa7c53b467479526c
+  sourceType: grpc
