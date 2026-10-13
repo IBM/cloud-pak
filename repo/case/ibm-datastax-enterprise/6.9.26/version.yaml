@@ -1,0 +1,37 @@
+apiVersion: v1
+case:
+  appVersion: 6.9.26
+  catalogs: null
+  classifications:
+    commercial: {}
+  description: IBM DataStax Enterprise CPE - Container Images
+  displayDescription: IBM DataStax Enterprise container images
+  displayName: IBM DataStax Enterprise
+  icons: []
+  licenses:
+    datastax-enterprise:
+      mediaType: text/plain
+      metadata:
+        displayDescription: DataStax Enterprise commercial license terms
+        displayName: DataStax Enterprise License
+      ref: datastax-enterprise
+      url: https://www.ibm.com/products/datastax
+    notices:
+      mediaType: text/plain
+      metadata:
+        displayDescription: notices
+        displayName: notices
+      ref: notices
+  name: ibm-datastax-enterprise
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4: {}
+  version: 6.9.26
+  webPage: https://www.ibm.com
+created: 2026-10-13T20:57:48.60345830+0000
+digest: sha256:436c50942223f479f356b4716dfe3d3e15adc6585c34f3b7fa982facf74664a6
