@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: aiops-lifecycle-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-aiops-lifecycle-3.1.0+20261013.093500
+  publisher: IBM
+  image: icr.io/cpopen/ibm-aiops-lifecycle-operator-catalog@sha256:d4abb3757d09fceef022f32bf1d4a7bd467f1d500522e4314653060f15475c24
+  sourceType: grpc
