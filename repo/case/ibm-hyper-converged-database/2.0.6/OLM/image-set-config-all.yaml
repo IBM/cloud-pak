@@ -1,0 +1,6 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-hyper-converged-database/hcd:2.0.6-jdk17-ubi@sha256:f57607dfcd49da2feaa651c3c39a30885a68419bc7036fcda5a34b117301b197
+  - name: cp.icr.io/cp/ibm-hyper-converged-database/hcd:2.0.6-ubi@sha256:db6d2e24ca32e886088dcc8737a0eb0a408083da220aad6c1a887742494eecf9
