@@ -30,16 +30,16 @@ mirror:
   - name: cp.icr.io/cp/cpd/environments-ui:13.0.068@sha256:83b4d17875307b732ba795f46ce9ea937ce7d3686b847735ccec838ab1e48af0
   - name: cp.icr.io/cp/cpd/event-logger-api:5.4.0.6688@sha256:2169af8c48ffa2b998decf534a2fddf89b6a644cf2c6f2cc07f834c1016a9f41
   - name: cp.icr.io/cp/cpd/haproxy:3.2.4-ubi9-521@sha256:e8edc96d06989e3cdd3d075747fa0e9ca7cd725747cce066e53a251a344a7380
-  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-api:8.12.2-93@sha256:9dcde772de476e7e5d52a29166e4f789dbce915cfcf947547e6d15c2c61702ce
-  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-ui:8.12.2-93@sha256:d56fe5a0fbe489ea20b1ec4f4f1a0c05eea8b5f6bf993f51e22e21eb68e73f8e
-  - name: cp.icr.io/cp/cpd/ibm-dmc-admin:3.1.12-177@sha256:9e73d1e103ee5e1024b06893588df0bc86711c24ff6631e5cae18c453262a68f
-  - name: cp.icr.io/cp/cpd/ibm-dmc-dbapi:3.1.12-177@sha256:79dcd6f1b72c5f78f9b226825e020b6c703ba672e251b747039eafa7aa40b003
-  - name: cp.icr.io/cp/cpd/ibm-dmc-explain:3.1.12-177@sha256:72e8ca7296d2678568c21168d2f488d78c5b84caa125e05b6cdbe91049bdbf00
-  - name: cp.icr.io/cp/cpd/ibm-dmc-job-scheduler:3.1.12-177@sha256:eef594678d510633ab899594df74d87c64857b13c6e10dcf8b2fa626d5958c82
-  - name: cp.icr.io/cp/cpd/ibm-dmc-monitor:3.1.12-177@sha256:25515a135da0572d8b3b1303c417ae9a94ee8ef32241fc0a6dd5192893dbfcb0
-  - name: cp.icr.io/cp/cpd/ibm-dmc-nginx:3.1.12-188@sha256:bee202b2af1513067f234d5e94a038ffb67bc525e9fbf66ccfaabf2155737ae6
-  - name: cp.icr.io/cp/cpd/ibm-dmc-registry-manager:3.1.12-177@sha256:41890c8bbc63bbb46a72ce167dcd45548fd518a330c89523c5c88568cf27624b
-  - name: cp.icr.io/cp/cpd/ibm-dmc-runsql:3.1.12-177@sha256:f94841b1eb3ba29df7c56077c2fba4df6265b81824f0657c0d532f539e83693c
+  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-api:8.12.3-117@sha256:019f4f21b1246c0bd8116da67d5c8da9fd6453ab16c6fb95bde88f67a3995f3c
+  - name: cp.icr.io/cp/cpd/ibm-dmc-addon-ui:8.12.3-117@sha256:24c3adcafc9bb0d8d18baaf3b59481148d687b72b6c1c7165228fca142fc4c5e
+  - name: cp.icr.io/cp/cpd/ibm-dmc-admin:3.1.12-238@sha256:1bae786080e06152562796e1a1cfd69f26ebb5a2d301c0357d42c6a8d23c2fed
+  - name: cp.icr.io/cp/cpd/ibm-dmc-dbapi:3.1.12-238@sha256:760626343c4342ba3a79b0b179a13ec38658a7af88e6a5d51c4d5b5277c6aa3c
+  - name: cp.icr.io/cp/cpd/ibm-dmc-explain:3.1.12-238@sha256:bc511db1b054ae98a34f0ae2315fbb8a578354b30265e1f799b5ab5afccf6d08
+  - name: cp.icr.io/cp/cpd/ibm-dmc-job-scheduler:3.1.12-245@sha256:03d45b2803a35c7fd40c46ace942bd75cdc0fff7fef256f70ddecae9e999980e
+  - name: cp.icr.io/cp/cpd/ibm-dmc-monitor:3.1.12-238@sha256:4898d421f53b8237465ef0c3817bc61a963665a01f0a66345294235bd49da5db
+  - name: cp.icr.io/cp/cpd/ibm-dmc-nginx:3.1.12-238@sha256:0dc42f61804f9dbc9ebdaff43bf6530abe3fbba0a7efde5199e412c8f2f012b8
+  - name: cp.icr.io/cp/cpd/ibm-dmc-registry-manager:3.1.12-245@sha256:d502575efd6abb79deae04924cbe2df4dadd8daa4bde42f16c2aa1e820cb79d1
+  - name: cp.icr.io/cp/cpd/ibm-dmc-runsql:3.1.12-238@sha256:90b660d2bbd464e48b647459d84e06b8ef7fa5ba7ab66e5b69b4468768cb6a8f
   - name: cp.icr.io/cp/cpd/job-trigger:5.4.0.6690@sha256:6a64f05ea8d1f8e671792d705cd1ebef5902333733161f3855263d3349468e19
   - name: cp.icr.io/cp/cpd/jobs-api:5.4.0.6689@sha256:2e7715c3cc8d90b1acdc73a52ccd5ab0f414156d3cf54d97260a1b9968071f5b
   - name: cp.icr.io/cp/cpd/jobs-ui:5.4.0.6679@sha256:d459981d5920788c8bbb9e6b9bd374fbf2e2204e2654dcf0902cdbe214f23365
@@ -88,9 +88,9 @@ mirror:
   - name: icr.io/cpopen/ibm-db2uoperator-bundle:6.0.3-11278-dev@sha256:0f013b2188b1e44fd450b4753b66e38f0a3624cf7f0b1bdab01ab36105a5d08b
   - name: icr.io/cpopen/ibm-db2uoperator-catalog:10861-dev@sha256:3325c4e4ec118c186f80b8336e5a3a5d8e2c2d7a1f06d97c9fee1cc4c90d68dc
   - name: icr.io/cpopen/ibm-db2uoperator-catalog:11278-dev@sha256:3d8a379ecc97328eee2e4d5c83f380c87f1b5a32c4097112116f24f287226830
-  - name: icr.io/cpopen/ibm-dmc-operator-bundle:5.12.2-93@sha256:11af934dbbff9c1f0e1975bc80270b3e69239fd1ef6ee7fd7f3b597cbff39b71
-  - name: icr.io/cpopen/ibm-dmc-operator-catalog:5.12.2-93@sha256:a05d157d51295bd3fcd2eb0474bc99276c2808a868ba585c7f413b13a20ec466
-  - name: icr.io/cpopen/ibm-dmc-operator:5.12.2-93@sha256:a0422ae7f6cfa6176d1e5ae9fc5b027582bb86429615f9eb8c877c95ca99422c
+  - name: icr.io/cpopen/ibm-dmc-operator-bundle:5.12.3-117@sha256:fcb7023672038c24b346efc1b4035cf5429360dc5b4365afd5d25bea8e7d9f6d
+  - name: icr.io/cpopen/ibm-dmc-operator-catalog:5.12.3-117@sha256:6e76a550fe10f2ea04df14f8757da5d29cbe9bf716e7c47e84cdf409913d4565
+  - name: icr.io/cpopen/ibm-dmc-operator:5.12.3-117@sha256:f789330e11ebdf0699ceb4fe712fd48a2e3f72e934831854772d5827ee9b86e7
   - name: icr.io/cpopen/ibm-redis-cp-operator-bundle:1.4.0@sha256:692bbec4f7d4c13c002fcdfbf2b9d6593e85cd15a513e42899698d98ee823747
   - name: icr.io/cpopen/ibm-redis-cp-operator-catalog:1.4.0@sha256:8391c3e193e9dc54f1a91996daaaca73126d5a814dd82cd49651576a4ac633e9
   - name: icr.io/cpopen/ibm-redis-cp-operator:1.4.0@sha256:8a6f79071358018eb0af00914b8189224f126e5eb36c0a14548e53a3188d3ce4

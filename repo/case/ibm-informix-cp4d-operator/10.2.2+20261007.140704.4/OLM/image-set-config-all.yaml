@@ -2,5 +2,16 @@ kind: ImageSetConfiguration
 apiVersion: mirror.openshift.io/v2alpha1
 mirror:
   additionalImages:
+  - name: cp.icr.io/cp/cpd/informix-api:10.2.2-0000-x86_64@sha256:791dc252b885214eb3cf70d30f3fa966a7f57024dc03b290bcd6e98b429dd338
+  - name: cp.icr.io/cp/cpd/informix-cm:10.2.2-0000-x86_64@sha256:1e4af5623c7f83c015f087aefe7dddb2c6dcebb67b2667fe8c9e496b8fb3b47b
+  - name: cp.icr.io/cp/cpd/informix-edition-aee:10.2.2-0000-x86_64@sha256:ad1cf7fc87790fb59a1ec099f614b3244fdf94cf6146417072b164a3e84d02a8
+  - name: cp.icr.io/cp/cpd/informix-edition-de:10.2.2-0000-x86_64@sha256:bdd2fb62103cdd22ca4cc27867795f220ff77112da4b22063ab6adb5ef0d2cc2
+  - name: cp.icr.io/cp/cpd/informix-edition-ee:10.2.2-0000-x86_64@sha256:a5c8bf28b614c21bee302b32c4ce3bef3e4b5065f9f1648bd8f5510bfa23bf93
+  - name: cp.icr.io/cp/cpd/informix-edition-we:10.2.2-0000-x86_64@sha256:a496b93a0d0bf67d3fc6772876ca0924c7a730d1c2675224b156874a88d50feb
+  - name: cp.icr.io/cp/cpd/informix-eng:10.2.2-0000-x86_64@sha256:762c8cf8d4098e265fded67794301a48dbc1093abb7e070b0701b72e031b7ce4
+  - name: cp.icr.io/cp/cpd/informix-hq:10.2.2-0000-x86_64@sha256:d45e3693acbc2bfafb9007acc60fd7f0f41178ac415375faee9aa0cb2e310b81
+  - name: cp.icr.io/cp/cpd/informix-wl:10.2.2-0000-x86_64@sha256:ff5253181f638dd0bcc11cbc6cca4d4c574aa6eff7d7339dc54fd40b1f530f9d
   - name: icr.io/cpopen/ibm-informix-cp4d-operator-bundle:10.2.2-0000-x86_64@sha256:65f25dcb6b21208062d9d48c069ecb5f159a40ba9bd3350e1716e41bdac4f38f
   - name: icr.io/cpopen/ibm-informix-cp4d-operator:10.2.2-0000-x86_64@sha256:6580d0b081bda4d4e7326f2602cf5c717318ecf169963219793656d5d878278a
+  - name: icr.io/cpopen/ibm-informix-operator-bundle:10.2.2-0000-x86_64@sha256:e1cce4da370ab20bb4c520f7de120a0caedc08382af2823823d4fda52becdff4
+  - name: icr.io/cpopen/ibm-informix-operator:10.2.2-0000-x86_64@sha256:5e8ec6e75f73eb072eba5b0db0123b286d6439639e2a58ac1ae38ec60f1fa23c
