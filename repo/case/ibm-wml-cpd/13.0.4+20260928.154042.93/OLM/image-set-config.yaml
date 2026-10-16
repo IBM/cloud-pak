@@ -1,0 +1,32 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/etcd-ubi:5.4.0.57@sha256:c526139a4400442dbbb15b3334dc37b1e97508ded33fa3997baaf64c30cdf3bb
+  - name: cp.icr.io/cp/cpd/kubectlclient:5.4.0.52@sha256:42408e1a459f56715072373466ed8d98b8d449e829a21a92f77a090e075d671f
+  - name: cp.icr.io/cp/cpd/serving-runtime-sidecar:5.4.0.67@sha256:a579325ed47cde478b1eca37d35941cc4bba4cf2dc114aa2718a6205e542d5c6
+  - name: cp.icr.io/cp/cpd/wml-autoai-kb:5.4.0.65@sha256:d92cdd546eedb8164163776c563e44b5588128daea94b8fd33b7998c7aa43528
+  - name: cp.icr.io/cp/cpd/wml-autoai-rag:5.4.0.33@sha256:4f17488f2b9c137d153f7461dffd2e19051138a050dbbd69bf3d756e07da9dda
+  - name: cp.icr.io/cp/cpd/wml-autoai-ts:5.4.0.58@sha256:55f9012e4501c53de33108449e7ae07f1d85324749e0a185ea6425c34a85b7f6
+  - name: cp.icr.io/cp/cpd/wml-dep-init-utils:5.4.0.73@sha256:d482f68013e87c7d55bdf2fd95569e896da4eb13d82561403dc19de86a01d749
+  - name: cp.icr.io/cp/cpd/wml-dep-rshiny-25.1-r4.4-ms:5.4.0.129@sha256:e91a5db2602375cb85227be4d9b6c1ab91aafeecda1ff5de1217f600f508d4f3
+  - name: cp.icr.io/cp/cpd/wml-dep-rt-251-py:5.4.0.186@sha256:7a8fbb481177baee627d1e41521003ababfa7af9012a703fdcd8de9a0431d1cc
+  - name: cp.icr.io/cp/cpd/wml-dep-rt-251-pygpu:5.4.0.186@sha256:86e27af3e69393a30d060fccb0f08ca7ecfe7690481ef796cbdb3bf501e39133
+  - name: cp.icr.io/cp/cpd/wml-dep-rt-251-r44:5.4.0.186@sha256:156fff160f76636816f56be5242d90cc89789b8ee49acbd08692e2d068dd995a
+  - name: cp.icr.io/cp/cpd/wml-dep-rt-gai1:5.4.0.186@sha256:1ad9a3f74bc501404ad37d477164de4d5e2cd747f5c7af365e3dcd3963ebfd32
+  - name: cp.icr.io/cp/cpd/wml-deployment-agent:5.4.0.76@sha256:c718642ffd20562bfb23eff4cacaf4ac08fd7e4106d42e32016aa21f48478e88
+  - name: cp.icr.io/cp/cpd/wml-deployment-envoy:5.4.0.85@sha256:eb8f606cf09539aba48485dfb909d45629ca01979e1f20cd5358e94298616703
+  - name: cp.icr.io/cp/cpd/wml-deployment-manager:5.4.0.184@sha256:11a903e67d602b67a02278563d4a304312b35c09467f4572494e0591058f5bfe
+  - name: cp.icr.io/cp/cpd/wml-dl-coordinator:5.4.0.70@sha256:ae3947dd0d51b453709f210832169800756b4dd3ae84395762eea3268d69a774
+  - name: cp.icr.io/cp/cpd/wml-dl-hyperopt:5.4.0.50@sha256:22b9eb278cc7f40cd8281f44f66a6a54590d36e9800238ef69cf315353e69a3a
+  - name: cp.icr.io/cp/cpd/wml-dl-job-monitor:5.4.0.36@sha256:907696ed6bad4acb7e9af37644c7de287fb33f60bf9e52aac881d329d099dbba
+  - name: cp.icr.io/cp/cpd/wml-os-runtimes-do:1.0_cp4d_v5.4_b1PL2070@sha256:a79362793977695bc0879b11d203d0484a90a99396d9af2618a7fe8f2b960964
+  - name: cp.icr.io/cp/cpd/wml-post-upgrade-cleanup-deployments:5.4.0.82@sha256:86c37292ac354ee04dc55be7f88e14bd5b9b46a19853e215bc6b7c6d9516b0b2
+  - name: cp.icr.io/cp/cpd/wml-preinstall-secret:5.4.0.36@sha256:844c5632a3622e2bf0faf1ca1793c71842f3a8acdacb555992b9616ed132a06b
+  - name: cp.icr.io/cp/cpd/wml-rt-bd-spss18.1:5.4.0.58@sha256:50a4b581359a5cdf14262a17c6914c054843cb80cfa6785c45eaf619c659aabb
+  - name: cp.icr.io/cp/cpd/wml-rt-mllib3.4:5.4.0.120@sha256:477a6edb91b2b79c6ca9273654283c92026952c361983bb7924e6b6df12f792a
+  - name: cp.icr.io/cp/cpd/wml-rt-mllib3.5:5.4.0.120@sha256:dc9bceba0f66f9ab4571bd0cbec241935b18216e3a8fa6e997be708fe9acc1ac
+  - name: cp.icr.io/cp/cpd/wml-rt-od-spss18.1:5.4.0.58@sha256:1275d0df629cd3fc5a7ab20487094d9b8c0aee087068cfe6be4b6bc23afc83dd
+  - name: cp.icr.io/cp/cpd/wmlrepositoryv4go:5.4.0.69@sha256:00a9faa0bd26058795f33c630c51baa6ea5ce8c7499bac8ee3712cf75c849619
+  - name: cp.icr.io/cp/cpd/wmltrainingservicehydra:5.4.0.102@sha256:23c4e1ef14890a81596a82843b64b486467963bca0fb92a0b28eceffbec2bbe1
+  - name: icr.io/cpopen/ibm-cpd-wml-operator:13.0.4-20260928.154042@sha256:b9ea7ee27d44c39751ca05de99b5772602861c19c520ef6cadb11150e766f962

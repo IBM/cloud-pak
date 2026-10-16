@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cpd-ae-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-analyticsengine-5.4.8+20260927.003702.2995
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-lh-spark-operator-catalog@sha256:f154e9c937bb28f7b3b62d3d027c0040085132ca40dcae93f5590bbb218571af
+  sourceType: grpc

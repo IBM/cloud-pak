@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/watson-gateway:v3.22.0@sha256:076d41bc0b16b22be9c7c8d34e8e829e32d45a07929535dd61c76d4fd09fd26e
+  - name: cp.icr.io/cp/watson-provisioner:1.8.0@sha256:572e75075f15ab9789506161bcec707d8f7d2e44907722440587b0e2d5d76e2b
+  - name: icr.io/cpopen/watson-gateway-operator-bundle:2.4.4@sha256:1f39d437ede95aeded119aeab840db002f078cb6221e3b002adb6debea723481
+  - name: icr.io/cpopen/watson-gateway-operator-catalog:2.4.4@sha256:3b33409de2ceaccca4683aecc1ecd97de774697ecd68274044128fd0232753f9
+  - name: icr.io/cpopen/watson-gateway-operator:2.4.4@sha256:fb726ba42b5cd0430f8d1e1ff8dd04f5117d1474627bfa342d29d5650b8418ef
