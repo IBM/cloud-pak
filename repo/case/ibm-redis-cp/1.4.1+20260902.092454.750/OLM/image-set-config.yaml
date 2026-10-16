@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-redis-cp-haproxy:1.4.1@sha256:755a4c4216a905bd2e4f052610bb050842e90cd5b2350dac15532b1abebd8dc4
+  - name: cp.icr.io/cp/ibm-redis-cp-operand:1.4.1@sha256:4cc98b344ee696bb2191061c7015f152f56c6d0be150af67a36e573f6213868c
+  - name: icr.io/cpopen/ibm-redis-cp-operator-bundle:1.4.1@sha256:16e40aa5038765e530ae95aad15f8974167275f9e75c7fcf1b89d7a7c727765d
+  - name: icr.io/cpopen/ibm-redis-cp-operator-catalog:1.4.1@sha256:3f1d4e3266d17942f485a44f3ba2cc4034926252f830eac80c0a14bad2e2fe72
+  - name: icr.io/cpopen/ibm-redis-cp-operator:1.4.1@sha256:8c17d4ac37677339248d209ff2e61ef5cb766bae51fa5b3a5403e9e837b49591

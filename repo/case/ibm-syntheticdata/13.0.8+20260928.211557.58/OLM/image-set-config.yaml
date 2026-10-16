@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/flow-session-unreal:5.4.2899@sha256:05e7ea28f8bb5cf54caa1aa45894ab87df12a2c6ba8a3e4852154597b5d5a59e
+  - name: cp.icr.io/cp/cpd/sdg-unstructured-runtime:5.4.884@sha256:9f58256a4bc129526a7f1244447ad005feca9fe12786e81d29bea7bc05279734
+  - name: icr.io/cpopen/ibm-cpd-syntheticdata-operator:13.0.8-943@sha256:2576bb82a2f9ff1650fe5c4717e3c3bfb486ef71c2382b9ffbb727100b029a13
