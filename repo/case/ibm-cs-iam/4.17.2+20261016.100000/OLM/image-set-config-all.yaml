@@ -1,0 +1,38 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:1faf8b711e397eb88a37c29ab0f5ef9e28a461bdd24d9a570234f5bccc198a8b
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.18
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  - catalog: icr.io/cpopen/ibm-iam-operator-catalog@sha256:cd9d3e33ceec8236863b3e4573e682f05b9c23fe7830c583ea999f432039e87c
+    packages:
+    - name: ibm-commonui-operator-app
+      channels:
+      - name: v4.14
+    - name: ibm-iam-operator
+      channels:
+      - name: v4.17
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-license-provider:2730@sha256:b259810099ca7a4150f00ccaa870b02890d1d7f022f3ac330918d515968a033b
+  - name: icr.io/cpopen/cpfs/ibm-im-db-migrator:4.17.0@sha256:85f91d89e5b0bbbc919e313b767d282521a622432f7500271f9eb12ec2149edb
+  - name: icr.io/cpopen/edb/postgresql:14.23-5.31.2-cpfs@sha256:063c8a38d80a2b34f06ccdf4e432424a2d1257cddbefb87794b39ae505f8c921
+  - name: icr.io/cpopen/edb/postgresql:15.18-5.31.2-cpfs@sha256:3d2f9ceb5f3414881d67a78f921303e47b2eb90601c0a938fea6d16611d26b0f
+  - name: icr.io/cpopen/edb/postgresql:16.14-5.31.2-cpfs@sha256:e32d271e1d9635b6d9b9b46d84f4984a28d3cc863d828a4fbb42ec082c5976bd
+  - name: icr.io/cpopen/edb/postgresql:17.10-5.31.2-cpfs@sha256:256e0a72bbcd490af6071e82d8fb1697a24835223cd186b2673b72f6d8add4d9
+  - name: icr.io/cpopen/edb/postgresql:18.4-5.31.2-cpfs@sha256:8b046402ce495e262f6589b4ad16d960e190f151a42751461f5939b2275511db
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-bundle:2735@sha256:c3d52e3f188489e244f02a5502929b82f58958c9846a4f5d0cdea4335c8f7596
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog:2735@sha256:ea0fbd0c9e6bc75c085af3db5cfe8268760953f193a9241b91f97a010644dae6
+  - name: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator:1.28.3@sha256:002efb4961c762fbd31079dfad1534c63d145a626ffcc777ab928914485c55d6
+  - name: icr.io/cpopen/ibm-cs-install-catalog:efix-20260706-1414@sha256:1faf8b711e397eb88a37c29ab0f5ef9e28a461bdd24d9a570234f5bccc198a8b
+  - name: icr.io/cpopen/ibm-iam-operator-catalog:efix-20260706-1414@sha256:cd9d3e33ceec8236863b3e4573e682f05b9c23fe7830c583ea999f432039e87c
