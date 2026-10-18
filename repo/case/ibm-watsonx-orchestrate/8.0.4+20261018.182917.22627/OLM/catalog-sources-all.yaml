@@ -1,0 +1,120 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: appconnect-operator-catalogsource
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-appconnect-11.6.0
+  publisher: IBM
+  image: icr.io/cpopen/appconnect-operator-catalog@sha256:491135f0319f84aab0a81a186a980bb9fe4a4122a6c7bfc9f010e06a2979aa3e
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cloud-native-postgresql-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cloud-native-postgresql-6.2.0+20250320.081006.2423
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cpd-cloud-native-postgresql-operator-catalog@sha256:3eac00032f35563a4e4f5d3e6a7dc23e46e5433dfe9313ad8e19f33cfd5e43b8
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-data-governor-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-data-governor-8.1.2+20260428.184042.348
+  publisher: IBM
+  image: icr.io/cpopen/ibm-data-governor-operator-catalog@sha256:6f127186c9655bb2125c466700af3fc7c62d17476ef5fc34bda6df56ff33b267
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-events-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-events-operator-7.2.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-events-operator-catalog@sha256:630c33f7f2bbf189a15eafdec1a0ade79d1100337ee7ec16afb693f927586245
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.1.4009
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:978763bcea32db8e03928870cbe0b7352f3910b031013f28c74272303cacccf5
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-opensearch-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-opensearch-operator-1.5.3
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-ibm-opensearch-operator-catalog@sha256:0cab668d46de3a6670e1020784371e9cc6edc6c810a4e3f88c3614359cd993de
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-rabbitmq-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-rabbitmq-operator-1.4.3+20250909.172851
+  publisher: IBM
+  image: icr.io/cpopen/opencontent-rabbitmq-operator-catalog@sha256:028e7606429033e8fb6e9152dd79445b44cf2c05a27f62834b3e5baefb556908
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-redis-cp-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-redis-cp-1.4.1+20260902.092454.750
+  publisher: IBM
+  image: icr.io/cpopen/ibm-redis-cp-operator-catalog@sha256:3f1d4e3266d17942f485a44f3ba2cc4034926252f830eac80c0a14bad2e2fe72
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-assistant-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-assistant-5.17.1+20261017.215936.4887
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watson-assistant-operator-catalog@sha256:20d291b12b31da1088d71ca6a78533f90f197a02804384072b22f973bb0b4b94
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watson-gateway-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watson-gateway-operator-2.4.4+20250905.144313
+  publisher: IBM
+  image: icr.io/cpopen/watson-gateway-operator-catalog@sha256:3b33409de2ceaccca4683aecc1ecd97de774697ecd68274044128fd0232753f9
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-watsonx-orchestrate-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-watsonx-orchestrate-8.0.4+20261018.182917.22627
+  publisher: IBM
+  image: icr.io/cpopen/ibm-watsonx-orchestrate-operator-catalog@sha256:eea32f2f16c4e8ac3f9324fb6fd0c775c959d11b9b797674753174e9626da647
+  sourceType: grpc
