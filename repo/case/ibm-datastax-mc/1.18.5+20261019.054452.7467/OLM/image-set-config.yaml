@@ -1,0 +1,16 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/cassandra-reaper:5.0.1-ubi@sha256:8e1a7ce02ffa01e4e98f56dcec0c6ebfddbc6dce8eb5b70af231d9792bf74356
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/cql-router:v1.20.3@sha256:04074ac2be413f0ff3f1e3cd3d91bb5222fd50a0d4ff4d154289b48c63a22614
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/cqlsh-pod:v1.18.5@sha256:90401ce1bea6901bc9b912c203d208e789f03f35631e5437b99838cf9c7dc292
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/data-api:v1.0.53@sha256:dc12a2010cd66ab8a7a596a305694afa83dcb740bba26a210ae734e7dc207e2d
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/hcd:2.0.7-ubi@sha256:3fc9de5012a738df25439c0859e3288465ecd1b3f665fb189f6ae4c93b9bedb8
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/k8ssandra-client:v0.9.1@sha256:fa3fd0026b6f2cac14c05ff828b719619161ee67792b0f6926544826a98127fd
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/mission-control-dex:v1.18.5@sha256:6d5001b1846e6088d978788979ea488512d150247b024c21ed2b303082dd0bf9
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/mission-control-ui:v1.18.5-embedded@sha256:f3568090417f2220c8ce1c80fca50496ff356692575c3319c030a46cb05144ae
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/mission-control:v1.18.5@sha256:9e8181876060962de221bd69260168b2d58bc37eba2245906c478d9e113fccd2
+  - name: cp.icr.io/cp/cpd/ibm-datastax-hcd/system-logger:v1.30.3@sha256:36a053c0bc6dcf11db8471efc151e3caa09446eea1e2a79389a85677c3a41f1d
+  - name: icr.io/cpopen/cass-operator:v1.30.3@sha256:165fb8ae01371130cd0f6994341173f3eaf158496d161a8ac5f0d8ec94049184
+  - name: icr.io/cpopen/k8ssandra-operator:v1.32.6@sha256:617de39bafd18eebf5c9f6eae1d5bb0a1b1f918de7b045a5fed7c78eab098df8
