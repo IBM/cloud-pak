@@ -1,0 +1,13 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibm-truststore-mgr-operator-bundle:1.7.10-amd64@sha256:7df5c859755bcdbfa56b555dde1492d022d7a32ffaf6754a05e71792516bb5e6
+  - name: icr.io/cpopen/ibm-truststore-mgr-operator-bundle:1.7.10-ppc64le@sha256:45464f522293dcfbbe39f33f7cb95e656a99388291b0f7e0d0fb5d273daafea8
+  - name: icr.io/cpopen/ibm-truststore-mgr-operator-bundle:1.7.10-s390x@sha256:b9b231839d38de16384a81dca3ca71eae135be389af74648428c603eeb3b5457
+  - name: icr.io/cpopen/ibm-truststore-mgr/worker:1.7.10-amd64@sha256:63feeb68904df169d5d4c2f04643aadcdbaf8e53854300b1bc03f01fbbac8f93
+  - name: icr.io/cpopen/ibm-truststore-mgr/worker:1.7.10-ppc64le@sha256:4ef64d40927dc73b8bb48a78a65bb7a0192583122a2080cdd88d9cab0719e6aa
+  - name: icr.io/cpopen/ibm-truststore-mgr/worker:1.7.10-s390x@sha256:6b4b29e66315c638209829d8750049157344dfad334d1da51719c7cbb478850f
+  - name: icr.io/cpopen/ibm-truststore-mgr:1.7.10-amd64@sha256:743a8f44c41a3789cf28a76f5d3b4071c1896276f94340f409e1d194ef796685
+  - name: icr.io/cpopen/ibm-truststore-mgr:1.7.10-ppc64le@sha256:65e466176405c716d83f74854187157bea47218f3784b09a6c13d8cd34285391
+  - name: icr.io/cpopen/ibm-truststore-mgr:1.7.10-s390x@sha256:591637a301d37aae1f541ae01c9f7fffc51996f7341e92b58d86f9c1daa5b88c
