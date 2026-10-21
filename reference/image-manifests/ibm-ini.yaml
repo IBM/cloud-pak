@@ -2,6 +2,8 @@ source: ibm-ini
 description: "IBM Network Intelligence Operator manages the lifecycle of IBM Network Intelligence components on Kubernetes."
 images:
   - image: cp/ibm-ini/agents-api
+  - image: cp/ibm-ini/connectors
+  - image: cp/ibm-ini/crunchy-pgbackrest
   - image: cp/ibm-ini/distributed-analysed
   - image: cp/ibm-ini/distributed-classifier
   - image: cp/ibm-ini/frontend
@@ -9,6 +11,7 @@ images:
   - image: cp/ibm-ini/ikigai-juniper-adapter
   - image: cp/ibm-ini/ingestor
   - image: cp/ibm-ini/k8s-integration
+  - image: cp/ibm-ini/llmproxy
   - image: cp/ibm-ini/postgres
   - image: cp/ibm-ini/redis
   - image: cp/ibm-ini/victoria-logs
