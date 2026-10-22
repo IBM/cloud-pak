@@ -1,0 +1,25 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/icp4i/ai-agent-graphs:2026-10-13-1338-d240be32@sha256:e8fa9a6c2ee6b2a9754b22b3be05986c5510ec142db0200dc8e04612d3f37814
+  - name: cp.icr.io/cp/icp4i/ai-agent-graphs:2026-10-15-1344-dfe318fc@sha256:0488706208572290def804aafee1108e8173613dc254d89fba2109edb974f485
+  - name: cp.icr.io/cp/icp4i/cp4i-agents-embedding-model:2026-10-14-1024-9d6e179d@sha256:d78b020ce5401cf3fc2d109fdcfc38828d334bc1e8b3605dc263224888eab865
+  - name: cp.icr.io/cp/icp4i/cp4i-mcp:2026-10-12-0915-4ef345f3@sha256:fd52e15a05ce9ccb9ce316516ff7f2d3565953a3c28a8e02a3a4cfba8a58dfa5
+  - name: cp.icr.io/cp/icp4i/cp4i-mcp:2026-10-20-0942-9181dc67@sha256:732a7069c7ef5ce7beedd351a3f198167049c0bedeb8031ee502c038ebc90c21
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2026-10-09-1502-ff6fa6ed@sha256:77e7c2301ae034a3b67598b7daa0b6d4a7a97f83dcbcf39914d37113ff181fd7
+  - name: cp.icr.io/cp/icp4i/icip-navigator:2026-10-20-0930-4e3858f5@sha256:d8e263963b8284e74ff9c56c440f752fca199893c59816b153d2768ffd9a986e
+  - name: cp.icr.io/cp/icp4i/icip-services:2026-10-08-1218-05057907@sha256:4c69e565d7a6277f45ce7703d917939eeaf718831b82cfd74723c7fb0ac81dca
+  - name: cp.icr.io/cp/icp4i/icip-services:2026-10-20-1043-f81425e9@sha256:a2a034498fe543d405cdc4abbe31253009cb28b9350cf0b77a46146315e50d0a
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-catalog:9.0.1-2026-10-21-1531-049e5cba@sha256:856bf637b5f7d212d3eabfca90b38f7a209d61d8a513b23d22435c96e15ec0ed
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle:8.3.6-2026-10-16-1147-0470f02e-service-v1620@sha256:883c3be6ad2e16f1251e15672ee3dedb433ed20d7c02edc0de4e32b4779358ac
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator-bundle:9.0.1-2026-10-21-1531-049e5cba@sha256:dc6ae7fefc1b753876017944573a9695aa7753948a8bab087de547144d758d5c
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator:8.3.6-2026-10-16-1147-0470f02e-service-v1620@sha256:beff90d49f86072b8858860bb752d8f52858ec872063e363edcad3d16bcc75a0
+  - name: icr.io/cpopen/ibm-integration-platform-navigator-operator:9.0.1-2026-10-21-1531-049e5cba@sha256:43541dad0aad4c7fc9d858e94eab1ef3ec75766175fa6ace6dc6c16d31f7da8f
+  - name: icr.io/cpopen/ibm-integration-postgresql-operator:v28.4.7-2026-10-06-1403-60405c89@sha256:2d918f59cb1d5e6a990ab55305356ae7936be32ee1465ecf78bf6380f41bd379
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2026-10-14-0854-d1b30481@sha256:bbe6a99fa12cb271abe9b4cc3a86f703b47086781fa2b2ce238d7949b6f1d8b0
+  - name: icr.io/cpopen/ibm-integration-upgrade-must-gather:2026-10-19-0950-42fb24a9@sha256:85722e8369c2448244acb0f753df44b390ae6d5bcd56dbfeb21e5035c903fa67
+  - name: icr.io/cpopen/ibm-pg/ibm-pg-18:18.6-v28.4.7@sha256:4bc381ef8dc4766b5f900688acd4e13cbe2b07289fc34681232399b90a4b3285
+  - name: registry.redhat.io/rhbk/keycloak-operator-bundle:26.6.7-3@sha256:214bd43b28c8f61d9c8f81f57e9dd3027d09cb3c00fb307bd265130147dd419b
+  - name: registry.redhat.io/rhbk/keycloak-rhel9-operator:v26.6.7-opr.1@sha256:df06eb67e37ded0da7c4041a29cfc7d0ec65d6b36b0944ed1c2cc8c3863200a7
+  - name: registry.redhat.io/rhbk/keycloak-rhel9:v26.6.7@sha256:b55a3fdf5c836cca9d6b754dd27adbd8de28a27ca46e7d205ceb6c0d7ae35ab9
