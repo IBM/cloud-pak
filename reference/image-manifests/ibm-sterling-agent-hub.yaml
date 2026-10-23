@@ -1,0 +1,21 @@
+source: ibm-sterling-agent-hub
+description: "A CASE to deploy IBM Sterling Agent Hub on a container platform"
+images:
+  - image: cp/sterling-agenthub/agenthub-altinity-clickhouse-operator
+  - image: cp/sterling-agenthub/agenthub-chatbot-ui
+  - image: cp/sterling-agenthub/agenthub-clickhouse-keeper
+  - image: cp/sterling-agenthub/agenthub-clickhouse-server
+  - image: cp/sterling-agenthub/agenthub-dbsetup
+  - image: cp/sterling-agenthub/agenthub-go-proxy
+  - image: cp/sterling-agenthub/agenthub-keycloak-init
+  - image: cp/sterling-agenthub/agenthub-keycloak-theme
+  - image: cp/sterling-agenthub/agenthub-langfuse-cleanup
+  - image: cp/sterling-agenthub/agenthub-langfuse-web
+  - image: cp/sterling-agenthub/agenthub-langfuse-worker
+  - image: cp/sterling-agenthub/agenthub-log-retention
+  - image: cp/sterling-agenthub/agenthub-log-streamer
+  - image: cp/sterling-agenthub/agenthub-metrics-exporter
+  - image: cp/sterling-agenthub/agenthub-postgres
+  - image: cp/sterling-agenthub/agenthub-seaweedfs
+  - image: cp/sterling-agenthub/agenthub-supervisor
+  - image: cp/sterling-agenthub/agenthub-valkey
