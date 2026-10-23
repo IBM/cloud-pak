@@ -1,0 +1,55 @@
+apiVersion: v1
+case:
+  appVersion: 1.0.0.0
+  catalogs:
+    automation: {}
+  classifications:
+    agents: {}
+    automation: {}
+    b2b: {}
+    b2bi: {}
+    commercial: {}
+    mft: {}
+    rhocp: {}
+    sterling: {}
+  description: A CASE to deploy the IBM Sterling B2B Integrator / File Gateway Agentic
+    Foundation Service and its co-located MCP tool server on a container platform
+  displayDescription: A CASE to deploy the Agentic Foundation Service (multi-agent
+    host) and b2bi-mcp-server
+  displayName: IBM Sterling B2B Integrator Agentic Service CASE
+  icons:
+  - mediaType: image/png
+    url: https://raw.githubusercontent.com/IBM/charts/master/logo/ibm-b2bi-icon.png
+  licenses:
+    license:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: Apache License 2.0
+        displayName: LICENSE
+        name: license
+      ref: LICENSE
+    notices:
+      mediaType: text/plain; charset=utf-8
+      metadata:
+        displayDescription: ""
+        displayName: NOTICES
+        name: notices
+      ref: notices
+  name: ibm-b2bi-sfg-agents
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.1.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      kubernetes: {}
+      rhocp4:
+        mirrorByDigest: true
+    managedPlatforms:
+      ibm: {}
+      redhat: {}
+  version: 1.0.0
+  webPage: https://www.ibm.com/docs/en/b2b-integrator
+created: 2026-10-23T15:02:39.94843987+0000
+digest: sha256:20a8363a8959561dd5b75bef216a71fd54111884d0e2a4271927c3e5c121db8c
