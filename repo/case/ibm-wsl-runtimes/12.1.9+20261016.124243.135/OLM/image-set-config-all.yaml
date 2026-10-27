@@ -1,0 +1,29 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/wslocal-init-241-py:12.1.135.03762@sha256:eb47bdac4be09f1d8925fe983dc053c429cbe791147a0c02a939072a5f3313bc
+  - name: cp.icr.io/cp/cpd/wslocal-init-241-pygpu:12.1.135.03762@sha256:1661b359b4f53616047629db7c038e4a0298d3cde23358a69fd167e7d78d740b
+  - name: cp.icr.io/cp/cpd/wslocal-init-241-r:12.1.135.03762@sha256:fcfcc8e679d7d2b904fc8cda6ce972fb301a8769deadddc161783ede20c5f99d
+  - name: cp.icr.io/cp/cpd/wslocal-init-251-py-restricted:12.1.135.03762@sha256:46924f4433a32f7f0d7be0023844fcdf57d0ac9e89e70aa97776d31fe452c6f2
+  - name: cp.icr.io/cp/cpd/wslocal-init-251-py:12.1.135.03762@sha256:d9ea8d90ba21e92c4fb0c9f60cc74bd97f63a1b334cd99d18df7c6ee910dadc7
+  - name: cp.icr.io/cp/cpd/wslocal-init-251-pygpu-restricted:12.1.135.03762@sha256:7dd1dfe10c8b9c537ed23daaeec4bfa7b6eea94c52a6400f9cbdf1e7cdd9053b
+  - name: cp.icr.io/cp/cpd/wslocal-init-251-pygpu:12.1.135.03762@sha256:d43380a048ca78f5eeeb68e8490f96624fb8ef4a797634e90e6d9b0cbd67c8b7
+  - name: cp.icr.io/cp/cpd/wslocal-init-251-r-restricted:12.1.135.03762@sha256:ce518b02477db9f3650128473a30236cbc3c450240397e47e0edda166099960d
+  - name: cp.icr.io/cp/cpd/wslocal-init-251-r:12.1.135.03762@sha256:45b25d6e06bde6b0d29f1ff49f1e5de85053df2ce88abee54ff3f9b89993de2b
+  - name: cp.icr.io/cp/cpd/wslocal-init-251a-restricted:12.1.135.03762@sha256:15c4fb32b833dfe5b39e92abcbe5153f2a8c94786c01a81c93c070677a2d9101
+  - name: cp.icr.io/cp/cpd/wslocal-init-251a:12.1.135.03762@sha256:f5274c92e95dfb8fa92a9cb6cfd5b28795d57e9fbe8d5397b5708f2e43b39f20
+  - name: cp.icr.io/cp/cpd/wslocal-init-nlp24.1:5.5.1.2@sha256:468ef48b903dc0a24331af70a56339e7f013a45789e817c5c6dca0d064b9e9b5
+  - name: cp.icr.io/cp/cpd/wslocal-init-nlp25.1:5.10.2.3@sha256:857a49c61906ad9d2b12b53bcf453e05d4e6c579d97e785571062fb0b448ea5f
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-241-py:12.1.135.04724@sha256:7d77458e99c76b214e5adf8bec6a14a016a43c25eedb6b793620a1317ffaef14
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-241-pygpu:12.1.135.04724@sha256:976b4671297fb2bc84cd964e1cfeef7b62bced5606b352891662403318e985f9
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-241-r:12.1.135.04724@sha256:382b7872bd2ed8062660a28b0b5a86c4c1a77a09b2257d0f6b42c09cd173167a
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251-py-restricted:12.1.135.04725@sha256:d2ea1900838939b028a4efcb25b7927562b2ff1e49ba39d27cbe1d87cebfccd8
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251-py:12.1.135.04725@sha256:8092a3b8acabb2c1b5c458831cb83e5c55de3c5615fcffe322f6b29441eb1b37
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251-pygpu-restricted:12.1.135.04725@sha256:317c911c601881cba6da966da6c5db4110aced96cd8a5e9b1266faba4d63c629
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251-pygpu:12.1.135.04725@sha256:d36ddeba3c54da2f00a35603b4b9be5259a418b70fa1eb1e43bb3a0e59a83915
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251-r-restricted:12.1.135.04725@sha256:7e12538f6d7bc768a43ff00dabc7a6cd0e2a64a9746ebc67efef915845d101a5
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251-r:12.1.135.04725@sha256:503f2a8e40e182c55102404f6bb3e2be47a42d2abb3bcda3e4e06f120251ac06
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251a-restricted:12.1.135.04725@sha256:911b2332c267c5c4c9a151295fbe1f81d2d1de6d63ceb69e3d805467a86647d3
+  - name: cp.icr.io/cp/cpd/wslocal-runtime-251a:12.1.135.04725@sha256:42a93d004170cf31b53a2e241c28fd074aab28d30ab081300e6f28a18c9868ae
+  - name: icr.io/cpopen/ibm-cpd-ws-runtimes-operator:12.1.135@sha256:e02e81e8c13a13f596c063f73a04c14ec91118907e30a9c1a8aa2dcaa76c0b89

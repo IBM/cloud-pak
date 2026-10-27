@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-databand-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-databand-1.0.16+20261015.115539.3
+  publisher: IBM
+  image: icr.io/cpopen/ibm-databand-operator-catalog@sha256:1dd2ca6175e92e5349a076aa5b80fee4b7510f3ace77934d725763101966ec78
+  sourceType: grpc
