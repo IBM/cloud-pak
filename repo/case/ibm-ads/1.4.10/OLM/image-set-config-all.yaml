@@ -1,0 +1,61 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-ads-operator-catalog@sha256:53a3640c8997b0a7b7e78243df38f3c851110a8dfd37c8e5a7300cb9d547ddf4
+    packages:
+    - name: ibm-ads-kn-operator
+      channels:
+      - name: v24.1
+    full: true
+  - catalog: icr.io/cpopen/ibm-cs-install-catalog@sha256:093d00305d3cd0a1c09eac1f6dbf2a734482b2cc1c4c234f5a2ee3a2bd30311c
+    packages:
+    - name: ibm-common-service-operator
+      channels:
+      - name: v4.19
+    - name: ibm-namespace-scope-operator
+      channels:
+      - name: v4.3
+    - name: ibm-odlm
+      channels:
+      - name: v4.5
+    full: true
+  - catalog: icr.io/cpopen/ibm-iam-operator-catalog@sha256:bcb496c21cada7ad7c107fa92d98bd5e3f7498ec17363188ef4d9ace53e2ee9e
+    packages:
+    - name: ibm-commonui-operator-app
+      channels:
+      - name: v4.15
+    - name: ibm-iam-operator
+      channels:
+      - name: v4.18
+    full: true
+  - catalog: icr.io/cpopen/ibm-pg-operator-catalog@sha256:70f8c8e3961809ced95394e3eee01aac759c2bc36e34612f688bd83a55c33675
+    packages:
+    - name: ibm-pg-operator
+      channels:
+      - name: v28
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/common-service-operator:4.19.4@sha256:635565bf727a5ed1bfb49d663cf06f7671b2959dd087c14102b77f16c87fcce7
+  - name: icr.io/cpopen/cpfs/cpfs-oadp-plugins:latest@sha256:92270eb27a7b769f61827fe328d11d8f7d7389f03a506fbe5e2fb0aff65959da
+  - name: icr.io/cpopen/cpfs/cpfs-utils:latest@sha256:f4b26a09c4ca77f2b7e4e41287d9de3576affeefbbd4bf205f623d81696b0cd2
+  - name: icr.io/cpopen/cpfs/ibm-im-db-migrator:4.18.3@sha256:48259d08fba7b6d5af3b8eb8ae60f038514afed48c3a68fa6c8f37665adec300
+  - name: icr.io/cpopen/cpfs/must-gather:latest@sha256:ed69bd058dc4b8bcedeed76074f0fe61ee0db05073a471233eeb39a0c3ea841b
+  - name: icr.io/cpopen/ibm-ads-operator-catalog:24.0.1-IF010@sha256:53a3640c8997b0a7b7e78243df38f3c851110a8dfd37c8e5a7300cb9d547ddf4
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF001@sha256:cf392fdb142181807f0151ed5f25bbe2348b8386c8a071f8b612a09d7ad08c9e
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF002@sha256:9ce20cfc906caeb61b9bdd6bad429c377dc16f724404593a46012b0380615f90
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF003@sha256:9a8f3349b9b71f4ac42db50486d5a607bb5ac54832dee2707c701b7ea15d02ea
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF005@sha256:f1d49b9c9899ede3944941440a2d54934d73b4deb81aec5ed1426f0ef0ed8d51
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF006@sha256:a2129b12e76238a5d55bfc651a55b17ff95e0a350cad03d6c84c5a3d81ec74eb
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF007@sha256:a5464af6100aa514ec0f9183f07a23140aac2889027f21dad78a180ae61d82ca
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1-IF008@sha256:6b145131df29e3bacd9c380348004a7ce95da99380e89e9f6f443f65909f7e66
+  - name: icr.io/cpopen/ibm-ads-operator:24.0.1@sha256:a920f3a2808567e3ae9988872e57a7a4c3a91bb537128a9d103c0397c27581dc
+  - name: icr.io/cpopen/ibm-common-service-catalog:v4.19.4@sha256:baa9101e387dc789c1954bb4462154f1abca0f20dda4c463964b938658feb261
+  - name: icr.io/cpopen/ibm-common-service-operator-bundle:4.19.4@sha256:5101754b11819e712955db7e78647b13274b102318759cab0a382a94a69faf51
+  - name: icr.io/cpopen/ibm-cs-install-catalog:cd-20261013-2205@sha256:093d00305d3cd0a1c09eac1f6dbf2a734482b2cc1c4c234f5a2ee3a2bd30311c
+  - name: icr.io/cpopen/ibm-iam-operator-catalog:cd-20261008-1016@sha256:bcb496c21cada7ad7c107fa92d98bd5e3f7498ec17363188ef4d9ace53e2ee9e
+  - name: icr.io/cpopen/ibm-namespace-scope-operator-bundle:4.3.9@sha256:cd097fb89025196cbd0d6d26d75765e9fa68d3a53e2c050a0fe257a9c7840a89
+  - name: icr.io/cpopen/ibm-namespace-scope-operator:4.3.9@sha256:f37364846b7f506b6b71825c9d6b617969e8ebea75d9a8dbf3b5993bd27e143f
+  - name: icr.io/cpopen/ibm-pg-operator-catalog:v28.4.8@sha256:70f8c8e3961809ced95394e3eee01aac759c2bc36e34612f688bd83a55c33675
+  - name: icr.io/cpopen/odlm:4.5.12@sha256:a55d34e9ae9d5f21e732dac1db21e054ef507343d4f5edde8361007fb082e6aa
+  - name: icr.io/cpopen/operand-deployment-lifecycle-manager-bundle:4.5.12@sha256:3fc5fce1cf210913c203784529d3eea669738a114a8b3c2a0970149179b43a2c
