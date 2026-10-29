@@ -1,0 +1,8 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/data-replication/cdc-replication-iceberg-engine:12.0.1.0-5832-ubi9-amd64@sha256:a9b935a2b937ac0453dd3a76112e8cd95637e9d1bcdf7c34537236737775b036
+  - name: cp.icr.io/cp/data-replication/cdc-replication-java-engine-udb:12.0.1.0-5832-ubi9-amd64@sha256:6a388b7b4e062731fe9acf5eaae902a2d689c66ae290f85cd14ee1ae0dd502da
+  - name: cp.icr.io/cp/data-replication/cdc-replication-java-engine:12.0.1.0-5832-ubi9-amd64@sha256:d64070691b149f771df4c99f0ebe6f9da26aa437da6c2938a943a3bf9b26f199
+  - name: cp.icr.io/cp/data-replication/cdc-replication-kafka-engine:12.0.1.0-5832-ubi9-amd64@sha256:7451e60593d344ea2d905c506e32daa93163d68e2b15cefecf2ca06e9b3e513b

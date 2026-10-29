@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 12.0.1.0.5832
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Data Replication 12.0 CDC Engine
+  displayDescription: IBM Data Replication 12.0 CDC Engine
+  displayName: IBM Data Replication CDC
+  icons: []
+  licenses:
+    IDRAI:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication AI Edition
+        displayName: IBM Data Replication AI Edition
+      ref: IBM_Data_Replication_AI_Edition_EN_LI
+    IDRAI_ZOS:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication AI Edition for z/OS
+        displayName: IBM Data Replication AI Edition for z/OS
+      ref: IBM_Data_Replication_AI_Edition_ZOS_EN_LI
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-cdc-replication
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 12.10.5832
+  webPage: https://www.ibm.com
+created: 2026-10-29T19:41:00.73899432+0000
+digest: sha256:647f21c1286967220e0034dc610fdfe40b185ceb2dfa231a78c347db2f0943a4
