@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/assist/ema-admin-console:2.15.20@sha256:4f29c5e44ea2c7da58102f427f1e72bfe5fb32df6e2b738c95326169c6a81b01
+  - name: cp.icr.io/cp/assist/ema-api:2.49.44@sha256:ff0f0c7e3034640c053b2765b99bbdab531d307d026491ba6ab8bfe0a871e574
+  - name: cp.icr.io/cp/assist/ema-common-util:2.1.51-amd64@sha256:2fd4af9ba426558d7cbc3999e47713c20eaa79402435a52438fa58cedf81f75c
+  - name: cp.icr.io/cp/assist/ema-haproxy:2.1.51-amd64@sha256:874a836ee38239e1d23e6467f662116098671f59d1fe4a7b817720885f75473e
+  - name: cp.icr.io/cp/assist/ema-monitor:2.2.35@sha256:312a5acb4fc1cf143d824220c485500e3e4d91453f20d82272c2cd33312344d3
+  - name: cp.icr.io/cp/assist/ema-multi-tenant:2.19.42@sha256:e33f915a5178fb2742e160027c48b013cc2398992acef9d494d8926e213ddc2b
+  - name: cp.icr.io/cp/assist/ema-pg-cronjob:2.1.41@sha256:89f9c4df777a782cd68390b072df9ee2762bf8d833b6c5c56e1d1feef740ebcc
+  - name: cp.icr.io/cp/assist/ema-redis:2.1.51-amd64@sha256:f3bf2a0e9a69ece061466b1ce37f5e42f86325e80aaf178ecbe6c49bbc69a097
+  - name: cp.icr.io/cp/assist/ema-studio:2.12.25@sha256:a25f3ad9203d0bc7c9813d195318e7a68668cb1445485af94c27c2975a639606
+  - name: cp.icr.io/cp/assist/ema-technician:2.14.49@sha256:34b7f2521aa89d28f1a27e62468e79cd0deb030c5071aa503b983c58981c3eaf
+  - name: cp.icr.io/cp/assist/ibm-mas-assist-primary-entity:9.1.16@sha256:407918d5d9923e618a01defb7a796c6610d5987dd308706f3e362abc4c173c49
+  - name: cp.icr.io/cp/assist/ibm-mas-assist-ws:9.1.16@sha256:5bb517fc4a4d3969023400fcdcacb9b9784551a8fc5849143386222c8b1809a0
+  - name: icr.io/cpopen/ibm-mas-assist-operator-bundle:9.1.16@sha256:90e612421213e8ebed989c6c93c2dfec657bee5c7864aeff6e0d88db5086ef1a
+  - name: icr.io/cpopen/ibm-mas-assist:9.1.16@sha256:a5654971da5f2deb93e34d24e396ee7f8203df5f1d41410f43026c6dde4026e3
