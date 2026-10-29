@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-cp4a-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-cp-automation-24.1.10
+  publisher: IBM
+  image: icr.io/cpopen/ibm-cp-automation-catalog@sha256:d04bb40afa1f322d693d7c596afc305e5f4af1fa77a14bb43e231eab6b3533ff
+  sourceType: grpc

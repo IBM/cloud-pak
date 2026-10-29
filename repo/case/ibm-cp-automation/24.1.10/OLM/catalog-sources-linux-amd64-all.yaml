@@ -1,0 +1,27 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-automation-processminings
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-process-mining-4.3.0-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/processmining-operator-catalog@sha256:565d9727dab4bd64db8d613549ed4cba618cb8597ab28f4de312612a17f38db6
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-robotic-process-automation-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-robotic-process-automation-3.4.1-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/ibm-rpa-operator-catalog@sha256:fa4af1c663d9cc04e3d3d78cfc49a3078ff848ea8904662714fddb58acfcc4fa
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
