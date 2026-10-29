@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-automation-processminings
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-process-mining-4.3.1-linux-amd64
+  publisher: IBM
+  image: icr.io/cpopen/processmining-operator-catalog@sha256:5cf37bbc3707df466d9df53ac53fbcd0a2a144f1f518eba4a8433376e72d5de3
+  sourceType: grpc
+  grpcPodConfig:
+    nodeSelector:
+      kubernetes.io/arch: amd64
