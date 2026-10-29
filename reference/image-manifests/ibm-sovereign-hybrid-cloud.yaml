@@ -1,6 +1,11 @@
 source: ibm-sovereign-hybrid-cloud
 description: ""
 images:
+  - image: cp/sovereign-cloud-platform/access-management/account-iam
+  - image: cp/sovereign-cloud-platform/access-management/ivia-configmgr
+  - image: cp/sovereign-cloud-platform/acm-service-broker
+  - image: cp/sovereign-cloud-platform/aiiaas-operator
+  - image: cp/sovereign-cloud-platform/aiiaas-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/acm-service-broker
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/aiiaas-operator
   - image: cp/sovereign-cloud-platform/automation-saas-platform-dev/aiiaas-service-broker
@@ -210,6 +215,13 @@ images:
   - image: cp/sovereign-cloud-platform/automation-saas-platform/sovereign-core-compliance-center
   - image: cp/sovereign-cloud-platform/automation-saas-platform/tekton-baseimage
   - image: cp/sovereign-cloud-platform/automation-saas-platform/tenant-management/mcsp-sov-email-service
+  - image: cp/sovereign-cloud-platform/byop-service-broker
+  - image: cp/sovereign-cloud-platform/byop-service-broker-operator
+  - image: cp/sovereign-cloud-platform/catalog-as-a-service-broker
+  - image: cp/sovereign-cloud-platform/cicd/mcsp-argocd-vault-plugin
+  - image: cp/sovereign-cloud-platform/common-service-broker
+  - image: cp/sovereign-cloud-platform/compliance-registration-operator
+  - image: cp/sovereign-cloud-platform/consumption-metrics-backend
   - image: cp/sovereign-cloud-platform/cp/concert/addon-ansible
   - image: cp/sovereign-cloud-platform/cp/concert/addon-expect
   - image: cp/sovereign-cloud-platform/cp/concert/addon-faas
@@ -280,16 +292,156 @@ images:
   - image: cp/sovereign-cloud-platform/cpopen/ibm-usage-metering-operator-catalog
   - image: cp/sovereign-cloud-platform/cpopen/isf-data-foundation-catalog
   - image: cp/sovereign-cloud-platform/cpopen/sovereign-cloud-platform/sovcore-must-gather
+  - image: cp/sovereign-cloud-platform/cuga
+  - image: cp/sovereign-cloud-platform/cuga-operator
+  - image: cp/sovereign-cloud-platform/cuga-service-broker
+  - image: cp/sovereign-cloud-platform/go-proxy
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/accountui
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/mspui
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-concert-darwin_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-concert-darwin_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-concert-linux_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-concert-linux_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-concert-linux_ppc64le
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-concert-linux_s390x
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-darwin_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-darwin_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-linux_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-linux_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-linux_ppc64le
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-linux_s390x
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-platform-darwin_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-platform-darwin_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-platform-linux_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-platform-linux_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-platform-linux_ppc64le
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-platform-linux_s390x
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-vault-darwin_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-vault-darwin_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-vault-linux_amd64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-vault-linux_arm64
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-vault-linux_ppc64le
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/sov-core-vault-linux_s390x
+  - image: cp/sovereign-cloud-platform/gori-experience-apps/xpm
   - image: cp/sovereign-cloud-platform/hashicorp/vault
   - image: cp/sovereign-cloud-platform/hashicorp/vault-csi-provider
   - image: cp/sovereign-cloud-platform/hashicorp/vault-enterprise
   - image: cp/sovereign-cloud-platform/hashicorp/vault-k8s
   - image: cp/sovereign-cloud-platform/isvd/verify-directory-seed
   - image: cp/sovereign-cloud-platform/isvd/verify-directory-server
+  - image: cp/sovereign-cloud-platform/itsm/images/itsm-service-manager
   - image: cp/sovereign-cloud-platform/ivia/ivia-config
   - image: cp/sovereign-cloud-platform/ivia/ivia-oidc-provider
   - image: cp/sovereign-cloud-platform/ivia/ivia-runtime
   - image: cp/sovereign-cloud-platform/ivia/ivia-wrp
+  - image: cp/sovereign-cloud-platform/mcsp-ext-portal-product-sync
+  - image: cp/sovereign-cloud-platform/mcsp-sovereign-netbox
+  - image: cp/sovereign-cloud-platform/model-gateway-operator
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/must-gather-clean-darwin_amd64
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/must-gather-clean-darwin_arm64
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/must-gather-clean-linux_amd64
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/must-gather-clean-linux_arm64
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/must-gather-clean-linux_ppc64le
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/must-gather-clean-linux_s390x
+  - image: cp/sovereign-cloud-platform/must-gather-cli-tools/sovcore-must-gather
+  - image: cp/sovereign-cloud-platform/nova/nova-auth
+  - image: cp/sovereign-cloud-platform/nova/nova-barman
+  - image: cp/sovereign-cloud-platform/nova/nova-barman-plugin-controller
+  - image: cp/sovereign-cloud-platform/nova/nova-hook-utils
+  - image: cp/sovereign-cloud-platform/nova/nova-operator
+  - image: cp/sovereign-cloud-platform/nova/nova-release-amd64
+  - image: cp/sovereign-cloud-platform/nova/nova-rest
+  - image: cp/sovereign-cloud-platform/nova/nova-restapi-plugin-controller
+  - image: cp/sovereign-cloud-platform/nova/pgbouncer
+  - image: cp/sovereign-cloud-platform/oci-artifacts/accountiam-keys
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-cuga-system
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-eso
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-gitops-push
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-nvidia-gpu
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-observability
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-ocp-truststore
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-openshift-ai
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-reloader
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/acm-vault-aas
+  - image: cp/sovereign-cloud-platform/oci-artifacts/agent-service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas-cluster-setup
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas-inference
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas-inference-certificates
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas-inference-observability
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas-model-gateway
+  - image: cp/sovereign-cloud-platform/oci-artifacts/aiiaas-model-gateway-certificates
+  - image: cp/sovereign-cloud-platform/oci-artifacts/app-template
+  - image: cp/sovereign-cloud-platform/oci-artifacts/backup-restore-pipelines
+  - image: cp/sovereign-cloud-platform/oci-artifacts/blackbox-exporter
+  - image: cp/sovereign-cloud-platform/oci-artifacts/bootstrap-cd-pipeline
+  - image: cp/sovereign-cloud-platform/oci-artifacts/byop-service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/catalog-as-a-service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/cloudrock-account-iam-management-microservice-app
+  - image: cp/sovereign-cloud-platform/oci-artifacts/cluster-networking
+  - image: cp/sovereign-cloud-platform/oci-artifacts/cluster-util
+  - image: cp/sovereign-cloud-platform/oci-artifacts/common-service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/compliance-registration-operator
+  - image: cp/sovereign-cloud-platform/oci-artifacts/consumption-metrics-backend
+  - image: cp/sovereign-cloud-platform/oci-artifacts/coredns
+  - image: cp/sovereign-cloud-platform/oci-artifacts/email-service-app
+  - image: cp/sovereign-cloud-platform/oci-artifacts/eso-secret-store
+  - image: cp/sovereign-cloud-platform/oci-artifacts/gori-dns-metalb
+  - image: cp/sovereign-cloud-platform/oci-artifacts/iam
+  - image: cp/sovereign-cloud-platform/oci-artifacts/ibm-pg-instance
+  - image: cp/sovereign-cloud-platform/oci-artifacts/ibm-pg-operator
+  - image: cp/sovereign-cloud-platform/oci-artifacts/ibm-redis-cp-complete
+  - image: cp/sovereign-cloud-platform/oci-artifacts/ibm-usage-metering-service
+  - image: cp/sovereign-cloud-platform/oci-artifacts/itsm-service-manager
+  - image: cp/sovereign-cloud-platform/oci-artifacts/ivia
+  - image: cp/sovereign-cloud-platform/oci-artifacts/ivia-charts
+  - image: cp/sovereign-cloud-platform/oci-artifacts/lokistack
+  - image: cp/sovereign-cloud-platform/oci-artifacts/main
+  - image: cp/sovereign-cloud-platform/oci-artifacts/managed-cluster-set
+  - image: cp/sovereign-cloud-platform/oci-artifacts/netbox-external
+  - image: cp/sovereign-cloud-platform/oci-artifacts/netbox-internal
+  - image: cp/sovereign-cloud-platform/oci-artifacts/observability-charts
+  - image: cp/sovereign-cloud-platform/oci-artifacts/observability-cr
+  - image: cp/sovereign-cloud-platform/oci-artifacts/opentelemetry-collector
+  - image: cp/sovereign-cloud-platform/oci-artifacts/opentelemetry-operator
+  - image: cp/sovereign-cloud-platform/oci-artifacts/postgres
+  - image: cp/sovereign-cloud-platform/oci-artifacts/postgres-nova-wrapper
+  - image: cp/sovereign-cloud-platform/oci-artifacts/postgres-service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/product-registration-backend
+  - image: cp/sovereign-cloud-platform/oci-artifacts/product-sync-app
+  - image: cp/sovereign-cloud-platform/oci-artifacts/redis
+  - image: cp/sovereign-cloud-platform/oci-artifacts/redis-instance
+  - image: cp/sovereign-cloud-platform/oci-artifacts/reloader
+  - image: cp/sovereign-cloud-platform/oci-artifacts/service-broker
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sov-core-cert-rotation
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sov-core-k8s-wrapper
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sov-core-networking
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sov-core-storage
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sovereign-core-metrics-aggregator
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sovereign-core-upgrade-discovery
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sovereign-core-upgrade-pipelines
+  - image: cp/sovereign-cloud-platform/oci-artifacts/sovereign-ui
+  - image: cp/sovereign-cloud-platform/oci-artifacts/tekton-runtime
+  - image: cp/sovereign-cloud-platform/oci-artifacts/tempo-operator
+  - image: cp/sovereign-cloud-platform/oci-artifacts/tempostack
+  - image: cp/sovereign-cloud-platform/oci-artifacts/vault
+  - image: cp/sovereign-cloud-platform/oci-artifacts/vm-service-broker
   - image: cp/sovereign-cloud-platform/odf4/odf-blackbox-exporter-rhel9
   - image: cp/sovereign-cloud-platform/openshift4/ose-cli
+  - image: cp/sovereign-cloud-platform/postgres-service-broker
+  - image: cp/sovereign-cloud-platform/product-registration-backend
   - image: cp/sovereign-cloud-platform/redhat/redhat-operator-index
+  - image: cp/sovereign-cloud-platform/reloader
+  - image: cp/sovereign-cloud-platform/sov-core-k8s-wrapper
+  - image: cp/sovereign-cloud-platform/sov-core-networking
+  - image: cp/sovereign-cloud-platform/sov-core-storage-api
+  - image: cp/sovereign-cloud-platform/sov-core-storage-controller
+  - image: cp/sovereign-cloud-platform/sovereign-core-compliance-center
+  - image: cp/sovereign-cloud-platform/sovereign-core-metrics-aggregator
+  - image: cp/sovereign-cloud-platform/sovereign-core-metrics-aggregator-dbmanager
+  - image: cp/sovereign-cloud-platform/tekton-baseimage
+  - image: cp/sovereign-cloud-platform/tenant-management/mcsp-sov-email-service
+  - image: cp/sovereign-cloud-platform/vm-service-broker
+  - image: cp/sovereign-cloud-platform/vm-service-broker-operator
+  - image: cp/sovereign-cloud-platform/vm-service-broker/dashboardui
