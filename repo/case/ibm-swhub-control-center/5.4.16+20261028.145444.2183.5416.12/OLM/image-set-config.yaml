@@ -1,0 +1,8 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/olm-utils-premium-v4:5.3.1@sha256:75d71b06882e47cd3e2c8cc40d221855394917a285ad200186a65f19cad2d433
+  - name: icr.io/cpopen/ibm-software-hub-control-center-operator-bundle:5.4.16-12@sha256:cffb3d6f2b2e7b7bcbac305f0b01bb56244d2e1161cdb66c5fa27d8621262e73
+  - name: icr.io/cpopen/ibm-software-hub-control-center-operator-catalog:5.4.16-12@sha256:a39eaad1073c939de0e1cc5992c4148bddf6a51fae57f67677ab5b9ce48f9524
+  - name: icr.io/cpopen/ibm-software-hub-control-center-operator:5.4.16-12@sha256:8b9f192eb29e84a68a23646d99cb29225265362719e6260e0b933a027daaf233
