@@ -1,0 +1,43 @@
+apiVersion: v1
+case:
+  appVersion: 12.0.1.0.11243
+  catalogs:
+    analytics: {}
+  certifications:
+    ibmccscp: {}
+  classifications:
+    commercial: {}
+  description: IBM Data Replication 12.0 Access Server
+  displayDescription: IBM Data Replication 12.0 Access Server
+  displayName: IBM Data Replication CDC Access Server
+  icons: []
+  licenses:
+    IDRAI:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication AI Edition
+        displayName: IBM Data Replication AI Edition
+      ref: IBM_Data_Replication_AI_Edition_EN_LI
+    IDRAI_ZOS:
+      mediaType: text/plain
+      metadata:
+        displayDescription: IBM Data Replication AI Edition for z/OS
+        displayName: IBM Data Replication AI Edition for z/OS
+      ref: IBM_Data_Replication_AI_Edition_ZOS_EN_LI
+  metadata:
+    cpairgap_ibm_com:
+      relatedImages: true
+  name: ibm-cdc-access-server
+  organization: IBM
+  schemaversion: 1
+  specVersion: 1.0.0
+  supports:
+    architectures:
+      amd64: {}
+    k8sDistros:
+      rhocp4:
+        mirrorByDigest: true
+  version: 12.10.11243
+  webPage: https://www.ibm.com
+created: 2026-10-30T15:03:41.53727117+0000
+digest: sha256:3d197eaf1aab60399e7e1ef82b22c2488837aa960256b31776442e72ecf154b1
