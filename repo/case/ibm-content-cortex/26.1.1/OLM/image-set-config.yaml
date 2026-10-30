@@ -1,0 +1,18 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-content-cortex-catalog@sha256:cfe91a5785f2d44553063fb7e152dc6472ba872ce7031397cd4dbb2550ea6c67
+    packages:
+    - name: ibm-ccx-ai-services-operator
+      channels:
+      - name: v26.1
+    - name: ibm-content-operator
+      channels:
+      - name: v26.1
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cp4a/fncm/core-mcp-server:26.0.1-IF001@sha256:587bea91eae6ac5b2d33eb3262a114d975961e2f573c3fa817f06a92149aea74
+  - name: cp.icr.io/cp/cp4a/fncm/reasoning-services:26.0.1-IF001@sha256:25decd61860f239aa82e5cac903fc48db34bddcd50300b8c9e97b475dc82f473
+  - name: icr.io/cpopen/ibm-ccx-wdu-services-operator:26.0.1-IF001@sha256:5613fe5968bfbb21f96d8e34755c212482fd71f7c04a9f76d94ae526a32cc4b1
+  - name: icr.io/cpopen/ibm-content-cortex-catalog:v26.1.1-fbc-20261028.102834-147ACA613@sha256:cfe91a5785f2d44553063fb7e152dc6472ba872ce7031397cd4dbb2550ea6c67
