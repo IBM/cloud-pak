@@ -1,0 +1,6 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cp4a/fncm/legal-mcp-server:26.0.1-IF001@sha256:e9a4e5c04ca4a386f6fb6c13ba757eefa63828b3806deaacc3aa8ed02b2868fc
+  - name: cp.icr.io/cp/cp4a/fncm/redact-mcp-server:26.0.1-IF001@sha256:c488b55bc632223daf2d995b0c0f55421546579f2da003e36a7b5c68902033e4
