@@ -1,0 +1,21 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-spectrum-discover-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-spectrum-discover-257.0.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-spectrum-discover-operator-catalog@sha256:0626ea1b98f1afb11dbc13ce5498bf3073205cae80e519aadb68211067ac7866
+  sourceType: grpc
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-spectrum-discover-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-spectrum-discover-257.0.0
+  publisher: IBM
+  image: icr.io/cpopen/ibm-isf-nexus-operator-catalog@sha256:d898a737f1c4a35229e06e370eef90d36bb8ea00a4034a62f5b515171b037fcd
+  sourceType: grpc
