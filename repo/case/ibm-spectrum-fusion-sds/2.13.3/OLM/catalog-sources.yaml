@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: isf-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: ibm-spectrum-fusion-sds-2.13.3
+  publisher: IBM
+  image: icr.io/cpopen/isf-operator-software-catalog@sha256:1addc53bc20e7ee5ec388f40667fc52df0d9149ef20e0fdb0faef5959ebc1b4e
+  sourceType: grpc
