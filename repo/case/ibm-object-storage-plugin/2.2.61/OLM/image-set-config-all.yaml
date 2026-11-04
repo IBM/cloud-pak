@@ -1,0 +1,7 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: icr.io/cpopen/ibmcloud-object-storage-driver:1.9.19@sha256:82a31d7cad15440e7e4acb9df4f685aeeb5a83ac3934203f1c27540dc5c0a5af
+  - name: icr.io/cpopen/ibmcloud-object-storage-plugin:1.9.19@sha256:6b300ff2b760d823802ba99d5fb25d638f83d62def8a1cc415448a845113e003
+  - name: icr.io/cpopen/ibmcloud-object-storage/pause:3.10.2@sha256:43dd087d981ca391ea4aeb9d0d411dfc6e13647d17701d9aac84154aaa06a886
