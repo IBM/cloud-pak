@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-pg-operator-catalog@sha256:8d88cf9d9ec8f92ce1b45ece343e5aaa18bc83adb8e627d70dbd33d7a1c5021e
+    packages:
+    - name: ibm-pg-operator
+      channels:
+      - name: v28
+    full: true
+  additionalImages:
+  - name: icr.io/cpopen/ibm-pg-operator-catalog:v28.4.10@sha256:8d88cf9d9ec8f92ce1b45ece343e5aaa18bc83adb8e627d70dbd33d7a1c5021e
