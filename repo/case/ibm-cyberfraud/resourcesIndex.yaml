@@ -12,9 +12,20 @@ containerImages:
   tag: 1.1.0-latest-amd64
 - caseVersions:
   - 1.1.0
+  - 1.1.1
   category: catalog
   digest: sha256:0078a1dfb40e2d7ae9ddd227c63ffca72a9a822b872912467fa8dc7dbf32d156
   image: cpopen/cf/ibm-cyberfraud-release-catalog
   platform:
     imagetype: manifestList
   tag: 1.1.0-latest
+- caseVersions:
+  - 1.1.1
+  category: catalog
+  digest: sha256:d60635208108ba7fdb720c9de6e74b6e260547299f399c715981b61f90b07a4e
+  image: cpopen/cf/ibm-cyberfraud-release-catalog
+  platform:
+    architecture: amd64
+    imagetype: manifestList
+    os: linux
+  tag: 1.1.1-latest-amd64

@@ -1,0 +1,45 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  operators:
+  - catalog: icr.io/cpopen/ibm-cert-manager-operator-catalog@sha256:435b47b0441486d80c06c5cea6f2182367bc5bcedd2fb92bda24b3be9887e020
+    packages:
+    - name: ibm-cert-manager-operator
+      channels:
+      - name: v4.2
+    full: true
+  additionalImages:
+  - name: cp.icr.io/cp/cf/arithmetic-functions-server:1.1.1-amd64@sha256:0adaaabc7cea58c0efbd1ddda3bae14da464bfbfd1a85ffd7550840d64501798
+  - name: cp.icr.io/cp/cf/cf-audit:1.1.1-amd64@sha256:8f1656a91ff60034bf69da97c23428e00d9d67c183c4067ffe3831fbf6380735
+  - name: cp.icr.io/cp/cf/cf-backup:1.1.1-amd64@sha256:2d22b6328ec548b6628b14ddbe2f11882e80931abbe6c00224edc9fd4bdf950f
+  - name: cp.icr.io/cp/cf/cf-db-schema-provisioning-job:1.1.1-amd64@sha256:a3cb6712d864cc74c12070c8bcda6d61deeadeb370b31d6d8b558882f7d948db
+  - name: cp.icr.io/cp/cf/cf-investigate:1.1.1-amd64@sha256:53fa04393eb931a4131ecaff7cf6537a14942d369111772b3474f2dbd715675e
+  - name: cp.icr.io/cp/cf/cyberfraud-account-onboarding-job:1.1.1-amd64@sha256:1301c74aaa451d768751767069c659a553fa3f8c30bcce8f1253d45329a43af1
+  - name: cp.icr.io/cp/cf/cyberfraud-frontend:1.1.1-amd64@sha256:c7c8d039358e7ce9ec7ce4d949655237889d5d6d1361b9be4f629c642f7c397a
+  - name: cp.icr.io/cp/cf/cyberfraud-mcp-context-forge:1.1.1-amd64@sha256:d71e78051369023f378e5b4fbb19e0ea10346e84e8ee2ec371b38d05eec24a90
+  - name: cp.icr.io/cp/cf/cyberfraud-mcp-management-service:1.1.1-amd64@sha256:1fc5d0289fd4f47efd7555d8b2691263bb2306b41d62d0c1418cdf22b211ffae
+  - name: cp.icr.io/cp/cf/data-analysis-server:1.1.1-amd64@sha256:6cb23cc242e607e355d333e85d185b807476ad23bd0684c60ba82ee384e61db6
+  - name: cp.icr.io/cp/cf/datetime-conversion-server:1.1.1-amd64@sha256:8f0963d95f38ae233ad12cfc4a59f67e80ab7a83ea9c1aaf61a53891b2d8df69
+  - name: cp.icr.io/cp/cf/encrypt-decrypt-server:1.1.1-amd64@sha256:e5547cf753fc8f79ba089648fde7b8eb2a0337040240f7968e5e34754367155c
+  - name: cp.icr.io/cp/cf/envoy-gateway:v1.7.5-20261101032501@sha256:b25e40bbe85d24c887addfac1bb39369fad622fdd4f3fdd7617b19d4e5612017
+  - name: cp.icr.io/cp/cf/envoy-proxy:v1.37.5-20261101032501@sha256:ad05f2651a9461d185358517fef764bb76cda232c422d517ccaaeeed1bafa0a8
+  - name: cp.icr.io/cp/cf/geo-spatial-server:1.1.1-amd64@sha256:26e4ae247ec3217c979f2adfcc2e4db5d77d694e80508c449fe1c0b09e88fee8
+  - name: cp.icr.io/cp/cf/identity-management:1.1.1-amd64@sha256:79c3871f32a07a999732121dbc4d0142274b9b6bc16cd5ed803f662d76c1b834
+  - name: cp.icr.io/cp/cf/pg-bouncer:1.25.2-20261102031214@sha256:d9dd20dd375ff51bd51859179d7243ba25740f93fbe1d3b14ea96ca3f0528598
+  - name: cp.icr.io/cp/cf/restore-pod:1.1.1-amd64@sha256:ac7b8a8352c527927bcb8ef851ce916b208725b4beb83d0f3d5981deba3bd683
+  - name: cp.icr.io/cp/cf/seaweedfs:4.51-20261101034716@sha256:935ba879e535eae02816c426ab16cbffcf779e9c700ece2f8617cdac8d434038
+  - name: cp.icr.io/cp/cf/tm-cnpg:18.6-20261102031214@sha256:4fb936c920428ddb0bdbd073edc309df620ff108e1aa5ea1b71754f3e7fd7be4
+  - name: cp.icr.io/cp/cf/tm-init-mod:1.1.1-amd64@sha256:1c6f2d988c975d1460b725ba055c31dc4f231508386acd325528b2f3031b53e2
+  - name: cp.icr.io/cp/ibm-redis-cp-haproxy:1.4.0@sha256:49cb406b778c33f5cf4b9b07c367d7f0117007fc1a9cd1be57e1dde48d0f1d56
+  - name: cp.icr.io/cp/ibm-redis-cp-operand:1.4.0@sha256:efcd271baf18245998de72fcc38f5e9068603de3b2c98fb12f8bf9d26f56302f
+  - name: cp.icr.io/cpopen/cf/mustgather:1.1.1-latest@sha256:c219a2806027e857e0b96e0330403d7ce1ed61b02127fa09dafa3c11aef55ace
+  - name: cp.icr.io/cpopen/cf/serviceability:1.1.1-latest@sha256:0984efd196f57688c1d64c2665ffebc52ee54845c4645dfce5bdabf70f1cdeec
+  - name: icr.io/cpopen/cf/ibm-cyberfraud-operator-bundle:1.1.1-amd64@sha256:b60d3a19c6fc2b71bbdb8e01db54b9790ef4b7bfc52947e52a959378f9df630f
+  - name: icr.io/cpopen/cf/ibm-cyberfraud-release-catalog:1.1.0-latest@sha256:0078a1dfb40e2d7ae9ddd227c63ffca72a9a822b872912467fa8dc7dbf32d156
+  - name: icr.io/cpopen/cf/ibm-middleware-operator-bundle:1.1.1-amd64@sha256:2e0adeefcd5b3f0800a8254faabeca221d30c0cb2e53d1a6b90114c2be99b252
+  - name: icr.io/cpopen/cf/tm-cnpg-operator-bundle:1.1.1-amd64@sha256:1073b334d651214cf28f067c643a61d43461ec7d807af6b6f355a872a17dc725
+  - name: icr.io/cpopen/cpfs/cpfs-utils:4.6.23@sha256:050fc75fb194be6bbb5b7ede5349c701717a9590427f081382d1ceb058c73163
+  - name: icr.io/cpopen/ibm-cert-manager-operator-catalog:cd-20260722-1319@sha256:435b47b0441486d80c06c5cea6f2182367bc5bcedd2fb92bda24b3be9887e020
+  - name: icr.io/cpopen/ibm-redis-cp-operator-bundle:1.4.0@sha256:692bbec4f7d4c13c002fcdfbf2b9d6593e85cd15a513e42899698d98ee823747
+  - name: icr.io/cpopen/ibm-redis-cp-operator-catalog:1.4.0@sha256:8391c3e193e9dc54f1a91996daaaca73126d5a814dd82cd49651576a4ac633e9
+  - name: icr.io/cpopen/ibm-redis-cp-operator:1.4.0@sha256:8a6f79071358018eb0af00914b8189224f126e5eb36c0a14548e53a3188d3ce4
