@@ -1,0 +1,25 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-control-plane:5.4.002632@sha256:f08ba132ca6457e5b4c11c4e14d882fd4aae320e11c59ab30e24928b87eafdf7
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-cos-logger-sidecar:5.4.002632@sha256:26f73c492f5cb60f580fae7cb4b5a8e6737c78f4606f1bfdef0650144aa29ae1
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-cpd-miniconda-runtimes:3.5.4-v735-onprem-2.4.x@sha256:6f06abdb7851cef78de1ae4d6a02a9165604e26d60e8015d3bf5b1009cbbe4bf
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-cpd-miniconda-runtimes:4.0.0-v735-onprem-2.4.x@sha256:d830cc85eca37703a36f9072d92caf7b1e872482eb6484e5f3d585f544b5a3bc
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-cpd-miniforge-runtimes:3.5.4-v735-onprem-2.4.x@sha256:db4ed76c5d2226c56f4d3e2f91697f5a0a3fb4ec9044c17657993097a5abbc2f
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-cpd-miniforge-runtimes:4.0.0-v735-onprem-2.4.x@sha256:e4b3980c5b3303aa0df46c96d373fae6a28b7c23922f38893335eb90395da1d4
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-deployer-agent:5.4.002632@sha256:100d8d626c070898d6120c04433a87c4b4a048217ccee07b3cd1b714d2ffe7e9
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-graphite-exporter:5.4.002632@sha256:79b3eee96279c6312895742da71bfeb76ec10941cd28fb0ae663c68657a1748d
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-helm-repo:5.4.002632@sha256:1e07dc8ffc05c88e20d28c9a7c62e2af8b31d042fabc3ca1e4c2df1e73cd6409
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-instance-operator:5.4.002632@sha256:aad3dcc14980b59128475b20692b325fa1f3e44fa7d5495a53c4411945da862d
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-nginx:5.4.002632@sha256:9735cdbdcf3a4db1f4fe288c56455ef48836729013f966b78353591f0dfd7d6d
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-python:5.4.002632@sha256:46361b3ceba110ef00b27bf78b537c2b332714be8bc15ccd7336bcef23e9ef07
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-rsyslog-sidecar:5.4.002632@sha256:a93398d4bf2a53b8f916b2927775564859c7f4eeb10e9b311ee71679894af39d
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-truststore-util:5.4.002632@sha256:c97e6e6871bc0cc075051add128c8f954d7b815ee08aad52a32c426908ddebcb
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-ui:5.4.002632@sha256:bed0ec57f3f9ba7c5ccf66aa02bcf5490995522f6524be642275603bb647ddb8
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-wxd-cpd-miniforge-runtimes:3.5.4-v735-onprem-2.4.x@sha256:0f15903acf35e9fd6c2b904a8bb540844f17b66c0a7317b152cc2219c9d9edd8
+  - name: cp.icr.io/cp/cpd/ibm-lh-spark-wxd-cpd-miniforge-runtimes:4.0.0-v735-onprem-2.4.x@sha256:cef69c6ecde2d99e52d4b4ad2f0cf993554d2759c0f5ef236b7e8a406ce37771
+  - name: icr.io/cpopen/ibm-cpd-lh-spark-dataplane-operator:5.4.3239-amd64@sha256:0f7905028f4b501e966888065f94c11113c0c69a3bcfc3113935ad7851e0d14c
+  - name: icr.io/cpopen/ibm-cpd-lh-spark-operator-bundle:5.4.3239@sha256:7ed6aaf6d2c7bab6889e4a6509e93986cd48841ab00ee0253d5850dd8547a83a
+  - name: icr.io/cpopen/ibm-cpd-lh-spark-operator-catalog:5.4.3239@sha256:532fac0d8800279811883f1fe9b5f9fd8731a316b1b167aa72483fe973486db5
+  - name: icr.io/cpopen/ibm-cpd-lh-spark-operator:5.4.3239@sha256:7ab1cad6a1229d127441c214d5f588031cdd445716ecae5da6db4aaa6224fc10

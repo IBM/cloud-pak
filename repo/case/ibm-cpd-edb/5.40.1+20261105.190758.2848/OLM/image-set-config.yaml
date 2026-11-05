@@ -1,0 +1,12 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:14.24-5.40.1@sha256:0a151cdd48e9d0ed01fe0f86470fd385f9463e11d39728781dda4ce14a4e6681
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:15.19-5.40.1@sha256:fbcb46a7c5c950d091c2e68c7c5027be0fd05b4a63e6b3accaa54b0cac33d659
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:16.15-5.40.1@sha256:49d1194eb0647d1273237f5dd2f300b2df9d06d92f15b19ee76962b720922505
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:17.11-5.40.1@sha256:25886024ab6f2fac0683259a8b474149140f2e9b9c447d500a6e9983d628948b
+  - name: cp.icr.io/cp/cpd/edb-postgres-advanced:18.6-5.40.1@sha256:7b235d9c6b65dd5a1cba724d546f04d0a1cf86cf0cc75db1d1aa1ff7dda61132
+  - name: icr.io/cpopen/ibm-cpd-edb-operator-bundle:2848@sha256:448b9c2857f1d4f428ee5a17c7b5c95dfcf0bb42ab7e6891131bb096b7867982
+  - name: icr.io/cpopen/ibm-cpd-edb-operator-catalog:2848@sha256:5d5aa87513bf3d17922f0e78e3735b69b58ac905028dfed3d130f0afda746351
+  - name: icr.io/cpopen/ibm-cpd-edb-operator:2848@sha256:371495202322a8575fb29b14bf71f46292492090fffa98f95b02c3d41c7b8c1a
