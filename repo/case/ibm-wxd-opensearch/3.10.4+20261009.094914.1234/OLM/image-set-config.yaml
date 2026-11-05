@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cpd/opensearch-3.8.x-ubi9:multiarch-20261006103525@sha256:c2b2329ff7cfb14050f8ecf4530f33ad3b5510f24dbb88fb3d709e2083e36e4b
+  - name: cp.icr.io/cp/cpd/opensearch-dashboards:multiarch-20261006080918@sha256:c73dba78ce0517278c74f5e66db82037d59d7c1fd66348e832bd2b32b26e7673
+  - name: cp.icr.io/cp/cpd/opensearch-os-role-exporter:multiarch-20261009212459@sha256:2f9e401a959a2bf0e4ff0dbf990db977a3e831392c0a6ae55c5b4606481cdb3b
+  - name: cp.icr.io/cp/cpd/opensearch-traefik-ubi:multiarch-20261009212459@sha256:fd04e353190d3239cbe29a3226d5499d991189cd8bf3633added1078975bdb1e
+  - name: icr.io/cpopen/opensearch-k8s-operator:multiarch-20261009212459@sha256:29c203a6b259d6dfea2bb7257faef4c7b6c47a790e298b74734d4492f2300a6a
