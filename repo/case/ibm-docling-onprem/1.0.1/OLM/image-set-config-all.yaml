@@ -1,0 +1,9 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-docling/docling-models-oci/layout-ocelot-v21-figclassifier-25:main-f40059b@sha256:1920cb691e90e28b75c6b2a822c3467be9dbb11903a467a3715bcd86e2cb4512
+  - name: cp.icr.io/cp/ibm-docling/docling-models-oci/nemotronocrv2_1:main-f40059b@sha256:6c19ab93f521459d7485eb8672ad6ade18d1d28cb90ee5ac1bbb3af2171338bc
+  - name: cp.icr.io/cp/ibm-docling/docling-operator:main-2223ced@sha256:24894e938f42ec24a0a0bb25a15d2f2b88749b140fdce9ca3c1106d913dc26cf
+  - name: cp.icr.io/cp/ibm-docling/docling-serve-inner-container-cpu:main-7e52cce@sha256:36302e5b7b1429790693c86b3ffd02713aa9966e92604e684ee5f43b00e27006
+  - name: cp.icr.io/cp/ibm-docling/tritonserver:main-f0252e0@sha256:69a9b478d5e39e45fff3c5dfbe229913542ba96606bf4244510b938d7128444e
