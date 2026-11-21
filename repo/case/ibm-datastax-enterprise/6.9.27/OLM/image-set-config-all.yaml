@@ -1,0 +1,8 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/ibm-datastax-enterprise/dse-server-core:6.9.27-ubi@sha256:a51dbf9356edf2b268532bfd4e17f5842ef429df3d574813d4b21cec704b6982
+  - name: cp.icr.io/cp/ibm-datastax-enterprise/dse-server-core:6.9.27@sha256:18a3529e5c4f5913455283d824753246a2461e8253148d4da51ea59d3b4940a5
+  - name: cp.icr.io/cp/ibm-datastax-enterprise/dse-server:6.9.27-ubi@sha256:938023a7c4e4c75c5b2a3cf3c814a82cb3cf3c6a5b137ab5c5c62be0ef6863ed
+  - name: cp.icr.io/cp/ibm-datastax-enterprise/dse-server:6.9.27@sha256:bf9e8af52d932859bd6a5f3f22802b50b0b016ff928fe3212f9e79fa642f17c6
