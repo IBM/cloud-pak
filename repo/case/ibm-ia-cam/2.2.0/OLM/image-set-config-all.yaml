@@ -1,0 +1,23 @@
+kind: ImageSetConfiguration
+apiVersion: mirror.openshift.io/v2alpha1
+mirror:
+  additionalImages:
+  - name: cp.icr.io/cp/cp4waiops/cp4mcm-service-library-ui-api:v5.3.0-20261028.1245-777076514@sha256:777076514899479368e2aabdad699a973bbc48fd1fa651fe1e3c4d73364b236d
+  - name: cp.icr.io/cp/cp4waiops/cp4mcm-service-library-ui:v5.3.0-20261028.1245-46bfc48a3@sha256:46bfc48a393f278cb345503926a2a90989111f061898c2088d81aee1a6c54c6e
+  - name: cp.icr.io/cp/cp4waiops/icam-controller:v5.3.0-20261028.1245-e210c65b0@sha256:e210c65b04fbdd23b7d867af7de9932f7b5e78e7727fe4a94f39cf59b45a3aa4
+  - name: cp.icr.io/cp/cp4waiops/icam-iaas:v5.3.0-20261028.1245-2d8cee367@sha256:2d8cee3676e86453d6cf4e9b10637d390dc2321f255e5d98e728cc72288af54d
+  - name: cp.icr.io/cp/cp4waiops/icam-mongo:v5.3.0-20261028.1245-a2f5d124a@sha256:a2f5d124adea7d3a6581cb54e8dea992c4a7ec53e2ea0106bbeb9cd091ec552d
+  - name: cp.icr.io/cp/cp4waiops/icam-orchestration:v5.3.0-20261028.1245-814401f75@sha256:814401f751002e6dbad3c146f0f0738f541f4347ebc7402721168c796f22ad44
+  - name: cp.icr.io/cp/cp4waiops/icam-portal-ui:v5.3.0-20261028.1245-5b6c8d7f0@sha256:5b6c8d7f01537083c9bb245c9e5db0e927cd264d7ccc99b6cb86814396899ec9
+  - name: cp.icr.io/cp/cp4waiops/icam-provider-ansible:v5.3.0-20261028.1245-1af8bb40f@sha256:1af8bb40f90bb3c044f854f79ec7c0e5846918b85f8b617864518a8f16ecefb6
+  - name: cp.icr.io/cp/cp4waiops/icam-provider-bpm:v5.3.0-20261028.1245-befa1d003@sha256:befa1d003c2fc0119173ecbd9270e67c466ec9bf5d69b3e086b6108f6a2ed4bf
+  - name: cp.icr.io/cp/cp4waiops/icam-provider-terraform:v5.3.0-20261028.1245-1e7dbbd67@sha256:1e7dbbd679b868529235890709f7d9570095d4d8ed30579423c7784feaf0115b
+  - name: cp.icr.io/cp/cp4waiops/icam-proxy:v5.3.0-20261028.1245-31ba24ae8@sha256:31ba24ae85c2f6a0bedc089cebdfd041cd133044c352333a537db3f48c73b1fc
+  - name: cp.icr.io/cp/cp4waiops/icam-service-composer-api:v5.3.0-20261028.1245-d105d7ff6@sha256:d105d7ff6d4064e4ee80a64b94f648929cea160ca9d4e9f0875113832e542a10
+  - name: cp.icr.io/cp/cp4waiops/icam-service-composer-ui:v5.3.0-20261028.1245-473802737@sha256:473802737837b0e16c9ed34097ad515b1c3081355d32ffff045f8403e944f391
+  - name: cp.icr.io/cp/cp4waiops/icam-tenant-api:v5.3.0-20261028.1245-e15570c30@sha256:e15570c30c856d643c51e75e1acf5ca3040a83757d8085b0fc5bdede1e54259e
+  - name: cp.icr.io/cp/cp4waiops/icam-ui-basic:v5.3.0-20261028.1245-c81fdac70@sha256:c81fdac70c34e38325989eb1bdb29776e45345699d27bc5625e6c344e7aa0d96
+  - name: cp.icr.io/cp/cp4waiops/icam-zen-translation:v5.3.0-20261028.1245-46a8771e2@sha256:46a8771e231defde14bd29ad6bc17a0ba576465ad5fac5971a541484e243fa1b
+  - name: icr.io/cpopen/cam-install-operator-controller-manager-bundle:v5.3.0-20261028.1245-8156ef744@sha256:8156ef74407481ad347389989f05fdbce006ce966b7238fc39bd33af805cb879
+  - name: icr.io/cpopen/cam-install-operator-controller-manager-catalog:v5.3.0-20261028.1245-fae915f6c@sha256:fae915f6cbab9c0726998d4a6536c326ee49742222dcb11259b44443ec65f739
+  - name: icr.io/cpopen/cam-install-operator-controller-manager:v5.3.0-20261028.1245-e5e1cb9e9@sha256:e5e1cb9e9bebb780e4b4afce810f185fc7de0118fb560a7baec02b72c71ce59b
